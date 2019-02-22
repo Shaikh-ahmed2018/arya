@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EventParticipantListPDF" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<subDataset name="dataset1"/>
+	<parameter name="locationname" class="java.lang.String"/>
+	<parameter name="EventAddress" class="java.lang.String"/>
+	<parameter name="EventName" class="java.lang.String"/>
+	<parameter name="Stage" class="java.lang.String"/>
+	<parameter name="Category" class="java.lang.String"/>
+	<parameter name="ProgrammeName" class="java.lang.String"/>
+	<parameter name="Date" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="rollNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[rollNumber]]></fieldDescription>
+	</field>
+	<field name="count" class="java.lang.Integer">
+		<fieldDescription><![CDATA[count]]></fieldDescription>
+	</field>
+	<field name="studentName" class="java.lang.String">
+		<fieldDescription><![CDATA[studentName]]></fieldDescription>
+	</field>
+	<field name="location" class="java.lang.String">
+		<fieldDescription><![CDATA[location]]></fieldDescription>
+	</field>
+	<field name="programmeName" class="java.lang.String">
+		<fieldDescription><![CDATA[programmeName]]></fieldDescription>
+	</field>
+	<field name="className" class="java.lang.String">
+		<fieldDescription><![CDATA[className]]></fieldDescription>
+	</field>
+	<field name="participantsList" class="java.util.ArrayList">
+		<fieldDescription><![CDATA[participantsList]]></fieldDescription>
+	</field>
+	<field name="place" class="java.lang.String"/>
+	<field name="admissionNo" class="java.lang.String"/>
+	<field name="scoredmarks" class="java.lang.String"/>
+	<field name="maxMarks" class="java.lang.String"/>
+	<variable name="participantsList_1" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{participantsList}]]></variableExpression>
+	</variable>
+	<title>
+		<band height="120" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="96" width="555" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Vijaya" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Overall Result]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{locationname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="19" width="555" height="15"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{EventAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="33" width="555" height="19"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{EventName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="21" y="77" width="35" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Vijaya" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Event:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="96" width="55" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Vijaya" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="77" width="75" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Vijaya" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Program:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="96" width="61" height="20"/>
+				<box rightPadding="0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Vijaya" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="55" y="77" width="100" height="20"/>
+				<box topPadding="0" leftPadding="4"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Vijaya" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{EventName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="96" width="100" height="20"/>
+				<box topPadding="0" leftPadding="4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Vijaya" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="468" y="77" width="85" height="20"/>
+				<box topPadding="0" leftPadding="4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Vijaya" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ProgrammeName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="468" y="96" width="85" height="20"/>
+				<box topPadding="0" leftPadding="4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Vijaya" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21">
+			<staticText>
+				<reportElement x="0" y="0" width="55" height="21"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[S.No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="0" width="73" height="21"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Admission No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="64" height="21"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="0" width="62" height="21"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Roll No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="0" width="72" height="21"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Max Marks]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="478" y="0" width="77" height="21"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Scored Marks]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="0" width="152" height="21"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="20">
+			<textField>
+				<reportElement x="0" y="0" width="55" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="0" width="152" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="0" width="73" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{admissionNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="64" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{className}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="344" y="0" width="62" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rollNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="478" y="0" width="77" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{scoredmarks}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="0" width="72" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{maxMarks}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

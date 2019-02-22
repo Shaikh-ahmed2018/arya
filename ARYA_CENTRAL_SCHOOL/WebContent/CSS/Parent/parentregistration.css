@@ -1,0 +1,21 @@
+
+table#parentReg tr{
+	border-bottom-color: #E6F5FA;
+	 padding: 5px;
+}
+
+table#parentReg td{
+	
+	 font-family : Segoe UI;
+	 background-color: #E6F5FA;
+	 padding: 5px;
+	 color: #003D52;
+}
+
+table#parentReg th{
+	 font-family : Segoe UI;
+	 background-color: #E6F5FA;
+	 padding: 5px;
+	 color: #003D52;
+	
+}

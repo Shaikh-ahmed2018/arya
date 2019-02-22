@@ -1,0 +1,126 @@
+.tabledetails{
+			margin: auto;
+			/*border :1px solid black;*/
+			height: auto;
+			width: 800px;
+		}
+		.container{
+			margin: 10px auto;
+		}
+		.heading{
+			text-align: center;
+		}
+		#infotable td:nth-child(1){
+			width: 25px;
+		}
+		#infotable td:nth-child(2){
+			width: 250px;
+		}
+		.tabstyle{
+			width: 150px !important;
+		}
+		.phoneNo{
+			width: 250px  !important;
+		}
+		.headings{
+			width: 760px;
+			height: 130px;
+			border:1px solid #000000;
+			border-radius: 5px;
+			margin: auto;
+			margin-top: 10px;
+		}
+		.schoolheading{
+			text-align: center;
+    		font-size: 20px;
+    		font-weight: bold;
+    		margin: 0;
+		}
+		.subheadings{
+			width: 350px;
+			height: 25px;
+			margin:auto;
+			border:1px solid #000000;
+			border-radius: 5px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			background: #ccc;
+		}
+		.subheadings p{
+			text-align: center;
+			font-size:15px;
+			font-weight: bold; 
+		}
+		.tablecontent{
+			width: 760px;
+			height: 1000px;
+			margin:auto;
+			border:1px solid #000000;
+			border-radius: 5px;
+		}
+		
+		.toptables, th, td {
+   		border: 1px solid black;
+		}
+		.toptables {
+    border-collapse: collapse;
+	}
+	.photostyle{
+		border: 1px solid black;
+    height: 90px;
+    width: 90px;
+  	margin-bottom: 5px;
+    border-radius: 5px;
+    float: right;
+	}
+	.parentsdetails{
+	border: 1px solid black;
+    height: 25px;
+   /* width: 750px;*/
+    margin-top: 5px;
+    border-radius: 5px;
+   /* margin-left: -2px;*/
+    background: #ccc;
+	}
+	.parentsdetails p{
+			text-align: center;
+			font-size:15px;
+			font-weight: bold; 
+	}
+	.declaration{
+	border: 1px solid black;
+    height: 100px;
+    border-radius: 5px;
+    width: 760px;
+    margin: auto;
+   	margin-top: 5px;
+	}
+	.declaration p{
+			font-size:15px;
+			font-weight: 600; 
+			padding-left: 5px;
+	}
+	.parentdeclaration{
+		border: 1px solid black;
+    	height: 425px;
+    	margin-top: 10px;
+    	border-radius: 5px;
+	}
+	.declarationheading{
+		height: 30px;
+    	background-color: #ccc;
+    	overflow: auto;
+    	border-bottom: 1px solid;
+	}
+	.office{
+		border: 1px solid black;
+    	height: 375px;
+    	margin-top: 10px;
+    	border-radius: 5px;
+	}
+	.officeuse{
+		height: 30px;
+    	background-color: #ccc;
+    	overflow: auto;
+    	border-bottom: 1px solid;
+	}

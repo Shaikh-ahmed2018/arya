@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Bonafide" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="6"/>
+	<parameter name="AddressLine1" class="java.lang.String"/>
+	<parameter name="AffNo" class="java.lang.String"/>
+	<parameter name="studentname" class="java.lang.String"/>
+	<parameter name="todaydate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select concat(st.student_fname_var,' ',st.student_lname_var)StudentName,par.FatherName as ContactName,
+acc.acadamic_year,concat(cdd.classdetails_name_var,' - ' ,css.classsection_name_var)ClassName
+from campus_student st
+join campus_acadamicyear acc on acc.acadamic_id=st.fms_acadamicyear_id_int
+join campus_classdetail cdd on cdd.classdetail_id_int=st.classdetail_id_int
+join campus_classsection css on css.classsection_id_int=st.classsection_id_int
+join campus_parentchildrelation prc on prc.stu_addmissionNo=st.student_id_int
+join campus_parents par on par.ParentID=prc.parentid
+where st.student_id_int=$P{studentname}]]>
+	</queryString>
+	<field name="StudentName" class="java.lang.String"/>
+	<field name="ContactName" class="java.lang.String"/>
+	<field name="acadamic_year" class="java.lang.String"/>
+	<field name="ClassName" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="550" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-1" y="5" width="802" height="521"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineColor="#006600"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="583" y="117" width="68" height="25" forecolor="#006600"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Date : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="192" width="126" height="32" forecolor="#006600"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[This is to certify that]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="223" width="127" height="32" forecolor="#006600"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[S/o   /  D/o. Thiru]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="602" y="223" width="101" height="32" forecolor="#006600"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[is a Bonfide]]></text>
+			</staticText>
+			<line>
+				<reportElement x="189" y="246" width="444" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#006600"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="83" y="254" width="211" height="32" forecolor="#006600"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[student of our institution in class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="642" y="254" width="65" height="32" forecolor="#006600"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[during]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="285" width="127" height="32" forecolor="#006600"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[the acadamic year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="316" width="415" height="32" forecolor="#006600"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[He / She has paid the tution fee for three terms as mentioned below.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="275" y="276" width="393" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#006600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="196" y="308" width="508" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#006600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="260" y="215" width="445" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#006600"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="264" y="196" width="439" height="20" forecolor="#333333"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{StudentName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="226" width="433" height="20" forecolor="#333333"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ContactName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="256" width="384" height="20" forecolor="#333333"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ClassName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="288" width="493" height="20" forecolor="#333333"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{acadamic_year}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="651" y="117" width="115" height="25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="12" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{todaydate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="60" width="784" height="24" forecolor="#006600"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="16" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Arya Kumar Ashram,Pattom,Thiruvananthapuram-695004]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement x="327" y="117" width="145" height="30" forecolor="#006600"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="339" y="117" width="123" height="30" forecolor="#006600"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="15" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="15" width="784" height="45" forecolor="#006600"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="24" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Arya Central School]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

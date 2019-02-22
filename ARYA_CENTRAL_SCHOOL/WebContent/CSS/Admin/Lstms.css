@@ -1,0 +1,145 @@
+@CHARSET "ISO-8859-1";
+
+/* background-color: #0099CC;
+
+
+
+ */
+.backgroungDIV {
+	background-color: #CCEBF5;
+	padding: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+	-moz-box-shadow: 7px 9px 7px #77aad1;
+	-webkit-box-shadow: 7px 9px 7px #77aad1;
+	box-shadow: 7px 9px 7px #77aad1;
+	width: 100%;
+	text-align: center;
+}
+
+#parentReg {
+	width: 530px;
+	margin: 0 auto;
+}
+
+.submitButton {
+	border-style: hidden;
+	background: #0099CC;
+	padding: 5px;
+	color: white;
+	cursor: pointer;
+	-moz-box-shadow: 1px 2px 1px #77aad1;
+	-webkit-box-shadow: 1px 2px 1px #77aad1;
+	box-shadow: 1px 2px 1px #77aad1;
+}
+
+.innerButton {
+	border-style: hidden;
+	background: #4DB8DB;
+	padding: 5px;
+	color: white;
+	cursor: pointer;
+	-moz-box-shadow: 1px 2px 1px #77aad1;
+	-webkit-box-shadow: 1px 2px 1px #77aad1;
+	box-shadow: 1px 2px 1px #77aad1;
+}
+
+.submitButton:HOVER {
+	background: #007AA3;
+	padding: 5px;
+	color: white;
+	cursor: pointer;
+}
+
+.PageHeadding {
+	font-family: Segoe UI;
+	font-size: 17px;
+<<<<<<< .mine
+	color: #003D52;
+=======
+	color: #003D52;	
+	font-weight: bold;
+	
+>>>>>>> .r536
+}
+
+.PageHe {
+	font-family: Segoe Print;
+	font-size: 14px;
+	color: #003D52;
+	text-align: left;
+}
+
+.textBoxInDialog {
+	font-family: Segoe UI;
+	padding: 3px;
+	color: #4D7786;
+	width: 130px;
+}
+
+#navigation {
+	background-color: #4DB8DB;
+	/* 	-moz-box-shadow: 1px 2px 1px #77aad1; */
+	/*     -webkit-box-shadow: 1px 2px 1px #77aad1; */
+	/*     box-shadow: 1px 2px 1px #77aad1; */
+	/*     -moz-box-shadow: 10px 10px 43px #000000; */
+	/* -webkit-box-shadow: 10px 10px 43px #000000; */
+	/* box-shadow: 10px 10px 43px #000000; */
+	-moz-box-shadow: -6px -4px 21px #484b4d;
+	-webkit-box-shadow: -6px -4px 21px #484b4d;
+	box-shadow: -6px -4px 21px #484b4d;
+	color: white;
+}
+
+.validateTips {
+	color: green;
+	font-family: Segoe UI;
+	padding: 3px;
+}
+
+.linkBtn {
+	cursor: pointer;
+}
+/* .linkdisplay{
+	
+	cursor: pointer;
+	color: blue;
+	text-decoration: underline;
+} */
+.applyLink {
+	color: green;
+}
+
+.applyLink:HOVER {
+	color: blue;
+}
+
+.scoredMarksEnrty {
+	padding-left: 5px;
+	color: #4D7786;
+	font-family: Segoe UI;
+}
+
+.scoredEnrty {
+	margin-left: 15px;
+	color: #4D7786;
+	/* font-family :Segoe UI; */
+	border: none;
+	background-color: #E6F5FA;
+	width: 100px;
+}
+
+#scoredmarks {
+	border-collapse: separate;
+	border-spacing: 2px;
+	border-color: hsl(0, 0%, 50%);
+}
+
+#scoredstudentAdmissionNo {
+	width: 142px;
+	padding-left: 5px;
+}
+
+#scoredMarksSNo {
+	padding-left: 35px;
+}

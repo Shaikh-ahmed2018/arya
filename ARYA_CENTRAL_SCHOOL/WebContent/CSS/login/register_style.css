@@ -1,0 +1,189 @@
+
+/* General CSS */
+body{
+	background: #FFFFFF;
+}
+.container {
+  max-width: 1029px;
+}
+/* Column Mobile */
+@media(max-width: 520px){
+	.ui-x .col-mob{	
+		width: 50%;
+	}
+}
+@media(max-width: 520px){
+	.ui-x .col-mob{	
+		width: 100%;
+	}
+
+}
+/* UI - X */
+.ui-x{
+	background: rgba(255, 255, 255, 0.7);
+}
+.ui-x .ui-head .ui-header{
+	padding: 10px;
+}
+/* Navbar Logo */
+.ui-x .ui-head .navbar-brand{
+	padding: 0px;
+}
+.ui-x .nav .dropdown a.ui-nav{
+	color: #fff;
+}
+.ui-x .nav .dropdown.open a.ui-nav, .ui-x .nav .dropdown a.ui-nav:hover{
+	background: transparent;
+}
+.ui-x .nav .dropdown-menu{
+	padding: 0px;
+}
+.ui-x .nav .dropdown-menu > li > a{
+	padding: 8px 15px;
+	text-align: left;
+	color: #555;
+	font-size: 12px;
+	line-height: 15px;
+}
+/* Form */
+.form-control{
+	height: 28px;
+	padding: 6px 12px;
+	font-size: 13px;
+}
+.ui-x .ui-head .navbar-collapse, .ui-x .ui-head .navbar-form{
+	border: 0px;
+	box-shadow: none;
+}
+.ui-x .ui-head .form-control.ui-form{	
+	box-shadow: none;
+	border: 0px;
+	margin-top: 3px;
+	height: 28px;
+}
+.ui-x .ui-head .collapse .form-control:focus{
+	box-shadow: none;
+}
+/* Toggle */
+.ui-x .ui-head .navbar-toggle{
+	background: #fff;
+	color: #fff;
+}
+/* PopUp */
+.ui-x .modal .modal-dialog {
+	max-width: 370px;
+	margin: 100px auto;
+}
+.ui-x .modal .modal-content{
+	padding: 10px 20px 20px;
+}
+.ui-x .modal .modal-content h3{
+	font-size: 16px;
+	line-height: 28px;
+	color: #666;
+}
+.ui-x .modal .modal-content .form-group label{
+	font-size: 13px;
+	font-weight: 600;
+}
+
+/* Nav Tabs */
+.ui-x .nav-tabs{
+	border: 0px;
+}
+.nav-tabs>li{
+	margin: 0px 10px;
+	
+}
+.ui-x .nav-tabs li > a, .ui-x .nav-tabs li > a:hover, .ui-x .nav-tabs li.active > a, .ui-x .nav-tabs li.active > a:hover{
+	background: transparent;
+	border: 0px;
+}
+.ui-x .nav-tabs li:hover > a{
+	background: rgba(0,0,0,0.09);	
+}
+.ui-x .nav-tabs li > a.ui-caret:after{
+	  content: "\f0d7";
+	  font-family: "FontAwesome";
+	  font-size: 14px;
+	  margin: 0px 3px;
+}
+.ui-x .nav-tabs li:hover > a.ui-caret:after{
+	  content: "\f0d8";
+	  font-family: "FontAwesome";
+}
+.ui-x .nav-tabs li > a.ui-caretl:after{
+	  content: "\f0da";
+	  font-family: "FontAwesome";
+	  margin: 0px 8px;
+	  font-size: 14px;
+	  float: right;
+}
+.ui-x .nav-tabs li:hover > a.ui-caretl:after{
+	  content: "\f0d9";
+	  font-family: "FontAwesome";
+}
+.ui-x .ui-nav .dropdown-menu{
+    border-radius: 0px;
+}
+.ui-x .ui-nav .dropdown-submenu {
+    position: relative;
+}
+.ui-x .ui-nav .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    margin-left: -2px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+	border-radius: 0px;
+}
+
+/* Content */
+.ui-x .ui-content{
+
+}
+
+/* Footer */
+.ui-x footer{
+	font-size: 13px;
+	line-height: 23px;
+	background: #555;
+	padding: 14px 25px;	
+	bottom: 0px;
+	width: 100%;
+}
+.ui-x footer a.pull-left{
+	margin-top: 5px;
+	color: #fff;
+	text-decoration: none;
+}
+@media(max-width: 630px){
+	.ui-x footer a.pull-left{
+		float: none !important;
+		text-align: center;
+		width: 100%;
+	}
+}
+.ui-x footer .ui-icons a > i{
+	border-radius: 100%;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	margin-top: 3px;
+	background: rgba(255,255,255,0.15);
+	border: 1px solid rgba(255,255,255,0.25);	
+	box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.15);
+}
+@media(max-width: 630px){
+	.ui-x footer .ui-icons.pull-right{
+		float: none !important;
+		text-align: center;
+		width: 100%;
+		margin-top: 6px;
+	}
+}

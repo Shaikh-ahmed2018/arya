@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Campus Sample" pageWidth="1186" pageHeight="842" columnWidth="1172" leftMargin="7" rightMargin="7" topMargin="7" bottomMargin="7">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="background" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{slno}%2 != 1]]></conditionExpression>
+			<style backcolor="#EDF5F6"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="accYear" class="java.lang.String"/>
+	<parameter name="stream" class="java.lang.String"/>
+	<parameter name="classId" class="java.lang.String"/>
+	<parameter name="section" class="java.lang.String"/>
+	<parameter name="Image" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select student_admissionno_var,concat(student_fname_var,' ',student_lname_var) as studentname,student_age_int,student_doj_var,student_fathername_var,student_fathermobileno_var,student_mothername_var,student_mothermobileno_var from campus_student where fms_acadamicyear_id_int=$P{accYear} and fms_classstream_id_int=$P{stream} and classdetail_id_int=$P{classId} and classsection_id_int=$P{section}]]>
+	</queryString>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="enq_Id" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_Id]]></fieldDescription>
+	</field>
+	<field name="enq_accId" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_accId]]></fieldDescription>
+	</field>
+	<field name="enq_address" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_address]]></fieldDescription>
+	</field>
+	<field name="enq_address1" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_address1]]></fieldDescription>
+	</field>
+	<field name="enq_adm_date" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_adm_date]]></fieldDescription>
+	</field>
+	<field name="enq_age" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_age]]></fieldDescription>
+	</field>
+	<field name="enq_app_no" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_app_no]]></fieldDescription>
+	</field>
+	<field name="enq_city" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_city]]></fieldDescription>
+	</field>
+	<field name="enq_classId" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_classId]]></fieldDescription>
+	</field>
+	<field name="enq_classname" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_classname]]></fieldDescription>
+	</field>
+	<field name="enq_conPhno" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_conPhno]]></fieldDescription>
+	</field>
+	<field name="enq_conemailId" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_conemailId]]></fieldDescription>
+	</field>
+	<field name="enq_conname" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_conname]]></fieldDescription>
+	</field>
+	<field name="enq_contype" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_contype]]></fieldDescription>
+	</field>
+	<field name="enq_country" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_country]]></fieldDescription>
+	</field>
+	<field name="enq_dob" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_dob]]></fieldDescription>
+	</field>
+	<field name="enq_doj" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_doj]]></fieldDescription>
+	</field>
+	<field name="enq_enquiredby" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_enquiredby]]></fieldDescription>
+	</field>
+	<field name="enq_fname" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_fname]]></fieldDescription>
+	</field>
+	<field name="enq_fullname" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_fullname]]></fieldDescription>
+	</field>
+	<field name="enq_gender" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_gender]]></fieldDescription>
+	</field>
+	<field name="enq_int_date" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_int_date]]></fieldDescription>
+	</field>
+	<field name="enq_int_status" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_int_status]]></fieldDescription>
+	</field>
+	<field name="enq_int_status_id" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_int_status_id]]></fieldDescription>
+	</field>
+	<field name="enq_join_status" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_join_status]]></fieldDescription>
+	</field>
+	<field name="enq_lname" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_lname]]></fieldDescription>
+	</field>
+	<field name="enq_location" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_location]]></fieldDescription>
+	</field>
+	<field name="enq_phyhand" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_phyhand]]></fieldDescription>
+	</field>
+	<field name="enq_pincode" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_pincode]]></fieldDescription>
+	</field>
+	<field name="enq_reg_status" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_reg_status]]></fieldDescription>
+	</field>
+	<field name="enq_reg_status_id" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_reg_status_id]]></fieldDescription>
+	</field>
+	<field name="enq_religion" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_religion]]></fieldDescription>
+	</field>
+	<field name="enq_sno" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_sno]]></fieldDescription>
+	</field>
+	<field name="enq_state" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_state]]></fieldDescription>
+	</field>
+	<field name="enq_streamId" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_streamId]]></fieldDescription>
+	</field>
+	<field name="enq_street1" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_street1]]></fieldDescription>
+	</field>
+	<field name="enq_street2" class="java.lang.String">
+		<fieldDescription><![CDATA[enq_street2]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[status]]></fieldDescription>
+	</field>
+	<field name="usercode" class="java.lang.String">
+		<fieldDescription><![CDATA[usercode]]></fieldDescription>
+	</field>
+	<variable name="slno" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{enq_fullname}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="94" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="1172" height="55" forecolor="#009999" backcolor="#009999"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="16" y="59" width="309" height="35" forecolor="#FBFBFB" backcolor="#E8E8E8"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="59" width="1164" height="35" forecolor="#333333" backcolor="#F2F2F2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Enquiry Details]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="150" height="43"/>
+				<imageExpression><![CDATA[$P{Image}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="985" y="10" width="179" height="21" forecolor="#000000" backcolor="#F2F2F2"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="78" y="10" width="129" height="21" forecolor="#000000" backcolor="#F2F2F2"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="360" y="10" width="106" height="21" forecolor="#000000" backcolor="#F2F2F2"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="10" width="76" height="21" forecolor="#000000" backcolor="#F2F2F2"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="254" y="10" width="106" height="21" forecolor="#000000" backcolor="#F2F2F2"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="840" y="10" width="145" height="21" forecolor="#000000" backcolor="#F2F2F2"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Joining Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="572" y="10" width="123" height="21" forecolor="#000000" backcolor="#F2F2F2"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Interaction Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="207" y="10" width="47" height="21" forecolor="#000000" backcolor="#F2F2F2"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Age]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="466" y="10" width="106" height="21" forecolor="#000000" backcolor="#F2F2F2"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Joining Class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="695" y="10" width="145" height="21" forecolor="#000000" backcolor="#F2F2F2"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Admission Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="0" width="76" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{slno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="106" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{enq_conPhno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="840" y="0" width="145" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{enq_join_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="695" y="0" width="145" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{enq_reg_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="0" width="106" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{enq_classname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="985" y="0" width="179" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{enq_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="0" width="47" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{enq_age}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="0" width="106" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{enq_conname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="572" y="0" width="123" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{enq_int_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="78" y="0" width="129" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{enq_fullname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="34">
+			<textField>
+				<reportElement x="1113" y="10" width="26" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="10" width="148" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Generated by : Centris Infotech]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="13" width="1163" height="1" backcolor="#F2F2F2"/>
+			</line>
+			<staticText>
+				<reportElement x="1081" y="10" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Page No:]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RoleDetailsXLSReport" pageWidth="1120" pageHeight="842" columnWidth="1080" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="accyearid" class="java.lang.String">
+		<fieldDescription><![CDATA[accyearid]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="classid" class="java.lang.String">
+		<fieldDescription><![CDATA[classid]]></fieldDescription>
+	</field>
+	<field name="classname" class="java.lang.String">
+		<fieldDescription><![CDATA[classname]]></fieldDescription>
+	</field>
+	<field name="createdby" class="java.lang.String">
+		<fieldDescription><![CDATA[createdby]]></fieldDescription>
+	</field>
+	<field name="createddate" class="java.lang.String">
+		<fieldDescription><![CDATA[createddate]]></fieldDescription>
+	</field>
+	<field name="dayid" class="java.lang.String">
+		<fieldDescription><![CDATA[dayid]]></fieldDescription>
+	</field>
+	<field name="dayname" class="java.lang.String">
+		<fieldDescription><![CDATA[dayname]]></fieldDescription>
+	</field>
+	<field name="lastupdated" class="java.lang.String">
+		<fieldDescription><![CDATA[lastupdated]]></fieldDescription>
+	</field>
+	<field name="lastupdatedby" class="java.lang.String">
+		<fieldDescription><![CDATA[lastupdatedby]]></fieldDescription>
+	</field>
+	<field name="period1" class="java.lang.String">
+		<fieldDescription><![CDATA[period1]]></fieldDescription>
+	</field>
+	<field name="period2" class="java.lang.String">
+		<fieldDescription><![CDATA[period2]]></fieldDescription>
+	</field>
+	<field name="period3" class="java.lang.String">
+		<fieldDescription><![CDATA[period3]]></fieldDescription>
+	</field>
+	<field name="period4" class="java.lang.String">
+		<fieldDescription><![CDATA[period4]]></fieldDescription>
+	</field>
+	<field name="period5" class="java.lang.String">
+		<fieldDescription><![CDATA[period5]]></fieldDescription>
+	</field>
+	<field name="period6" class="java.lang.String">
+		<fieldDescription><![CDATA[period6]]></fieldDescription>
+	</field>
+	<field name="period7" class="java.lang.String">
+		<fieldDescription><![CDATA[period7]]></fieldDescription>
+	</field>
+	<field name="period8" class="java.lang.String">
+		<fieldDescription><![CDATA[period8]]></fieldDescription>
+	</field>
+	<field name="periodId1" class="java.lang.String">
+		<fieldDescription><![CDATA[periodId1]]></fieldDescription>
+	</field>
+	<field name="periodId2" class="java.lang.String">
+		<fieldDescription><![CDATA[periodId2]]></fieldDescription>
+	</field>
+	<field name="periodId3" class="java.lang.String">
+		<fieldDescription><![CDATA[periodId3]]></fieldDescription>
+	</field>
+	<field name="periodId4" class="java.lang.String">
+		<fieldDescription><![CDATA[periodId4]]></fieldDescription>
+	</field>
+	<field name="periodId5" class="java.lang.String">
+		<fieldDescription><![CDATA[periodId5]]></fieldDescription>
+	</field>
+	<field name="periodId6" class="java.lang.String">
+		<fieldDescription><![CDATA[periodId6]]></fieldDescription>
+	</field>
+	<field name="periodId7" class="java.lang.String">
+		<fieldDescription><![CDATA[periodId7]]></fieldDescription>
+	</field>
+	<field name="periodId8" class="java.lang.String">
+		<fieldDescription><![CDATA[periodId8]]></fieldDescription>
+	</field>
+	<field name="regno" class="java.lang.String">
+		<fieldDescription><![CDATA[regno]]></fieldDescription>
+	</field>
+	<field name="sectionid" class="java.lang.String">
+		<fieldDescription><![CDATA[sectionid]]></fieldDescription>
+	</field>
+	<field name="sectionname" class="java.lang.String">
+		<fieldDescription><![CDATA[sectionname]]></fieldDescription>
+	</field>
+	<field name="teacherId" class="java.lang.String">
+		<fieldDescription><![CDATA[teacherId]]></fieldDescription>
+	</field>
+	<field name="teachername" class="java.lang.String">
+		<fieldDescription><![CDATA[teachername]]></fieldDescription>
+	</field>
+	<field name="timetableId" class="java.lang.String">
+		<fieldDescription><![CDATA[timetableId]]></fieldDescription>
+	</field>
+	<field name="timetableStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[timetableStatus]]></fieldDescription>
+	</field>
+	<variable name="slno" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{dayname}]]></variableExpression>
+	</variable>
+	<title>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="1077" height="20" forecolor="#333333"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teacher Timetable Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="4" width="76" height="21" forecolor="#FFFFFF" backcolor="#009899"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="78" y="4" width="111" height="21" forecolor="#FFFFFF" backcolor="#009899"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Day]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="189" y="4" width="111" height="21" forecolor="#FFFFFF" backcolor="#009899"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Period 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="300" y="4" width="111" height="21" forecolor="#FFFFFF" backcolor="#009899"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Period 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="411" y="4" width="111" height="21" forecolor="#FFFFFF" backcolor="#009899"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Period 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="522" y="4" width="111" height="21" forecolor="#FFFFFF" backcolor="#009899"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Period 4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="633" y="4" width="111" height="21" forecolor="#FFFFFF" backcolor="#009899"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Period 5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="744" y="4" width="111" height="21" forecolor="#FFFFFF" backcolor="#009899"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Period 6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="855" y="4" width="111" height="21" forecolor="#FFFFFF" backcolor="#009899"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Period 7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="966" y="4" width="111" height="21" forecolor="#FFFFFF" backcolor="#009899"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Period 8]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="0" width="76" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{slno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="78" y="0" width="111" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dayname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="0" width="111" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{period1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="111" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{period2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="0" width="111" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{period3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="522" y="0" width="111" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{period4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="633" y="0" width="111" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{period5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="744" y="0" width="111" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{period6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="855" y="0" width="111" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{period7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="966" y="0" width="111" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{period8}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

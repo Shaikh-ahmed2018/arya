@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Campus Sample" pageWidth="1220" pageHeight="828" columnWidth="1220" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.9965000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.export.xlsx.remove.empty.space.between.columns" value="true"/>
+	<property name="net.sf.jasperreports.export.xlsx.remove.empty.space.between.rows" value="true"/>
+	<parameter name="accYear" class="java.lang.String"/>
+	<parameter name="stream" class="java.lang.String"/>
+	<parameter name="classId" class="java.lang.String"/>
+	<parameter name="section" class="java.lang.String"/>
+	<parameter name="Image" class="java.lang.String"/>
+	<field name="accyearname" class="java.lang.String"/>
+	<field name="studentIdNo" class="java.lang.String"/>
+	<field name="studentnamelabel" class="java.lang.String"/>
+	<field name="classname" class="java.lang.String"/>
+	<field name="sectionname" class="java.lang.String"/>
+	<field name="locationName" class="java.lang.String"/>
+	<field name="streamname" class="java.lang.String"/>
+	<field name="examname" class="java.lang.String"/>
+	<field name="examcode" class="java.lang.String"/>
+	<field name="examTypeName" class="java.lang.String"/>
+	<field name="subjectName" class="java.lang.String"/>
+	<field name="examStartDate" class="java.lang.String"/>
+	<field name="examEndDate" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50">
+			<staticText>
+				<reportElement mode="Opaque" x="123" y="10" width="115" height="40" forecolor="#F2EDE7" backcolor="#009999"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Student Id No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="238" y="10" width="123" height="40" forecolor="#F2EDE7" backcolor="#009999"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[School Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="446" y="10" width="93" height="40" forecolor="#F2EDE7" backcolor="#009999"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Stream]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="539" y="10" width="70" height="40" forecolor="#F2EDE7" backcolor="#009999"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="361" y="10" width="85" height="40" forecolor="#F2EDE7" backcolor="#009999"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Academic year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="679" y="10" width="123" height="40" forecolor="#F2EDE7" backcolor="#009999"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Exam Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="609" y="10" width="70" height="40" forecolor="#F2EDE7" backcolor="#009999"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Section]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="802" y="10" width="83" height="40" forecolor="#F2EDE7" backcolor="#009999"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Work Education]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="885" y="10" width="83" height="40" forecolor="#F2EDE7" backcolor="#009999"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Art Education]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="968" y="10" width="99" height="40" forecolor="#F2EDE7" backcolor="#009999"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Health & Physical Education]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1067" y="10" width="58" height="40" forecolor="#F2EDE7" backcolor="#009999"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Discipline]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1125" y="10" width="95" height="40" forecolor="#F2EDE7" backcolor="#009999"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Remarks]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="10" width="123" height="40" forecolor="#F2EDE7" backcolor="#009999"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="123" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentnamelabel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="0" width="115" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentIdNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="238" y="0" width="123" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{locationName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="0" width="85" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{accyearname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="446" y="0" width="93" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{streamname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="539" y="0" width="70" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{classname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="0" width="70" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sectionname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="679" y="0" width="123" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{examTypeName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,162 @@
+.nav-tabs 
+{
+    border-bottom: 1px solid #ddd;
+    margin-left: 12px;
+    margin-top: 5px;
+    font-family: Roboto Medium;
+    font-size: 14px;
+    font-weight: lighter;
+}
+.navbar-btn {
+    margin-top: 8px;
+    margin-bottom: -1px;
+    margin-left: 791px;
+    color: #07aab9;
+}
+
+#allstudent tr:hover {
+ background: none;
+  
+    cursor: pointer;
+}
+body {
+font-family: "Lato", sans-serif;
+}
+ #save2 {
+    margin: -21px 3px;
+}
+element.style {
+    position: absolute;
+    right: 0;
+}
+.buttonstyle {
+border:none;
+background: transparent;
+}
+#allstudent th:nth-child(1) {
+text-align:left;
+}
+
+#allstudent th:nth-child(1) {
+text-align:left;
+}
+
+.buttonstyle:hover
+{
+background:#07aab9;
+}
+
+.apprbuttonstyle {
+
+border:none;
+background: transparent;
+text-align:left;
+
+
+}
+.submitbuttonstyle {
+border:none;
+background: transparent;
+text-align:left;
+
+}
+
+.rjtbuttonstyle {
+text-align:left;
+border:none;
+background: transparent;
+
+}
+.cancelbuttonstyle {
+text-align:left;
+border:none;
+background: transparent;
+
+}
+
+
+.processbuttonstyle{
+text-align:left;
+border:none;
+background: transparent;
+}
+
+.apprbuttonstyle:hover
+{
+background:#07aab9;
+}
+.rjtbuttonstyle:hover
+{
+background:#07aab9;
+}
+
+.cancelbuttonstyle:hover {
+background:#07aab9;
+}
+
+.processbuttonstyle:hover {
+background:#07aab9;
+}
+.submitbuttonstyle:hover {
+background:#07aab9;
+
+}
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    color:white;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tab-pane {
+    display: none;
+  padding: 0 0 0 12px;
+   
+    border-top: none;
+}
+#issued{
+display: block;
+}
+.navbar-right {
+    margin: -5px;
+}
+.savebtn {
+}
+
+.studentname th:nth-child(1){
+min-width: 100px;
+}
+
+#allstudent tr .empty {
+font-color:red;
+font-size:12px;
+background-color:red;
+}
+.parentfirstName {
+text-align:left;
+}
+.issuedin{
+	border: 1px solid #DDD;
+    border-top: snow;
+
+}
+#div1{
+	margin-top: 0px !important;
+}
+#divIn{
+	    font-family: Roboto Medium;
+    font-size: 25pt;
+    color: #07aab9;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}

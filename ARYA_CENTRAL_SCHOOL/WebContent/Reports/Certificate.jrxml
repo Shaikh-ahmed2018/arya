@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="360" orientation="Landscape" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="locationname" class="java.lang.String"/>
+	<parameter name="admissionNo" class="java.lang.String"/>
+	<parameter name="StdName" class="java.lang.String"/>
+	<parameter name="classsec" class="java.lang.String"/>
+	<parameter name="PropfilePath" class="java.lang.String"/>
+	<parameter name="place" class="java.lang.String"/>
+	<parameter name="Accyear" class="java.lang.String"/>
+	<parameter name="Prog_date" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="eventName" class="java.lang.String">
+		<fieldDescription><![CDATA[eventName]]></fieldDescription>
+	</field>
+	<field name="categoryName" class="java.lang.String">
+		<fieldDescription><![CDATA[categoryName]]></fieldDescription>
+	</field>
+	<field name="programmeName" class="java.lang.String">
+		<fieldDescription><![CDATA[programmeName]]></fieldDescription>
+	</field>
+	<field name="progDate" class="java.lang.String">
+		<fieldDescription><![CDATA[progDate]]></fieldDescription>
+	</field>
+	<field name="accyear" class="java.lang.String">
+		<fieldDescription><![CDATA[accyear]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="256">
+			<image>
+				<reportElement x="237" y="0" width="85" height="58"/>
+				<imageExpression><![CDATA[$P{PropfilePath}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="0" y="58" width="555" height="24"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{locationname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="82" width="555" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{eventName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="162" width="165" height="20"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{StdName}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="97" y="176" width="186" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="356" y="160" width="67" height="16"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{classsec}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="336" y="174" width="100" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="171" y="184" width="56" height="20"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{place}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="162" y="199" width="77" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="283" y="184" width="149" height="16"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{programmeName}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="283" y="198" width="149" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="143" y="225" width="103" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="336" y="224" width="81" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="64" y="162" width="33" height="20"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Shri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="162" width="56" height="20"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Studying in ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="163" width="43" height="19"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="185" width="98" height="22"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ And He/She got]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="185" width="44" height="18"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<text><![CDATA[place in]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="185" width="44" height="18"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<text><![CDATA[program]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="211" width="79" height="18"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<text><![CDATA[conducted on]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="212" width="91" height="18"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<text><![CDATA[in accademic year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="102" width="555" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Algerian" size="24" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICATE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="351" y="209" width="100" height="20"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Accyear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="209" width="83" height="20"/>
+				<textElement>
+					<font fontName="Papyrus" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Prog_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,75 @@
+@CHARSET "ISO-8859-1";
+
+
+table#appliedJobs tr{
+/* 	border-bottom-color: #E6F5FA; */
+	 padding: 5px;
+	 border-color: white;
+}
+
+table#appliedJobs td{
+	
+	 font-family : Segoe UI;
+	 background-color: white;
+	 padding: 5px;
+	 color: #003D52;
+	 border: thin;
+	 border-color: white;
+}
+
+table#appliedJobs th{
+	 font-family : Segoe UI;
+	 background-color: #0099CC;
+	 padding: 5px;
+	 color: white;
+	
+}
+
+.inform{
+	font-size: 16px;
+	color: #716A33;
+	padding: 3px;
+/* 	font-weight: bold; */
+}
+
+.viewDetailsBtn{
+	cursor: pointer;
+/* 	background-color: #716A33; */
+    text-decoration : underline;
+	padding: 3px;
+    	
+}
+
+.pagebanner{
+	font-family : Segoe UI;
+	 background-color: #E6F5FA;
+	 padding: 5px;
+/* 	 color: #003D52; */
+	 color: green;
+}
+
+.pagelinks{
+	font-family : Segoe UI;
+	 background-color: #E6F5FA;
+	 padding: 5px;
+/* 	 color: #003D52; */
+     color: green;
+}
+
+
+#appliedJobs{
+	background-color:  #E6F5FA;
+}
+
+
+
+.dialogText{
+	height:25px;
+	background-color:  #E6F5FA;
+	padding: 3px;
+	font-family : Segoe UI;
+	font-size: 20px;
+	color: black;
+	border: none;
+	
+}

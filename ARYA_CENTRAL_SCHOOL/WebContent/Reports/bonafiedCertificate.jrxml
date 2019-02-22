@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bonafiedCertificate" pageWidth="486" pageHeight="360" columnWidth="446" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="258">
+			<image>
+				<reportElement x="12" y="10" width="68" height="57"/>
+			</image>
+			<staticText>
+				<reportElement x="0" y="0" width="446" height="35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ARYA CENTRAL SCHOOL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="446" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[POTTOM. TIRUVANANTHAPURAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="67" width="446" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Algerian" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[BONAFIED CERTIFICATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="96" width="434" height="29"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[This is to certify that kumari ____________________________________   daughter of]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="125" width="434" height="21"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[__________________________________is a bonafied student of this school studying ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="146" width="434" height="26"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[in std_____________ during the academic year _______________.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="195" width="100" height="20"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="195" width="103" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Principal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="195" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Seal]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

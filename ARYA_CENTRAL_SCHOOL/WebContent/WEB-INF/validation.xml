@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+
+
+
+	<global>
+
+		<constant>
+			<constant-name>telephoneFormat</constant-name>
+			<constant-value>^\d{5,10}$</constant-value>
+		</constant>
+		<!-- An example global constant <constant> <constant-name>postalCode</constant-name> 
+			<constant-value>^\d{5}\d*$</constant-value> </constant> end example -->
+
+	</global>
+<!-- 
+
+
+	<formset>
+
+		 
+ 
+		Doctorform validation
+ 	
+ 
+		An example form
+		<form name="logonForm">
+			<field property="username" depends="required">
+				<arg key="logonForm.username" />
+			</field>
+			<field property="password" depends="required,mask">
+				<arg key="logonForm.password" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9a-Z]*$</var-value>
+				</var>
+			</field>
+		</form>
+
+	</formset>
+
+	<formset>
+		<form name="loginform">
+			<field property="username" depends="required">
+				<arg key="login.name" />
+			</field>
+			<field property="password" depends="required,minlength">
+				<arg key="login.password" />
+				<arg name="minlength" resource="false" key="${var:minlength}" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>6</var-value>
+				</var>
+			</field>
+		</form>
+	</formset>
+
+	An example formset for another locale
+	<formset language="fr">
+
+		<constant>
+			<constant-name>postalCode</constant-name>
+			<constant-value>^[0-9]*$</constant-value>
+		</constant>
+
+		An example form
+		<form name="logonForm">
+			<field property="username" depends="required">
+				<arg key="logonForm.username" />
+			</field>
+			<field property="password" depends="required,mask">
+				<arg key="logonForm.password" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9a-zA-Z]*$</var-value>
+				</var>
+			</field>
+		</form>
+
+
+	</formset>
+
+<formset>
+	<form name="shiftRoaster">
+	<field property="shiftId" depends="required">
+	<arg key="shift.id"/>	
+	</field>
+	
+	<field property="shiftName" depends="required,mask">
+	<arg key="shift.name"/>
+	<var>
+	<var-name>mask</var-name>
+	<var-value>^[a-zA-Z \\s]*$</var-value>
+	</var>
+	
+	</field>
+	
+	<field property="fromTime" depends="required,mask">
+		<arg key="shift.ftime"/>
+			<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9:]*$</var-value>
+				</var>
+	
+		</field>
+		
+	<field property="toTime" depends="required,mask">
+		<arg key="shift.ttime"/>
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9:]*$</var-value>
+				</var>
+		
+		</field>
+		
+		<field property="tokenCount" depends="required,mask">
+	<arg key="label.shiftCount"></arg>
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9]*$</var-value>
+	</var>
+	
+	
+	</field>
+	
+	</form>
+	
+	
+	</formset>
+	
+	<formset>
+	<form name="blockTokenForm">
+	<field property="tokenNo" depends="required">
+	<arg key="label.tokenNo"/>
+	</field>
+	
+	<field property="appointmentTime" depends="required" >
+	<arg key="label.appointment"/>
+	</field>
+	
+	<field property="type" depends="required">
+	<arg key="label.consult"/>
+	</field>
+	
+	<field property="mobileNo" depends="required,mask">
+	<arg key="label.mobile"/>
+	<arg key="label.mobile"></arg>
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9]*$</var-value>
+				</var>
+	
+	
+	</field>
+	
+	
+	</form>
+	
+	
+	</formset> -->
+
+
+<!-- teacher registor form validation -->
+
+
+ <formset>
+
+		 
+ 	
+		<form name="teacherregistorform">
+		<field property="tfastname" depends="required,mask">
+		<arg key="error.tfastname.required" />
+		<arg key="error.tfastname.mask" />
+		<var>
+	     <var-name>mask</var-name>
+	     <var-value>^[a-zA-Z \\s]*$</var-value>
+	</var> 
+		</field>
+		
+	<field property="tlastname" depends="required,mask">
+		<arg key="error.tlastname.required" />
+		<arg key="error.tlastname.mask" />
+		<var>
+	     <var-name>mask</var-name>
+	     <var-value>^[a-zA-Z \\s]*$</var-value>
+	</var> 
+		</field>
+		
+	
+
+       <field property="tqualification" depends="required">
+		<arg key="error.tqualification.required" />
+		</field>
+		
+
+		<field property="teacherdesgn" depends="required">
+		<arg key="error.teacherdesgn.required" />
+		</field>
+	
+		<field property="teacherpermanentadd" depends="required">
+		<arg key="error.teacherpermanentadd.required" />
+		</field>
+		
+		
+		
+		
+
+		<field property="teachermobno" depends="required,mask">
+		<arg key="error.teachermobno.required" />
+		<arg1 key="error.teachermobno.required" />
+		<var>
+		  <var-name>mask</var-name>
+		  <var-value>${telephoneFormat}</var-value>
+		
+		</var>
+		</field>
+		
+		<field property="teacheremail" depends="email,required">
+		<arg0 key="error.teacheremail.required" />
+		<arg1 key="error.teacheremail.required" />
+		</field>
+	
+		<field property="teacheranyOthername" depends="required">
+		<arg key="error.teacheranyOthername.required" />
+		</field>
+		
+		</form>
+	</formset>
+	
+	
+    <formset>
+	<form name="parentRegistrationForm">
+	<field property="firstName" depends="required,mask">
+	<arg0 key="first.name"/>
+	<arg1 key="${var:minlength}" name="minlength" resource="false"/>
+   <var>
+
+  <var-name>minlength</var-name>
+  <var-value>6</var-value>
+
+  </var>
+	<!-- <arg key="errors.required"/>	
+	<arg key="errors.minlength"/>	 -->
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9a-zA-Z]*$</var-value>
+	</var>
+	</field>
+	
+<field property="lastName" depends="required,mask">
+	<arg0 key="last.name"/>
+	<arg1 key="${var:minlength}" name="minlength" resource="false"/>
+   <var>
+
+  <var-name>minlength</var-name>
+  <var-value>6</var-value>
+
+  </var>
+	<!-- <arg key="errors.required"/>	
+	<arg key="errors.minlength"/>	 -->
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9a-zA-Z]*$</var-value>
+	</var>
+	</field>
+    <field property="qualification" depends="required,mask">
+	<arg0 key="qualification"/>
+	<arg1 key="${var:minlength}" name="minlength" resource="false"/>
+   <var>
+
+  <var-name>minlength</var-name>
+  <var-value>6</var-value>
+
+  </var>
+	<!-- <arg key="errors.required"/>	
+	<arg key="errors.minlength"/>	 -->
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9a-zA-Z]*$</var-value>
+	</var>
+	</field>
+	 <field property="address" depends="required,mask">
+	<arg0 key="address"/>
+	<arg1 key="${var:minlength}" name="minlength" resource="false"/>
+   <var>
+
+  <var-name>minlength</var-name>
+  <var-value>6</var-value>
+
+  </var>
+	<!-- <arg key="errors.required"/>	
+	<arg key="errors.minlength"/>	 -->
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9a-zA-Z]*$</var-value>
+	</var>
+	</field>
+	 <field property="mobileno" depends="required,mask">
+	<arg0 key="mobileno"/>
+	<arg1 key="${var:minlength}" name="minlength" resource="false"/>
+   <var>
+
+  <var-name>minlength</var-name>
+  <var-value>6</var-value>
+
+  </var>
+	<!-- <arg key="errors.required"/>	
+	<arg key="errors.minlength"/>	 -->
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9a-zA-Z]*$</var-value>
+	</var>
+	</field>
+	 <field property="email" depends="required">
+	<arg0 key="email"/>
+	<arg1 key="${var:minlength}" name="minlength" resource="false"/>
+   <var>
+
+  <var-name>minlength</var-name>
+  <var-value>6</var-value>
+
+  </var>
+	<!-- <arg key="errors.required"/>	
+	<arg key="errors.minlength"/>	 -->
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9a-zA-Z]*$</var-value>
+	</var>
+	</field>
+	 <field property="username" depends="required,mask">
+	<arg0 key="user.name"/>
+	<arg1 key="${var:minlength}" name="minlength" resource="false"/>
+   <var>
+
+  <var-name>minlength</var-name>
+  <var-value>6</var-value>
+
+  </var>
+	<!-- <arg key="errors.required"/>	
+	<arg key="errors.minlength"/>	 -->
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9a-zA-Z]*$</var-value>
+	</var>
+	</field>
+	 <field property="admissionNumber" depends="required">
+	<arg0 key="admissionNumber"/>
+	<arg1 key="${var:minlength}" name="minlength" resource="false"/>
+   <var>
+
+  <var-name>minlength</var-name>
+  <var-value>6</var-value>
+
+  </var>
+	<!-- <arg key="errors.required"/>	
+	<arg key="errors.minlength"/>	 -->
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9a-zA-Z]*$</var-value>
+	</var>
+	</field>
+	 <field property="relationshipwithchild" depends="required">
+	<arg0 key="relationshipwithchild"/>
+	<arg1 key="${var:minlength}" name="minlength" resource="false"/>
+   <var>
+
+  <var-name>minlength</var-name>
+  <var-value>6</var-value>
+
+  </var>
+	<!-- <arg key="errors.required"/>	
+	<arg key="errors.minlength"/>	 -->
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9a-zA-Z]*$</var-value>
+	</var>
+	</field>
+	<!-- <field property="shiftName" depends="required,mask">
+	<arg key="shift.name"/>
+	<var>
+	<var-name>mask</var-name>
+	<var-value>^[a-zA-Z \\s]*$</var-value>
+	</var>
+	
+	</field>
+	
+	<field property="fromTime" depends="required,mask">
+		<arg key="shift.ftime"/>
+			<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9:]*$</var-value>
+				</var>
+	
+		</field>
+		
+	<field property="toTime" depends="required,mask">
+		<arg key="shift.ttime"/>
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9:]*$</var-value>
+				</var>
+		
+		</field>
+		
+		<field property="tokenCount" depends="required,mask">
+	<arg key="label.shiftCount"></arg>
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9]*$</var-value>
+	</var>
+	
+	
+	</field>
+	
+	</form>
+	
+	
+	</formset>
+	
+	<formset>
+	<form name="blockTokenForm">
+	<field property="tokenNo" depends="required">
+	<arg key="label.tokenNo"/>
+	</field>
+	
+	<field property="appointmentTime" depends="required" >
+	<arg key="label.appointment"/>
+	</field>
+	
+	<field property="type" depends="required">
+	<arg key="label.consult"/>
+	</field>
+	
+	<field property="mobileNo" depends="required,mask">
+	<arg key="label.mobile"/>
+	<arg key="label.mobile"></arg>
+	<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9]*$</var-value>
+				</var>
+	
+	
+	</field> -->
+	
+	
+	</form>	
+	
+	</formset>
+	
+	<formset>	 
+ 	
+		<form name="ViewAllSubjectForm">
+		 <field property="category" depends="required">
+		<arg key="error.subcategory.required" />
+		</field>
+		
+		 <field property="classname" depends="required">
+		<arg key="error.subclassname.required" />
+		</field>
+		
+</form>
+</formset>
+
+<!-- 
+<formset>	 
+ 	
+		<form name="ViewAllSubjectForm">
+		 <field property="subcategory" depends="required">
+		<arg key="error.subcategory.required" />
+		</field>
+		
+		 <field property="subclassname" depends="required">
+		<arg key="error.subclassname.required" />
+		</field>
+		
+</form>
+</formset> -->
+</form-validation>

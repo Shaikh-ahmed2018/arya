@@ -1,0 +1,185 @@
+
+.exam.code{
+	color:black;	
+}
+
+.exam.name{
+	color:black;
+}
+
+.examcodelabel{
+	font-family: Open Sans Light;
+    font-size: 11pt;
+    color: #5a5a5a;
+}
+
+.examnamelabel{
+	font-family: Open Sans Light;
+    font-size: 11pt;
+    color: #5a5a5a;
+}
+
+.nav.nav-tabs li.active,.nav.nav-tabs li.active:hover{
+	background-color: #fff;
+}
+.nav.nav-tabs li:hover{
+	background-color:#07aab9;
+}
+.nav.nav-tabs li a{
+	background-color: transparent;
+}
+
+.form-group{
+margin-bottom: 5px;}
+.save:hover {
+	cursor: pointer;
+}
+
+fieldset { 
+	width:512px;
+    display: block;
+   /*  margin-left: auto;
+    margin-right: 2px; */
+    margin-bottom: 5px;
+    padding-bottom: 0.625em;
+    padding-left: 7px;
+    padding-right: 0px;
+    border: 0.5px solid #ccc;
+   
+}
+legend {
+    display: inline-block;
+    width: auto;
+    padding: 0;
+    margin-bottom: 0px;
+    font-size: 16px;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+   }
+   
+.tab{
+	background-color: #eee;
+}
+
+.slideTab{
+	padding:10px;
+	font-family: Roboto Medium;
+    font-size: 14px;
+    font-weight: lighter;
+ 
+}
+div.tab button:hover {
+    background-color: #07aab9;
+}
+
+
+.buttons{
+
+vertical-align:-5px;
+
+}
+.navbar-right {
+    top: -3px;
+}
+.panel-primary>.panel-heading{
+margin-bottom: 0px;
+}
+form .panel.panel-primary.panel-list{
+padding-bottom: 0px;
+
+}  
+.Contact {
+display:block;
+}  
+
+@media (min-width:320px) and (max-width:767px){
+br{
+display: none;
+}
+}
+
+#allstudent tr {
+	font-size: 14px;
+}
+
+#allstudent tr:nth-child(n) {
+	background-color: #F2FAFC;
+}
+
+#allstudent tr:nth-child(2n) {
+	background-color: #FFFFFF;
+}
+
+#allstudent tr:hover {
+	background: #9CDDE3;
+	/* color: #fff; */
+	cursor: pointer;
+}
+#allstudent .glyphicon-trash {
+    font-size: 17px;
+    line-height: 27px;
+    color: #989898;
+    padding: 0;
+    top: 9px;
+    height: 30px;
+    right: 0;
+    position: relative;
+}
+
+
+
+#allstudent.glyphicon-edit{
+	
+	font-size: 17px;
+    line-height: 27px;
+    color: #989898;
+    padding: 0;
+    top: 9px;
+    height: 30px;
+    right: 0;
+    position: relative;
+}
+
+#allstudent th {
+
+	background: #f9f9f9 !important;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+    font-family: Roboto Medium;
+    font-size: 14px;
+    font-weight: lighter;
+    border-left: 1px solid #ddd;
+    color: #767676 !important;
+}
+
+#allstudent th:nth-child(1) {
+
+    text-align: center;
+    width: 50px;
+}
+
+#allstudent td:nth-child(1) {
+
+    text-align: center;
+    width: 50px;
+}
+
+#allstudent th a {
+	color: #767676 !important;
+}
+
+
+
+#allstudent  tr td {
+	border-right: 1px solid #ddd;
+	border-left: 0;
+	border-top: 0;
+	border-bottom: 0;
+	color: #000000;
+}
+
+
+
+

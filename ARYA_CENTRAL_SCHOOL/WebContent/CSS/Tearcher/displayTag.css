@@ -1,0 +1,27 @@
+@CHARSET "ISO-8859-1";
+
+table.displayTagClass tr{
+/* 	border-bottom-color: #E6F5FA; */
+	 padding: 5px;
+	 border-color: white;
+}
+.displayTagClass {
+	margin: 0 auto;
+}
+table.displayTagClass td{
+	
+	 font-family : Segoe UI;
+	 background-color: white;
+	 padding: 5px;
+	 color: #003D52;
+	 border: thin;
+	 border-color: white;
+}
+
+table.displayTagClass th{
+	 font-family : Segoe UI;
+	 background-color: #0099CC;
+	 padding: 5px;
+	 color: white;
+	
+}

@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NewArrivalListPDF" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="fromdate" class="java.lang.String"/>
+	<parameter name="todate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="accessionNo" class="java.lang.String">
+		<fieldDescription><![CDATA[accessionNo]]></fieldDescription>
+	</field>
+	<field name="accessionNoId" class="java.lang.String">
+		<fieldDescription><![CDATA[accessionNoId]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[address]]></fieldDescription>
+	</field>
+	<field name="admissionNo" class="java.lang.String">
+		<fieldDescription><![CDATA[admissionNo]]></fieldDescription>
+	</field>
+	<field name="amountperday" class="java.lang.String">
+		<fieldDescription><![CDATA[amountperday]]></fieldDescription>
+	</field>
+	<field name="author" class="java.lang.String">
+		<fieldDescription><![CDATA[author]]></fieldDescription>
+	</field>
+	<field name="billDate" class="java.lang.String">
+		<fieldDescription><![CDATA[billDate]]></fieldDescription>
+	</field>
+	<field name="billNo" class="java.lang.String">
+		<fieldDescription><![CDATA[billNo]]></fieldDescription>
+	</field>
+	<field name="bookTitle" class="java.lang.String">
+		<fieldDescription><![CDATA[bookTitle]]></fieldDescription>
+	</field>
+	<field name="category" class="java.lang.String">
+		<fieldDescription><![CDATA[category]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="classDescription" class="java.lang.String">
+		<fieldDescription><![CDATA[classDescription]]></fieldDescription>
+	</field>
+	<field name="className" class="java.lang.String">
+		<fieldDescription><![CDATA[className]]></fieldDescription>
+	</field>
+	<field name="codeId" class="java.lang.String">
+		<fieldDescription><![CDATA[codeId]]></fieldDescription>
+	</field>
+	<field name="codeName" class="java.lang.String">
+		<fieldDescription><![CDATA[codeName]]></fieldDescription>
+	</field>
+	<field name="contactNo" class="java.lang.String">
+		<fieldDescription><![CDATA[contactNo]]></fieldDescription>
+	</field>
+	<field name="contacts" class="java.lang.String">
+		<fieldDescription><![CDATA[contacts]]></fieldDescription>
+	</field>
+	<field name="contentSearch" class="java.lang.String">
+		<fieldDescription><![CDATA[contentSearch]]></fieldDescription>
+	</field>
+	<field name="cost" class="java.lang.String">
+		<fieldDescription><![CDATA[cost]]></fieldDescription>
+	</field>
+	<field name="count" class="java.lang.Integer">
+		<fieldDescription><![CDATA[count]]></fieldDescription>
+	</field>
+	<field name="createdby" class="java.lang.String">
+		<fieldDescription><![CDATA[createdby]]></fieldDescription>
+	</field>
+	<field name="currentStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[currentStatus]]></fieldDescription>
+	</field>
+	<field name="dDC" class="java.lang.String">
+		<fieldDescription><![CDATA[dDC]]></fieldDescription>
+	</field>
+	<field name="department" class="java.lang.String">
+		<fieldDescription><![CDATA[department]]></fieldDescription>
+	</field>
+	<field name="designation" class="java.lang.String">
+		<fieldDescription><![CDATA[designation]]></fieldDescription>
+	</field>
+	<field name="divisionDescription" class="java.lang.String">
+		<fieldDescription><![CDATA[divisionDescription]]></fieldDescription>
+	</field>
+	<field name="duedate" class="java.lang.String">
+		<fieldDescription><![CDATA[duedate]]></fieldDescription>
+	</field>
+	<field name="edition" class="java.lang.String">
+		<fieldDescription><![CDATA[edition]]></fieldDescription>
+	</field>
+	<field name="editor" class="java.lang.String">
+		<fieldDescription><![CDATA[editor]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[email]]></fieldDescription>
+	</field>
+	<field name="entry_id" class="java.lang.String">
+		<fieldDescription><![CDATA[entry_id]]></fieldDescription>
+	</field>
+	<field name="fax" class="java.lang.String">
+		<fieldDescription><![CDATA[fax]]></fieldDescription>
+	</field>
+	<field name="fineamount" class="java.lang.String">
+		<fieldDescription><![CDATA[fineamount]]></fieldDescription>
+	</field>
+	<field name="fineincperday" class="java.lang.String">
+		<fieldDescription><![CDATA[fineincperday]]></fieldDescription>
+	</field>
+	<field name="fromDate" class="java.lang.String">
+		<fieldDescription><![CDATA[fromDate]]></fieldDescription>
+	</field>
+	<field name="from_date" class="java.lang.String">
+		<fieldDescription><![CDATA[from_date]]></fieldDescription>
+	</field>
+	<field name="generalInfo" class="java.lang.String">
+		<fieldDescription><![CDATA[generalInfo]]></fieldDescription>
+	</field>
+	<field name="hiddenReserveId" class="java.lang.String">
+		<fieldDescription><![CDATA[hiddenReserveId]]></fieldDescription>
+	</field>
+	<field name="iSBNNo" class="java.lang.String">
+		<fieldDescription><![CDATA[iSBNNo]]></fieldDescription>
+	</field>
+	<field name="imageurl" class="java.lang.String">
+		<fieldDescription><![CDATA[imageurl]]></fieldDescription>
+	</field>
+	<field name="issueId" class="java.lang.String">
+		<fieldDescription><![CDATA[issueId]]></fieldDescription>
+	</field>
+	<field name="issued_date" class="java.lang.String">
+		<fieldDescription><![CDATA[issued_date]]></fieldDescription>
+	</field>
+	<field name="issued_return_date" class="java.lang.String">
+		<fieldDescription><![CDATA[issued_return_date]]></fieldDescription>
+	</field>
+	<field name="issued_to" class="java.lang.String">
+		<fieldDescription><![CDATA[issued_to]]></fieldDescription>
+	</field>
+	<field name="issued_user_id" class="java.lang.String">
+		<fieldDescription><![CDATA[issued_user_id]]></fieldDescription>
+	</field>
+	<field name="itemType" class="java.lang.String">
+		<fieldDescription><![CDATA[itemType]]></fieldDescription>
+	</field>
+	<field name="languge" class="java.lang.String">
+		<fieldDescription><![CDATA[languge]]></fieldDescription>
+	</field>
+	<field name="libLocId" class="java.lang.String">
+		<fieldDescription><![CDATA[libLocId]]></fieldDescription>
+	</field>
+	<field name="location" class="java.lang.String">
+		<fieldDescription><![CDATA[location]]></fieldDescription>
+	</field>
+	<field name="mobilenum" class="java.lang.String">
+		<fieldDescription><![CDATA[mobilenum]]></fieldDescription>
+	</field>
+	<field name="modifiedby" class="java.lang.String">
+		<fieldDescription><![CDATA[modifiedby]]></fieldDescription>
+	</field>
+	<field name="no_of_Copies" class="java.lang.String">
+		<fieldDescription><![CDATA[no_of_Copies]]></fieldDescription>
+	</field>
+	<field name="no_of_Pages" class="java.lang.String">
+		<fieldDescription><![CDATA[no_of_Pages]]></fieldDescription>
+	</field>
+	<field name="noofdaytaken" class="java.lang.String">
+		<fieldDescription><![CDATA[noofdaytaken]]></fieldDescription>
+	</field>
+	<field name="pubdate" class="java.lang.String">
+		<fieldDescription><![CDATA[pubdate]]></fieldDescription>
+	</field>
+	<field name="publicationYear" class="java.lang.String">
+		<fieldDescription><![CDATA[publicationYear]]></fieldDescription>
+	</field>
+	<field name="publisher" class="java.lang.String">
+		<fieldDescription><![CDATA[publisher]]></fieldDescription>
+	</field>
+	<field name="regDate" class="java.lang.String">
+		<fieldDescription><![CDATA[regDate]]></fieldDescription>
+	</field>
+	<field name="reservationId" class="java.lang.String">
+		<fieldDescription><![CDATA[reservationId]]></fieldDescription>
+	</field>
+	<field name="sectionDescription" class="java.lang.String">
+		<fieldDescription><![CDATA[sectionDescription]]></fieldDescription>
+	</field>
+	<field name="sectionName" class="java.lang.String">
+		<fieldDescription><![CDATA[sectionName]]></fieldDescription>
+	</field>
+	<field name="shelfNo" class="java.lang.String">
+		<fieldDescription><![CDATA[shelfNo]]></fieldDescription>
+	</field>
+	<field name="size" class="java.lang.String">
+		<fieldDescription><![CDATA[size]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[status]]></fieldDescription>
+	</field>
+	<field name="subscriberId" class="java.lang.String">
+		<fieldDescription><![CDATA[subscriberId]]></fieldDescription>
+	</field>
+	<field name="subscriberName" class="java.lang.String">
+		<fieldDescription><![CDATA[subscriberName]]></fieldDescription>
+	</field>
+	<field name="supEmailid" class="java.lang.String">
+		<fieldDescription><![CDATA[supEmailid]]></fieldDescription>
+	</field>
+	<field name="supcontactnum" class="java.lang.String">
+		<fieldDescription><![CDATA[supcontactnum]]></fieldDescription>
+	</field>
+	<field name="supdate" class="java.lang.String">
+		<fieldDescription><![CDATA[supdate]]></fieldDescription>
+	</field>
+	<field name="suppliedBy" class="java.lang.String">
+		<fieldDescription><![CDATA[suppliedBy]]></fieldDescription>
+	</field>
+	<field name="supplieraddress" class="java.lang.String">
+		<fieldDescription><![CDATA[supplieraddress]]></fieldDescription>
+	</field>
+	<field name="telephone" class="java.lang.String">
+		<fieldDescription><![CDATA[telephone]]></fieldDescription>
+	</field>
+	<field name="toDate" class="java.lang.String">
+		<fieldDescription><![CDATA[toDate]]></fieldDescription>
+	</field>
+	<field name="to_date" class="java.lang.String">
+		<fieldDescription><![CDATA[to_date]]></fieldDescription>
+	</field>
+	<field name="todaydate" class="java.lang.String">
+		<fieldDescription><![CDATA[todaydate]]></fieldDescription>
+	</field>
+	<field name="userType" class="java.lang.String">
+		<fieldDescription><![CDATA[userType]]></fieldDescription>
+	</field>
+	<field name="slno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[slno]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="29"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ARYA CENTRAL SCHOOL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[New Arrival List Report]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="99" y="35" width="89" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fromdate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="35" width="99" height="28"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[From Date : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="616" y="35" width="81" height="28"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[To Date :  ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="697" y="35" width="105" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{todate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="0" width="70" height="40"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Accession No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="94" height="40"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Item Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="0" width="79" height="40"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Registration Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="0" width="62" height="40"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Author]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="0" width="85" height="40"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Book Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="0" width="74" height="40"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[DDC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="576" y="0" width="59" height="40"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[No. Of Copies]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="728" y="0" width="74" height="40"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Current Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="635" y="0" width="93" height="40"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Location]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="48" height="40"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Sl.no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="0" width="64" height="40"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Category ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="89" splitType="Stretch">
+			<textField>
+				<reportElement x="180" y="0" width="94" height="89"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{itemType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="0" width="70" height="89"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{accessionNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="0" width="79" height="89"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{regDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="48" y="0" width="62" height="89"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{author}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="0" width="85" height="89"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookTitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="502" y="0" width="74" height="89"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dDC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="576" y="0" width="59" height="89"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_of_Copies}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="635" y="0" width="93" height="89"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{location}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="728" y="0" width="74" height="89"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{currentStatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="48" height="89"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{slno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="438" y="0" width="64" height="89"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{category}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

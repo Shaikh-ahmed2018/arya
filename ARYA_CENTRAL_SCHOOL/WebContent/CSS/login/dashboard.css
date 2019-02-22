@@ -1,0 +1,118 @@
+/* Item */
+.ui-x .ui-item {
+	max-width: 100%;
+	margin: 0px auto;
+}
+/* Collapse */
+.ui-x .ui-item .ui-collapse {
+	margin: 20px 0px;
+	border: 1px solid #ccc;
+	padding: 4px 12px;
+	background: #fafafa;
+	box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.11);
+}
+/* Icon */
+.ui-x .ui-item .ui-collapse i {
+	font-size: 12px;
+	line-height: 22px;
+	margin-right: 3px;
+}
+/* Heading */
+.ui-x .ui-item .ui-collapse a.ui-heading {
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+	line-height: 23px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+}
+/* Refresh */
+.ui-x .ui-collapse a.ui-referesh span:after {
+	content: "\f01e";
+	font-family: "FontAwesome";
+	float: right;
+	margin-right: 8px;
+	font-size: 11px;
+	line-height: 22px;
+	color: #999;
+}
+/* Angle */
+.ui-x .ui-collapse a.ui-angle span:after {
+	content: "\f106";
+	font-family: "FontAwesome";
+	float: right;
+	margin-right: 8px;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 22px;
+	color: #999;
+}
+
+.ui-x .ui-collapse a.ui-angle.active span:after {
+	content: "\f107";
+}
+/* Close */
+.ui-x .ui-collapse a.ui-close span:after {
+	content: "\f00d";
+	font-family: "FontAwesome";
+	float: right;
+	font-size: 12px;
+	line-height: 22px;
+	color: #999;
+	font-weight: 300;
+}
+/* Collapse Panel */
+.ui-x .ui-item .panel-collapse {
+	border-top: 1px solid #ddd;
+	margin-top: 10px;
+}
+/* Table */
+.ui-x .ui-item .panel-collapse .table-responsive {
+	margin: 10px 0px 0px;
+	background: #fff;
+}
+
+.ui-x .ui-item .panel-collapse .table-responsive .table {
+	margin: 0px;
+}
+
+.ui-x .ui-item .panel-collapse .table-responsive tr>td {
+	font-size: 13px;
+	line-height: 23px;
+}
+
+.ui-x .ui-item .panel-collapse .table-responsive tr>td,.ui-x .ui-item .panel-collapse .table-responsive tr>th
+	{
+	text-align: center;
+}
+
+.ui-x .ui-item .panel-collapse .table-responsive tr>th.ui-assembly {
+	text-align: center;
+	vertical-align: middle;
+	transform: rotate(-90deg);
+	font-size: 15px;
+	line-height: 25px;
+	font-weight: 600;
+	width: 12%;
+}
+
+#alerts-box {
+	margin: 1.8em 0 7em 1.5em;
+}
+
+.alerts-heading {
+	font-family: Segoe UI;
+	font-size: 13px;
+	margin-bottom: 0px;
+	background-color: #D3EBEB;
+	color: #000000;
+	line-height: 140%;
+	padding: 0px 0 0px 0px;
+}
+
+.alerts-content {
+	font-family: Segoe UI;
+	font-size: 12px;
+	margin: 5px 0px 11px 0px;
+	line-height: 140%;
+}

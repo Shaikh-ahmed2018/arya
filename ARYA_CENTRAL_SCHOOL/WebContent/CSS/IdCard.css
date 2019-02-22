@@ -1,0 +1,23 @@
+.addressdetails{
+    height: 65px;
+    padding-top: 1px;
+    width: 90px;
+
+}
+.studentdetails{
+    border-radius: 8px;
+    height: 65px;
+    padding-top: 1px;
+}
+.phonedetails{
+    width: 90px;
+    height: 20px;
+}
+.main-div{
+	width:195px;
+	height:422px;
+}
+.qrdetails{
+	width: 90px;
+	height: 90px;
+}

@@ -1,0 +1,22 @@
+.glyphicon:hover {
+	cursor: pointer;
+}
+
+.download:hover {
+	cursor: pointer;
+}
+
+#excelDownload:hover {
+	cursor: pointer;
+}
+
+#pdfDownload:hover {
+	cursor: pointer;
+}
+
+#accyear {
+width:190px;
+text-align:center;
+}
+
+

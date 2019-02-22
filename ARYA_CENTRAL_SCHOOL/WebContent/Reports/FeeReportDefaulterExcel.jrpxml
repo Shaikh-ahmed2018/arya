@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperPrint xmlns="http://jasperreports.sourceforge.net/jasperreports/print" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/print http://jasperreports.sourceforge.net/xsd/jasperprint.xsd" name="FeeReportExcel" pageWidth="648" pageHeight="800" topMargin="20" leftMargin="20" bottomMargin="20" rightMargin="20" locale="en_US" timezone="Asia/Calcutta">
+	<property name="net.sf.jasperreports.export.xml.start.page.index" value="0"/>
+	<property name="net.sf.jasperreports.export.xml.end.page.index" value="0"/>
+	<property name="net.sf.jasperreports.export.xml.page.count" value="1"/>
+	<origin band="title"/>
+	<origin band="detail"/>
+	<page>
+		<text textAlignment="Center" verticalAlignment="Top" textHeight="14.6484375">
+			<reportElement x="20" y="66" width="608" height="26" origin="0" srcId="1"/>
+			<font fontName="Calibri" size="12" isBold="true"/>
+			<textContent><![CDATA[Defaulter Fee Report Details    ]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="523" y="116" width="105" height="21" origin="0" srcId="2"/>
+			<box>
+				<pen lineWidth="0.5"/>
+				<topPen lineWidth="0.5"/>
+				<leftPen lineWidth="0.5"/>
+				<bottomPen lineWidth="0.5"/>
+				<rightPen lineWidth="0.5"/>
+			</box>
+			<font size="10" isBold="true"/>
+			<textContent><![CDATA[Due Amount]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="20" y="116" width="55" height="21" origin="0" srcId="3"/>
+			<box>
+				<pen lineWidth="0.5"/>
+				<topPen lineWidth="0.5"/>
+				<leftPen lineWidth="0.5"/>
+				<bottomPen lineWidth="0.5"/>
+				<rightPen lineWidth="0.5"/>
+			</box>
+			<font size="10" isBold="true"/>
+			<textContent><![CDATA[Sl No]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="205" y="91" width="132" height="25" origin="0" srcId="4"/>
+			<font fontName="SansSerif" size="10" isBold="false"/>
+			<textContent><![CDATA[Academic Year :]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="404" y="116" width="119" height="21" origin="0" srcId="5"/>
+			<box>
+				<pen lineWidth="0.5"/>
+				<topPen lineWidth="0.5"/>
+				<leftPen lineWidth="0.5"/>
+				<bottomPen lineWidth="0.5"/>
+				<rightPen lineWidth="0.5"/>
+			</box>
+			<font size="10" isBold="true"/>
+			<textContent><![CDATA[Term]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="194" y="116" width="211" height="21" origin="0" srcId="6"/>
+			<box>
+				<pen lineWidth="0.5"/>
+				<topPen lineWidth="0.5"/>
+				<leftPen lineWidth="0.5"/>
+				<bottomPen lineWidth="0.5"/>
+				<rightPen lineWidth="0.5"/>
+			</box>
+			<font size="10" isBold="true"/>
+			<textContent><![CDATA[Student Name]]></textContent>
+		</text>
+		<text verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="20" y="91" width="100" height="25" origin="0" srcId="7"/>
+			<box leftPadding="2"/>
+			<font fontName="SansSerif" size="10" isBold="false"/>
+			<textContent><![CDATA[Class & Division:]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="75" y="116" width="119" height="21" origin="0" srcId="8"/>
+			<box>
+				<pen lineWidth="0.5"/>
+				<topPen lineWidth="0.5"/>
+				<leftPen lineWidth="0.5"/>
+				<bottomPen lineWidth="0.5"/>
+				<rightPen lineWidth="0.5"/>
+			</box>
+			<font size="10" isBold="true"/>
+			<textContent><![CDATA[Admission No]]></textContent>
+		</text>
+		<text textAlignment="Right" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="467" y="91" width="84" height="25" origin="0" srcId="9"/>
+			<font fontName="SansSerif" size="10"/>
+			<textContent><![CDATA[Term :]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Top" textHeight="17.609375">
+			<reportElement x="20" y="20" width="608" height="28" origin="0" srcId="10"/>
+			<font size="14"/>
+			<textContent><![CDATA[sdf]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="120" y="91" width="85" height="25" origin="0" srcId="11"/>
+			<font fontName="SansSerif" size="10" isBold="true"/>
+			<textContent><![CDATA[fgfd]]></textContent>
+		</text>
+		<text textAlignment="Justified" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="337" y="91" width="130" height="25" origin="0" srcId="12"/>
+			<font fontName="SansSerif" size="10" isBold="true"/>
+			<textContent><![CDATA[sdfdsf]]></textContent>
+		</text>
+		<text verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="551" y="91" width="77" height="25" origin="0" srcId="13"/>
+			<font fontName="SansSerif" size="10" isBold="true"/>
+			<textContent><![CDATA[sdf]]></textContent>
+		</text>
+		<text textAlignment="Center" textHeight="12.578125">
+			<reportElement x="20" y="48" width="608" height="18" origin="0" srcId="14"/>
+			<textContent><![CDATA[Arya Kumar Ashram,Pattom,Thiruvananthapuram-695004]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="523" y="137" width="105" height="25" origin="1" srcId="15"/>
+			<box>
+				<pen lineWidth="0.5"/>
+				<topPen lineWidth="0.5"/>
+				<leftPen lineWidth="0.5"/>
+				<bottomPen lineWidth="0.5"/>
+				<rightPen lineWidth="0.5"/>
+			</box>
+			<textContent><![CDATA[null]]></textContent>
+		</text>
+		<text verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="194" y="137" width="210" height="25" origin="1" srcId="16"/>
+			<box>
+				<pen lineWidth="0.5"/>
+				<topPen lineWidth="0.5"/>
+				<leftPen lineWidth="0.5"/>
+				<bottomPen lineWidth="0.5"/>
+				<rightPen lineWidth="0.5"/>
+			</box>
+			<textContent><![CDATA[null]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125" valueClass="java.lang.Integer">
+			<reportElement x="20" y="137" width="55" height="25" origin="1" srcId="17"/>
+			<box>
+				<pen lineWidth="0.5"/>
+				<topPen lineWidth="0.5"/>
+				<leftPen lineWidth="0.5"/>
+				<bottomPen lineWidth="0.5"/>
+				<rightPen lineWidth="0.5"/>
+			</box>
+			<textContent><![CDATA[0]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="404" y="137" width="119" height="25" origin="1" srcId="18"/>
+			<box>
+				<pen lineWidth="0.5"/>
+				<topPen lineWidth="0.5"/>
+				<leftPen lineWidth="0.5"/>
+				<bottomPen lineWidth="0.5"/>
+				<rightPen lineWidth="0.5"/>
+			</box>
+			<textContent><![CDATA[null]]></textContent>
+		</text>
+		<text textAlignment="Center" verticalAlignment="Middle" textHeight="12.578125">
+			<reportElement x="75" y="137" width="119" height="25" origin="1" srcId="19"/>
+			<box>
+				<pen lineWidth="0.5"/>
+				<topPen lineWidth="0.5"/>
+				<leftPen lineWidth="0.5"/>
+				<bottomPen lineWidth="0.5"/>
+				<rightPen lineWidth="0.5"/>
+			</box>
+			<textContent><![CDATA[null]]></textContent>
+		</text>
+	</page>
+</jasperPrint>

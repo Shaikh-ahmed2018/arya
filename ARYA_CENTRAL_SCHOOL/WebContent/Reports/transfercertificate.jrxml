@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="transfercertificate" pageWidth="612" pageHeight="1008" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="7faa4e84-88bf-4a86-a524-e4f54152b409">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="admNo" class="java.lang.String"/>
+	<parameter name="accyear" class="java.lang.String"/>
+	<parameter name="template" class="java.lang.String"/>
+	<field name="studentFullName" class="java.lang.String"/>
+	<field name="fatherName" class="java.lang.String"/>
+	<field name="motherName" class="java.lang.String"/>
+	<field name="nationality" class="java.lang.String"/>
+	<field name="casteCategory" class="java.lang.String"/>
+	<field name="caste" class="java.lang.String"/>
+	<field name="dateofBirth" class="java.lang.String"/>
+	<field name="dateofJoin" class="java.lang.String"/>
+	<field name="latestclass" class="java.lang.String"/>
+	<field name="compulsorySub" class="java.lang.String"/>
+	<field name="lastAttended" class="java.lang.String"/>
+	<field name="stuckOfRolls" class="java.lang.String"/>
+	<field name="certificateDateApply" class="java.lang.String"/>
+	<field name="certificateIssueDate" class="java.lang.String"/>
+	<field name="exam_name" class="java.lang.String"/>
+	<field name="reasonForTc" class="java.lang.String"/>
+	<field name="remarks" class="java.lang.String"/>
+	<field name="casteCategoryStatus" class="java.lang.String"/>
+	<field name="electiveSub" class="java.lang.String"/>
+	<field name="dateofBirthInWords" class="java.lang.String"/>
+	<field name="tcno" class="java.lang.String"/>
+	<field name="studoj" class="java.lang.String"/>
+	<field name="tccode" class="java.lang.String"/>
+	<field name="dateofjoin" class="java.lang.String"/>
+	<field name="classname" class="java.lang.String"/>
+	<field name="result" class="java.lang.String"/>
+	<field name="resultstatus" class="java.lang.String"/>
+	<field name="promotionDate" class="java.lang.String"/>
+	<field name="paidupto" class="java.lang.String"/>
+	<field name="feestat" class="java.lang.String"/>
+	<field name="scholarShip" class="java.lang.String"/>
+	<field name="admissionNo" class="java.lang.String"/>
+	<field name="tc_no" class="java.lang.String"/>
+	<background>
+		<band height="958">
+			<image>
+				<reportElement x="0" y="0" width="572" height="958" uuid="e0bf299f-b848-44f4-8e1b-ebc85157cfd3"/>
+				<imageExpression><![CDATA[$P{template}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="117" splitType="Stretch">
+			<textField>
+				<reportElement x="423" y="77" width="113" height="17" uuid="dbe7b2d9-ea00-4e0d-855e-c8ca759daaf4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tc_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="127" y="77" width="109" height="17" uuid="1d18362d-554c-46ee-a6ef-7bf6e152dcf7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{admissionNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="799" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="51" y="28" width="252" height="19" uuid="c72110cc-d60c-4a45-b6c8-4f843b084d5e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Father's Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="28" width="14" height="19" uuid="eebbe08c-1154-4359-be7b-279a77e8fb3d"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="51" y="50" width="252" height="21" uuid="4717d196-8067-42ca-b974-c696687a13e8"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mother's Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="50" width="14" height="22" uuid="08bd72eb-91a9-4a0a-b5f6-50d9180f31e5"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="73" width="252" height="25" uuid="0a6ebba3-58cc-4e9f-9b54-443b5802e60b"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nationality]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="73" width="14" height="25" uuid="f4c2e5a4-ddbc-42a1-9b17-5384f6c2c1e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="100" width="252" height="14" uuid="a31dccfb-2d0f-46b7-866d-529628429bd7"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Whether the candidate belongs to                                 Scheduled Caste or Scheduled Tribe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="100" width="14" height="33" uuid="ed564c06-e5f2-49ad-876d-36b337d8f36c"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="137" width="252" height="15" uuid="139f4182-3510-437f-af99-c2b7f982d655"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of birth according to Admission Register]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="137" width="14" height="15" uuid="46b6540b-1e49-4d4c-b449-95b16e7ccea7"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="171" width="252" height="25" uuid="aa930846-3153-4aca-9b39-641918850c82"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of First admission in this school with class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="171" width="14" height="25" uuid="d737daff-c402-4115-bea8-15a232ca9fbe"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="199" width="252" height="29" uuid="44dd3151-4afd-4c00-8e73-520c8e312edc"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Class in which the pupil last studied (In words)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="199" width="14" height="29" uuid="a008cae9-a350-4dac-9f23-7fd94047abf7"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="228" width="100" height="55" uuid="0765fc4e-e68a-4f74-a38c-34be648e5e19"/>
+				<box>
+					<pen lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Subjects studied: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="230" width="14" height="15" uuid="0ca9bd58-a045-4dc3-81cc-2160bbe96f53"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="285" width="252" height="25" uuid="0da83df7-53b0-4f5e-b1bd-a2ef73dd3ccc"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of promotion to the class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="285" width="14" height="25" uuid="cbc6b590-d6dd-404a-bad5-a88e267ecd40"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="312" width="266" height="30" uuid="10cb55ae-b64b-4578-80f9-3b22605187ab"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[School/Board Annual Examination last taken with result]]></text>
+			</staticText>
+			
+			<staticText>
+				<reportElement x="51" y="344" width="252" height="35" uuid="c8ecae73-b749-4ef2-8cf5-74ae7a53ca46"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Whether qualified for promotion to a higher class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="344" width="14" height="35" uuid="594c0808-a2c9-46cc-a0a9-97e01fe0924e"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="380" width="252" height="31" uuid="2725819a-5ab4-4f42-ac8f-4c45eec1bf99"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Whether pupil has paid all dues to the school(month which dues paid to be mentioned)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="380" width="14" height="31" uuid="e99832df-e498-43fc-933a-5002c95e7202"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="506" width="252" height="25" uuid="d2856d97-ace8-4900-b945-ba3923714857"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of application for certificate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="479" width="14" height="25" uuid="3f9cc8fa-9aa1-479e-a989-13c33e4c3d9a"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="479" width="252" height="25" uuid="6b426846-ce79-42c5-ba3e-92688a554b1c"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of which the name was struck off the rolls]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="506" width="14" height="25" uuid="df55f156-d8be-49bf-9183-5626d844dbe0"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="450" width="252" height="25" uuid="17544b6a-d4e4-4f1f-8e45-93f178f93a1a"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of Pupil last attendance in the school]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="450" width="14" height="25" uuid="0b3ce565-13b9-4608-9f3d-ea9180ba542d"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="415" width="252" height="32" uuid="d9b2b605-13e8-48ac-a247-24c35051a7c9"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Whether the pupil was in receipt of any fee concession, if so the nature of such concession]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="415" width="14" height="32" uuid="5af99296-807d-4164-82a2-4da2646a5afc"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="533" width="252" height="24" uuid="b5309231-00a0-4fea-b1ff-53d22abbe6df"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of issue of the certificate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="533" width="14" height="24" uuid="c8ee36d0-d818-41cc-b8a8-8ab3bacdfecd"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="559" width="14" height="25" uuid="79b68f81-39a0-41b0-885d-f37c3756d1a1"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="559" width="252" height="25" uuid="bc85971e-a57a-42d4-966c-48b09142409e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reason for leaving]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="586" width="14" height="25" uuid="798aac49-37f0-4f61-8035-df0fa27402c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="586" width="252" height="25" uuid="bf56446f-d953-42ba-b5d3-ea65535aa074"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of last succesful vaccination]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="612" width="14" height="25" uuid="c7da4a32-2018-4534-bd41-7d76ff42100a"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="613" width="252" height="25" uuid="448f2891-cbc6-4336-9457-a5057697157d"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number of school meetings upto date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="640" width="14" height="23" uuid="6ad98d8b-d3fc-4fa9-9cbd-5cca63603965"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="640" width="252" height="23" uuid="b230dae3-e352-4534-9585-300d050ce4a7"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number of school meetings the pupil attended]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="665" width="14" height="40" uuid="2bf56bd2-798a-4d43-b009-f1bdb979e7c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="665" width="252" height="40" uuid="b08dcdae-da7f-4e9c-aade-98adb4444a10"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Games played or extra-curricular activities in which  the pupil usually took part and proficency there in]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="707" width="14" height="18" uuid="0eafc93b-ccaf-4deb-a5fa-a3f3c4a7eac7"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="707" width="252" height="18" uuid="1a3f8737-c8ae-4a18-a7c9-cdc0b2fc2541"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[General Conduct]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="726" width="14" height="30" uuid="230ff5c3-1f83-4f55-a169-17e1885a935a"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="726" width="252" height="30" uuid="cdcfaca1-cc31-4815-9e51-ff99beae8cf6"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number of times the pupil has failed in the present class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="151" y="230" width="152" height="15" uuid="5167d09c-3a2f-4723-a91a-6ce479bbc5c8"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(a) Compulsory                                     ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="28" width="28" height="19" uuid="cde938b2-c8b2-49ab-ae2b-b0e0df81b92f"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="50" width="28" height="22" uuid="73a3d3a1-891e-4292-8fc1-69243567ae71"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="72" width="28" height="25" uuid="078b00e9-4cbc-4002-b64f-4b4bf792ff81"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="99" width="28" height="35" uuid="b52bbeec-c242-4bcc-8b62-e08d7dca98e3"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="135" width="28" height="32" uuid="4966e1c4-009e-47b2-94a9-a9ef1178f66b"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 6.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="171" width="28" height="25" uuid="a56f28ce-d438-4cca-8808-01c84d0c8e3b"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 7.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="199" width="28" height="29" uuid="4c9dd414-fe07-41e9-a94e-fdcfbf1e4522"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 8.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="228" width="28" height="55" uuid="a70f4858-d0c2-448f-8e95-d9ecce2a624c"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 9.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="285" width="28" height="25" uuid="aff908da-187b-4538-b47c-a9d6051c9ad8"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 10.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="312" width="28" height="30" uuid="f1ca50bc-078b-46ed-86a6-1af50b9f9b51"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 11.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="344" width="28" height="35" uuid="5c9834db-2d2b-4637-abf5-1a7fabae974e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 12.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="380" width="28" height="31" uuid="426447b7-6208-465f-8966-fe2051fa9854"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 13.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="415" width="28" height="32" uuid="7282500e-f6fc-4f0c-924d-cf9d15679c1e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 14.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="450" width="28" height="25" uuid="7dc07383-8a9d-4dc5-bb12-7ca12231fcf2"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 15.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="479" width="28" height="25" uuid="7c10e3c4-9c4e-40a4-964c-e8c5cfdc8332"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 16.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="506" width="28" height="25" uuid="53a44d1c-3d1b-4f36-b0ae-1ab2a982f067"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 17.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="533" width="28" height="24" uuid="753411b4-12d8-44ba-8108-017c8c23f37e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 18.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="559" width="28" height="25" uuid="24077cbd-f525-4af0-873c-3f101080d1d4"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 19.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="586" width="28" height="25" uuid="07b4c909-8192-4f27-93cb-35f532e63d7a"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 20.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="613" width="28" height="25" uuid="70c4fdfa-e2a8-499e-a35b-f5e9ef63519b"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 21.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="640" width="28" height="23" uuid="0d2704ce-8dff-4275-9679-d332874cef85"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 22.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="665" width="28" height="40" uuid="53f2bacc-9386-4b9c-96bc-61999d6efc04"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 23.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="707" width="28" height="18" uuid="fed9847c-86dd-4dd1-ae68-df1dafd8460a"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 24.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="726" width="28" height="30" uuid="304e906a-99a2-4c84-bbfa-9dea11df1400"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 25.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="152" width="252" height="15" uuid="c280721c-8f38-472c-8ecb-09ac522bebc9"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(In words)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="317" y="28" width="255" height="19" uuid="15fdc5fb-4394-4331-80df-918bde2402b4"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fatherName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="50" width="255" height="22" uuid="6f689980-5947-44a2-b208-3865bb6ba26c"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{motherName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="73" width="255" height="25" uuid="118d8f04-c535-4d20-858c-bebfb36440e3"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nationality}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="100" width="220" height="35" uuid="21d6cd29-00f1-4e3d-8486-ce64bab547de"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{casteCategory}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="199" width="255" height="29" uuid="1e0026f4-0813-4e5d-8577-5f3f70604e75"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{latestclass}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="230" width="255" height="15" uuid="c0788fa2-4a50-464e-99c4-595ef3d2b86a"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{compulsorySub}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="450" width="255" height="25" uuid="ec9c2d95-7031-4ed9-a3e3-4cd9e88b5d08"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastAttended}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="479" width="255" height="25" uuid="7601eb0e-f02c-44ec-a884-0cc99c9e9a2e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stuckOfRolls}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="506" width="255" height="25" uuid="0817aa8d-6e37-4ff8-92d9-f75d9ee1e28e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{certificateDateApply}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="533" width="255" height="24" uuid="163ee262-1fa0-472d-8d09-3eff3d8a798d"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{certificateIssueDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="312" width="192" height="30" uuid="bd80d791-ab56-46fe-903d-f8771f23b756"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{exam_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="559" width="255" height="25" uuid="f0d9b8f4-5c97-4a4f-b15c-8c9362b0c445"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reasonForTc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="100" width="33" height="35" uuid="85ee721b-7433-432e-898a-2af590e3d0b8"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{casteCategoryStatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="250" width="255" height="33" uuid="87d9f488-ef45-477c-867a-dab61aea616c"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{electiveSub}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="171" width="79" height="25" uuid="7df56039-a0bf-4b3e-989c-7a7895677837"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateofjoin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="481" y="171" width="89" height="25" uuid="983f6e85-2d7a-4985-8271-4430ce55f957"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{classname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="509" y="312" width="63" height="30" uuid="75cb64b5-83d7-4e0f-b134-1f5c59d8cfb8"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{result}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="344" width="255" height="35" uuid="8a60cad9-4bab-4233-9e0e-19f948d10de5"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{resultstatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="285" width="255" height="25" uuid="44bfdfce-035f-43da-95e2-6b58e1d6bde1"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{promotionDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="380" width="151" height="31" uuid="d41f21b4-06c4-465c-b896-285332319c31"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paidupto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="380" width="104" height="31" uuid="f79d6364-2667-4ff4-a8c1-05b416773fc3"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{feestat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="415" width="255" height="32" uuid="b43b96dc-8ddd-466d-afdc-4b74f87c32fc"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{scholarShip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="136" width="255" height="15" uuid="10d22676-c3bb-4d5c-b97e-a106d778c8ba"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateofBirth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="151" width="255" height="17" uuid="55abd76b-ae2a-4bef-96ec-8a2cb1a55e06"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateofBirthInWords}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="303" y="757" width="14" height="16" uuid="509e6125-0be9-42e8-b2f6-976c03852554"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="757" width="252" height="16" uuid="d027cffe-9b36-4f40-94d4-fc55fa252f48"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Any other remarks]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="757" width="28" height="16" uuid="b80ca158-4632-46a2-8f81-f2194fe63e15"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 26.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="317" y="757" width="255" height="16" uuid="41c64698-cb9a-4a44-9aeb-e6c089256f9d"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{remarks}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="317" y="726" width="253" height="30" uuid="87884243-d6e3-439d-b2c7-65c393bfba96"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[---]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="665" width="253" height="40" uuid="ee6f44a3-ae53-4182-9260-cf77f4566d20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[---]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="640" width="253" height="23" uuid="c77d6b8f-c1a8-48f0-9639-b87e6cef7516"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[---]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="613" width="253" height="25" uuid="bbd150d3-4cce-4df1-a6b6-8868f4b1beef"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[---]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="586" width="253" height="25" uuid="58ce5490-d3d1-4c41-b327-efcff5889ab7"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[---]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="707" width="253" height="18" uuid="da1058c2-3ea5-4cab-a2e0-37e12960baab"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GOOD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="3" width="252" height="25" uuid="fabc28c8-8b15-4a9a-b7a3-9c830c94eaf9"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name of Pupil]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="318" y="3" width="255" height="25" uuid="e1d012c1-dc78-4e58-bebf-2e4edd0dabfc"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentFullName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="3" width="28" height="25" uuid="989b6c97-9d9e-4f54-a083-498c1920ec73"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ 1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="3" width="14" height="25" uuid="9d8d51a9-a8d9-4f4e-adb5-d445daba0e0c"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="151" y="250" width="152" height="33" uuid="99fe7d1b-b9c7-440d-ad6f-4de0368c6afd"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(b) Elective                                ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="250" width="14" height="33" uuid="8527972d-bf60-4ea6-ac63-2fb6683b34b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="171" width="11" height="25" uuid="c6bedaf7-9adf-4c91-bdf1-1e11c9539e6b"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="421" y="171" width="46" height="25" uuid="e59d2ce8-bbc9-4d83-911e-49b4244a0e34"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLASS                               ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="117" width="252" height="15" uuid="9ea2cefc-b6b4-48e2-8d34-44f06e7feb6f"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Scheduled caste or Scheduled tribe]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="18" width="98" height="20" uuid="3501ef09-2e9d-492c-afb0-fab1ebfce67b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Counter Signed]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="18" width="87" height="20" uuid="17d5536a-389e-4f94-bda6-9c6c12e8ce8d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Checked by]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="468" y="18" width="87" height="20" uuid="308ca7c6-b47a-4469-b817-5dd590faf307"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[PRINCIPAL]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,57 @@
+table.displayTableClass1 tr:nth-child(even) {
+	background-color: #ffffff;
+	font-size: 12px;
+	padding: 5px;
+	font-family: Segoe UI;
+	width: 100%;
+}
+
+table.displayTableClass1 tr:nth-child(odd) {
+	background-color: #E6E6E6;
+	font-size: 12px;
+	padding: 5px;
+	font-family: Segoe UI;
+	
+
+}
+
+table.displayTableClass1 td {
+	text-align: center;
+	padding-top: 5px;
+
+}
+
+
+
+table.displayTableClass1,table.displayTableClass1 td {
+	border: 1px solid #767676;
+	border-collapse: collapse;
+	margin: 0 auto;
+	white-space: nowrap;
+		width: 100%;
+}
+
+table.displayTableClass1 tr {
+	height: 30px;
+}
+input[type="text"]{
+	font-family:Segoe UI !important;
+	height: 20px ;
+	padding: 4px 6px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	vertical-align: middle;
+	border-radius: 0px !important;
+	background: #fff;
+
+}
+
+#subjectdetails td label{
+	font-size: 15px;
+}
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%
+}

@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StudentReportDetails" pageWidth="595" pageHeight="841" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.3636363636363635"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="SchoolName" class="java.lang.String"/>
+	<parameter name="AddressLine1" class="java.lang.String"/>
+	<parameter name="AffNo" class="java.lang.String"/>
+	<parameter name="Image" class="java.lang.String"/>
+	<parameter name="studentname" class="java.lang.String"/>
+	<parameter name="reason" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select case when student_lname_var  is null then student_fname_var  else concat(student_fname_var,' ', student_lname_var)end StudentName,student_caste,
+case when (student_fathername_var is null || student_fathername_var='') then student_gaurdianname_var else student_fathername_var
+
+end FatherName,student_mothername_var,student_nationality_var,student_doj_var,concat(student_doj_var,' ',(select cl.classdetails_name_var from campus_classdetail cl, campus_student su
+
+where cl.classdetail_id_int = su.classdetail_id_int limit 1)) doj_class,student_dob_var, (select classdetails_name_var from campus_classdetail limit 1) class, (now())certificateissue
+
+
+from campus_student where student_id_int=$P{studentname}]]>
+	</queryString>
+	<field name="StudentName" class="java.lang.String"/>
+	<field name="student_caste" class="java.lang.String"/>
+	<field name="FatherName" class="java.lang.String"/>
+	<field name="student_mothername_var" class="java.lang.String"/>
+	<field name="student_nationality_var" class="java.lang.String"/>
+	<field name="student_doj_var" class="java.sql.Date"/>
+	<field name="doj_class" class="java.lang.String"/>
+	<field name="student_dob_var" class="java.sql.Date"/>
+	<field name="class" class="java.lang.String"/>
+	<field name="certificateissue" class="java.sql.Timestamp"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="36">
+			<staticText>
+				<reportElement x="0" y="7" width="554" height="23" forecolor="#006601"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="16" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[TRANSFER CERTIFICATE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="765">
+			<staticText>
+				<reportElement x="26" y="12" width="116" height="17" forecolor="#003499" backcolor="#003499"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Admission No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="35" width="116" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Name of the School]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="63" width="116" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[School No. :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="126" width="254" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Father's/Guardian's Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="170" width="254" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Nationality]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="193" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Whether the candidate belongs to Scheduled]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="300" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Class in which the Pupil last studied in words & figure]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="323" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[School/board Annual examination last taken with result]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="346" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Whether Failed: if so once/twice in the same class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="368" width="118" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Subjects Studied]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="102" width="254" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Name of the Pupil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="215" width="117" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Caste or Scheduled Tribe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="148" width="254" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Mother's Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="237" width="175" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Date of first Admission with Class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="260" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Date of birth(in Christian Era) according to admission ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="294" y="10" width="251" height="20" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SchoolName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="448" y="29" width="75" height="20" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AffNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="294" y="29" width="155" height="20" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[(Affiliated to CBSE,Delhi-Aff.No. :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="522" y="29" width="16" height="20" forecolor="#003499"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="294" y="48" width="251" height="20" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AddressLine1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="390" width="118" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Elective]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="412" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Whether qualified for promotion to higher school; ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="460" width="243" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Total No.of working days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="483" width="243" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Total No.of working days present ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="507" width="243" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Whether NCC cadet Boy Scout/Girl Guide Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="529" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Games Played or Extra Curricular activities in which the]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="570" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[General Conduct]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="595" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Date of application of certificate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="620" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Date of issue of certificate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="643" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Reason for leaving the school ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="665" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Any other remarks]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="723" width="243" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Name & Sign of the Student / Parent]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="313" y="725" width="243" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Principal Sign]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="193" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="215" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="237" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="277" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[  register in figure/in words]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="260" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="300" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="323" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="346" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="436" width="255" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[   if so to which class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="412" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="390" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="368" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="546" width="268" height="18" forecolor="#003499" backcolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="10" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[pupil usually took part (mention achievement level therein)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="436" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="460" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="483" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="507" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="529" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="570" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="595" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="620" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="643" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="665" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="193" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[........................................Yes...........................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="215" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[............................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="237" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[............................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="260" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[............................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="300" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="323" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[......................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="346" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[......................................NO.............................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="368" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[......................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="390" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[......................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="412" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[......................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="436" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[......................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="460" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[......................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="483" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[......................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="507" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[......................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="529" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[......................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="570" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[......................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="595" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[............................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="620" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[...............................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="643" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[............................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="665" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[......................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="102" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[............................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="102" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="126" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="126" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[............................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="144" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[............................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="148" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="170" width="16" height="18" forecolor="#003499"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="170" width="249" height="18" forecolor="#003499"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[............................................................................................]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="302" y="100" width="240" height="20" forecolor="#333333"/>
+				<textElement>
+					<font fontName="Liberation Sans" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{StudentName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="142" width="240" height="20" forecolor="#333333"/>
+				<textElement>
+					<font fontName="Liberation Sans" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_mothername_var}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="124" width="240" height="20" forecolor="#333333"/>
+				<textElement>
+					<font fontName="Liberation Sans" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FatherName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="168" width="240" height="20" forecolor="#333333"/>
+				<textElement>
+					<font fontName="Liberation Sans" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_nationality_var}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="302" y="237" width="241" height="20" forecolor="#333333"/>
+				<textElement>
+					<font fontName="Liberation Sans" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_doj_var}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="302" y="258" width="240" height="20" forecolor="#333333"/>
+				<textElement>
+					<font fontName="Liberation Sans" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_dob_var}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="618" width="240" height="20" forecolor="#333333"/>
+				<textElement>
+					<font fontName="Liberation Sans" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{certificateissue}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="643" width="240" height="18" forecolor="#333333"/>
+				<textElement>
+					<font fontName="Liberation Sans" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{reason}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="217" width="236" height="16"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{student_caste}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+</jasperReport>

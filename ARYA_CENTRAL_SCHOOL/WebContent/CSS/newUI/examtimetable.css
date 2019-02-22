@@ -1,0 +1,14 @@
+#accordionCss {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 3px;
+    display: block;
+    text-align: left;
+    background: #96989C;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: black;
+    padding: 3px;
+}

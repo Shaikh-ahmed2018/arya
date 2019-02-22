@@ -1,0 +1,269 @@
+@CHARSET "ISO-8859-1";
+
+.input-append input[class *="span"],.input-append .uneditable-input[class
+	*="span"],.input-prepend input[class *="span"],.input-prepend .uneditable-input[class
+	*="span"],.row-fluid input[class *="span"],.row-fluid select[class *="span"],.row-fluid textarea[class
+	*="span"],.row-fluid .uneditable-input[class *="span"],.row-fluid .input-prepend [class
+	*="span"],.row-fluid .input-append [class *="span"] {
+	display: inline-block
+}
+
+.control-group.warning .input-prepend .add-on,.control-group.warning .input-append .add-on
+	{
+	color: #c09853;
+	background-color: #fcf8e3;
+	border-color: #c09853
+}
+
+
+.control-group.error .input-prepend .add-on,.control-group.error .input-append .add-on
+	{
+	color: #b94a48;
+	background-color: #f2dede;
+	border-color: #b94a48
+}
+
+.control-group.success .input-prepend .add-on,.control-group.success .input-append .add-on
+	{
+	color: #468847;
+	background-color: #dff0d8;
+	border-color: #468847
+}
+
+.control-group.info .input-prepend .add-on,.control-group.info .input-append .add-on
+	{
+	color: #3a87ad;
+	background-color: #d9edf7;
+	border-color: #3a87ad
+}
+
+.input-append,.input-prepend {
+	margin-bottom: 5px;
+	font-size: 0;
+	white-space: nowrap
+}
+
+.input-append input,.input-prepend input,.input-append select,.input-prepend select,.input-append .uneditable-input,.input-prepend .uneditable-input,.input-append .dropdown-menu,.input-prepend .dropdown-menu
+	{
+	font-size: 14px
+}
+
+.input-append input,.input-prepend input,.input-append select,.input-prepend select,.input-append .uneditable-input,.input-prepend .uneditable-input
+	{
+	position: relative;
+	margin-bottom: 0; *
+	margin-left: 0;
+	vertical-align: top;
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0
+}
+
+
+.input-append input:focus,.input-prepend input:focus,.input-append select:focus,.input-prepend select:focus,.input-append .uneditable-input:focus,.input-prepend .uneditable-input:focus
+	{
+	z-index: 2
+}
+
+.input-append .add-on,.input-prepend .add-on {
+	display: inline-block;
+	width: auto;
+	height: 20px;
+	min-width: 16px;
+	padding: 4px 5px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+	background-color: #eee;
+	border: 1px solid #ccc
+}
+
+.input-append .add-on,.input-prepend .add-on,.input-append .btn,.input-prepend .btn,.input-append .btn-group>.dropdown-toggle,.input-prepend .btn-group>.dropdown-toggle
+	{
+	vertical-align: top;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0
+}
+
+.input-append .active,.input-prepend .active {
+	background-color: #a9dba9;
+	border-color: #46a546
+}
+
+.input-append input,.input-append select,.input-append .uneditable-input
+	{
+	-webkit-border-radius: 4px 0 0 4px;
+	-moz-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px
+}
+
+.input-append input+.btn-group .btn:last-child,.input-append select+.btn-group .btn:last-child,.input-append .uneditable-input+.btn-group .btn:last-child
+	{
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0
+}
+
+.input-append .add-on,.input-append .btn,.input-append .btn-group {
+	margin-left: -1px
+}
+
+.input-append .add-on:last-child,.input-append .btn:last-child,.input-append .btn-group:last-child>.dropdown-toggle
+	{
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0
+}
+
+.input-prepend.input-append input,.input-prepend.input-append select,.input-prepend.input-append .uneditable-input
+	{
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0
+}
+
+.input-prepend.input-append input+.btn-group .btn,.input-prepend.input-append select+.btn-group .btn,.input-prepend.input-append .uneditable-input+.btn-group .btn
+	{
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0
+}
+
+.input-prepend.input-append .add-on:first-child,.input-prepend.input-append .btn:first-child
+	{
+	margin-right: -1px;
+	-webkit-border-radius: 4px 0 0 4px;
+	-moz-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px
+}
+
+.input-prepend.input-append .add-on:last-child,.input-prepend.input-append .btn:last-child
+	{
+	margin-left: -1px;
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0
+}
+
+.input-prepend.input-append .btn-group:first-child {
+	margin-left: 0
+}
+
+.form-search .input-append .search-query,.form-search .input-prepend .search-query
+	{
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0
+}
+
+.form-search .input-append .search-query {
+	-webkit-border-radius: 14px 0 0 14px;
+	-moz-border-radius: 14px 0 0 14px;
+	border-radius: 14px 0 0 14px
+}
+
+.form-search .input-append .btn {
+	-webkit-border-radius: 0 14px 14px 0;
+	-moz-border-radius: 0 14px 14px 0;
+	border-radius: 0 14px 14px 0
+}
+
+.form-search .input-prepend .search-query {
+	-webkit-border-radius: 0 14px 14px 0;
+	-moz-border-radius: 0 14px 14px 0;
+	border-radius: 0 14px 14px 0
+}
+
+.form-search .input-prepend .btn {
+	-webkit-border-radius: 14px 0 0 14px;
+	-moz-border-radius: 14px 0 0 14px;
+	border-radius: 14px 0 0 14px
+}
+.form-search input,.form-inline input,.form-horizontal input,.form-search textarea,.form-inline textarea,.form-horizontal textarea,.form-search select,.form-inline select,.form-horizontal select,.form-search .help-inline,.form-inline .help-inline,.form-horizontal .help-inline,.form-search .uneditable-input,.form-inline .uneditable-input,.form-horizontal .uneditable-input,.form-search .input-prepend,.form-inline .input-prepend,.form-horizontal .input-prepend,.form-search .input-append,.form-inline .input-append,.form-horizontal .input-append
+	{
+	display: inline-block; *
+	display: inline;
+	margin-bottom: 0;
+	vertical-align: middle; *
+	zoom: 1
+}
+
+
+.form-search .input-append,.form-inline .input-append,.form-search .input-prepend,.form-inline .input-prepend
+	{
+	margin-bottom: 0
+}
+.form-horizontal input+.help-block,.form-horizontal select+.help-block,.form-horizontal textarea+.help-block,.form-horizontal .uneditable-input+.help-block,.form-horizontal .input-prepend+.help-block,.form-horizontal .input-append+.help-block
+	{
+	margin-top: 10px
+}
+
+
+.navbar .btn-group .btn,.navbar .input-prepend .btn,.navbar .input-append .btn
+	{
+	margin-top: 0
+}
+
+
+.form-horizontal input+.help-block,.form-horizontal select+.help-block,.form-horizontal textarea+.help-block,.form-horizontal .uneditable-input+.help-block,.form-horizontal .input-prepend+.help-block,.form-horizontal .input-append+.help-block
+	{
+	margin-top: 10px
+}
+
+.form-search .input-append,.form-inline .input-append,.form-search .input-prepend,.form-inline .input-prepend
+	{
+	margin-bottom: 0
+}
+
+.form-search input,.form-inline input,.form-horizontal input,.form-search textarea,.form-inline textarea,.form-horizontal textarea,.form-search select,.form-inline select,.form-horizontal select,.form-search .help-inline,.form-inline .help-inline,.form-horizontal .help-inline,.form-search .uneditable-input,.form-inline .uneditable-input,.form-horizontal .uneditable-input,.form-search .input-prepend,.form-inline .input-prepend,.form-horizontal .input-prepend,.form-search .input-append,.form-inline .input-append,.form-horizontal .input-append
+	{
+	display: inline-block; *
+	display: inline;
+	margin-bottom: 0;
+	vertical-align: middle; *
+	zoom: 1
+}
+
+.form-search .input-append .btn {
+	-webkit-border-radius: 0 14px 14px 0;
+	-moz-border-radius: 0 14px 14px 0;
+	border-radius: 0 14px 14px 0
+}
+
+.form-search .input-prepend .search-query {
+	-webkit-border-radius: 0 14px 14px 0;
+	-moz-border-radius: 0 14px 14px 0;
+	border-radius: 0 14px 14px 0
+}
+
+.form-search .input-prepend .btn {
+	-webkit-border-radius: 14px 0 0 14px;
+	-moz-border-radius: 14px 0 0 14px;
+	border-radius: 14px 0 0 14px
+}
+
+
+.navbar-form .input-append,.navbar-form .input-prepend {
+	margin-top: 5px;
+	white-space: nowrap
+}
+
+.navbar-form .input-append input,.navbar-form .input-prepend input {
+	margin-top: 0
+}
+
+.navbar-search {
+	position: relative;
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 0
+}
+
+.input-prepend input,.input-append input,.input-prepend input[class *="span"],.input-append input[class
+		*="span"] {
+		display: inline-block;
+		width: auto
+	}

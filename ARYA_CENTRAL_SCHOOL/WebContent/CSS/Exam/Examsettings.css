@@ -1,0 +1,62 @@
+
+.glyphicon:hover{
+
+cursor: pointer;
+}
+#classSave:hover {
+	cursor: pointer;
+}
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable.ui-dialog-buttons{
+
+width : 500px !important;
+
+}
+.buttons{
+
+vertical-align: 0px;
+
+}
+.form-group{
+margin-bottom: 10px;
+}
+
+.exam{
+	max-width: 150px;
+}
+.examname{
+	max-width: 150px;
+}
+
+#accyear
+{
+width:190px;
+text-align:center;
+}
+#allstudent {
+	width: 100%;
+}
+#allstudent tr td {
+    color: black;
+    text-align: center;
+    padding: 8px;
+
+}
+.editing {
+top:7px;
+margin-left:15px;
+}
+.Pending{
+background-color:red;
+min-width:80px;
+display:inline-block;
+text-align:center;
+ color:#fff;
+}
+.Completed{
+background-color:green;
+min-width:80px;
+display:inline-block;
+text-align:center;
+ color:#fff;
+}
+

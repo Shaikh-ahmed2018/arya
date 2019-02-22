@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="age&amp;bonafiedCertificate" pageWidth="470" pageHeight="504" columnWidth="430" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="stuname" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="accyear" class="java.lang.String">
+		<fieldDescription><![CDATA[accyear]]></fieldDescription>
+	</field>
+	<field name="accyearid" class="java.lang.String">
+		<fieldDescription><![CDATA[accyearid]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[address]]></fieldDescription>
+	</field>
+	<field name="admissionno" class="java.lang.String">
+		<fieldDescription><![CDATA[admissionno]]></fieldDescription>
+	</field>
+	<field name="agecertid" class="java.lang.String">
+		<fieldDescription><![CDATA[agecertid]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="classid" class="java.lang.String">
+		<fieldDescription><![CDATA[classid]]></fieldDescription>
+	</field>
+	<field name="classname" class="java.lang.String">
+		<fieldDescription><![CDATA[classname]]></fieldDescription>
+	</field>
+	<field name="conduct" class="java.lang.String">
+		<fieldDescription><![CDATA[conduct]]></fieldDescription>
+	</field>
+	<field name="conductno" class="java.lang.String">
+		<fieldDescription><![CDATA[conductno]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.lang.String">
+		<fieldDescription><![CDATA[dob]]></fieldDescription>
+	</field>
+	<field name="entryDate" class="java.lang.String">
+		<fieldDescription><![CDATA[entryDate]]></fieldDescription>
+	</field>
+	<field name="fathername" class="java.lang.String">
+		<fieldDescription><![CDATA[fathername]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[gender]]></fieldDescription>
+	</field>
+	<field name="imgurl" class="java.lang.String">
+		<fieldDescription><![CDATA[imgurl]]></fieldDescription>
+	</field>
+	<field name="locid" class="java.lang.String">
+		<fieldDescription><![CDATA[locid]]></fieldDescription>
+	</field>
+	<field name="locname" class="java.lang.String">
+		<fieldDescription><![CDATA[locname]]></fieldDescription>
+	</field>
+	<field name="motherName" class="java.lang.String">
+		<fieldDescription><![CDATA[motherName]]></fieldDescription>
+	</field>
+	<field name="otherinfo" class="java.lang.String">
+		<fieldDescription><![CDATA[otherinfo]]></fieldDescription>
+	</field>
+	<field name="passportno" class="java.lang.String">
+		<fieldDescription><![CDATA[passportno]]></fieldDescription>
+	</field>
+	<field name="purpose" class="java.lang.String">
+		<fieldDescription><![CDATA[purpose]]></fieldDescription>
+	</field>
+	<field name="rollno" class="java.lang.String">
+		<fieldDescription><![CDATA[rollno]]></fieldDescription>
+	</field>
+	<field name="searchTerm" class="java.lang.String">
+		<fieldDescription><![CDATA[searchTerm]]></fieldDescription>
+	</field>
+	<field name="sectionid" class="java.lang.String">
+		<fieldDescription><![CDATA[sectionid]]></fieldDescription>
+	</field>
+	<field name="sectionname" class="java.lang.String">
+		<fieldDescription><![CDATA[sectionname]]></fieldDescription>
+	</field>
+	<field name="slno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[slno]]></fieldDescription>
+	</field>
+	<field name="studentstatus" class="java.lang.String">
+		<fieldDescription><![CDATA[studentstatus]]></fieldDescription>
+	</field>
+	<field name="stuid" class="java.lang.String">
+		<fieldDescription><![CDATA[stuid]]></fieldDescription>
+	</field>
+	<field name="stuname" class="java.lang.String">
+		<fieldDescription><![CDATA[stuname]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="284" splitType="Stretch">
+			<image>
+				<reportElement x="33" y="0" width="80" height="67"/>
+			</image>
+			<staticText>
+				<reportElement x="80" y="0" width="263" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ARYA CENTRAL SCHOOL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="33" width="263" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[POTTOM. TIRUVANANTHAPURAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="55" width="158" height="37"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Algerian" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="92" width="407" height="21"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[This is to certify that _______________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="113" width="407" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[daughter of ______________________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="132" width="407" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[is a bonafied student of this school studeying class _______________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="154" width="407" height="24"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[during the  academic year __________________. Her date of birth as per ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="178" width="407" height="25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[the school admission register is ______________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="236" width="46" height="24"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Seal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="236" width="81" height="24"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Principal]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="182" y="112" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{stuname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

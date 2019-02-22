@@ -1,0 +1,84 @@
+
+.nav.nav-tabs li.active,.nav.nav-tabs li.active:hover{
+	background-color: #fff;
+}
+.nav.nav-tabs li:hover{
+	background-color:#07aab9;
+}
+.nav.nav-tabs li a{
+	background-color: transparent;
+}
+
+.form-group{
+margin-bottom: 5px;}
+.save:hover {
+	cursor: pointer;
+}
+
+fieldset { 
+	width:512px;
+    display: block;
+   /*  margin-left: auto;
+    margin-right: 2px; */
+    margin-bottom: 5px;
+    padding-bottom: 0.625em;
+    padding-left: 7px;
+    padding-right: 0px;
+    border: 0.5px solid #ccc;
+   
+}
+legend {
+    display: inline-block;
+    width: auto;
+    padding: 0;
+    margin-bottom: 0px;
+    font-size: 16px;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+   }
+   
+.tab{
+	background-color: #eee;
+}
+
+.slideTab{
+	padding:10px;
+	font-family: Roboto Medium;
+    font-size: 14px;
+    font-weight: lighter;
+ 
+}
+div.tab button:hover {
+    background-color: #07aab9;
+}
+
+
+.buttons{
+
+vertical-align:-5px;
+
+}
+.navbar-right {
+    top: -3px;
+}
+.panel-primary>.panel-heading{
+margin-bottom: 0px;
+}
+form .panel.panel-primary.panel-list{
+padding-bottom: 0px;
+
+}  
+.Contact {
+display:block;
+}  
+
+@media (min-width:320px) and (max-width:767px){
+br{
+display: none;
+}
+}
+
+
+
+

@@ -1,0 +1,99 @@
+
+body {
+	-webkit-print-color-adjust: exact;
+}
+.main-div{left:0px;top:0px;width:203px;height:318px;}#main-div{background-color:#ffffff1a}#main-div{border-color:#07aab9}#main-div{border-radius:0px}.schoolName{left:562.994px;top:101.994px;width:197px;height:12px;}#schoolName{background-color:#ffffff1a}#schoolName{border-color:#07aab9}#schoolName{border-radius:0px}.branch{left:519.994px;top:81.9943px;width:197px;height:15px;}#branch{background-color:#ffffff1a}#branch{border-color:#07aab9}#branch{border-radius:0px}.phone{left:492.994px;top:66.9943px;width:197px;height:12px;}#phone{background-color:#ffffff1a}#phone{border-color:#07aab9}#phone{border-radius:0px}.namediv{left:32.9801px;top:192.989px;width:135px;height:16px;}#namediv{background-color:#ffffff1a}#namediv{border-color:#07aab9}#namediv{border-radius:0px}.photo{left:63.9943px;top:103.994px;width:79px;height:85px;}#photo{background-color:#ffffff1a}#photo{border-color:#07aab9}#photo{border-radius:0px}.abbravative{left:342.986px;top:202.986px;width:145px;height:35px;}#abbravative{background-color:#000000}#abbravative{border-color:#07aab9}#abbravative{border-radius:0px}.registrationId{left:21.9943px;top:208.991px;width:160px;height:17px;}#registrationId{background-color:#ffffff1a}#registrationId{border-color:#07aab9}#registrationId{border-radius:0px}.designation{left:241.881px;top:214.875px;width:115px;height:25px;}#designation{background-color:#ffffff1a}#designation{border-color:#07aab9}#designation{border-radius:0px}.valid{left:-15.9972px;top:281.977px;width:140px;height:15px;}#valid{background-color:#ffffff1a}#valid{border-color:#07aab9}#valid{border-radius:0px}.addressdetails{left:286px;top:156px;width:94px;height:45px;}#address{background-color:#ffffff1a}#address{border-color:#07aab9}#address{border-radius:0px}.phonedetails{left:406.953px;top:269.969px;width:105px;height:15px;}#phonedetails{background-color:#ffffff1a}#phonedetails{border-color:#07aab9}#phonedetails{border-radius:0px}.qrdetails{left:4.93466px;top:223.935px;width:70px;height:56px;}#qrdetails{background-color:#ffffff}#qrdetails{border-color:#07aab9}#qrdetails{border-radius:0px}#schoolNameChange{color:#b9bf50}.label{background-color:#000000}.phones{background-color:#000000}#schoolNameChange{font-size:9px}#branchName{color:#448719}.label{background-color:#000000}.phones{background-color:#000000}#branchName{font-size:26.6667px}#teleName{color:#ffffff}.label{background-color:#000000}.phones{background-color:#000000}#teleName{font-size:26.6667px}#nametext{color:#000000}.label{background-color:#000000}.phones{background-color:#000000}#nametext{font-size:11px}#abbrativeText{color:#07aab9}.label{background-color:#000000}.phones{background-color:#000000}#abbrativeText{font-size:26.6667px}#regNotext{color:#000000}.label{background-color:#000000}.phones{background-color:#000000}#regNotext{font-size:10px}#degIdtext{color:#07aab9}.label{background-color:#000000}.phones{background-color:#000000}#degIdtext{font-size:26.6667px}#validUpto{color:#000000}.label{background-color:#000000}.phones{background-color:#000000}#validUpto{font-size:9px}#validUptotext{color:#000000}.label{background-color:#000000}.phones{background-color:#000000}#validUptotext{font-size:9px}#addresstext{color:#07aab9}.label{background-color:#000000}.phones{background-color:#000000}#addresstext{font-size:26.6667px}#phonelebel{color:#ffffff}.label{background-color:#000000}.phones{background-color:#000000}#phonelebel{font-size:26.6667px}#phonetext{color:#07aab9}.label{background-color:#000000}.phones{background-color:#000000}#phonetext{font-size:26.6667px}#schoolNameChange{font-size:9px}
+#layoutImage {
+	position: absolute;
+}
+
+#items {
+	list-style: none;
+	margin: 0px;
+	margin-top: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	font-size: 9px;
+	color: #333333;
+	cursor: pointer;
+}
+
+#lfontval,#hfontval,.cntr {
+	display: none;
+	position: absolute;
+	border: 1px solid #B2B2B2;
+	width: 150px;
+	background: #F9F9F9;
+	box-shadow: 3px 3px 2px #E9E9E9;
+	border-radius: 4px;
+}
+
+#lfontval,#hfontval {
+	top: 0px;
+	right: 0px;
+	font-size: 12px;
+}
+
+.cntr li {
+	padding: 3px;
+	padding-left: 10px;
+}
+.main-div div[id] {
+	position: absolute !important;
+}
+.main-div{
+	    position: relative;
+	overflow: hidden;
+}
+.valid {
+	left: 5px;
+	top: 45px;
+	width: 99px;
+	height: 15px;
+}
+.section span{
+	
+	vertical-align:top;
+}
+.section div[id] {
+	cursor: move;
+	
+}
+.main-div div{
+	text-align: center;
+}
+.main-div img{
+	width: auto;
+	
+}
+.qrdetails img{
+	    width: 100%;
+    height: 100%;
+}
+
+	.section {
+    margin-bottom: 12.5px;
+    margin-right: 0px;
+    
+    
+    
+	}
+	
+	#validUpto{
+	background: transparent;
+	color: #000 !important;
+	border:none !important;
+	  font-size: 9px;
+	
+	}
+	.photo img {
+	    width: 100%;
+    height: 100%;}
+    #nametext,#regNotext,#validUptotext{
+    font-weight: 600;
+    line-height: 1;
+    }
+    #validUptotext{
+    font-size: 9px;
+    }

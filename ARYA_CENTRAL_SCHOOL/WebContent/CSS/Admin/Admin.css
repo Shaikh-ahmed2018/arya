@@ -1,0 +1,57 @@
+@CHARSET "ISO-8859-1";
+
+
+.ui-dialog-titlebar {
+   color: white; 
+  background:red;
+  font-size:13px;
+  background-color: #2B7D99;
+}
+
+.loginDIvInnerDiv {
+	font-size:13px;
+	color: #2B7D99;
+}
+
+
+.txtBox{
+	padding: 4px;
+	border-color: #2B7D99;
+}
+
+
+.LoginBtn{
+/* 	background-color: red; */
+	font-size: 12px; 
+/* 	background: #BBCCEE;  */
+/* 	background: #f2f2f9; */
+/*    background: url(images/templatemo_menu1.png)  no-repeat; */
+	color: #2B7D99 ; 
+	cursor: pointer; 
+	border: 1px solid ; 
+	padding: 5px 10px;
+	margin: 0px;
+}
+
+
+/* .loginDIvInnerDiv{ */
+	
+/* 	background-color: lime; */
+/* } */
+
+.mySyy{
+	
+	text-decoration: none;
+	cursor: pointer; 
+	color: green;
+}
+
+.ll{
+	text-align: center;
+}
+
+
+.LstmsSuccessMessage table{
+	
+	color: green;
+}

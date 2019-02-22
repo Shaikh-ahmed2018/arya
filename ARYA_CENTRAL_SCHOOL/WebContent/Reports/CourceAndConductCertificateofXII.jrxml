@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CourceAndConductCertificate" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty" uuid="da273f09-5c4b-4ff1-a2b1-bd9d0d90fd7c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="accyear" class="java.lang.String"/>
+	<parameter name="laccyear" class="java.lang.String"/>
+	<parameter name="dob" class="java.lang.String"/>
+	<parameter name="dm" class="java.lang.String"/>
+	<parameter name="conduct" class="java.lang.String"/>
+	<parameter name="y" class="java.lang.String"/>
+	<field name="studentFullName" class="java.lang.String"/>
+	<field name="fatherName" class="java.lang.String"/>
+	<field name="motherName" class="java.lang.String"/>
+	<field name="nationality" class="java.lang.String"/>
+	<field name="casteCategory" class="java.lang.String"/>
+	<field name="caste" class="java.lang.String"/>
+	<field name="dateofBirth" class="java.lang.String"/>
+	<field name="dateofJoin" class="java.lang.String"/>
+	<field name="latestclass" class="java.lang.String"/>
+	<field name="compulsorySub" class="java.lang.String"/>
+	<field name="lastAttended" class="java.lang.String"/>
+	<field name="stuckOfRolls" class="java.lang.String"/>
+	<field name="certificateDateApply" class="java.lang.String"/>
+	<field name="certificateIssueDate" class="java.lang.String"/>
+	<field name="exam_name" class="java.lang.String"/>
+	<field name="reasonForTc" class="java.lang.String"/>
+	<field name="remarks" class="java.lang.String"/>
+	<field name="casteCategoryStatus" class="java.lang.String"/>
+	<field name="electiveSub" class="java.lang.String"/>
+	<field name="dateofBirthInWords" class="java.lang.String"/>
+	<field name="tcno" class="java.lang.String"/>
+	<field name="studoj" class="java.lang.String"/>
+	<field name="tccode" class="java.lang.String"/>
+	<field name="dateofjoin" class="java.lang.String"/>
+	<field name="classname" class="java.lang.String"/>
+	<field name="result" class="java.lang.String"/>
+	<field name="resultstatus" class="java.lang.String"/>
+	<field name="promotionDate" class="java.lang.String"/>
+	<field name="paidupto" class="java.lang.String"/>
+	<field name="feestat" class="java.lang.String"/>
+	<field name="scholarShip" class="java.lang.String"/>
+	<field name="admissionNo" class="java.lang.String"/>
+	<field name="tc_no" class="java.lang.String"/>
+	<field name="template" class="java.lang.String"/>
+	<field name="accyear" class="java.lang.String"/>
+	<field name="laccyear" class="java.lang.String"/>
+	<field name="conduct" class="java.lang.String"/>
+	<detail>
+		<band height="842">
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" isPrintRepeatedValues="false" x="0" y="0" width="594" height="392" isPrintInFirstWholeBand="true" uuid="c75c4ece-428d-40e7-9a25-ab6573e8b597"/>
+				<imageExpression><![CDATA[$F{template}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="194" y="154" width="232" height="21" uuid="5847d48e-ba76-481c-a447-f70349205afa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Liberation Sans" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentFullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="173" width="232" height="18" uuid="8a68530a-7308-473d-b362-904a37637d3c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Liberation Sans" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fatherName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="192" width="91" height="19" uuid="a3bafb30-39bb-4d18-95e6-aee23c6bb4d0"/>
+				<textElement>
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{accyear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="249" width="82" height="20" uuid="d15bbd84-42de-47b4-8a11-38b2db3880ff"/>
+				<textElement>
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laccyear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="436" y="249" width="127" height="20" uuid="353b6ed7-9662-4153-a639-fa2b6e44d266"/>
+				<textElement>
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateofBirth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="382" y="304" width="91" height="20" uuid="8facfa3e-b0a0-43a3-92a4-79821a29a990"/>
+				<textElement>
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{conduct}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="268" width="412" height="20" uuid="91641ab9-1538-471e-8c63-b96bd49798b7"/>
+				<textElement>
+					<font fontName="Liberation Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateofBirthInWords}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

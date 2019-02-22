@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StudentFeeReport" pageWidth="842" pageHeight="802" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="termName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="actualAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[actualAmount]]></fieldDescription>
+	</field>
+	<field name="admissionNo" class="java.lang.String">
+		<fieldDescription><![CDATA[admissionNo]]></fieldDescription>
+	</field>
+	<field name="balanceAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[balanceAmount]]></fieldDescription>
+	</field>
+	<field name="challanGenDate" class="java.lang.String">
+		<fieldDescription><![CDATA[challanGenDate]]></fieldDescription>
+	</field>
+	<field name="challanNo" class="java.lang.String">
+		<fieldDescription><![CDATA[challanNo]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="className" class="java.lang.String">
+		<fieldDescription><![CDATA[className]]></fieldDescription>
+	</field>
+	<field name="concAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[concAmount]]></fieldDescription>
+	</field>
+	<field name="concCollectedAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[concCollectedAmount]]></fieldDescription>
+	</field>
+	<field name="concPercent" class="java.lang.String">
+		<fieldDescription><![CDATA[concPercent]]></fieldDescription>
+	</field>
+	<field name="concType" class="java.lang.String">
+		<fieldDescription><![CDATA[concType]]></fieldDescription>
+	</field>
+	<field name="departmentName" class="java.lang.String">
+		<fieldDescription><![CDATA[departmentName]]></fieldDescription>
+	</field>
+	<field name="paidAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[paidAmount]]></fieldDescription>
+	</field>
+	<field name="paidDate" class="java.lang.String">
+		<fieldDescription><![CDATA[paidDate]]></fieldDescription>
+	</field>
+	<field name="paidStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[paidStatus]]></fieldDescription>
+	</field>
+	<field name="sectioncode" class="java.lang.String">
+		<fieldDescription><![CDATA[sectioncode]]></fieldDescription>
+	</field>
+	<field name="sectionname" class="java.lang.String">
+		<fieldDescription><![CDATA[sectionname]]></fieldDescription>
+	</field>
+	<field name="sno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[sno]]></fieldDescription>
+	</field>
+	<field name="stageName" class="java.lang.String">
+		<fieldDescription><![CDATA[stageName]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[status]]></fieldDescription>
+	</field>
+	<field name="studTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[studTotal]]></fieldDescription>
+	</field>
+	<field name="studentName" class="java.lang.String">
+		<fieldDescription><![CDATA[studentName]]></fieldDescription>
+	</field>
+	<field name="teacherId" class="java.lang.String">
+		<fieldDescription><![CDATA[teacherId]]></fieldDescription>
+	</field>
+	<field name="teacherName" class="java.lang.String">
+		<fieldDescription><![CDATA[teacherName]]></fieldDescription>
+	</field>
+	<field name="termName" class="java.lang.String">
+		<fieldDescription><![CDATA[termName]]></fieldDescription>
+	</field>
+	<field name="totalAmount" class="java.lang.String">
+		<fieldDescription><![CDATA[totalAmount]]></fieldDescription>
+	</field>
+	<field name="totalamount1" class="java.lang.Double">
+		<fieldDescription><![CDATA[totalamount1]]></fieldDescription>
+	</field>
+	<field name="vehicleType" class="java.lang.String">
+		<fieldDescription><![CDATA[vehicleType]]></fieldDescription>
+	</field>
+	<variable name="slno" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{admissionNo}]]></variableExpression>
+	</variable>
+	<group name="BasedonClass">
+		<groupExpression><![CDATA[$F{className}]]></groupExpression>
+		<groupHeader>
+			<band height="69">
+				<staticText>
+					<reportElement mode="Opaque" x="40" y="49" width="116" height="20" forecolor="#F7F2F2" backcolor="#009899"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Student Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="49" width="40" height="20" forecolor="#F7F2F2" backcolor="#009899"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Sl no]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="156" y="49" width="103" height="20" forecolor="#F7F2F2" backcolor="#009899"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Admission No]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="375" y="49" width="80" height="20" forecolor="#F7F2F2" backcolor="#009899"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Actual Amount]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="0" y="0" width="259" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Liberation Sans" size="11" isBold="true" isUnderline="true" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{className}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="455" y="49" width="85" height="20" forecolor="#F7F2F2" backcolor="#009899"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Paid Amount]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="648" y="49" width="108" height="20" forecolor="#F7F2F2" backcolor="#009899"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Status]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="540" y="49" width="108" height="20" forecolor="#F7F2F2" backcolor="#009899"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Balance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="259" y="49" width="116" height="20" forecolor="#F7F2F2" backcolor="#009899"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Total Amount]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="19"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="259" height="20" forecolor="#003333" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="12" isBold="true" isUnderline="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{termName} + " - Student Fee Details"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="40" height="20" forecolor="#333333"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{slno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="0" width="116" height="20" forecolor="#333333"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="0" width="103" height="20" forecolor="#333333"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{admissionNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="375" y="0" width="80" height="20" forecolor="#333333"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Double.valueOf($F{actualAmount})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="85" height="20" forecolor="#333333"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Double.valueOf($F{paidAmount})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="648" y="0" width="108" height="20" forecolor="#333333"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="540" y="0" width="108" height="20" forecolor="#333333"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Double.valueOf($F{balanceAmount})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="0" width="116" height="20"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalAmount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="20" splitType="Stretch"/>
+	</summary>
+</jasperReport>

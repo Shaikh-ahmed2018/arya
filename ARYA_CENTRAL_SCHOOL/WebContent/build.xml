@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+ 
+<project name="ARYA_CENTRAL_SCHOOL" default="all" basedir=".">
+	<description>
+            description
+    </description>
+
+	<target name="init" description="--> description">
+		<property name="server.dir" value="D:\D\softwares\apache-tomcat-7.0.47/webapps" />   
+		<property name="build.dir"   value="build"/>
+		<property name="classes.dir" value="${build.dir}/classes"/>
+		<property name="project.dir" value="${server.dir}/ARYA_CENTRAL_SCHOOL"/> 
+		<property name="basepackage.dir" value="D:/D/Dev/ARYA_CENTRAL_SCHOOL"/> 
+		<property name="conf.dir" value="D:\D\softwares\apache-tomcat-7.0.47/conf"/> 
+	</target>
+	
+	<target name="clean" depends="init">
+		<delete file="${project.dir}" />
+		<delete dir="${project.dir}" />
+		
+	</target>
+	 
+	<target name="copy_files"> 
+		<copy todir="${project.dir}" filtering="true">
+			<fileset dir="">
+				<include name="**/*.html*" />
+				<include name="**/*.jsp*" />
+				<include name="**/*.css*" />
+				<include name="**/*.js*" />
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${project.dir}/JS" filtering="true">
+			<fileset dir="js">
+				<include name="**/*.js" />
+				<include name="**/*.html*" />
+				<include name="**/*.jsp*" />
+								<include name="**/*.css*" />
+								<include name="**/*.js*" />
+								<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${project.dir}/JSP" filtering="true">
+					<fileset dir="js">
+						<include name="**/*.js" />
+						<include name="**/*.html*" />
+										<include name="**/*.jsp*" />
+										<include name="**/*.css*" />
+										<include name="**/*.js*" />
+										<include name="**/*.*" />
+					</fileset>
+				</copy>
+		<copy todir="${project.dir}/CSS" filtering="true">
+			<fileset dir="css">
+				<include name="**/*.css" />
+				<include name="**/*.html*" />
+								<include name="**/*.jsp*" />
+								<include name="**/*.css*" />
+								<include name="**/*.js*" />
+								<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${project.dir}/PUBLIC" filtering="true">
+				<fileset dir="css">
+					<include name="**/*.jsp" />
+					<include name="**/*.html*" />
+									<include name="**/*.jsp*" />
+									<include name="**/*.css*" />
+									<include name="**/*.js*" />
+									<include name="**/*.*" />
+				</fileset>
+			</copy>
+		 
+		<copy todir="${project.dir}/images" filtering="true">
+			<fileset dir="images">
+				<include name="**/*.*" />
+				 
+			</fileset>
+		</copy>
+		<copy todir="${project.dir}/LAYOUT" filtering="true">
+					<fileset dir="Layout">
+						<include name="**/*.jsp" />
+						 
+					</fileset>
+				</copy>
+
+		<copy todir="${project.dir}" filtering="true">
+			<fileset dir="">
+				<include name="**/*.jar" />
+				 
+				 
+			</fileset>
+		</copy>
+ 
+		<copy todir="${project.dir}" filtering="true" id="classpath">
+					<fileset dir="">
+						<include name="**/*.xml"/> 
+						 
+					</fileset>
+				</copy>
+
+		<copy todir="D:\D\softwares\apache-tomcat-7.0.47/webapps/ARYA_CENTRAL_SCHOOL/WEB-INF/classes" filtering="true">
+							<fileset dir="D:/D/Dev/ARYA_CENTRAL_SCHOOL/build/classes">
+								<include name="**/*.*"/> 
+								 
+							</fileset>
+						</copy>
+		
+		
+		
+	</target>
+	
+	<target name="all" depends="init,clean,copy_files"/>
+</project>
+
+

@@ -1,0 +1,46 @@
+.bg-green{
+	background: #33965F;
+}
+.ui-x .ui-head{
+	position: relative;
+	padding-top: 5px;
+}
+.ui-x .ui-header{
+	padding: 0px !important;
+}
+.ui-x .ui-header .collapse{
+	position: relative;
+}
+.ui-x .ui-head .ui-header .ui-logo{
+	position: relative;
+	top: -7px;
+	z-index: 10;
+}
+.ui-x .ui-menu{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	box-shadow: inset 0 30px 80px -32px rgba(0,0,0,0.8);
+	width: 100%;
+	border-bottom: 6px solid rgba(0,0,0,0.3);
+}
+.ui-x .ui-menu ul.ui-nav{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	margin-left: 180px;
+}
+.ui-x .ui-menu ul.ui-nav > li{
+	float: left;
+	margin-right: 40px;
+}
+.ui-x .ui-menu ul.ui-nav > li > a{
+	background: transparent;
+	padding: 10px 10px;
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+}
+.ui-x .ui-content .ui-img{
+	margin-top: 40px;	
+}

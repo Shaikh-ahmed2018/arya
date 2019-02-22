@@ -1,0 +1,1411 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+  "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd" >
+
+<struts-config>
+	<form-beans>
+
+		<form-bean name="feeReportform" type="com.centris.campus.forms.FeeReportform" />
+
+		<form-bean name="addSubjectForm" type="com.centris.campus.forms.AddSubjectForm" />
+
+		<form-bean name="DepartmentMaster"
+			type="com.centris.campus.forms.DepartmentMasterForm"></form-bean>
+
+		<form-bean name="teacherregistorform" type="com.centris.campus.forms.TeacherForm" />
+
+		<form-bean name="acadamicYearPlanform"
+			type="com.centris.campus.forms.AcadamicYearPlanForm"></form-bean>
+
+		<form-bean name="transportDetailsForm" type="com.centris.campus.forms.TransportForm"></form-bean>
+		<!-- <form-bean name="transportDetailsForm" type="com.centris.campus.forms.VehicleTranportForm"></form-bean> -->
+
+		<form-bean name="StudentRegistrationForm"
+			type="com.centris.campus.forms.StudentRegistrationForm"></form-bean>
+
+		<form-bean name="UserRolePermissionForm"
+			type="com.centris.campus.forms.UserRolePermissionForm"></form-bean>
+		<form-bean name="Driverform"
+			type="com.centris.campus.forms.DriverTransportForm"></form-bean>
+
+		<form-bean name="DriverMaster" type="com.centris.campus.forms.TransportForm"></form-bean>
+
+		<form-bean name="LoginForm" type="com.centris.campus.forms.LoginForm"></form-bean>
+		<form-bean name="reportmenuform" type="com.centris.campus.forms.ReportMenuForm"></form-bean>
+		<form-bean name="StaffEmployementForm"
+			type="com.centris.campus.forms.StaffEmployementForm"></form-bean>
+		<form-bean name="Assignmentform"
+			type="com.centris.campus.forms.AssignmentUploadForm"></form-bean>
+
+		<form-bean name="parentfbform"
+			type="com.centris.campus.forms.ParentFeedbackform"></form-bean>
+
+		<form-bean name="teacherleaveform" type="com.centris.campus.forms.LeaveRequestForm"></form-bean>
+		<form-bean name="parentleaveform" type="com.centris.campus.forms.LeaveRequestForm"></form-bean>
+
+		<form-bean name="staffAttendanceForm" type="com.centris.campus.forms.ReportMenuForm"></form-bean>
+
+		<form-bean name="studentattenReport"
+			type="com.centris.campus.forms.StdentAttendanceReportForm"></form-bean>
+
+		<form-bean name="phonedirectory"
+			type="com.centris.campus.forms.PhoneDirectoryForm"></form-bean>
+
+		<form-bean name="StaffLevaeReport"
+			type="com.centris.campus.forms.LeaveDetailsReportForm"></form-bean>
+
+		<form-bean name="feecollectionsummaryreport"
+			type="com.centris.campus.forms.FeeCollectionSummaryReportForm"></form-bean>
+
+		<form-bean name="onlinefeereceiptform"
+			type="com.centris.campus.forms.OnlineFeeReceiptForn"></form-bean>
+
+		<form-bean name="transportfeereceiptform"
+			type="com.centris.campus.forms.TransportFeeReceiptForm"></form-bean>
+
+		<form-bean name="UploadStudentXSLForm"
+			type="com.centris.campus.forms.UploadStudentXSLForm"></form-bean>
+
+		<form-bean name="UploadDriverXSLForm"
+			type="com.centris.campus.forms.UploadDriverXSLForm"></form-bean>
+
+
+		<form-bean name="SuddenHolidays" type="com.centris.campus.forms.SuddenHolidayForm"></form-bean>
+		<form-bean name="smsformbean" type="com.centris.campus.forms.UniformSmsForm"></form-bean>
+		<form-bean name="AbsentSMS" type="com.centris.campus.forms.AbsentsSMSForm"></form-bean>
+		<form-bean name="InventoryForm" type="com.centris.campus.forms.InventoryForm"></form-bean>
+		<form-bean name="ParentRequiresAppointmentForm"
+			type="com.centris.campus.forms.ParentRequiresAppointmentForm"></form-bean>
+
+
+
+		<form-bean name="feecollectionform" type="com.centris.campus.forms.ClassFeeSetupForm"></form-bean>
+		<form-bean name="ReportMenuForm" type="com.centris.campus.forms.ReportMenuForm"></form-bean>
+
+		<form-bean name="UploadStageXSLForm"
+			type="com.centris.campus.forms.UploadStageXSLForm"></form-bean>
+			
+   <form-bean name="UploadLibraryXSLForm"
+			type="com.centris.campus.forms.UploadLibraryXSLForm"></form-bean>
+
+		<form-bean name="UploadStaffXSLForm"
+			type="com.centris.campus.forms.UploadStaffXSLForm"></form-bean>
+
+		<form-bean name="InventoryTransactionForm"
+			type="com.centris.campus.forms.InventoryTransactionForm"></form-bean>
+		<form-bean name="LibraryStockEntryForm"
+			type="com.centris.campus.forms.LibraryStockEntryDetailsForm"></form-bean>
+		<form-bean name="SettingExcelUpload"
+			type="com.centris.campus.forms.SettingExcelUploadForm"></form-bean>
+	</form-beans>
+
+	<global-exceptions>
+	</global-exceptions>
+	<global-forwards />
+
+	<action-mappings>
+		<action path="/Menus" type="com.centris.campus.actions.MenusAction" parameter="method" scope="request">
+			<forward name="AdmissionLanding" path="AdmissionLanding"></forward>
+			<forward name="SettingLanding" path="SettingLanding"></forward>
+			<forward name="StudentLanding" path="StudentLanding"></forward>
+			<forward name="StaffLanding" path="StaffLanding"></forward>
+			<forward name="FeeLanding" path="FeeLanding"></forward>
+			<forward name="ExamLanding" path="ExamLanding"></forward>
+			<forward name="LeaveLanding" path="LeaveLanding"></forward>
+			<forward name="TransportLanding" path="TransportLanding"></forward>
+			<forward name="LibraryLanding" path="LibraryLanding"></forward>
+			<forward name="EventLanding" path="EventLanding"></forward>
+			<forward name="ElectionLanding" path="ElectionLanding"></forward>
+		</action>
+		<action path="/parentMenu" type="com.centris.campus.actions.ParentsMenuAction"
+			parameter="method" scope="request" name="parentleaveform">
+			<forward name="studentinformation" path="studentinformation"></forward>
+			<forward name="attendancedetails" path="attendancedetails"></forward>
+			<forward name="assignmentdetails" path="assignmentdetails"></forward>
+			<forward name="examdetails" path="examdetails"></forward>
+			<forward name="syllabusdetails" path="syllabusdetails"></forward>
+			<forward name="sendfeedback" path="sendfeedback"></forward>
+			<forward name="viewassignment" path="viewassignment"></forward>
+			<forward name="attendanceview" path="attendanceview"></forward>
+			<forward name="getmeetingandevent" path="getmeetingandevent"></forward>
+			<forward name="studentTimeTable" path="studentTimeTable"></forward>
+			<forward name="leaverequestscreen" path="leaverequestscreen" />
+			<forward name="parentRemainder" path="parentRemainder" />
+			<forward name="parentstudentList" path="parentstudentList" />
+			<forward name="onlinefeePayment" path="onlinefeePayment" />
+			<forward name="leaverequest" path="leaverequestparent" />
+			<forward name="viewExamdetails" path="viewExamdetails" />
+			<forward name="parentLogin" path="parentHome" />
+			<forward name="onlineFeeReciept" path="onlineFeeReciept" />
+
+		</action>
+
+
+		<action path="/parentfeedback"
+			type="com.centris.campus.actions.ParentFeebackEntryAction" scope="request"
+			parameter="method" name="parentfbform">
+			<forward name="feedbackentry" path="feedbackentry"></forward>
+
+		</action>
+		<action path="/teacherMenu" type="com.centris.campus.actions.TeacherMenuAction"
+			scope="request" parameter="method">
+
+		</action>
+
+		<action path="/holidayMaster" type="com.centris.campus.actions.HolidayMaster"
+			scope="request" parameter="method">
+			<forward name="holidayUpdate" path="holidayUpdate"></forward>
+		</action>
+
+
+		<action path="/ElectionMenu" type="com.centris.campus.actions.ElectionAction"
+			scope="request" parameter="method" name="InventoryTransactionForm">
+			<forward name="addNewGroup" path="addNewGroup" />
+			<forward name="addNewGroupSchool" path="addNewGroupSchool" />
+			<forward name="electionCategoryAdd" path="electionCategoryAdd" />
+			<forward name="electionUpdate" path="electionUpdate" />
+			<forward name="voterDetailsView" path="voterDetailsView" />
+
+			<forward name="GroupList" path="GroupList" />
+		</action>
+		<action path="/IDCardMenu" type="com.centris.campus.actions.IDCreationAction"
+			scope="request" parameter="method" name="InventoryTransactionForm">
+
+			<forward name="PrintPreviewStaffMultipleIDCard" path="PrintPreviewStaffMultipleIDCard" />
+		</action>
+
+
+		<action path="/adminMenu" type="com.centris.campus.actions.AdminMenuAction"
+			parameter="method" scope="request" name="InventoryTransactionForm">
+			<forward name="occupationList" path="occupationList" />
+			<forward name="holidayList" path="holidayList"></forward>
+			<forward name="addHoliday" path="addHoliday"></forward>
+			<forward name="addstudentwithheld" path="addstudentwithheld" />
+			<forward name="casteCategoryList" path="casteCategoryList" />
+			<forward name="casteList" path="casteList" />
+			<forward name="religionList" path="religionList" />
+			<forward name="adminLogin" path="adminLogin" />
+			<forward name="studentList" path="studentList" />
+			<forward name="staffList" path="staffList" />
+			<forward name="StaffListForLeave" path="staffListForLeave" />
+			<forward name="teacherLeaveRequest" path="staffLeaveApply" />
+			<forward name="examList" path="examList" />
+			<forward name="streamList" path="streamList" />
+			<forward name="locationList" path="locationList" />
+			<forward name="addLocation" path="addLocation" />
+			<forward name="termList" path="termList" />
+			<forward name="addStudent" path="addStudent" />
+			<forward name="departmentdetails" path="departmentdetails" />
+			<forward name="getSpecializationList" path="getSpecializationList"></forward>
+			<forward name="addSpecialization" path="addSpecialization"></forward>
+			<forward name="classList" path="classList" />
+			<forward name="academicyear" path="academicyear" />
+			<forward name="vehicleList" path="vehicleList" />
+			<forward name="feeList" path="feeList" />
+			<forward name="feeDetailsList" path="feeDetailsList" />
+			<forward name="userRecords" path="userRecordsTile" />
+			<forward name="roleList" path="roleList"></forward>
+			<forward name="subject_details" path="subject_details"></forward>
+			<forward name="sectionList" path="sectionList"></forward>
+			<forward name="transportTypeList" path="transportTypeList"></forward>
+			<forward name="addnewStream" path="addnewStream" />
+			<forward name="quotalist" path="quotalist"></forward>
+			<forward name="designationList" path="designationList" />
+			<forward name="adddesignation" path="adddesignation" />
+			<forward name="creatingExam" path="creatingExam" />
+			<forward name="careerupdate" path="careerupdate" />
+			<forward name="teachermapping" path="teachermapping" />
+			<forward name="addjob" path="addjob" />
+			<forward name="acadamicYearPlanlist" path="acadamicYearPlanlist"></forward>
+			<forward name="addjob" path="addjob" />
+			<forward name="remainderdetails" path="remainderdetails" />
+			<forward name="fuelmaintenance" path="fuelmaintenance"></forward>
+			<forward name="transportmaster" path="transportmaster" />
+			<forward name="stageList" path="stageList" />
+			<forward name="addstage" path="addstage" />
+			<forward name="UserRolePermissionsMap" path="UserRolePermissionsMap"></forward>
+			<forward name="VehicleDriverMapping" path="VehicleDriverMapping"></forward>
+			<forward name="driverlist" path="driverlist"></forward>
+			<forward name="driverdetails" path="driverdetails"></forward>
+			<forward name="ClassFeeSetup" path="ClassFeeSetup"></forward>
+			<forward name="StageFeeSetup" path="StageFeeSetup"></forward>
+			<forward name="remarksList" path="remarksList"></forward>
+			<forward name="staffattendance" path="staffattendance"></forward>
+			<forward name="FeeCollectionList" path="FeeCollectionList"></forward>
+			<forward name="staffattendance" path="staffattendance"></forward>
+			<forward name="FeeCollection" path="FeeCollection"></forward>
+			<forward name="payroll" path="payroll"></forward>
+			<forward name="timetable" path="timetable"></forward>
+			<forward name="studentpromotionlist" path="studentpromotionlist" />
+			<forward name="studentpromotionscreen" path="studentpromotionscreen" />
+			<forward name="studentphotoupload" path="studentphotoupload"></forward>
+			<forward name="studentenquiry" path="studentenquiry" />
+			<forward name="studentenquirycreate" path="studentenquirycreate" />
+			<forward name="feeconcessionist" path="feeconcessionist"></forward>
+			<forward name="addfeeconcession" path="addfeeconcession"></forward>
+			<forward name="StaffEmployement" path="StaffEmployement"></forward>
+			<forward name="StaffPayrollList" path="StaffPayrollList"></forward>
+			<forward name="studentpromotion" path="studentpromotion"></forward>
+			<forward name="leavebankList" path="leavebankList"></forward>
+			<forward name="ClassTeacherMapping" path="ClassTeacherMapping"></forward>
+			<forward name="studentexcelfileupload" path="studentexcelfileupload"></forward>
+			<forward name="bookslist" path="bookslist"></forward>
+			<forward name="booksissuelist" path="booksissuelist"></forward>
+			<forward name="homeworklist" path="homeworklist"></forward>
+			<forward name="homeworkentrypage" path="homeworkentrypage"></forward>
+			<forward name="meetinglist" path="meetinglist"></forward>
+			<forward name="meetingentrypage" path="meetingentrypage"></forward>
+			<forward name="suddenHolidayList" path="suddenHolidayList"></forward>
+			<forward name="latelist" path="latecomingstudentslist"></forward>
+			<forward name="addlatecomers" path="addlatecomers"></forward>
+			<forward name="uniformlist" path="uniformlist"></forward>
+			<forward name="uniformentry" path="uniformentry"></forward>
+			<forward name="absentSMSList" path="absentSMSList"></forward>
+			<forward name="absentSMSListFilter" path="absentSMSListFilter"></forward>
+			<forward name="studentphotosheet" path="studentphotosheet" />
+
+			<forward name="expenses_list" path="expenses_list" />
+			<forward name="inflows_list" path="inflows_list" />
+			<forward name="revenue_list" path="revenue_list" />
+			<forward name="add_expenses_list" path="add_expenses_list" />
+			<forward name="transaction_List" path="transaction_List" />
+			<forward name="add_transaction_list" path="add_transaction_list" />
+			<forward name="inventory_type_list" path="inventory_type_list" />
+			<forward name="inventory_add" path="inventory_add" />
+
+			<forward name="inventory_list" path="inventory_list" />
+			<forward name="add_or_modify_or_delete_list" path="add_or_modify_or_delete_list" />
+			<forward name="add_purchase_details" path="add_purchase_details" />
+			<forward name="transaction_list" path="transaction_list" />
+			<forward name="transaction_list_inventory" path="transaction_list_inventory" />
+
+			<forward name="add_transaction" path="add_transaction" />
+
+			<forward name="usagerepots" path="usagerepots" />
+
+			<forward name="notReturnedReport" path="notReturnedReport" />
+			<forward name="admissionsList" path="admissionsList" />
+			<forward name="calledforadmissionsList" path="calledforadmissionsList" />
+			<forward name="finaladmissionsList" path="finaladmissionsList" />
+			<forward name="usageReportList" path="usageReportList" />
+			<forward name="notReturnedReportList" path="notReturnedReportList" />
+			<forward name="staffexcelupload" path="staffexcelupload"></forward>
+			<forward name="destinationwisestudent" path="destinationwisestudent"></forward>
+			<forward name="setupAndCollection" path="setupAndCollection"></forward>
+			<forward name="secondadmissionlist" path="secondadmissionlist" />
+			<forward name="thirdadmissionlist" path="thirdadmissionlist" />
+			<forward name="studentIdCreate" path="studentIdCreate"></forward>
+			<forward name="changebackground" path="changebackground"></forward>
+			<forward name="transportfeelist" path="transportfeelist"></forward>
+			<forward name="tempadmmenu" path="tempadmmenu"></forward>
+
+			<forward name="separatetransporttermlist" path="separatetransporttermlist"></forward>
+			<forward name="stageExcelFileUpload" path="stageExcelFileUpload"></forward>
+			<forward name="issuedformdetails" path="issuedformdetails"></forward>
+			<forward name="editissuedformdetails" path="editissuedformdetails"></forward>
+			<forward name="addadmissionformdetails" path="addadmissionformdetails"></forward>
+			<forward name="cancelformdetails" path="cancelformdetails" />
+			<forward name="submitformdetails" path="submitformdetails" />
+			<forward name="processformdetails" path="processformdetails" />
+			<forward name="onlineformreturns" path="onlineformreturns" />
+			<forward name="staffExcelFileUpload" path="staffExcelFileUpload"></forward>
+			<forward name="addStudent" path="addStudent"></forward>
+			<forward name="studentIdGeneration" path="studentIdGeneration"></forward>
+
+			<forward name="driverExcelFileUpload" path="driverExcelFileUpload"></forward>
+			<forward name="transportCategory" path="transportCategory"></forward>
+			<forward name="studentSearch" path="studentSearch"></forward>
+			<forward name="individualStudentSearch" path="individualStudentSearch"></forward>
+			<forward name="miscellaneousReport" path="miscellaneousReport"></forward>
+			<forward name="generateRollNo" path="generateRollNo"></forward>
+			<forward name="tcgeneration" path="tcgeneration"></forward>
+
+
+
+			<forward name="schoolTransfer" path="schoolTransfer"></forward>
+			<forward name="transferStudent" path="transferStudent"></forward>
+			<forward name="findStudent" path="findStudent"></forward>
+
+
+			<forward name="individualmisreport" path="individualmisreport"></forward>
+
+			<!-- leaveBank -->
+			<forward name="addNewCategary" path="addNewCategary"></forward>
+			<!-- leaveBank -->
+
+
+			<!-- Student Bus card -->
+			<forward name="studentBusCard" path="studentBusCard" />
+
+			<!-- ID card design and print -->
+
+			<forward name="NewStdIdCardDesign" path="NewStdIdCardDesign" />
+			<forward name="NewStdIdCardPrint" path="NewStdIdCardPrint" />
+			<forward name="DesignStaffIDCard" path="DesignStaffIDCard" />
+			<forward name="PrintStaffIDCard" path="PrintStaffIDCard" />
+			<forward name="StaffSingleIDCardDesign" path="StaffSingleIDCardDesign" />
+			<forward name="StaffSingleIDCardPrint" path="StaffSingleIDCardPrint" />
+			<forward name="StaffMultipleIDCardPrint" path="StaffMultipleIDCardPrint" />
+
+			<forward name="DesignStudentSingleIDCard" path="DesignStudentSingleIDCard" />
+			<forward name="PrintStudentSingleIDCard" path="PrintStudentSingleIDCard" />
+			<forward name="PrintStudentMultipleIDCard" path="PrintStudentMultipleIDCard" />
+			<forward name="PrintPreviewStudentMultipleIDCard" path="PrintPreviewStudentMultipleIDCard" />
+			<forward name="printMultiStaffIDCard" path="printMultiStaffIDCard" />
+
+			<forward name="DesignTransportIDCard" path="DesignTransportIDCard" />
+			<forward name="PrintTransportIDCard" path="PrintTransportIDCard" />
+			<forward name="DesignTransportIDCardSingle" path="DesignTransportIDCardSingle" />
+			<forward name="PrintTransportIDCardSingle" path="PrintTransportIDCardSingle" />
+			<forward name="PrintTransportMultipleIDCard" path="PrintTransportMultipleIDCard" />
+			<forward name="PrintPreviewTransportMultipleIDCard" path="PrintPreviewTransportMultipleIDCard" />
+			<!-- <forward name="PrintPreviewStaffMultipleIDCard" path="PrintPreviewStaffMultipleIDCard" 
+				/> -->
+
+			<!-- Election Module -->
+
+			<!-- <forward name="GroupList" path="GroupList" /> -->
+
+			<forward name="GroupList" path="GroupList" />
+			<forward name="electionList" path="electionList" />
+			<forward name="addNewElection" path="addNewElection" />
+			<forward name="nominationApproval" path="nominationApproval" />
+			<forward name="addBoothDetais" path="addBoothDetais" />
+			<forward name="voterSearchList" path="voterSearchList" />
+			<forward name="voterMachineActivate" path="voterMachineActivate" />
+			<forward name="voterMachineStart" path="voterMachineStart" />
+			<forward name="showCategory" path="showCategory" />
+			<forward name="electionCategoryList" path="electionCategoryList" />
+
+			<forward name="nominationRegister" path="nominationRegister" />
+
+
+			<!-- Student Bus Card -->
+			<forward name="studentgradeList" path="studentgradeList"></forward>
+			<forward name="detailsissuedform" path="detailsissuedform"></forward>
+			<forward name="apprformdetails" path="apprformdetails"></forward>
+			<forward name="rejectformdetails" path="rejectformdetails"></forward>
+			<forward name="studentBusIDGeneration" path="studentBusIDGeneration"></forward>
+			<forward name="studentconfidential" path="studentconfidential" />
+			<forward name="getstudentconfidential" path="getstudentconfidential" />
+			<forward name="addstudentconfidential" path="addstudentconfidential" />
+			<forward name="withheldlist" path="withheldlist" />
+			<forward name="studentwithheld" path="studentwithheld" />
+
+			<forward name="studentprom" path="studentprom" />
+			<forward name="getstudent" path="getstudent" />
+			<forward name="promotionpage" path="promotionpage" />
+			<forward name="appraisallist" path="appraisallist" />
+			<forward name="studentappraisal" path="studentappraisal" />
+			<forward name="appraisalpage" path="appraisalpage" />
+			<forward name="transfercertificatelist" path="transfercertificatelist" />
+			<forward name="findstudentlist" path="findstudentlist" />
+			<forward name="transcertificatepage" path="transcertificatepage" />
+			<forward name="printtranscertificate" path="printtranscertificate" />
+			<forward name="rollnumbergeneration" path="rollnumbergeneration" />
+			<forward name="tds_computation_details" path="tds_computation_details" />
+			<forward name="studentpromotedpage" path="studentpromotedpage" />
+			<forward name="studentdemotedtopromotingpage" path="studentdemotedtopromotingpage" />
+			<forward name="fineConfiguration" path="fineConfiguration"></forward>
+			<forward name="countingListForVoting" path="countingListForVoting"></forward>
+			<forward name="winnerList" path="winnerList"></forward>
+
+			<forward name="studentsappraisel" path="studentsappraisel"></forward>
+			<forward name="addstudentappraisal" path="addstudentappraisal"></forward>
+			<forward name="ClassTodayTimeTableList" path="ClassTodayTimeTableList"></forward>
+			<forward name="laboratory" path="laboratory"></forward>
+			<forward name="add_lab" path="add_lab"></forward>
+
+		</action>
+
+		<action path="/staffattendancepath" type="com.centris.campus.actions.StaffAttendanceAction"
+			parameter="method" scope="request" name="">
+			<forward name="staff_attendance_upload" path="staff_attendance_upload" />
+
+		</action>
+
+		<action path="/locationDetails" type="com.centris.campus.actions.LocationDetailsAction"
+			parameter="method" scope="request" name="">
+			<forward name="addLocation" path="addLocation" />
+
+		</action>
+
+		<action path="/studentcertificate"
+			type="com.centris.campus.actions.StudentCertificatesAction"
+			parameter="method" scope="request">
+			<forward name="studentCertificates" path="studentCertificates"></forward>
+			<forward name="findstudent" path="findstudent" />
+			<forward name="ageCertificate" path="ageCertificate"></forward>
+			<forward name="bonafideCertificate" path="bonafideCertificate"></forward>
+			<forward name="conductCertificate" path="conductCertificate"></forward>
+			<forward name="course_ConductCertificate" path="course_ConductCertificate"></forward>
+			<forward name="studentVisa" path="studentVisa"></forward>
+		</action>
+
+
+		<action path="/departmentMenu"
+			type="com.centris.campus.actions.AddDepartmentDetailsAction"
+			parameter="method" scope="request" name="DepartmentMaster">
+			<forward name="adddepartment" path="adddepartment" />
+			<forward name="departmentdetails" path="departmentdetails" />
+
+		</action>
+
+		<action path="/QuotaMenu" type="com.centris.campus.actions.QuotaMasterAction"
+			parameter="method" scope="request" name="DepartmentMaster">
+			<forward name="addQuota" path="addQuota"></forward>
+			<forward name="quotalist" path="quotalist"></forward>
+
+		</action>
+
+		<action path="/fuelMenu" type="com.centris.campus.actions.FuelMaintenanceAction"
+			parameter="method" scope="request">
+
+			<forward name="addfueldetails" path="addfueldetails"></forward>
+			<forward name="fuelmaintenance" path="fuelmaintenance"></forward>
+
+		</action>
+
+
+		<action path="/login" type="com.centris.campus.actions.LoginAction"
+			parameter="method" scope="request" name="LoginForm">
+			<forward name="teacherLogin" path="teacherHome" />
+			<forward name="parentLogin" path="parentHome" />
+			<forward name="adminLogin" path="adminLogin" />
+			<forward name="Home" path="/LAYOUT/index.jsp" />
+			<forward name="principleLogin" path="principleHome" />
+			<forward name="add_new_application" path="add_new_application" />
+			<forward name="secondadmissionformat" path="secondadmissionformat"></forward>
+			<forward name="thirdadmissionformat" path="thirdadmissionformat" />
+		</action>
+		<action path="/getAllReports" type="com.centris.campus.actions.ReportsAction"
+			parameter="method" name="reportsForm" scope="request">
+
+		</action>
+
+
+
+		<action path="/studentRegistration"
+			type="com.centris.campus.actions.StudentRegistrationAction" scope="request"
+			parameter="method" name="StudentRegistrationForm">
+			<forward name="studentAmendment" path="studentAmendment"></forward>
+			<forward name="studentRegistration" path="studentRegistration"></forward>
+			<forward name="FeeCollection" path="FeeCollection"></forward>
+			<forward name="addstudentregistration" path="addstudentregistration"></forward>
+			<forward name="studentList" path="studentList" />
+			<forward name="addStudent" path="addStudent" />
+			<forward name="addStudent" path="addStudent" />
+		<forward name="studentphotoupload" path="studentphotoupload"></forward>
+		</action>
+
+
+
+		<action path="/transport" type="com.centris.campus.actions.TransportAction"
+			scope="request" parameter="method" name="transportDetailsForm">
+			<forward name="addvehicle" path="addvehicle" />
+			<forward name="vehicleList" path="vehicleList" />
+			<forward name="addroute" path="addroute" />
+			<forward name="transportmaster" path="transportmaster" />
+			<forward name="stopdetails" path="stopdetails" />
+			<forward name="addseparatetermdetails" path="addseparatetermdetails" />
+			<forward name="addtransporttype" path="addtransporttype" />
+			<forward name="studenttransportlist" path="studenttransportlist" />
+			<forward name="settransportdetails" path="settransportdetails" />
+
+
+
+		</action>
+
+		<action path="/principleMenu" type="com.centris.campus.actions.PrincipleMenuAction"
+			parameter="method" scope="request">
+
+		</action>
+
+		<action path="/AcademicYearPath"
+			type="com.centris.campus.actions.AcademicYearMasterAction" parameter="method"
+			scope="request">
+			<forward name="Addacademicyear" path="addacademicyear" />
+			<forward name="academicyear" path="academicyear" />
+
+
+		</action>
+
+
+		<action path="/classPath" type="com.centris.campus.actions.ClassAction"
+			parameter="method" scope="request">
+			<forward name="addClass" path="addClass" />
+			<forward name="classList" path="classList" />
+		</action>
+
+		<action path="/specialization" type="com.centris.campus.actions.SpecializationAction"
+			parameter="method" scope="request">
+			<forward name="addSpecialization" path="addSpecialization" />
+		</action>
+
+
+		<action path="/addfee" type="com.centris.campus.actions.FeeMasterAction"
+			name="addfeedetailsform" scope="request" parameter="method">
+
+
+			<forward name="feeaddDetailsList" path="feeaddDetailsList"></forward>
+			<forward name="feeDetailsList" path="feeDetailsList" />
+
+		</action>
+
+		<action path="/feeReport" type="com.centris.campus.actions.FeeReportAction"
+			scope="request" parameter="method" name="feeReportForm">
+
+			<forward name="addfeeReport" path="addfeeReport" />
+			
+ 
+		</action>
+
+
+		<action path="/role" parameter="parameter"
+			type="com.centris.campus.actions.RoleMasterAction" scope="request"
+			name="roleMasterForm">
+			<forward name="RoleEntry" path="RoleEntry"></forward>
+			<forward name="roleList" path="roleList"></forward>
+		</action>
+
+
+		<action path="/userManagement" type="com.centris.campus.actions.UserManagementAction"
+			name="" scope="request" parameter="method">
+			<forward name="changePassword" path="changePassword"></forward>
+			<forward name="userRecords" path="userRecordsTile" />
+		</action>
+
+
+		<action path="/subject" type="com.centris.campus.actions.AddSubjectAction"
+			scope="request" name="addSubjectForm" parameter="method">
+			<forward name="add_subject" path="add_subject" />
+			<forward name="subject_details" path="subject_details"></forward>
+			<forward name="update_subject" path="update_subject" />
+			<forward name="add_lab" path="add_lab"></forward>
+			<forward name="update_lab" path="update_lab"></forward>
+
+
+		</action>
+
+
+		<action path="/sectionPath" type="com.centris.campus.actions.SectionAction"
+			parameter="method" scope="request">
+			<forward name="addSection" path="addSection" />
+			<forward name="sectionList" path="sectionList" />
+
+		</action>
+
+		<action path="/transportType" type="com.centris.campus.actions.TransportTypeAction"
+			name="" scope="request" parameter="method">
+			<forward name="TransportTypeEntry" path="TransportTypeEntry"></forward>
+			<forward name="userRecords" path="userRecordsTile" />
+		</action>
+
+
+		<action path="/examCreationPath" type="com.centris.campus.actions.ExamDetailsAction"
+			parameter="method" scope="request">
+			<forward name="creatingExam" path="creatingExam" />
+			<forward name="examList" path="examList" />
+			<forward name="addGradeSettings" path="addGradeSettings"></forward>
+			<forward name="subjectwisemarksList" path="subjectwisemarksList"></forward>
+			<forward name="getSubjectClass" path="getSubjectClass"></forward>
+			<forward name="classWiseSubject" path="classWiseSubject"></forward>
+			<forward name="savesubWiseMarksDetails" path="savesubWiseMarksDetails"></forward>
+		</action>
+
+		<action path="/streamDetails" type="com.centris.campus.actions.StreamDetailsAction"
+			parameter="method" scope="request">
+			<forward name="addnewStream" path="addnewStream" />
+			<forward name="StreamSetting" path="StreamSetting" />
+		</action>
+
+		<action path="/houseSettings"
+			type="com.centris.campus.actions.StudentHouseSettingsAction"
+			parameter="method" scope="request">
+			<forward name="academicyearHouseSetting" path="academicyearHouseSetting"></forward>
+			<forward name="houseSettingClassWise" path="houseSettingClassWise"></forward>
+			<forward name="displayhousesettings" path="displayhousesettings"></forward>
+			<forward name="houseSettingStudentWise" path="houseSettingStudentWise"></forward>
+			<forward name="houseSetting" path="houseSetting"></forward>
+			<forward name="generateHouse" path="generateHouse"></forward>
+		</action>
+
+		<action path="/TestAction" type="com.centris.campus.actions.TestAction"
+			scope="request" parameter="method" name="newregForm">
+			<forward name="ttest" path="/JSP/backOffice/test.jsp" />
+			<forward name="revenue_list_test" path="revenue_list_test" />
+			<forward name="expenses_list_test" path="expenses_list_test" />
+			<forward name="transaction_List_test" path="transaction_List_test" />
+			<forward name="transportmaster_test" path="transportmaster_test" />
+			<forward name="enquiry_list" path="enquiry_list" />
+			<forward name="student_list" path="student_list" />
+			<forward name="newreg" path="newreg" />
+			<forward name="res_list" path="res_list" />
+			<forward name="admlist" path="admlist" />
+		</action>
+
+
+		<action path="/adddesignation" type="com.centris.campus.actions.AddDesignationAction"
+			name="AddDesignation" scope="request" parameter="method">
+			<forward name="designationList" path="designationList" />
+			<forward name="adddesignation" path="adddesignation" />
+		</action>
+
+		<action path="/examTimetablePath" type="com.centris.campus.actions.ExamTimeTableAction"
+			parameter="method" scope="request">
+			<forward name="examtimetable" path="examtimetable" />
+			<forward name="addExamTimetable" path="addExamTimetable" />
+			<forward name="examlistyear" path="examlistyear" />
+			<forward name="examtimetablelistyear" path="examtimetablelistyear" />
+			<forward name="examtimetableclasslist" path="examtimetableclasslist" />
+			<forward name="setexamtimetableuptotenth" path="setexamtimetableuptotenth" />
+			<forward name="setexamlistforstudent" path="setexamlistforstudent"></forward>
+			<forward name="exammarksstudentwiselist" path="exammarksstudentwiselist"></forward>
+			<forward name="setmarkentrydetails" path="setmarkentrydetails"></forward>
+			<forward name="setmarkentryclassandsectionwise" path="setmarkentryclassandsectionwise"></forward>
+			<forward name="setmarkentrystudentwise" path="setmarkentrystudentwise"></forward>
+			<forward name="subjetmarkList" path="subjetmarkList"></forward>
+			<forward name="examtimetableclasssubjectlist" path="examtimetableclasssubjectlist"></forward>
+			<forward name="addmarkentrystudentwise" path="addmarkentrystudentwise"></forward>
+			<forward name="examtimetableclass" path="examtimetableclass"></forward>
+			<forward name="examtimetableclasssection" path="examtimetableclasssection"></forward>
+			<forward name="displaysaveexamtimetablepage" path="displaysaveexamtimetablepage"></forward>
+			<forward name="examtimetabledispalyset" path="examtimetabledispalyset"></forward>
+			<forward name="examdependency" path="examdependency"></forward>
+			<forward name="setexamdependency" path="setexamdependency"></forward>
+			<forward name="gradedependency" path="gradedependency"></forward>
+			<forward name="setgradeDependency" path="setgradeDependency"></forward>
+			<forward name="setgradeDependencyindetail" path="setgradeDependencyindetail"></forward>
+		</action>
+
+
+		<action path="/communicationPath" type="com.centris.campus.actions.CommunicationAction"
+			parameter="method" scope="request">
+			<forward name="createRemarkpage" path="createRemarkpage" />
+			<forward name="createmeeting" path="createmeeting" />
+			<forward name="createbdaywish" path="createbdaywish"></forward>
+		</action>
+
+
+		<action path="/teacherregistration"
+			type="com.centris.campus.actions.TeacherRegistrationAction"
+			parameter="method" name="teacherregistorform" scope="request">
+			<forward name="inAdminTeacherRegistration" path="inAdminTeacherRegistration" />
+			<forward name="teacheramendment" path="teacheramendment" />
+			<forward name="princeTeacherRegistration" path="princeTeacherRegistration" />
+			<forward name="addstaff" path="addstaff" />
+			<forward name="staffList" path="staffList" />
+			<forward name="updatestaff" path="updatestaff" />
+			<forward name="teachersalary" path="teachersalary" />
+
+		</action>
+
+
+		<action path="/careerview" type="com.centris.campus.actions.CareerPopulateAction"
+			parameter="method" scope="request">
+			<forward name="addjob" path="addjob" />
+			<forward name="careerupdate" path="careerupdate"></forward>
+		</action>
+
+
+		<action path="/termfee" type="com.centris.campus.actions.TermMasterAction"
+			scope="request" parameter="method">
+
+			<forward name="addtermdetails" path="addtermdetails" />
+
+		</action>
+
+
+		<action path="/remainder" type="com.centris.campus.actions.RemainderMasterAction"
+			scope="request" parameter="method">
+			<forward name="addremainderdetails" path="addremainderdetails" />
+		</action>
+
+
+
+		<action path="/acadamicYearPlan"
+			type="com.centris.campus.actions.AcadamicYearPlanAction" name="acadamicYearPlanform"
+			scope="request" parameter="method">
+			<forward name="acadamicYearPlanEntry" path="acadamicYearPlanEntry"></forward>
+
+		</action>
+
+		<action path="/teachmap"
+			type="com.centris.campus.actions.ClassTeacherMappingAction" scope="request"
+			parameter="method">
+
+			<forward name="adddisplaydetails" path="adddisplaydetails" />
+
+		</action>
+
+		<action path="/addstage" type="com.centris.campus.actions.StageAction"
+			name="AddStageForm" scope="request" parameter="method">
+			<forward name="stageList" path="stageList" />
+			<forward name="addstage" path="addstage" />
+		</action>
+
+		<action path="/userPermission"
+			type="com.centris.campus.actions.UserRolePermissionAction" parameter="method"
+			scope="request" name="UserRolePermissionForm">
+
+		</action>
+
+		<action path="/vehicledrivermap"
+			type="com.centris.campus.actions.VehicleDriverMappingAction"
+			parameter="method" scope="request" name="vehicledriverform">
+
+			<forward name="VehicleDriverMappingEntry" path="VehicleDriverMappingEntry"></forward>
+		</action>
+
+		<action path="/classfeesetup" type="com.centris.campus.actions.ClassFeeSetupAction"
+			parameter="method" scope="request">
+
+			<forward name="ClassFeeSetupEntry" path="ClassFeeSetupEntry"></forward>
+			<forward name="ClassFeeSetup" path="ClassFeeSetup"></forward>
+			<forward name="specializationFeeList" path="specializationFeeList"></forward>
+
+
+		</action>
+
+		<action path="/stagefeesetup" type="com.centris.campus.actions.StageFeeSetupAction"
+			parameter="method" scope="request">
+
+			<forward name="StageFeeSetupEntry" path="StageFeeSetupEntry"></forward>
+			<forward name="StageFeeSetup" path="StageFeeSetup"></forward>
+
+		</action>
+
+		<action path="/driverDetailsPath"
+			type="com.centris.campus.actions.AddDriverDetailsAction" parameter="method"
+			scope="request" name="Driverform">
+			<forward name="driverdetails" path="driverdetails" />
+			<forward name="driverlist" path="driverlist" />
+		</action>
+
+		<action path="/reportaction" type="com.centris.campus.actions.ReportsMenuAction"
+			parameter="method" scope="session" name="reportmenuform">
+
+			<forward name="StudentInformationReport" path="StudentInformationReport" />
+			<forward name="StudentFeeStatusReport" path="StudentFeeStatusReport"></forward>
+			<forward name="defenderFeeReport" path="defenderFeeReport"></forward>
+			<forward name="StudentMarksDetails" path="StudentMarksDetails"></forward>
+			<forward name="ExamClassWiseReport" path="ExamClassWiseReport"></forward>
+			<forward name="InactiveStudentInformationReport" path="InactiveStudentInformationReport" />
+			<forward name="InactiveStudentFeeInformationReport" path="InactiveStudentFeeInformationReport" />
+			<forward name="expenditureReport" path="expenditureReport" />
+			<forward name="getSingleStdReport" path="getSingleStdReport" />
+			<forward name="studentreport" path="studentreport" />
+			<forward name="studentcountreport" path="studentcountreport" />
+			<forward name="progressreport" path="progressreport" />
+			<forward name="individualprogressreport" path="individualprogressreport" />
+			<forward name="classperformance" path="classperformance"/>
+            <forward name="individualClassPerformace" path="individualClassPerformace"/>
+            <forward name="FeeCollectionReport" path="FeeCollectionReport"></forward>
+            <forward name="itfeecollection" path="itfeecollection"/>
+            <forward name="ddreport" path="ddreport"/>
+			<forward name="customizablestudentreport" path="customizablestudentreport" />
+			<forward name="filteringpage" path="filteringpage" />
+		</action>
+
+		<action path="/IDCreationAction" type="com.centris.campus.actions.IDCreationAction"
+			parameter="method" scope="session" name="ReportMenuForm">
+
+			<forward name="studentID" path="studentID"></forward>
+
+
+
+		</action>
+
+
+		<action path="/expenses" type="com.centris.campus.actions.ExpensesMenuAction"
+			parameter="method" scope="session" name="expenseform">
+
+			<forward name="expensesReportFilterPage" path="expensesReportFilterPage" />
+		</action>
+		<action path="/staffattendancereport" type="com.centris.campus.actions.StaffAttendanceReportAction" parameter="method" scope="request" name="staffAttendanceForm">
+			<forward name="staffAttendanceReport" path="staffAttendanceReport" />
+		</action>
+		<action path="/staffreleivingorder"
+			type="com.centris.campus.actions.StaffReleivingOrderReportAction"
+			parameter="method" scope="request" name="staffReleivingOrder">
+			<forward name="releivingOrdeReport" path="releivingOrdeReport" />
+		</action>
+		<action path="/studentattendanceReport"
+			type="com.centris.campus.actions.StudentAttendanceReportAction"
+			parameter="method" scope="request" name="studentattenReport">
+
+			<forward name="studentattendancereport" path="studentattendancereport" />
+
+		</action>
+
+
+
+		<action path="/studentTransferReport"
+			type="com.centris.campus.actions.StudentTransferCertificateReportAction"
+			parameter="method" scope="request" name="">
+
+			<forward name="studentTransferCertificate" path="studentTransferCertificate" />
+
+		</action>
+
+
+
+		<action path="/studentBonafiedReport"
+			type="com.centris.campus.actions.StudentBonafiedReportCertificateReportAction"
+			parameter="method" scope="request" name="">
+
+			<forward name="studentBonafiedCertificate" path="studentBonafiedCertificate" />
+
+		</action>
+
+
+
+		<action path="/phonedirectory" type="com.centris.campus.actions.PhoneDirectoryAction"
+			parameter="method" scope="request" name="phonedirectory">
+
+			<forward name="phonedirectory" path="phonedirectory" />
+
+		</action>
+
+
+		<action path="/teachermenuaction" type="com.centris.campus.actions.TeacherMenuAction"
+			parameter="method" scope="request" name="teacherleaveform">
+			<forward name="TeacherMenu" path="TeacherMenu" />
+			<forward name="leaverequest" path="leaverequest" />
+			<!-- <forward name="leaverequestscreen" path="leaverequestscreen" /> -->
+			<forward name="leaveapproval" path="leaveapproval" />
+			<forward name="leaveaprovalscreen" path="leaveaprovalscreen" />
+			<forward name="attendacestatus" path="attendacestatus" />
+			<forward name="attendaceupload" path="attendaceupload" />
+			<forward name="assingmentview" path="assingmentview" />
+			<forward name="addassignment" path="addassignment" />
+			<forward name="marksupload" path="marksupload" />
+			<forward name="marksuploadscreen" path="marksuploadscreen" />
+			<forward name="teacherTimeTable" path="teacherTimeTable" />
+			<forward name="timeTableDetailsList" path="timeTableDetailsList" />
+			<forward name="DownloadPayslip" path="DownloadPayslip"></forward>
+			<forward name="teacherLeaveRequest" path="teacherLeaveRequest" />
+			<forward name="teachermeetingandevent" path="teachermeetingandevent" />
+			<forward name="teacherRemainder" path="teacherRemainder" />
+			<forward name="leaveapprovaldetails" path="leaveapprovaldetails" />
+			<forward name="teachermeetingandevent" path="teachermeetingandevent" />
+			<forward name="teacherRemainder" path="teacherRemainder" />
+			<forward name="leaveapprovaldetails" path="leaveapprovaldetails" />
+			<forward name="leaveteacherdetails" path="leaveteacherdetails" />
+			<forward name="generatepayroll" path="generatepayroll"></forward>
+			<forward name="generatepayrollist" path="generatepayrollist"></forward>
+			<forward name="assignproject" path="assignproject"></forward>
+			<forward name="addproject" path="addproject"></forward>
+			<forward name="personalDetails" path="personalDetails"></forward>
+			
+		</action>
+
+		<action path="/perentmenuaction" type="com.centris.campus.actions.ParentsMenuAction"
+			parameter="method" scope="session">
+
+			<forward name="PerentsHome" path="PerentsHome" />
+
+		</action>
+
+		<action path="/feecollection" type="com.centris.campus.actions.FeeCollectionAction"
+			name="feecollectionform" parameter="method" scope="session">
+
+			<forward name="FeeCollectionEntry" path="FeeCollectionEntry" />
+			<forward name="getFeeCollection" path="getFeeCollection" />
+			<forward name="setupAndCollection" path="setupAndCollection"></forward>
+			<forward name="feeCollectionEdit" path="feeCollectionEdit"></forward>
+			<forward name="feeCollectionStudentWise" path="feeCollectionStudentWise"></forward>
+			<forward name="TransportfeeCollectionStudentWise" path="TransportfeeCollectionStudentWise"></forward>
+			<forward name="scholorship" path="scholorship"></forward>
+			<forward name="feeCancellation" path="feeCancellation"></forward>
+			
+
+		</action>
+
+
+		<action path="/feeconcession" type="com.centris.campus.actions.FeeConcession"
+			scope="request" parameter="method">
+			<forward name="feeconcessionist" path="feeconcessionist"></forward>
+			<forward name="addfeeconcession" path="addfeeconcession" />
+		</action>
+
+		<action path="/staffemployement"
+			type="com.centris.campus.actions.StaffEmployementDetailsAction" name="StaffEmployementForm"
+			parameter="method">
+			<forward name="StaffEmployement_Entry" path="StaffEmployement_Entry"></forward>
+			<forward name="StaffEmployement" path="StaffEmployement"></forward>
+			<forward name="tds_computation_details" path="tds_computation_details" />
+		</action>
+
+
+		<action path="/staffPayroll" type="com.centris.campus.actions.StaffPayrollAction"
+			name="StaffEmployementForm" parameter="method">
+			<forward name="Staff_Payroll_Entry" path="Staff_Payroll_Entry"></forward>
+			<forward name="StaffPayrollList" path="StaffPayrollList"></forward>
+		</action>
+
+
+		<action path="/enquiryDetails" type="com.centris.campus.actions.StudentEnquiryAction"
+			name="enquiryForm" parameter="method" scope="request">
+			<forward name="listOfStudents" path="listOfStudents"></forward>
+			<forward name="studentenquiryadd" path="studentenquiryadd"></forward>
+			<forward name="addingEnquiryvalues" path="addingEnquiryvalues"></forward>
+		</action>
+
+
+		<action path="/studentPromote"
+			type="com.centris.campus.actions.StudentPramotionAction" input=""
+			parameter="method" scope="request" name="">
+			<forward name="success" path="studDetails" />
+			<forward name="studentpromotionscreens" path="studentpromotionscreens" />
+		</action>
+
+
+
+		<action path="/teacherAttendance"
+			type="com.centris.campus.actions.TeacherAttendanceAction" parameter="method"
+			scope="request" name="teacherAttendanceForm">
+			<forward name="success" path="teacherAttendance"></forward>
+			<forward name="postattendance" path="postattendance"></forward>
+			<forward name="teacherAttendanceStatus" path="teacherAttendanceStatus" />
+			<forward name="postattendancebycoordinator" path="postattendancebycoordinator"></forward>
+		</action>
+
+
+		<action path="/assignmentupload"
+			type="com.centris.campus.actions.AssignmentUploadAction" parameter="method"
+			scope="request" name="Assignmentform">
+			<forward name="assingmentview" path="assingmentview" />
+			<forward name="updateassignment" path="updateassignment"></forward>
+			<forward name="updateProject" path="updateProject"></forward>
+		</action>
+
+		<action path="/TimeTableActionPath" type="com.centris.campus.actions.TimeTableAction"
+			parameter="method" scope="request" name="Assignmentform">
+			<forward name="viewTimetable" path="viewTimetable" />
+			<forward name="viewTodayTimetable" path="viewTodaayTimetable" />
+			<forward name="viewTeacherTimetable" path="viewTeacherTimetable"></forward>
+		</action>
+
+		<action path="/MarksUploadActionPath" type="com.centris.campus.actions.MarksUploadAction"
+			parameter="method" scope="request" name="Assignmentform">
+			<forward name="ViewStudentMarks" path="ViewStudentMarks" />
+		</action>
+
+		<action path="/StudentAttendanceActionPath"
+			type="com.centris.campus.actions.StudentAttendanceAction" parameter="method"
+			scope="request" name="Assignmentform">
+
+			<forward name="StudentAttendanceEntry" path="StudentAttendanceEntry" />
+			<forward name="GetStuPeriodAtt" path="GetStuPeriodAtt"></forward>
+			<forward name="editAttendance" path="editAttendance"></forward>
+		</action>
+
+		<action path="/leavebank" type="com.centris.campus.actions.LeaveBankAction"
+			name="" scope="request" parameter="method">
+			<forward name="leavebankList" path="leavebankList"></forward>
+			<forward name="addleavebankList" path="addleavebankList"></forward>
+			<forward name="addNewCat" path="addNewCat"></forward>
+			<forward name="editleaveCat" path="editleaveCat"></forward>
+		</action>
+
+
+		<action path="/teacherLeaveDetailsReport"
+			type="com.centris.campus.actions.LeaveDetailsReportAction" name="StaffLevaeReport"
+			scope="request" parameter="method">
+			<forward name="LeaveDetailsReport" path="LeaveDetailsReport"></forward>
+		</action>
+
+
+		<action path="/feecollectionsummaryreport"
+			type="com.centris.campus.actions.FeeCollectionSummaryReportAction"
+			name="feecollectionsummaryreport" scope="request" parameter="method">
+			<forward name="FeeCollectionSummaryReport" path="FeeCollectionSummaryReport"></forward>
+		</action>
+
+
+		<action path="/staffservicereport"
+			type="com.centris.campus.actions.StaffServiveReportAction" parameter="method"
+			scope="request" name="">
+			<forward name="serviceCertificate" path="serviceCertificate" />
+		</action>
+
+
+		<action path="/staffpayreport" type="com.centris.campus.actions.StaffPayReportAction"
+			parameter="method" scope="request" name="">
+			<forward name="payCertificate" path="payCertificate" />
+		</action>
+
+		<action path="/classteachermapping"
+			type="com.centris.campus.actions.ClassTeachetMappingAction"
+			parameter="method" scope="request" name="">
+			<forward name="editClassTeacher" path="editClassTeacher" />
+		</action>
+
+
+
+
+		<action path="/onlinefeereceipt"
+			type="com.centris.campus.actions.OnlineFeeReceiptAction" name="onlinefeereceiptform"
+			scope="request" parameter="method">
+			<forward name="onlinefeereceipt" path="onlinefeereceipt"></forward>
+		</action>
+
+		<action path="/transportfeereceipt"
+			type="com.centris.campus.actions.TransportFeeReceiptAction" name="transportfeereceiptform"
+			scope="request" parameter="method">
+			<forward name="transportfeereceipts" path="transportfeereceipts"></forward>
+		</action>
+
+
+
+
+		<action path="/uploadStudentXSL" name="UploadStudentXSLForm"
+			parameter="method" type="com.centris.campus.actions.UploadStudentXSLAction"
+			scope="request">
+			<forward name="studentexcelfileupload" path="studentexcelfileupload"></forward>
+			<forward name="ExcelUploadforstudentMarks" path="ExcelUploadforstudentMarks"></forward> 
+		</action>
+
+
+
+
+
+		<action path="/inventorymenu" parameter="method" name="InventoryForm"
+			type="com.centris.campus.actions.InventoryMenuAction" scope="request">
+			<forward name="inventory_type_list" path="inventory_type_list" />
+			<forward name="inventory_add" path="inventory_add" />
+			<forward name="add_purchase_details" path="add_purchase_details" />
+
+			<forward name="add_transaction" path="add_transaction" />
+			<forward name="add_or_modify_or_delete_list" path="add_or_modify_or_delete_list" />
+
+		</action>
+
+		<action path="/transactionymenu" parameter="method"
+			name="InventoryTransactionForm" type="com.centris.campus.actions.InventoryMenuAction"
+			scope="request">
+
+
+			<forward name="add_transaction" path="add_transaction" />
+			<forward name="transaction_list_inventory" path="transaction_list_inventory" />
+
+
+		</action>
+
+
+
+
+
+
+		<action path="/bookmenu" parameter="method"
+			type="com.centris.campus.actions.BoockMenuAction" scope="request">
+			<forward name="bookentrypage" path="bookentrypage"></forward>
+			<forward name="booksissuelist" path="booksissuelist"></forward>
+			<forward name="BookIssueEntryPage" path="BookIssueEntryPage"></forward>
+
+
+		</action>
+
+
+
+		<!--SMS INTEGRATION -->
+
+		<action path="/smsPath" type="com.centris.campus.actions.SmsAction"
+			parameter="method" scope="request" name="smsformbean">
+
+
+			<forward name="uniformentry" path="uniformentry" />
+			<forward name="bdayentry" path="bdayentry" />
+
+
+		</action>
+
+
+
+		<action path="/suddenHolidays"
+			type="com.centris.campus.actions.SuddenHolidaySMSAction" parameter="method"
+			scope="request" name="SuddenHolidays">
+
+			<forward name="suddenHolidayList" path="suddenHolidayList"></forward>
+			<forward name="suddenHolidayFilter" path="suddenHolidayFilter"></forward>
+
+
+		</action>
+
+
+		<action path="/absentSMS" type="com.centris.campus.actions.AbsentsSMSAction"
+			parameter="method" scope="request" name="AbsentSMS">
+
+			<forward name="absentSMSList" path="absentSMSList"></forward>
+			<forward name="absentSMSListFilter" path="absentSMSListFilter"></forward>
+
+		</action>
+
+		<!-- New Registration Of Parents -->
+		<action path="/onlinefeeReceipt" type="com.centris.campus.actions.OnlinefeeReceipt" scope="request">
+		<forward name="onlineFeeReciept" path="onlineFeeReciept" />
+		</action>
+		<action path="/registration" type="com.centris.campus.actions.RegistrationOfUser"
+			parameter="method" scope="request" name="LoginForm">
+			<forward name="new_Registration"
+				path="/JSP/frontOffice/New_Registration_Of_Users/NewUserRegistrationPage.jsp" />
+
+			<forward name="load_home_page" path="mainLayout" />
+			<forward name="parentLogin" path="parentHome" />
+			<forward name="MLogin" path="adminLogin" />
+			<forward name="Home" path="/LAYOUT/index.jsp" />
+			<forward name="principleLogin" path="principleHome" />
+			<forward name="enquirylogin"
+				path="/JSP/frontOffice/New_Registration_Of_Users/AdmissionEnquiryEntry.jsp" />
+			<forward name="tempadmmenu" path="tempadmmenu"></forward>
+			<forward name="addadmissionformdetails" path="addadmissionformdetails"></forward>
+
+
+		</action>
+
+		<action path="/parentrequiresappointment" type="com.centris.campus.actions.ParentRequiresAppointmentAction"
+			scope="request" parameter="method" name="ParentRequiresAppointmentForm">
+
+			<forward name="studentRegistration" path="studentRegistration"></forward>
+			<forward name="addstudentregistration" path="addstudentregistration"></forward>
+			<forward name="singleadmissionsdata" path="singleadmissionsdata"></forward>
+			<forward name="admissionsList" path="admissionsList" />
+			<forward name="calledforadmissionsList" path="calledforadmissionsList" />
+			<forward name="singlecleedforadmissionsdataentry" path="singlecleedforadmissionsdataentry" />
+			<forward name="finaladmissionsList" path="finaladmissionsList" />
+			<forward name="singlefinaladmissionsdataentry" path="singlefinaladmissionsdataentry" />
+			<forward name="thirdadmissionlist" path="thirdadmissionlist" />
+			<forward name="secondadmissionlist" path="secondadmissionlist" />
+			<forward name="studentadmregisteration" path="studentadmregisteration" />
+			<forward name="issuedform" path="issuedform" />
+			<forward name="tempadmmenu" path="tempadmmenu"></forward>
+			<forward name="successmessagedisplay" path="successmessagedisplay"></forward>
+		</action>
+
+		<action path="/religionCastCasteCategory"
+			type="com.centris.campus.actions.ReligionCasteCastCategory" name="AddDesignation"
+			scope="request" parameter="method">
+			<forward name="addReligion" path="addReligion" />
+			<forward name="addCaste" path="addCaste" />
+			<forward name="addCasteCategory" path="addCasteCategory" />
+			<forward name="addOccupation" path="addOccupation" />
+
+		</action>
+
+		<action path="/uploadStageXSL" name="UploadStageXSLForm"
+			parameter="method" type="com.centris.campus.actions.UploadStageXSLAction"
+			scope="request">
+			<forward name="stageExcelFileUpload" path="stageExcelFileUpload"></forward>
+			<forward name="stageList" path="stageList"></forward>
+		</action>
+
+
+		<action path="/uploadStaffXSL" name="UploadStaffXSLForm"
+			parameter="method" type="com.centris.campus.actions.UploadStaffXSLAction"
+			scope="request">
+			<forward name="staffExcelFileUpload" path="staffExcelFileUpload"></forward>
+		</action>
+
+
+		<action path="/uploadDriverXSL" name="UploadDriverXSLForm"
+			parameter="method" type="com.centris.campus.actions.UploadDriverXSLAction"
+			scope="request">
+			<forward name="driverExcelFileUpload" path="driverExcelFileUpload"></forward>
+			<forward name="driverList" path="driverList"></forward>
+		</action>
+
+		<action path="/secondaryform" forward="secondaryForm"></action>
+
+		<action path="/newregistration" type="com.centris.campus.actions.AdminMenuAction"
+			parameter="method" scope="request" name="InventoryTransactionForm">
+			<forward name="add_new_application" path="add_new_application" />
+			<forward name="secondadmissionformat" path="secondadmissionformat"></forward>
+			<forward name="thirdadmissionformat" path="thirdadmissionformat" />
+		</action>
+
+		<action path="/TDSComputationDetails" type="com.centris.campus.actions.TDSComputationAction"
+			parameter="method" scope="request" name="TDSComputationForm">
+			<forward name="tds_computation_details" path="tds_computation_details" />
+			<forward name="add_computationDeatils" path="add_computationDeatils" />
+		</action>
+
+		<action path="/LibraryMenu" type="com.centris.campus.actions.LibraryAction"
+			parameter="method" scope="request">
+			<forward name="libraryHome" path="libraryHome" />
+			<forward name="BlackListSubscriber" path="BlackListSubscriber" />
+			<forward name="barcodeGeneration" path="barcodeGeneration" />
+			<forward name="subscribersDetails" path="subscribersDetails" />
+			<forward name="StockEntryDetails" path="StockEntryDetails" />
+			<forward name="IssueStatementBySubScriberType" path="IssueStatementBySubScriberType"/>
+			<forward name="IssueReturnBySubScriberType" path="IssueReturnBySubScriberType"/>
+			<forward name="generalsettings" path="generalsettings" />
+			<forward name="publishersettings" path="publishersettings" />
+			<forward name="suppliersettings" path="suppliersettings" />
+			<forward name="categorysettings" path="categorysettings" />
+			<forward name="groupregistration" path="groupregistration" />
+			<forward name="overdue" path="overdue" />
+			<forward name="stockstatements" path="stockstatements" />
+			<forward name="reservationlist" path="reservationlist" />
+			<forward name="issuestatements" path="issuestatements" />
+			<forward name="journalreports" path="journalreports" />
+			<forward name="newarrivallist" path="newarrivallist" />
+			<forward name="subscriberlist" path="subscriberlist" />
+			<forward name="reissuestatements" path="reissuestatements" />
+			<forward name="searchcardprint" path="searchcardprint" />
+			<forward name="issues" path="issues" />
+			<forward name="returns" path="returns" />
+			<forward name="reservations" path="reservations" />
+			<forward name="SearchIssueDetails" path="SearchIssueDetails" />
+			<forward name="SearchSubscriberDetails" path="SearchSubscriberDetails" />
+			<forward name="OverDueStatement" path="OverDueStatement" />
+			<forward name="StockStatements" path="StockStatements" />
+			<forward name="ReservationList" path="ReservationList" />
+			<forward name="librarylocations" path="librarylocations" />
+			<forward name="categoryType" path="categoryType" />
+			<forward name="subcategoryType" path="subcategoryType" />
+			<forward name="addCategoryType" path="addCategoryType" />
+
+			<forward name="addSubCategoryType" path="addSubCategoryType" />
+
+			<forward name="subcategoryType1" path="subcategoryType1" />
+			<forward name="addsubcategoryType1" path="addsubcategoryType1" />
+			<forward name="editsubcatType1" path="addsubcategoryType1" />
+			<forward name="subcatagorytype2" path="subcatagorytype2" />
+			<forward name="addsubcatagorytype2" path="addsubcatagorytype2" />
+
+			<forward name="addlibrarylocations" path="addlibrarylocations" />
+			<forward name="subcategoryType3" path="subcategoryType3" />
+			<forward name="addSubCategoryType3" path="addSubCategoryType3" />
+			<forward name="StockEntryDetailslist" path="StockEntryDetailslist" />
+			<forward name="listpublishersettings" path="listpublishersettings" />
+			<forward name="TransferSubscriberDetails" path="TransferSubscriberDetails" />
+			<forward name="BookReservationDetailslist" path="BookReservationDetailslist"/>
+
+			
+			<forward name="categorytypeexcelfileupload" path="categorytypeexcelfileupload" />
+
+			<forward name="listSupplierSettings" path="listSupplierSettings" />
+			<forward name="ListgeneralSettings" path="ListgeneralSettings" />
+			<forward name="JournalSubscription" path="JournalSubscription" />
+			<forward name="JournalEntry" path="JournalEntry" />
+			<forward name="JournalDailyEntry" path="JournalDailyEntry" />
+			<forward name="JournalReport" path="JournalReport"/>
+
+			<forward name="editreservation" path="editreservation" />
+
+			<forward name="subscriberdetailexcelfileupload" path="subscriberdetailexcelfileupload" />
+
+
+            <forward name="stockentryexcelupload" path="stockentryexcelupload"/>
+            <forward name="LibraryMostWantedDetails" path="LibraryMostWantedDetails"/>
+
+            <forward name="BookSearch" path="BookSearch"/>
+
+              <forward name="JournalSubscriptionList" path="JournalSubscriptionList" />
+            <forward name="IssueStatementByEntryId" path="IssueStatementByEntryId"/>
+            <forward name="ReturnStatementByEntryId" path="ReturnStatementByEntryId"/>
+            
+
+		</action>
+		<action path="/LibraryStockEntry"
+			type="com.centris.campus.actions.LibraryStockEntryAction" parameter="method"
+			scope="request" name="LibraryStockEntryForm">
+			<forward name="StockEntryDetails" path="StockEntryDetails"></forward>
+		</action>
+
+
+		<action path="/EventsMenu" type="com.centris.campus.actions.EventsAction"
+			parameter="method" scope="request" name="InventoryTransactionForm">
+			<forward name="EventStudentReg" path="EventStudentReg" />
+			<forward name="VolunteerReg" path="VolunteerReg" />
+			<forward name="eventReg" path="eventReg" />
+			<forward name="CategorySettingEvents" path="CategorySettingEvents" />
+			<forward name="stageSetting" path="stageSetting" />
+			<forward name="stageAllocation" path="stageAllocation" />
+			<forward name="programNumbering" path="programNumbering" />
+			<forward name="programScheduling" path="programScheduling" />
+			<forward name="eventIdCardPrintSingle" path="eventIdCardPrintSingle" />
+			<forward name="programSetting" path="programSetting" />
+			<forward name="greenRoomSetting" path="greenRoomSetting" />
+			<forward name="prizeLevelSetting" path="prizeLevelSetting" />
+			<forward name="criteriaSetting" path="criteriaSetting" />
+			<forward name="marksEntry" path="marksEntry" />
+			<forward name="marksEntryNew" path="marksEntryNew" />
+			<forward name="participantsList" path="participantsList" />
+			<forward name="ProgrammeScheduleList" path="ProgrammeScheduleList" />
+			<forward name="JudgementSheet" path="JudgementSheet" />
+			<forward name="ChestnumberPrinting" path="ChestnumberPrinting" />
+			<forward name="ResultPrinting" path="ResultPrinting" />
+			<forward name="CertificatePrinting" path="CertificatePrinting" />
+			<forward name="OverallResult" path="OverallResult" />
+		<forward name="studentReg" path="studentReg" />
+		<forward name="VolunteerReg" path="VolunteerReg"/>
+		<forward name="eventReg" path="eventReg"/>
+		<forward name="CategorySettingEvents" path="CategorySettingEvents"/>
+		<forward name="stageSetting" path="stageSetting"/>
+		<forward name="stageAllocation" path="stageAllocation"/>
+		<forward name="programNumbering" path="programNumbering"/>
+		<forward name="programScheduling" path="programScheduling"/>
+		<forward name="idCardPrinting" path="idCardPrinting"/>
+		<forward name="idCardDesign" path="idCardDesign"/>
+		<forward name="programSetting" path="programSetting"/>
+			<forward name="greenRoomSetting" path="greenRoomSetting"/>
+				<forward name="prizeLevelSetting" path="prizeLevelSetting"/>
+					<forward name="criteriaSetting" path="criteriaSetting"/>
+					<forward name="marksEntry" path="marksEntry"/>
+					<forward name="participantsList" path="participantsList"/>
+					<forward name="ProgrammeScheduleList" path="ProgrammeScheduleList"/>
+					<forward name="JudgementSheet" path="JudgementSheet"/>
+					<forward name="ChestnumberPrinting" path="ChestnumberPrinting"/>
+					<forward name="ResultPrinting" path="ResultPrinting"/>
+					<forward name="CertificatePrinting" path="CertificatePrinting"/>
+					<forward name="OverallResult" path="OverallResult"/>
+					<forward name="NewEventIdCardPrintTemplate" path="NewEventIdCardPrintTemplate" />
+					<forward name="PrintEventSingleIDCard" path="PrintEventSingleIDCard" />
+					<forward name="PrintPreviewEventMultipleIDCard" path="PrintPreviewEventMultipleIDCard" />
+					
+		</action>
+
+		<action path="/feeupload"
+			type="com.centris.campus.actions.UploadFeeCollectionDetails"
+			parameter="method" scope="request" name="feecollectionform">
+			<forward name="uploadFeeFile" path="uploadFeeFile"></forward>
+			<forward name="uploadtransportfee" path="uploadtransportfee"></forward>
+		</action>
+		
+		<action path="/uploadLibraryXSL" name="UploadLibraryXSLForm"
+			parameter="method" type="com.centris.campus.actions.UploadLibraryXSLAction"
+			scope="request">
+			<forward name="insertCategoryTypeXSL" path="insertCategoryTypeXSL"></forward>
+			<forward name="categorytypeexcelfileupload" path="categorytypeexcelfileupload"></forward>
+		    <forward name="stockentryexcelupload" path="stockentryexcelupload"></forward>
+		    <forward name="subscriberdetailexcelfileupload" path="subscriberdetailexcelfileupload" />
+		</action>
+		
+		
+		<action path="/settingXLUpload" name="SettingExcelUpload" type="com.centris.campus.actions.SettingXLUploadAction" parameter="method" scope="request ">
+
+		<forward name="ExcelUpload_subjectSetting" path="ExcelUpload_subjectSetting"></forward>
+		<forward name="HolidaylistExcelUpload" path="HolidaylistExcelUpload"></forward>
+
+	</action>
+		
+	</action-mappings>
+
+	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
+
+	<message-resources parameter="com/centris/campus/properties/CAMPUS" />
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+		<set-property property="moduleAware" value="true" />
+	</plug-in>
+
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
+	</plug-in>
+
+</struts-config>

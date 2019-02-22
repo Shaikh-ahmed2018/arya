@@ -1,0 +1,929 @@
+span {
+	font-size: 12px;
+	font-family: Segoe UI;
+}
+
+#hideUniqueColumn th:nth-child(2) {
+	display: none;
+}
+
+#hideFeeMasterSetup th:nth-child(2) {
+	display: none;
+}
+
+#hideFeeMasterSetup th:nth-child(5) {
+	display: none;
+}
+
+#yetToApproceDetails th:nth-child(3) {
+	display: none;
+}
+
+#FeeStructureDetailsDec th:nth-child(2) {
+	display: none;
+}
+
+#FeeStructureDetailsDec th:nth-child(3) {
+	display: none;
+}
+
+#FeeStructureDetailsDec th:nth-child(10) {
+	display: none;
+}
+
+.ui-dialog-buttonpane {
+	height: 0px;
+}
+
+select[multiple]::BEFORE {
+	border-top: url(../images/line.JPG);
+}
+
+/* a:HOVER span {
+	color: #e64026;
+} */
+form input[name=startDate],form input[name=endDate] {
+	text-align: center;
+}
+
+#alertMessage,#error1,#error,#errordiv {
+	font-size: 12px;
+	font-family: Segoe UI;
+	color: #e64026;
+	font-weight: bold;
+}
+
+#serverMessage {
+	font-size: 15px;
+	font-family: Segoe UI;
+	color: green;
+	font-weight: bold;
+}
+
+.tablecss {
+	margin-left: 5%;
+	width: 95%;
+	background: none;
+	padding: 10px 0px 0px 5px;
+	width: 95%;
+}
+
+.createtimetablecss {
+	width: 75%;
+	margin: 0 auto;
+}
+
+div.header {
+	padding-top: 5px;
+	background: #A31919;
+	height: 25px;
+	font-size: 14px;
+	color: #fff;
+}
+
+div.viewheader {
+	text-align: center;
+	height: 35px;
+	font-size: 17px;
+	color: #A31919;
+	font-weight: bold;
+}
+
+}
+div.childHeader {
+	margin-top: 15px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	background: #A31919;
+	padding-left: 10px;
+	height: 30px;
+	font-size: 17px;
+	color: #FFFFFF;
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 13px;
+	line-height: 1.42857;
+	color: #767676;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #cbd5dd;
+	border-radius: 0;
+}
+
+label {
+	font-family: Segoe UI;
+	font-size: 12px;
+}
+
+textarea {
+	resize: none;
+	text-align: justify;
+	white-space: normal;
+	font-family: Segoe UI;
+	font-size: 12px;
+	width: 100%;
+	height: 50px;
+	float: left;
+	padding: 3px 0px 0 4px;
+	background-color: #F4F6F7;
+	border: 1px #90A9B7 solid;
+	color: #000;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+input[type="text"] {
+	font-family: Segoe UI;
+	font-size: 12px;
+	width: 100%;
+	height: 25px;
+	float: left;
+	padding: 0px 0px 0 4px;
+	background-color: #F4F6F7;
+	border: 1px #90A9B7 solid;
+	color: #000;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+input[type="file"] {
+	font-family: Segoe UI;
+	font-size: 0px;
+	width: 100%;
+	height: 27px;
+	float: left;
+	padding: 0px 0px 0 4px;
+	color: #000;
+}
+
+input[type="radio"] {
+	font-family: Segoe UI;
+	font-size: 12px;
+	float: left;
+	padding: 0px 0px 0 4px;
+	background-color: #F4F6F7;
+	border: 1px #90A9B7 solid;
+	color: #000;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+select {
+	font-family: Segoe UI;
+	font-size: 12px;
+	width: 100%;
+	height: 25px;
+	float: left;
+	padding: 0px 5px 3px 4px;
+	background-color: #F4F6F7;
+	border: 1px #90A9B7 solid;
+	color: #000;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+	margin: 10px;
+}
+
+.fileUpload input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity =  
+		                                                         
+		    0);
+}
+
+.textBoxIn {
+	width: 70%;
+	margin-top: 5px;
+	margin-bottom: 6px;
+	font-size: 13px;
+	padding: 5px;
+	font-family: Segoe UI;
+	text-align: center;
+}
+
+.textareaBox {
+	width: 100%;
+}
+
+#mandatory {
+	font-family: Segoe UI;
+	font-size: 12px;
+	margin-left: 88%;
+	color: red;
+}
+
+#goBack {
+	font-family: Segoe UI;
+	font-size: 12px;
+	margin-left: 90%;
+	color: black;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#dashboard_goBack {
+	font-family: Segoe UI;
+	font-size: 12px;
+	margin-left: 70%;
+	color: black;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#viewlink {
+	font-family: Segoe UI;
+	font-size: 12px;
+	color: black;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/*--------------------------------------------------------------------*/
+/* Css for Table View Purpose Starting*/
+.tablecss {
+	padding: 0px;
+}
+
+.tablecss th {
+	border-bottom: 1px solid #bbb;
+}
+
+.tablecss table {
+	width: 100%;
+	border-collapse: separate;
+	border: 1px solid #bbb;
+	border-spacing: 0;
+	border-bottom: 0;
+	border-left: 0;
+	font-size: 12px;
+	font-family: Segoe Ui;
+}
+
+.tablecss table th,.tablecss table td {
+	border: 1px solid #bbb;
+	padding: 5px 5px;
+	font-family: Segoe Ui;
+}
+
+.tablecss table th {
+	font-family: Segoe Ui;
+	background-color: #F5F5F5;
+	vertical-align: top;
+	text-align: center;
+	font-size: 12px;
+	/* text-transform: capitalize; */
+	letter-spacing: 1px;
+	font-weight: 400;
+	border-right: 0;
+	border-top: 0;
+	color: #2975B6;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.tablecss table td {
+	line-height: normal;
+	border-right: 0;
+	border-top: 0;
+	color: #000;
+	font-family: Segoe Ui;
+	text-align: center;
+}
+
+.tablecss table tr:hover {
+	background: #FFFF66 !important;
+	font-family: Segoe Ui;
+}
+
+.tablecss table tr:nth-child(even) {
+	background-color: #F9F9F9;
+}
+
+.tablecss table tr:nth-child(odd) {
+	background-color: #fff;
+}
+
+.tablecss table thead tr th {
+	border-top: 1px solid #bbb;
+	background-color: #f9f9f9 !important;
+	color: #2975B6;
+	font-size: 13px;
+	font-family: Segoe Ui;
+	font-weight: bold;
+}
+
+.tablecss .sftable-wrap {
+	border: 1px solid #bbb;
+	border-width: 1px 0;
+}
+
+.form {
+	margin-left: 3%;
+	border-collapse: separate;
+	border-spacing: 25px 12px;
+}
+
+.buttonTable {
+	margin-left: 45%;
+	border-collapse: separate;
+	border-spacing: 1px 4px;
+}
+
+.box-head {
+	background: #C8C8C8;
+	height: 25px;
+	color: black;
+	padding: 0 10px;
+	line-height: 24px;
+	white-space: nowrap;
+	border-bottom: solid 1px #fff;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.box {
+	margin-left: 5%;
+	width: 90%;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-box-shadow: 0 0 2px #978f6c;
+	-webkit-box-shadow: 0 0 2px #978f6c;
+	width: 90%;
+}
+
+.submitButton {
+	font-size: 12px;
+	font-family: Segoe UI;
+}
+
+/* For Image */
+.custom-file-input::-webkit-file-upload-button {
+	visibility: hidden;
+}
+
+.custom-file-input::before {
+	content: 'Select Image';
+	display: inline-block;
+	background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+	border: 1px solid #999;
+	border-radius: 3px;
+	padding: 2px 4px;
+	outline: none;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	cursor: pointer;
+	text-shadow: 1px 1px #fff;
+	font-size: 9pt;
+}
+
+.custom-file-input:hover::before {
+	border-color: black;
+}
+
+/* For ID Proof */
+.custom-file-id:active::before {
+	background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.custom-file-id::-webkit-file-upload-button {
+	visibility: hidden;
+}
+
+.custom-file-id::before {
+	content: 'Select Id Proof';
+	display: inline-block;
+	background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+	border: 1px solid #999;
+	border-radius: 3px;
+	padding: 2px 4px;
+	outline: none;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	cursor: pointer;
+	text-shadow: 1px 1px #fff;
+	font-size: 9pt;
+}
+
+.custom-file-id:hover::before {
+	border-color: black;
+}
+
+/* For Profile */
+.custom-file-profile:active::before {
+	background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.custom-file-profile::-webkit-file-upload-button {
+	visibility: hidden;
+}
+
+.custom-file-profile::before {
+	content: 'Select Profile';
+	display: inline-block;
+	background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+	border: 1px solid #999;
+	border-radius: 3px;
+	padding: 2px 4px;
+	outline: none;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	cursor: pointer;
+	text-shadow: 1px 1px #fff;
+	font-size: 9pt;
+}
+
+.custom-file-profile:hover::before {
+	border-color: black;
+}
+
+.custom-file-profile:active::before {
+	background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+/* For Upload File */
+.custom-file-uploadfile:active::before {
+	background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.custom-file-uploadfile::-webkit-file-upload-button {
+	visibility: hidden;
+}
+
+.custom-file-uploadfile::before {
+	content: 'Upload File';
+	display: inline-block;
+	background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+	border: 1px solid #999;
+	border-radius: 3px;
+	padding: 2px 4px;
+	outline: none;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	cursor: pointer;
+	text-shadow: 1px 1px #fff;
+	font-size: 9pt;
+}
+
+.custom-file-uploadfile:hover::before {
+	border-color: black;
+}
+
+.custom-file-uploadfile:active::before {
+	background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+/* VIew Table */
+/* Table */
+table.view {
+	border-collapse: collapse;
+	border: 1px solid #2C5D00;
+	margin: 5px 0 0 0;
+	width: 100%;
+	font-family: Segoe UI;
+	font-size: 12px;
+}
+
+table.view th,table.view td {
+	padding: 3px 13px;
+	border: 1px solid #2C5D00;
+}
+
+table.view th {
+	text-align: center;
+	font-weight: bold;
+	background: #C8C8C8;
+}
+
+table.view td {
+	text-align: center;
+}
+
+.view_heading {
+	text-align: center;
+	font-family: Segoe UI;
+	font-size: 13px;
+	font-weight: bold;
+	font-style: italic;
+	font-family: Segoe UI;
+}
+
+.ui-button-text {
+	color: #fff;
+	background-color: #5cb85c;
+}
+/* Div error message */
+.dashmessagediv .message-item a.msg-warning {
+	width: 100%;
+	display: inline-block;
+	margin: 3px 0px;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 21px;
+	font-weight: 600;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 9px;
+	padding: 4px;
+	display: inline-block;
+	color: red;
+}
+
+.dashmessagediv .message-item a.msg-warning:before {
+	display: inline-block;
+	content: "\f071";
+	font-family: "FontAwesome";
+	font-size: 13px;
+	font-weight: 300;
+	margin-right: 8px;
+	background: #cc0000;
+	width: 20px;
+	font-size: 15px;
+	line-height: 15px;
+	text-align: center;
+	border-radius: 100%;
+	color: #fff;
+}
+/* Close */
+.dashmessagediv .message-item a.msg-close {
+	width: 24px;
+	height: 26px;
+	text-align: center;
+	border-radius: 5px;
+	line-height: 26px;
+	display: inline-block;
+	/* border: 1px solid #ddd; */
+	background: #fcfcfc;
+	box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.dashmessagediv .message-item a.msg-close span:after {
+	content: "\f00d";
+	font-family: "FontAwesome";
+	background: #cc0000;
+	color: #fff;
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 13px;
+	line-height: 20px;
+	display: inline-block;
+}
+
+/* Item */
+.errormessagediv .message-item a.msg-warning {
+	width: 25%;
+	display: inline-block;
+	margin: 3px 0px;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 21px;
+	font-weight: 600;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 9px;
+	padding: 4px;
+	display: inline-block;
+	color: red;
+}
+
+/* Warning */
+.errormessagediv .message-item a.msg-warning:before {
+	display: inline-block;
+	content: "\f071";
+	font-family: "FontAwesome";
+	font-size: 13px;
+	font-weight: 300;
+	margin-right: 8px;
+	background: #cc0000;
+	width: 20px;
+	font-size: 15px;
+	line-height: 15px;
+	text-align: center;
+	border-radius: 100%;
+	color: #fff;
+}
+/* Close */
+.errormessagediv .message-item a.msg-close {
+	width: 24px;
+	height: 26px;
+	text-align: center;
+	border-radius: 5px;
+	line-height: 26px;
+	display: inline-block;
+	/* border: 1px solid #ddd; */
+	background: #fcfcfc;
+	box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.errormessagediv .message-item a.msg-close span:after {
+	content: "\f00d";
+	font-family: "FontAwesome";
+	background: #cc0000;
+	color: #fff;
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 13px;
+	line-height: 20px;
+	display: inline-block;
+}
+
+.bg-msg-warning {
+	background-color: #ffffff;
+}
+
+/* Item */
+.successmessagediv .message-item a.msg-success,.successmessagediv .message-item a.msg-warning
+	{
+	width: 25%;
+	display: inline-block;
+	margin: 3px 0px;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 21px;
+	font-weight: 600;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+	padding: 4px;
+}
+/* Success */
+.successmessagediv .message-item a.msg-success:before {
+	display: inline-block;
+	content: "\f00c";
+	font-family: "FontAwesome";
+	font-size: 13px;
+	font-weight: 300;
+	margin-right: 8px;
+	background: green;
+	width: 20px;
+	font-size: 15px;
+	line-height: 15px;
+	text-align: center;
+	border-radius: 100%;
+	color: #fff;
+}
+/* Warning */
+.successmessagediv .message-item a.msg-warning:before {
+	display: inline-block;
+	content: "\f071";
+	font-family: "FontAwesome";
+	font-size: 13px;
+	font-weight: 300;
+	margin-right: 8px;
+	background: #cc0000;
+	width: 20px;
+	font-size: 15px;
+	line-height: 15px;
+	text-align: center;
+	border-radius: 100%;
+	color: #fff;
+}
+/* Close */
+.successmessagediv .message-item a.msg-close {
+	width: 24px;
+	height: 26px;
+	text-align: center;
+	border-radius: 5px;
+	line-height: 26px;
+	display: inline-block;
+	/* border: 1px solid #ddd; */
+	background: #fcfcfc;
+	box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.successmessagediv .message-item a.msg-close span:after {
+	content: "\f00d";
+	font-family: "FontAwesome";
+	background: #cc0000;
+	color: #fff;
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 13px;
+	line-height: 20px;
+	display: inline-block;
+}
+
+.welcome-message {
+	text-align: center;
+	display: block;
+	width: 100%;
+	margin: 20px 3% 0 0%;
+	margin-top: 0px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #B5E5EF;
+	background-position: 10px 10px;
+	border: 1px solid #77BACE;
+	color: #082B33;
+	padding: 7px 0;
+	text-indent: 35px;
+	font-size: 14px;
+	display: block;
+	font-weight: bold;
+}
+
+/* for dialog */
+
+/* Item */
+.errormessagediv1 .message-item1 a.msg-warning1 {
+	width: 50%;
+	display: inline-block;
+	margin: 3px 0px;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 21px;
+	font-weight: 600;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 9px;
+	padding: 4px;
+	display: inline-block;
+	color: red;
+}
+
+/* Warning */
+.errormessagediv1 .message-item1 a.msg-warning1:before {
+	display: inline-block;
+	content: "\f071";
+	font-family: "FontAwesome";
+	font-size: 13px;
+	font-weight: 300;
+	margin-right: 8px;
+	background: #cc0000;
+	width: 20px;
+	font-size: 15px;
+	line-height: 15px;
+	text-align: center;
+	border-radius: 100%;
+	color: #fff;
+}
+/* Close */
+.errormessagediv1 .message-item1 a.msg-close {
+	width: 24px;
+	height: 26px;
+	text-align: center;
+	border-radius: 5px;
+	line-height: 26px;
+	display: inline-block;
+	/* border: 1px solid #ddd; */
+	background: #fcfcfc;
+	box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.errormessagediv1 .message-item1 a.msg-close span:after {
+	content: "\f00d";
+	font-family: "FontAwesome";
+	background: #cc0000;
+	color: #fff;
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 13px;
+	line-height: 20px;
+	display: inline-block;
+}
+
+.bg-msg-warning1 {
+	background-color: #ffffff;
+}
+
+.decorator {
+	display: inline-block;
+	padding: 2px 10px;
+	margin-bottom: 0;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: white;
+	border: 1px solid grey;
+	border-radius: 4px;
+}
+
+.decorator:hover {
+	text-decoration: underline;
+}
+
+.ui-dialog-buttonset button {
+	background-image: linear-gradient(to bottom, #5cb85c 0, #419641 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c',
+		endColorstr='#ff419641', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	background-repeat: repeat-x;
+	border-color: #3e8f3e;
+	background-color: #5cb85c;
+	color: #fff;
+	-webkit-appearance: button;
+	cursor: pointer;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px
+		rgba(0, 0, 0, .075);
+	padding: 2px 12px;
+	margin-bottom: 0;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+/* for accordian */
+#accordian {
+	padding-top: 2px;
+	font-size: 13px;
+	background: #E6E6E6;
+	color: green;
+	box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.6), 0 0 200px 1px
+		rgba(255, 255, 255, 0.5);
+	height: 20px;
+	width: 50%;
+}
+/*heading styles*/
+#accordian h3 {
+	font-size: 12px;
+	line-height: 34px;
+	padding: 0 10px;
+	cursor: pointer;
+	/*fallback for browsers not supporting gradients*/
+	background: #CCCCCC;
+	background: linear-gradient(#003040, #002535);
+}
+/*heading hover effect*/
+#accordian h3:hover {
+	text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+	cursor: pointer;
+}
+/*iconfont styles*/
+#accordian h3 span {
+	font-size: 16px;
+	margin-right: 10px;
+}
+/*list items*/
+#accordian li {
+	list-style-type: none;
+}
+/*links*/
+#accordian ul ul li a {
+	color: white;
+	text-decoration: none;
+	font-size: 11px;
+	line-height: 27px;
+	display: block;
+	padding: 0 15px;
+	/*transition for smooth hover animation*/
+	transition: all 0.15s;
+}
+/*hover effect on links*/
+#accordian ul ul li a:hover {
+	background: #CCCCCC;
+	border-left: 5px solid lightgreen;
+}
+/*Lets hide the non active LIs by default*/
+#accordian ul ul {
+	display: none;
+}
+
+#accordian li.active ul {
+	display: block;
+}
+
+#viewalldetials {
+	font-size: 12px;
+	font-family: Segoe UI;
+	font-weight: bold;
+	text-decoration: underline;
+	margin-left: 85%;
+}

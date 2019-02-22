@@ -1,0 +1,174 @@
+/* Written  By Ratna */
+
+
+body {
+	background-color: #A9B63D;
+}
+
+td {
+	font: bold 20% 'trebuchet ms', helvetica, sans-serif;
+	font-size: 15px;
+	color: #292929;
+}
+
+fieldset {
+	padding: 1em;
+	font: 80%/1 sans-serif;
+	margin-top: 2em;
+	border-radius: 10px;
+	border: 2px solid #000000;
+	background-color: #A3A3C2;
+}
+
+input[type="button"] {
+	color: #ffffff;
+	font: bold 95% 'trebuchet ms', helvetica, sans-serif;
+	background-color: #1975FF;
+	border: 1px solid;
+	border-color: #1975FF;
+	cursor: pointer;
+}
+
+input[type="submit"] {
+	color: #00006B;
+	font: bold 100% 'trebuchet ms', helvetica, sans-serif;
+	background-color: #fed;
+	border: 1px solid;
+	border-color: #000000;
+	cursor: pointer;
+}
+
+input[type="text"] {
+	color: #00006B;
+	font: normal 90% 'trebuchet ms', helvetica, sans-serif;
+	background-color: #E0E0D6;
+	border: 1px solid #333333;
+}
+
+select {
+	height: 21px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	background-color: #E0E0D6;
+	border: 1px solid #333333;
+}
+
+a:link {
+	text-decoration: none;
+	font-weight: normal;
+	color: blue;
+}
+
+a:visited {
+	text-decoration: none;
+	font-weight: bold;
+	color: #996600;
+}
+
+a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+h1,h2,h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	color: blue;
+}
+
+.divGrid {
+	width: 900px;
+	height: 300px;
+	overflow: scroll;
+	border-width: 5;
+	border-style: solid;
+	border-color: #488182;
+}
+
+.text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	text-align: justify;
+	color: red;
+}
+
+textarea {
+	color: #000000;
+	border-radius: 4px;
+	background-color: #F5F5F0;
+	border: 2px;
+}
+
+textonly {
+	color: #000000;
+	border-radius: 4px;
+	background-color: red;
+	border: 2px;
+}
+
+table th {
+	color: #6B4724;
+}
+
+.active {
+	pointer-events: none;
+	cursor: default;
+}
+
+label {
+	display: block;
+}
+
+
+table.imgtable {
+	font-family: verdana, arial, sans-serif;
+	font-size: 12px;
+	color:#C2D6FF;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+
+table.imgtable th {
+	background: #D1E0FF url('cell-blue.jpg');
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #999999;
+}
+
+table.imgtable td {
+	background: #D1E0FF url('cell-grey.jpg');
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #999999;
+}
+
+table.img {
+	font-family: verdana, arial, sans-serif;
+	font-size: 12px;
+	color:#C2D6FF;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+
+table.img th {
+	background: #b5cfd2 url('cell-blue.jpg');
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #999999;
+}
+
+table.img td {
+	background: #dcddc0 url('cell-grey.jpg');
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #999999;
+}

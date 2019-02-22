@@ -1,0 +1,70 @@
+.glyphicon:hover {
+	cursor: pointer;
+}
+.buttons {
+	top: 10px !important;
+}
+.controls.style {
+	margin-top: -32px;
+}
+.pagebanner {
+    margin-top: 13px;
+}
+.pagination {
+    margin-right: 10px;
+    float: right;
+    margin-top: 10px;
+}
+.searchWrap {
+	padding: 6px;
+}
+select#judgeName{
+width: 150%;
+height: 259px !important;
+}
+
+#allstudent tbody tr td,#allstudent thead tr th{
+position: relative;
+min-width: 30px;
+}
+.deleteRow,#addgroup{
+height:20px;
+line-height: 16px;
+position: absolute;
+right: 0px;
+top: 0;
+bottom: 0;
+margin: auto;
+}
+#allstudent tbody td{
+border: 1px solid #dedede;
+    padding: 5px;
+}
+.glyphicon-plus {
+	font-size: 20px;
+	line-height: 34px;
+	color: #989898;
+	padding: 2px 12px;
+	margin-top: -6px;
+	height: 0px;
+	position: relative;
+}
+.successmessagediv{
+margin:18px;
+margin-left:200px;
+}
+.multiple{
+height: auto !important;
+}
+.glyphicon-plus:before {
+	content: "\2b";
+	margin-right: -3px;
+}
+.add-on{
+position: absolute;
+top:1px;
+right: 8px;
+}
+.errormessagediv{
+margin-top:13px;
+}

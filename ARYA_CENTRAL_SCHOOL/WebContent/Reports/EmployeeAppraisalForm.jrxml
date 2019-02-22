@@ -1,0 +1,2942 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Payslip" pageWidth="962" pageHeight="6624" columnWidth="922" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="2304"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="6463" splitType="Stretch">
+			<staticText>
+				<reportElement x="136" y="100" width="306" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Appraisal Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="100" width="210" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Completed Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="652" y="100" width="119" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="138" width="306" height="38" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Self-Appraisal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="176" width="306" height="38" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Manager’s Review with Appraisee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="214" width="306" height="38" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Management Review]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="260" width="226" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Appraisal Period]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="298" width="226" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="336" width="226" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Designation	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="374" width="226" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporting Manager]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="412" width="226" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="18" width="705" height="66"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee Performance Evaluation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="457" width="262" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Appraisal Process:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="495" width="262" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[•Employee Self - Evaluation:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="495" width="636" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[It gives an opportunity to every employee to rate his/her own performance, highlight ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="519" width="898" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[his/her achievements, and focus on improvement areas. Fill in sections A, B, C and participate in section D. Then]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="547" width="898" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ the completed form will be forwarded to the reporting officer. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="599" width="898" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[self-evaluation and arrive at an understanding of the individual’s performance prior to the formal performance appraisal ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="575" width="496" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[The reporting officer will review the employee’s job elements and ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="575" width="433" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[•Manager Review with Appraisee Evaluation: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="626" width="898" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[meeting with the individual. At the meeting all aspects of the performance appraisal should  be discussed in detail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="653" width="898" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ and the reporting officer marks his ratings. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="687" width="262" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RATINGS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="712" width="898" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[All criteria will be rated on a scale of 1 to 5. Where 1 is the least (lowest) and 5 is the maximum (highest)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="747" width="533" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERFORMANCE RATING CATEGORIES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="776" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[The following ratings will be considered when completing all sections of the Annual Performance ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="804" width="116" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Review form:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="869" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[  manner. Employee delivers value to both - customer and company by exceeding expectations and “setting the path”,  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="531" y="846" width="363" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Consistently exceeds all objectives in a timely]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="845" width="514" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Exceeds Performance Requirements and Expectations (5): ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="895" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[not  just following it. Exhibits excellent business behaviors.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="974" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ business behaviors and is good corporate example to others.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="949" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[delivers quality work in a timely manner. Employee learns and follows the processes consistently. Demonstrates above average]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="925" width="584" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Exceeds some objectives and consistently met all others. Employee consistently ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="925" width="309" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Above Average Performance (4): ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="1003" width="515" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Meets Performance Requirements and Expectations (3): ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="1003" width="385" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Consistently met all established objectives and]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="1052" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ acceptable behaviors.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="1027" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ delivered quality work in a timely manner. Employee learns and follows the processes consistently. Demonstrates corporate ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="1103" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[behaviors; however the quality of work and timely delivery was marginal and/or inconsistent]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="1078" width="544" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Met most of the objectives. Employee demonstrates acceptable business ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="1078" width="359" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Improved Performance required (2): ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="1134" width="585" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Did not meet all objectives, especially key objectives. Employee did not demonstrate  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="1163" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ acceptable business behavior and did not deliver quality work in a timely manner. Performance  was unreliable.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="1134" width="290" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unsatisfactory Performance (1): ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="1188" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ was unreliable. Employees in this category will be placed on a Performance Improvement Plan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="1214" width="290" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Not Applicable (N/A): ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="1214" width="672" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Factor cannot be rated as it does not apply to the position.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="1280" width="290" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Self-Evaluation by Employee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="1330" width="290" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Section A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="307" y="1382" width="290" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Self-Evaluation by Employee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="1449" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.What was your role in the team?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="1487" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Roles and Responsibilities]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="1622" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Skills]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="1756" width="874" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.What was your individual contribution?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="1893" width="874" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3.While working on the projects what were your main strengths?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="2028" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[4.List out the key activities & achievements in the appraisal period and how ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="2051" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[would you rate yourself on the results achieved?  (Please provide ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="2078" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[achievements that are specific and measurable; Use a scale of 1 to 5, 1 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="2105" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[being lowest & 5 being highest)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="2242" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5.Were there any shifts in targets/key result areas? Why? Could it have been ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="2269" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[avoided? How?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="2402" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6.In what way did your Superiors support you?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="2537" width="878" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[7.What were the main concerns/issues in the projects?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="2672" width="880" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[8.What were the measures that you took towards self-development or building ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="2693" width="880" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[your knowledge on new and upcoming technologies?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="2828" width="900" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[9.How would you describe your growth during the period?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="2963" width="880" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[10.What are your plans for self-improvement during the next period?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="3098" width="880" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[11.What are your training needs?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="3233" width="880" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[12.What awards/recognition/certifications did you achieve in the appraisal ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="3271" width="880" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[period?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="3471" width="868" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Interpersonal Skills- Effectiveness of Employee’s interactions with others]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="3417" width="869" height="54"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="21" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Section B.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="3509" width="66" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL.#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="3509" width="503" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="595" y="3509" width="300" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="3585" width="502" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Respect for Colleagues]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="595" y="3547" width="149" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Self]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="744" y="3547" width="151" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporting Officer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="3585" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="3623" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="3661" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="3699" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="3737" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="3623" width="502" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Respect for Managers]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="3661" width="502" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Respect for Customers]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="3699" width="502" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Respect for Company / Job Function]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="3737" width="502" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Team Contribution]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="3889" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.6.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="743" y="3851" width="152" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporting Officer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="595" y="3851" width="148" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Self]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="3965" width="502" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Information Sharing w/Team & Management]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="3927" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.7.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="595" y="3813" width="300" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="3965" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.8.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="3813" width="503" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="3927" width="502" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Oral Communication]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="3813" width="66" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL.#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="3889" width="502" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Written Skills]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="3775" width="867" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Communication Skills- As applicable to position]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="4003" width="502" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tact and Diplomacy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="4003" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.9.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4155" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.10.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4307" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.14.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="745" y="4117" width="150" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporting Officer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4269" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.13.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="4269" width="506" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Uses Applicable Tools Effectively]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="596" y="4117" width="149" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Self]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="4231" width="506" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Provides suggestions for Work / Process improvement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4193" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.11.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="596" y="4079" width="299" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4231" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.12.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="4079" width="505" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="4193" width="506" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Analytical Skills]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="4307" width="506" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Follows Proper Safety Procedures]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="4079" width="64" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL.#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="4155" width="506" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Job Knowledge]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="4041" width="868" height="37"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Technical Skills- Effectiveness with which Employee applies knowledge and skill to job assignments]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="4573" width="503" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Follow-Through / Follow-Up]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="4421" width="149" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Self]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="4383" width="504" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="743" y="4421" width="152" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporting Officer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="4497" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.16.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="4497" width="504" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Responsiveness to Requests]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="4573" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.18.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="4383" width="63" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL.#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="4459" width="504" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Accuracy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="4383" width="300" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="4535" width="503" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Quality of Deliverables]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="4611" width="504" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Judgment / Decision Making]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="4459" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.15.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="4611" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.19.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="4345" width="867" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Technical Skills- Effectiveness with which Employee applies knowledge and skill to job assignments]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="4687" width="301" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4801" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.21.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4687" width="64" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL.#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="4763" width="504" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Seeks Way to Streamline Process]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4915" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.24.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="4687" width="503" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="4801" width="505" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Open to New Ideas and Approaches]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4839" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.22.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4763" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.20.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4877" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.23.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="4877" width="503" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Planning and Organization]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="4839" width="503" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Initiative]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="4725" width="149" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Self]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="4915" width="503" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Follows Instructions / Processes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="743" y="4725" width="152" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporting Officer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4649" width="868" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Approach to Work- Characteristics the employee demonstrates while performing job assignments]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4991" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.26.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="4953" width="503" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Willingness and Ability to Cross-Train]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="4991" width="503" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Attendance and Reliability]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="4953" width="65" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.25.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5029" width="867" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity of work- Employee’s success in producing the required amount of  work]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5219" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.29.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5067" width="64" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL.#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="5181" width="504" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Amount of Work Completed]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="5143" width="506" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Priority Setting ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="596" y="5105" width="149" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Self]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="596" y="5067" width="299" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5181" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.28.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="5219" width="504" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Work Completed on Schedule]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="745" y="5105" width="149" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporting Officer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5143" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.27.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="5067" width="505" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5447" width="59" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.32.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="5295" width="60" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL.#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5523" width="60" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.34.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="5409" width="505" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Aligns Responsibility, Accountability and  Authority]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5599" width="60" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.36.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="5485" width="505" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Faces Performance Problems Squarely and in a Timely Manner]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5561" width="60" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.35.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="5523" width="505" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Supports Responsible Risk Taking]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="5371" width="505" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Trains and Develops Staff]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="5257" width="869" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supervisory/ Leadership Skills]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="5333" width="149" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Self]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="5599" width="505" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Welcomes Constructive Criticism]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="5295" width="301" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5409" width="60" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.31.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="5447" width="505" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Sets Goals and Evaluates Staff on a Regular Basis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="743" y="5333" width="152" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporting Officer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="5371" width="60" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.30.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="5561" width="505" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Controls Costs and Maximizes Resources]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5485" width="60" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.33.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="5295" width="508" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="5637" width="505" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Instills Pride in Performance,Service,Attendance and Reliability]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5637" width="60" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.37.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="745" y="5752" width="152" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporting Officer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5790" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.38.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5714" width="64" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL.#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="5866" width="501" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Exhibits Honesty, Integrity and Strong  Business Ethics]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="592" y="5752" width="153" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Self]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="5714" width="501" height="76"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5866" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.40.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="592" y="5714" width="305" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="5790" width="501" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Follows Teleindia Policies and Procedures ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5828" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.39.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5675" width="870" height="39"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adherence to Policy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="5828" width="501" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Follows ISO 9001:2008 Procedures]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="5904" width="501" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Work Completed on Schedule]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="5904" width="64" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B.41.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="5956" width="874" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Section C. Appraisee’s Comments:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="6114" width="873" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Section D. Appraiser’s Comments:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="6272" width="870" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Appraisee: I accept that this report has been discussed with me.  I understand that my ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="6296" width="870" height="38"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[signature does not mean agreement.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="6348" width="281" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Appraisee Name & Signature:     ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="588" y="6348" width="312" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Appraiser Name & signature:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="6418" width="59" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="587" y="6418" width="57" height="38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

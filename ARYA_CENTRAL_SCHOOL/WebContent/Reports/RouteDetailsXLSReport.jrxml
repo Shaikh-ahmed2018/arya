@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Campus Sample" pageWidth="663" pageHeight="842" columnWidth="649" leftMargin="7" rightMargin="7" topMargin="7" bottomMargin="7">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="background" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{slno}%2 != 1]]></conditionExpression>
+			<style backcolor="#EDF5F6"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="accYear" class="java.lang.String"/>
+	<parameter name="stream" class="java.lang.String"/>
+	<parameter name="classId" class="java.lang.String"/>
+	<parameter name="section" class="java.lang.String"/>
+	<parameter name="Image" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select student_admissionno_var,concat(student_fname_var,' ',student_lname_var) as studentname,student_age_int,student_doj_var,student_fathername_var,student_fathermobileno_var,student_mothername_var,student_mothermobileno_var from campus_student where fms_acadamicyear_id_int=$P{accYear} and fms_classstream_id_int=$P{stream} and classdetail_id_int=$P{classId} and classsection_id_int=$P{section}]]>
+	</queryString>
+	<field name="arrivaltime" class="java.lang.String">
+		<fieldDescription><![CDATA[arrivaltime]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="costPerPerson" class="java.lang.String">
+		<fieldDescription><![CDATA[costPerPerson]]></fieldDescription>
+	</field>
+	<field name="departuretime" class="java.lang.String">
+		<fieldDescription><![CDATA[departuretime]]></fieldDescription>
+	</field>
+	<field name="destination" class="java.lang.String">
+		<fieldDescription><![CDATA[destination]]></fieldDescription>
+	</field>
+	<field name="distance" class="java.lang.String">
+		<fieldDescription><![CDATA[distance]]></fieldDescription>
+	</field>
+	<field name="endTime" class="java.lang.String">
+		<fieldDescription><![CDATA[endTime]]></fieldDescription>
+	</field>
+	<field name="halttime" class="java.lang.String">
+		<fieldDescription><![CDATA[halttime]]></fieldDescription>
+	</field>
+	<field name="routeCode" class="java.lang.String">
+		<fieldDescription><![CDATA[routeCode]]></fieldDescription>
+	</field>
+	<field name="routeLogicName" class="java.lang.String">
+		<fieldDescription><![CDATA[routeLogicName]]></fieldDescription>
+	</field>
+	<field name="routeName" class="java.lang.String">
+		<fieldDescription><![CDATA[routeName]]></fieldDescription>
+	</field>
+	<field name="routeNo" class="java.lang.String">
+		<fieldDescription><![CDATA[routeNo]]></fieldDescription>
+	</field>
+	<field name="routeType" class="java.lang.String">
+		<fieldDescription><![CDATA[routeType]]></fieldDescription>
+	</field>
+	<field name="stopname" class="java.lang.String">
+		<fieldDescription><![CDATA[stopname]]></fieldDescription>
+	</field>
+	<field name="stratTime" class="java.lang.String">
+		<fieldDescription><![CDATA[stratTime]]></fieldDescription>
+	</field>
+	<field name="totalDistance" class="java.lang.String">
+		<fieldDescription><![CDATA[totalDistance]]></fieldDescription>
+	</field>
+	<field name="totalStops" class="java.lang.String">
+		<fieldDescription><![CDATA[totalStops]]></fieldDescription>
+	</field>
+	<variable name="Sl.no" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{stopname}]]></variableExpression>
+	</variable>
+	<group name="ReportGroup">
+		<groupExpression><![CDATA[$F{routeName}]]></groupExpression>
+		<groupHeader>
+			<band height="95">
+				<staticText>
+					<reportElement mode="Opaque" x="106" y="75" width="111" height="20" forecolor="#F2EDE7" backcolor="#009999"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Stop Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="1" y="75" width="105" height="20" forecolor="#F2EDE7" backcolor="#009999"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Sl no]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="217" y="75" width="108" height="20" forecolor="#F2EDE7" backcolor="#009999"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Arrival Time]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="325" y="75" width="107" height="20" forecolor="#F2EDE7" backcolor="#009999"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Halt Time]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="432" y="75" width="107" height="20" forecolor="#F2EDE7" backcolor="#009999"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Departure Time]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="540" y="75" width="108" height="20" forecolor="#F2EDE7" backcolor="#009999"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Distance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="1" y="18" width="105" height="20" forecolor="#F2EDE7" backcolor="#009999"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Route Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="325" y="18" width="107" height="20" forecolor="#F2EDE7" backcolor="#009999"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Start Time]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="325" y="43" width="107" height="20" forecolor="#F2EDE7" backcolor="#009999"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[End Time]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="1" y="43" width="105" height="20" forecolor="#F2EDE7" backcolor="#009999"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Total Distance]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="107" y="18" width="218" height="20" forecolor="#666666"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{routeName}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="432" y="18" width="216" height="20" forecolor="#666666"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{stratTime}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="432" y="43" width="216" height="20" forecolor="#666666"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{endTime}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="107" y="43" width="218" height="20" forecolor="#666666"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Liberation Sans" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{totalDistance}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="1"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="0" width="648" height="36" forecolor="#333333" backcolor="#F2F2F2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Route Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="1" y="0" width="105" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Sl.no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="0" width="111" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stopname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="0" width="108" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{arrivaltime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="0" width="107" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{halttime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="0" width="108" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{departuretime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="540" y="0" width="108" height="20" forecolor="#666666"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{distance}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

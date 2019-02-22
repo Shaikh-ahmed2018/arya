@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StudentReportDetails" pageWidth="595" pageHeight="1080" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1101"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="aadhaarno" class="java.lang.String">
+		<fieldDescription><![CDATA[aadhaarno]]></fieldDescription>
+	</field>
+	<field name="accyear" class="java.lang.String">
+		<fieldDescription><![CDATA[accyear]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[address]]></fieldDescription>
+	</field>
+	<field name="advertisement" class="java.lang.String">
+		<fieldDescription><![CDATA[advertisement]]></fieldDescription>
+	</field>
+	<field name="alternateMobileNo" class="java.lang.String">
+		<fieldDescription><![CDATA[alternateMobileNo]]></fieldDescription>
+	</field>
+	<field name="alternateemailId" class="java.lang.String">
+		<fieldDescription><![CDATA[alternateemailId]]></fieldDescription>
+	</field>
+	<field name="belongsto" class="java.lang.String">
+		<fieldDescription><![CDATA[belongsto]]></fieldDescription>
+	</field>
+	<field name="birth_place" class="java.lang.String">
+		<fieldDescription><![CDATA[birth_place]]></fieldDescription>
+	</field>
+	<field name="board" class="java.lang.String">
+		<fieldDescription><![CDATA[board]]></fieldDescription>
+	</field>
+	<field name="caste" class="java.lang.String">
+		<fieldDescription><![CDATA[caste]]></fieldDescription>
+	</field>
+	<field name="channels" class="java.lang.String">
+		<fieldDescription><![CDATA[channels]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="classname" class="java.lang.String">
+		<fieldDescription><![CDATA[classname]]></fieldDescription>
+	</field>
+	<field name="com_address" class="java.lang.String">
+		<fieldDescription><![CDATA[com_address]]></fieldDescription>
+	</field>
+	<field name="created_date" class="java.lang.String">
+		<fieldDescription><![CDATA[created_date]]></fieldDescription>
+	</field>
+	<field name="curr_adclass" class="java.lang.String">
+		<fieldDescription><![CDATA[curr_adclass]]></fieldDescription>
+	</field>
+	<field name="current_user" class="java.lang.String">
+		<fieldDescription><![CDATA[current_user]]></fieldDescription>
+	</field>
+	<field name="dateofBirthId" class="java.lang.String">
+		<fieldDescription><![CDATA[dateofBirthId]]></fieldDescription>
+	</field>
+	<field name="distance" class="java.lang.String">
+		<fieldDescription><![CDATA[distance]]></fieldDescription>
+	</field>
+	<field name="emailId" class="java.lang.String">
+		<fieldDescription><![CDATA[emailId]]></fieldDescription>
+	</field>
+	<field name="english" class="java.lang.String">
+		<fieldDescription><![CDATA[english]]></fieldDescription>
+	</field>
+	<field name="extra_curricular" class="java.lang.String">
+		<fieldDescription><![CDATA[extra_curricular]]></fieldDescription>
+	</field>
+	<field name="faluminiyear" class="java.lang.String">
+		<fieldDescription><![CDATA[faluminiyear]]></fieldDescription>
+	</field>
+	<field name="fdesignation" class="java.lang.String">
+		<fieldDescription><![CDATA[fdesignation]]></fieldDescription>
+	</field>
+	<field name="fincome" class="java.lang.String">
+		<fieldDescription><![CDATA[fincome]]></fieldDescription>
+	</field>
+	<field name="foccupation" class="java.lang.String">
+		<fieldDescription><![CDATA[foccupation]]></fieldDescription>
+	</field>
+	<field name="fofficialaddress" class="java.lang.String">
+		<fieldDescription><![CDATA[fofficialaddress]]></fieldDescription>
+	</field>
+	<field name="formno" class="java.lang.String">
+		<fieldDescription><![CDATA[formno]]></fieldDescription>
+	</field>
+	<field name="fperaddress" class="java.lang.String">
+		<fieldDescription><![CDATA[fperaddress]]></fieldDescription>
+	</field>
+	<field name="fqualification" class="java.lang.String">
+		<fieldDescription><![CDATA[fqualification]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[gender]]></fieldDescription>
+	</field>
+	<field name="group_name" class="java.lang.String">
+		<fieldDescription><![CDATA[group_name]]></fieldDescription>
+	</field>
+	<field name="group_name1" class="java.lang.String">
+		<fieldDescription><![CDATA[group_name1]]></fieldDescription>
+	</field>
+	<field name="guardian" class="java.lang.String">
+		<fieldDescription><![CDATA[guardian]]></fieldDescription>
+	</field>
+	<field name="isSibling" class="java.lang.String">
+		<fieldDescription><![CDATA[isSibling]]></fieldDescription>
+	</field>
+	<field name="isaluminiFather" class="java.lang.String">
+		<fieldDescription><![CDATA[isaluminiFather]]></fieldDescription>
+	</field>
+	<field name="isaluminiMother" class="java.lang.String">
+		<fieldDescription><![CDATA[isaluminiMother]]></fieldDescription>
+	</field>
+	<field name="isscst" class="java.lang.String">
+		<fieldDescription><![CDATA[isscst]]></fieldDescription>
+	</field>
+	<field name="maluminiyear" class="java.lang.String">
+		<fieldDescription><![CDATA[maluminiyear]]></fieldDescription>
+	</field>
+	<field name="mathematics" class="java.lang.String">
+		<fieldDescription><![CDATA[mathematics]]></fieldDescription>
+	</field>
+	<field name="mdesignation" class="java.lang.String">
+		<fieldDescription><![CDATA[mdesignation]]></fieldDescription>
+	</field>
+	<field name="mincome" class="java.lang.String">
+		<fieldDescription><![CDATA[mincome]]></fieldDescription>
+	</field>
+	<field name="mobile_number" class="java.lang.String">
+		<fieldDescription><![CDATA[mobile_number]]></fieldDescription>
+	</field>
+	<field name="moccupation" class="java.lang.String">
+		<fieldDescription><![CDATA[moccupation]]></fieldDescription>
+	</field>
+	<field name="mofficialaddress" class="java.lang.String">
+		<fieldDescription><![CDATA[mofficialaddress]]></fieldDescription>
+	</field>
+	<field name="mothermobile" class="java.lang.String">
+		<fieldDescription><![CDATA[mothermobile]]></fieldDescription>
+	</field>
+	<field name="mothername" class="java.lang.String">
+		<fieldDescription><![CDATA[mothername]]></fieldDescription>
+	</field>
+	<field name="mothertongue" class="java.lang.String">
+		<fieldDescription><![CDATA[mothertongue]]></fieldDescription>
+	</field>
+	<field name="mperaddress" class="java.lang.String">
+		<fieldDescription><![CDATA[mperaddress]]></fieldDescription>
+	</field>
+	<field name="mqualification" class="java.lang.String">
+		<fieldDescription><![CDATA[mqualification]]></fieldDescription>
+	</field>
+	<field name="nationality" class="java.lang.String">
+		<fieldDescription><![CDATA[nationality]]></fieldDescription>
+	</field>
+	<field name="opt_subfour" class="java.lang.String">
+		<fieldDescription><![CDATA[opt_subfour]]></fieldDescription>
+	</field>
+	<field name="opt_subone" class="java.lang.String">
+		<fieldDescription><![CDATA[opt_subone]]></fieldDescription>
+	</field>
+	<field name="opt_subthree" class="java.lang.String">
+		<fieldDescription><![CDATA[opt_subthree]]></fieldDescription>
+	</field>
+	<field name="opt_subtwo" class="java.lang.String">
+		<fieldDescription><![CDATA[opt_subtwo]]></fieldDescription>
+	</field>
+	<field name="others" class="java.lang.String">
+		<fieldDescription><![CDATA[others]]></fieldDescription>
+	</field>
+	<field name="paper" class="java.lang.String">
+		<fieldDescription><![CDATA[paper]]></fieldDescription>
+	</field>
+	<field name="parentId" class="java.lang.String">
+		<fieldDescription><![CDATA[parentId]]></fieldDescription>
+	</field>
+	<field name="parents" class="java.lang.String">
+		<fieldDescription><![CDATA[parents]]></fieldDescription>
+	</field>
+	<field name="per_address" class="java.lang.String">
+		<fieldDescription><![CDATA[per_address]]></fieldDescription>
+	</field>
+	<field name="peraddress" class="java.lang.String">
+		<fieldDescription><![CDATA[peraddress]]></fieldDescription>
+	</field>
+	<field name="percentage" class="java.lang.String">
+		<fieldDescription><![CDATA[percentage]]></fieldDescription>
+	</field>
+	<field name="pre_address" class="java.lang.String">
+		<fieldDescription><![CDATA[pre_address]]></fieldDescription>
+	</field>
+	<field name="preaddress" class="java.lang.String">
+		<fieldDescription><![CDATA[preaddress]]></fieldDescription>
+	</field>
+	<field name="previous_classname" class="java.lang.String">
+		<fieldDescription><![CDATA[previous_classname]]></fieldDescription>
+	</field>
+	<field name="q_name" class="java.lang.String">
+		<fieldDescription><![CDATA[q_name]]></fieldDescription>
+	</field>
+	<field name="relationship" class="java.lang.String">
+		<fieldDescription><![CDATA[relationship]]></fieldDescription>
+	</field>
+	<field name="religion" class="java.lang.String">
+		<fieldDescription><![CDATA[religion]]></fieldDescription>
+	</field>
+	<field name="school_name" class="java.lang.String">
+		<fieldDescription><![CDATA[school_name]]></fieldDescription>
+	</field>
+	<field name="science" class="java.lang.String">
+		<fieldDescription><![CDATA[science]]></fieldDescription>
+	</field>
+	<field name="second_lang" class="java.lang.String">
+		<fieldDescription><![CDATA[second_lang]]></fieldDescription>
+	</field>
+	<field name="secstudentname" class="java.lang.String">
+		<fieldDescription><![CDATA[secstudentname]]></fieldDescription>
+	</field>
+	<field name="siblingclass" class="java.lang.String">
+		<fieldDescription><![CDATA[siblingclass]]></fieldDescription>
+	</field>
+	<field name="siblingname" class="java.lang.String">
+		<fieldDescription><![CDATA[siblingname]]></fieldDescription>
+	</field>
+	<field name="social" class="java.lang.String">
+		<fieldDescription><![CDATA[social]]></fieldDescription>
+	</field>
+	<field name="state" class="java.lang.String">
+		<fieldDescription><![CDATA[state]]></fieldDescription>
+	</field>
+	<field name="stu_image" class="java.lang.String">
+		<fieldDescription><![CDATA[stu_image]]></fieldDescription>
+	</field>
+	<field name="studentfirstName" class="java.lang.String">
+		<fieldDescription><![CDATA[studentfirstName]]></fieldDescription>
+	</field>
+	<field name="study_scheme" class="java.lang.String">
+		<fieldDescription><![CDATA[study_scheme]]></fieldDescription>
+	</field>
+	<field name="subject_five" class="java.lang.String">
+		<fieldDescription><![CDATA[subject_five]]></fieldDescription>
+	</field>
+	<field name="subject_four" class="java.lang.String">
+		<fieldDescription><![CDATA[subject_four]]></fieldDescription>
+	</field>
+	<field name="subject_one" class="java.lang.String">
+		<fieldDescription><![CDATA[subject_one]]></fieldDescription>
+	</field>
+	<field name="subject_three" class="java.lang.String">
+		<fieldDescription><![CDATA[subject_three]]></fieldDescription>
+	</field>
+	<field name="subject_two" class="java.lang.String">
+		<fieldDescription><![CDATA[subject_two]]></fieldDescription>
+	</field>
+	<field name="temporary_accyear" class="java.lang.String">
+		<fieldDescription><![CDATA[temporary_accyear]]></fieldDescription>
+	</field>
+	<field name="temporary_classname" class="java.lang.String">
+		<fieldDescription><![CDATA[temporary_classname]]></fieldDescription>
+	</field>
+	<field name="temporary_dateofBirthId" class="java.lang.String">
+		<fieldDescription><![CDATA[temporary_dateofBirthId]]></fieldDescription>
+	</field>
+	<field name="temporary_fatheremail" class="java.lang.String">
+		<fieldDescription><![CDATA[temporary_fatheremail]]></fieldDescription>
+	</field>
+	<field name="temporary_fathermobile" class="java.lang.String">
+		<fieldDescription><![CDATA[temporary_fathermobile]]></fieldDescription>
+	</field>
+	<field name="temporary_fathername" class="java.lang.String">
+		<fieldDescription><![CDATA[temporary_fathername]]></fieldDescription>
+	</field>
+	<field name="temporary_group_name" class="java.lang.String">
+		<fieldDescription><![CDATA[temporary_group_name]]></fieldDescription>
+	</field>
+	<field name="temporary_percentage" class="java.lang.String">
+		<fieldDescription><![CDATA[temporary_percentage]]></fieldDescription>
+	</field>
+	<field name="temporary_previous_classname" class="java.lang.String">
+		<fieldDescription><![CDATA[temporary_previous_classname]]></fieldDescription>
+	</field>
+	<field name="temporary_school_name" class="java.lang.String">
+		<fieldDescription><![CDATA[temporary_school_name]]></fieldDescription>
+	</field>
+	<field name="temporary_studentfirstName" class="java.lang.String">
+		<fieldDescription><![CDATA[temporary_studentfirstName]]></fieldDescription>
+	</field>
+	<field name="third_lang" class="java.lang.String">
+		<fieldDescription><![CDATA[third_lang]]></fieldDescription>
+	</field>
+	<field name="total_marks" class="java.lang.String">
+		<fieldDescription><![CDATA[total_marks]]></fieldDescription>
+	</field>
+	<field name="websites" class="java.lang.String">
+		<fieldDescription><![CDATA[websites]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="1040">
+			<staticText>
+				<reportElement x="17" y="20" width="524" height="34"/>
+				<textElement textAlignment="Center">
+					<font fontName="Liberation Sans" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ARYA CENTRAL SCHOOL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="54" width="524" height="21"/>
+				<textElement textAlignment="Center">
+					<font fontName="Liberation Sans" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ARYAKUMAR ASHRAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="74" width="524" height="22"/>
+				<textElement textAlignment="Center">
+					<font fontName="Liberation Sans" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[PATTOM, THIRUVANANTHAPURAM 695 004]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="0" width="158" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Liberation Sans" size="10"/>
+				</textElement>
+				<text><![CDATA[Reg No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="96" width="524" height="22"/>
+				<textElement textAlignment="Center">
+					<font fontName="Liberation Sans" size="14"/>
+				</textElement>
+				<text><![CDATA[Registration for Admission (I – X)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="118" width="524" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="12" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Important : - Read the attached Instruction sheet before filling the Registration Form]]></text>
+			</staticText>
+			<image>
+				<reportElement x="460" y="23" width="81" height="95"/>
+			</image>
+			<image>
+				<reportElement x="39" y="20" width="69" height="55"/>
+			</image>
+			<line>
+				<reportElement x="19" y="139" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="19" y="139" width="1" height="650"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="543" y="139" width="1" height="650"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="48" y="140" width="1" height="650"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="206" y="139" width="1" height="650"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="20" y="168" width="522" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="19" y="189" width="524" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="19" y="212" width="522" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="19" y="233" width="522" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="19" y="255" width="522" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="20" y="275" width="522" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="20" y="295" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="21" y="315" width="522" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="19" y="338" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="19" y="402" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="20" y="359" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="19" y="140" width="28" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="169" width="28" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="190" width="27" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="213" width="28" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="234" width="28" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="256" width="28" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="189" width="151" height="24"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Date of Birth  (in Figures & In Words)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="296" width="149" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Aadhar Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="422" width="148" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[a) Permanent Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="296" width="27" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="316" width="28" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="421" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="57" y="403" width="148" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[d) Monthly Income]]></text>
+			</staticText>
+			<line>
+				<reportElement x="354" y="316" width="1" height="22"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="54" y="212" width="136" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[(a) Nationality]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="256" width="136" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[c) Religion & Caste]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="359" width="149" height="31"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[c) Occupation, Designation & Official Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="360" width="28" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="140" width="151" height="28"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Name of Pupil (as in Birth Certificate for Class I/TC)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="168" width="150" height="22"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[State whether Male or Female]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="315" width="132" height="21"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Father:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="316" width="131" height="22"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Mother:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="422" width="28" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="233" width="136" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[b) State]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="276" width="136" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[d) Mother Tongue]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="316" width="148" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[a) Parents Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="339" width="148" height="21"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[b) Educational Qualification]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="472" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="19" y="493" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="57" y="472" width="147" height="21"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[b) Distance from school (in kms)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="524" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="57" y="494" width="148" height="30"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[c) Address for communication (please give Phone Number also)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="543" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="19" y="562" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="57" y="524" width="148" height="19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[d) Preferred Phone number for school SMS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="18" y="593" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="18" y="623" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="19" y="652" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="58" y="594" width="147" height="30"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Second Language studied in the present  class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="563" width="28" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="543" width="148" height="19"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[School Last Attended]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="563" width="148" height="30"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Scheme of study (ICSE/CBSE/ SSLC/Any otherr State Board)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="624" width="147" height="28"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Third Language studied in the present class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="653" width="147" height="19"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Class to which admissin is sought]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="672" width="147" height="24"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Details of extra curricular activities]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="696" width="147" height="39"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Details of siblings (only own brothers & Sisters) studying in this school]]></text>
+			</staticText>
+			<line>
+				<reportElement x="19" y="672" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="19" y="695" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="61" y="736" width="147" height="39"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Are the parents alumni of the school?  If yes, year(s) of study in this school.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="21" y="735" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="21" y="790" width="523" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="221" y="735" width="134" height="18"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Father]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="752" width="134" height="21"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="773" width="134" height="17"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+			<line>
+				<reportElement x="355" y="735" width="1" height="55"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="355" y="735" width="132" height="18"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Father]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="753" width="132" height="18"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="771" width="132" height="18"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans"/>
+				</textElement>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="791" width="523" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Liberation Sans" size="12" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DECLARATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="805" width="519" height="60"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="10" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[I/We hereby certify that the above information provided by me/us is correct and I/we understand that if the informationis found to be incorrect or false, my/our ward shall e automatically debarred from  selection/admission process without any correspondence in this regard  I/We also understand that the application/registration does not guarantee admission to my/our ward.  I / We accept the process of adission undertaken by the school and I/We will a bide by the decision taken by the school authorities.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="869" width="39" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Date	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="869" width="31" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="363" y="869" width="99" height="20"/>
+				<textElement/>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="144" y="888" width="399" height="28"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Father: …………………………………………………………………………………………….]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="144" y="916" width="399" height="28"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mother:…………………………………………………………………………………………….]]></text>
+			</staticText>
+			<line>
+				<reportElement x="25" y="943" width="519" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="19" y="944" width="529" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[FOR OFFICE USE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="964" width="528" height="15"/>
+				<textElement verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Date of Receipt of Registration Form…………………………………………………………………………………]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="221" y="140" width="214" height="28"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{studentfirstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="168" width="212" height="22"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="190" width="212" height="22"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{dateofBirthId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="212" width="212" height="22"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nationality}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="235" width="212" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="256" width="72" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{religion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="256" width="58" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{caste}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="276" width="130" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{mothertongue}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="296" width="130" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{aadhaarno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="316" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{mothername}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="316" width="94" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{temporary_fathername}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="340" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mqualification}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="340" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fqualification}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="359" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{foccupation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="225" y="379" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fdesignation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="361" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mqualification}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="381" width="100" height="18"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{moccupation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="225" y="402" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fincome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="363" y="403" width="100" height="18"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mincome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="225" y="472" width="100" height="22"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{distance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="423" width="236" height="49"/>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{fperaddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="225" y="493" width="204" height="31"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{com_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="225" y="524" width="204" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{mobile_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="225" y="562" width="204" height="31"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{study_scheme}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="593" width="205" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{second_lang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="624" width="206" height="28"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{third_lang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="696" width="106" height="39"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{siblingname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="696" width="100" height="39"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{siblingclass}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="247" y="775" width="106" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{faluminiyear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="773" width="104" height="16"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{maluminiyear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="247" y="753" width="103" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{temporary_fathername}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="753" width="104" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{mothername}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="673" width="206" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{extra_curricular}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="652" width="206" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{curr_adclass}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="544" width="205" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{temporary_school_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

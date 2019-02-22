@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FeeReportExcel" pageWidth="648" pageHeight="800" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="classname" class="java.lang.String"/>
+	<parameter name="accname" class="java.lang.String"/>
+	<parameter name="divname" class="java.lang.String"/>
+	<parameter name="termname" class="java.lang.String"/>
+	<parameter name="locname" class="java.lang.String"/>
+	<parameter name="schladd" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="academicYear" class="java.lang.String">
+		<fieldDescription><![CDATA[academicYear]]></fieldDescription>
+	</field>
+	<field name="academicYearName" class="java.lang.String">
+		<fieldDescription><![CDATA[academicYearName]]></fieldDescription>
+	</field>
+	<field name="admissionNo" class="java.lang.String">
+		<fieldDescription><![CDATA[admissionNo]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="className" class="java.lang.String">
+		<fieldDescription><![CDATA[className]]></fieldDescription>
+	</field>
+	<field name="concession" class="java.lang.String">
+		<fieldDescription><![CDATA[concession]]></fieldDescription>
+	</field>
+	<field name="concessiontype" class="java.lang.String">
+		<fieldDescription><![CDATA[concessiontype]]></fieldDescription>
+	</field>
+	<field name="createdby" class="java.lang.String">
+		<fieldDescription><![CDATA[createdby]]></fieldDescription>
+	</field>
+	<field name="currenttime" class="java.lang.String">
+		<fieldDescription><![CDATA[currenttime]]></fieldDescription>
+	</field>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[description]]></fieldDescription>
+	</field>
+	<field name="divisionName" class="java.lang.String">
+		<fieldDescription><![CDATA[divisionName]]></fieldDescription>
+	</field>
+	<field name="dueAmount" class="java.lang.String">
+		<fieldDescription><![CDATA[dueAmount]]></fieldDescription>
+	</field>
+	<field name="dueAmt" class="java.lang.Double">
+		<fieldDescription><![CDATA[dueAmt]]></fieldDescription>
+	</field>
+	<field name="feeType" class="java.lang.String">
+		<fieldDescription><![CDATA[feeType]]></fieldDescription>
+	</field>
+	<field name="feeTypeId" class="java.lang.String">
+		<fieldDescription><![CDATA[feeTypeId]]></fieldDescription>
+	</field>
+	<field name="getDataArray" class="java.lang.Object">
+		<fieldDescription><![CDATA[getDataArray]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="locationId" class="java.lang.String">
+		<fieldDescription><![CDATA[locationId]]></fieldDescription>
+	</field>
+	<field name="locationName" class="java.lang.String">
+		<fieldDescription><![CDATA[locationName]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="studentName" class="java.lang.String">
+		<fieldDescription><![CDATA[studentName]]></fieldDescription>
+	</field>
+	<field name="termName" class="java.lang.String">
+		<fieldDescription><![CDATA[termName]]></fieldDescription>
+	</field>
+	<variable name="snno" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{admissionNo}]]></variableExpression>
+	</variable>
+	<title>
+		<band height="117" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="46" width="608" height="26"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Defaulter Fee Report Details    ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="96" width="106" height="21"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Due Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="96" width="55" height="21"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sl No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="71" width="96" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Academic Year :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="96" width="117" height="21"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Term]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="96" width="211" height="21"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="71" width="116" height="25"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Class & Division:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="96" width="119" height="21"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Admission No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="71" width="84" height="25"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[Term :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="608" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{locname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="71" width="105" height="25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{classname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="71" width="130" height="25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{accname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="531" y="71" width="77" height="25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{termname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="28" width="608" height="18"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Arya Kumar Ashram,Pattom,Thiruvananthapuram-695004]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="24">
+			<textField>
+				<reportElement x="503" y="0" width="105" height="24"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dueAmt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="174" y="0" width="210" height="24"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[   $F{studentName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="55" height="24"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{snno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="0" width="119" height="24"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{termName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="0" width="119" height="24"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{admissionNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

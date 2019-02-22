@@ -1,0 +1,32 @@
+table#displayhallticket tr {
+	background-color: #ffffff;
+	font-size: 12px;
+	padding: 5px;
+	font-family: Segoe UI;
+	text-align:left; 
+	
+}
+table#displayhallticket tr#trsno {
+	background-color: #ffffff;
+	font-size: 15px;
+	padding: 5px;
+	font-size: 12px;
+	font-family: Segoe UI;
+	width:100%;
+}
+table#displayhallticket {
+	width:50%;
+	font-size: 14px;
+	border:1px solid;
+	padding-left:20px !important; 
+}
+table#displayhallticket td{
+	text-align:center;
+	border:1 px solid;
+	padding: 5px;
+	
+}
+
+
+
+

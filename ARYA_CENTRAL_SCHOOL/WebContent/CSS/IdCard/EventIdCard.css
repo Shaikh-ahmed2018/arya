@@ -1,0 +1,82 @@
+body {
+	font-family: Roboto Medium;
+}
+
+body {
+	-webkit-print-color-adjust: exact;
+}
+div {
+	font-size:10px; 
+	width: auto;
+	
+	
+}
+.section {
+	margin-bottom: 12.5px;
+	margin-right:0px;
+}
+
+#items {
+	list-style: none;
+	margin: 0px;
+	margin-top: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	font-size: 9px;
+	color: #333333;
+	cursor: pointer;
+}
+
+#lfontval,#hfontval,.cntr {
+	display: none;
+	position: absolute;
+	border: 1px solid #B2B2B2;
+	width: 150px;
+	background: #F9F9F9;
+	box-shadow: 3px 3px 2px #E9E9E9;
+	border-radius: 4px;
+}
+
+#lfontval,#hfontval {
+	top: 0px;
+	right: 0px;
+	font-size: 12px;
+}
+
+.cntr li {
+	padding: 3px;
+	padding-left: 10px;
+}
+#items :hover {
+	color: white;
+	background: #284570;
+	border-radius: 2px;
+}
+.photo{
+	width: 90px;
+	height: 90px;
+}
+
+.main-div {
+	border: 1px solid #4C1919;
+	left: 0px;
+	top: 0px;
+	width: 205px;
+	height: 330px;
+	overflow: hidden;
+}
+.main-div img{
+	width: 100%;
+}
+.main-div div[id] {
+	position: absolute !important;
+	
+}
+section div[id] {
+	cursor: move;
+}
+.label{
+	color: #000;
+}
+.main-div{left:0px;top:0px;width:205px;height:330px;}#main-div{background-color:transparent}#main-div{border-color:#4c1919}#main-div{border-radius:0px}.logodiv{left:203px;top:33px;width:30px;height:30px;}#logodiv{background-color:transparent}#logodiv{border-color:#07aab9}#logodiv{border-radius:0px}.schoolName{left:0px;top:0px;width:0px;height:0px;}#schoolName{background-color:transparent}#schoolName{border-color:#07aab9}#schoolName{border-radius:0px}.branch{left:0px;top:0px;width:0px;height:0px;}#branch{background-color:transparent}#branch{border-color:#07aab9}#branch{border-radius:0px}.phone{left:200px;top:83px;width:32px;height:17px;}#phone{background-color:transparent}#phone{border-color:#07aab9}#phone{border-radius:0px}.eventNameDive{left:50px;top:38px;width:85px;height:23px;}#eventNameDive{background-color:transparent}#eventNameDive{border-color:#07aab9}#eventNameDive{border-radius:0px}.photo{left:46px;top:71px;width:90px;height:90px;}#photo{background-color:transparent}#photo{border-color:#07aab9}#photo{border-radius:0px}.nameDive{left:47px;top:178px;width:110px;height:23px;}#nameDive{background-color:transparent}#nameDive{border-color:#07aab9}#nameDive{border-radius:0px}.classDivision{left:69px;top:199px;width:53px;height:19px;}#classDivision{background-color:transparent}#classDivision{border-color:#07aab9}#classDivision{border-radius:0px}.programNamediv{left:57px;top:218px;width:83px;height:23px;}#programNamediv{background-color:transparent}#programNamediv{border-color:#07aab9}#programNamediv{border-radius:0px}.programDate{left:16px;top:237px;width:133px;height:20px;}#programDate{background-color:transparent}#programDate{border-color:#07aab9}#programDate{border-radius:0px}.stageDive{left:16px;top:253px;width:138px;height:20px;}#stageDive{background-color:transparent}#stageDive{border-color:#07aab9}#stageDive{border-radius:0px}.makeUpTimeDiv{left:15px;top:300px;width:137px;height:15px;}#makeUpTimeDiv{background-color:transparent}#makeUpTimeDiv{border-color:#07aab9}#makeUpTimeDiv{border-radius:0px}.greenRoomReportTimeDiv{left:15px;top:286px;width:137px;height:17px;}#greenRoomReportTimeDiv{background-color:transparent}#greenRoomReportTimeDiv{border-color:#07aab9}#greenRoomReportTimeDiv{border-radius:0px}.backStageReportTimeDiv{left:16px;top:271px;width:136px;height:18px;}#backStageReportTimeDiv{background-color:transparent}#backStageReportTimeDiv{border-color:#07aab9}#backStageReportTimeDiv{border-radius:0px}#schoolNameChange{color:#07aab9}#schoolNameChange{font-size:10px}#schoolNameChange{background-color:transparent}#branchName{color:#07aab9}#branchName{font-size:10px}#branchName{background-color:transparent}#teleName{color:#07aab9}#teleName{font-size:10px}#teleName{background-color:transparent}#eventNameText{color:#07aab9}#eventNameText{font-size:10px}#eventNameText{background-color:transparent}#nameText{color:#07aab9}#nameText{font-size:10px}#nameText{background-color:transparent}#classtext{color:#07aab9}#classtext{font-size:10px}#classtext{background-color:transparent}#programnametext{color:#07aab9}#programnametext{font-size:10px}#programnametext{background-color:transparent}#chestNotext{color:#07aab9}#chestNotext{font-size:10px}#chestNotext{background-color:transparent}#progDate{color:#000000}#progDate{font-size:7.5px}#progDate{background-color:transparent}#progDateText{color:#07aab9}#progDateText{font-size:10px}#progDateText{background-color:transparent}#stageLebel{color:#000000}#stageLebel{font-size:7.5px}#stageLebel{background-color:transparent}#validUptotext{color:#07aab9}#validUptotext{font-size:10px}#validUptotext{background-color:transparent}#makeUpTimeDivlabel{color:#000000}#makeUpTimeDivlabel{font-size:7.5px}#makeUpTimeDivlabel{background-color:transparent}#addresstext{color:#07aab9}#addresstext{font-size:10px}#addresstext{background-color:transparent}#greenRoomReportTimeDivlabel{color:#000000}#greenRoomReportTimeDivlabel{font-size:7.5px}#greenRoomReportTimeDivlabel{background-color:transparent}#greenRoomReportTimeDivText{color:#07aab9}#greenRoomReportTimeDivText{font-size:10px}#greenRoomReportTimeDivText{background-color:transparent}#backStageReportTimelabel{color:#000000}#backStageReportTimelabel{font-size:7.5px}#backStageReportTimelabel{background-color:transparent}#backStageReportTimeText{color:#07aab9}#backStageReportTimeText{font-size:10px}#backStageReportTimeText{background-color:transparent}#schoolNameChange{font-size:10px}

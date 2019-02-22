@@ -1,0 +1,243 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font-family:roboto;
+	padding:0;
+	margin:0;
+	position: relative;
+}
+header,footer{
+	background-color: #07aab9;
+    padding: 0 20px;
+}
+#main{
+	position: relative;
+}
+#main-logo img{
+	vertical-align:-25px;
+}
+#main-logo{
+	padding:10px 0px;
+}
+.copyright,.social-icon{
+	padding: 0px;
+}
+#landing-nav{
+	padding:15px 0px;
+}
+#landing-nav ul.main-nav{
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+}
+#landing-nav ul.main-nav li{
+	display:inline-block;
+}
+#landing-nav ul.main-nav li a{
+	padding:20px 10px;
+	color:#fff;
+	font-size:15px;
+	font-family:roboto;
+	text-transform:uppercase;
+	font-weight:600;
+}
+#landing-nav ul.main-nav li a:hover,#landing-nav ul.main-nav li a:focus{
+	text-decoration:none;
+	color:#ededed;
+}
+#sign-in{
+	padding:15px 0px;
+	position:relative;
+	text-align:center;
+	border-left:1px solid #fff;
+	
+}
+
+.top-sign{
+	z-index:100;
+}
+.login-section{
+	padding:60px 0 0 0;
+	
+	position:absolute !important;
+	left:0;
+	right:0;
+	margin:0 auto;
+	z-index:99999;
+}
+#main{
+	background-image:url("../images/aryawatermark.jpg");
+	height:518px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   
+}
+
+#watermark
+{
+ position:fixed;
+ bottom:5px;
+ right:5px;
+ opacity:0.5;
+ z-index:99;
+ color:white;
+}
+.sign_in{
+	font-size:15px;
+	
+}
+.sign_in:focus{
+	text-decoration:none;
+}
+
+#overlay{
+	background-color:#fff;
+	opacity:0.3;
+	position:absolute !important;
+	height:518px;
+	width:100%;
+	top:0px;
+}
+#sign-in ul.main-nav{
+	padding:0;
+	margin:0px;
+}
+#sign-in ul.main-nav li{
+	list-style:none;
+	display:inline-block;
+	position:relative;
+}
+#sign-in ul.main-nav li:before{
+	position:absolute;
+	content:"";
+	width:30px;
+	height:30px;
+	background-image:url(/ARYA_CENTRAL_SCHOOL/images/signin.png);
+	background-repeat:no-repeat;
+	left:-30px;
+}
+#sign-in ul.main-nav li a{
+	padding:20px 10px;
+	color:#fff;
+	font-size:16px;
+	font-family:roboto;
+	text-transform:uppercase;
+	font-weight:600;
+}
+#sign-in ul.main-nav li a:hover{
+	text-decoration:none;
+	color:#ededed;
+}
+#main .container{
+	background-color:#fdfdfd;
+}
+.left-img{
+	padding-bottom:20px;
+	width:100%;
+}
+.flow-img{
+	padding:20px 0px;
+	width:100%;
+}
+.secretary-desk h1, .contact-us h1, .our-campus h1{
+	font-size:20px;
+	color:#07aab9;
+	font-weight:normal;
+	text-transform:uppercase;
+	position:relative;
+	margin-bottom:25px;
+}
+.secretary-desk h1::after, .contact-us h1::after, .our-campus h1::after{
+	position:absolute;
+	content:"";
+	border-bottom:3px solid #07aab9;
+	width:100%;
+	bottom:-10px;
+	left:0;
+	
+}
+ul.contact-ul{
+	padding:0px;
+	margin:0px;
+	list-style-type:none;
+}
+h2.bar{
+	position:relative;
+}
+h2.bar::before{
+	position:absolute;
+	content:"";
+	border-bottom:1px solid #fff;
+	left:0;
+	width:35%;
+	top:50%;
+}
+h2.bar::after{
+	position:absolute;
+	content:"";
+	border-bottom:1px solid #fff;
+	right:0;
+	width:35%;
+	top:50%;
+}
+ul.contact-ul li{
+	position:relative;
+	padding:10px 0px 10px 25px;
+}
+ul.contact-ul li.first{
+	padding-left:0px;
+}
+ul.contact-ul li.second::before{
+	position:absolute;
+	content:"";
+	background-image:url(/ARYA_CENTRAL_SCHOOL/images/location.png);
+	background-repeat:no-repeat;
+	width:25px;
+	height:30px;
+	left:0px;
+}
+ul.contact-ul li.third::before{
+	position:absolute;
+	content:"";
+	background-image:url(/ARYA_CENTRAL_SCHOOL/images/call.png);
+	background-repeat:no-repeat;
+	width:25px;
+	height:30px;
+	left:0px;
+}
+ul.contact-ul li.fourth::before{
+	position:absolute;
+	content:"";
+	background-image:url(/ARYA_CENTRAL_SCHOOL/images/mail.png);
+	background-repeat:no-repeat;
+	width:25px;
+	height:30px;
+	left:0px;
+}
+.copyright{
+	color:#fff;
+	padding:15px 0;
+}
+footer{
+	margin-top:20px;
+}
+footer ul{
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+}
+footer ul li {
+	display:inline-block;
+	padding:0px 5px;
+}
+.social-icon {
+    text-align: right;
+    padding:15px 0;
+}
+.social-icon li a:hover{
+	background-color:#222;
+	border-radius:50%;
+	padding:0px;
+}
+}

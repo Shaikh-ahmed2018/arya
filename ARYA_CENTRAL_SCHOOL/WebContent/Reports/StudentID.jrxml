@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StudentID" pageWidth="595" pageHeight="864" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<parameter name="image" class="java.lang.String"/>
+	<parameter name="IDtemplate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="accyear" class="java.lang.String">
+		<fieldDescription><![CDATA[accyear]]></fieldDescription>
+	</field>
+	<field name="adress" class="java.lang.String">
+		<fieldDescription><![CDATA[adress]]></fieldDescription>
+	</field>
+	<field name="className" class="java.lang.String">
+		<fieldDescription><![CDATA[className]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.lang.String">
+		<fieldDescription><![CDATA[dob]]></fieldDescription>
+	</field>
+	<field name="fatherName" class="java.lang.String">
+		<fieldDescription><![CDATA[fatherName]]></fieldDescription>
+	</field>
+	<field name="images" class="java.lang.String">
+		<fieldDescription><![CDATA[images]]></fieldDescription>
+	</field>
+	<field name="phone" class="java.lang.String">
+		<fieldDescription><![CDATA[phone]]></fieldDescription>
+	</field>
+	<field name="schoolName" class="java.lang.String">
+		<fieldDescription><![CDATA[schoolName]]></fieldDescription>
+	</field>
+	<field name="secodaryPhone" class="java.lang.String">
+		<fieldDescription><![CDATA[secodaryPhone]]></fieldDescription>
+	</field>
+	<field name="section" class="java.lang.String">
+		<fieldDescription><![CDATA[section]]></fieldDescription>
+	</field>
+	<field name="stuName" class="java.lang.String">
+		<fieldDescription><![CDATA[stuName]]></fieldDescription>
+	</field>
+	<field name="validity" class="java.lang.String">
+		<fieldDescription><![CDATA[validity]]></fieldDescription>
+	</field>
+	<field name="admissionno" class="java.lang.String"/>
+	<field name="motherName" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="31" splitType="Stretch"/>
+	</title>
+	<detail>
+		<band height="561" splitType="Stretch">
+			<image scaleImage="RealSize">
+				<reportElement x="29" y="0" width="203" height="304"/>
+				<imageExpression><![CDATA["C:\\Users\\Staging\\Desktop\\IDCardTemplates\\IDtemp1.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="68" y="32" width="139" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stuName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="61" width="62" height="10"/>
+				<textElement>
+					<font fontName="Liberation Sans" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{className}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="171" width="77" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Liberation Sans" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fatherName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="147" width="91" height="12"/>
+				<textElement>
+					<font fontName="Liberation Sans" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="94" width="58" height="9"/>
+				<textElement>
+					<font fontName="Liberation Sans" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{validity}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="249" width="15" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Liberation Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="133" y="114" width="90" height="21"/>
+				<textElement>
+					<font fontName="Liberation Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{adress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="158" width="91" height="12"/>
+				<textElement>
+					<font fontName="Liberation Sans" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{secodaryPhone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="186" width="76" height="20"/>
+				<textElement>
+					<font fontName="Liberation Sans" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{motherName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="174" y="202" width="59" height="14"/>
+				<textElement>
+					<font fontName="Liberation Sans" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="71" width="63" height="13"/>
+				<textElement>
+					<font fontName="Liberation Sans" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{admissionno}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement mode="Transparent" x="36" y="62" width="82" height="96"/>
+				<imageExpression><![CDATA[$F{images}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

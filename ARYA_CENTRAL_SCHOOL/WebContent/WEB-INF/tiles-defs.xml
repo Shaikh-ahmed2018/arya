@@ -1,0 +1,3018 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+	<definition name="mainLayout" path="/LAYOUT/baselayout.jsp">
+		<put name="body" value="/LAYOUT/index.jsp" />
+	</definition>
+	
+	
+  <definition name="careers" extends="mainLayout">
+		<put name="body" value="/PUBLIC/careers.jsp"></put>
+	</definition>
+	
+	
+	<!-- ======== Back Office Menu - Home Page Definitions ======== -->
+
+
+<definition name="backOffice_library" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="e-CampusPro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+	<!-- 	<put name="footer" value="/LAYOUT/login_footer.jsp" /> -->
+	</definition>
+
+<definition name="backOffice_events" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="e-CampusPro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+	
+	</definition>
+	
+	<definition name="backOffice_home" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="e-CampusPro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_home_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+	<!-- 	<put name="footer" value="/LAYOUT/login_footer.jsp" /> -->
+	</definition>
+	
+	<definition name="backOffice_Parent_home" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="e-CampusPro" />
+		<put name="header" value="/LAYOUT/backOffice_parent_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_home_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+	<!-- 	<put name="footer" value="/LAYOUT/login_footer.jsp" /> -->
+	</definition>
+
+	<definition name="backOffice_student" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+		<!-- <put name="footer" value="/LAYOUT/login_footer.jsp" /> -->
+	</definition>
+
+	<definition name="backOffice_staff" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+		<!-- <put name="footer" value="/LAYOUT/login_footer.jsp" /> -->
+	</definition>
+
+	<definition name="backOffice_fee" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+		<!-- <put name="footer" value="/LAYOUT/login_footer.jsp" /> -->
+	</definition>
+
+	<definition name="backOffice_exam" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+		<!-- <put name="footer" value="/LAYOUT/login_footer.jsp" /> -->
+	</definition>
+
+	<definition name="backOffice_setup" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+		<!-- <put name="footer" value="/LAYOUT/login_footer.jsp" /> -->
+	</definition>
+
+	<definition name="backOffice_admin" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_admin_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+		<!-- <put name="footer" value="/LAYOUT/login_footer.jsp" /> -->
+	</definition>
+	
+	<definition name="backOffice_admission" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_admission.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+		<!-- <put name="footer" value="/LAYOUT/login_footer.jsp" /> -->
+	</definition>
+	
+	<definition name="backOffice_admission_new" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backoffice_onilne_admission_header.jsp"/>
+		<put name="menu" value="" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+		<!-- <put name="footer" value="/LAYOUT/login_footer.jsp" /> -->
+	</definition>
+	
+	
+	   <definition name="onlineformreturns" path="/LAYOUT/OnlineRegistrationReturnForm.jsp">
+		</definition>
+		
+		<definition name="successmessagedisplay" path="/LAYOUT/OnlineRegistrationSuccessMessagedisplay.jsp">
+		</definition>
+		<definition name="voterMachineStart" path="/JSP/backOffice/Election/voterMachineStart.jsp">
+		</definition>
+	<definition name="voterMachineActivate" path="/JSP/backOffice/Election/voterMachineActivate.jsp">
+	</definition>
+
+	<definition name="backOffice_transport" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+	</definition>
+
+
+
+	<definition name="backOffice_Election" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="backOffice_sms" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_sms.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+	</definition>
+	
+
+	<definition name="backOffice_reports" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+	</definition>
+	
+	<definition name="backOffice_teachers" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+	</definition>
+	
+	<definition name="backOffice_teachers" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+	</definition>
+	
+	<definition name="adminLogin" extends="backOffice_home">
+		<put name="menu" value="/LAYOUT/backOffice_home_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/AdminHome.jsp"></put>
+	</definition>
+	
+	<definition name="parentHome" extends="backOffice_Parent_home">
+		<put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/PerentsHome.jsp"></put>
+	</definition>
+
+	<definition name="studentList" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/StudentList.jsp"></put>
+	</definition>
+
+	
+	<definition name="studentIdCreate" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/StudentIdCreation.jsp"></put>
+	</definition>
+
+
+	
+	<definition name="parentstudentList" extends="backOffice_Parent_home">
+		<put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/StusentInformation.jsp"></put>
+	</definition>
+	
+
+	<definition name="addStudent" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/StudentRegistration.jsp"></put>
+	</definition>
+	
+		<definition name="attendacestatus" extends="backOffice_student">
+	    <put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/AttendaceStatus.jsp"></put>
+	    </definition>
+	    
+	    <definition name="individualmisreport" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/individualmisreport.jsp"></put>
+	</definition>
+	    
+	    
+	    <definition name="studentinformation" extends="backOffice_Parent_home">
+	  		 <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Parents/StusentInformation.jsp"></put>
+	    </definition>
+	    
+	    <definition name="onlinefeePayment" extends="backOffice_Parent_home">
+	  		 <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Parents/OnlinefeePayment.jsp"></put>
+	    </definition>
+	    
+	     <definition name="onlineFeeReciept" extends="backOffice_Parent_home">
+	  		 <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Parents/OnlineFeeReceipt.jsp"></put>
+	    </definition>
+	    
+	    
+	    <definition name="addfeeReport" extends="backOffice_reports">
+	  		 <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Reports/addfeeReport.jsp"></put>
+			<!-- ///JSP/backOffice/Reports/OnlineFeeReceipt.jsp -->
+	    </definition>
+	    
+	   <definition name="attendancedetails" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/AttendanceDetails.jsp"></put>
+	    </definition> 
+	  
+	    <definition name="attendanceview" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/ViewAttendance.jsp"></put>
+	    </definition> 
+	    
+	     <definition name="studentphotoupload" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/studentphotoupload.jsp"></put>
+		</definition>
+	       
+	    <definition name="getmeetingandevent" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/MeetingAndEvent.jsp"></put>
+	    </definition> 
+	    
+	    <definition name="leaverequestparent" extends="backOffice_Parent_home">
+	    <put name="menu" value="/LAYOUT/Parent_Leave_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/LeaveStatusList.jsp"></put>
+	    </definition>
+	    
+	     <definition name="studentTimeTable" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/StudentTimeTable.jsp"></put>
+	    </definition> 
+	    
+	    
+	      <definition name="assignmentdetails" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/AssignmentDetails.jsp"></put>
+	    </definition> 
+	    
+	     <definition name="viewassignment" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/ViewAssignmentDetails.jsp"></put>
+	    </definition>  
+	    
+	  <definition name="examdetails" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/ExamDetails.jsp"></put>
+	    </definition>    
+	    
+	      <definition name="viewExamdetails" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/ViewExamDetails.jsp"></put>
+	    </definition> 
+	    
+	    <definition name="syllabusdetails" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+	   <put name="body" value="/JSP/backOffice/Parents/Syllabus.jsp"></put>
+		<!-- <put name="body" value="/JSP/backOffice/Parents/SyllabusDetails.jsp"></put> -->
+	    </definition>   
+	    
+	    
+	     <definition name="getsyllabus" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+	  <put name="body" value="/JSP/backOffice/Parents/SyllabusDetails.jsp"></put> 
+	    </definition>
+	    
+	     <definition name="sendfeedback" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/SendFeedBack.jsp"></put>
+	    </definition>   
+	    
+	       <definition name="feedbackentry" extends="backOffice_Parent_home">
+	 		 <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Parents/FeedBackEntry.jsp"></put>
+	    </definition>   
+	    
+	     <definition name="parentRemainder" extends="backOffice_Parent_home">
+	  	 <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/ParentRemainderList.jsp"></put>
+	    </definition>
+	 
+	    <definition name="attendaceupload" extends="backOffice_student">
+	    <put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/AttendaceUpload.jsp"></put>
+	    </definition>
+	    
+	    <definition name="assingmentview" extends="backOffice_staff">
+	    <put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/AssignmentList.jsp"></put>
+	    </definition>
+	      <definition name="addassignment" extends="backOffice_staff">
+	    <put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/AssingnmentCreation.jsp"></put>
+	    </definition>
+	    
+	    <definition name="marksupload" extends="backOffice_student">
+	    <put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/MarksuploadList.jsp"></put>
+	    </definition>
+	    
+	    <definition name="ViewStudentMarks" extends="backOffice_student">
+	    <put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/MarksUpload.jsp"></put>
+	    </definition>
+	    
+	     <definition name="marksuploadscreen" extends="backOffice_student">
+	    <put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/MarksUpload.jsp"></put>
+	    </definition>
+
+
+     <definition name="teacherTimeTable" extends="backOffice_staff">
+	    <put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/TeacherTimeTable.jsp"></put>
+	    </definition>
+	  <definition name="ClassTodayTimeTableList" extends="backOffice_staff">
+	    <put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/ClassTodayTimeTableList.jsp"></put>
+	    </definition>   
+     
+	   
+     <definition name="timeTableDetailsList" extends="backOffice_staff">
+	    <put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/TeacherTimeTableList.jsp"></put>
+	    </definition>
+	    
+	   
+
+ 	<definition name="DownloadPayslip" extends="backOffice_staff">
+	    <put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/DownloadPayslip.jsp"></put>
+	    </definition>
+
+   <definition name="teacherLeaveRequest" extends="backOffice_teachers">
+	    <put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/TeacherLeaveRequestEntry.jsp"></put>
+	 </definition>
+
+<definition name="staffLeaveApply" extends="backOffice_staff">
+	    <put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/TeacherLeaveRequestEntry.jsp"></put>
+	 </definition>
+
+  <definition name="teachermeetingandevent" extends="backOffice_student">
+	    <put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/TeacherMeetingList.jsp"></put>
+	    </definition>
+
+  <definition name="teacherRemainder" extends="backOffice_student">
+	    <put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/TeacherRemainderList.jsp"></put>
+	</definition>
+
+
+	<definition name="staffList" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/StaffDetails.jsp"></put>
+	</definition>
+	<definition name="staffListForLeave" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/StaffListForLeave.jsp"></put>
+	</definition>
+	
+	<definition name="staffExcelFileUpload" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/StaffExcelFileUpload.jsp"></put>
+	</definition>
+	
+	
+	
+	<definition name="teachersalary" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/getTeacherSalary.jsp"></put>
+	</definition>
+	
+	<definition name="updatestaff" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/StaffAmendment.jsp"></put>
+	</definition>
+
+	<definition name="personalDetails" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/StaffAmendment.jsp"></put>
+	</definition>
+
+
+	<definition name="locationList" extends="backOffice_setup" >
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp"></put>
+		<put name="body" value="/JSP/backOffice/Settings/LocationList.jsp"></put>
+	</definition>
+
+	<definition name="streamList" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/Streamdetails.jsp"></put>
+	</definition>
+	
+	<definition name="userRecordsTile" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/UserRecords.jsp"></put>
+	</definition>
+
+	<definition name="holidayList" extends="backOffice_setup">
+			<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Settings/HolidayList.jsp"></put>
+	</definition>
+	
+	<definition name="holidayUpdate" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp"/>
+		<put name="body" value="/JSP/backOffice/Settings/HolidayUpdate.jsp"></put>
+	
+	</definition>
+
+	<definition name="addHoliday" extends="backOffice_setup">
+			<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Settings/AddHoliday.jsp"></put>
+	</definition>
+
+	<definition name="examList" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/ExamDetails.jsp"></put>
+	</definition>
+	
+	<definition name="creatingExam" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/CreateExamination.jsp"></put>
+	</definition>
+	<!-- <definition name="creatingExam" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/CreateExamination.jsp"></put>
+	</definition -->
+	
+<definition name="showCategory" path="/JSP/backOffice/Election/showCategory.jsp">
+	</definition>
+
+<definition name="staffattendance" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/StaffAttendance.jsp"></put>
+	</definition>
+
+<definition name="staff_attendance_upload" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/StaffAttendanceUpload.jsp"></put>
+	</definition>
+
+ <definition name="destinationwisestudent" extends="backOffice_admin">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" /> 
+		<put name="body" value="/JSP/backOffice/Transport/DestinationWiseStudent.jsp"></put>
+	   
+	</definition> 
+	
+ <definition name="TransportfeeCollectionStudentWise" extends="backOffice_admin">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" /> 
+		<put name="body" value="/JSP/backOffice/Transport/TransportFeeCollection.jsp"></put>
+	   
+	</definition> 
+
+
+
+
+<definition name="transportfeelist" extends="backOffice_admin">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" /> 
+		<put name="body" value="/JSP/backOffice/Transport/TransportFeeList.jsp"></put>
+	   
+	</definition> 
+
+	<definition name="termList" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/TermDetails.jsp"></put>
+	</definition>
+
+	<definition name="fineConfiguration" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/fineConfiguration.jsp"></put>
+	</definition>
+	
+	<definition name="timetable" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/TimeTableList.jsp"></put>
+	</definition>
+
+
+
+	
+	<definition name="departmentdetails" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/DepartmentDetails.jsp"></put>
+	</definition>
+	
+	<definition name="adddepartment" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/AddDepartment.jsp"></put>
+	</definition>
+
+
+	
+		<definition name="classList" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/Classdetails.jsp"></put>
+	</definition>
+	
+	<definition name="sectionList" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/sectionDetails.jsp"></put>
+	</definition>
+	
+	<definition name="addClass" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/classRegistration.jsp"></put>
+	</definition>
+	
+		<definition name="addSection" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/sectionRegistration.jsp"></put>
+	</definition>
+	
+	<definition name="addLocation" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/AddLocation.jsp"></put>
+	</definition>
+	
+	<definition name="getSpecializationList" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp"></put>
+		<put name="body" value="/JSP/backOffice/Settings/SpecializationList.jsp"></put>
+	</definition>
+	
+	<definition name="addSpecialization" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp"></put>
+		<put name="body" value="/JSP/backOffice/Settings/AddSpecializationList.jsp"></put>
+	</definition>
+	
+	
+	
+	
+	<definition name="academicyear" extends="backOffice_admin">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/AcademicYearDetails.jsp"></put>
+	</definition>
+
+	 <definition name="cancelformdetails" extends="backOffice_admission">
+        <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+        <put name="body" value="/JSP/backOffice/Admisssion/CancelFormDetails.jsp" /></definition>
+        
+        
+         <definition name="submitformdetails" extends="backOffice_admission">
+        <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+        <put name="body" value="/JSP/backOffice/Admisssion/SubmitFormDetails.jsp" /></definition>
+        
+         <definition name="processformdetails" extends="backOffice_admission">
+        <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+        <put name="body" value="/JSP/backOffice/Admisssion/ProcessFormDetails.jsp" /></definition>
+
+		<definition name="addnewStream" extends="backOffice_admin">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/AddNewStream.jsp"></put>
+	    </definition>
+	
+		<definition name="addnewStream" extends="backOffice_admin">
+	<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/AddNewStream.jsp"></put>
+	</definition>
+	
+	<definition name="StreamSetting" extends="backOffice_admin">
+	<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/Streamdetails.jsp"></put>
+	</definition>
+
+
+	
+   <definition name="vehicleList" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/VehicleList.jsp"></put>
+	</definition>
+
+	
+
+	<definition name="feeList" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp"></put>
+
+	</definition>
+	
+	<definition name="feeDetailsList" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/feeDetails.jsp"></put>
+	</definition>
+	
+	<definition name="addacademicyear" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/AddAcademicYear.jsp"></put>
+	</definition>
+
+	
+	<definition name="feeaddDetailsList" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/addfeedetails.jsp"></put>
+	</definition>
+	
+	<definition name="careerupdate" extends="backOffice_fee">
+	    <put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/CareerUpload.jsp"></put>
+	</definition> 
+	
+	<definition name="addjob" extends="backOffice_fee">
+	    <put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/AddJob.jsp"></put>
+	</definition> 
+	
+	
+
+	<!-- Transport Module Starts -->
+	
+	<definition name="driverlist" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/DriverList.jsp"></put>
+	</definition>
+	
+	
+	<definition name="driverdetails" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/DriverEntryPage.jsp"></put>
+	</definition>
+	
+
+	 <definition name="vehicleList" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/VehicleList.jsp"></put>
+	</definition>
+
+	
+	<definition name="designationList" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/Designationdetails.jsp"></put>
+	</definition>
+	
+	
+       <definition name="changePassword" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/ChangePassword.jsp"></put>
+		</definition>
+	
+	<definition name="adddesignation" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/AddDesignation.jsp"></put>
+	</definition>
+	
+	<definition name="stageList" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/StageDetails.jsp"></put>
+	</definition>
+	
+	<definition name="addstage" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/AddStage.jsp"></put>
+	</definition>
+	
+	<definition name="transportCategory" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/TransportCategory.jsp"></put>
+	</definition>
+	
+	<definition name="addtransporttype" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/AddTransportType.jsp"></put>
+	</definition>
+	
+	
+   <definition name="addvehicle" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/AddVehicleDetails.jsp"></put>
+	</definition>
+	
+	<definition name="stageExcelFileUpload" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/StageExcelFileUpload.jsp"></put>
+	</definition>
+	
+	<definition name="driverExcelFileUpload" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/DriverExcelFileUpload.jsp"></put>
+	</definition>
+	
+	 <definition name="addclass" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/classRegistration.jsp"></put>
+	</definition>
+	
+	<definition name="subject_details" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/SubjectDisplay.jsp"></put>
+	</definition>
+
+	<definition name="transportTypeList" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/TransportTypeList.jsp"></put>
+	</definition>
+	
+	<definition name="TransportTypeEntry" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/TransportTypeMaster.jsp"></put>
+	</definition>
+
+	<definition name="add_subject" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/AddSubject.jsp"></put>
+	</definition>
+	
+	<definition name="roleList" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/RoleDetailsList.jsp"></put>
+	</definition>
+	
+	<definition name="RoleEntry" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/RoleMaster.jsp"></put>
+	</definition>
+	
+		<definition name="examtimetable" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/examTimetable.jsp"></put>
+	</definition>
+	
+	<definition name="studentgradeList" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/GradeSettingsList.jsp"></put>
+	</definition>
+
+	<definition name="addGradeSettings" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/AddGradeSettings.jsp"></put>
+	</definition>
+
+	
+		<definition name="addExamTimetable" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/examCreation.jsp"></put>
+	</definition>
+	
+
+	<definition name="quotalist" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/QuotaList.jsp"></put>
+	</definition>
+
+   <definition name="addQuota" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/AddQuota.jsp"></put>
+	</definition>
+	
+
+	
+		<definition name="addstaff" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/AddStaff.jsp"></put>
+	</definition>
+	
+	
+		<definition name="addtermdetails" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/AddTermDetails.jsp"></put>
+	</definition>
+	
+	
+	<definition name="addseparatetermdetails" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/AddSeparateTermDetails.jsp"></put>
+	</definition>
+
+	 <definition name="fuelmaintenance" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/FuelMaintenanceList.jsp"></put>
+	</definition>
+
+	<definition name="studentBusCard" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/StudentBusCard.jsp"></put>
+	</definition>
+	
+
+	
+	<definition name="acadamicYearPlanlist" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/AcadamicYearPlanList.jsp"></put>
+	</definition>
+	
+	
+	
+	<definition name="changebackground" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/ChangeBackgroundPage.jsp"></put>
+	</definition>
+	
+	
+
+ 	 <definition name="addfueldetails" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/AddFuelMaintenanceDetails.jsp"></put>
+	</definition>
+
+	<definition name="acadamicYearPlanEntry" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/AcadamicYearPlanMaster.jsp"></put>
+	</definition>
+	
+	<definition name="remainderdetails" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/remainderdetails.jsp"></put>
+	</definition>
+	
+	<definition name="addremainderdetails" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/addremainderdetails.jsp"></put>
+	</definition>
+
+     <definition name="transportmaster" extends="backOffice_admin">
+	    <put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/routeMaster.jsp"></put>
+	</definition> 
+	
+	<definition name="addroute" extends="backOffice_admin">
+	    <put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/AddRouteMaster.jsp"></put>
+	</definition> 
+	
+	<definition name="teachermapping" extends="backOffice_admin">
+		<put name="menu" value="/LAYOUT/backOffice_admin_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/TeacherMappingDetails.jsp"></put>
+	</definition> 
+	
+	<definition name="adddisplaydetails" extends="backOffice_admin">
+		<put name="menu" value="/LAYOUT/backOffice_admin_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/AddDisplayDetails.jsp"></put>
+	</definition>
+	
+	<definition name="stopdetails" extends="backOffice_admin">
+	    <put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/AddStopsDetails.jsp"></put>
+	</definition> 
+	
+	
+	<definition name="VehicleDriverMapping" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/VehicleDriverMappingList.jsp"></put>
+	</definition>
+	
+	<definition name="VehicleDriverMappingEntry" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/VehicleDriverMappingDetails.jsp"></put>
+	</definition>
+	
+	<definition name="update_subject" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/SubjectAmendment.jsp"></put>
+	</definition>
+	
+		<definition name="UserRolePermissionsMap" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/UserRolePermission.jsp"></put>
+	</definition>
+	
+	 <definition name="studentRegistration" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/StudentRegistration.jsp"></put>
+	</definition>
+	
+	<definition name="addstudentregistration" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/StudentRegistration.jsp"></put>
+	</definition>
+	
+		<definition name="ClassFeeSetup" extends="backOffice_fee">
+			<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Admin/ClassFeeSetupList.jsp"></put>
+		</definition>
+		
+		
+		
+		
+		<definition name="ClassFeeSetup" extends="backOffice_fee">
+			<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Admin/ClassFeeSetupList.jsp"></put>
+		</definition>
+		
+		<definition name="specializationFeeList" extends="backOffice_fee">
+			<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Admin/ClassFeeSetupEntrySpecialization.jsp"></put>
+		</definition>
+		<definition name="ClassFeeSetupEntry" extends="backOffice_fee">
+			<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Admin/ClassFeeSetupEntry.jsp"></put>
+		</definition>
+		
+		<definition name="StageFeeSetup" extends="backOffice_fee">
+			<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Admin/StageFeeSetup.jsp"></put>
+		</definition>
+		
+		<definition name="StageFeeSetupEntry" extends="backOffice_fee">
+			<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Admin/StageFeeSetupEntry.jsp"></put>
+		</definition>
+		
+		
+		<definition name="remarksList" extends="backOffice_admin">
+	    <put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/RemarksList.jsp"></put>
+	    </definition>
+		
+		
+		<definition name="createRemarkpage" extends="backOffice_admin">
+	    <put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/RemarksEntryPage.jsp"></put>
+	    </definition>
+	    
+	    <definition name="createmeeting" extends="backOffice_admin">
+	    <put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/CreateMeeting.jsp"></put>
+	    </definition>
+	    
+	    
+	     <definition name="createbdaywish" extends="backOffice_admin">
+	    <put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/CreateBdayWish.jsp"></put>
+	    </definition>
+	    
+	    
+	    <definition name="StudentInformationReport" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/StudentDetailsReport.jsp"></put>
+	    </definition>
+	    
+	      <definition name="staffAttendanceReport" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/StaffAttendanceReport.jsp"></put>
+	    </definition>
+	    
+	      <definition name="releivingOrdeReport" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/StaffReleivingOrderReport.jsp"></put>
+	    </definition>
+	    
+	      <definition name="studentattendancereport" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/StudentAttendanceReport.jsp"></put>
+	    </definition>
+	    
+		
+	      <definition name="studentTransferCertificate" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/StudentTransferCertificate.jsp"></put>
+	    </definition>
+		   
+		<definition name="studentID" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/StudentIDFilter.jsp"></put>
+	    </definition>
+		   
+		   
+	      <definition name="studentBonafiedCertificate" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/StudentBonafiedCertificate.jsp"></put>
+	    </definition>
+
+
+	      <definition name="phonedirectory" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/PhoneDirectory.jsp"></put>
+	    </definition>
+
+
+		  <definition name="TeacherMenu" extends="backOffice_teachers">
+	    <put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/TeacherHome.jsp"></put>
+	    </definition>
+	    
+	    <definition name="PerentsHome" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/PerentsHome.jsp"></put>
+	    </definition>
+	    
+	    <definition name="attendanceview" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/ViewAttendance.jsp"></put>
+	    </definition> 
+	    
+	     <definition name="viewassignment" extends="backOffice_Parent_home">
+	   <put name="menu" value="/LAYOUT/backoffice_parents_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/ViewAssignmentDetails.jsp"></put>
+	    </definition>  
+	  
+	    <definition name="leaverequest" extends="backOffice_teachers">
+	    <put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/LeaveStatusList.jsp"></put>
+	    </definition>
+	   
+	   
+	   <definition name="leaverequestscreen" extends="backOffice_Parent_home">
+	    <put name="menu" value="/LAYOUT/Parent_Leave_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Parents/CreateLeaveRequest.jsp"></put>
+	    </definition>
+	
+	     <definition name="leaveapproval" extends="backOffice_teachers">
+	    <put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/LeaveStatus.jsp"></put>
+	    </definition>
+	    
+	     <definition name="leaveaprovalscreen" extends="backOffice_teachers">
+	    <put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/LeaveStatusApproval.jsp"></put>
+	    </definition>
+	    
+	     <definition name="FeeCollectionList" extends="backOffice_fee">
+	    <put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/FeeCollectionList.jsp"></put>
+	    </definition>
+	      <definition name="payroll" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/PayrollList.jsp"></put>
+	</definition>
+	      <definition name="feeCollectionEdit" extends="backOffice_fee">
+	    <put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/FeeCollectionEdit.jsp"></put>
+	    </definition>
+	   
+	     <definition name="FeeCollectionEntry" extends="backOffice_fee">
+	    <put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/FeeCollection.jsp"></put>
+	    </definition>
+	    
+	    <definition name="scholorship" extends="backOffice_fee">
+	    <put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/Scholorship.jsp"></put>
+	    </definition>
+	    
+	     <definition name="feeCancellation" extends="backOffice_fee">
+	    <put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/feeCancellation.jsp"></put>
+	    </definition>
+	    <definition name="feeCollectionStudentWise" extends="backOffice_fee">
+	    <put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/NewFeeCollection.jsp"></put>
+	    </definition>
+	      
+	   <definition name="studentpromotionlist" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/StudentPromotionList.jsp"></put>
+	</definition> 
+	
+	<definition name="studentIdGeneration" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/studentIdGeneration.jsp"></put>
+	</definition>
+	
+	<definition name="studentBusIDGeneration" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/studentBusIdGeneration.jsp"></put>
+	</definition>
+	
+	<definition name="studenttransportlist" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/studentTrnsportList.jsp"></put>
+	</definition>
+	<definition name="studentpromotionscreen" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/StudentPromotion.jsp"></put>
+	</definition> 
+	
+	<definition name="studentpromotionscreens" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/StudentPromotion.jsp"></put>
+	</definition> 
+	
+	 <definition name="studentenquiry" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/StudentEnquiryList.jsp"></put>
+	</definition> 
+	
+	 <definition name="studentenquirycreate" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/StudentEnquiry.jsp"></put>
+	</definition> 
+	
+	<definition name="feeconcessionist" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/FeeconcessionDetails.jsp"></put>
+	</definition>
+	
+		<definition name="addfeeconcession" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/Addfeeconcession.jsp"></put>
+	</definition>
+	 <definition name="studentenquiryadd" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/StudentEnquiry.jsp"></put>
+	</definition> 
+	<definition name="StaffEmployement" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/StaffEmployementList.jsp"></put>
+	</definition>
+	
+	<definition name="StaffEmployement_Entry" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/getTeacherSalary.jsp"></put>
+	</definition>
+	
+
+	<definition name="StaffPayrollList" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/StaffPayrollList.jsp"></put>
+	</definition>
+	
+	<definition name="Staff_Payroll_Entry" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/StaffPayrollEntry.jsp"></put>
+	</definition>
+	
+
+	 <definition name="studentpromotion" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/StudentPromotion.jsp"></put>
+	</definition> 
+
+	    <definition name="updateassignment" extends="backOffice_teachers">
+         <put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" /> 
+		<put name="body" value="/JSP/backOffice/Teachers/AssignmentUpdate.jsp"></put>
+	    </definition>
+
+	    <definition name="tempadmmenu" extends="backOffice_admission">
+        <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+        <put name="body" value="/JSP/backOffice/Admisssion/TempAdmTabmenu.jsp" /></definition>
+        
+        <definition name="detailsissuedform" extends="backOffice_admission">
+        <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+        <put name="body" value="/JSP/backOffice/Admisssion/FormdetailsForSubmit.jsp" /></definition>
+        
+        
+         <definition name="issuedformdetails" extends="backOffice_admission">
+        <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+        <put name="body" value="/JSP/backOffice/Admisssion/IssuedFormforApproval.jsp" /></definition>
+        
+        
+        <definition name="editissuedformdetails" extends="backOffice_admission">
+        <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+        <put name="body" value="/JSP/backOffice/Admisssion/EditIssuedFormdetails.jsp" /></definition>
+        
+        
+        <definition name="issuedform" extends="backOffice_admission">
+        <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+        <put name="body" value="/JSP/backOffice/Admisssion/IssuedForm.jsp" /></definition>
+        
+        <definition name="studentadmregisteration" extends="backOffice_admission">
+        <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+        <put name="body" value="/JSP/backOffice/Admisssion/AdmStudentregister.jsp" /></definition>
+        
+         <definition name="addadmissionformdetails" extends="backOffice_admission">
+        <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+        <put name="body" value="/JSP/backOffice/Admisssion/AdmAddStudent.jsp" /></definition>
+        
+         <definition name="apprformdetails" extends="backOffice_admission">
+        <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+        <put name="body" value="/JSP/backOffice/Admisssion/Apprstudentdetails.jsp" /></definition>
+        
+        
+        <definition name="rejectformdetails" extends="backOffice_admission">
+        <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+        <put name="body" value="/JSP/backOffice/Admisssion/Rejectstudentdetails.jsp" /></definition>
+        
+        
+        		
+	
+	<definition name="viewTimetable" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/TimeTable.jsp"></put>
+	</definition>
+	
+	<definition name="viewTodaayTimetable" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/TodayTimeTable.jsp"></put>
+	</definition>
+	
+	<definition name="viewTeacherTimetable" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Admin/TeacherTimeTable.jsp"></put>
+	</definition>
+	
+	
+	<definition name="StudentAttendanceEntry" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/AttendaceUpload.jsp"></put>
+	</definition>
+	
+	<definition name="GetStuPeriodAtt" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/StudentPeriodAttendance.jsp"></put>
+	</definition>
+
+	<definition name="editAttendance" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/AttendanceEdit.jsp"></put>
+	</definition>
+
+
+        <definition name="leavebankList" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/leavebanklist.jsp"></put>
+	    </definition>
+	    
+	    <!-- Leave Bank -->
+	    	
+	    <definition name="addNewCategary" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/leavecatlist.jsp"></put>
+	    </definition>
+	    
+	    <definition name="addNewCat" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/addNewleavecatlist.jsp"></put>
+	    </definition>
+	    
+	    <definition name="editleaveCat" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/EditLeaveCat.jsp"></put>
+	    </definition>
+	    
+	    <!-- Leave Bank -->
+	    
+	    <definition name="addleavebankList" extends="backOffice_teachers">
+	    <put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/addleavebanklist.jsp"></put>
+	    </definition>
+	    
+	    <definition name="leaveteacherdetails" extends="backOffice_teachers">
+	    <put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/leavebankdetails.jsp"></put>
+	    </definition>
+	    
+	    <definition name="LeaveDetailsReport" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/TeacherLeaveReport.jsp"></put>
+	    </definition>
+	    
+	    
+	    <definition name="FeeCollectionSummaryReport" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/FeeCollectionSummaryReport.jsp"></put>
+	    </definition>
+	  
+
+   <definition name="serviceCertificate" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/ServiceCertificate.jsp"></put>
+	    </definition>
+	    
+	     <definition name="StudentFeeStatusReport" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/StudentFeeStatusReport.jsp"></put>
+	    </definition>
+	    
+	     <definition name="defenderFeeReport" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/DefaultFeeReport.jsp"></put>
+	    </definition>
+	    
+	     <definition name="StudentMarksDetails" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/StudentMarksDetailsReport.jsp"></put>
+	    </definition>
+	    
+	<definition name="ExamClassWiseReport" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/ExamClassWiseReport.jsp"></put>
+	    </definition>
+	    
+	    
+
+
+   <definition name="payCertificate" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/PayCertificate.jsp"></put>
+	    </definition>
+
+
+
+	<definition name="ClassTeacherMapping" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/ClassTeacherMappingList.jsp"></put>
+	</definition>
+
+
+	<definition name="editClassTeacher" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/ClassTeacherMapping.jsp"></put>
+	</definition>
+
+
+    <definition name="onlinefeereceipt" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/OnlineFeeReceipt.jsp"></put>
+	    </definition>
+
+
+<!-- STUDENT FILE UPLOAD -->
+
+     <definition name="studentexcelfileupload" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/studentexcelfileupload.jsp"></put>
+	</definition>
+ <definition name="staffexcelupload" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/staffexcelfileupload.jsp"></put>
+	</definition>
+
+  	<definition name="leaveapprovaldetails" extends="backOffice_teachers">
+	    <put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Teachers/leaveapprovaldetails.jsp"></put>
+	    </definition>
+	    
+	    
+<!--LIBRARY MANAGEMENT -->	    
+
+	    
+	   <definition name="booksissuelist" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/Books_issue_list.jsp"></put>
+	    </definition>  
+	  <definition name="bookentrypage" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/BookMasterEntryPage.jsp"></put>
+	    </definition>      
+	  <definition name="BookIssueEntryPage" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/BookIssueEntry.jsp"></put>
+	    </definition>
+ 	    
+	  <definition name="homeworklist" extends="backOffice_sms">
+		<put name="menu" value="/LAYOUT/backOffice_sms.jsp" />
+		<put name="body" value="/JSP/backOffice/SMS/homeWorkList.jsp"></put>
+	</definition>
+	    
+	    <definition name="homeworkentrypage" extends="backOffice_sms">
+		<put name="menu" value="/LAYOUT/backOffice_sms.jsp" />
+		<put name="body" value="/JSP/backOffice/SMS/homeWorkEntry.jsp"></put>
+	</definition>
+	    
+	    <definition name="meetinglist" extends="backOffice_sms">
+		<put name="menu" value="/LAYOUT/backOffice_sms.jsp" />
+		<put name="body" value="/JSP/backOffice/SMS/meetingList.jsp"></put>
+	</definition>
+	
+	<definition name="meetingentrypage" extends="backOffice_sms">
+		<put name="menu" value="/LAYOUT/backOffice_sms.jsp" />
+		<put name="body" value="/JSP/backOffice/SMS/meetingEntryPage.jsp"></put>
+	</definition>
+	
+	<definition name="suddenHolidayList" extends="backOffice_sms">
+		<put name="menu" value="/LAYOUT/backOffice_sms.jsp" />
+		<put name="body" value="/JSP/backOffice/SMS/SuddenHolidayList.jsp"></put>
+	</definition>
+	
+	<definition name="InactiveStudentInformationReport" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/InactivateStudentDetails.jsp"></put>
+	    </definition>
+	<definition name="suddenHolidayFilter" extends="backOffice_sms">
+		<put name="menu" value="/LAYOUT/backOffice_sms.jsp" />
+		<put name="body" value="/JSP/backOffice/SMS/SuddenHolidayFilter.jsp"></put>
+	</definition>
+	
+	 <definition name="InactiveStudentFeeInformationReport" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/InactivateStudentFeeDetails.jsp"></put>
+	 </definition>
+
+	<definition name="latecomingstudentslist" extends="backOffice_sms">
+		<put name="menu" value="/LAYOUT/backOffice_sms.jsp" />
+		<put name="body" value="/JSP/backOffice/SMS/latecomingstudentslist.jsp"></put>
+	</definition>
+
+	<definition name="addlatecomers" extends="backOffice_sms">
+		<put name="menu" value="/LAYOUT/backOffice_sms.jsp" />
+		<put name="body" value="/JSP/backOffice/SMS/addlatecomers.jsp"></put>
+	</definition>
+
+	<definition name="uniformlist" extends="backOffice_sms">
+		<put name="menu" value="/LAYOUT/backOffice_sms.jsp" />
+		<put name="body" value="/JSP/backOffice/SMS/uniformList.jsp"></put>
+	</definition>
+
+	<definition name="uniformentry" extends="backOffice_sms">
+		<put name="menu" value="/LAYOUT/backOffice_sms.jsp" />
+		<put name="body" value="/JSP/backOffice/SMS/uniformEntry.jsp"></put>
+	</definition>
+
+	<definition name="absentSMSList" extends="backOffice_sms">
+		<put name="menu" value="/LAYOUT/backOffice_sms.jsp" />
+		<put name="body" value="/JSP/backOffice/SMS/AbsentListSMS.jsp"></put>
+	</definition>
+
+	<definition name="absentSMSListFilter" extends="backOffice_sms">
+		<put name="menu" value="/LAYOUT/backOffice_sms.jsp" />
+		<put name="body" value="/JSP/backOffice/SMS/AbsentListFilter.jsp"></put>
+	</definition>
+
+	<definition name="backOffice_expenses" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_expenses_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+		<!-- <put name="footer" value="/LAYOUT/login_footer.jsp" /> -->
+	</definition>
+
+	<definition name="expenses_list" extends="backOffice_expenses">
+		<put name="menu" value="/LAYOUT/backOffice_expenses_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Expenses/ExpensesList.jsp"></put>
+	</definition>
+	<definition name="inflows_list" extends="backOffice_expenses">
+		<put name="menu" value="/LAYOUT/backOffice_expenses_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Expenses/InflowsList.jsp"></put>
+	</definition>
+	<definition name="revenue_list" extends="backOffice_expenses">
+		<put name="menu" value="/LAYOUT/backOffice_expenses_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Expenses/RevenueList.jsp"></put>
+	</definition>
+	
+	 <definition name="revenue_list_test" extends="backOffice_expenses">
+  <put name="menu" value="/LAYOUT/backOffice_expenses_menu_test.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Expenses/RevenueListTest.jsp" /> 
+  </definition>
+	
+
+	<definition name="expensesReportFilterPage" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/ExpensesFilterPage.jsp"></put>
+    </definition>
+ 	    
+	 <definition name="transaction_List" extends="backOffice_expenses">
+		<put name="menu" value="/LAYOUT/backOffice_expenses_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Expenses/TransactionList.jsp"></put>
+	</definition>
+	
+	<definition name="add_transaction_list" extends="backOffice_expenses">
+		<put name="menu" value="/LAYOUT/backOffice_expenses_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Expenses/AddTransaction.jsp"></put>
+	</definition>
+
+	<definition name="add_expenses_list" extends="backOffice_expenses">
+		<put name="menu" value="/LAYOUT/backOffice_expenses_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Expenses/ADDExpenses.jsp"></put>
+	</definition>
+
+	<definition name="backOffice_inventory" path="/LAYOUT/backOffice_layout.jsp">
+		<put name="title" value="Campus Pro" />
+		<put name="header" value="/LAYOUT/backOffice_header.jsp" />
+		<put name="menu" value="/LAYOUT/backOffice_inventory_menu.jsp" />
+		<put name="body" value="/LAYOUT/body.jsp" />
+		<!-- <put name="footer" value="/LAYOUT/login_footer.jsp" /> -->
+	</definition>
+
+	<definition name="inventory_type_list" extends="backOffice_inventory">
+		<put name="menu" value="/LAYOUT/backOffice_inventory_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Inventory/InventoryTypeList.jsp"></put>
+	</definition>
+		
+	<definition name="inventory_add" extends="backOffice_inventory">
+		<put name="menu" value="/LAYOUT/backOffice_inventory_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Inventory/AddInventoryType.jsp"></put>		
+	</definition>
+
+
+	<definition name="inventory_list" extends="backOffice_inventory">
+		<put name="menu" value="/LAYOUT/backOffice_inventory_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Inventory/InventoryList.jsp"></put>
+	</definition>
+	
+	<definition name="add_or_modify_or_delete_list" extends="backOffice_inventory">
+		<put name="menu" value="/LAYOUT/backOffice_inventory_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Inventory/PurchaseDetailsList.jsp"></put>
+	</definition>
+
+	<definition name="add_purchase_details" extends="backOffice_inventory">
+		<put name="menu" value="/LAYOUT/backOffice_inventory_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Inventory/AddPurchaseDetails.jsp"></put>
+	</definition>
+	
+	
+	<definition name="transaction_list_inventory" extends="backOffice_inventory">
+		<put name="menu" value="/LAYOUT/backOffice_inventory_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Inventory/TransactioList.jsp"></put>
+	</definition>
+	
+	<definition name="add_transaction" extends="backOffice_inventory">
+		<put name="menu" value="/LAYOUT/backOffice_inventory_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Inventory/AddTransaction.jsp"></put>
+	</definition>
+	
+	
+	
+	<definition name="usageReportList" extends="backOffice_inventory">
+		<put name="menu" value="/LAYOUT/backOffice_inventory_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Inventory/UsageReportList.jsp"></put>
+	</definition>
+	
+	
+	
+	
+	<definition name="usagerepots" extends="backOffice_inventory">
+		<put name="menu" value="/LAYOUT/backOffice_inventory_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Inventory/UsageRepots.jsp"></put>
+	</definition>
+	
+	
+	<definition name="notReturnedReport" extends="backOffice_inventory">
+		<put name="menu" value="/LAYOUT/backOffice_inventory_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Inventory/NotReturnedRepots.jsp"></put>
+	</definition>
+	
+	<definition name="notReturnedReportList" extends="backOffice_inventory">
+		<put name="menu" value="/LAYOUT/backOffice_inventory_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Inventory/NotReturnedReportList.jsp"></put>
+	</definition>
+	
+	
+	<definition name="transaction_List_test" extends="backOffice_expenses">
+  <put name="menu" value="/LAYOUT/backOffice_expenses_menu_test.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Expenses/TransactionList.jsp" /> 
+  </definition>
+	
+	
+	<definition name="transportmaster_test" extends="backOffice_admin">
+  <put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Transport/routeMaster.jsp" /> 
+  </definition>
+	
+	 <definition name="enquiry_list" extends="backOffice_expenses">
+  <put name="menu" value="/LAYOUT/backOffice_expenses_menu_test.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Expenses/enquiryList.jsp" /> 
+  </definition>
+	<definition name="transaction_List_test" extends="backOffice_expenses">
+  <put name="menu" value="/LAYOUT/backOffice_expenses_menu_test.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Expenses/TransactionList.jsp" /> 
+  </definition>
+	
+	<definition name="res_list" extends="backOffice_expenses">
+  <put name="menu" value="/LAYOUT/backOffice_expenses_menu_test.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Inventory/NewRegistration.jsp" /> 
+  </definition>
+	
+	
+	 <definition name="admlist" extends="backOffice_expenses">
+  <put name="menu" value="/LAYOUT/backOffice_expenses_menu_test.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Student/ShortAdmission.jsp" /> 
+   </definition> 
+  
+ 	 <definition name="admissionsList" extends="backOffice_admission">
+  <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Admisssion/TemporaryAdmissionDetail.jsp" /> 
+   </definition>  
+   
+  
+  <definition name="singleadmissionsdata" extends="backOffice_admission">
+  <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Admisssion/SingleAdmissionDetailsEntry.jsp" /> 
+   </definition>  
+  
+ <definition name="add_new_application" extends="backOffice_admission_new">
+ <put name="body" value="/JSP/backOffice/Admisssion/AddNewApplication.jsp" /> 
+  </definition> 
+   
+   
+   <definition name="secondadmissionformat" extends="backOffice_admission_new">
+  		<put name="body" value="/JSP/backOffice/Admisssion/SecondApplicationFormat.jsp" /> 
+   </definition> 
+   
+   
+    <definition name="secondadmissionlist" extends="backOffice_admission">
+  <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Admisssion/SecondApplicationList.jsp" /> 
+   </definition> 
+   
+   
+      
+   <definition name="thirdadmissionformat" extends="backOffice_admission_new">
+  		<put name="body" value="/JSP/backOffice/Admisssion/ThirdApplicationFormat.jsp" /> 
+   </definition> 
+   
+   
+      <definition name="thirdadmissionlist" extends="backOffice_admission">
+  <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Admisssion/ThirdApplicationList.jsp" /> 
+  </definition>
+    
+  <definition name="calledforadmissionsList" extends="backOffice_admission">
+  <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Admisssion/CalledForAdmissionDetailList.jsp" /> 
+  </definition> 
+
+  <definition name="singlecleedforadmissionsdataentry" extends="backOffice_admission">
+  <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Admisssion/CalledForAdmissionDetailEntry.jsp" /> 
+   </definition> 
+   
+
+  <definition name="finaladmissionsList" extends="backOffice_admission">
+  <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Admisssion/FinalAdmissionDetailList.jsp" /> 
+  </definition>
+   
+   
+    <definition name="singlefinaladmissionsdataentry" extends="backOffice_admission">
+  <put name="menu" value="/LAYOUT/backOffice_admission.jsp" /> 
+  <put name="body" value="/JSP/backOffice/Admisssion/SngleFinalAdmissionsDataEntry.jsp" /> 
+   </definition>
+	
+	  <definition name="setupAndCollection" extends="backOffice_fee">
+	    <put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/FeeSetUpAndCollection.jsp"></put>
+	    </definition> 
+	    
+	      <definition name="getFeeCollection" extends="backOffice_fee">
+	    <put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/GetFeeCollectionAndStatus.jsp"></put>
+	    </definition>
+	    
+	       <definition name="getSingleStdReport" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports/getSingleStdReport.jsp"></put>
+	    </definition>
+	    
+	     <definition name="occupationList" extends="backOffice_setup">
+			<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Settings/occupationList.jsp"></put>
+		</definition>
+		
+	    <definition name="religionList" extends="backOffice_setup">
+			<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Settings/ReligionDetails.jsp"></put>
+		</definition>
+		
+		<definition name="casteList" extends="backOffice_setup">
+			<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Settings/CasteDetails.jsp"></put>
+		</definition>
+		
+		<definition name="casteCategoryList" extends="backOffice_setup">
+			<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Settings/CasteCategoryDetails.jsp"></put>
+		</definition>
+		
+	     <definition name="addOccupation" extends="backOffice_setup">
+			<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Settings/AddOccupation.jsp"></put>
+		</definition>
+	    
+	    <definition name="addReligion" extends="backOffice_setup">
+			<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Settings/AddReligion.jsp"></put>
+		</definition>
+		
+		 <definition name="addCaste" extends="backOffice_setup">
+			<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Settings/AddCaste.jsp"></put>
+		</definition>
+		
+		 <definition name="addCasteCategory" extends="backOffice_setup">
+			<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Settings/AddCasteCategory.jsp"></put>
+		</definition>
+	    
+	    <definition name="transporttermlist" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transfer/TransferTermList.jsp"></put>
+	</definition>
+	    
+	    
+	    
+	    <definition name="separatetransporttermlist" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/SeparateTransportTermList.jsp"></put>
+	</definition>
+	
+	<definition name="secondaryForm">
+		<put name="body" value="/JSP/backOffice/Admisssion/SecondApplicationFormat.jsp"></put>
+	</definition>
+	
+	<!-- New ExamList -->
+	
+	<definition name="examlistyear" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/examListYear.jsp"></put>
+	</definition>
+	
+	<definition name="setexamlistforstudent" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/setExamList.jsp"></put>
+	</definition>
+	
+	<!--SubjectWise Marks List  -->
+
+	<definition name="subjetmarkList" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/SubjectMarksList.jsp"></put>
+	</definition>
+	<definition name="examtimetablelistyear" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/examTimeTableListYear.jsp"></put>
+	</definition>
+	
+	
+	<definition name="exammarksstudentwiselist" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/MarkEntryStudentWise.jsp"></put>
+	</definition>
+
+	<definition name="setmarkentryclassandsectionwise" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/MarkEntryclassandsectionwise.jsp"></put>
+	</definition>
+	
+	<definition name="setmarkentrystudentwise" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/setmarkentrystudentwise.jsp"></put>
+	</definition>
+
+	<definition name="addmarkentrystudentwise" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/Addmarkentrystudentwise.jsp"></put>
+	</definition>
+	
+	<definition name="subjectwisemarksList" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/subjectWiseMarksList.jsp"></put>
+	</definition>
+	<definition name="examtimetableclasslist" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/ClassExamSetupList.jsp"></put>
+	</definition>
+	
+	<definition name="getSubjectClass" extends="backOffice_exam">
+	<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+    <put name="body" value="/JSP/backOffice/Exam/getSubjectClassList.jsp"></put>
+	</definition>
+	<definition name="setexamtimetableuptotenth" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/ClassExaminationTimeTableSetupList.jsp"></put>
+	</definition>
+
+	<definition name="setexamlist" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/getSubjectClassList.jsp"></put>
+	</definition>
+	
+	<definition name="classWiseSubject" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/getclassWiseSubject.jsp"></put>
+	</definition>
+	
+	<definition name="savesubWiseMarksDetails" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/savesubWiseMarksDetails.jsp"></put>
+	</definition>
+	
+	<definition name="studentVisa" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/studentVisa.jsp"></put>
+	</definition>
+	
+	<definition name="setexamlistforstudent" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/setExamList.jsp"></put>
+	</definition>
+	
+
+
+	<!--SubjectWise Marks List  -->
+
+
+	<definition name="subjetmarkList" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/SubjectMarksList.jsp"></put>
+	</definition>
+	
+
+	
+	
+	<!--SubjectWise Marks List  subjectWiseMarksList.jsp-->
+	    
+
+	<definition  name="examtimetableclasssubjectlist" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/ClassSubjectExaminationTimeTableSetupList.jsp"></put>
+	</definition>
+
+	<definition name="setMarkEntryDetails" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/MarkEntryStudentWise.jsp"></put>
+	</definition>
+	
+	<definition name="examtimetableclass" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/ExamTimetableClass.jsp"></put>
+	</definition>
+
+	<definition name="examtimetableclasssection" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/ExamTableClassSection.jsp"></put>
+	</definition>
+	
+	<definition name="displaysaveexamtimetablepage" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/Examtimetablesave.jsp"></put>
+	</definition>
+	
+	<definition name="examtimetabledispalyset" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/Examtimetablesaveset.jsp"></put>
+	</definition>
+	
+
+	<definition name="setmarkentrydetails" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/setMarkentrydetailsList.jsp"></put>
+	</definition>
+	
+		<definition name="setmarkentrystudentwise" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/setmarkentrystudentwise.jsp"></put>
+	</definition>
+	<definition name="setgradeDependencyindetail" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/SetGradeDependencyDetail.jsp"></put>
+	</definition>
+	
+	<definition name="subjectwisemarksList" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/subjectWiseMarksList.jsp"></put>
+	</definition>
+	
+	<definition name="getSubjectClass" extends="backOffice_exam">
+	<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+    <put name="body" value="/JSP/backOffice/Exam/getSubjectClassList.jsp"></put>
+	</definition>
+	
+	<definition name="classWiseSubject" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/getclassWiseSubject.jsp"></put>
+	</definition>
+	
+	
+	<definition name="savesubWiseMarksDetails" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/savesubWiseMarksDetails.jsp"></put>
+	</definition>
+	
+	<definition name="examdependency" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/ExamDependency.jsp"></put>
+	</definition>
+	
+	<definition name="gradedependency" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/GradeDependency.jsp"></put>
+	</definition>
+	
+	<definition name="setgradeDependency" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/setGradeDependency.jsp"></put>
+	</definition>
+	
+	<definition name="setexamdependency" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/setExamDependencyList.jsp"></put>
+	</definition>
+
+
+	<!--design student ID Card Design and Print by veda-->
+	
+	<definition name="NewStdIdCardDesign" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/StudentIDDesign.jsp"></put>
+	</definition>
+	
+	<definition name="NewStdIdCardPrint" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/StudentIDPrint.jsp"></put>
+	</definition>
+	
+	<definition name="DesignStaffIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/StaffIDCardDesign.jsp"></put>
+	</definition>
+	
+	<definition name="printMultiStaffIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/staffMultipleIdCardPrintDesign.jsp"></put>
+	</definition>
+	
+		<definition name="PrintStaffIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/StaffIDCardPrint.jsp"></put>
+	</definition>
+
+
+	<definition name="StaffSingleIDCardDesign" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/StaffSingleIDCardDesign.jsp"></put>
+	</definition>
+	
+		<definition name="StaffSingleIDCardPrint" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/StaffSingleIDCardPrint.jsp"></put>
+	</definition>
+
+		<definition name="StaffMultipleIDCardPrint" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/StaffMultipleIDCardPrint.jsp"></put>
+	</definition>
+
+	<definition name="DesignStudentSingleIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/StudentSingleIDCardDesign.jsp"></put>
+	</definition>
+	
+	<definition name="PrintStudentSingleIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/StudentSingleIDCardPrint.jsp"></put>
+	</definition>
+	
+	<definition name="PrintStudentMultipleIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/StudentMultipleIDCardPrint.jsp"></put>
+	</definition>
+	
+	<definition name="PrintPreviewStudentMultipleIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/StudentMultipleIDCardPrintPreview.jsp"></put>
+	</definition>
+	
+		<definition name="DesignTransportIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/TransportIDCardDesign.jsp"></put>
+	</definition>
+
+
+		<definition name="PrintTransportIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/TransportIDCardPrint.jsp"></put>
+	</definition>
+	
+	<definition name="miscellaneousReport" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/miscellaneousReport.jsp"></put>
+	</definition>
+	
+		<definition name="DesignTransportIDCardSingle" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/TransportIDCardSingleDesign.jsp"></put>
+	</definition>
+	
+		<definition name="PrintTransportIDCardSingle" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/TransportIDCardSinglePrint.jsp"></put>
+	</definition>
+	
+		<definition name="PrintTransportMultipleIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/TransportMultipleIDCardPrint.jsp"></put>
+	</definition>
+	
+		<definition name="PrintPreviewTransportMultipleIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/TransportMultipleIDCardPrintPreview.jsp"></put>
+	</definition>
+	
+		<definition name="PrintPreviewStaffMultipleIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/StaffMultipleIDCardPrintPreview.jsp"></put>
+	</definition>
+
+	<!--SubjectWise Marks List  subjectWiseMarksList.jsp-->
+
+
+	<definition name="examtimetableclasssubjectlist" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/ClassSubjectExaminationTimeTableSetupList.jsp"></put>
+	</definition>
+
+	
+	<definition name="addmarkentrystudentwise" extends="backOffice_exam">
+        <put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+        <put name="body" value="/JSP/backOffice/Exam/Addmarkentrystudentwise.jsp"></put>
+
+	</definition>
+	
+	
+	
+
+<!-- Election Module Begins -->
+
+	
+	<definition name="GroupList" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/groupList.jsp"></put>
+	</definition>
+	
+	<definition name="addNewElection" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/ElectionAddNew.jsp"></put>
+	</definition>
+	
+	
+	<definition name="addGradeSettings" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/AddGradeSettings.jsp"></put>
+	</definition>
+	
+ 	<definition name="transportCategory" extends="backOffice_admin">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" /> 
+		<put name="body" value="/JSP/backOffice/Transport/TransportCategory.jsp"></put>
+	   
+	</definition> 
+			    
+	<definition name="addNewGroup" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/groupAddNew.jsp"></put>
+	</definition>
+	
+	<definition name="addNewGroupSchool" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/groupUpdate.jsp"></put>
+	</definition>
+	
+	<definition name="electionList" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/ElectionList.jsp"></put>
+	</definition>
+	
+	<definition name="electionUpdate" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/ElectionUpdate.jsp"></put>
+	</definition>
+	
+	<definition name="addBoothDetais" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/boothSetting.jsp"></put>
+	</definition>
+	
+	<definition name="nominationApproval" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/nominationApproval.jsp"></put>
+	</definition>
+	
+	<definition name="addBoothDetais" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/boothSetting.jsp"></put>
+	</definition>
+	
+	<definition name="voterSearchList" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/voterSearchList.jsp"></put>
+	</definition>
+	
+	<definition name="voterDetailsView" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/voterDetails.jsp"></put>
+	</definition>
+	
+	<definition name="electionCategoryList" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/electionCategoryList.jsp"></put>
+	</definition>
+	
+	<definition name="electionCategoryAdd" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/electionCategoryAdd.jsp"></put>
+	</definition>
+	
+	<definition name="nominationRegister" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/NominationRegistration.jsp"></put>
+	</definition>
+	
+	<definition name="countingListForVoting" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/countingListForVoting.jsp"></put>
+	</definition>
+	
+	<definition name="winnerList" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Election/WinnerList.jsp"></put>
+	</definition>
+	
+	
+	<definition name="rollnumbergeneration" extends="backOffice_setup">
+        <put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/rollnumbergenerationsetting.jsp"></put>
+ 	</definition>
+	
+	
+		<definition name="tds_computation_details" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/TDSComputationDetailsList.jsp"></put>
+		</definition>
+		<definition name="add_computationDeatils" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/AddTDSComputationDetails.jsp"></put>
+		</definition>
+	
+	<definition name="generateRollNo" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/generateRollNo.jsp"></put>
+	</definition>
+	
+	<definition name="getstudentconfidential" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/GetConfidentialReportDetails.jsp"></put>		
+	</definition>		
+			
+	<definition name="promotionpage" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/StudentPromotionPage.jsp"></put>		
+	</definition>		
+			
+			
+	<definition name="appraisallist" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/StudentAppraisalList.jsp"></put>		
+	</definition>		
+			
+			
+	<definition name="studentappraisal" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/StudentForAppraisal.jsp"></put>		
+	</definition>
+	
+	
+       <definition name="studentsappraisel" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/StudentsAppraisal.jsp"></put>		
+	</definition>	
+	
+	     <definition name="addstudentappraisal" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/addstudentappraisal.jsp"></put>		
+	</definition>
+		
+			
+			
+		
+	<definition name="appraisalpage" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/StudentAppraisalPage.jsp"></put>		
+	</definition>		
+			
+			
+	<definition name="transfercertificatelist" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/StudentTrasferCertificateList.jsp"></put>		
+	</definition>		
+			
+	<definition name="findstudentlist" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/StudentForTrasferCertificate.jsp"></put>		
+	</definition>		
+			
+			
+		<definition name="transcertificatepage" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/TransferCertificatePage.jsp"></put>		
+	</definition>		
+			
+			
+	<definition name="printtranscertificate" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/PrintTransferCertificatePage.jsp"></put>		
+	</definition>		
+			
+	<definition name="addstudentconfidential" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/AddConfidentialReport.jsp"></put>		
+	</definition>	
+	
+	<definition name="addstudentwithheld" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/AddStudentWithHeld.jsp"></put>		
+	</definition>	
+			
+	<definition name="studentconfidential" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/StudentConfidential.jsp"></put>		
+	</definition>		
+			
+			
+	<definition name="withheldlist" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/StudentWithheldList.jsp"></put>		
+	</definition>		
+			
+			
+	<definition name="studentwithheld" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/StudentWithheld.jsp"></put>		
+	</definition>		
+			
+			
+	<definition name="findstudent" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/WithheldFindStudent.jsp"></put>		
+	</definition>		
+			
+			
+	<definition name="studentprom" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/NewStudentPromotionList.jsp"></put>		
+	</definition>		
+			
+	<definition name="getstudent" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/NewStudentPromotion.jsp"></put>		
+	</definition>
+	
+	<definition name="studentreport" extends="backOffice_reports">		
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Reports/StudentReport.jsp"></put>		
+	</definition>
+	
+	<definition name="studentcountreport" extends="backOffice_reports">		
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Reports/StudentCountReport.jsp"></put>		
+	</definition>
+	
+	<definition name="customizablestudentreport" extends="backOffice_reports">		
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Reports/CustomizableStudentReport.jsp"></put>		
+	</definition>
+	
+ <!-- Ashoke tiles -->
+
+	<definition name="studentSearch" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/studentSearch.jsp"></put>
+	</definition>
+	
+	<definition name="settransportdetails" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Transport/settranportdetailsforstudent.jsp"></put>
+	</definition>
+	
+	<definition name="individualStudentSearch" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/individualStudentSearch.jsp"></put>
+	</definition>
+	
+	<definition name="miscellaneousReport" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/miscellaneousReport.jsp"></put>
+	</definition>
+	
+	<definition name="individualMiscellaneousReport" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/individualMiscellaneousReport.jsp"></put>
+	</definition>
+	
+	<definition name="generateRollNo" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/generateRollNo.jsp"></put>
+	</definition>
+	
+	<definition name="houseSetting" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/houseSetting.jsp"></put>
+	</definition>
+	
+	<definition name="academicyearHouseSetting" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/academicyearHouseSetting.jsp"></put>
+	</definition>
+	
+	<definition name="generateHouse" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/GenerateHouse.jsp"></put>
+	</definition>
+	
+	<definition name="houseSettingClassWise" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/GenerateHouseClassWise.jsp"></put>
+	</definition>
+	
+	<definition name="houseSettingStudentWise" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/GenerateHouseStudentWise.jsp"></put>
+	</definition>
+	
+	<definition name="schoolTransfer" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/schoolTransfer.jsp"></put>
+	</definition>
+	
+	<definition name="transferStudent" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/transferStudent.jsp"></put>
+	</definition>
+	
+	<definition name="studentCertificates" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/studentCertificates.jsp"></put>
+	</definition>
+	
+	<definition name="findStudent" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/findStudent.jsp"></put>
+	</definition>
+	
+	<definition name="ageCertificate" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/ageCertificate.jsp"></put>
+	</definition>
+	
+	<definition name="bonafideCertificate" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/bonafideCertificate.jsp"></put>
+	</definition>
+	
+	<definition name="conductCertificate" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/conductCertificate.jsp"></put>
+	</definition>
+	
+	<definition name="course_ConductCertificate" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/course_ConductCertificate.jsp"></put>
+	</definition>
+	
+<!-- Election Module Ends -->
+<!-- housing -->
+	<definition name="houseSetting" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/houseSetting.jsp"></put>
+	</definition>
+	
+	<definition name="academicyearHouseSetting" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/academicyearHouseSetting.jsp"></put>
+	</definition>
+	
+	<definition name="generateHouse" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/GenerateHouse.jsp"></put>
+	</definition>
+	
+	<definition name="houseSettingClassWise" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/GenerateHouseClassWise.jsp"></put>
+	</definition>
+	
+	<definition name="houseSettingStudentWise" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/GenerateHouseStudentWise.jsp"></put>
+	</definition>
+	
+	<definition name="displayhousesettings" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/displayHouseStudentWise.jsp"></put>
+	</definition>
+
+	<definition name="studentpromotedpage" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/StudentPromotedPage.jsp"></put>		
+	</definition>
+	
+	<definition name="studentdemotedtopromotingpage" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/StudentDemotedToPromotedPage.jsp"></put>		
+	</definition>
+	
+	<definition name="generatepayroll" extends="backOffice_staff">
+	    <put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/generatepayroll.jsp"></put>
+	</definition>
+
+	
+	<definition name="generatepayrollist" extends="backOffice_staff">
+	    <put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Staff/generatePayrollList.jsp"></put>
+	</definition>
+
+	
+	
+	<!-- LIBRARY MODULE  NEW ::USE THIS  -->
+	
+	<definition name="libraryHome" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/LibraryHome.jsp"></put>
+	</definition>
+	
+	<definition name="generalsettings" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/GeneralSettings.jsp"></put>
+	</definition>
+	
+	<definition name="publishersettings" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/PublisherSettings.jsp"></put>
+	</definition>
+	
+	<definition name="suppliersettings" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/SupplierSettings.jsp"></put>
+	</definition>
+	
+	<definition name="categorysettings" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/CategorySettings.jsp"></put>
+	</definition>
+	
+	<definition name="groupregistration" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/GroupRegistration.jsp"></put>
+	</definition>
+	
+	<definition name="overdue" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/OverDue.jsp"></put>
+	</definition>
+	
+	<definition name="stockstatements" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/StockStatements.jsp"></put>
+	</definition>
+	
+	<definition name="reservationlist" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/ReservationList.jsp"></put>
+	</definition>
+	
+	<definition name="issuestatements" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/IssueStatements.jsp"></put>
+	</definition>
+	
+	<definition name="journalreports" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/JournalReport.jsp"></put>
+	</definition>
+	
+	<definition name="newarrivallist" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/NewarrivalList.jsp"></put>
+	</definition>
+	
+	<definition name="subscriberlist" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/SubscriberList.jsp"></put>
+	</definition>
+	
+	<definition name="reissuestatements" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/ReissueStatements.jsp"></put>
+	</definition>
+	
+	
+	<definition name="BlackListSubscriber" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/BlackListSubscriber.jsp"></put>
+	</definition> 
+	
+	<definition name="barcodeGeneration" extends="backOffice_library">
+	<put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+	<put name="body" value="/JSP/backOffice/Library/barcodeGeneration.jsp"></put>
+	</definition> 
+	
+	<definition name="subscribersDetails" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/subscriberDetails.jsp"></put>
+	</definition> 
+	
+	<definition name="searchcardprint" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/SearchCardprint.jsp"></put>
+	</definition>
+	
+	<definition name="issues" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/Issues.jsp"></put>
+	</definition>
+	
+	<definition name="returns" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/Returns.jsp"></put>
+	</definition>
+	
+	<definition name="reservations" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/Reservations.jsp"></put>
+	</definition>
+	
+	<definition name="StockEntryDetails" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/StockEntryDetails.jsp"></put>
+	</definition>
+
+	
+	<definition name="SearchIssueDetails" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/SearchIssueDetails.jsp"></put>
+	</definition>
+		
+<definition name="SearchSubscriberDetails" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/search_subscriber.jsp"></put>
+	</definition> 
+	
+	<definition name="TransferSubscriberDetails" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/TransferSubscriberDetails.jsp"></put>
+	</definition> 
+	
+		<definition name="categorytypeexcelfileupload" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/categorytypeexcelfileupload.jsp"></put>
+	</definition>
+	
+	<definition name="subscriberdetailexcelfileupload" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/subscriberdetailexcelfileupload.jsp"></put>
+	</definition>
+	
+	<definition name="OverDueStatement" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/OverDueStatement.jsp"></put>
+	</definition>
+	
+	<definition name="StockStatements" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/StockStatements.jsp"></put>
+	</definition>
+	
+	<definition name="ReservationList" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/ReservationList.jsp"></put>
+	</definition>
+	
+	<definition name="librarylocations" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/LibraryLocations.jsp"></put>
+	</definition>
+	
+	
+	<definition name="categoryType" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/CategoryType.jsp"></put>
+	</definition>
+	
+	<definition name="subcategoryType" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/SubCategoryType.jsp"></put>
+	</definition>
+	
+	<definition name="addCategoryType" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/AddCategoryType.jsp"></put>
+	</definition>
+	<definition name="addlibrarylocations" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/AddLibraryLocations.jsp"></put>
+	</definition>
+	
+	<definition name="addSubCategoryType" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/AddSubCategoryType.jsp"></put>
+	</definition>
+
+
+	<definition name="subcategoryType1" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/SubcategoryType1.jsp"></put>
+	</definition>
+	
+	<definition name="addsubcategoryType1" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/AddSubcategoryType1.jsp"></put>
+	</definition>
+
+	<definition name="subcatagorytype2" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/SubcategoryType2.jsp"></put>
+	</definition>
+	
+	<definition name="addsubcatagorytype2" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/AddSubCategoryType2.jsp"></put>
+	</definition>
+
+	
+	<definition name="subcategoryType3" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/SubCategoryType3.jsp"></put>
+	</definition>
+	
+	<definition name="addSubCategoryType3" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/AddSubCategoryType3.jsp"></put>
+	</definition>
+	
+	<definition name="IssueStatementBySubScriberType" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp"/>
+		<put name="body" value="/JSP/backOffice/Library/IssueStatementBySubScriberType.jsp"></put>
+	</definition>
+	
+		<definition name="IssueReturnBySubScriberType" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp"/>
+		<put name="body" value="/JSP/backOffice/Library/IssueReturnBySubScriberType.jsp"></put>
+	</definition>
+	
+	<definition name="StockEntryDetailslist" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/StockEntryDetailList.jsp"></put>
+	</definition>
+    <definition name="listpublishersettings" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/listpublishersetting.jsp"></put>
+	</definition>
+	
+	<definition name="listSupplierSettings" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/listSupplierSettings.jsp"></put>
+	</definition>
+    
+<definition name="ExcelUploadforstudentMarks" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Exam/ExcelUploadStudentMarks.jsp"></put>
+	</definition> 
+
+
+
+	<!--  Events Management-->
+	<definition name="EventStudentReg" extends="backOffice_events">
+		<put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Events/EventStudentReg.jsp"></put>
+	</definition>
+	<definition name="VolunteerReg" extends="backOffice_events">
+		<put name="menu" value="/LAYOUT/backOffice_events_menu.jsp"/>
+		<put name="body" value="/JSP/backOffice/Events/volunteerReg.jsp"/>
+	</definition>
+	<definition name="eventReg" extends="backOffice_events">
+		<put name="menu" value="/LAYOUT/backOffice_events_menu.jsp"/>
+		<put name="body" value="/JSP/backOffice/Events/eventReg.jsp"/>
+	</definition>
+	<definition name="CategorySettingEvents" extends="backOffice_events">
+		<put name="menu" value="/LAYOUT/backOffice_events_menu.jsp"/>
+		<put name="body" value="/JSP/backOffice/Events/catSetting.jsp"/>
+	</definition>
+	<definition name="stageSetting" extends="backOffice_events">
+		<put name="menu" value="/LAYOUT/backOffice_events_menu.jsp"/>
+		<put name="body" value="/JSP/backOffice/Events/stageSetting.jsp"/>
+	</definition>
+	
+	
+
+	<!-- END LIBRARY MODULE -->
+	
+	<definition name="laboratory" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/laboratory.jsp"></put>
+	</definition>
+	
+		
+	<definition name="add_lab" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/AddLab.jsp"></put>
+		</definition>
+		
+		<definition name="update_lab" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Settings/UpdateLab.jsp"></put>
+	
+	</definition>
+
+
+        <definition name="progressreport" extends="backOffice_reports">
+	       <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Reports/ProgressReport.jsp"></put>
+	    </definition>
+	    
+	    <definition name="ddreport" extends="backOffice_reports">
+	       <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Reports/DetailsOfDD.jsp"></put>
+	    </definition>
+	    
+	    <definition name="individualprogressreport" extends="backOffice_reports">
+	        <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Reports/IndividaulProgressReport.jsp"></put>
+	    </definition>
+	    
+	    <definition name="stageAllocation" extends="backOffice_events">
+		<put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Events/StageAllocation.jsp"></put>
+	</definition>
+	    
+	    <definition name="programNumbering" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/ProgramNumbering.jsp"></put>
+	    </definition>
+	    
+	    <definition name="programScheduling" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/ProgramScheduling.jsp"></put>
+	    </definition>
+	    
+	     <definition name="eventIdCardPrintSingle" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/eventIdCardPrintSingle.jsp"></put>
+	    </definition>
+	    
+	    <definition name="idCardDesign" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/EventIdCardDesign.jsp"></put>
+	    </definition>
+	    
+	     <definition name="programSetting" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/ProgramSetting.jsp"></put>
+	    </definition>
+	    
+	    <definition name="greenRoomSetting" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/GreenRoomSetting.jsp"></put>
+	    </definition>
+	    
+	    <definition name="prizeLevelSetting" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/PrizeLevelSetting.jsp"></put>
+	    </definition>
+	    
+	    
+	    <definition name="criteriaSetting" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/CriteriaSetting.jsp"></put>
+	    </definition>
+	    
+	    <definition name="marksEntry" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/MarksEntry.jsp"></put>
+	    </definition>
+	    
+	        <definition name="marksEntryNew" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/marksEntryNew.jsp"></put>
+	    </definition>
+	    
+	     <definition name="participantsList" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/ParticipantsList.jsp"></put>
+	    </definition>
+	    
+	    <definition name="ProgrammeScheduleList" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/ProgrammeScheduleList.jsp"></put>
+	    </definition>
+	    <definition name="JudgementSheet" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/JudgementSheet.jsp"></put>
+	    </definition>
+	    <definition name="ChestnumberPrinting" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/ChestnumberPrinting.jsp"></put>
+	    </definition>
+	    <definition name="ResultPrinting" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/ResultPrinting.jsp"></put>
+	    </definition>
+	    <definition name="CertificatePrinting" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/CertificatePrinting.jsp"></put>
+	    </definition>
+	    <definition name="OverallResult" extends="backOffice_events">
+	        <put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		    <put name="body" value="/JSP/backOffice/Events/OverallResult.jsp"></put>
+	    </definition>
+
+	    <definition name="uploadFeeFile" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/UploadFeeCollection.jsp"></put>
+	</definition>
+	
+		    <definition name="uploadtransportfee" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/UploadTransportFeeCollection.jsp"></put>
+	</definition>
+
+
+	    <definition name="assignproject" extends="backOffice_staff">
+	    	<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Teachers/ProjectAssignment.jsp"></put>
+	    </definition>
+	    
+
+	    <definition name="addproject" extends="backOffice_staff">
+	    	<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Teachers/AddProjectAssignment.jsp"></put>
+	    </definition>
+	    
+	     <definition name="updateProject" extends="backOffice_teachers">
+	    	<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+			<put name="body" value="/JSP/backOffice/Teachers/UpdateProject.jsp"></put>
+	    </definition>
+	    
+	    <definition name="NewEventIdCardPrintTemplate" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Events/EventIdTemplate.jsp"></put>
+	</definition>
+	
+	<definition name="PrintEventSingleIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Events/EventSingleIDCardPrint.jsp"></put>
+	</definition>
+	
+	<definition name="PrintPreviewEventMultipleIDCard" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Events/EventsMultipleIDCardPrintPreview.jsp"></put>
+	</definition>
+	
+	<definition name="BookReservationDetailslist" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/ReservationBookListing.jsp"></put>
+	</definition>
+	
+	<definition name="studentphotosheet" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/studentphotosheet.jsp"></put>
+	</definition>
+	<definition name="ListgeneralSettings" extends="backOffice_library">
+       <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp"/>
+          <put name="body" value="/JSP/backOffice/Library/ListgeneralSettings.jsp"/>
+
+</definition>
+	<definition name="JournalSubscription" extends="backOffice_library">
+        <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp"/>
+         <put name="body" value="/JSP/backOffice/Library/JournalSubscription.jsp"/>
+
+</definition>
+<definition name="JournalEntry" extends="backOffice_library">
+<put name="menu" value="/LAYOUT/backOffice_library_menu.jsp"/>
+<put name="body" value="/JSP/backOffice/Library/JournalEntry.jsp"/>
+
+</definition>
+
+<definition name="JournalDailyEntry" extends="backOffice_library">
+<put name="menu" value="/LAYOUT/backOffice_library_menu.jsp"/>
+<put name="body" value="/JSP/backOffice/Library/JournalDailyEntry.jsp"/>
+
+</definition>
+	<definition name="classperformance" extends="backOffice_reports">
+       <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp"/>
+       <put name="body" value="/JSP/backOffice/Reports/ClassPerformance.jsp"/>
+     </definition>
+       <definition name="individualClassPerformace" extends="backOffice_reports">
+          <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp"/>
+          <put name="body" value="/JSP/backOffice/Reports/IndividualClassPerformance.jsp"/>
+      </definition>
+
+      
+      <definition name="editreservation" extends="backOffice_library">
+	    <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/EditReservation.jsp"></put>
+	</definition>
+
+ 
+        <definition name="JournalReport" extends="backOffice_reports">
+          <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp"/>
+          <put name="body" value="/JSP/backOffice/Library\JournalReport.jsp"/>
+      </definition>
+
+    
+    
+    <definition name="stockentryexcelupload" extends="backOffice_reports">
+           <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+          <put name="body" value="/JSP/backOffice/Library\StockEntryExcelUpload.jsp"/>
+      </definition>
+      
+       <definition name="LibraryMostWantedDetails" extends="backOffice_reports">
+           <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+          <put name="body" value="/JSP/backOffice/Library\MostWanted.jsp"/>
+      </definition>
+      
+       <definition name="transportfeereceipts" extends="backOffice_reports">
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Reports\TransportFeeReceipt.jsp"></put>
+	    </definition>
+	    
+
+
+         <definition name="FeeCollectionReport" extends="backOffice_reports">
+          <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp"/>
+          <put name="body" value="/JSP/backOffice/Reports/FeeCollectionReport.jsp"/>
+      </definition>
+      
+      <definition name="BookSearch" extends="backOffice_reports">
+           <put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+          <put name="body" value="/JSP/backOffice/Library\BookSearch.jsp"/>
+      </definition>
+      <definition name="itfeecollection" extends="backOffice_fee">
+<put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp"/>
+<put name="body" value="/JSP/backOffice/Fee/ITFeeCollection.jsp"/>
+</definition>
+      
+      <definition name="tcgeneration" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Student/tcgeneration.jsp"></put>
+	</definition>
+
+<definition name="JournalSubscriptionList" extends="backOffice_library">
+		<put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/JournalSubscriptionList.jsp"></put>
+	</definition>
+
+<definition name="IssueStatementByEntryId" extends="backOffice_library">
+		<put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/IssueStatementByEntryId.jsp"></put> 
+	</definition>
+
+<definition name="ReturnStatementByEntryId" extends="backOffice_library">
+		<put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Library/ReturnStatementByEntryId.jsp"></put> 
+	</definition>
+
+
+
+<definition name="AdmissionLanding" extends="backOffice_admission">
+		<put name="menu" value="/LAYOUT/backOffice_admission.jsp" />
+		<put name="body" value="/LAYOUT/MenusLandingPage.jsp"></put>
+</definition>
+<definition name="SettingLanding" extends="backOffice_setup">
+		<put name="menu" value="/LAYOUT/backOffice_setup_menu.jsp" />
+		<put name="body" value="/LAYOUT/MenusLandingPage.jsp"></put>
+</definition>
+<definition name="StudentLanding" extends="backOffice_student">
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />
+		<put name="body" value="/LAYOUT/MenusLandingPage.jsp"></put>
+</definition>
+<definition name="StaffLanding" extends="backOffice_staff">
+		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />
+		<put name="body" value="/LAYOUT/MenusLandingPage.jsp"></put>
+</definition>
+<definition name="FeeLanding" extends="backOffice_fee">
+		<put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/LAYOUT/MenusLandingPage.jsp"></put>
+</definition>
+<definition name="ExamLanding" extends="backOffice_exam">
+		<put name="menu" value="/LAYOUT/backOffice_exam_menu.jsp" />
+		<put name="body" value="/LAYOUT/MenusLandingPage.jsp"></put>
+</definition>
+<definition name="LeaveLanding" extends="backOffice_teachers">
+		<put name="menu" value="/LAYOUT/backoffice_teacher_menu.jsp" />
+		<put name="body" value="/LAYOUT/MenusLandingPage.jsp"></put>
+</definition>
+<definition name="TransportLanding" extends="backOffice_transport">
+		<put name="menu" value="/LAYOUT/backOffice_transport_menu.jsp" />
+		<put name="body" value="/LAYOUT/MenusLandingPage.jsp"></put>
+</definition>
+<definition name="LibraryLanding" extends="backOffice_library">
+		<put name="menu" value="/LAYOUT/backOffice_library_menu.jsp" />
+		<put name="body" value="/LAYOUT/MenusLandingPage.jsp"></put>
+</definition>
+<definition name="EventLanding" extends="backOffice_events">
+		<put name="menu" value="/LAYOUT/backOffice_events_menu.jsp" />
+		<put name="body" value="/LAYOUT/MenusLandingPage.jsp"></put>
+</definition>
+<definition name="ElectionLanding" extends="backOffice_Election">
+		<put name="menu" value="/LAYOUT/backOffice_Election_menu.jsp" />
+		<put name="body" value="/LAYOUT/MenusLandingPage.jsp"></put>
+</definition>
+
+<definition name="filteringpage" extends="backOffice_reports">		
+	    <put name="menu" value="/LAYOUT/backOffice_reports_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Reports/ReportCard.jsp"></put>		
+</definition>
+
+
+
+
+</tiles-definitions>

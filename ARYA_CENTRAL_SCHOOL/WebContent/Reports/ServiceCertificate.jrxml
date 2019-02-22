@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="841" pageHeight="595" columnWidth="801" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SchoolName" class="java.lang.String"/>
+	<parameter name="AddressLine1" class="java.lang.String"/>
+	<parameter name="AddressLine2" class="java.lang.String"/>
+	<parameter name="AddressLine3" class="java.lang.String"/>
+	<parameter name="TeacherName" class="java.lang.String"/>
+	<parameter name="Designation" class="java.lang.String"/>
+	<parameter name="AcadamicYear" class="java.lang.String"/>
+	<parameter name="Image" class="java.lang.String"/>
+	<parameter name="AddressLine4" class="java.lang.String"/>
+	<parameter name="MobileIcon" class="java.lang.String"/>
+	<parameter name="EmailIcon" class="java.lang.String"/>
+	<parameter name="currentdate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="designation" class="java.lang.String">
+		<fieldDescription><![CDATA[designation]]></fieldDescription>
+	</field>
+	<field name="joiningdate" class="java.lang.String">
+		<fieldDescription><![CDATA[joiningdate]]></fieldDescription>
+	</field>
+	<field name="tfastname" class="java.lang.String">
+		<fieldDescription><![CDATA[tfastname]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="537" splitType="Stretch">
+			<textField>
+				<reportElement x="173" y="15" width="579" height="45" forecolor="#006600"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="26"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SchoolName}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="50" y="27" width="90" height="80"/>
+				<imageExpression><![CDATA[$P{Image}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="0" width="802" height="1"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineColor="#006600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="523"/>
+				<graphicElement>
+					<pen lineWidth="3.5" lineColor="#006600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="801" y="0" width="1" height="523"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineColor="#006600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="523" width="801" height="1"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineColor="#006600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="17" y="14" width="768" height="1"/>
+				<graphicElement>
+					<pen lineColor="#006600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="785" y="15" width="1" height="488"/>
+				<graphicElement>
+					<pen lineColor="#006600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="17" y="14" width="1" height="489"/>
+				<graphicElement>
+					<pen lineColor="#006600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="17" y="503" width="768" height="1"/>
+				<graphicElement>
+					<pen lineColor="#006600"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="328" y="94" width="94" height="18" forecolor="#006600"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Liberation Sans" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AddressLine2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="446" y="94" width="262" height="18" forecolor="#006600"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Liberation Sans" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AddressLine3}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="18" y="123" width="767" height="1" forecolor="#006600"/>
+			</line>
+			<rectangle radius="10">
+				<reportElement x="313" y="134" width="227" height="38"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="323" y="139" width="203" height="28" forecolor="#006600"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="15" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[SERVICE CERTIFICATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="580" y="190" width="47" height="31" forecolor="#006600"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="14" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<textField pattern="dd-MM-yyyy">
+				<reportElement x="627" y="190" width="90" height="31"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" isUnderline="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{currentdate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="64" y="230" width="127" height="40" forecolor="#006600"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[This is to certify that]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="245" width="583" height="25" forecolor="#006600"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[................................................................................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="270" width="76" height="40" forecolor="#006600"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Worked as]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="283" width="632" height="25" forecolor="#006600"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[...................................................................................................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="310" width="114" height="40" forecolor="#006600"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[in our School from]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="330" width="267" height="20" forecolor="#006600"/>
+				<textElement/>
+				<text><![CDATA[...................................................................................................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="310" width="28" height="40" forecolor="#006600"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[to]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="495" y="330" width="279" height="20" forecolor="#006600"/>
+				<textElement/>
+				<text><![CDATA[...................................................................................................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="350" width="462" height="40" forecolor="#006600"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[during the period of his / her service and his / her conduct was good.]]></text>
+			</staticText>
+			<textField pattern="dd-MM-yyyy">
+				<reportElement x="495" y="310" width="277" height="40" forecolor="#333333"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{currentdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="232" width="582" height="40" forecolor="#333333"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tfastname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="271" width="632" height="41" forecolor="#333333"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="178" y="310" width="268" height="40" forecolor="#333333"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Liberation Sans" size="11" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{joiningdate}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="306" y="94" width="22" height="18"/>
+				<imageExpression><![CDATA[$P{MobileIcon}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="422" y="94" width="24" height="18"/>
+				<imageExpression><![CDATA[$P{EmailIcon}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="173" y="58" width="579" height="19" forecolor="#006600"/>
+				<textElement textAlignment="Center">
+					<font fontName="Liberation Sans" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AddressLine4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="77" width="579" height="16" forecolor="#006600"/>
+				<textElement textAlignment="Center">
+					<font fontName="Liberation Sans" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AddressLine1}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="628" y="216" width="95" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dotted" lineColor="#006600"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+</jasperReport>

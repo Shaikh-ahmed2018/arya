@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CourceAndConductCertificate" pageWidth="432" pageHeight="504" columnWidth="392" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="schoolname" class="java.lang.String"/>
+	<parameter name="PropfilePath" class="java.lang.String"/>
+	<parameter name="bracket2" class="java.lang.String"/>
+	<parameter name="bracket3" class="java.lang.String"/>
+	<parameter name="bracket4" class="java.lang.String"/>
+	<parameter name="bracket5" class="java.lang.String"/>
+	<parameter name="stuname" class="java.lang.String"/>
+	<parameter name="fathername" class="java.lang.String"/>
+	<parameter name="accyear" class="java.lang.String"/>
+	<parameter name="laccyear" class="java.lang.String"/>
+	<parameter name="parameter5" class="java.lang.String"/>
+	<parameter name="dob" class="java.lang.String"/>
+	<parameter name="dm" class="java.lang.String"/>
+	<parameter name="conduct" class="java.lang.String"/>
+	<parameter name="y" class="java.lang.String"/>
+	<title>
+		<band height="458" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="28" width="392" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{schoolname}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="41" y="55" width="74" height="62"/>
+				<imageExpression><![CDATA[$P{PropfilePath}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="118" y="55" width="226" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{bracket2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="68" width="176" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{bracket3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="79" width="235" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{bracket4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="157" width="392" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Gill Sans Ultra Bold Condensed" size="12"/>
+				</textElement>
+				<text><![CDATA[COURSE AND CONDUCT CERTIFICATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="211" width="93" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<text><![CDATA[This is certify that]]></text>
+			</staticText>
+			<elementGroup>
+				<line>
+					<reportElement x="117" y="222" width="243" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Dotted"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="107" y="239" width="256" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Dotted"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="276" y="254" width="87" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Dotted"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="64" y="305" width="99" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Dotted"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="38" y="319" width="74" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Dotted"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="123" y="319" width="240" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Dotted"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="28" y="332" width="201" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Dotted"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="208" y="363" width="119" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Dotted"/>
+					</graphicElement>
+				</line>
+			</elementGroup>
+			<staticText>
+				<reportElement x="24" y="227" width="83" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<text><![CDATA[son/daughter of Shri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="243" width="251" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<text><![CDATA[was astudent of this school during the academic year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="259" width="297" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<text><![CDATA[and has passed the All india Scondary School Examination of the ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="275" width="335" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<text><![CDATA[Central Board of Secondary Education, Delhi held during the month of ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="294" width="39" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<text><![CDATA[March]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="294" width="200" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<text><![CDATA[Further certified that his/her date of birth]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="309" width="11" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<text><![CDATA[is]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="307" width="5" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="12"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="322" width="11" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="12"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="320" width="119" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<text><![CDATA[as per school records.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="352" width="180" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<text><![CDATA[His/Her conducted and charecter have been]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="411" width="37" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="411" width="39" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Principal:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="139" y="209" width="118" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stuname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="227" width="135" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fathername}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="242" width="91" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{accyear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="291" width="82" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{laccyear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="92" width="237" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{bracket5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="306" width="67" height="16"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="352" width="91" height="16"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{conduct}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="306" width="100" height="15"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="38" y="320" width="195" height="17"/>
+				<textElement>
+					<font fontName="Vijaya" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{y}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>
