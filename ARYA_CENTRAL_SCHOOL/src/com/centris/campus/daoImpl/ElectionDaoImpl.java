@@ -81,7 +81,9 @@ public class ElectionDaoImpl implements ElectionDao {
 					if (rs != null && (!rs.isClosed())) {
 						rs.close();
 					}
-				
+					if (psmt2 != null && (!psmt2.isClosed())) {
+						psmt2.close();
+					}
 					if (conn != null && (!conn.isClosed())) {
 						conn.close();
 					}
@@ -435,6 +437,9 @@ public String updateGroupdetails( ElectionPojo pojo,String[] schoolHiddenval){
 				if (psmt1 != null && (!psmt1.isClosed())) {
 					psmt1.close();
 				}
+				if (psmt3 != null && (!psmt3.isClosed())) {
+					psmt3.close();
+				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
 				}
@@ -447,6 +452,7 @@ public String updateGroupdetails( ElectionPojo pojo,String[] schoolHiddenval){
 	}catch(Exception e){
 		e.printStackTrace();
 	}
+	
 	return result;
 }
 
@@ -640,6 +646,13 @@ public String saveElectionDetails(ElectionPojo pojo) {
 		if (psmt != null && (!psmt.isClosed())) {
 			psmt.close();
 		}
+		if (psmt2 != null && (!psmt2.isClosed())) {
+			psmt2.close();
+		}
+		if (psmt3 != null && (!psmt3.isClosed())) {
+			psmt3.close();
+		}
+		
 		if (conn != null && (!conn.isClosed())) {
 			conn.close();
 		}
@@ -895,10 +908,7 @@ public String UpdateElectionDetails(ElectionPojo pojo) {
 				else{
 					result="started";
 				}
-				
-				
-				
-				try {
+					try {
 					if (rsn != null && (!rsn.isClosed())) {
 						rsn.close();
 					}
@@ -1022,8 +1032,15 @@ public ArrayList<ElectionVo> getElectionCategoryList(String academicYearID,Strin
 			if (rs != null && (!rs.isClosed())) {
 				rs.close();
 			}
+			if (rs1 != null && (!rs1.isClosed())) {
+				rs1.close();
+			}
+			
 			if (pstmt != null && (!pstmt.isClosed())) {
 				pstmt.close();
+			}
+			if (pstmt1 != null && (!pstmt1.isClosed())) {
+				pstmt1.close();
 			}
 			if (conn != null && (!conn.isClosed())) {
 				conn.close();
@@ -1220,6 +1237,7 @@ public String electionCategoryAddPopUp(ElectionPojo pojo) {
 		logger.error(e.getMessage(), e);
 		e.printStackTrace();
 	}
+	
 	logger.setLevel(Level.DEBUG);
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
@@ -1319,15 +1337,23 @@ public ArrayList<ElectionVo> getElectionCategoryList(String accyear, String grou
 	catch(Exception e){
 		e.printStackTrace();
 	}try {
+		if (rs != null && (!rs.isClosed())) {
+			rs.close();
+		}
 		if (rs2 != null && (!rs2.isClosed())) {
 			rs2.close();
 		}
 		if (rs1 != null && (!rs1.isClosed())) {
 			rs1.close();
 		}
-		pstmt.close();
+		if (pstmt!= null && (!pstmt.isClosed())) {
+			pstmt.close();
+		}
 		if (pstmt1!= null && (!pstmt1.isClosed())) {
 			pstmt1.close();
+		}
+		if (pstmt2!= null && (!pstmt2.isClosed())) {
+			pstmt2.close();
 		}
 		if (conn != null && (!conn.isClosed())) {
 			conn.close();
@@ -1586,8 +1612,15 @@ public ArrayList<ElectionVo> getSingleNomineeDetails(ElectionPojo pojo) {
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+				
+				if (rs1 != null && (!rs1.isClosed())) {
+					rs1.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -1751,9 +1784,13 @@ public ArrayList<ElectionVo> getNominationApprovalList(String academicYear,Strin
 	}catch(Exception e){
 		e.printStackTrace();
 	}try {
+		
 	
 		if (psmt != null && (!psmt.isClosed())) {
 			psmt.close();
+		}
+		if (psmt1 != null && (!psmt1.isClosed())) {
+			psmt1.close();
 		}
 		if (conn != null && (!conn.isClosed())) {
 			conn.close();
@@ -1796,6 +1833,9 @@ public String saveApproval(ElectionPojo pojo) {
 		logger.error(e.getMessage(), e);
 		e.printStackTrace();
 	}try {
+		if (rs != null && (!rs.isClosed())) {
+			rs.close();
+		}
 	 
 		if (psmt != null && (!psmt.isClosed())) {
 			psmt.close();
@@ -2477,14 +2517,7 @@ public String savePollingMachineDetails(ElectionPojo pojo) {
 				result ="Ipexist";
 			}
 		}
-		
-		
-		
-		
-		
-		
-		
-	}
+		}
 		catch(Exception e){
 			e.printStackTrace();
 		}
@@ -2964,7 +2997,16 @@ public ArrayList<ElectionVo> getVoterSearchList(String academicYear,String class
 	}catch(Exception e){
 		e.printStackTrace();
 	}try {
-	
+		
+		if (rs != null && (!rs.isClosed())) {
+			rs.close();
+		}
+		if (rs1 != null && (!rs1.isClosed())) {
+			rs1.close();
+		}
+		if (psmt1 != null && (!psmt1.isClosed())) {
+			psmt1.close();
+		}
 		if (psmt != null && (!psmt.isClosed())) {
 			psmt.close();
 		}
@@ -3461,10 +3503,7 @@ public ArrayList<ElectionVo> getCandidateList(String accyear, String groupId, St
 	ResultSet rs_cadidateList=null;
 	Connection conn = null;
 	int count=0;
-	
-	
-	
-	
+		
 	ArrayList<ElectionVo> collectionVo=new ArrayList<ElectionVo>();
 	
 	try {

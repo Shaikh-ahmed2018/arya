@@ -116,6 +116,24 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(connection!=null && !connection.isClosed()){
+					connection.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -161,6 +179,24 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
+		}
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
 		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -209,6 +245,24 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -236,17 +290,9 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 			conn = JDBCConnection.getSeparateConnection();
 			pstmt = conn
 					.prepareStatement(CommunicateUtilConstants.GET_SECTION_DETAILS);
-			
-			
-			
-			
 			for(int i=0;i<categoryval.length;i++){
 				
 				pstmt.setString(1, categoryval[i]);
-				
-				
-				
-				
 				
 				rs = pstmt.executeQuery();
 				
@@ -267,17 +313,29 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 			
 			
 			
-
-			
-
-			
-
-			
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
 
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -323,6 +381,24 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -366,6 +442,24 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
+		}
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
 		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -411,7 +505,24 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -437,9 +548,7 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 
 		try {
 
-			
-
-			String str = IDGenerator.getPrimaryKeyID("campus_comments");
+				String str = IDGenerator.getPrimaryKeyID("campus_comments");
 			conn = JDBCConnection.getSeparateConnection();
 
 			pstmt = conn.prepareStatement(CommunicateUtilConstants.SAVE_REMARK);
@@ -488,7 +597,21 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-
+		finally{
+			try{
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -579,6 +702,24 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -638,7 +779,24 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 			e.printStackTrace();
 		}
 
-	
+		finally{
+			try{
+				if(rsCheckExamName !=null && !rsCheckExamName.isClosed()){
+					rsCheckExamName.close();
+				}
+				
+				if(pscheckExamName !=null && !pscheckExamName.isClosed()){
+					pscheckExamName.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -730,10 +888,6 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 							}
 							
 							
-							
-							
-							
-							
 							result1 = pstmt1.executeUpdate();
 						}
 					}
@@ -787,6 +941,25 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally{
+			try{
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				if(pstmt1 !=null && !pstmt1.isClosed()){
+					pstmt1.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -908,10 +1081,36 @@ public class CommunicationSettingsDaoImpl implements CommunicationSettingsDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-		
-		
-		
-		
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if(rs1 !=null && !rs1.isClosed()){
+					rs1.close();
+				}
+				if(rs2 !=null && !rs2.isClosed()){
+					rs2.close();
+				}
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				if(pstmt1 !=null && !pstmt1.isClosed()){
+					pstmt1.close();
+				}
+				
+				if(pstmt2 !=null && !pstmt2.isClosed()){
+					pstmt2.close();
+				}
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -1042,19 +1241,7 @@ while(rs.next()){
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 	/*	try {
 			conn = JDBCConnection.getSeparateConnection();
 			pstmt = conn
@@ -1127,7 +1314,36 @@ while(rs.next()){
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}*/
-
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if(rs1 !=null && !rs1.isClosed()){
+					rs1.close();
+				}
+				if(rs2 !=null && !rs2.isClosed()){
+					rs2.close();
+				}
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				if(pstmt1 !=null && !pstmt1.isClosed()){
+					pstmt1.close();
+				}
+				
+				if(pstmt2 !=null && !pstmt2.isClosed()){
+					pstmt2.close();
+				}
+				
+				if(connection!=null && !connection.isClosed()){
+					connection.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -1201,7 +1417,24 @@ while(rs.next()){
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-
+		finally{
+			try{
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				if(pstmt1 !=null && !pstmt1.isClosed()){
+					pstmt1.close();
+				}
+			
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -1209,10 +1442,6 @@ while(rs.next()){
 
 		return result_Status;
 	}
-
-	
-	
-	
 	public ArrayList<UpcomingBdayVo> getBdayListDetailsDao() {
 
 		logger.setLevel(Level.DEBUG);
@@ -1318,6 +1547,36 @@ while(rs.next()){
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace(); 
+		}
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if(rs1 !=null && !rs1.isClosed()){
+					rs1.close();
+				}
+				if(rs2 !=null && !rs2.isClosed()){
+					rs2.close();
+				}
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				if(pstmt1 !=null && !pstmt1.isClosed()){
+					pstmt1.close();
+				}
+				
+				if(pstmt2 !=null && !pstmt2.isClosed()){
+					pstmt2.close();
+				}
+				
+				if(connection!=null && !connection.isClosed()){
+					connection.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
 		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -1432,7 +1691,36 @@ while(rs.next()){
 			e.printStackTrace();
 		}
 		
-	
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if(rs1 !=null && !rs1.isClosed()){
+					rs1.close();
+				}
+				if(rs2 !=null && !rs2.isClosed()){
+					rs2.close();
+				}
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				if(pstmt1 !=null && !pstmt1.isClosed()){
+					pstmt1.close();
+				}
+				
+				if(pstmt2 !=null && !pstmt2.isClosed()){
+					pstmt2.close();
+				}
+				
+				if(connection!=null && !connection.isClosed()){
+					connection.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -1472,7 +1760,24 @@ while(rs.next()){
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-		
+		finally{
+			try{
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				if(pstmt1 !=null && !pstmt1.isClosed()){
+					pstmt1.close();
+				}
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);

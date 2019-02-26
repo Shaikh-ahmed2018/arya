@@ -66,6 +66,22 @@ public class ExamDetailsDaoImpl implements ExamDetailsDao {
 		} catch (Exception e) {
 			
 		}
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		logger.setLevel(Level.DEBUG);
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.START_POINT);
@@ -162,7 +178,9 @@ public String insertGradeSettings(ExamDetailsPojo obj) {
 			e.printStackTrace();
 		}finally {
 			try {
-				
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -210,7 +228,9 @@ public String insertGradeSettings(ExamDetailsPojo obj) {
 		}
 		finally {
 			try {
-				
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -1547,6 +1567,15 @@ public String insertGradeSettings(ExamDetailsPojo obj) {
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
 				}
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
+				}
+				if (pstmt3 != null&& (!pstmt3.isClosed())) {
+					pstmt3.close();
+				}
+				if (pstmt4 != null&& (!pstmt4.isClosed())) {
+					pstmt4.close();
+				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
 				}
@@ -1697,6 +1726,10 @@ public String insertGradeSettings(ExamDetailsPojo obj) {
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
 				}
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
+				}
+				
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
 				}
@@ -1970,6 +2003,7 @@ public String insertGradeSettings(ExamDetailsPojo obj) {
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
 				}
+				
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
 				}
@@ -2219,8 +2253,15 @@ public String insertGradeSettings(ExamDetailsPojo obj) {
 				if (rs != null&& (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null&& (!rs1.isClosed())) {
+					rs1.close();
+				}
+				
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -2289,8 +2330,14 @@ public String insertGradeSettings(ExamDetailsPojo obj) {
 				if (rs != null&& (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null&& (!rs1.isClosed())) {
+					rs1.close();
+				}
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -2445,6 +2492,22 @@ public String insertGradeSettings(ExamDetailsPojo obj) {
 			}
 		}catch(Exception e){
 			e.printStackTrace();
+		}
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
 		}
 		return list;
 	}
@@ -2614,9 +2677,16 @@ public String insertGradeSettings(ExamDetailsPojo obj) {
 				if (rs != null && !rs.isClosed()) {
 					rs.close();
 				}
+				if (rs1 != null && !rs1.isClosed()) {
+					rs1.close();
+				}
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
+				}
+				
 				if (conn != null && !conn.isClosed()) {
 					conn.close();
 				}
@@ -2642,7 +2712,7 @@ public String insertGradeSettings(ExamDetailsPojo obj) {
 		logger.info(JDate.getTimeString(new Date())
 				+ " Control in ExaminationTimeTableServiceIMPL: getEaxmListYear Starting");
 		
-		PreparedStatement pstmt = null,pstmt1=null;
+		PreparedStatement pstmt = null;
 		Connection conn = null;
 		ResultSet rs = null;
 		String result=null;
@@ -2674,8 +2744,30 @@ public String insertGradeSettings(ExamDetailsPojo obj) {
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
+		finally{
+			try {
+				if (rs != null&& (!rs.isClosed())) {
+					rs.close();
+				}
+				if (pstmt != null&& (!pstmt.isClosed())) {
+					pstmt.close();
+				}
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+			} catch (SQLException sqle) {
+
+				logger.error(sqle.getMessage(), sqle);
+				sqle.printStackTrace();
+			} catch (Exception e1) {
+
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			}
+		}
 		
 		return result;
+		
 	}
 
 	@Override
@@ -2685,10 +2777,10 @@ public String insertGradeSettings(ExamDetailsPojo obj) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		PreparedStatement pstmt1 = null;
-		PreparedStatement pstmt2 = null;
+		//PreparedStatement pstmt2 = null;
 		ResultSet rs1 = null;
 		ResultSet rs = null;
-		ResultSet rs2 = null;
+		//ResultSet rs2 = null;
 		ExaminationDetailsVo obj = null;
 		try {
 			obj = new ExaminationDetailsVo();
@@ -2728,8 +2820,15 @@ public String insertGradeSettings(ExamDetailsPojo obj) {
 				if (rs != null&& (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null&& (!rs1.isClosed())) {
+					rs1.close();
+				}
+				
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();

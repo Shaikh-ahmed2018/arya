@@ -64,6 +64,24 @@ public class CreateExaminationDaoImpl {
 		
 		
 	}
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -106,7 +124,24 @@ public class CreateExaminationDaoImpl {
 					exception.getStackTrace();
 					
 				}
-		
+				finally{
+					try{
+						if(resultsetexamname !=null && !resultsetexamname.isClosed()){
+							resultsetexamname.close();
+						}
+						
+						if(pstmt !=null && !pstmt.isClosed()){
+							pstmt.close();
+						}
+						
+						
+						if(conn!=null && !conn.isClosed()){
+							conn.close();
+						}
+					}catch(Exception e){
+						e.printStackTrace();
+					}
+				}
 		
 				JLogger.log(0, JDate.getTimeString(new Date())
 						+ MessageConstants.END_POINT);
@@ -294,6 +329,9 @@ public ExaminationDetailsVo editExamination(ExaminationDetailsVo examvo) {
 		}
 		finally {
 			try {
+				if (rs != null && (!rs.isClosed())) {
+					rs.close();
+				}
 
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
@@ -313,10 +351,6 @@ public ExaminationDetailsVo editExamination(ExaminationDetailsVo examvo) {
 		
 		return getexam;
 	}
-	
-	
-	
-	
 	
 	
 	public String deleteExamination(ExaminationDetailsVo examvo) {
@@ -371,6 +405,24 @@ public ExaminationDetailsVo editExamination(ExaminationDetailsVo examvo) {
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
+		}
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
 		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -437,6 +489,9 @@ public ExaminationDetailsVo editExamination(ExaminationDetailsVo examvo) {
 		
 		finally {
 			try {
+				if (rs != null && (!rs.isClosed())) {
+					rs.close();
+				}
 
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
@@ -546,6 +601,10 @@ public ExaminationDetailsVo editExamination(ExaminationDetailsVo examvo) {
 				e.printStackTrace();
 			}finally {
 				try {
+					if (rsCheckExamName != null
+							&& (!rsCheckExamName.isClosed())) {
+						rsCheckExamName.close();
+					}
 
 					if (pscheckExamName != null
 							&& (!pscheckExamName.isClosed())) {
@@ -606,6 +665,22 @@ public ExaminationDetailsVo editExamination(ExaminationDetailsVo examvo) {
 			} catch (Exception exception) {
 				logger.error(exception.getMessage(), exception);
 				exception.printStackTrace();
+			}
+			finally {
+				try {
+					
+
+					if (pstmt != null
+							&& (!pstmt.isClosed())) {
+						pstmt.close();
+					}
+					if (conn != null && (!conn.isClosed())) {
+						conn.close();
+					}
+				} catch (Exception e) {
+					logger.error(e.getMessage(), e);
+					e.printStackTrace();
+				}
 			}
 			return result;
 			

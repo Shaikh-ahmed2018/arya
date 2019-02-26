@@ -102,8 +102,14 @@ public class createFeeReportDaoImpl {
 					if (rs != null&& (!rs.isClosed())) {
 						rs.close();
 					}
+					if (rs1 != null&& (!rs1.isClosed())) {
+						rs1.close();
+					}
 					if (pstmt != null&& (!pstmt.isClosed())) {
 						pstmt.close();
+					}
+					if (pstmt1 != null&& (!pstmt1.isClosed())) {
+						pstmt1.close();
 					}
 					if (conn != null && (!conn.isClosed())) {
 						conn.close();
@@ -126,12 +132,7 @@ public class createFeeReportDaoImpl {
 					+ " Control in createFeeReportDaoImpl : expandAll : Ending");
 			
 			return list;
-		
-		
-		
-		
 	
-
 	}
 
 	public static ArrayList<feeReportVO> getclasssectionDetails(feeReportVO obj) {

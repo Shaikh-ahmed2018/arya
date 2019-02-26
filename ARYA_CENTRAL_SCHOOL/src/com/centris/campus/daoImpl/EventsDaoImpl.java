@@ -373,11 +373,11 @@ import com.itextpdf.text.log.SysoLogger;
 		psmt.setString(1, pojo.getAccyear());
 		psmt.setString(2, pojo.getLocation());
 		psmt.setString(3, "%" + pojo.getSaerchTerm() + "%");
-	psmt.setString(4, "%" + pojo.getSaerchTerm() + "%");
-	psmt.setString(5, "%" + pojo.getSaerchTerm() + "%");
-	psmt.setString(6, "%" + pojo.getSaerchTerm() + "%");
-	psmt.setString(7, "%" + pojo.getSaerchTerm() + "%");
-	psmt.setString(8, "%" + pojo.getSaerchTerm() + "%");
+		psmt.setString(4, "%" + pojo.getSaerchTerm() + "%");
+		psmt.setString(5, "%" + pojo.getSaerchTerm() + "%");
+		psmt.setString(6, "%" + pojo.getSaerchTerm() + "%");
+		psmt.setString(7, "%" + pojo.getSaerchTerm() + "%");
+		psmt.setString(8, "%" + pojo.getSaerchTerm() + "%");
 	System.out.println("listing page++++++" + psmt);
 	rs = psmt.executeQuery();
 	while (rs.next()) {
@@ -601,7 +601,13 @@ catch (Exception e) {
 	}
 	finally{
 		try{
-			if(psmt!=null && !(psmt.isClosed())){psmt.close();}if(conn!=null && (conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+			if(psmt!=null && !(psmt.isClosed())){psmt.close();}
+			if(conn!=null && (conn.isClosed())){conn.close();}
+			}
+		catch(Exception e){e.printStackTrace();
 			}
 	}
 	JLogger.log(0, JDate.getTimeString(new Date())
@@ -637,6 +643,10 @@ catch (Exception e) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if (rs != null && (!rs.isClosed())) {
+				rs.close();
+			}
+			
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -683,6 +693,9 @@ catch (Exception e) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if (rs != null && (!rs.isClosed())) {
+				rs.close();
+			}
 			if (psmt != null && !(psmt.isClosed())) {
 				psmt.close();
 			}
@@ -728,6 +741,9 @@ catch (Exception e) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if (rs != null && (!rs.isClosed())) {
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -837,8 +853,14 @@ catch (Exception e) {
 		e.printStackTrace();
 	}finally {
 		try {
+			if (rs1 != null && (!rs1.isClosed())) {
+				rs1.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
+			}
+			if (psmt1 != null && (!psmt1.isClosed())) {
+				psmt1.close();
 			}
 			if (conn != null && (!conn.isClosed())) {
 				conn.close();
@@ -855,7 +877,7 @@ catch (Exception e) {
 		return result;
 	}
 	
-			public ArrayList<eventRegVo> getPrizeCategoryName(String id) {
+public ArrayList<eventRegVo> getPrizeCategoryName(String id) {
 				logger.setLevel(Level.DEBUG);
 				JLogger.log(0, JDate.getTimeString(new Date())
 						+ MessageConstants.START_POINT);
@@ -888,6 +910,9 @@ catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && (!rs.isClosed())) {
+					rs.close();
+				}
 				if (psmt != null && (!psmt.isClosed())) {
 					psmt.close();
 				}
@@ -914,7 +939,8 @@ catch (Exception e) {
 		Connection conn = null;
 		PreparedStatement psmt =null;
 		PreparedStatement pstmt1 = null;
-		ResultSet rs,rs1 = null;
+		ResultSet rs1 = null;
+		ResultSet rs=null;
 		ArrayList<eventRegVo> list=new ArrayList<eventRegVo>();
 		try{
 			conn=JDBCConnection.getSeparateConnection();
@@ -960,7 +986,17 @@ catch (Exception e) {
 		}
 		finally{
 			try{
-				if(psmt!=null && (!psmt.isClosed())){psmt.close();}if(conn!=null && (!conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if(rs1 !=null && !rs1.isClosed()){
+					rs1.close();
+				}
+				
+				if(psmt!=null && (!psmt.isClosed())){psmt.close();}
+				if(pstmt1!=null && (!psmt.isClosed())){pstmt1.close();}
+				if(conn!=null && (!conn.isClosed())){conn.close();}}
+				catch(Exception e){e.printStackTrace();
 				}
 		}
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -1048,6 +1084,9 @@ catch (Exception e) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -1206,6 +1245,9 @@ catch (Exception e) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -1321,6 +1363,9 @@ catch (Exception e) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null || !(psmt.isClosed())) {
 				psmt.close();
 			}
@@ -1365,6 +1410,9 @@ catch (Exception e) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -1391,8 +1439,8 @@ catch (Exception e) {
 				+ " Control in EventsDaoImpl: getstageSettingList Starting");
 	Connection conn = null;
 	PreparedStatement psmt = null;
-	PreparedStatement pstmt1 = null;
-	ResultSet rs, rs1 = null;
+	//PreparedStatement pstmt1 = null;
+	ResultSet rs= null;
 	ArrayList<eventRegVo> list = new ArrayList<eventRegVo>();
 	try {
 		conn = JDBCConnection.getSeparateConnection();
@@ -1416,6 +1464,9 @@ catch (Exception e) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -1552,6 +1603,9 @@ catch (Exception e) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null && (!psmt.isClosed())){psmt.close();}if(conn!=null && (!conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -1659,17 +1713,31 @@ catch (Exception e) {
 	}catch(Exception e){
 		e.printStackTrace();
 	}
-	
+	finally{
+		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+			if(psmt !=null && !psmt.isClosed()){
+				psmt.close();
+			}
+			if(psmt1 !=null && !psmt1.isClosed()){
+				psmt1.close();
+			}
+			if(conn!=null && !conn.isClosed()){
+				conn.close();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
 	logger.info(JDate.getTimeString(new Date())
 			+ " Control in EventsDaoImpl : saveGreenRoom Ending");
 		return result;
 	}
-	
-	
-	
-	public ArrayList<eventRegVo> getGreenRoom(String id) {
+		public ArrayList<eventRegVo> getGreenRoom(String id) {
 		logger.setLevel(Level.DEBUG);
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.START_POINT);
@@ -1695,6 +1763,9 @@ catch (Exception e) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -1721,8 +1792,8 @@ catch (Exception e) {
 				+ " Control in EventsDaoImpl: getGreenRoomList Starting");
 	Connection conn = null;
 	PreparedStatement psmt = null;
-	PreparedStatement pstmt1 = null;
-	ResultSet rs, rs1 = null;
+	//PreparedStatement pstmt1 = null;
+	ResultSet rs = null;
 	ArrayList<eventRegVo> list = new ArrayList<eventRegVo>();
 	try {
 		conn = JDBCConnection.getSeparateConnection();
@@ -1746,6 +1817,10 @@ catch (Exception e) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if (rs != null && (!rs.isClosed())) {
+				rs.close();
+			}
+			
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -1835,6 +1910,9 @@ catch (Exception e) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -1861,7 +1939,7 @@ catch (Exception e) {
 	Connection conn =null;
 	PreparedStatement psmt= null;
 	String result=null;
-	ResultSet rs,rsn =null;
+	ResultSet rsn =null;
 	int count=0;
 	String id=null;
 	try{
@@ -1975,6 +2053,9 @@ catch (Exception e) {
 	}
 	finally{
 		try{
+			if(rsn !=null && !rsn.isClosed()){
+				rsn.close();
+			}
 			if(psmt!=null && (!psmt.isClosed())){psmt.close();}if(conn!=null && (!conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -2013,6 +2094,9 @@ catch (Exception e) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null && (!psmt.isClosed())){psmt.close();}if(conn!=null && (!conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -2069,6 +2153,9 @@ catch (Exception e) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null && (!psmt.isClosed())){psmt.close();}if(conn!=null && (!conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -2110,6 +2197,9 @@ catch (Exception e) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -2168,6 +2258,9 @@ catch (Exception e) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -2224,7 +2317,22 @@ public ArrayList<eventRegVo> getProgramSettingList(String evId,String catId, Str
 	}catch(Exception e){
 		e.printStackTrace();
 	}
-
+	
+	 finally {
+			try {
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if (psmt != null && (!psmt.isClosed())) {
+					psmt.close();
+				}
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 	
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
@@ -2300,6 +2408,9 @@ public ArrayList<eventRegVo> getProgramSettingList(String evId,String catId, Str
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null || !(psmt.isClosed())){psmt.close();}if(conn!=null || !(conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -2351,6 +2462,9 @@ public ArrayList<eventRegVo> getDataforUpdateProgram(String id) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null && (!psmt.isClosed())){psmt.close();}if(conn!=null && (!conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -2370,8 +2484,8 @@ public ArrayList<eventRegVo> getDataforUpdateProgram(String id) {
 						+ " Control in EventsDaoImpl: getstageSettingList Starting");
 			Connection conn = null;
 			PreparedStatement psmt = null;
-			PreparedStatement pstmt1 = null;
-			ResultSet rs, rs1 = null;
+			//PreparedStatement pstmt1 = null;
+			ResultSet rs= null;
 			ArrayList<eventRegVo> list = new ArrayList<eventRegVo>();
 			
 			try {
@@ -2427,6 +2541,9 @@ public ArrayList<eventRegVo> getDataforUpdateProgram(String id) {
 				e.printStackTrace();
 			} finally {
 				try {
+					if(rs !=null && !rs.isClosed()){
+						rs.close();
+					}
 					if (psmt != null && (!psmt.isClosed())) {
 						psmt.close();
 					}
@@ -2473,6 +2590,9 @@ public ArrayList<eventRegVo> getDataforUpdateProgram(String id) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null && (!psmt.isClosed())){psmt.close();}if(conn!=null && (!conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -2557,6 +2677,9 @@ public ArrayList<eventRegVo> getDataforUpdateProgram(String id) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null && (!psmt.isClosed())){psmt.close();}if(conn!=null && (!conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -2596,6 +2719,9 @@ public ArrayList<eventRegVo> getDataforUpdateProgram(String id) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -2643,6 +2769,9 @@ public ArrayList<eventRegVo> getDataforUpdateProgram(String id) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null || !(psmt.isClosed())){
 				psmt.close();
 			}
@@ -2771,6 +2900,9 @@ public ArrayList<eventRegVo> getDataforUpdateProgram(String id) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -2795,11 +2927,15 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	logger.info(JDate.getTimeString(new Date())
 			+ " Control in EventsDaoImpl: saveStudentReg Starting");
 	Connection conn=null;
-	PreparedStatement psmt,psmt5= null;
-	PreparedStatement psmt2,psmt6,psmt3,psmt4= null;
+	PreparedStatement psmt= null;
+	PreparedStatement psmt5= null;
+	PreparedStatement psmt2= null;
+	PreparedStatement psmt6= null;
+	PreparedStatement psmt3= null;
+	PreparedStatement psmt4= null;
 	String result =null;
-	ResultSet rs1;
-	ResultSet rs3;
+	ResultSet rs1=null;
+	ResultSet rs3=null;
 	int rs2 = 0;
 	String key=null;
 	int count =0;
@@ -2945,6 +3081,39 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 				catch(Exception e){
 					e.printStackTrace();
 				}
+	finally{
+		try{
+			if(rs1 !=null && !rs1.isClosed()){
+				rs1.close();
+			}
+			if( rs3 !=null && ! rs3.isClosed()){
+				 rs3.close();
+			}
+			if(psmt !=null && !psmt.isClosed()){
+				psmt.close();
+			}
+			if(psmt2 !=null && !psmt2.isClosed()){
+				psmt2.close();
+			}
+			if(psmt3 !=null && !psmt3.isClosed()){
+				psmt3.close();
+			}
+			if(psmt4 !=null && !psmt4.isClosed()){
+				psmt4.close();
+			}
+			if(psmt5 !=null && !psmt5.isClosed()){
+				psmt5.close();
+			}
+			if(psmt6 !=null && !psmt6.isClosed()){
+				psmt6.close();
+			}
+			if(conn!=null && !conn.isClosed()){
+				conn.close();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
 				JLogger.log(0, JDate.getTimeString(new Date())
 						+ MessageConstants.END_POINT);
 				logger.info(JDate.getTimeString(new Date())
@@ -2975,6 +3144,21 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 				if(psmt!=null || psmt.isClosed()){psmt.close();}if(conn!=null || conn.isClosed()){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 		}*/
+		finally{
+			try{
+				
+				if(psmt !=null && !psmt.isClosed()){
+					psmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -3069,8 +3253,8 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 				+ " Control in EventsDaoImpl: getPrizeSettingList Starting");
 	Connection conn = null;
 	PreparedStatement psmt =null;
-	PreparedStatement pstmt1 = null;
-	ResultSet rs,rs1 = null;
+	//PreparedStatement pstmt1 = null;
+	ResultSet rs= null;
 	ArrayList<eventRegVo> list=new ArrayList<eventRegVo>();
 	System.out.println("inside getPrizeSettingList DaoImpl>>>>>");
 	try{
@@ -3101,6 +3285,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null && (!psmt.isClosed())){psmt.close();}if(conn!=null && (!conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -3147,6 +3334,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null && (!psmt.isClosed())){psmt.close();}if(conn!=null && (!conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -3231,6 +3421,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -3279,6 +3472,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -3328,6 +3524,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -3548,7 +3747,33 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}catch(Exception e){
 		e.printStackTrace();
 	
-	}		JLogger.log(0, JDate.getTimeString(new Date())
+	}
+	finally {
+		
+		try {
+			if (rs != null && (!rs.isClosed())) {
+	
+				rs.close();
+			}
+			if (psmt != null && (!psmt.isClosed())) {
+	
+				psmt.close();
+			}
+			if (conn != null && !conn.isClosed()) {
+				conn.close();
+			}
+		} catch (SQLException e) {
+	
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		} catch (Exception e1) {
+	
+			logger.error(e1.getMessage(), e1);
+			e1.printStackTrace();
+		}
+	}
+	
+	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
 	logger.info(JDate.getTimeString(new Date())
 			+ " Control in EventsDaoImpl : getcategorylist Ending");
@@ -3583,6 +3808,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null || psmt.isClosed()) {
 				psmt.close();
 			}
@@ -3663,6 +3891,21 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		}
 	}catch(Exception e){
 		e.printStackTrace();
+	}
+	finally{
+		try{
+			
+			if(psmt !=null && !psmt.isClosed()){
+				psmt.close();
+			}
+			
+			
+			if(conn!=null && !conn.isClosed()){
+				conn.close();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
@@ -3761,6 +4004,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 					e.printStackTrace();
 				} finally {
 					try {
+						if(rs !=null && !rs.isClosed()){
+							rs.close();
+						}
 						if (psmt != null || psmt.isClosed()) {
 							psmt.close();
 						}
@@ -3806,6 +4052,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 			e.printStackTrace();
 		} finally {
 			try {
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
 				if (psmt != null || psmt.isClosed()) {
 					psmt.close();
 				}
@@ -3848,6 +4097,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 			e.printStackTrace();
 		}finally{
 			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
 				if(psmt!=null || psmt.isClosed()){psmt.close();}if(conn!=null || conn.isClosed()){conn.close();}}catch(Exception e){e.printStackTrace();
 				}
 		}
@@ -3862,10 +4114,12 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 				+ MessageConstants.START_POINT);
 		logger.info(JDate.getTimeString(new Date())
 				+ " Control in EventsDaoImpl : getEventStudentRegList Starting");
-	PreparedStatement psmt,psmt1,psmt2 = null;
+	PreparedStatement psmt= null;
+	//PreparedStatement psmt1 = null;
+	//PreparedStatement psmt2 = null;
 	Connection conn= null;
 	ResultSet rs = null;
-	ResultSet rs2 = null;
+	//ResultSet rs2 = null;
 	ArrayList<eventRegVo> mainList=new ArrayList<eventRegVo>();
 	try{
 		conn=JDBCConnection.getSeparateConnection();
@@ -3879,7 +4133,7 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		psmt.setString(6, accId);
 	
 		System.out.println("studentData 0--------getEventStudentRegListIndividual88888888 ********---------- -individual"+psmt);
-	rs=psmt.executeQuery();
+		rs=psmt.executeQuery();
 	
 	while(rs.next()){
 		eventRegVo vo=new eventRegVo();
@@ -3901,7 +4155,15 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		e.printStackTrace();
 	}
 	
-	
+	finally{
+		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+			
+			if(psmt!=null || psmt.isClosed()){psmt.close();}if(conn!=null || conn.isClosed()){conn.close();}}catch(Exception e){e.printStackTrace();
+			}
+	}
 	logger.setLevel(Level.DEBUG);
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
@@ -3952,6 +4214,10 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+			
 			if(psmt!=null || psmt.isClosed()){psmt.close();}if(conn!=null || conn.isClosed()){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -3971,9 +4237,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	
 	Connection conn =null;
 	PreparedStatement psmt = null;
-	PreparedStatement psmt2 =null;
+	//PreparedStatement psmt2 =null;
 	ResultSet rs =null;
-	ResultSet rs1 =null;
+	//ResultSet rs1 =null;
 	ArrayList<eventRegVo> mainList=new ArrayList<eventRegVo>();
 	try{
 		conn=JDBCConnection.getSeparateConnection();
@@ -4059,6 +4325,7 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
+			
 			if(psmt!=null || psmt.isClosed()){psmt.close();}if(conn!=null || conn.isClosed()){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -4106,6 +4373,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null || psmt.isClosed()){psmt.close();}if(conn!=null || conn.isClosed()){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -4144,6 +4414,7 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
+			
 			if(psmt!=null || psmt.isClosed()){psmt.close();}if(conn!=null || conn.isClosed()){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -4272,6 +4543,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null || psmt.isClosed()){psmt.close();}if(conn!=null || conn.isClosed()){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -4309,6 +4583,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null || psmt.isClosed()) {
 				psmt.close();
 			}
@@ -4352,6 +4629,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null || psmt.isClosed()) {
 				psmt.close();
 			}
@@ -4401,6 +4681,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null || psmt.isClosed()){psmt.close();}if(conn!=null || conn.isClosed()){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -4504,6 +4787,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null || psmt.isClosed()) {
 				psmt.close();
 			}
@@ -4593,6 +4879,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null || psmt.isClosed()) {
 				psmt.close();
 			}
@@ -4620,7 +4909,8 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	PreparedStatement psmt =null;
 	PreparedStatement pstmt1 = null;
 	PreparedStatement getstu=null;
-	ResultSet rs,rs1 = null;
+	ResultSet rs = null;
+	ResultSet rs1 = null;
 	String studentList[]=null;
 	ArrayList<eventRegVo> list=new ArrayList<eventRegVo>();
 	System.out.println("inside getProgramNumberingDetails DaoImpl>>>>>");
@@ -4670,6 +4960,12 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+			if(rs1 !=null && !rs1.isClosed()){
+				rs1.close();
+			}
 			if(psmt!=null && psmt.isClosed()){
 				
 				
@@ -4793,8 +5089,10 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		finally{
 			try{
 				if(rs!=null && !rs.isClosed()){rs.close();}
+				if(rs1!=null && !rs1.isClosed()){rs1.close();}
 				if(rs2!=null && !rs2.isClosed()){rs2.close();}
 				if(psmt!=null && !psmt.isClosed()){psmt.close();}
+				if(psmt1!=null && !psmt1.isClosed()){psmt1.close();}
 				if(psmt2!=null && !psmt2.isClosed()){psmt2.close();}
 				if(conn!=null && conn.isClosed()){conn.close();}
 				}
@@ -4835,6 +5133,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && !psmt.isClosed()) {
 				psmt.close();
 			}
@@ -4924,10 +5225,6 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		
 		
 	}      
-		
-	
-	
-	
 	}catch(Exception e){
 		e.printStackTrace();
 	}
@@ -4969,7 +5266,7 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		logger.info(JDate.getTimeString(new Date())
 				+ " Control in EventsDaoImpl: saveChestNumber Starting");
 		Connection conn=null;
-		PreparedStatement psmt=null,psmt1=null,psmt2=null;
+		PreparedStatement psmt=null;
 		ResultSet rs=null;
 		String result =null;
 		int count=0,duplicat=0;
@@ -5140,9 +5437,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	String studentList[]=null;
 	Connection conn =null;
 	PreparedStatement psmt= null;
-	PreparedStatement ps=null;
+	//PreparedStatement ps=null;
 	ResultSet rs =null;
-	ResultSet rs1 =null;
+	//ResultSet rs1 =null;
 	String stage=null;
 	ArrayList<eventRegVo> list = new ArrayList<eventRegVo>();
 	try{
@@ -5325,7 +5622,7 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 				+ MessageConstants.START_POINT);
 		logger.info(JDate.getTimeString(new Date())
 				+ " Control in EventsDaoImpl : getEventStudentRegList Starting");
-	PreparedStatement psmt,psmt1,psmt2,psmt3 = null;
+	PreparedStatement psmt=null,psmt1=null,psmt2=null,psmt3 = null;
 	Connection conn= null;
 	ResultSet rs = null;
 	ResultSet rs2 = null;
@@ -5423,7 +5720,37 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}catch(Exception e){
 		e.printStackTrace();
 	}
-	
+	finally{
+		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+			if(rs2 !=null && !rs2.isClosed()){
+				rs2.close();
+			}
+			if(rs3 !=null && !rs3.isClosed()){
+				rs3.close();
+			}
+			
+			if(psmt !=null && !psmt.isClosed()){
+				psmt.close();
+			}
+			if(psmt1 !=null && !psmt1.isClosed()){
+				psmt1.close();
+			}
+			if(psmt2 !=null && !psmt2.isClosed()){
+				psmt2.close();
+			}
+			if(psmt3 !=null && !psmt3.isClosed()){
+				psmt3.close();
+			}
+			if(conn!=null && !conn.isClosed()){
+				conn.close();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
 	logger.setLevel(Level.DEBUG);
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
@@ -5441,7 +5768,7 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 				+ " Control in EventsDaoImpl: saveProgramNumberingDetails Starting");
 	Connection conn=null;
 	PreparedStatement psmt =null;
-	PreparedStatement psmt1,psmt2 =null;
+	PreparedStatement psmt1=null,psmt2 =null;
 	String result =null;
 	int rs=0;
 	int count1=0;
@@ -5484,6 +5811,14 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 			if(psmt!=null || psmt.isClosed())
 			{
 				psmt.close();
+			}
+			if(psmt1!=null || psmt1.isClosed())
+			{
+				psmt1.close();
+			}
+			if(psmt2!=null || psmt2.isClosed())
+			{
+				psmt2.close();
 			}
 			if(conn!=null || conn.isClosed())
 			{conn.close();
@@ -5529,6 +5864,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if(psmt!=null && (!psmt.isClosed())){psmt.close();}if(conn!=null || conn.isClosed()){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -5549,7 +5887,7 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	Connection conn = null;
 	PreparedStatement psmt =null;
 	PreparedStatement pstmt1 = null;
-	ResultSet rs,rs1 = null;
+	ResultSet rs=null,rs1 = null;
 	String studentList[]=null;
 	ArrayList<eventRegVo> list=new ArrayList<eventRegVo>();
 	
@@ -5582,6 +5920,16 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+			if(rs1 !=null && !rs1.isClosed()){
+				rs1.close();
+			}
+			if(psmt!=null || psmt.isClosed()){
+				psmt.close();
+			}
+			
 			if(pstmt1!=null || pstmt1.isClosed()){
 				pstmt1.close();
 			}
@@ -5630,7 +5978,24 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}catch(Exception e){
 		e.printStackTrace();
 	
-	}		JLogger.log(0, JDate.getTimeString(new Date())
+	}	
+	finally{
+		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+			if(psmt !=null && !psmt.isClosed()){
+				psmt.close();
+			}
+			
+			if(conn!=null && !conn.isClosed()){
+				conn.close();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
 	logger.info(JDate.getTimeString(new Date())
 			+ " Control in EventsDaoImpl : getcategorylist Ending");
@@ -5769,6 +6134,10 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+			
 			if(psmt!=null || !(psmt.isClosed())){psmt.close();}if(conn!=null || !(conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
 	}
@@ -5805,6 +6174,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null || !(psmt.isClosed())) {
 				psmt.close();
 			}
@@ -5855,7 +6227,24 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}catch(Exception e){
 		e.printStackTrace();
 	
-	}		JLogger.log(0, JDate.getTimeString(new Date())
+	}		
+	
+	finally{
+		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+			if(psmt !=null && !psmt.isClosed()){
+				psmt.close();
+			}
+	     	if(conn!=null && !conn.isClosed()){
+				conn.close();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
 	logger.info(JDate.getTimeString(new Date())
 			+ " Control in EventsDaoImpl : getstagelist Ending");
@@ -5900,6 +6289,22 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}catch(Exception e){
 		e.printStackTrace();
 	
+	}
+	finally{
+		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+			if(psmt !=null && !psmt.isClosed()){
+				psmt.close();
+			}
+			
+			if(conn!=null && !conn.isClosed()){
+				conn.close();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
@@ -5978,6 +6383,13 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+			if(rs2 !=null && !rs2.isClosed()){
+				rs2.close();
+			}
+			
 			if(psmt!=null || !(psmt.isClosed())){psmt.close();}
 			if(psmt1!=null || !(psmt1.isClosed())){psmt1.close();}if(psmt2!=null || !(psmt2.isClosed())){psmt2.close();}if(conn!=null || !(conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
 			}
@@ -6026,6 +6438,9 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		e.printStackTrace();
 	} finally {
 		try {
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -6190,7 +6605,38 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}
 	finally{
 		try{
-			if(psmt!=null || !(psmt.isClosed())){psmt.close();}if(conn!=null || !(conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
+
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+
+			if(rs1 !=null && !rs1.isClosed()){
+				rs.close();
+			}
+
+			if(rs2 !=null && !rs2.isClosed()){
+				rs2.close();
+			}
+
+			if(rs3 !=null && !rs3.isClosed()){
+				rs3.close();
+			}
+
+			if(rs4 !=null && !rs4.isClosed()){
+				rs4.close();
+			}
+
+			if(rs5 !=null && !rs5.isClosed()){
+				rs5.close();
+			}
+			if(psmt!=null || !(psmt.isClosed())){psmt.close();}
+			if(psmt1!=null || !(psmt1.isClosed())){psmt1.close();}
+			if(psmt2!=null || !(psmt2.isClosed())){psmt2.close();}
+			if(psmt3!=null || !(psmt3.isClosed())){psmt3.close();}
+			if(psmt4!=null || !(psmt4.isClosed())){psmt4.close();}
+			if(psmt5!=null || !(psmt5.isClosed())){psmt5.close();}
+			if(conn!=null || !(conn.isClosed())){conn.close();}}
+			catch(Exception e){e.printStackTrace();
 			}
 	}
 	JLogger.log(0, JDate.getTimeString(new Date())
@@ -6209,7 +6655,7 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 				+ " Control in EventsDaoImpl: getStageNameListGroup Starting");
 	Connection conn =null;
 	PreparedStatement psmt= null;
-	ResultSet rs,rs2 =null;
+	ResultSet rs=null,rs2 =null;
 	ArrayList<eventRegVo> mainList=new ArrayList<eventRegVo>();
 	try{
 		conn=JDBCConnection.getSeparateConnection();
@@ -6249,6 +6695,14 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		
 		finally{
 			try{
+
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+
+				if(rs2 !=null && !rs2.isClosed()){
+					rs2.close();
+				}
 				if(psmt!=null || !(psmt.isClosed())){psmt.close();}if(conn!=null || !(conn.isClosed())){conn.close();}}catch(Exception e){e.printStackTrace();
 				}
 		}
@@ -6287,17 +6741,7 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	
 	} catch (Exception e) {
 		e.printStackTrace();
-	} finally {
-		try {
-			if (psmt != null && (!psmt.isClosed())) {
-				psmt.close();
-			}
-			if (conn != null && (!conn.isClosed())) {
-				conn.close();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
+	}  finally {
 			try {if (rs != null || (!rs.isClosed())) {
 				rs.close();
 			}
@@ -6311,7 +6755,7 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 				e.printStackTrace();
 			}
 		}
-	}
+	
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
 	logger.info(JDate.getTimeString(new Date())
@@ -9419,6 +9863,11 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 			rs1.close();
 		
 	}
+		if (rs2 != null && !rs2.isClosed()) {
+			
+			rs2.close();
+		
+	}
 		
 		if (psmt != null && !psmt.isClosed()) {
 		
@@ -9430,6 +9879,11 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 				psmt1.close();
 			
 		}
+		if (psmt2 != null && !psmt2.isClosed()) {
+			
+			psmt2.close();
+		
+	}
 		if (conn != null && !conn.isClosed()) {
 			
 				conn.close();
@@ -9463,10 +9917,7 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		int  count=0;
 		try {
 			    conn = JDBCConnection.getSeparateConnection();
-			    
-			    
-				
-					psmt2=conn.prepareStatement("SELECT * FROM `campus_event_programcreation` WHERE event_id=?");
+			    	psmt2=conn.prepareStatement("SELECT * FROM `campus_event_programcreation` WHERE event_id=?");
 					psmt2.setString(1, eventID);
 					rs2=psmt2.executeQuery();
 					while(rs2.next()) {
@@ -9558,6 +10009,11 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 				rs1.close();
 			
 		}
+			if (rs2 != null && !rs2.isClosed()) {
+				
+				rs2.close();
+			
+		}
 			
 			if (psmt != null && !psmt.isClosed()) {
 			
@@ -9569,6 +10025,11 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 					psmt1.close();
 				
 			}
+			if (psmt2 != null && !psmt2.isClosed()) {
+				
+				psmt2.close();
+			
+		}
 			if (conn != null && !conn.isClosed()) {
 				
 					conn.close();
@@ -9614,6 +10075,10 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 		e.printStackTrace();
 	} finally {
 		try {
+
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
 			if (psmt != null && (!psmt.isClosed())) {
 				psmt.close();
 			}
@@ -9637,7 +10102,7 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 				+ MessageConstants.START_POINT);
 		logger.info(JDate.getTimeString(new Date())
 				+ " Control in EventsDaoImpl : getEventVolanteerIdPrintList Starting");
-	PreparedStatement psmt,psmt1,psmt2,psmt3 = null;
+	PreparedStatement psmt=null,psmt1=null,psmt2=null,psmt3 = null;
 	Connection conn= null;
 	ResultSet rs = null;
 	ResultSet rs2 = null;
@@ -9711,6 +10176,38 @@ public String saveEventStudentReg(eventRegPojo pojo) {
 	}catch(Exception e){
 		e.printStackTrace();
 	}
+	finally{
+		try{
+			if(rs !=null && !rs.isClosed()){
+				rs.close();
+			}
+			if(rs2 !=null && !rs2.isClosed()){
+				rs2.close();
+			}
+			if(rs3 !=null && !rs3.isClosed()){
+				rs3.close();
+			}
+			
+			if(psmt !=null && !psmt.isClosed()){
+				psmt.close();
+			}
+			if(psmt1 !=null && !psmt1.isClosed()){
+				psmt1.close();
+			}
+			if(psmt2 !=null && !psmt2.isClosed()){
+				psmt2.close();
+			}
+			if(psmt3 !=null && !psmt3.isClosed()){
+				psmt3.close();
+			}
+			if(conn!=null && !conn.isClosed()){
+				conn.close();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	
 	
 	logger.setLevel(Level.DEBUG);
 	JLogger.log(0, JDate.getTimeString(new Date())

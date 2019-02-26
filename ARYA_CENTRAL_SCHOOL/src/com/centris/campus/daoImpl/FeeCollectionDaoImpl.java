@@ -414,8 +414,28 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 					if (rs != null&& (!rs.isClosed())) {
 						rs.close();
 					}
+					if (rs_getfeeInformation != null&& (!rs_getfeeInformation.isClosed())) {
+						rs_getfeeInformation.close();
+					}
+					
+					if (rs_collection_count != null&& (!rs_collection_count.isClosed())) {
+						rs_collection_count.close();
+					}
+					if (rs_feelist != null&& (!rs_feelist.isClosed())) {
+						rs_feelist.close();
+					}
+					
+					if (ps_feeInformation != null&& (!ps_feeInformation.isClosed())) {
+						ps_feeInformation.close();
+					}
 					if (ps_insertPlan != null&& (!ps_insertPlan.isClosed())) {
 						ps_insertPlan.close();
+					}
+					if (ps_collection_count != null&& (!ps_collection_count.isClosed())) {
+						ps_collection_count.close();
+					}
+					if (ps_feelist != null&& (!ps_feelist.isClosed())) {
+						ps_feelist.close();
 					}
 					if (conn != null && (!conn.isClosed())) {
 						conn.close();
@@ -633,6 +653,28 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 					if (ps_insertPlan != null&& (!ps_insertPlan.isClosed())) {
 						ps_insertPlan.close();
 					}
+					if (ps_insertPlan1 != null&& (!ps_insertPlan1.isClosed())) {
+						ps_insertPlan1.close();
+					}
+					if ( ps_insertReciept != null&& (! ps_insertReciept.isClosed())) {
+						 ps_insertReciept.close();
+					}
+					if (ps1 != null&& (!ps1.isClosed())) {
+						ps1.close();
+					}
+					if (ps2 != null&& (!ps2.isClosed())) {
+						ps2.close();
+					}
+					if (ps3 != null&& (!ps3.isClosed())) {
+						ps3.close();
+					}
+					if (ps_collection_count != null&& (!ps_collection_count.isClosed())) {
+						ps_collection_count.close();
+					}
+					if (rs_collection_count != null&& (!rs_collection_count.isClosed())) {
+						rs_collection_count.close();
+					}
+					
 					if (conn != null && (!conn.isClosed())) {
 						conn.close();
 					}
@@ -666,17 +708,6 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 			logger.info(JDate.getTimeString(new Date())
 					+ " Control in FeeCollectionDaoImpl: getSearchFeeCollectionDetails : Starting");
 			
-			
-				
-				
-				
-				
-			
-
-					
-			
-		
-
 			logger.setLevel(Level.DEBUG);
 			JLogger.log(0, JDate.getTimeString(new Date())
 					+ MessageConstants.END_POINT);
@@ -729,7 +760,22 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		logger.setLevel(Level.DEBUG);
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -798,7 +844,22 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		logger.setLevel(Level.DEBUG);
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -848,7 +909,22 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		logger.setLevel(Level.DEBUG);
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -1041,6 +1117,22 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
+		}
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
 		}
 
 		logger.setLevel(Level.DEBUG);

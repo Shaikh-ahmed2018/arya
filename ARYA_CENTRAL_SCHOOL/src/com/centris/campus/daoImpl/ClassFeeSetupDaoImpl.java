@@ -822,6 +822,9 @@ public class ClassFeeSetupDaoImpl implements ClassFeeSetupDao {
 		} finally {
 
 			try {
+				if (rs1 != null && !rs1.isClosed()) {
+					rs1.close();
+				}
 
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
@@ -829,6 +832,10 @@ public class ClassFeeSetupDaoImpl implements ClassFeeSetupDao {
 				if (pst != null && !pst.isClosed()) {
 					pst.close();
 				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
+				}
+				
 				if (conn != null && !conn.isClosed()) {
 					conn.close();
 				}
@@ -882,6 +889,9 @@ public class ClassFeeSetupDaoImpl implements ClassFeeSetupDao {
 		} finally {
 
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 
 				if (count_pstmt != null && !count_pstmt.isClosed()) {
 					count_pstmt.close();
@@ -1792,13 +1802,6 @@ public class ClassFeeSetupDaoImpl implements ClassFeeSetupDao {
 					endmnth = monthrs.getString(2).split("-");
 				}
 				double amt = 0.0;
-				
-				
-				
-				
-				
-			
-				
 				int count = 0;
 				String name = HelperClass.getMothNumberByShortName(successlist.get(i).getStmnth());
 				count = Integer.parseInt(name);

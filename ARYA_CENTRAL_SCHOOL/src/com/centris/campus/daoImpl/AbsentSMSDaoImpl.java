@@ -66,6 +66,25 @@ public ArrayList<AbsentsSMSPojo> absentlist() {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
+
+			try {
+				if (rs != null && (!rs.isClosed())) {
+					rs.close();
+				}
+				if (ps_studentdetails != null && (!ps_studentdetails.isClosed())) {
+					ps_studentdetails.close();
+				}
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+
+			} catch (Exception e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			}
+		
+		}
 
 		logger.setLevel(Level.DEBUG);
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -180,6 +199,20 @@ public int storeAbsentStudent(AbsentsSMSPojo absentpojo) {
 	} catch (Exception e) {
 		logger.error(e.getMessage(), e);
 		e.printStackTrace();
+	}
+	finally {
+
+		try {
+			if (ps_studentdetails != null && !ps_studentdetails.isClosed()) {
+				ps_studentdetails.close();
+			}
+			if (conn != null && !conn.isClosed()) {
+				conn.close();
+			}
+		} catch (Exception exception) {
+			logger.error(exception.getMessage(), exception);
+			exception.getStackTrace();
+		}
 	}
 
 	logger.setLevel(Level.DEBUG);
@@ -309,6 +342,25 @@ public boolean validateAbsentSms(String date, String smstext) {
 	} catch (Exception e) {
 		logger.error(e.getMessage(), e);
 		e.printStackTrace();
+	}
+	finally {
+
+		try {
+			if (rs != null && (!rs.isClosed())) {
+				rs.close();
+			}
+			if (ps_studentdetails != null && (!ps_studentdetails.isClosed())) {
+				ps_studentdetails.close();
+			}
+			if (conn != null && (!conn.isClosed())) {
+				conn.close();
+			}
+
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+	
 	}
 
 	logger.setLevel(Level.DEBUG);

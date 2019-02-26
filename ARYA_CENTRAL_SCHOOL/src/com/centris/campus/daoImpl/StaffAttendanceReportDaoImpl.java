@@ -291,10 +291,6 @@ public class StaffAttendanceReportDaoImpl implements StaffAttendanceReportDao {
 				}
 		
 			
-			
-			
-			
-			
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();

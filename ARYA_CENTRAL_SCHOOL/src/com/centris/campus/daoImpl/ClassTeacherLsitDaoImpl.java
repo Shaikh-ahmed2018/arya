@@ -73,6 +73,23 @@ public class ClassTeacherLsitDaoImpl implements ClassTeacherLsitDao{
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(connection!=null && !connection.isClosed()){
+					connection.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -167,18 +184,28 @@ public class ClassTeacherLsitDaoImpl implements ClassTeacherLsitDao{
 			}
 			
 			
-			
-			
-			
-			
-			
-			
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
 		
-		
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -208,9 +235,6 @@ public class ClassTeacherLsitDaoImpl implements ClassTeacherLsitDao{
 		Connection conn = null;
 		java.util.Date today = new java.util.Date();
 		java.sql.Timestamp time_stamp = new java.sql.Timestamp(today.getTime());
-		
-		
-		
 		
 		if(vo.getTeacherId1().contains("-")){
 			
@@ -291,8 +315,24 @@ public class ClassTeacherLsitDaoImpl implements ClassTeacherLsitDao{
 				logger.error(e.getMessage(), e);
 				e.printStackTrace();
 			}
+			finally{
+				try{
+					
+					if(pstmt !=null && !pstmt.isClosed()){
+						pstmt.close();
+					}
+					
+					
+					if(conn!=null && !conn.isClosed()){
+						conn.close();
+					}
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+			}
 			
 		}
+		
 		
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -348,7 +388,24 @@ public class ClassTeacherLsitDaoImpl implements ClassTeacherLsitDao{
 			e.printStackTrace();
 		}
 		
-		
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -419,18 +476,29 @@ public class ClassTeacherLsitDaoImpl implements ClassTeacherLsitDao{
 			e.printStackTrace();
 		}
 		
-		
+		finally{
+			try{
+				if(rs !=null && !rs.isClosed()){
+					rs.close();
+				}
+				
+				if(pstmt !=null && !pstmt.isClosed()){
+					pstmt.close();
+				}
+				
+				
+				if(conn!=null && !conn.isClosed()){
+					conn.close();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
 				+ " Control in ClassTeacherLsitDaoImpl : getSearchClassTeacherListDao Ending");
-		
-		
-		
-		
-		
-		
 		
 		
 		

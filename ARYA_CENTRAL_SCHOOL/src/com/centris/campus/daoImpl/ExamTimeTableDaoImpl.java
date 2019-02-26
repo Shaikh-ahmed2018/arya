@@ -635,6 +635,9 @@ public class ExamTimeTableDaoImpl implements ExamTimeTableDao {
 				if (rs != null && !rs.isClosed()) {
 					rs.close();
 				}
+				if (rs1 != null && !rs1.isClosed()) {
+					rs1.close();
+				}
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
@@ -725,8 +728,15 @@ public class ExamTimeTableDaoImpl implements ExamTimeTableDao {
 				if (resultSet != null && !resultSet.isClosed()) {
 					resultSet.close();
 				}
+				if (resultSet1 != null && !resultSet1.isClosed()) {
+					resultSet1.close();
+				}
+				
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
 				}
 				if (conn != null && !conn.isClosed()) {
 					conn.close();
@@ -891,8 +901,20 @@ public class ExamTimeTableDaoImpl implements ExamTimeTableDao {
 				if (resultSet != null && !resultSet.isClosed()) {
 					resultSet.close();
 				}
+				if (resultSet1 != null && !resultSet1.isClosed()) {
+					resultSet1.close();
+				}
+				if (resultSet2 != null && !resultSet2.isClosed()) {
+					resultSet2.close();
+				}
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
+				}
+				if (pstmt2 != null && !pstmt2.isClosed()) {
+					pstmt2.close();
 				}
 				if (conn != null && !conn.isClosed()) {
 					conn.close();
@@ -1207,6 +1229,24 @@ public class ExamTimeTableDaoImpl implements ExamTimeTableDao {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.getStackTrace();
+			}
+		}
 		return msg;
 	}
 
@@ -1299,8 +1339,14 @@ public class ExamTimeTableDaoImpl implements ExamTimeTableDao {
 				if (rs != null && !rs.isClosed()) {
 					rs.close();
 				}
+				if (rs1 != null && !rs1.isClosed()) {
+					rs1.close();
+				}
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
 				}
 				if (conn != null && !conn.isClosed()) {
 					conn.close();
@@ -1485,8 +1531,14 @@ public class ExamTimeTableDaoImpl implements ExamTimeTableDao {
 				if (resultSet != null && !resultSet.isClosed()) {
 					resultSet.close();
 				}
+				if (resultSet1 != null && !resultSet1.isClosed()) {
+					resultSet1.close();
+				}
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
 				}
 				if (conn != null && !conn.isClosed()) {
 					conn.close();
@@ -1573,8 +1625,14 @@ public class ExamTimeTableDaoImpl implements ExamTimeTableDao {
 				if (rs != null && !rs.isClosed()) {
 					rs.close();
 				}
+				if (rs1 != null && !rs1.isClosed()) {
+					rs1.close();
+				}
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
 				}
 				if (conn != null && !conn.isClosed()) {
 					conn.close();
@@ -1810,6 +1868,9 @@ public class ExamTimeTableDaoImpl implements ExamTimeTableDao {
 				e.printStackTrace();
 			}finally {
 				try {
+					if(rs !=null && !rs.isClosed()){
+						rs.close();
+					}
 					if (pstmt != null && !pstmt.isClosed()) {
 						pstmt.close();
 					}
@@ -1871,6 +1932,9 @@ public class ExamTimeTableDaoImpl implements ExamTimeTableDao {
 					e.printStackTrace();
 				}finally{
 					try {
+						if(rs !=null && !rs.isClosed()){
+							rs.close();
+						}
 						if (pstmt != null && !pstmt.isClosed()) {
 							pstmt.close();
 						}
@@ -1952,8 +2016,14 @@ public class ExamTimeTableDaoImpl implements ExamTimeTableDao {
 				if (rs != null && !rs.isClosed()) {
 					rs.close();
 				}
+				if (rs1 != null && !rs1.isClosed()) {
+					rs1.close();
+				}
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
 				}
 				if (conn != null && !conn.isClosed()) {
 					conn.close();
@@ -2041,8 +2111,14 @@ public class ExamTimeTableDaoImpl implements ExamTimeTableDao {
 				if (rs != null && !rs.isClosed()) {
 					rs.close();
 				}
+				if (rs1 != null && !rs1.isClosed()) {
+					rs1.close();
+				}
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
 				}
 				if (conn != null && !conn.isClosed()) {
 					conn.close();
@@ -2118,8 +2194,14 @@ public class ExamTimeTableDaoImpl implements ExamTimeTableDao {
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null && (!rs1.isClosed())) {
+					rs1.close();
+				}
 				if (pst != null && (!pst.isClosed())) {
 					pst.close();
+				}
+				if (pst1 != null && (!pst1.isClosed())) {
+					pst1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();

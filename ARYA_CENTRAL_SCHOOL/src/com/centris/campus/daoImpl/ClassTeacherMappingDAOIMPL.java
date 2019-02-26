@@ -263,10 +263,6 @@ public class ClassTeacherMappingDAOIMPL implements ClassTeacherMappingDAO {
 		int result1 = 0;
 		Connection conn = null;
 		
-		
-
-	
-
 		try {
 			
 				String str = IDGenerator.getPrimaryKeyID("campus_classteacher");
@@ -329,9 +325,6 @@ public class ClassTeacherMappingDAOIMPL implements ClassTeacherMappingDAO {
 				+ MessageConstants.START_POINT);
 		logger.info(JDate.getTimeString(new Date())
 				+ " Control in ClassTeacherMappingDAOIMPL : teachermapping Starting");
-		
-		
-		
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		int count = 0;
@@ -644,9 +637,6 @@ public class ClassTeacherMappingDAOIMPL implements ClassTeacherMappingDAO {
 	}
 
 
-
-
-	
 	public ArrayList<ClassTeacherMappingVO> getupclasslist(
 			ClassTeacherMappingVO vo) {
 		
@@ -719,10 +709,7 @@ public class ClassTeacherMappingDAOIMPL implements ClassTeacherMappingDAO {
 			
 		}
 		
-		
-		
-		
-		JLogger.log(0, JDate.getTimeString(new Date())
+			JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
 				+ " Control in ClassTeacherMappingDAOIMPL : getclassupdate Ending");
@@ -986,12 +973,7 @@ public class ClassTeacherMappingDAOIMPL implements ClassTeacherMappingDAO {
 		PreparedStatement pstmt = null;
 		int result1 = 0;
 		Connection conn = null;
-		
-		
-
-	
-
-		try {
+			try {
 			
 				conn = JDBCConnection.getSeparateConnection();
 
