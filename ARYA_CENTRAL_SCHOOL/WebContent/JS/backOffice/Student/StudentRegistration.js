@@ -5,6 +5,7 @@ $(document).ready(function() {
 		id=$(".select:checked").attr("id");
 		getAdmissionDetails(id);
 		printApplication();
+		
 	});
 	
 
@@ -2914,6 +2915,7 @@ function getSectionList(classname){
 						+ '">' + result.sectionList[j].sectionnaem
 						+ '</option>');
 			}
+			
 		}
 	});
 }
@@ -3153,7 +3155,7 @@ function getAdmissionDetails(id){
 			$("#container .father_office_landline").text(result.stuList[0].father_office_landline);
 			$("#container .mother_office_landline").text(result.stuList[0].mother_office_landline);
 			
-
+			
 		}
 	});
 }

@@ -105,7 +105,7 @@ function changeAccYear(){
 				else{
 					$("#allstudent tbody").append("<tr><td colspan='6'>NO Records Found</td></tr>");
 				}
-				pagination(100);
+				pagination(20);
 				$(".numberOfItem").empty();
 				$(".numberOfItem").append("No. of Records  "+result.SearchList.length);
 				$("#allstudent tbody tr").click(function(){
@@ -214,7 +214,7 @@ function getStudentList(locationid,accyear,classname){
 					else{
 						$("#allstudent tbody").append("<tr><td colspan='6'>NO Records Found</td></tr>");
 					}
-					pagination(100);
+					pagination(20);
 					$(".numberOfItem").empty();
 					$(".numberOfItem").append("No. of Records  "+result.SearchList.length);
 					$("#allstudent tbody tr").click(function(){
@@ -260,7 +260,7 @@ function getStudentListBySection(locationid,accyear,classname,sectionid){
 					else{
 						$("#allstudent tbody").append("<tr><td colspan='6'>NO Records Found</td></tr>");
 					}
-					pagination(100);
+					pagination(20);
 					$(".numberOfItem").empty();
 					$(".numberOfItem").append("No. of Records  "+result.SearchList.length);
 					$("#allstudent tbody tr").click(function(){
@@ -314,7 +314,7 @@ datalist = {
 					else{
 						$("#allstudent tbody").append("<tr><td colspan='6'>NO Records Found</td></tr>");
 					}
-					pagination(100);
+					pagination(20);
 					$(".numberOfItem").empty();
 					$(".numberOfItem").append("No. of Records  "+result.SearchList.length);
 					$("#allstudent tbody tr").click(function(){

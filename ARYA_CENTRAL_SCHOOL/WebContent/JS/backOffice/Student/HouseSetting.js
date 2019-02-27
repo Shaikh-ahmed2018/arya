@@ -43,7 +43,7 @@ $(document).ready(function(){
 		window.location.href="houseSettings.html?method=AcademicYearHouseSetting&accyear="+accyearid+"&locid="+locid;
 		
 	});
-	pagination(100);
+	pagination(20);
 });
 
 

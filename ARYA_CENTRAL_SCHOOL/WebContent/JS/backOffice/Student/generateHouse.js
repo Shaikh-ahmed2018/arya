@@ -88,7 +88,7 @@ function generatehouseSettings(pointer,pointer1){
 				
 				$(".numberOfItem").empty();
 				$(".numberOfItem").append("  No. of Records  "+result.AccYearList.length);
-				pagination(100);
+				pagination(20);
 				$("#show_per_page").change(function(){
 					pagination($(this).val());
 				});

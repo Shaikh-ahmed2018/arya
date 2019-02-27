@@ -293,13 +293,11 @@ function getStudentListByJs(locationId,academicYear,classId,divisionId,searchTer
 			paginationforstudent($("#show_per_page").val(),totalcount);
 			$(".numberOfItem").text("   No. of Records "+totalcount+".");
 		}
+	
 	});
 }
 function paginationforstudent(list,no_of_items) {
 
-	
-	
-	
 	var show_per_page = list;
     var number_of_items = no_of_items;
    

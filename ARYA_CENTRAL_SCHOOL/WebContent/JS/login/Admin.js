@@ -67,7 +67,7 @@ $(document).ready(function() {
 		$("#Acyearid").find("option").not("option[value="+$("#hacademicyaer").val()+"],option[value='']").remove();
 	}
 
-	pagination(100);
+	pagination(20);
 	$("#show_per_page").change(function(){
 		pagination($(this).val());
 	});
@@ -221,10 +221,6 @@ function getSchool() {
 }
 
 function pagination(list) {
-
-	
-	
-	
 	var show_per_page = list;
     var number_of_items = $('#allstudent > tbody > tr,.allstudent > tbody > tr').length;
    

@@ -578,7 +578,7 @@ $("input[name=sorting]:radio").change(function(){
 		
 		getStudentListBySection(locationid,accyear,classname,sectionid,sortingby,orderby);
 	});
-	pagination(100);
+	pagination(20);
 });
 
 function changeAccYear(){
