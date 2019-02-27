@@ -168,131 +168,138 @@ public class StaffAttendanceReportAction extends DispatchAction{
 	public ActionForward staffAttendanceExcelReport(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) {
-				
-		logger.setLevel(Level.DEBUG);
-		JLogger.log(0, JDate.getTimeString(new Date())
-				+ MessageConstants.START_POINT);
-		logger.info(JDate.getTimeString(new Date())
-				+ " Control in StaffAttendanceReportAction : staffAttendanceExcelReport Starting");
 		
-		String teachername = "";
-		String accyear=request.getParameter("accyear");
-		String fromdate=request.getParameter("fromdate");
-		String todate=request.getParameter("todate");
-		String teachertype=request.getParameter("teachertype");
-		teachername=request.getParameter("teachername");
-		String designation=request.getParameter("designation");
+logger.setLevel(Level.DEBUG);
+JLogger.log(0, JDate.getTimeString(new Date())
+		+ MessageConstants.START_POINT);
+logger.info(JDate.getTimeString(new Date())
+		+ " Control in StaffAttendanceReportAction : staffAttendanceExcelReport Starting");
+
+String teachername = "";
+String accyear=request.getParameter("accyear");
+String fromdate=request.getParameter("fromdate");
+String todate=request.getParameter("todate");
+String teachertype=request.getParameter("teachertype");
+teachername=request.getParameter("teachername");
+String designation=request.getParameter("designation");
+String attstatus=request.getParameter("attstatus");
+String filePath = null;
+
+try {
+	
+
+
+	File pdfxls = null;
+	FileInputStream input = null;
+	BufferedInputStream buf = null;
+	ServletOutputStream stream = null;
+
+	String sourceFileName = request.getRealPath("Reports/StaffAttendanceDetailsXLSReport.jrxml");
+	JasperDesign design = JRXmlLoader.load(sourceFileName);
+	JasperReport jasperreport = JasperCompileManager
+			.compileReport(design);
+	/*List<ReportMenuVo> MasterList = new ArrayList<ReportMenuVo>();
+	MasterList = (List<ReportMenuVo>) request.getSession(false).getAttribute("EXcel");*/
+	
+	ReportMenuVo vo = new ReportMenuVo();
+	
+	vo.setTeachertype(teachertype);
+	vo.setFromdate(HelperClass.convertUIToDatabase(fromdate));
+	vo.setTodate(HelperClass.convertUIToDatabase(todate));
+	vo.setTeachertId(teachername);
+	vo.setDesignation(designation);
+	
+	String desigantionName="ALL";
+	if(teachername.equalsIgnoreCase("all")){
 		 
-		String filePath = null;
-		
-		try {
-			
-
-
-			File pdfxls = null;
-			FileInputStream input = null;
-			BufferedInputStream buf = null;
-			ServletOutputStream stream = null;
-
-			String sourceFileName = request.getRealPath("Reports/StaffAttendanceDetailsXLSReport.jrxml");
-			JasperDesign design = JRXmlLoader.load(sourceFileName);
-			JasperReport jasperreport = JasperCompileManager
-					.compileReport(design);
-			/*List<ReportMenuVo> MasterList = new ArrayList<ReportMenuVo>();
-			MasterList = (List<ReportMenuVo>) request.getSession(false).getAttribute("EXcel");*/
-			
-			ReportMenuVo vo = new ReportMenuVo();
-			
-			vo.setTeachertype(teachertype);
-			vo.setFromdate(HelperClass.convertUIToDatabase(fromdate));
-			vo.setTodate(HelperClass.convertUIToDatabase(todate));
-			vo.setTeachertId(teachername);
-			vo.setDesignation(designation);
-			 
-			String desigantionName="ALL";
-			if(teachername.equalsIgnoreCase("all")){
-				 
-				 vo.setTeachertId("%%");
-				 
-			 }
-			if(designation.equalsIgnoreCase("all")){
-				 
-				 vo.setDesignation("%%");
-				 
-			 }
-			else {
-				desigantionName=HelperClass.getDesignationName(designation);
-			}
-			
-			
-			
-			ArrayList<StaffAttendanceVo> MasterList = new StaffAttendanceReportBD().getStaffAttendanceReportBD(vo);
-
-			
-			
-			JRBeanCollectionDataSource beanColDataSource = new JRBeanCollectionDataSource(
-					MasterList);
-			Map parameters = new HashMap();
-			parameters.put("fromdate",fromdate);
-			parameters.put("todate",todate);
-			parameters.put("designationName",desigantionName);
-			
-			stream = response.getOutputStream();
-			JasperPrint print = JasperFillManager.fillReport(jasperreport,
-					parameters, beanColDataSource);
-			JRXlsExporter exporter = new JRXlsExporter();
-			File outputFile = new File(
-					request.getRealPath("Reports/StaffAttendanceDetailsXLSReport.xls"));
-			FileOutputStream fos = new FileOutputStream(outputFile);
-			String[] sheetNames = { "Role Details Excel Report" };
-			exporter.setParameter(JRExporterParameter.JASPER_PRINT, print);
-			exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, fos);
-			exporter.setParameter(JRXlsExporterParameter.IS_ONE_PAGE_PER_SHEET,
-					Boolean.FALSE);
-			exporter.setParameter(
-					JRXlsExporterParameter.IS_REMOVE_EMPTY_SPACE_BETWEEN_COLUMNS,
-					Boolean.TRUE);
-			exporter.setParameter(JRXlsExporterParameter.SHEET_NAMES,
-					sheetNames);
-			exporter.setParameter(
-					JRXlsExporterParameter.IS_REMOVE_EMPTY_SPACE_BETWEEN_ROWS,
-					Boolean.TRUE);
-			exporter.setParameter(
-					JRXlsExporterParameter.IS_WHITE_PAGE_BACKGROUND,
-					Boolean.FALSE);
-			exporter.setParameter(JRXlsExporterParameter.IGNORE_PAGE_MARGINS,
-					Boolean.TRUE);
-			exporter.setParameter(JRXlsExporterParameter.IS_COLLAPSE_ROW_SPAN,
-					Boolean.FALSE);
-
-			exporter.exportReport();
-
-			pdfxls = new File(
-					request.getRealPath("Reports/StaffAttendanceDetailsXLSReport.xls"));
-			response.setContentType("application/octet-stream");
-			response.addHeader("Content-Disposition",
-					"attachment; filename=StaffAttendanceDetailsXLSReport.xls");
-			response.setContentLength((int) pdfxls.length());
-			input = new FileInputStream(pdfxls);
-			buf = new BufferedInputStream(input);
-			int readBytes = 0;
-			stream = response.getOutputStream();
-			while ((readBytes = buf.read()) != -1) {
-				stream.write(readBytes);
-			} 
-			
-		} catch (Exception e) {
-			logger.error(e.getMessage(), e);
-			e.printStackTrace();
-		}
-		
-		JLogger.log(0, JDate.getTimeString(new Date())
-				+ MessageConstants.END_POINT);
-		logger.info(JDate.getTimeString(new Date())
-				+ " Control in ReportsAction : staffAttendanceExcelReport Ending");
-		
-		return null;
+		 vo.setTeachertId("%%");
+		 
+	 }
+	if(designation.equalsIgnoreCase("all")){
+		 
+		 vo.setDesignation("%%");
+		 
+	 }
+	else {
+		desigantionName=HelperClass.getDesignationName(designation);
 	}
+	
+	if(attstatus.equalsIgnoreCase("all")){
+		 
+		vo.setAttendenceStatus("%%");
+		 
+	 }
+	else {
+		vo.setAttendenceStatus(attstatus);
+	}
+	
+	ArrayList<StaffAttendanceVo> MasterList = new StaffAttendanceReportBD().getStaffAttendanceReportBD(vo);
+
+	
+	
+	JRBeanCollectionDataSource beanColDataSource = new JRBeanCollectionDataSource(
+			MasterList);
+	Map parameters = new HashMap();
+	parameters.put("fromdate",fromdate);
+	parameters.put("todate",todate);
+	parameters.put("designationName",desigantionName);
+	
+	stream = response.getOutputStream();
+	JasperPrint print = JasperFillManager.fillReport(jasperreport,
+			parameters, beanColDataSource);
+	JRXlsExporter exporter = new JRXlsExporter();
+	File outputFile = new File(
+			request.getRealPath("Reports/StaffAttendanceDetailsXLSReport.xls"));
+	FileOutputStream fos = new FileOutputStream(outputFile);
+	String[] sheetNames = { "Role Details Excel Report" };
+	exporter.setParameter(JRExporterParameter.JASPER_PRINT, print);
+	exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, fos);
+	exporter.setParameter(JRXlsExporterParameter.IS_ONE_PAGE_PER_SHEET,
+			Boolean.FALSE);
+	exporter.setParameter(
+			JRXlsExporterParameter.IS_REMOVE_EMPTY_SPACE_BETWEEN_COLUMNS,
+			Boolean.TRUE);
+	exporter.setParameter(JRXlsExporterParameter.SHEET_NAMES,
+			sheetNames);
+	exporter.setParameter(
+			JRXlsExporterParameter.IS_REMOVE_EMPTY_SPACE_BETWEEN_ROWS,
+			Boolean.TRUE);
+	exporter.setParameter(
+			JRXlsExporterParameter.IS_WHITE_PAGE_BACKGROUND,
+			Boolean.FALSE);
+	exporter.setParameter(JRXlsExporterParameter.IGNORE_PAGE_MARGINS,
+			Boolean.TRUE);
+	exporter.setParameter(JRXlsExporterParameter.IS_COLLAPSE_ROW_SPAN,
+			Boolean.FALSE);
+
+	exporter.exportReport();
+
+	pdfxls = new File(
+			request.getRealPath("Reports/StaffAttendanceDetailsXLSReport.xls"));
+	response.setContentType("application/octet-stream");
+	response.addHeader("Content-Disposition",
+			"attachment; filename=StaffAttendanceDetailsXLSReport.xls");
+	response.setContentLength((int) pdfxls.length());
+	input = new FileInputStream(pdfxls);
+	buf = new BufferedInputStream(input);
+	int readBytes = 0;
+	stream = response.getOutputStream();
+	while ((readBytes = buf.read()) != -1) {
+		stream.write(readBytes);
+	} 
+	
+} catch (Exception e) {
+	logger.error(e.getMessage(), e);
+	e.printStackTrace();
+}
+
+JLogger.log(0, JDate.getTimeString(new Date())
+		+ MessageConstants.END_POINT);
+logger.info(JDate.getTimeString(new Date())
+		+ " Control in ReportsAction : staffAttendanceExcelReport Ending");
+
+return null;
+}
 	
 	public ActionForward staffAttendancePDFReport(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,
