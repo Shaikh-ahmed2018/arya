@@ -7686,11 +7686,7 @@ public class AdminMenuAction extends DispatchAction {
 			}
 			
 
-			List<ClassPojo> classlist = new StudentTransferCertifivateReportBD().getClassDetails();
-			request.setAttribute("classlist", classlist);
-				
-
-			request.setAttribute("studentList", stuList);
+			
 			
 		}catch (Exception e) {
 			e.printStackTrace();
