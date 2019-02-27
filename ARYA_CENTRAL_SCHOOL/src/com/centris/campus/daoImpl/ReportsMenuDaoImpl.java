@@ -814,8 +814,20 @@ public class ReportsMenuDaoImpl implements ReportsMenuDao{
 					if (rs != null&& (!rs.isClosed())) {
 						rs.close();
 					}
+					if (rs_classfesAmt != null&& (!rs_classfesAmt.isClosed())) {
+						rs_classfesAmt.close();
+					}
+					if (rs_stagefesAmt != null&& (!rs_stagefesAmt.isClosed())) {
+						rs_stagefesAmt.close();
+					}
 					if (pstmt != null&& (!pstmt.isClosed())) {
 						pstmt.close();
+					}
+					if (ps_classfesAmt != null&& (!ps_classfesAmt.isClosed())) {
+						ps_classfesAmt.close();
+					}
+					if (ps_stagefesAmt  != null&& (!ps_stagefesAmt .isClosed())) {
+						ps_stagefesAmt .close();
 					}
 					if (conn != null && (!conn.isClosed())) {
 						conn.close();
@@ -1046,8 +1058,20 @@ public class ReportsMenuDaoImpl implements ReportsMenuDao{
 					if (rs != null&& (!rs.isClosed())) {
 						rs.close();
 					}
+					if (rs_classfesAmt != null&& (!rs_classfesAmt.isClosed())) {
+						rs_classfesAmt.close();
+					}
+					if (rs_stagefesAmt != null&& (!rs_stagefesAmt.isClosed())) {
+						rs_stagefesAmt.close();
+					}
 					if (pstmt != null&& (!pstmt.isClosed())) {
 						pstmt.close();
+					}
+					if (ps_classfesAmt != null&& (!ps_classfesAmt.isClosed())) {
+						ps_classfesAmt.close();
+					}
+					if (ps_stagefesAmt  != null&& (!ps_stagefesAmt .isClosed())) {
+						ps_stagefesAmt .close();
 					}
 					if (conn != null && (!conn.isClosed())) {
 						conn.close();
@@ -1729,8 +1753,14 @@ public class ReportsMenuDaoImpl implements ReportsMenuDao{
 				if (rs != null&& (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null&& (!rs1.isClosed())) {
+					rs1.close();
+				}
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -3715,6 +3745,15 @@ public class ReportsMenuDaoImpl implements ReportsMenuDao{
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
 				}
+				if (pstmt2 != null&& (!pstmt2.isClosed())) {
+					pstmt2.close();
+				}
+				if (pstmObj1 != null&& (!pstmObj1.isClosed())) {
+					pstmObj1.close();
+				}
+				if (pstmObj2 != null&& (!pstmObj2.isClosed())) {
+					pstmObj2.close();
+				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
 				}
@@ -4618,6 +4657,9 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
 				}
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
+				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
 				}
@@ -4905,9 +4947,24 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
 				}
+				if (pstmt2 != null&& (!pstmt2.isClosed())) {
+					pstmt2.close();
+				}
 				if (pstmt1 != null&& (!pstmt1.isClosed())) {
 					pstmt1.close();
 				}
+				if (pstmtn != null&& (!pstmtn.isClosed())) {
+					pstmtn.close();
+				}
+				
+				if (pstscoredmarks1 != null&& (!pstscoredmarks1.isClosed())) {
+					pstscoredmarks1.close();
+				}
+				if (pstscoredmarks != null&& (!pstscoredmarks.isClosed())) {
+					pstscoredmarks.close();
+				}
+				
+				
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
 				}
@@ -5017,6 +5074,18 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 				try{
 					rs.close();
 				}
+				
+				
+				catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+			if(pstmt!=null){
+				try{
+					pstmt.close();
+				}
+				
+				
 				catch(SQLException e){
 					e.printStackTrace();
 				}
@@ -5082,6 +5151,14 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 			if(rs!=null){
 				try{
 					rs.close();
+				}
+				catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+			if(pstmt!=null){
+				try{
+					pstmt.close();
 				}
 				catch(SQLException e){
 					e.printStackTrace();
@@ -5154,7 +5231,14 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 					e.printStackTrace();
 				}
 			}
-			
+			if(pstmt!=null){
+				try{
+					pstmt.close();
+				}
+				catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
 		}
 		
 		logger.setLevel(Level.DEBUG);
@@ -5225,7 +5309,14 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 					e.printStackTrace();
 				}
 			}
-			
+			if(pstmt!=null){
+				try{
+					pstmt.close();
+				}
+				catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
 		}
 		
 		logger.setLevel(Level.DEBUG);
@@ -6427,8 +6518,20 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 				if (rs != null&& (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null&& (!rs1.isClosed())) {
+					rs1.close();
+				}
+				if (rs2 != null&& (!rs2.isClosed())) {
+					rs2.close();
+				}
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
+				}
+				if (pstmt2 != null&& (!pstmt2.isClosed())) {
+					pstmt2.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -6512,8 +6615,20 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 				if (rs != null&& (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null&& (!rs1.isClosed())) {
+					rs1.close();
+				}
+				if (rs2 != null&& (!rs2.isClosed())) {
+					rs2.close();
+				}
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
+				}
+				if (pstmt2 != null&& (!pstmt2.isClosed())) {
+					pstmt2.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -6597,8 +6712,20 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 				if (rs != null&& (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null&& (!rs1.isClosed())) {
+					rs1.close();
+				}
+				if (rs2 != null&& (!rs2.isClosed())) {
+					rs2.close();
+				}
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
+				}
+				if (pstmt2 != null&& (!pstmt2.isClosed())) {
+					pstmt2.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -6982,8 +7109,45 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 				if (rs != null&& (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null&& (!rs1.isClosed())) {
+					rs1.close();
+				}
+				if (rs2 != null&& (!rs2.isClosed())) {
+					rs2.close();
+				}
+				if (rs3 != null&& (!rs3.isClosed())) {
+					rs3.close();
+				}
+				if (rs4 != null&& (!rs4.isClosed())) {
+					rs4.close();
+				}
+				if (rsgrade != null&& (!rsgrade.isClosed())) {
+					rsgrade.close();
+				}
+				if (rsgrade1 != null&& (!rsgrade1.isClosed())) {
+					rsgrade1.close();
+				}
+				
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
+				}
+				if (pstmt2 != null&& (!pstmt2.isClosed())) {
+					pstmt2.close();
+				}
+				if (pstmt3 != null&& (!pstmt3.isClosed())) {
+					pstmt3.close();
+				}
+				if (pstmt4 != null&& (!pstmt4.isClosed())) {
+					pstmt4.close();
+				}
+				if (pstgrade1 != null&& (!pstgrade1.isClosed())) {
+					pstgrade1.close();
+				}
+				if (pstgrade != null&& (!pstgrade.isClosed())) {
+					pstgrade.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -7040,8 +7204,14 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 				if (rs != null&& (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null&& (!rs1.isClosed())) {
+					rs1.close();
+				}
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -7218,8 +7388,29 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 				if (rs != null&& (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null&& (!rs1.isClosed())) {
+					rs1.close();
+				}
+				if (rs2 != null&& (!rs2.isClosed())) {
+					rs2.close();
+				}
+				
+				if (rsgrade != null&& (!rsgrade.isClosed())) {
+					rsgrade.close();
+				}
+				
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
+				}
+				if (pstmt2 != null&& (!pstmt2.isClosed())) {
+					pstmt2.close();
+				}
+				
+				if (pstgrade != null&& (!pstgrade.isClosed())) {
+					pstgrade.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();

@@ -326,17 +326,40 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		} finally {
+
 			try {
-				if (pstmt != null && (!pstmt.isClosed())) {
+				if (updatepstmt  != null && !updatepstmt .isClosed()) {
+					updatepstmt .close();
+				}
+				if (updatepstmt2  != null && !updatepstmt2 .isClosed()) {
+					updatepstmt2 .close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
-				if (connection != null && (!connection.isClosed())) {
-					connection.close();
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
+				}
+				if (pstmt2 != null && !pstmt2.isClosed()) {
+					pstmt2.close();
+				}
+				if (pstmt3 != null && !pstmt3.isClosed()) {
+					pstmt3.close();
+				}
+				if (pstmt4 != null && !pstmt4.isClosed()) {
+					pstmt4.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (connection  != null && !connection .isClosed()) {
+
+					connection .close();
 				}
 
-			} catch (Exception e) {
-				logger.error(e.getMessage(), e);
-				e.printStackTrace();
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
 		}
 
@@ -387,6 +410,9 @@ public class TransportDaoImpl implements TransportDao {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -479,6 +505,9 @@ public class TransportDaoImpl implements TransportDao {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -558,6 +587,9 @@ public class TransportDaoImpl implements TransportDao {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -614,6 +646,9 @@ public class TransportDaoImpl implements TransportDao {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -670,6 +705,9 @@ public class TransportDaoImpl implements TransportDao {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -727,6 +765,9 @@ public class TransportDaoImpl implements TransportDao {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -783,6 +824,9 @@ public class TransportDaoImpl implements TransportDao {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -914,6 +958,9 @@ public class TransportDaoImpl implements TransportDao {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -982,6 +1029,9 @@ public class TransportDaoImpl implements TransportDao {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -1220,10 +1270,15 @@ public class TransportDaoImpl implements TransportDao {
 		} finally {
 
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
-
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
+				}
 				if (connection != null && (!connection.isClosed())) {
 					connection.close();
 				}
@@ -1366,8 +1421,15 @@ public class TransportDaoImpl implements TransportDao {
 		} finally {
 
 			try {
+				
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
+				}
+				if (route_pstmt  != null && !route_pstmt .isClosed()) {
+					route_pstmt .close();
+				}
+				if (rs_deleteroute   != null && !rs_deleteroute  .isClosed()) {
+					rs_deleteroute  .close();
 				}
 
 				if (connection != null && (!connection.isClosed())) {
@@ -1525,6 +1587,9 @@ public class TransportDaoImpl implements TransportDao {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -1772,7 +1837,25 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -1896,17 +1979,22 @@ public class TransportDaoImpl implements TransportDao {
 		}
 
 		finally {
-			try {
 
-				if (pstmt != null && (!pstmt.isClosed())) {
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
-				if (conn != null && (!conn.isClosed())) {
+				if (conn != null && !conn.isClosed()) {
+
 					conn.close();
 				}
-			} catch (Exception e) {
-				logger.error(e.getMessage(), e);
-				e.printStackTrace();
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
 		}
 
@@ -1985,6 +2073,32 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (rs_deletedriver != null && !rs_deletedriver.isClosed()) {
+					rs_deletedriver.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (dirver_pstmt != null && !dirver_pstmt.isClosed()) {
+					dirver_pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
+
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -2042,6 +2156,25 @@ public class TransportDaoImpl implements TransportDao {
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
+		}
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
 		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -2156,6 +2289,25 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
+
+			try {
+				if (pscheckExamName != null && !pscheckExamName.isClosed()) {
+					pscheckExamName.close();
+				}
+				if (rsCheckExamName != null && !rsCheckExamName.isClosed()) {
+					rsCheckExamName.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -2213,7 +2365,25 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				if (rsCheckExamName != null && !rsCheckExamName.isClosed()) {
+					rsCheckExamName.close();
+				}
+				if (pscheckExamName != null && !pscheckExamName.isClosed()) {
+					pscheckExamName.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -2255,17 +2425,22 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		} finally {
+
 			try {
-				if (pstmt != null && (!pstmt.isClosed())) {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
-				if (conn != null && (!conn.isClosed())) {
+				if (conn != null && !conn.isClosed()) {
+
 					conn.close();
 				}
 
-			} catch (Exception e) {
-				logger.error(e.getMessage(), e);
-				e.printStackTrace();
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
 		}
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -2323,17 +2498,22 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		} finally {
+
 			try {
-				if (pstmt != null && (!pstmt.isClosed())) {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
-				if (conn != null && (!conn.isClosed())) {
+				if (conn != null && !conn.isClosed()) {
+
 					conn.close();
 				}
 
-			} catch (Exception e) {
-				logger.error(e.getMessage(), e);
-				e.printStackTrace();
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
 		}
 
@@ -2380,17 +2560,22 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		} finally {
+
 			try {
-				if (pstmt != null && (!pstmt.isClosed())) {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
-				if (conn != null && (!conn.isClosed())) {
+				if (conn != null && !conn.isClosed()) {
+
 					conn.close();
 				}
 
-			} catch (Exception e) {
-				logger.error(e.getMessage(), e);
-				e.printStackTrace();
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
 		}
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -2443,17 +2628,22 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		} finally {
+
 			try {
-				if (pstmt != null && (!pstmt.isClosed())) {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
-				if (conn != null && (!conn.isClosed())) {
+				if (conn != null && !conn.isClosed()) {
+
 					conn.close();
 				}
 
-			} catch (Exception e) {
-				logger.error(e.getMessage(), e);
-				e.printStackTrace();
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
 		}
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -2497,20 +2687,24 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		} finally {
+
 			try {
-				if (pstmt != null && (!pstmt.isClosed())) {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
-				if (conn != null && (!conn.isClosed())) {
+				if (conn != null && !conn.isClosed()) {
+
 					conn.close();
 				}
 
-			} catch (Exception e) {
-				logger.error(e.getMessage(), e);
-				e.printStackTrace();
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
 		}
-
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -2552,17 +2746,22 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		} finally {
+
 			try {
-				if (pstmt != null && (!pstmt.isClosed())) {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
-				if (conn != null && (!conn.isClosed())) {
+				if (conn != null && !conn.isClosed()) {
+
 					conn.close();
 				}
 
-			} catch (Exception e) {
-				logger.error(e.getMessage(), e);
-				e.printStackTrace();
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
 		}
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -2612,17 +2811,22 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		} finally {
+
 			try {
-				if (pstmt != null && (!pstmt.isClosed())) {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
-				if (conn != null && (!conn.isClosed())) {
+				if (conn != null && !conn.isClosed()) {
+
 					conn.close();
 				}
 
-			} catch (Exception e) {
-				logger.error(e.getMessage(), e);
-				e.printStackTrace();
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
 		}
 
@@ -2671,18 +2875,23 @@ public class TransportDaoImpl implements TransportDao {
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
-		} finally {
+		}finally {
+
 			try {
-				if (pstmt != null && (!pstmt.isClosed())) {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
-				if (conn != null && (!conn.isClosed())) {
+				if (conn != null && !conn.isClosed()) {
+
 					conn.close();
 				}
 
-			} catch (Exception e) {
-				logger.error(e.getMessage(), e);
-				e.printStackTrace();
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
 		}
 
@@ -2837,7 +3046,23 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (connection != null && !connection.isClosed()) {
+
+					connection.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -2924,7 +3149,23 @@ public class TransportDaoImpl implements TransportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (connection != null && !connection.isClosed()) {
+
+					connection.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -5524,6 +5765,7 @@ return amountstatus;
 				exception.printStackTrace();
 			}
 		}
+		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())

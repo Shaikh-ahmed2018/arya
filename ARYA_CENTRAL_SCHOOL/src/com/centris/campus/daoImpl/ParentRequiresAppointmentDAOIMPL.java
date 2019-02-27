@@ -308,7 +308,12 @@ public class ParentRequiresAppointmentDAOIMPL implements ParentRequiresAppointme
 			e1.printStackTrace();
 		} finally {
 			try {
-
+				if (rs1 != null && !rs1.isClosed()) {
+					rs1.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -856,8 +861,15 @@ public class ParentRequiresAppointmentDAOIMPL implements ParentRequiresAppointme
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null && (!rs1.isClosed())) {
+					rs1.close();
+				}
+				
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -1181,8 +1193,8 @@ public class ParentRequiresAppointmentDAOIMPL implements ParentRequiresAppointme
 				+ " Control in Inventory_DAOIMPL: InventoryTypesList : Starting");
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		PreparedStatement pstmt1 = null;
-		ResultSet rs1 = null;
+		//PreparedStatement pstmt1 = null;
+		//ResultSet rs1 = null;
 		ParentRequiresAppointmentVO vo = new ParentRequiresAppointmentVO();
 
 		Connection conn = null;
@@ -1730,6 +1742,9 @@ public class ParentRequiresAppointmentDAOIMPL implements ParentRequiresAppointme
 			e1.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();

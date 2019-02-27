@@ -126,6 +126,10 @@ public class StudentHouseSettingsDAOImpl implements StudentHouseSettingsDAO {
 		finally {
 			try {
 
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -187,6 +191,7 @@ public class StudentHouseSettingsDAOImpl implements StudentHouseSettingsDAO {
 		} 
 		finally {
 			try {
+				
 
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
@@ -257,9 +262,12 @@ public class StudentHouseSettingsDAOImpl implements StudentHouseSettingsDAO {
 		} 
 		finally {
 			try {
-
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+
+				if (pstmt1 != null&& (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -917,9 +925,6 @@ public class StudentHouseSettingsDAOImpl implements StudentHouseSettingsDAO {
 				if (rs != null&& (!rs.isClosed())) {
 					rs.close();
 				} 
-				if (rs != null&& (!rs.isClosed())) {
-					rs.close();
-				}
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -1476,6 +1481,9 @@ public class StudentHouseSettingsDAOImpl implements StudentHouseSettingsDAO {
 				}
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (hcountpstmt != null&& (!hcountpstmt.isClosed())) {
+					hcountpstmt.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -2918,7 +2926,25 @@ public class StudentHouseSettingsDAOImpl implements StudentHouseSettingsDAO {
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		return result;
 	}
 
@@ -3126,6 +3152,9 @@ public class StudentHouseSettingsDAOImpl implements StudentHouseSettingsDAO {
 			e.printStackTrace();
 		}finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				
 				if (pstmt != null&& (!pstmt.isClosed())) {
 					pstmt.close();

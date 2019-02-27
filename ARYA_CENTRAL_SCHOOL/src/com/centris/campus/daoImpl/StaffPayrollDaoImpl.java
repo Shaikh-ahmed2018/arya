@@ -170,7 +170,9 @@ public class StaffPayrollDaoImpl implements StaffPayrollDao{
 			e1.printStackTrace();
 		} finally {
 			try {
-				
+				if (rs_payroll != null && !rs_payroll.isClosed()) {
+					rs_payroll.close();
+				}
 				if (ps_payroll_list != null&& (!ps_payroll_list.isClosed())) {
 					ps_payroll_list.close();
 				}
@@ -239,9 +241,11 @@ public class StaffPayrollDaoImpl implements StaffPayrollDao{
 			} catch (Exception e1) {
 				logger.error(e1.getMessage(), e1);
 				e1.printStackTrace();
-			} finally {
+			}finally {
 				try {
-					
+					if (rs_payroll != null && !rs_payroll.isClosed()) {
+						rs_payroll.close();
+					}
 					if (ps_payroll_list != null&& (!ps_payroll_list.isClosed())) {
 						ps_payroll_list.close();
 					}
@@ -258,7 +262,6 @@ public class StaffPayrollDaoImpl implements StaffPayrollDao{
 					e1.printStackTrace();
 				}
 			}
-
 			logger.setLevel(Level.DEBUG);
 			JLogger.log(0, JDate.getTimeString(new Date())
 					+ MessageConstants.END_POINT);
@@ -364,7 +367,23 @@ public class StaffPayrollDaoImpl implements StaffPayrollDao{
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		} finally {
+			try {
+				if (rs_employee != null && !rs_employee.isClosed()) {
+					rs_employee.close();
+				}
+				if (ps_employee != null&& (!ps_employee.isClosed())) {
+					ps_employee.close();
+				}
+				
+			} catch (SQLException sqle) {
 
+				logger.error(sqle.getMessage(), sqle);
+				sqle.printStackTrace();
+			} catch (Exception e1) {
+
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			}
 		}
 
 		logger.setLevel(Level.DEBUG);
@@ -524,8 +543,26 @@ public class StaffPayrollDaoImpl implements StaffPayrollDao{
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
-		} finally {
+		}  finally {
+			try {
+				if (rs_totalPresentAbsent != null && !rs_totalPresentAbsent.isClosed()) {
+					rs_totalPresentAbsent.close();
+				}
+				if (ps_totalPresentAbsent != null&& (!ps_totalPresentAbsent.isClosed())) {
+					ps_totalPresentAbsent.close();
+				}
+				
+			} catch (SQLException sqle) {
+
+				logger.error(sqle.getMessage(), sqle);
+				sqle.printStackTrace();
+			} catch (Exception e1) {
+
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			}
 		}
+
 
 		logger.setLevel(Level.DEBUG);
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -660,6 +697,26 @@ public class StaffPayrollDaoImpl implements StaffPayrollDao{
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		} finally {
+			try {
+				if (ps_payroll != null && !ps_payroll.isClosed()) {
+					ps_payroll.close();
+				}
+				if (ps_payroll_count != null&& (!ps_payroll_count.isClosed())) {
+					ps_payroll_count.close();
+				}
+				if (rs_payroll_count != null&& (!rs_payroll_count.isClosed())) {
+					rs_payroll_count.close();
+				}
+				
+			} catch (SQLException sqle) {
+
+				logger.error(sqle.getMessage(), sqle);
+				sqle.printStackTrace();
+			} catch (Exception e1) {
+
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			}
 		}
 
 		logger.setLevel(Level.DEBUG);
@@ -748,6 +805,24 @@ public class StaffPayrollDaoImpl implements StaffPayrollDao{
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		} finally {
+			try {
+				if (ps_payroll != null && !ps_payroll.isClosed()) {
+					ps_payroll.close();
+				}
+				
+				if (rs_payroll != null&& (!rs_payroll.isClosed())) {
+					rs_payroll.close();
+				}
+				
+			} catch (SQLException sqle) {
+
+				logger.error(sqle.getMessage(), sqle);
+				sqle.printStackTrace();
+			} catch (Exception e1) {
+
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			}
 		}
 
 		logger.setLevel(Level.DEBUG);
@@ -870,6 +945,24 @@ public class StaffPayrollDaoImpl implements StaffPayrollDao{
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		} finally {
+			try {
+				if (ps_payroll != null && !ps_payroll.isClosed()) {
+					ps_payroll.close();
+				}
+				
+				if (rs_payroll != null&& (!rs_payroll.isClosed())) {
+					rs_payroll.close();
+				}
+				
+			} catch (SQLException sqle) {
+
+				logger.error(sqle.getMessage(), sqle);
+				sqle.printStackTrace();
+			} catch (Exception e1) {
+
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			}
 		}
 
 		logger.setLevel(Level.DEBUG);
@@ -3156,8 +3249,24 @@ public class StaffPayrollDaoImpl implements StaffPayrollDao{
 		catch(Exception e){
 			e.printStackTrace();
 		}
-		finally{
+		finally {
 
+			try {
+				if (rs_employee != null && !rs_employee.isClosed()) {
+					rs_employee.close();
+				}
+				if (ps_employee != null && !ps_employee.isClosed()) {
+					ps_employee.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
 		}
 		return staffList;
 	}
@@ -3625,7 +3734,23 @@ public class StaffPayrollDaoImpl implements StaffPayrollDao{
 			e.printStackTrace();
 		}
 		finally{
+			try{
+				if(rs_employee!=null && (!rs_employee.isClosed())){
 
+					rs_employee.close();
+				}
+				
+				if(ps_employee!=null && (!ps_employee.isClosed())){
+
+					ps_employee.close();
+				}
+			} catch (SQLException sqle) {
+				sqle.printStackTrace();
+				logger.error(sqle);
+			} catch (Exception e1) {
+				e1.printStackTrace();
+				logger.error(e1);
+			}
 		}
 		return staffList;
 	}
@@ -3726,6 +3851,11 @@ public class StaffPayrollDaoImpl implements StaffPayrollDao{
 			logger.error(e1);
 		}finally{
 			try{
+				if(rs_payroll!=null && (!rs_payroll.isClosed())){
+
+					rs_payroll.close();
+				}
+				
 				if(salarystatement!=null && (!salarystatement.isClosed())){
 
 					salarystatement.close();

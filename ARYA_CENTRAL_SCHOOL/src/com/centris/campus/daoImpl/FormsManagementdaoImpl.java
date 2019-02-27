@@ -175,6 +175,9 @@ public class FormsManagementdaoImpl {
 		finally{
 
 			try{
+				if (rt != null && (!rt.isClosed())) {
+					rt.close();
+				}
 
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
@@ -342,6 +345,9 @@ public class FormsManagementdaoImpl {
 		finally{
 
 			try{
+				if (rt != null && !rt.isClosed()) {
+					rt.close();
+				}
 
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
@@ -698,6 +704,20 @@ public class FormsManagementdaoImpl {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		finally {
+			try {
+
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+					conn.close();
+				}
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		return status;
 	}
 	public List<Issuedmenuvo> searchapproveformDetails(String searchName) {
@@ -946,7 +966,7 @@ public class FormsManagementdaoImpl {
 
 					iss_rs.close();
 				}
-				if (iss_rs != null && (!iss_rs.isClosed())) {
+				if (iss_pstmt != null && (!iss_pstmt.isClosed())) {
 
 					iss_pstmt.close();
 				}
@@ -1028,7 +1048,7 @@ public class FormsManagementdaoImpl {
 
 					iss_rs.close();
 				}
-				if (iss_rs != null && (!iss_rs.isClosed())) {
+				if (iss_pstmt != null && (!iss_pstmt.isClosed())) {
 
 					iss_pstmt.close();
 				}
@@ -1244,7 +1264,7 @@ public class FormsManagementdaoImpl {
 
 					iss_rs.close();
 				}
-				if (iss_rs != null && (!iss_rs.isClosed())) {
+				if (iss_pstmt != null && (!iss_pstmt.isClosed())) {
 
 					iss_pstmt.close();
 				}
@@ -1479,7 +1499,7 @@ public class FormsManagementdaoImpl {
 
 					iss_rs.close();
 				}
-				if (iss_rs != null && (!iss_rs.isClosed())) {
+				if (iss_pstmt != null && (!iss_pstmt.isClosed())) {
 
 					iss_pstmt.close();
 				}
@@ -1561,7 +1581,7 @@ public class FormsManagementdaoImpl {
 
 					iss_rs.close();
 				}
-				if (iss_rs != null && (!iss_rs.isClosed())) {
+				if (iss_pstmt != null && (!iss_pstmt.isClosed())) {
 
 					iss_pstmt.close();
 				}

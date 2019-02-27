@@ -267,9 +267,20 @@ public class LeaveBankDAOIMPL implements LeaveBankDAO {
 				logger.error(e1.getMessage(), e1);
 			} finally {
 				try {
-
+					if (rs != null && !rs.isClosed()) {
+						rs.close();
+					}
+					if (rscheckjoiningdate != null && !rscheckjoiningdate.isClosed()) {
+						rscheckjoiningdate.close();
+					}
 					if (pstmt != null && !pstmt.isClosed()) {
 						pstmt.close();
+					}
+					if (psmtcheckjoiningdate  != null && !psmtcheckjoiningdate .isClosed()) {
+						psmtcheckjoiningdate.close();
+					}
+					if (pstmt_hrms  != null && !pstmt_hrms .isClosed()) {
+						pstmt_hrms .close();
 					}
 
 					if (con != null && (!con.isClosed())) {
@@ -741,6 +752,10 @@ public class LeaveBankDAOIMPL implements LeaveBankDAO {
 		} finally {
 
 			try {
+
+				if (res != null && !res.isClosed()) {
+					res.close();
+				}
 
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
@@ -1227,9 +1242,16 @@ public class LeaveBankDAOIMPL implements LeaveBankDAO {
 					if (rs != null && (!rs.isClosed())) {
 						rs.close();
 				 }
+					if (rs1 != null && (!rs1.isClosed())) {
+						rs1.close();
+				 }
 				 if (pstmt != null && (!pstmt.isClosed())) {
 
 					 pstmt.close();
+				 }
+				 if (pstmt1 != null && (!pstmt1.isClosed())) {
+
+					 pstmt1.close();
 				 }
 				 if (conn != null && (!conn.isClosed())) {
 

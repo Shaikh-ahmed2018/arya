@@ -83,7 +83,25 @@ public class StaffAttendanceReportDaoImpl implements StaffAttendanceReportDao {
 		}
 		
 		
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -385,7 +403,25 @@ public class StaffAttendanceReportDaoImpl implements StaffAttendanceReportDao {
 			e.printStackTrace();
 		}
 		
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -441,7 +477,25 @@ public class StaffAttendanceReportDaoImpl implements StaffAttendanceReportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -450,9 +504,6 @@ public class StaffAttendanceReportDaoImpl implements StaffAttendanceReportDao {
 		
 		return teachinglist;
 	}
-
-
-
 
 	
 	public StaffAttendanceVo getSelectedTeacherNameReportDao(ReportMenuVo vo) {
@@ -497,7 +548,25 @@ public class StaffAttendanceReportDaoImpl implements StaffAttendanceReportDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		
 		
@@ -556,7 +625,25 @@ public class StaffAttendanceReportDaoImpl implements StaffAttendanceReportDao {
 			e.printStackTrace();
 		}
 		
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -607,7 +694,25 @@ public class StaffAttendanceReportDaoImpl implements StaffAttendanceReportDao {
 			e.printStackTrace();
 		}
 		
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())

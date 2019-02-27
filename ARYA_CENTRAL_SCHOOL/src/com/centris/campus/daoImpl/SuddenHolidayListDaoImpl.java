@@ -155,6 +155,23 @@ public class SuddenHolidayListDaoImpl implements SuddenHolidayListDao {
 				logger.error(e.getMessage(), e);
 				e.printStackTrace();
 			}
+			finally {
+
+				try {
+					
+					if (pstmt != null && !pstmt.isClosed()) {
+						pstmt.close();
+					}
+					if (conn != null && !conn.isClosed()) {
+
+						conn.close();
+					}
+
+				} catch (Exception exception) {
+					logger.error(exception.getMessage(), exception);
+					exception.printStackTrace();
+				}
+			}
 			
 			JLogger.log(0, JDate.getTimeString(new Date())
 					+ MessageConstants.END_POINT);
@@ -214,7 +231,22 @@ public String storeSuudenHolidaysSections(SuddenHolidaysPojo suddenholidayspojo)
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-		
+		finally {
+
+			try {
+				if (rs_all_sections != null && !rs_all_sections.isClosed()) {
+					rs_all_sections.close();
+				}
+				if (ps_sectiondetails != null && !ps_sectiondetails.isClosed()) {
+					ps_sectiondetails.close();
+				}
+				
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -274,7 +306,25 @@ public boolean validateSuddenHolidaysSms(String date, String smstext) {
 		logger.error(e.getMessage(), e);
 		e.printStackTrace();
 	}
-	
+	finally {
+
+		try {
+			if (rs_checkvalidation != null && !rs_checkvalidation.isClosed()) {
+				rs_checkvalidation.close();
+			}
+			if (ps_checkvalidation != null && !ps_checkvalidation.isClosed()) {
+				ps_checkvalidation.close();
+			}
+			if (conn != null && !conn.isClosed()) {
+
+				conn.close();
+			}
+
+		} catch (Exception exception) {
+			logger.error(exception.getMessage(), exception);
+			exception.printStackTrace();
+		}
+	}
 	logger.setLevel(Level.DEBUG);
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);

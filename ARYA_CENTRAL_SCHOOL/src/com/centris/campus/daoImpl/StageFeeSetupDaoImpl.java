@@ -435,12 +435,18 @@ public class StageFeeSetupDaoImpl implements StageFeeSetupDao{
 		} finally {
 
 			try {
-
+				
+				if (rs1 != null && !rs1.isClosed()) {
+					rs1.close();
+				}
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
 				if (pst != null && !pst.isClosed()) {
 					pst.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
 				}
 				if (conn != null && !conn.isClosed()) {
 					conn.close();

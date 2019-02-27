@@ -99,11 +99,31 @@ public class TeacherLeaveRequestDaoImpl implements TeacherLeaveRequestDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
 				+ " Control in TeacherLeaveRequestDaoImpl : getRequestUserListDao  Ending");
 
+		
 		return userlist;
 	}
 
@@ -168,7 +188,25 @@ public class TeacherLeaveRequestDaoImpl implements TeacherLeaveRequestDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -232,7 +270,25 @@ public class TeacherLeaveRequestDaoImpl implements TeacherLeaveRequestDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (connection != null && !connection.isClosed()) {
+
+					connection.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -284,7 +340,25 @@ public class TeacherLeaveRequestDaoImpl implements TeacherLeaveRequestDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (connection != null && !connection.isClosed()) {
+
+					connection.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -341,7 +415,25 @@ public class TeacherLeaveRequestDaoImpl implements TeacherLeaveRequestDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -394,7 +486,23 @@ public class TeacherLeaveRequestDaoImpl implements TeacherLeaveRequestDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -449,7 +557,25 @@ public class TeacherLeaveRequestDaoImpl implements TeacherLeaveRequestDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -500,7 +626,25 @@ public class TeacherLeaveRequestDaoImpl implements TeacherLeaveRequestDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -553,7 +697,25 @@ public class TeacherLeaveRequestDaoImpl implements TeacherLeaveRequestDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (connection  != null && !connection.isClosed()) {
+
+					connection.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -648,7 +810,25 @@ public class TeacherLeaveRequestDaoImpl implements TeacherLeaveRequestDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -693,6 +873,25 @@ public class TeacherLeaveRequestDaoImpl implements TeacherLeaveRequestDao {
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
+		}
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (connection != null && !connection.isClosed()) {
+
+					connection.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
 		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -808,7 +1007,43 @@ public class TeacherLeaveRequestDaoImpl implements TeacherLeaveRequestDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
 
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (rs1 != null && !rs1.isClosed()) {
+					rs1.close();
+				}
+				if (rs2 != null && !rs2.isClosed()) {
+					rs2.close();
+				}
+				if (rs3 != null && !rs3.isClosed()) {
+					rs3.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (pstmt2 != null && !pstmt2.isClosed()) {
+					pstmt2.close();
+				}
+				if (pstmt3 != null && !pstmt3.isClosed()) {
+					pstmt3.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -931,6 +1166,25 @@ public class TeacherLeaveRequestDaoImpl implements TeacherLeaveRequestDao {
 			e.printStackTrace();
 		}
 
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())

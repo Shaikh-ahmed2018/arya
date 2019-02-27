@@ -583,6 +583,9 @@ public class LoginDaoImpl {
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.getConnection().close();
 				}
+				if (pstmtcheck != null && (!pstmtcheck.isClosed())) {
+					pstmtcheck.getConnection().close();
+				}
 
 			} catch (Exception exception) {
 				logger.error(exception.getMessage(), exception);
@@ -649,6 +652,25 @@ public class LoginDaoImpl {
 			} catch (Exception exception) {
 				logger.error(exception.getMessage(), exception);
 				exception.getStackTrace();
+			}
+			finally {
+
+				try {
+					if (rs != null && !rs.isClosed()) {
+						rs.close();
+					}
+					if (pstmt != null && !pstmt.isClosed()) {
+						pstmt.close();
+					}
+					if (con != null && !con.isClosed()) {
+
+						con.close();
+					}
+
+				} catch (Exception exception) {
+					logger.error(exception.getMessage(), exception);
+					exception.printStackTrace();
+				}
 			}
 		}
 		JLogger.log(0, JDate.getTimeString(new Date())

@@ -67,20 +67,23 @@ public class SpecializationDaoImpl implements SpecializationDao {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		finally{
-			try{
-				if (pstmt != null
-						&& (!pstmt.isClosed())) {
+		finally {
 
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
 				if (conn != null && !conn.isClosed()) {
+
 					conn.close();
 				}
-				
-				
-			}catch(Exception e){
-				e.printStackTrace();
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
 		}
 		
@@ -206,21 +209,24 @@ public class SpecializationDaoImpl implements SpecializationDao {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		finally{
-			try{
-				if (pstmt != null
-						&& (!pstmt.isClosed())) {
+		finally {
 
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
 				if (conn != null && !conn.isClosed()) {
+
 					conn.close();
 				}
-				
-			}catch(Exception e){
-				e.printStackTrace();
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
-			
 		}
 		
 		
@@ -610,19 +616,23 @@ public class SpecializationDaoImpl implements SpecializationDao {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		finally{
-			try{
-				if (pstmt != null
-						&& (!pstmt.isClosed())) {
+		finally {
 
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
 				if (conn != null && !conn.isClosed()) {
+
 					conn.close();
 				}
-				
-			}catch(Exception e){
-				e.printStackTrace();
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
 		}
 		

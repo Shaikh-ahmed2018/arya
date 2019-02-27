@@ -182,12 +182,31 @@ public class FeeCollectionSummaryReportDaoImpl implements FeeCollectionSummaryRe
 				if (rst != null && !rst.isClosed()) {
 					rst.close();
 				}
+				if (rs_section != null && !rs_section.isClosed()) {
+					rs_section.close();
+				}
+				if (rs_paidfee!= null && !rs_paidfee.isClosed()) {
+					rs_paidfee.close();
+				}
+				if (rs_stdcount != null && !rs_stdcount.isClosed()) {
+					rs_stdcount.close();
+				}
 				if (pstmt1 != null && !pstmt1.isClosed()) {
 					pstmt1.close();
 				}
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
+				if (ps_section != null && !ps_section.isClosed()) {
+					ps_section.close();
+				}
+				if (ps_paidfee != null && !ps_paidfee.isClosed()) {
+					ps_paidfee.close();
+				}
+				if (ps_stdCount != null && !ps_stdCount.isClosed()) {
+					ps_stdCount.close();
+				}
+				
 				if (conn != null && !conn.isClosed()) {
 					conn.close();
 				}

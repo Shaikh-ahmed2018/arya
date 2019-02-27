@@ -400,9 +400,15 @@ public class StudentEnquiryDaoImpl implements StudentEnquiryDao {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && (!rs.isClosed())) {
+					rs.close();
+				}
 
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -782,8 +788,15 @@ public class StudentEnquiryDaoImpl implements StudentEnquiryDao {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && (!rs.isClosed())) {
+				rs.close();
+			}
+				
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();

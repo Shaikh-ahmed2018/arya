@@ -889,6 +889,25 @@ public class TeacherDaoImpl implements TeacherDao {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (connection != null && !connection.isClosed()) {
+
+					connection.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		return url;
 	}
 
@@ -1257,6 +1276,22 @@ public class TeacherDaoImpl implements TeacherDao {
 				if (pstmtcount != null && (!pstmtcount.isClosed())) {
 					pstmtcount.close();
 				}
+				if (pstmt_clssmap_delete  != null && (!pstmt_clssmap_delete .isClosed())) {
+					pstmt_clssmap_delete .close();
+				}
+				if (pstmt_classmap != null && (!pstmt_classmap.isClosed())) {
+					pstmt_classmap.close();
+				}
+				if (pstmt_subjectmap_delete  != null && (!pstmt_subjectmap_delete .isClosed())) {
+					pstmt_subjectmap_delete .close();
+				}
+				if (pstmt_subjectmap != null && (!pstmt_subjectmap.isClosed())) {
+					pstmt_subjectmap.close();
+				}
+				if (ps_updateuser != null && (!ps_updateuser.isClosed())) {
+					ps_updateuser.close();
+				}
+				
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -1386,8 +1421,8 @@ public class TeacherDaoImpl implements TeacherDao {
 				if (resultset != null && (!resultset.isClosed())) {
 					resultset.close();
 				}
-				if (pstmt != null && (!pstmt.isClosed())) {
-					pstmt.close();
+				if (mappingpstmt != null && (!mappingpstmt.isClosed())) {
+					mappingpstmt.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -1524,8 +1559,8 @@ public class TeacherDaoImpl implements TeacherDao {
 				if (resultset != null && (!resultset.isClosed())) {
 					resultset.close();
 				}
-				if (pstmt != null && (!pstmt.isClosed())) {
-					pstmt.close();
+				if (mappingpstmt != null && (!mappingpstmt.isClosed())) {
+					mappingpstmt.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -1589,8 +1624,8 @@ public class TeacherDaoImpl implements TeacherDao {
 				if (resultset != null && (!resultset.isClosed())) {
 					resultset.close();
 				}
-				if (pstmt != null && (!pstmt.isClosed())) {
-					pstmt.close();
+				if (mappingpstmt != null && (!mappingpstmt.isClosed())) {
+					mappingpstmt.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -1653,8 +1688,8 @@ public class TeacherDaoImpl implements TeacherDao {
 				if (resultset != null && (!resultset.isClosed())) {
 					resultset.close();
 				}
-				if (pstmt != null && (!pstmt.isClosed())) {
-					pstmt.close();
+				if (mappingpstmt != null && (!mappingpstmt.isClosed())) {
+					mappingpstmt.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();

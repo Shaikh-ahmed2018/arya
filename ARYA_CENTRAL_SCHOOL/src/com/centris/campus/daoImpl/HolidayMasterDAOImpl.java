@@ -110,7 +110,9 @@ public class HolidayMasterDAOImpl implements HolidayMasterSDAO{
 		}finally{
 			try{
 
-
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null
 						&& (!pstmt.isClosed())) {
 

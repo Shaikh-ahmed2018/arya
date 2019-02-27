@@ -129,6 +129,9 @@ public class StaffEmployementDaoImpl implements StaffEmployementDao{
 				e.printStackTrace();
 			} finally {
 				try {
+					if (rs_salary != null && !rs_salary.isClosed()) {
+						rs_salary.close();
+					}
 					if (pstmt != null && (!pstmt.isClosed())) {
 						pstmt.close();
 					}
@@ -334,6 +337,12 @@ public class StaffEmployementDaoImpl implements StaffEmployementDao{
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
+				}
 				if (salarystatement != null && (!salarystatement.isClosed())) {
 					salarystatement.close();
 				}
@@ -404,6 +413,9 @@ public class StaffEmployementDaoImpl implements StaffEmployementDao{
 					logger.error(e1);
 				}finally{
 						try{
+							if (rs_salary2 != null && !rs_salary2.isClosed()) {
+								rs_salary2.close();
+							}
 							if (salarystatement2 != null && (!salarystatement2.isClosed())) {
 								salarystatement2.close();
 							}
@@ -479,6 +491,9 @@ public class StaffEmployementDaoImpl implements StaffEmployementDao{
 					logger.error(e1);
 				}finally{
 					try{
+						if (rs_salary != null && !rs_salary.isClosed()) {
+							rs_salary.close();
+						}
 						if (salarystatement != null && (!salarystatement.isClosed())) {
 							salarystatement.close();
 						}

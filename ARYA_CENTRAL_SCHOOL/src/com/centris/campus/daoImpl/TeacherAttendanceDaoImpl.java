@@ -113,6 +113,9 @@ public class TeacherAttendanceDaoImpl implements TeacherAttendanceDao {
 				if (pstmt1 != null && (!pstmt1.isClosed())) {
 					pstmt1.close();
 				}
+				if (pstmt != null && (!pstmt.isClosed())) {
+					pstmt.close();
+				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
 				}
@@ -311,6 +314,23 @@ public class TeacherAttendanceDaoImpl implements TeacherAttendanceDao {
 						&& (!pstgetattndanceDates.isClosed())) {
 					pstgetattndanceDates.close();
 				}
+				if (postattendance  != null
+						&& (!postattendance .isClosed())) {
+					postattendance .close();
+				}
+				if (rsgetattendanceDates  != null
+						&& (!rsgetattendanceDates .isClosed())) {
+					rsgetattendanceDates .close();
+				}
+				if (getcreatedby  != null
+						&& (!getcreatedby .isClosed())) {
+					getcreatedby .close();
+				}
+				if (rscreatedby  != null
+						&& (!rscreatedby .isClosed())) {
+					rscreatedby .close();
+				}
+				
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
 				}
@@ -638,6 +658,19 @@ public class TeacherAttendanceDaoImpl implements TeacherAttendanceDao {
 		} finally {
 
 			try {
+				if (resultSet != null
+						&& (!resultSet.isClosed())) {
+					resultSet.close();
+				}
+				if (resultSet1 != null
+						&& (!resultSet1.isClosed())) {
+					resultSet1.close();
+				}
+				
+				if (preparedStatement != null
+						&& (!preparedStatement.isClosed())) {
+					preparedStatement.close();
+				}
 
 				if (preparedStatement1 != null
 						&& (!preparedStatement1.isClosed())) {
@@ -737,10 +770,18 @@ public class TeacherAttendanceDaoImpl implements TeacherAttendanceDao {
 		} finally {
 
 			try {
+				if (rs != null
+						&& (!rs.isClosed())) {
+					rs.close();
+				}
 
 				if (preparedStatement != null
 						&& (!preparedStatement.isClosed())) {
 					preparedStatement.close();
+				}
+				if (preparedStatement1 != null
+						&& (!preparedStatement1.isClosed())) {
+					preparedStatement1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();

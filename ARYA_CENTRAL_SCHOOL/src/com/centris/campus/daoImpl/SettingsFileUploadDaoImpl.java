@@ -333,16 +333,62 @@ public class SettingsFileUploadDaoImpl {
 			e1.printStackTrace();
 			logger.error(e1.getMessage(),e1);
 		}
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (rs1 != null && !rs1.isClosed()) {
+					rs1.close();
+				}
+				
+				if (rs2 != null && !rs2.isClosed()) {
+					rs2.close();
+				}
+				
+				if (rs3 != null && !rs3.isClosed()) {
+					rs3.close();
+				}
+				
+				if (rs4 != null && !rs4.isClosed()) {
+					rs4.close();
+				}
+				
+				if (rs5 != null && !rs5.isClosed()) {
+					rs5.close();
+				}
+				
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (pstm != null && !pstm.isClosed()) {
+					pstm.close();
+				}
+				if (pstm1 != null && !pstm1.isClosed()) {
+					pstm1.close();
+				}
+				if (pstm3 != null && !pstm3.isClosed()) {
+					pstm3.close();
+				}
+				if (pstm4 != null && !pstm4.isClosed()) {
+					pstm4.close();
+				}
+				if (pstm5 != null && !pstm5.isClosed()) {
+					pstm5.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		return failurelistOnDiompl;
 	}
-
-
-
-
-
-
-
-
 
 
 	public Set<classVo> insertHoliday(List<ClassPojo> successlist, Set<classVo> failurelist, Connection connection,
@@ -422,6 +468,60 @@ public class SettingsFileUploadDaoImpl {
 		catch (Exception e1) {
 			e1.printStackTrace();
 			logger.error(e1.getMessage(),e1);
+		}
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (rs1 != null && !rs1.isClosed()) {
+					rs1.close();
+				}
+				
+				if (rs2 != null && !rs2.isClosed()) {
+					rs2.close();
+				}
+				
+				if (rs3 != null && !rs3.isClosed()) {
+					rs3.close();
+				}
+				
+				if (rs4 != null && !rs4.isClosed()) {
+					rs4.close();
+				}
+				
+				if (rs5 != null && !rs5.isClosed()) {
+					rs5.close();
+				}
+				
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (pstm != null && !pstm.isClosed()) {
+					pstm.close();
+				}
+				if (pstm1 != null && !pstm1.isClosed()) {
+					pstm1.close();
+				}
+				if (pstm3 != null && !pstm3.isClosed()) {
+					pstm3.close();
+				}
+				if (pstm4 != null && !pstm4.isClosed()) {
+					pstm4.close();
+				}
+				if (pstm5 != null && !pstm5.isClosed()) {
+					pstm5.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
 		}
 		return failurelistOnDiompl;
 	}

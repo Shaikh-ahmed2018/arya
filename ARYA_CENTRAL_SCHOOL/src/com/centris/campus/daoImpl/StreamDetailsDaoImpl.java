@@ -287,7 +287,23 @@ public class StreamDetailsDaoImpl implements StreamDetailsDao {
 			e.printStackTrace();
 		}
 		
-		
+		finally {
+
+			try {
+				
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -582,6 +598,10 @@ public class StreamDetailsDaoImpl implements StreamDetailsDao {
 				e.printStackTrace();
 			} finally {
 				try {
+					if (rsCheckStreamName != null
+							&& (!rsCheckStreamName.isClosed())) {
+						rsCheckStreamName.close();
+					}
 
 					if (pscheckStreamName != null
 							&& (!pscheckStreamName.isClosed())) {

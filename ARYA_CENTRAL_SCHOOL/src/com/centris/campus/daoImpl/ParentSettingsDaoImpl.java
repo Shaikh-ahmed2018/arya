@@ -1177,8 +1177,38 @@ public class ParentSettingsDaoImpl implements ParentSettingsDao {
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs0 != null && (!rs0.isClosed())) {
+					rs0.close();
+				}
+				if (rs1 != null && (!rs1.isClosed())) {
+					rs1.close();
+				}
+				if (rs2 != null && (!rs2.isClosed())) {
+					rs2.close();
+				}
+				if (rs3 != null && (!rs3.isClosed())) {
+					rs3.close();
+				}
+				if (rs4 != null && (!rs4.isClosed())) {
+					rs4.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt0 != null && (!pstmt0.isClosed())) {
+					pstmt0.close();
+				}
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
+				}
+				if (pstmt2 != null && (!pstmt2.isClosed())) {
+					pstmt2.close();
+				}
+				if (pstmt3 != null && (!pstmt3.isClosed())) {
+					pstmt3.close();
+				}
+				if (pstmt4 != null && (!pstmt4.isClosed())) {
+					pstmt4.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -1618,8 +1648,14 @@ public class ParentSettingsDaoImpl implements ParentSettingsDao {
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null && (!rs1.isClosed())) {
+					rs1.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -1847,8 +1883,20 @@ public class ParentSettingsDaoImpl implements ParentSettingsDao {
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null && (!rs1.isClosed())) {
+					rs1.close();
+				}
+				if (rs2 != null && (!rs2.isClosed())) {
+					rs2.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
+				}
+				if (pstmt2 != null && (!pstmt2.isClosed())) {
+					pstmt2.close();
 				}
 				if (connection != null && (!connection.isClosed())) {
 					connection.close();
@@ -2490,8 +2538,14 @@ public class ParentSettingsDaoImpl implements ParentSettingsDao {
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null && (!rs1.isClosed())) {
+					rs1.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();

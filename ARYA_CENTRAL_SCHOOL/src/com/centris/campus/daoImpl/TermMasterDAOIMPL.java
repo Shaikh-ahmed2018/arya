@@ -1270,6 +1270,7 @@ public class TermMasterDAOIMPL implements TermMasterDAO {
 				exception.printStackTrace();
 			}
 		}
+		
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);

@@ -72,7 +72,23 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 		}
 		
 		
-		
+		finally {
+
+			try {
+				
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 			JLogger.log(0, JDate.getTimeString(new Date())
 					+ MessageConstants.END_POINT);
@@ -122,7 +138,23 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-		
+		finally {
+
+			try {
+				
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -176,7 +208,26 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-	
+		finally {
+
+			try {
+				if (rsCheckReligion != null && !rsCheckReligion.isClosed()) {
+					rsCheckReligion.close();
+				}
+				
+				if (psCheckReligion != null && !psCheckReligion.isClosed()) {
+					psCheckReligion.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -230,7 +281,9 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		} finally {
 			try {
-
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -351,6 +404,9 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
@@ -419,7 +475,25 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-	
+		finally {
+
+			try {
+				if (rsCheckReligion != null && !rsCheckReligion.isClosed()) {
+					rsCheckReligion.close();
+				}
+				if (psCheckReligion != null && !psCheckReligion.isClosed()) {
+					psCheckReligion.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -475,6 +549,9 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
@@ -600,7 +677,25 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-	
+		finally {
+
+			try {
+				if (rsCheckReligion != null && !rsCheckReligion.isClosed()) {
+					rsCheckReligion.close();
+				}
+				if (psCheckReligion != null && !psCheckReligion.isClosed()) {
+					psCheckReligion.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -657,7 +752,25 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		}
 	
+		finally {
 
+			try {
+				if (rsCheckReligion != null && !rsCheckReligion.isClosed()) {
+					rsCheckReligion.close();
+				}
+				if (psCheckReligion != null && !psCheckReligion.isClosed()) {
+					psCheckReligion.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -708,7 +821,20 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-		
+		finally {
+			try {
+
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+					conn.close();
+				}
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 			JLogger.log(0, JDate.getTimeString(new Date())
 					+ MessageConstants.END_POINT);
 			logger.info(JDate.getTimeString(new Date())
@@ -762,7 +888,20 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		}
 		
-		
+		finally {
+			try {
+
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+					conn.close();
+				}
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -815,7 +954,9 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		} finally {
 			try {
-
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -884,7 +1025,9 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		} finally {
 			try {
-
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -1012,7 +1155,25 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		}
 	
+		finally {
 
+			try {
+				if (rsCheckReligion != null && !rsCheckReligion.isClosed()) {
+					rsCheckReligion.close();
+				}
+				if (psCheckReligion != null && !psCheckReligion.isClosed()) {
+					psCheckReligion.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -1064,7 +1225,20 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-		
+		finally {
+			try {
+
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+					conn.close();
+				}
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 			JLogger.log(0, JDate.getTimeString(new Date())
 					+ MessageConstants.END_POINT);
 			logger.info(JDate.getTimeString(new Date())
@@ -1112,7 +1286,20 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		}
 		
-		
+		finally {
+			try {
+
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+					conn.close();
+				}
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -1173,7 +1360,20 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		}
 	
+		finally {
+			try {
 
+				if (psCheckReligion != null && !psCheckReligion.isClosed()) {
+					psCheckReligion.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+					conn.close();
+				}
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -1226,6 +1426,9 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
@@ -1238,6 +1441,7 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 				e.printStackTrace();
 			}
 		}
+		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -1288,7 +1492,20 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-		
+		 finally {
+				try {
+
+					if (pstmt != null && !pstmt.isClosed()) {
+						pstmt.close();
+					}
+					if (conn != null && !conn.isClosed()) {
+						conn.close();
+					}
+				} catch (Exception exception) {
+					logger.error(exception.getMessage(), exception);
+					exception.printStackTrace();
+				}
+			}
 		
 		
 		
@@ -1346,7 +1563,25 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		}
 	
+		finally {
 
+			try {
+				if (rsCheckReligion != null && !rsCheckReligion.isClosed()) {
+					rsCheckReligion.close();
+				}
+				if (psCheckReligion != null && !psCheckReligion.isClosed()) {
+					psCheckReligion.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -1395,7 +1630,20 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		}
 		
-		
+		finally {
+			try {
+
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+					conn.close();
+				}
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -1509,6 +1757,9 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
@@ -1578,7 +1829,25 @@ public class ReligionCasteCasteCategoryDaoImpl implements ReligionCasteCasteCate
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-	
+		finally {
+
+			try {
+				if (rsCheckReligion != null && !rsCheckReligion.isClosed()) {
+					rsCheckReligion.close();
+				}
+				if (psCheckReligion != null && !psCheckReligion.isClosed()) {
+					psCheckReligion.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);

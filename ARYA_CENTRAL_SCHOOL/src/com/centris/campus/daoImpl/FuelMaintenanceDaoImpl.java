@@ -600,6 +600,9 @@ public class FuelMaintenanceDaoImpl implements FuelMaintenanceDao {
 		} finally {
 
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
@@ -666,7 +669,9 @@ public class FuelMaintenanceDaoImpl implements FuelMaintenanceDao {
 		} finally {
 
 			try {
-
+				if (resultSet != null && !resultSet.isClosed()) {
+					resultSet.close();
+				}
 				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
@@ -722,7 +727,25 @@ public class FuelMaintenanceDaoImpl implements FuelMaintenanceDao {
 		catch(Exception e){
 			e.printStackTrace();
 		}
-		
+		finally {
+
+			try {
+				if (resultSet != null && !resultSet.isClosed()) {
+					resultSet.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (connection != null && !connection.isClosed()) {
+
+					connection.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -762,7 +785,25 @@ public class FuelMaintenanceDaoImpl implements FuelMaintenanceDao {
 			e.printStackTrace();
 		}
 		
-		
+		finally {
+
+			try {
+				if (resultSet != null && !resultSet.isClosed()) {
+					resultSet.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (connection != null && !connection.isClosed()) {
+
+					connection.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		return driverList;
 	
 	}

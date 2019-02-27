@@ -405,7 +405,9 @@ public class MarksUploadDaoImpl implements MarksUploadDao {
 		} finally {
 
 			try {
-			
+				if (rst != null && !rst.isClosed()) {
+					rst.close();
+				}
 				if (pst != null && !pst.isClosed()) {
 					pst.close();
 				}

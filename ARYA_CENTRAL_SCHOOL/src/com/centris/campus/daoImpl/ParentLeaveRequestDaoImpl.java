@@ -84,6 +84,25 @@ public class ParentLeaveRequestDaoImpl implements ParentLeaveRequestDao {
 			logger.error(e.getMessage(), e); 
 			e.printStackTrace();
 		}
+		  finally {
+
+				try {
+					if (rs != null && !rs.isClosed()) {
+						rs.close();
+					}
+					if (pstmt != null && !pstmt.isClosed()) {
+						pstmt.close();
+					}
+					if (conn != null && !conn.isClosed()) {
+
+						conn.close();
+					}
+
+				} catch (Exception exception) {
+					logger.error(exception.getMessage(), exception);
+					exception.printStackTrace();
+				}
+			}
 	
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -143,6 +162,23 @@ public class ParentLeaveRequestDaoImpl implements ParentLeaveRequestDao {
 			logger.error(e.getMessage(), e); 
 			e.printStackTrace();
 		}
+		  finally {
+
+				try {
+					
+					if (pstmt != null && !pstmt.isClosed()) {
+						pstmt.close();
+					}
+					if (conn != null && !conn.isClosed()) {
+
+						conn.close();
+					}
+
+				} catch (Exception exception) {
+					logger.error(exception.getMessage(), exception);
+					exception.printStackTrace();
+				}
+			}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -201,7 +237,25 @@ public class ParentLeaveRequestDaoImpl implements ParentLeaveRequestDao {
 			e.printStackTrace();
 		}
 		
-	
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -252,6 +306,25 @@ public class ParentLeaveRequestDaoImpl implements ParentLeaveRequestDao {
 			} catch (Exception e) {
 				logger.error(e.getMessage(), e); 
 				e.printStackTrace();
+			}
+			finally {
+
+				try {
+					if (rs != null && !rs.isClosed()) {
+						rs.close();
+					}
+					if (pstmt != null && !pstmt.isClosed()) {
+						pstmt.close();
+					}
+					if (connection != null && !connection.isClosed()) {
+
+						connection.close();
+					}
+
+				} catch (Exception exception) {
+					logger.error(exception.getMessage(), exception);
+					exception.printStackTrace();
+				}
 			}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())

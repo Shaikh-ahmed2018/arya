@@ -493,20 +493,40 @@ public class TimeTableDaoImpl implements TimeTableDao {
 		catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
-		} finally {
+		}
+		finally {
+
 			try {
-				if (rst != null && (!rst.isClosed())) {
-					rst.close();
+				if (rst1 != null && !rst1.isClosed()) {
+					rst1.close();
 				}
-				if (pstmt != null && (!pstmt.isClosed())) {
+				if (rst2 != null && !rst2.isClosed()) {
+					rst2.close();
+				}
+				if (rst3 != null && !rst3.isClosed()) {
+					rst3.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
 					pstmt.close();
 				}
-				if (connection != null && (!connection.isClosed())) {
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
+				}
+				if (pstmt2 != null && !pstmt2.isClosed()) {
+					pstmt2.close();
+				}
+				if (pstmt3!= null && !pstmt3.isClosed()) {
+					pstmt3.close();
+				}
+				
+				if (connection != null && !connection.isClosed()) {
+
 					connection.close();
 				}
-			} catch (Exception e) {
-				logger.error(e.getMessage(), e);
-				e.printStackTrace();
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
 			}
 		}
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -1032,12 +1052,21 @@ public class TimeTableDaoImpl implements TimeTableDao {
 				if (tpstmt != null && (!tpstmt.isClosed())) {
 					tpstmt.close();
 				}
+				if (pstmt3 != null && (!pstmt3.isClosed())) {
+					pstmt3.close();
+				}
+				if (pstmt2 != null && (!pstmt2.isClosed())) {
+					pstmt2.close();
+				}
 				if (pstmt4 != null && (!pstmt4.isClosed())) {
 					pstmt4.close();
 				}
 				
 				if (ctdStatement != null && (!ctdStatement.isClosed())) {
 					ctdStatement.close();
+				}
+				if (ctdStatementdel != null && (!ctdStatementdel.isClosed())) {
+					ctdStatementdel.close();
 				}
 				if (connection != null && (!connection.isClosed())) {
 					connection.close();
@@ -1272,8 +1301,14 @@ public class TimeTableDaoImpl implements TimeTableDao {
 				if (rst != null && (!rst.isClosed())) {
 					rst.close();
 				}
+				if (rst1 != null && (!rst1.isClosed())) {
+					rst1.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (connection != null && (!connection.isClosed())) {
 					connection.close();
@@ -1459,6 +1494,25 @@ public class TimeTableDaoImpl implements TimeTableDao {
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
+		}
+		finally {
+			try {
+				if (rst != null && (!rst.isClosed())) {
+					rst.close();
+				}
+				if (pstmt != null && (!pstmt.isClosed())) {
+					pstmt.close();
+				}
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
+				}
+				if (connection != null && (!connection.isClosed())) {
+					connection.close();
+				}
+			} catch (Exception e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			}
 		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -1953,7 +2007,25 @@ public class TimeTableDaoImpl implements TimeTableDao {
 			e.printStackTrace();
 		}
 		
-		
+		finally {
+
+			try {
+				if (rst != null && !rst.isClosed()) {
+					rst.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (connection != null && !connection.isClosed()) {
+
+					connection.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -2284,6 +2356,22 @@ public class TimeTableDaoImpl implements TimeTableDao {
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
+		}
+		finally {
+			try {
+				if (rst != null && (!rst.isClosed())) {
+					rst.close();
+				}
+				if (pstmt != null && (!pstmt.isClosed())) {
+					pstmt.close();
+				}
+				if (connection != null && (!connection.isClosed())) {
+					connection.close();
+				}
+			} catch (Exception e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			}
 		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -2661,6 +2749,9 @@ public class TimeTableDaoImpl implements TimeTableDao {
 			try {
 				if (rst != null && (!rst.isClosed())) {
 					rst.close();
+				}
+				if (rst1 != null && (!rst1.isClosed())) {
+					rst1.close();
 				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();

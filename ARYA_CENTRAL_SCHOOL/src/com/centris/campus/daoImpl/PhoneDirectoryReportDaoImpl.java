@@ -189,7 +189,28 @@ public class PhoneDirectoryReportDaoImpl implements PhoneDirectoryReportDao{
 		}
 		
 		
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		
 
@@ -461,7 +482,28 @@ public class PhoneDirectoryReportDaoImpl implements PhoneDirectoryReportDao{
 			e.printStackTrace();
 		}
 		
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -549,7 +591,28 @@ public class PhoneDirectoryReportDaoImpl implements PhoneDirectoryReportDao{
 		}
 		
 		
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (pstmt1 != null && !pstmt1.isClosed()) {
+					pstmt1.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		
 		JLogger.log(0, JDate.getTimeString(new Date())

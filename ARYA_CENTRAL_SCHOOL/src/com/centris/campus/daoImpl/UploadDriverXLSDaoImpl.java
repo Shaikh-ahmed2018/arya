@@ -60,7 +60,14 @@ public class UploadDriverXLSDaoImpl {
 			logger.error(e);
 		} finally {
 			try {
-
+				if (pstmt != null) {
+					pstmt.close();
+					pstmt = null;
+				}
+				if (rs != null) {
+					rs.close();
+					rs = null;
+				}
 				if (conn != null) {
 					conn.close();
 					conn = null;

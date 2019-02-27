@@ -329,6 +329,9 @@ public class Inventory_DAOIMPL implements Inventory_DAO {
 			e1.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -407,6 +410,9 @@ public class Inventory_DAOIMPL implements Inventory_DAO {
 			e1.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -1429,8 +1435,12 @@ public class Inventory_DAOIMPL implements Inventory_DAO {
 			e1.printStackTrace();
 		} finally {
 			try {
+				
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -1505,6 +1515,10 @@ public class Inventory_DAOIMPL implements Inventory_DAO {
 			e1.printStackTrace();
 		} finally {
 			try {
+
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
@@ -1840,6 +1854,9 @@ public class Inventory_DAOIMPL implements Inventory_DAO {
 			try {
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();

@@ -1219,7 +1219,7 @@ System.out.println("INSERT LIB "+pstmt);
 
 	public String saveSubscriberDetails(LibrarySubsciberDetailsPojo pojo) {
 		Connection conn = null;
-		PreparedStatement psmt,psmt1= null;
+		PreparedStatement psmt=null,psmt1= null;
 		IDGenerator id = new IDGenerator();
 		String key = null;
 		int count1 =0;
@@ -1284,6 +1284,29 @@ System.out.println("INSERT LIB "+pstmt);
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+		finally {
+
+			try {
+				if (rs1 != null && !rs1.isClosed()) {
+					rs1.close();
+				}
+				if (psmt != null && !psmt.isClosed()) {
+					psmt.close();
+				}
+				if (psmt1 != null && !psmt1.isClosed()) {
+					psmt1.close();
+				}
+				
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
 		}
 		return result;
 	}
@@ -1545,8 +1568,20 @@ System.out.println("INSERT LIB "+pstmt);
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs0 != null && !rs0.isClosed()) {
+					rs0.close();
+				}
+				if (pstmt0 != null && (!pstmt0.isClosed())) {
+					pstmt0.close();
+				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
+				}
+				if (pstmt1  != null && (!pstmt1 .isClosed())) {
+					pstmt1 .close();
+				}
+				if (pstmt2  != null && (!pstmt2 .isClosed())) {
+					pstmt2 .close();
 				}
 				if (conn != null && !conn.isClosed()) {
 					conn.close();
@@ -1745,6 +1780,7 @@ System.out.println("INSERT LIB "+pstmt);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
+			
 			if (pstmt != null) {
 				try {
 					pstmt.close();

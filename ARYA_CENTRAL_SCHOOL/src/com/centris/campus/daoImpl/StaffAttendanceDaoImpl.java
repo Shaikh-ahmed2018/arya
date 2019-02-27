@@ -1473,8 +1473,20 @@ public class StaffAttendanceDaoImpl implements StaffAttendanceDao{
 					if (rs != null&& (!rs.isClosed())) {
 						rs.close();
 					}
+					if (rs_lv_chk != null&& (!rs_lv_chk.isClosed())) {
+						rs_lv_chk.close();
+					}
 					if (ps_insert != null&& (!ps_insert.isClosed())) {
 						ps_insert.close();
+					}
+					if (ps_count  != null&& (!ps_count .isClosed())) {
+						ps_count .close();
+					}
+					if (ps_leaveCheck != null&& (!ps_leaveCheck.isClosed())) {
+						ps_leaveCheck.close();
+					}
+					if (ps_leave != null&& (!ps_leave.isClosed())) {
+						ps_leave.close();
 					}
 					if (conn != null && (!conn.isClosed())) {
 						conn.close();

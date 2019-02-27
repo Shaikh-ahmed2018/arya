@@ -65,7 +65,25 @@ public class SmsDaoIMPL implements SmsDao{
 			logger.error(e.getMessage(), e);
 			e.getStackTrace();
 		}
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -116,7 +134,25 @@ public class SmsDaoIMPL implements SmsDao{
 			logger.error(e.getMessage(), e);
 			e.getStackTrace();
 		}
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -169,6 +205,25 @@ public class SmsDaoIMPL implements SmsDao{
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.getStackTrace();
+		}
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
 		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -272,6 +327,34 @@ public class SmsDaoIMPL implements SmsDao{
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
+		finally {
+
+			try {
+				if (rs1  != null && !rs1 .isClosed()) {
+					rs1 .close();
+				}
+				if (rssub  != null && !rssub .isClosed()) {
+					rssub .close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (pstmt1  != null && !pstmt1 .isClosed()) {
+					pstmt1 .close();
+				}
+				if (pstmtsub   != null && !pstmtsub  .isClosed()) {
+					pstmtsub  .close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -333,7 +416,25 @@ public class SmsDaoIMPL implements SmsDao{
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -390,7 +491,25 @@ public class SmsDaoIMPL implements SmsDao{
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-		
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -446,7 +565,23 @@ public class SmsDaoIMPL implements SmsDao{
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 		}
-		
+		finally {
+
+			try {
+				
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
@@ -530,7 +665,32 @@ public class SmsDaoIMPL implements SmsDao{
 			e.printStackTrace();
 			
 		}
-		
+		finally {
+
+			try {
+				if (rs  != null && !rs .isClosed()) {
+					rs .close();
+				}
+				if (rs2  != null && !rs2 .isClosed()) {
+					rs2 .close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (pstmt2  != null && !pstmt2 .isClosed()) {
+					pstmt2 .close();
+				}
+				
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
+		}
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
@@ -584,6 +744,25 @@ public class SmsDaoIMPL implements SmsDao{
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
+		}
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
 		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date()) + MessageConstants.END_POINT);
@@ -646,6 +825,25 @@ public ArrayList<SubjectPojo> getSubjectListDetailsDao(String[] categoryval) {
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
+		}
+		finally {
+
+			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+				if (pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if (conn != null && !conn.isClosed()) {
+
+					conn.close();
+				}
+
+			} catch (Exception exception) {
+				logger.error(exception.getMessage(), exception);
+				exception.printStackTrace();
+			}
 		}
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -773,6 +971,28 @@ public String saveMeetingDetailsDao(LstmsUpcomingMeetingVO meetingvo) {
 		e.printStackTrace();
 	}
 	
+	finally {
+
+		try {
+			if (rs1 != null && !rs1.isClosed()) {
+				rs1.close();
+			}
+			if (pstmt != null && !pstmt.isClosed()) {
+				pstmt.close();
+			}
+			if (pstmt1 != null && !pstmt1.isClosed()) {
+				pstmt1.close();
+			}
+			if (conn != null && !conn.isClosed()) {
+
+				conn.close();
+			}
+
+		} catch (Exception exception) {
+			logger.error(exception.getMessage(), exception);
+			exception.printStackTrace();
+		}
+	}
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
 	logger.info(JDate.getTimeString(new Date())
@@ -836,6 +1056,32 @@ public ArrayList<LstmsUpcomingMeetingVO> getlatecomersListDetails() {
 		logger.error(e.getMessage(), e);
 		e.printStackTrace();
 		
+	}
+	finally {
+
+		try {
+
+			if (rs != null && !rs.isClosed()) {
+				rs.close();
+			}
+			if (rs2 != null && !rs2.isClosed()) {
+				rs2.close();
+			}
+			if (pstmt != null && !pstmt.isClosed()) {
+				pstmt.close();
+			}
+			if (pstmt2 != null && !pstmt2.isClosed()) {
+				pstmt2.close();
+			}
+			if (conn != null && !conn.isClosed()) {
+
+				conn.close();
+			}
+
+		} catch (Exception exception) {
+			logger.error(exception.getMessage(), exception);
+			exception.printStackTrace();
+		}
 	}
 	
 	JLogger.log(0, JDate.getTimeString(new Date())
@@ -928,6 +1174,28 @@ public String addlatecomers(LstmsUpcomingMeetingVO meetingvo) {
 		logger.error(e.getMessage(), e);
 		e.printStackTrace();
 	}
+	finally {
+
+		try {
+			if (rs1 != null && !rs1.isClosed()) {
+				rs1.close();
+			}
+			if (pstmt != null && !pstmt.isClosed()) {
+				pstmt.close();
+			}
+			if (pstmt1 != null && !pstmt1.isClosed()) {
+				pstmt1.close();
+			}
+			if (conn != null && !conn.isClosed()) {
+
+				conn.close();
+			}
+
+		} catch (Exception exception) {
+			logger.error(exception.getMessage(), exception);
+			exception.printStackTrace();
+		}
+	}
 	
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
@@ -984,6 +1252,25 @@ public ArrayList<UniformSmsPojo> getUniformListDetailsDao() {
 	} catch (Exception e) {
 		logger.error(e.getMessage(), e);
 		e.printStackTrace();
+	}
+	finally {
+
+		try {
+			if (rs != null && !rs.isClosed()) {
+				rs.close();
+			}
+			if (pstmt != null && !pstmt.isClosed()) {
+				pstmt.close();
+			}
+			if (conn != null && !conn.isClosed()) {
+
+				conn.close();
+			}
+
+		} catch (Exception exception) {
+			logger.error(exception.getMessage(), exception);
+			exception.printStackTrace();
+		}
 	}
 	
 	JLogger.log(0, JDate.getTimeString(new Date())
@@ -1063,7 +1350,28 @@ public int storeUniformStudent(UniformSmsPojo upojo) {
 		logger.error(e.getMessage(), e);
 		e.printStackTrace();
 	}
-	
+	finally {
+
+		try {
+			if (rs1 != null && !rs1.isClosed()) {
+				rs1.close();
+			}
+			if (pstmt != null && !pstmt.isClosed()) {
+				pstmt.close();
+			}
+			if (pstmt1 != null && !pstmt1.isClosed()) {
+				pstmt1.close();
+			}
+			if (conn != null && !conn.isClosed()) {
+
+				conn.close();
+			}
+
+		} catch (Exception exception) {
+			logger.error(exception.getMessage(), exception);
+			exception.printStackTrace();
+		}
+	}
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
 	logger.info(JDate.getTimeString(new Date())
@@ -1127,6 +1435,25 @@ public String insertOtherSMS(UniformSmsPojo upojo) {
 	}catch(Exception e){
 		e.printStackTrace();
 	}
+	finally {
+
+		try {
+			if (rs != null && !rs.isClosed()) {
+				rs.close();
+			}
+			if (pstmt != null && !pstmt.isClosed()) {
+				pstmt.close();
+			}
+			if (conn != null && !conn.isClosed()) {
+
+				conn.close();
+			}
+
+		} catch (Exception exception) {
+			logger.error(exception.getMessage(), exception);
+			exception.printStackTrace();
+		}
+	}
 	
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
@@ -1135,18 +1462,6 @@ public String insertOtherSMS(UniformSmsPojo upojo) {
 	return null;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-	
 	/*
 	
 	

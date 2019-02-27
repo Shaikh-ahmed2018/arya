@@ -347,6 +347,9 @@ public class StudentAttendanceDaoImpl implements StudentAttendanceDao{
 					if (rs != null&& (!rs.isClosed())) {
 						rs.close();
 					}
+					if (ps_count != null&& (!ps_count.isClosed())) {
+						ps_count.close();
+					}
 					if (ps_insert != null&& (!ps_insert.isClosed())) {
 						ps_insert.close();
 					}
@@ -419,7 +422,29 @@ public class StudentAttendanceDaoImpl implements StudentAttendanceDao{
 			e.printStackTrace();
 		}
 		
-		
+		finally {
+			try {
+				if (resultSetClass != null&& (!resultSetClass.isClosed())) {
+					resultSetClass.close();
+				}
+				if (pstmt != null&& (!pstmt.isClosed())) {
+					pstmt.close();
+				}
+				
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+			} catch (SQLException sqle) {
+
+				logger.error(sqle.getMessage(), sqle);
+				sqle.printStackTrace();
+			} catch (Exception e1) {
+
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			}
+		}
+
 		
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);

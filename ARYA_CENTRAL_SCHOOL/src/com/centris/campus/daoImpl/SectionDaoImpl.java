@@ -112,6 +112,9 @@ public class SectionDaoImpl implements SectionDao{
 			} finally {
 
 				try {
+					if (rs != null && !rs.isClosed()) {
+						rs.close();
+					}
 					if (pstmt != null && !pstmt.isClosed()) {
 						pstmt.close();
 					}

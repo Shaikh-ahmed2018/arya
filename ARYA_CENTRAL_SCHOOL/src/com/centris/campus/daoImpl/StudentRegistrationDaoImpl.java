@@ -706,6 +706,9 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 			e.printStackTrace();
 		} finally {
 			try {
+				if (rs != null && !rs.isClosed()) {
+					rs.close();
+				}
 
 				if (pstmObj != null && (!pstmObj.isClosed())) {
 					pstmObj.close();
@@ -1690,6 +1693,21 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 
 				if (precategoryName != null && (!precategoryName.isClosed())) {
 					precategoryName.close();
+				}
+
+				if (prclassName  != null && (!prclassName .isClosed())) {
+					prclassName .close();
+				}
+
+				if (prsectionName  != null && (!prsectionName .isClosed())) {
+					prsectionName .close();
+				}
+
+				if (pstmcount  != null && (!pstmcount .isClosed())) {
+					pstmcount .close();
+				}
+				if (academicYearpre  != null && (!academicYearpre .isClosed())) {
+					academicYearpre .close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -4318,8 +4336,15 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+
+				if (rst != null && (!rst.isClosed())) {
+					rst.close();
+				}
 				if (pst != null && (!pst.isClosed())) {
 					pst.close();
+				}
+				if (pstmt != null && (!pstmt.isClosed())) {
+					pstmt.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -4598,8 +4623,14 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null && (!rs1.isClosed())) {
+					rs1.close();
+				}
 				if (pstmObj != null && (!pstmObj.isClosed())) {
 					pstmObj.close();
+				}
+				if (pstmObj1 != null && (!pstmObj1.isClosed())) {
+					pstmObj1.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -4767,8 +4798,14 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rst != null && (!rs.isClosed())) {
+					rst.close();
+				}
 				if (pst != null && (!pst.isClosed())) {
 					pst.close();
+				}
+				if (pstmt != null && (!pstmt.isClosed())) {
+					pstmt.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -4891,8 +4928,14 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rst != null && (!rs.isClosed())) {
+					rst.close();
+				}
 				if (pst != null && (!pst.isClosed())) {
 					pst.close();
+				}
+				if (pstmt != null && (!pstmt.isClosed())) {
+					pstmt.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -5077,8 +5120,14 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rst != null && (!rs.isClosed())) {
+					rst.close();
+				}
 				if (pst != null && (!pst.isClosed())) {
 					pst.close();
+				}
+				if (pstmt != null && (!pstmt.isClosed())) {
+					pstmt.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -5514,9 +5563,23 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rs1 != null && (!rs1.isClosed())) {
+					rs1.close();
+				}
+				if (rs2 != null && (!rs2.isClosed())) {
+					rs2.close();
+				}
 				if (preparedStatement != null
 						&& (!preparedStatement.isClosed())) {
 					preparedStatement.close();
+				}
+				if (preparedStatement1 != null
+						&& (!preparedStatement1.isClosed())) {
+					preparedStatement1.close();
+				}
+				if (preparedStatement2 != null
+						&& (!preparedStatement2.isClosed())) {
+					preparedStatement2.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -6794,8 +6857,14 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 				if (rs != null && (!rs.isClosed())) {
 					rs.close();
 				}
+				if (rst != null && (!rst.isClosed())) {
+					rst.close();
+				}
 				if (pstmObj != null && (!pstmObj.isClosed())) {
 					pstmObj.close();
+				}
+				if (pstmObj2 != null && (!pstmObj2.isClosed())) {
+					pstmObj2.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -7339,6 +7408,9 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 				}
 				if (pst != null && (!pst.isClosed())) {
 					pst.close();
+				}
+				if (pstmt != null && (!pstmt.isClosed())) {
+					pstmt.close();
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
@@ -14820,8 +14892,14 @@ public List<StudentRegistrationVo> rollNoGeneration(String locationid, String ac
 			if (rs != null && (!rs.isClosed())) {
 				rs.close();
 			}
+			if (rst != null && (!rst.isClosed())) {
+				rst.close();
+			}
 			if (pst != null && (!pst.isClosed())) {
 				pst.close();
+			}
+			if (pstmt != null && (!pstmt.isClosed())) {
+				pstmt.close();
 			}
 			if (conn != null && (!conn.isClosed())) {
 				conn.close();
@@ -14943,8 +15021,14 @@ public List<StudentRegistrationVo> getStudentListBySectionForRollNo(String locat
 			if (rs != null && (!rs.isClosed())) {
 				rs.close();
 			}
+			if (rst != null && (!rst.isClosed())) {
+				rst.close();
+			}
 			if (pst != null && (!pst.isClosed())) {
 				pst.close();
+			}
+			if (pstmt != null && (!pstmt.isClosed())) {
+				pstmt.close();
 			}
 			if (conn != null && (!conn.isClosed())) {
 				conn.close();

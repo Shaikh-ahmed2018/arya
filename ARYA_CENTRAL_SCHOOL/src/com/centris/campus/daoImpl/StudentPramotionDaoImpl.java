@@ -84,6 +84,18 @@ public class StudentPramotionDaoImpl implements StudentPramotionDao {
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
+				}
+				if (pstmt2 != null && (!pstmt2.isClosed())) {
+					pstmt2.close();
+				}
+				if (pstmt3 != null && (!pstmt3.isClosed())) {
+					pstmt3.close();
+				}
+				if (pstmt4 != null && (!pstmt4.isClosed())) {
+					pstmt4.close();
+				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();
 				}
@@ -836,6 +848,20 @@ public class StudentPramotionDaoImpl implements StudentPramotionDao {
 
 				if (precategoryName != null && (!precategoryName.isClosed())) {
 					precategoryName.close();
+				}
+				if (academicYearpre  != null && (!academicYearpre .isClosed())) {
+					academicYearpre .close();
+				}
+				if (prclassName  != null && (!prclassName .isClosed())) {
+					prclassName .close();
+				}
+				if (prsectionName  != null && (!prsectionName .isClosed())) {
+					prsectionName .close();
+					
+				}
+				if (pstmcount   != null && (!pstmcount  .isClosed())) {
+					pstmcount  .close();
+					
 				}
 				if (conn != null && (!conn.isClosed())) {
 					conn.close();

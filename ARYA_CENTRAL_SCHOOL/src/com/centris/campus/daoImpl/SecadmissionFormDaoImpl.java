@@ -184,7 +184,9 @@ public class SecadmissionFormDaoImpl implements SecadmissionformatDao {
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
-
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
+					pstmt1.close();
+				}
 				if(pstmt2!=null && (!pstmt2.isClosed())){
 					pstmt2.close();
 				}
@@ -361,15 +363,24 @@ public class SecadmissionFormDaoImpl implements SecadmissionformatDao {
 			e1.printStackTrace();
 		} finally {
 			try {
+				if(rs1!=null && (!rs1.isClosed())){
+					rs1.close();
+				}
+				
 				if(rs2!=null && (!rs2.isClosed())){
 					rs2.close();
 				}
 				if (pstmt != null && (!pstmt.isClosed())) {
 					pstmt.close();
 				}
-
-				if(pstmt1!=null && (!pstmt1.isClosed())){
+				if (pstmt1 != null && (!pstmt1.isClosed())) {
 					pstmt1.close();
+				}
+				if(psmt2!=null && (!psmt2.isClosed())){
+					psmt2.close();
+				}
+				if(pstmt3!=null && (!pstmt3.isClosed())){
+					pstmt3.close();
 				}
 
 				if (conn != null && (!conn.isClosed())) {
