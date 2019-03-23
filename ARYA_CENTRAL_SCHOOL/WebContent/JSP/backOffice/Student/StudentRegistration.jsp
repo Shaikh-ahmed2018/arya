@@ -1773,6 +1773,7 @@ display:block;
 											<option value="Surjapuri">Surjapuri</option>
 											<option value="Kangri">Kangri</option>
 											<option value="Mundari">Mundari</option>
+											<option value="Hindi">Hindi</option>
 											<option value="Ho">Ho</option>
 											<option value="Other">Other</option>
 											
@@ -1999,7 +2000,7 @@ display:block;
 										style="text-align: right; line-height: 35px;">Sibling
 										Name</label>
 								<div class="col-xs-7">
-									<input type="text" class="form-control" onchange="readyOnly()"
+									<input type="text" class="form-control" 
 											name="searchTerm" id="SearchStudent"
 											value='<logic:present name="studentSearchList"><bean:write name="studentSearchList" property="studentSibilingName"></bean:write></logic:present>' />
 									<input type="hidden" name="studentSibilingIdInt"
