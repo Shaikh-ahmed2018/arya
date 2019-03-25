@@ -13,4 +13,23 @@ public interface SuddenHolidayListService {
 
 	boolean validateSuddenHolidaysSms(String date, String smstext);
 
+	public ArrayList<SuddenHolidaySMSVO> getAccYears();
+
+	public ArrayList<SuddenHolidaySMSVO> getStream();
+	
+	public ArrayList<SuddenHolidaySMSVO> getStudentClass(String schoolLocation);
+
+	public ArrayList<SuddenHolidaySMSVO> getClassesByStream(String streamId);
+
+	public ArrayList<SuddenHolidaySMSVO> getSectionsByClass(String classId, String location);
+
+	public ArrayList<SuddenHolidaySMSVO> getlocationList();
+
+	//public ArrayList<SuddenHolidaySMSVO> getClassDetails();
+
+	
+
+	
+	
+
 }

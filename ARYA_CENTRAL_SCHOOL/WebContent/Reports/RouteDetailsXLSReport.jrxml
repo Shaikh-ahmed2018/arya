@@ -85,7 +85,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Stop Name]]></text>
 				</staticText>
@@ -99,7 +99,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Sl no]]></text>
 				</staticText>
@@ -113,7 +113,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Arrival Time]]></text>
 				</staticText>
@@ -127,7 +127,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Halt Time]]></text>
 				</staticText>
@@ -141,7 +141,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Departure Time]]></text>
 				</staticText>
@@ -155,7 +155,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Distance]]></text>
 				</staticText>
@@ -169,7 +169,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Route Name]]></text>
 				</staticText>
@@ -183,7 +183,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Start Time]]></text>
 				</staticText>
@@ -197,7 +197,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[End Time]]></text>
 				</staticText>
@@ -211,7 +211,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Total Distance]]></text>
 				</staticText>
@@ -225,7 +225,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" size="8"/>
+						<font fontName="Calibri" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{routeName}]]></textFieldExpression>
 				</textField>
@@ -239,7 +239,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" size="8"/>
+						<font fontName="Calibri" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{stratTime}]]></textFieldExpression>
 				</textField>
@@ -253,7 +253,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" size="8"/>
+						<font fontName="Calibri" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{endTime}]]></textFieldExpression>
 				</textField>
@@ -267,7 +267,7 @@
 						<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" size="8"/>
+						<font fontName="Calibri" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{totalDistance}]]></textFieldExpression>
 				</textField>
@@ -285,7 +285,7 @@
 			<staticText>
 				<reportElement mode="Opaque" x="1" y="0" width="648" height="36" forecolor="#333333" backcolor="#F2F2F2"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="16" isBold="true"/>
+					<font fontName="Calibri" size="16" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Route Details]]></text>
 			</staticText>
@@ -303,7 +303,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Sl.no}]]></textFieldExpression>
 			</textField>
@@ -317,7 +317,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{stopname}]]></textFieldExpression>
 			</textField>
@@ -331,7 +331,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{arrivaltime}]]></textFieldExpression>
 			</textField>
@@ -345,7 +345,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{halttime}]]></textFieldExpression>
 			</textField>
@@ -359,7 +359,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{departuretime}]]></textFieldExpression>
 			</textField>
@@ -373,7 +373,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{distance}]]></textFieldExpression>
 			</textField>

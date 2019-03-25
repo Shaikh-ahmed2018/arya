@@ -40,7 +40,7 @@
 <link href="CSS/newUI/font-awesome/css/font-awesome.min.css"
 	rel="stylesheet" type="text/css">
 <script src="JS/backOffice/Reports/TransportFeeReport.js"></script>
-
+ 
 <style>
 .modal-body {
 	text-align: center;
@@ -171,10 +171,11 @@ display: none;
 								<div class="col-xs-7">
 									<select id="reportType" name="reportType" class="form-control">
 										<option value="">----------Select----------</option>
-										<option value="TransportFee">Transport Fee</option>
+										<option value="TransportFee" id="transpt">Transport Fee</option>
 										<option value="BusRouteDetail">Bus Route Detail</option>
 										<option value="RouteWiseStudentDetail">Routewise Student</option>
 										<option value="RouteWiseStudentDetailwithClassAndSection">Routewise Student With Class & Section</option>
+										
 									</select>
 								</div>
 							</div>
@@ -221,6 +222,33 @@ display: none;
 								</div>
 							</div>
 							
+							 <div class="form-group clearfix">
+							<label for="inputPassword" class="control-label col-xs-5"
+								id="inputnames" style="text-align: right;">PayMent Type</label>
+							<div class="col-xs-7">
+								<select id="PaymentType" name="" class="form-control"
+									>
+									<option value="ALL">ALL</option>
+									<option value="ONLINE">ONLINE</option>
+									<option value="OFFLINE">OFFLINE</option>
+									
+								</select>
+							</div>
+						</div>
+							<div class="form-group clearfix start">
+							<label for="inputPassword" class="control-label col-xs-5"
+								id="inputnames" style="text-align: right;">Start Date</label>
+							<div class="col-xs-7">
+								<input type="text" id="startDate"  class="form-control" readonly="readonly" />
+							</div>
+						</div>
+						<div class="form-group clearfix end">
+							<label for="inputPassword" class="control-label col-xs-5"
+								id="inputnames" style="text-align: right;">End Date</label>
+							<div class="col-xs-7">
+								<input type="text" id="endDate"  class="form-control" readonly="readonly" />
+							</div>
+						</div>
 							
 						</div>
 
@@ -251,6 +279,15 @@ display: none;
 									</select>
 								</div>
 							</div>
+							<div class="form-group clearfix paymenttype" style="display:none;">
+							<label for="inputPassword" class="control-label col-xs-5"
+								style="text-align: right; line-height: 35px;">Pay Mode</label>
+							<div class="col-xs-7">
+							<select class="form-control" name="" id="paymode">
+									<option value="ALL">ALL</option>
+							</select>
+							</div>
+						</div>
 							<br/>
 
 							<!-- <button type="button" class="btn btn-info" id="search">Search</button> -->
@@ -286,6 +323,7 @@ display: none;
 						
 							
 						<div id="studenttable"></div>
+						
 					</div>
 				</div>
 			</div>

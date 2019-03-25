@@ -44,7 +44,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true"/>
+						<font fontName="Calibri" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Sno]]></text>
 				</staticText>
@@ -58,7 +58,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true"/>
+						<font fontName="Calibri" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Class Teacher ID]]></text>
 				</staticText>
@@ -72,7 +72,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true"/>
+						<font fontName="Calibri" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Section Name]]></text>
 				</staticText>
@@ -86,7 +86,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true"/>
+						<font fontName="Calibri" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Teacher Name]]></text>
 				</staticText>

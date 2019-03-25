@@ -6,7 +6,27 @@ $(document).ready(function(){
 		var location=$("#location").val();
 		getClassList();
 		var classname=$("#class").val();
-		
+		var paymenttype=$(this).val();
+		var paymode=$(this).val();
+		if($("#PaymentType").val()== 'ONLINE')
+		{		
+		getonlinelist();
+		}
+		else if($("#paymode").val()== 'Cash')
+		{ 
+			getFeeCollectionPaymodeReport();
+		}
+		else if($("#paymode").val()== 'DD')
+		{ 
+			getFeeCollectionPaymodeReport();
+		}
+		else if($("#paymode").val()== 'Cheque')
+		{ 
+			getFeeCollectionPaymodeReport();
+		}
+	else{
+	}
+		//getTransportFeeList();
 		
 	});
 	
@@ -28,6 +48,7 @@ $(document).ready(function(){
 			getTerm();
 			getTransportFeeList();
 		}
+		
 		else{
 			getRouteWiseStudentDetailwithClassAndSection();
 		}
@@ -58,8 +79,123 @@ $(document).ready(function(){
 		getTransportFeeList();
 	});
 	
+//edited by anu
+	
+	$("#PaymentType").change(function(){
+		
+		if($("#PaymentType").val() == 'OFFLINE'){
+			
+			$("#paymode").empty();
+			$("#paymode").append('<option value="Cash">Cash</option>'
+					+'<option value="Cheque">Cheque</option>'
+					+'<option value="DD">DD</option>'
+					+'');
+			$(".paymenttype").show();	
+			
+		}
+		else if($("#PaymentType").val()== 'ONLINE')
+		{
+			$("#paymode").empty();
+			$("#paymode").append('<option value="Online">Online</option>'
+					+'');
+			
+			$(".paymenttype").show();	
+		}
+		else{
+		
+			$(".paymenttype").hide();	
+			$("#paymode").empty();
+			$("#paymode").append('<option value="ALL">ALL</option>');
+		}
+		
+	});
+$("#startDate").datepicker({
+		
+		changeMonth : true,
+		changeYear : true,
+		dateFormat : "dd-mm-yy",
+		onSelect:function(dateStr){
+			
+			
+			        var min = $(this).datepicker('getDate'); // Get selected date
+			        $("#endDate").datepicker('option', 'minDate', min); // Set other min, default to today
+			   
+			
+		}
+
+	});
+$("#endDate").datepicker({
+	changeMonth : true,
+	changeYear : true,
+	dateFormat : "dd-mm-yy",
+	onSelect:function(dateStr){
+		var max = $(this).datepicker('getDate'); // Get selected date
+		$("#startDate").datepicker('option', 'maxDate', max); // Set other Max, default to today
+		getfeecollectiondatelist();
+	}
+});
+$("#transpt").change(function(){
+	if($(this).val()=="Date Wise"){
+		$(".start,.end").show();
+		}
+	else if($(this).val()=="Month Wise"){
+		$(".start,.end").hide();
+		$(".monthwisetext").show();
+	}
+	else{
+		$(".start,.end,.monthwisetext").hide();
+	}
+});
 
 
+$("#endDate").change(function(){
+		getfeecollectiondatelist();
+		
+	});
+
+
+
+
+//payment online
+$("#PaymentType").change(function(){
+	
+		var paymenttype=$(this).val();
+		//alert(paymenttype)
+		if($("#PaymentType").val()== 'ONLINE')
+			{		
+			getonlinelist();
+			}
+		else if($("#PaymentType").val()== 'OFFLINE')
+		{		
+			getFeeCollectionPaymodeReport();
+		}
+		else{
+			getTransportFeeList();
+		}
+	
+	
+});
+//payment offline
+$("#paymode").change(function(){
+	
+		if($("#paymode").val()== 'DD')
+			{ 
+				getFeeCollectionPaymodeReport();
+			}
+		else if($("#paymode").val()== 'Cash')
+			{ 
+				getFeeCollectionPaymodeReport();
+			}
+		else if($("#paymode").val()== 'Cheque')
+			{ 
+				getFeeCollectionPaymodeReport();
+			}
+		else{
+		}
+	
+});
+
+//end
 	$("#excel").click(function(){
 		fnExcelReport();
 	});
@@ -156,7 +292,15 @@ $(document).ready(function(){
 			$(".transportOtherReport").slideUp("fast",function(){
 				$(".transportFeeReportandStudentClassWise,.transportFeeReport").show();
 				getTransportFeeList();
+				
 			});
+			/*if($("#PaymentType").val()== 'ONLINE')
+			{
+				    getonlinelist();
+			}
+			else{
+				getFeeCollectionPaymodeReport();
+			}*/
 		}
 		else if($(this).val()==""){
 			$(".transportFeeReportandStudentClassWise,.transportFeeReport").hide();
@@ -305,6 +449,7 @@ function getBusRouteDetail(){
 			$("#studenttable").empty();
 			$("#studenttable").append("<table class='table' id='allstudent' width='100%'" +">"
 					+"<tr><th>SI No</th>"+
+					"<tr><th>SI No</th>"+
 					"<th>Route No.</th>" +
 					"<th>Bus Point Name</th>" +
 					"<th>Amount</th>"+
@@ -555,6 +700,7 @@ function getTransportFeeList()
 	var termstatusId=$("#termstatus").val();
 	
 	
+	
 	datalist ={
 			"location":location,
 			"accyear" :accyear,
@@ -575,6 +721,7 @@ function getTransportFeeList()
 			$("#studenttable").empty();
 			$("#studenttable").append("<table class='table' id='allstudent' width='100%'" +">"
 					+"<center><tr><th>SI No</th>"+
+					"<th>Admission No.</th>"  +
 					"<th>Term</th>" +
 					"<th>Name</th>" +
 					"<th>Class</th>"+
@@ -586,12 +733,13 @@ function getTransportFeeList()
 			);
 			if(result.studentList.length>0)
 				{
-		
+				var totalAmount=0.0;
 				for(var i=0;i<result.studentList.length;i++){
 
 					$("#allstudent").append(
 							"<tr>"+
 							"<td>"+result.studentList[i].sno+"</td>"+
+							"<td>"+result.studentList[i].admisssion_no+"</td>"+
 							"<td>"+result.studentList[i].termname+"</td>"+
 							"<td>"+result.studentList[i].studentnamelabel+"</td>"+
 							"<td>"+result.studentList[i].classname+"</td>"+
@@ -600,7 +748,14 @@ function getTransportFeeList()
 							"<td>"+result.studentList[i].amount_paid+"</td>"+
 							+"</tr>"
 					);
+					totalAmount=totalAmount+Number(result.studentList[i].amount_paid);
+					
 				}
+				$("#studenttable #allstudent tbody").append("<tr>" +
+						"<td colspan='7' style='text-align:right;'>Total</td>"+
+						"<td>"+totalAmount+"</td>"+
+						"</tr>"
+						);
 				}else{
 				$("#allstudent tbody").append("<tr><td colspan=7'>No Record Found</td></tr>");
 				}
@@ -645,7 +800,243 @@ function getRoute(){
 			}
 		}
 	});
-}	
+}
+function getonlinelist(){
+	//alert("lout")
+	$("#loder").show();
+	//alert("lout2")
+	datalist = {
+			 
+			location:$("#location").val(),
+			accyear:$("#accyear").val(),
+			classid:$("#class").val(),
+			sectionid:$("#section").val(),
+			term:$("#term").val(),
+			termstatusId:$("#termstatus").val(),
+			paymenttype:$("#paymode").val(),
+			paymodid:$("#PaymentType").val(),
+	},
+
+$.ajax({
+
+		type : "POST",
+		url : "transportfeereceipt.html?method=getonlinelist",
+		data : datalist,
+
+		success : function(data) {
+			var result = $.parseJSON(data);
+			//console.log(result);
+			$(".feefilterheading").empty();
+			$(".feefilterheading").append("<hr><div class='col-md-3'><span>Payment Mode : </span><span>"+$("#paymode option:selected").text()+"</span></div><div class='col-md-3'><span>Payment Type : </span><span>"+$("#PaymentType option:selected").text()+"</span></div><div class='col-md-3'><span>Standard : </span><span>"+$("#class option:selected").text()+"</span></div><div class='col-md-3'><span>Section : </span><span>"+$("#section option:selected").text()+"</span></div>");
+			$("#studenttable").empty();
+			$("#studenttable").append("<table class='table' id='allstudent' width='100%'" +">"
+					+"<center><tr><th>Sl.No.</th>"+
+					"<th>Name</th>" +
+					"<th>Class</th>"+
+					"<th>Term</th>"+
+					"<th>Payment Type</th>"+
+					"<th>Bill Date</th>"+
+					"<th>Bill No</th>"+
+					"<th>Amount</th>"+
+					"</tr></center>" +
+					"</table>"
+			);
+			if(result.studentList.length>0){
+				var totalAmount=0.0;
+			for(var i=0;i<result.studentList.length;i++){
+				$("#studenttable #allstudent tbody").append(
+						"<tr>"+
+						"<td>"+result.studentList[i].sno+"</td>"+
+						"<td>"+result.studentList[i].studentname+"</td>"+
+						"<td>"+result.studentList[i].classname+"</td>"+
+						"<td>"+result.studentList[i].termName+"</td>"+
+						"<td>"+result.studentList[i].paymentMode+"</td>"+
+						"<td>"+result.studentList[i].billdate+"</td>"+
+						//"<td style='width:252px;'>"+result.studentList[i].permanentaddress+"</td>"+
+						"<td>"+result.studentList[i].chlnno+"</td>"+
+						"<td>"+result.studentList[i].amount_paid_so_far+"</td>"+
+						+"</tr>"
+
+				);
+
+				totalAmount=totalAmount+Number(result.studentList[i].amount_paid_so_far);
+				
+			}
+			$("#studenttable #allstudent tbody").append("<tr>" +
+					"<td colspan='7' style='text-align:right;'>Total</td>"+
+					"<td>"+totalAmount+"</td>"+
+					"</tr>"
+					);
+			}
+			else{
+				$("#studenttable tbody").append("<tr><td colspan='7'>No Records Found</td></tr>");
+			}
+			$("#loder").hide();
+			   $(".numberOfItem").empty();
+			   $(".numberOfItem").append("No. of Records  "+result.studentList.length);
+
+		}
+	 
+	});
+
+}
+function getFeeCollectionPaymodeReport($type=null){
+	$("#loder").show();
+	//alert(innn)
+	datalist = {
+			 
+			location:$("#location").val(),
+			accyear:$("#accyear").val(),
+			classid:$("#class").val(),
+			sectionid:$("#section").val(),
+			paymodid:$("#paymode").val(),
+			paymenttype:$("#PaymentType").val(),
+			termId:$("#term").val(),
+	},
+
+	$.ajax({
+
+		type : "POST",
+		url : "transportfeereceipt.html?method=getFeeCollectionPaymodeReport",
+		data : datalist,
+		beforeSend: function(){
+			$("#loder").show();
+		},
+		success : function(data) {
+			var result = $.parseJSON(data);
+			$(".feefilterheading").empty();
+			$(".feefilterheading").append("<hr><div class='col-md-3'><span>Payment Mode : </span><span>"+$("#paymode option:selected").text()+"</span></div><div class='col-md-3'><span>Payment Type : </span><span>"+$("#PaymentType option:selected").text()+"</span></div><div class='col-md-3'><span>Standard : </span><span>"+$("#class option:selected").text()+"</span></div><div class='col-md-3'><span>Division : </span><span>"+$("#section option:selected").text()+"</span></div>");
+			$("#studenttable").empty();
+			$("#studenttable").append("<table class='table' id='allstudent' width='100%'" +">"
+					+"<center><tr><th>Sl.No.</th>"+
+					"<th>Name</th>" +
+					"<th>Class</th>"+
+					"<th>Term</th>"+
+					"<th>Payment Type</th>"+
+					"<th>Bill Date</th>"+
+					//"<th>Permanent Address</th>"+
+					"<th>Bill No</th>"+
+					"<th>Amount</th>"+
+					"</tr></center>" +
+					"</table>"
+			);
+			if(result.studentList.length>0){
+				var totalAmount=0.0;
+			for(var i=0;i<result.studentList.length;i++){
+
+				$("#studenttable #allstudent tbody").append(
+						"<tr>"+
+						"<td>"+result.studentList[i].sno+"</td>"+
+						"<td>"+result.studentList[i].studentname+"</td>"+
+						"<td>"+result.studentList[i].classname+"</td>"+
+						"<td>"+result.studentList[i].termName+"</td>"+
+						"<td>"+result.studentList[i].paymentMode+"</td>"+
+						"<td>"+result.studentList[i].billdate+"</td>"+
+						//"<td style='width:252px;'>"+result.studentList[i].permanentaddress+"</td>"+
+						"<td>"+result.studentList[i].chlnno+"</td>"+
+						"<td>"+result.studentList[i].amount_paid_so_far+"</td>"+
+						+"</tr>"
+
+				);
+
+				totalAmount=totalAmount+Number(result.studentList[i].amount_paid_so_far);
+			}
+			$("#studenttable #allstudent tbody").append("<tr>" +
+					"<td colspan='7' style='text-align:right;'>Total</td>"+
+					"<td>"+totalAmount+"</td>"+
+					"</tr>"
+					);
+			}
+			else{
+				$("#studenttable tbody").append("<tr><td colspan='9'>No Records Found</td></tr>");
+			}
+			$("#loder").hide();
+			   $(".numberOfItem").empty();
+			   $(".numberOfItem").append("No. of Records  "+result.studentList.length);
+
+		}
+	 
+	});
+	
+}
+function getfeecollectiondatelist(){
+	$("#loder").show();
+	datalist = {
+			 
+			location:$("#location").val(),
+			accyear:$("#accyear").val(),
+			classid:$("#class").val(),
+			termId:$("#term").val(),
+			startdate:$("#startDate").val(),
+			enddate:$("#endDate").val(),
+			PaymentType:$("#PaymentType").val(),
+			paymode:$("#paymode").val(),
+	},
+
+	$.ajax({
+
+		type : "POST",
+		url : "transportfeereceipt.html?method=getfeecollectiondatelist",
+		data : datalist,
+		beforeSend: function(){
+			$("#loder").show();
+		},
+		success : function(data) {
+			var result = $.parseJSON(data);
+			$(".feefilterheading").empty();
+			$(".feefilterheading").append("<hr><div class='col-md-3'><span>Payment Mode : </span><span>"+$("#paymode option:selected").text()+"</span></div><div class='col-md-3'><span>Payment Type : </span><span>"+$("#PaymentType option:selected").text()+"</span></div><div class='col-md-3'><span>Standard : </span><span>"+$("#class option:selected").text()+"</span></div><div class='col-md-3'><span>Division : </span><span>"+$("#section option:selected").text()+"</span></div>");
+			$("#studenttable").empty();
+			$("#studenttable").append("<table class='table' id='allstudent' width='100%'" +">"
+					+"<center><tr><th>Sl.No.</th>"+
+					"<th>Name</th>" +
+					"<th>Class</th>"+
+					"<th>Term</th>"+
+					"<th>Payment Type</th>"+
+					"<th>Bill Date</th>"+
+					"<th>Bill No</th>"+
+					"<th>Amount</th>"+
+					"</tr></center>" +
+					"</table>"
+			);
+			if(result.studentList.length>0){
+				var totalAmount=0.0;
+			for(var i=0;i<result.studentList.length;i++){
+
+				$("#studenttable #allstudent tbody").append(
+						"<tr>"+
+						"<td>"+result.studentList[i].sno+"</td>"+
+						"<td>"+result.studentList[i].studentname+"</td>"+
+						"<td>"+result.studentList[i].classname+"</td>"+
+						"<td>"+result.studentList[i].termName+"</td>"+
+						"<td>"+result.studentList[i].paymentMode+"</td>"+
+						"<td>"+result.studentList[i].billdate+"</td>"+
+						"<td>"+result.studentList[i].chlnno+"</td>"+
+						"<td>"+result.studentList[i].amount_paid_so_far+"</td>"+
+						
+						"</tr>"
+
+				);
+
+				totalAmount=totalAmount+Number(result.studentList[i].amount_paid_so_far);
+			}
+			$("#studenttable #allstudent tbody").append("<tr>" +
+					"<td colspan='7' style='text-align:right;'>Total</td>"+
+					"<td>"+totalAmount+"</td>"+
+					"</tr>"
+					);
+			}
+			else{
+				$("#studenttable tbody").append("<tr><td colspan='9'>No Records Found</td></tr>");
+			}
+			$("#loder").hide();
+			   $(".numberOfItem").empty();
+			   $(".numberOfItem").append("No. of Records  "+result.studentList.length);
+
+		}
+	 
+	});
+	
+}
 function fnExcelReport()
 {
     var tab_text="<table border='2px'><tr bgcolor='#87AFC6'>";

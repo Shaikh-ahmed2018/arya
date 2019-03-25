@@ -80,6 +80,7 @@ public String addlatecomers(LstmsUpcomingMeetingVO meetingvo) {
 	return service.addlatecomers(meetingvo);
 }
 
+
 public ArrayList<UniformSmsPojo> getUniformListDetails() {
 	return service.getUniformListDetailsService();
 }

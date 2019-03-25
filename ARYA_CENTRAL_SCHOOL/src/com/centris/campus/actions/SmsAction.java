@@ -48,6 +48,7 @@ public class SmsAction extends DispatchAction{
 			
 			String classid = request.getParameter("classid");
 			
+			
 			ArrayList<SectionPojo> seclist = new SmsDeligate().getsectionlist(classid);
 			
 			JSONObject object=new JSONObject();
@@ -112,7 +113,7 @@ public class SmsAction extends DispatchAction{
 	
 	
 	
-	public ActionForward insertsms(ActionMapping mapping,
+	/*public ActionForward insertsms(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		logger.setLevel(Level.DEBUG);
@@ -161,9 +162,61 @@ public class SmsAction extends DispatchAction{
 
 		return null;
 
+	}*/
+//single sms edited by anu
+	
+	public ActionForward insertsms(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in SmsAction : insertsms Starting");
+		
+		try {
+			
+			String createuser = HelperClass.getCurrentUserID(request);
+			
+			//String dateId = request.getParameter("dateId");
+			//String classid = request.getParameter("classid");
+			//String sectionid = request.getParameter("sectionid");
+			String phone = request.getParameter("mobileno");
+			String message = request.getParameter("message");
+			
+			SmsVo vo = new SmsVo();
+			
+			//vo.setDate(dateId);
+			//vo.setClassid(classid);
+			//vo.setSectionid(sectionid);
+			//vo.setSubjectid(subjectid);
+			//vo.setDescription(description);
+			vo.setCreateuser(createuser);
+			vo.setMobileno(phone);
+			vo.setMessage(message);
+			
+			String result = new SmsDeligate().inserthomework(vo);
+			
+			
+			 JSONObject jsonobj = new JSONObject();
+				
+				jsonobj.put("jsonResponse", result);
+				
+				response.getWriter().print(jsonobj);
+			
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+	
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in  SmsAction  : insertsms Ending");
+
+		return null;
+
 	}
-	
-	
 	
 	public ActionForward getSectionMeeting(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,

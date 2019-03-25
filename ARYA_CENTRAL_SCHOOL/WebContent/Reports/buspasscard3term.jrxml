@@ -36,7 +36,7 @@
 				<reportElement x="66" y="408" width="21" height="52" uuid="352eb0e4-e29e-4e28-aefc-303923acffa4"/>
 				<box leftPadding="0" bottomPadding="2"/>
 				<textElement verticalAlignment="Bottom" rotation="Left">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Name :]]></text>
 			</staticText>
@@ -44,7 +44,7 @@
 				<reportElement x="108" y="168" width="22" height="97" uuid="9c07fed4-f6a4-45eb-855e-526c538e0641"/>
 				<box bottomPadding="2"/>
 				<textElement verticalAlignment="Bottom" rotation="Left">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Note :]]></text>
 			</staticText>
@@ -52,7 +52,7 @@
 				<reportElement x="136" y="24" width="28" height="16" uuid="3856b6a2-5c87-4267-8bbe-69f21f1b552c"/>
 				<box topPadding="2"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Days]]></text>
 			</staticText>
@@ -60,7 +60,7 @@
 				<reportElement x="86" y="392" width="21" height="68" uuid="98fade48-2f0f-4e63-990f-b5f8304f9f68"/>
 				<box bottomPadding="2"/>
 				<textElement verticalAlignment="Bottom" rotation="Left">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Route No :]]></text>
 			</staticText>
@@ -68,28 +68,28 @@
 				<reportElement x="87" y="266" width="21" height="50" uuid="4ad204eb-59f7-47a2-9f20-5e2857ebfbb1"/>
 				<box bottomPadding="2"/>
 				<textElement verticalAlignment="Bottom" rotation="Left">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Stop :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="311" y="0" width="50" height="16" uuid="2823210b-c618-4355-8e88-a3d448344b88"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="10" isBold="true"/>
+					<font fontName="Calibri" size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Serial No :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="65" y="136" width="21" height="51" uuid="7c4ad13b-828b-4350-b808-acc14f60da7e"/>
 				<textElement verticalAlignment="Bottom" rotation="Left">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[  Class :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="88" y="71" width="20" height="66" uuid="fe9ec5f2-5643-4065-8d1a-f4caa87c8e7f"/>
 				<textElement verticalAlignment="Bottom" rotation="Left">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Receipt No :]]></text>
 			</staticText>
@@ -337,7 +337,7 @@
 				<reportElement x="108" y="342" width="23" height="117" uuid="133c82b6-fb2e-4fc0-9c52-efe7490265b5"/>
 				<box leftPadding="2" bottomPadding="0"/>
 				<textElement verticalAlignment="Middle" rotation="Left">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Emergency Contact No  :]]></text>
 			</staticText>
@@ -353,7 +353,7 @@
 				<reportElement x="146" y="0" width="163" height="16" uuid="48053e90-5793-4dc9-88fa-e45acd935c71"/>
 				<box leftPadding="0" rightPadding="0"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[SCHOOL BUS ENTRY PASS]]></text>
 			</staticText>
@@ -366,252 +366,252 @@
 			<staticText>
 				<reportElement x="164" y="40" width="32" height="18" uuid="92d71b4a-cc3d-4623-a046-0982fc127961"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[UP]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="228" y="41" width="29" height="16" uuid="658286b2-b5f2-4fea-bae2-c11b985470a5"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[UP]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="289" y="41" width="30" height="16" uuid="fb7593de-a09d-4a30-a022-d2954d9e6634"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[UP]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="196" y="41" width="30" height="16" uuid="662aa00c-0feb-4828-bfd5-5c65e8082775"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[DN]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="258" y="41" width="30" height="16" uuid="37ab8e5f-d02f-4aaf-b8bf-695b3e102941"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[DN]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="320" y="41" width="30" height="16" uuid="f6c00b2a-075d-4141-8297-195f5c7071fc"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[DN]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="58" width="28" height="12" uuid="425b7522-0b1d-4c64-8894-d5e4bd0f3f0c"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[1]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="71" width="28" height="12" uuid="1a023252-fbbf-4da4-b3db-ccf062260adb"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[2]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="84" width="28" height="12" uuid="f7b6d210-0770-4d49-8617-976adfb8d39a"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[3]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="97" width="28" height="12" uuid="bff2eb9a-6030-458e-bc24-42c048760766"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[4]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="110" width="28" height="12" uuid="97b1b461-6705-4835-ab2d-be4beb3d0d6b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[5]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="252" width="28" height="12" uuid="51b05d47-bbd0-4480-9355-b1cf707b5fc1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[16]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="239" width="28" height="12" uuid="fe3b44d8-7362-42d7-9e22-e9cd2f464381"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[15]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="226" width="28" height="12" uuid="dcfac02c-674b-4b13-90f9-d56657e4c306"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[14]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="213" width="28" height="12" uuid="c3b27d3f-b5d4-427e-94d9-278d4fb21da1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[13]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="122" width="28" height="12" uuid="9ed66ee3-cd65-4a88-90f8-786bf1c3ee16"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[6]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="135" width="28" height="12" uuid="a576cfa8-eb07-4d9e-80be-1d20b541f27f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[7]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="148" width="28" height="12" uuid="85d2fa59-7297-46d5-940e-e6064e9b8eb3"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[8]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="161" width="28" height="12" uuid="0776ddff-debe-42ed-80e1-844949a00c85"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[9]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="174" width="28" height="12" uuid="168b6925-50c8-4707-b0ff-746c29d9e84c"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[10]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="187" width="28" height="12" uuid="221f5c11-b82c-4c51-8f64-4f4b41ff856c"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[11]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="200" width="28" height="12" uuid="1ec19a27-9072-48e7-8e4d-77a0afa517b2"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[12]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="265" width="28" height="12" uuid="5fa15448-3887-4ee3-b194-b107ad79f634"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[17]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="278" width="28" height="12" uuid="803d4d5e-2bdf-4cd8-9655-0c676f47c183"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[18]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="291" width="28" height="12" uuid="de59bd20-ce68-4f06-aa63-83cb127d21c2"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[19]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="304" width="28" height="12" uuid="e795068d-0f45-440b-981f-1836c0cd67aa"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[20]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="317" width="28" height="12" uuid="c367b941-0890-4cb7-b14c-6d2ca9114e0b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[21]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="330" width="28" height="12" uuid="34f78785-ad21-4224-9274-1497275d5f6b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[22]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="343" width="28" height="12" uuid="a6f4cdd4-0faa-4c3b-b1e4-3fd5420680b8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[23]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="356" width="28" height="12" uuid="c27c6e7b-f8f0-4cd1-8e59-65e8276d8f0e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[24]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="369" width="28" height="12" uuid="8cd5706d-3af4-480a-8921-870132ba5dbc"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[25]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="382" width="28" height="12" uuid="d1c00d8a-2747-4506-9266-3d0413f181b5"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[26]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="395" width="28" height="12" uuid="dac69efb-d280-4012-97f1-fbebe73d553d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[27]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="408" width="28" height="12" uuid="7cc11299-d7be-47f4-83fc-573c0664b6da"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[28]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="421" width="28" height="12" uuid="b16c5cd5-5d19-41ad-9ffb-a4cc8061d435"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[29]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="434" width="28" height="12" uuid="b5ccc445-30bc-4651-a8c5-0ef26264af23"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[30]]></text>
 			</staticText>
@@ -625,7 +625,7 @@
 				<reportElement x="165" y="24" width="61" height="16" uuid="bed5957a-8168-45de-a9b0-bde9b6c527b7"/>
 				<box topPadding="2"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[JAN]]></text>
 			</staticText>
@@ -633,7 +633,7 @@
 				<reportElement x="227" y="24" width="61" height="16" uuid="4f350223-570c-4514-a8c9-9d8c2e0d6789"/>
 				<box topPadding="2"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[FEB]]></text>
 			</staticText>
@@ -641,14 +641,14 @@
 				<reportElement x="289" y="24" width="61" height="16" uuid="c50c41b8-92bb-4f29-ad43-95ad08d91152"/>
 				<box topPadding="2"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[MAR]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="136" y="447" width="28" height="12" uuid="3267281d-f0e2-4c05-ae1c-5187e7e0633a"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true"/>
+					<font fontName="Calibri" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[31]]></text>
 			</staticText>
@@ -680,14 +680,14 @@
 				<reportElement x="39" y="0" width="90" height="16" uuid="b6f564a6-823a-49b9-b02a-7172143a9893"/>
 				<box leftPadding="2"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="39" y="17" width="27" height="448" uuid="2167a817-a6c3-40fa-9f73-fe931b02b156"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
-					<font fontName="Liberation Sans" size="14" isBold="true"/>
+					<font fontName="Calibri" size="14" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{locname}]]></textFieldExpression>
 			</textField>

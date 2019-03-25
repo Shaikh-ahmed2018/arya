@@ -71,7 +71,7 @@
 			<staticText>
 				<reportElement mode="Opaque" x="0" y="59" width="581" height="35" forecolor="#333333" backcolor="#F2F2F2"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="16" isBold="true"/>
+					<font fontName="Calibri" size="16" isBold="true"/>
 				</textElement>
 				<text><![CDATA[All Driver Details]]></text>
 			</staticText>
@@ -93,7 +93,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Driver Name]]></text>
 			</staticText>
@@ -107,7 +107,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[DL No]]></text>
 			</staticText>
@@ -121,7 +121,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[DL Issued Datee]]></text>
 			</staticText>
@@ -135,7 +135,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[DL Validity Date]]></text>
 			</staticText>
@@ -149,7 +149,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Sl no]]></text>
 			</staticText>
@@ -163,7 +163,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Father Name]]></text>
 			</staticText>
@@ -177,7 +177,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Gender]]></text>
 			</staticText>
@@ -191,7 +191,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[DOB]]></text>
 			</staticText>
@@ -205,7 +205,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Age]]></text>
 			</staticText>
@@ -219,7 +219,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[DOJ]]></text>
 			</staticText>
@@ -233,7 +233,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Mobile]]></text>
 			</staticText>
@@ -247,7 +247,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Experience]]></text>
 			</staticText>
@@ -261,7 +261,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[DL Type]]></text>
 			</staticText>
@@ -275,7 +275,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Address]]></text>
 			</staticText>
@@ -289,7 +289,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Emergency t.o]]></text>
 			</staticText>
@@ -307,7 +307,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{driverName}]]></textFieldExpression>
 			</textField>
@@ -321,7 +321,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{father_name}]]></textFieldExpression>
 			</textField>
@@ -335,7 +335,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
 			</textField>
@@ -349,7 +349,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
 			</textField>
@@ -363,7 +363,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
 			</textField>
@@ -377,7 +377,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateofJoin}]]></textFieldExpression>
 			</textField>
@@ -391,7 +391,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{mobile}]]></textFieldExpression>
 			</textField>
@@ -405,7 +405,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{experience}]]></textFieldExpression>
 			</textField>
@@ -419,7 +419,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{drivingliecenseNo}]]></textFieldExpression>
 			</textField>
@@ -433,7 +433,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dl_issued_date}]]></textFieldExpression>
 			</textField>
@@ -447,7 +447,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dl_validity}]]></textFieldExpression>
 			</textField>
@@ -461,7 +461,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{license}]]></textFieldExpression>
 			</textField>
@@ -475,7 +475,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
 			</textField>
@@ -489,7 +489,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{emerg_contact}]]></textFieldExpression>
 			</textField>
@@ -503,7 +503,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Sl.No}]]></textFieldExpression>
 			</textField>

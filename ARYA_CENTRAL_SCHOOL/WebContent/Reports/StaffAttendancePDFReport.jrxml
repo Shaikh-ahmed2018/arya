@@ -52,7 +52,7 @@
 			<staticText>
 				<reportElement mode="Opaque" x="102" y="3" width="387" height="32" forecolor="#333333" backcolor="#F2F2F2" uuid="05861df5-72b8-4360-abb2-2a194b24613d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="true"/>
+					<font fontName="Calibri" size="13" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ARYA CENTRAL SCHOOL
 PATTOM,THIRUVANANTHAPURAM]]></text>
@@ -71,7 +71,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Attendance Report of ]]></text>
 			</staticText>
@@ -85,7 +85,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{fromdate}]]></textFieldExpression>
 			</textField>
@@ -99,7 +99,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[From]]></text>
 			</staticText>
@@ -113,7 +113,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[To]]></text>
 			</staticText>
@@ -127,7 +127,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{todate}]]></textFieldExpression>
 			</textField>
@@ -141,7 +141,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Staff Type  : ]]></text>
 			</staticText>
@@ -155,7 +155,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{staffType}]]></textFieldExpression>
 			</textField>
@@ -169,7 +169,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Designation :]]></text>
 			</staticText>
@@ -183,7 +183,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{designationName}]]></textFieldExpression>
 			</textField>
@@ -201,7 +201,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="9" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Sign]]></text>
 			</staticText>
@@ -215,7 +215,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="9" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Staff Id]]></text>
 			</staticText>
@@ -229,7 +229,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="9" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Status]]></text>
 			</staticText>
@@ -243,7 +243,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="9" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[ Date]]></text>
 			</staticText>
@@ -257,7 +257,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="9" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Sl no]]></text>
 			</staticText>
@@ -271,7 +271,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="9" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Intime]]></text>
 			</staticText>
@@ -285,7 +285,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="9" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Remarks]]></text>
 			</staticText>
@@ -299,7 +299,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="9" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Out time]]></text>
 			</staticText>
@@ -313,7 +313,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="9" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="9" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Teacher Name]]></text>
 			</staticText>
@@ -331,7 +331,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -345,7 +345,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{teacherName}]]></textFieldExpression>
 			</textField>
@@ -359,7 +359,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{inTime}]]></textFieldExpression>
 			</textField>
@@ -373,7 +373,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
 			</textField>
@@ -387,7 +387,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
 			</textField>
@@ -401,7 +401,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -415,7 +415,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Sl.No}]]></textFieldExpression>
 			</textField>
@@ -429,7 +429,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{outTime}]]></textFieldExpression>
 			</textField>
@@ -443,7 +443,7 @@ PATTOM,THIRUVANANTHAPURAM]]></text>
 					<rightPen lineWidth="1.0" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{regid}]]></textFieldExpression>
 			</textField>

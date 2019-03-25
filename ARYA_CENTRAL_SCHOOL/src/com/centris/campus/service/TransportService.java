@@ -7,6 +7,7 @@ import com.centris.campus.forms.TransportCategoryForm;
 import com.centris.campus.forms.TransportForm;
 import com.centris.campus.pojo.TransportPojo;
 import com.centris.campus.vo.DriverMsaterListVo;
+import com.centris.campus.vo.FeeCollectionVo;
 import com.centris.campus.vo.StageMasterVo;
 import com.centris.campus.vo.StudentRegistrationVo;
 import com.centris.campus.vo.TransportVo;
@@ -153,5 +154,8 @@ public interface TransportService {
 	public String waivedOfftransportrequest(TransportPojo pojo);
 
 	public ArrayList<TransportVo> getMonthList(String accyear, String loc_id);
-	
+	public ArrayList<TransportVo> getonlinelist(String locationid,String accyear, String classid, String setionid, String paymodeid,String paymenttype, String termId);
+
+	public ArrayList<TransportVo> getFeeCollectionPaymodeReport(String locationid, String accyear, String classid,
+			String setionid, String paymodeid, String paymenttype, String termId);
 }

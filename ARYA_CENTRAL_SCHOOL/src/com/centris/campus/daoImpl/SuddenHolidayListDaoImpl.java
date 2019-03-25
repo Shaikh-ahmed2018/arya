@@ -17,12 +17,281 @@ import com.centris.campus.util.HelperClass;
 import com.centris.campus.util.JDate;
 import com.centris.campus.util.JLogger;
 import com.centris.campus.util.MessageConstants;
+import com.centris.campus.util.ReportsMenuSqlConstants;
 import com.centris.campus.util.SuddenHolidaySqlUtil;
+import com.centris.campus.vo.ReportMenuVo;
 import com.centris.campus.vo.SuddenHolidaySMSVO;
 
 public class SuddenHolidayListDaoImpl implements SuddenHolidayListDao {
 
-	private static Logger logger = Logger.getLogger(SuddenHolidayListDaoImpl.class);
+	private static final Logger logger = Logger.getLogger(SuddenHolidayListDaoImpl.class);
+	//edited by anu
+	
+	@Override
+	public ArrayList<SuddenHolidaySMSVO> getAccYears() {
+		   
+			logger.setLevel(Level.DEBUG);
+			JLogger.log(0, JDate.getTimeString(new Date())
+					+ MessageConstants.START_POINT);
+			logger.info(JDate.getTimeString(new Date())
+					+ " Control in SuddenHolidayListDaoImpl: getAccYears : Starting");
+			
+			PreparedStatement pstmt = null;
+			ResultSet rs=null;
+			Connection conn = null;
+			ArrayList<SuddenHolidaySMSVO> accYearList=new ArrayList<SuddenHolidaySMSVO>();
+		 	
+			try {
+				
+				conn = JDBCConnection.getSeparateConnection();
+				
+				pstmt = conn.prepareStatement(SuddenHolidaySqlUtil.GET_ACCYEAR);
+				rs=pstmt.executeQuery();
+				
+				while(rs.next()){
+					
+					SuddenHolidaySMSVO yearVo=new SuddenHolidaySMSVO();
+					yearVo.setAccyearId(rs.getString("acadamic_id").trim());
+					yearVo.setAccyearname(rs.getString("acadamic_year"));
+					
+					accYearList.add(yearVo);
+					
+				}
+			
+			} catch (SQLException e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			} catch (Exception e1) {
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			} finally {
+				try {
+					if (rs != null&& (!rs.isClosed())) {
+						rs.close();
+					}
+					if (pstmt != null&& (!pstmt.isClosed())) {
+						pstmt.close();
+					}
+					if (conn != null && (!conn.isClosed())) {
+						conn.close();
+					}
+				} catch (SQLException sqle) {
+
+					logger.error(sqle.getMessage(), sqle);
+					sqle.printStackTrace();
+				} catch (Exception e1) {
+
+					logger.error(e1.getMessage(), e1);
+					e1.printStackTrace();
+				}
+			}
+
+			logger.setLevel(Level.DEBUG);
+			JLogger.log(0, JDate.getTimeString(new Date())
+					+ MessageConstants.END_POINT);
+			logger.info(JDate.getTimeString(new Date())
+					+ " Control in ReportsMenuDaoImpl : getAccYears : Ending");
+			
+			return accYearList;
+		}
+
+	@Override
+	public ArrayList<SuddenHolidaySMSVO> getStream() {
+		   
+			logger.setLevel(Level.DEBUG);
+			JLogger.log(0, JDate.getTimeString(new Date())
+					+ MessageConstants.START_POINT);
+			logger.info(JDate.getTimeString(new Date())
+					+ " Control in SuddenHolidayListDaoImpl: getStream : Starting");
+			
+			PreparedStatement pstmt = null;
+			ResultSet rs=null;
+			Connection conn = null;
+			ArrayList<SuddenHolidaySMSVO> streamList=new ArrayList<SuddenHolidaySMSVO>();
+		 	
+			try {
+				
+				conn = JDBCConnection.getSeparateConnection();
+				
+				pstmt = conn.prepareStatement(SuddenHolidaySqlUtil.GET_STREAMS);
+				rs=pstmt.executeQuery();
+				
+				while(rs.next()){
+					
+					SuddenHolidaySMSVO streamVo=new SuddenHolidaySMSVO();
+					
+					streamVo.setStreamId(rs.getString("classstream_id_int"));
+					streamVo.setStreamname(rs.getString("classstream_name_var"));
+					
+					streamList.add(streamVo);
+					
+				}
+			
+			} catch (SQLException e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			} catch (Exception e1) {
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			} finally {
+				try {
+					if (rs != null&& (!rs.isClosed())) {
+						rs.close();
+					}
+					if (pstmt != null&& (!pstmt.isClosed())) {
+						pstmt.close();
+					}
+					if (conn != null && (!conn.isClosed())) {
+						conn.close();
+					}
+				} catch (SQLException sqle) {
+
+					logger.error(sqle.getMessage(), sqle);
+					sqle.printStackTrace();
+				} catch (Exception e1) {
+
+					logger.error(e1.getMessage(), e1);
+					e1.printStackTrace();
+				}
+			}
+
+			logger.setLevel(Level.DEBUG);
+			JLogger.log(0, JDate.getTimeString(new Date())
+					+ MessageConstants.END_POINT);
+			logger.info(JDate.getTimeString(new Date())
+					+ " Control in ReportsMenuDaoImpl : getStream : Ending");
+			
+			return streamList;
+		}
+	
+	public ArrayList<SuddenHolidaySMSVO> getStudentClass(String location) {
+		   
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuDaoImpl: getStudentClass : Starting");
+		
+		PreparedStatement pstmt = null;
+		ResultSet rs=null;
+		Connection conn = null;
+		ArrayList<SuddenHolidaySMSVO> classList=new ArrayList<SuddenHolidaySMSVO>();
+	 	
+		try {
+			
+			conn = JDBCConnection.getSeparateConnection();
+			
+			pstmt = conn.prepareStatement(SuddenHolidaySqlUtil.GET_CLASS);
+			pstmt.setString(1,location);
+			rs=pstmt.executeQuery();
+			
+			while(rs.next()){
+				
+				SuddenHolidaySMSVO classVo=new SuddenHolidaySMSVO();
+				
+				classVo.setClassId(rs.getString("classdetail_id_int"));
+				classVo.setClassname(rs.getString("classdetails_name_var"));
+				
+				classList.add(classVo);
+				
+			}
+		
+		} catch (SQLException e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		} catch (Exception e1) {
+			logger.error(e1.getMessage(), e1);
+			e1.printStackTrace();
+		} finally {
+			try {
+				if (rs != null&& (!rs.isClosed())) {
+					rs.close();
+				}
+				if (pstmt != null&& (!pstmt.isClosed())) {
+					pstmt.close();
+				}
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+			} catch (SQLException sqle) {
+
+				logger.error(sqle.getMessage(), sqle);
+				sqle.printStackTrace();
+			} catch (Exception e1) {
+
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			}
+		}
+
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuDaoImpl : getStudentClass : Ending");
+		
+		return classList;
+	}
+	
+	public ArrayList<SuddenHolidaySMSVO> getlocationList() {
+		
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuDaoImpl: getlocationList : Starting");
+		
+		PreparedStatement pstmt= null;
+		ResultSet rs=null;
+		Connection conn = null;
+		ArrayList<SuddenHolidaySMSVO> list = new ArrayList<SuddenHolidaySMSVO>();
+		try{
+			conn= JDBCConnection.getSeparateConnection();
+			pstmt=conn.prepareStatement(SuddenHolidaySqlUtil.GETLOCATION);
+			rs=pstmt.executeQuery();
+			while(rs.next()){
+				SuddenHolidaySMSVO vo =new SuddenHolidaySMSVO();
+				vo.setLocationId(rs.getString("Location_Id"));
+				vo.setLocationName(rs.getString("Location_Name"));
+				list.add(vo);
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		finally{
+			try {
+				if (rs != null&& (!rs.isClosed())) {
+					rs.close();
+				}
+				if (pstmt != null&& (!pstmt.isClosed())) {
+					pstmt.close();
+				}
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+			} catch (SQLException sqle) {
+
+				logger.error(sqle.getMessage(), sqle);
+				sqle.printStackTrace();
+			} catch (Exception e1) {
+
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			}
+		}
+		
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuDaoImpl : getlocationList : Ending");
+		
+		return list;
+
+	}
+	
+	
 	public ArrayList<SuddenHolidaySMSVO> SuddenHolidayList() {
 
 		logger.setLevel(Level.DEBUG);
@@ -255,10 +524,6 @@ public String storeSuudenHolidaysSections(SuddenHolidaysPojo suddenholidayspojo)
 		return status;
 	}
 
-
-
-
-
 public boolean validateSuddenHolidaysSms(String date, String smstext) {
 	logger.setLevel(Level.DEBUG);
 	JLogger.log(0, JDate.getTimeString(new Date())
@@ -333,5 +598,53 @@ public boolean validateSuddenHolidaysSms(String date, String smstext) {
 	
 	return status;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

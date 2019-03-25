@@ -21,10 +21,12 @@ import com.centris.campus.util.HelperClass;
 import com.centris.campus.util.JDate;
 import com.centris.campus.util.JLogger;
 import com.centris.campus.util.MessageConstants;
+import com.centris.campus.util.ReportsMenuSqlConstants;
 import com.centris.campus.util.SQLUtilConstants;
 import com.centris.campus.util.StudentRegistrationSQLUtilConstants;
 import com.centris.campus.util.TransportUtilConstants;
 import com.centris.campus.vo.DriverMsaterListVo;
+import com.centris.campus.vo.FeeCollectionVo;
 import com.centris.campus.vo.LocationVO;
 import com.centris.campus.vo.StageMasterVo;
 import com.centris.campus.vo.StudentRegistrationVo;
@@ -5708,7 +5710,292 @@ return amountstatus;
 	
 	
 	}
+	//edited by anu
+	
+	public ArrayList<TransportVo> getonlinelist(String locationid,
+			String accyear, String classid, String setionid, String paymodeid,
+			String paymenttype, String termId) {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuDaoImpl: getonlinelist : Starting");
+		
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+        int count=0;
+     
+		ArrayList<TransportVo> list=new ArrayList<TransportVo>();
+		try{
+			    conn=JDBCConnection.getSeparateConnection();
+			    pstmt=conn.prepareStatement("SELECT cft.termname,fc.paidDate,fc.reciept_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,fc.modeofpayment,fc.totalamount FROM  campus_tranport_fee_collection_details fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_transport_termdetails cft ON cft.termid=fc.termcode where csc.locationId LIKE ? and fc.accYear = ? and cs.classsection_id_int like ? and fc.termcode like ? and cd.classdetail_id_int like '%%' and fc.modeofpayment = 'Online' order by fc.reciept_no and cd.classdetails_name_var and cs.classsection_name_var and st.student_fname_var and st.student_lname_var"); 
+			    pstmt.setString(1, locationid);
+				pstmt.setString(2, accyear);
+				pstmt.setString(3, setionid);
+				pstmt.setString(4, termId);
+				rs=pstmt.executeQuery();
+				System.out.println("////"+pstmt);
+				while(rs.next()){
+					count++;
+					TransportVo vo=new TransportVo();
+					vo.setSno(count);
+					vo.setBilldate(HelperClass.convertDatabaseToUI(rs.getString("paidDate")));
+					vo.setChlnno(rs.getString("reciept_no"));
+					vo.setClassname(rs.getString("class"));
+					vo.setStudentname(rs.getString("student"));
+					//vo.setPermanentaddress(rs.getString("address"));
+					
+					vo.setPaymentMode(rs.getString("modeofpayment"));
+					vo.setTermName(rs.getString("termname"));
+					vo.setAmount_paid_so_far(rs.getDouble("totalamount"));
+					list.add(vo);
+			
+				
+				}
+			
+			
+		}
+		
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		finally{
+			try {
+				if (rs != null&& (!rs.isClosed())) {
+					rs.close();
+				}
+				if (pstmt != null&& (!pstmt.isClosed())) {
+					pstmt.close();
+				}
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+			} catch (SQLException sqle) {
 
+				logger.error(sqle.getMessage(), sqle);
+				sqle.printStackTrace();
+			} catch (Exception e1) {
+
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			}
+		}
+		
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuDaoImpl : getonlinelist : Ending");
+		
+		return list;
+	}
+
+	public ArrayList<TransportVo> getFeeCollectionPaymodeReport(
+			String locationid, String accyear, String classid, String setionid,
+			String paymodeid, String paymenttype, String termId) {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuDaoImpl: getFeeCollectionPaymodeReport : Starting");
+		
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+        int count=0;
+     
+		ArrayList<TransportVo> list=new ArrayList<TransportVo>();
+		try{
+			    conn=JDBCConnection.getSeparateConnection();
+			   // String modeofpayment;
+				if(paymodeid.equalsIgnoreCase("CASH"))
+			    {
+					conn = JDBCConnection.getSeparateConnection();
+					pstmt=conn.prepareStatement("SELECT cft.termname,fc.paidDate,fc.reciept_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,fc.modeofpayment,fc.totalamount FROM  campus_tranport_fee_collection_details fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_transport_termdetails cft ON cft.termid=fc.termcode where csc.locationId = ? and fc.accYear = ? and cs.classsection_id_int like ? and fc.termcode like ? and cd.classdetail_id_int like '%%' and fc.modeofpayment = 'CASH' order by fc.reciept_no and cd.classdetails_name_var and cs.classsection_name_var and st.student_fname_var and st.student_lname_var");
+					
+			    }
+			    //pstmt=conn.prepareStatement("SELECT cft.termname,fc.paidDate,fc.reciept_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,fc.modeofpayment,fc.totalamount FROM  campus_tranport_fee_collection_details fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_transport_termdetails cft ON cft.termid=fc.termcode where csc.locationId LIKE ? and fc.accYear = ? and cs.classsection_id_int like ? and fc.termcode like ? and cd.classdetail_id_int like '%%' and fc.modeofpayment = 'offline' order by fc.reciept_no and cd.classdetails_name_var and cs.classsection_name_var and st.student_fname_var and st.student_lname_var");
+				else if(paymodeid.equalsIgnoreCase("DD"))
+				{
+					conn = JDBCConnection.getSeparateConnection();
+					pstmt=conn.prepareStatement("SELECT cft.termname,fc.paidDate,fc.reciept_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,fc.modeofpayment,fc.totalamount FROM  campus_tranport_fee_collection_details fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_transport_termdetails cft ON cft.termid=fc.termcode where csc.locationId = ? and fc.accYear = ? and cs.classsection_id_int like ? and fc.termcode like ? and cd.classdetail_id_int like '%%' and fc.modeofpayment = 'DD' order by fc.reciept_no and cd.classdetails_name_var and cs.classsection_name_var and st.student_fname_var and st.student_lname_var");
+					//System.out.println(pstmt);
+					
+				}
+				else
+				{
+					conn = JDBCConnection.getSeparateConnection();
+					pstmt=conn.prepareStatement("SELECT cft.termname,fc.paidDate,fc.reciept_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,fc.modeofpayment,fc.totalamount FROM  campus_tranport_fee_collection_details fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_transport_termdetails cft ON cft.termid=fc.termcode where csc.locationId = ? and fc.accYear = ? and cs.classsection_id_int like ? and fc.termcode like ? and cd.classdetail_id_int like '%%' and fc.modeofpayment = 'CHEQUE' order by fc.reciept_no and cd.classdetails_name_var and cs.classsection_name_var and st.student_fname_var and st.student_lname_var");
+					
+				}
+				pstmt.setString(1, locationid);
+				pstmt.setString(2, accyear);
+				pstmt.setString(3, setionid);
+				pstmt.setString(4, termId);
+				rs=pstmt.executeQuery();
+				//System.out.println("//"+rs);
+				//rs=pstmt.executeQuery();
+			//	System.out.println("//"+pstmt);
+				while(rs.next()){
+					count++;
+					TransportVo vo=new TransportVo();
+					vo.setSno(count);
+					vo.setBilldate(HelperClass.convertDatabaseToUI(rs.getString("paidDate")));
+					vo.setChlnno(rs.getString("reciept_no"));
+					
+					vo.setClassname(rs.getString("class"));
+					vo.setStudentname(rs.getString("student"));
+					//vo.setPermanentaddress(rs.getString("address"));
+					vo.setPaymentMode(rs.getString("modeofpayment"));
+					vo.setAmount_paid_so_far(rs.getDouble("totalamount"));
+					vo.setTermName(rs.getString("termname"));
+					list.add(vo);
+			
+				
+				}
+			
+			
+		}
+		
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		finally{
+			if(rs!=null){
+				try{
+					rs.close();
+				}
+				catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+			if(pstmt!=null){
+				try{
+					pstmt.close();
+				}
+				catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuDaoImpl : getFeeCollectionPaymodeReport : Ending");
+		
+		return list;
+	}
+
+	public ArrayList<TransportVo> getfeecollectiondatelist(String locationid, String accyear, String classid,
+			String termId, String startdate, String enddate, String paymode) {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuDaoImpl: getFeeCollectionReport : Starting");
+		
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+        int count=0;
+		ArrayList<TransportVo> list=new ArrayList<TransportVo>();
+		try{
+			
+			
+			//conn=JDBCConnection.getSeparateConnection();
+			if(paymode.equalsIgnoreCase("ONLINE"))
+			{
+				conn = JDBCConnection.getSeparateConnection();
+				pstmt=conn.prepareStatement("SELECT cft.termname,fc.paidDate,fc.reciept_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,fc.modeofpayment,fc.totalamount FROM  campus_tranport_fee_collection_details fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_transport_termdetails cft ON cft.termid=fc.termcode where csc.locationId = ? and fc.accYear = ? and cs.classsection_id_int like '%%' and fc.termcode like ? and cd.classdetail_id_int like '%%' and fc.modeofpayment = 'ONLINE' AND paidDate > ? AND paidDate < ? order by fc.reciept_no and cd.classdetails_name_var and cs.classsection_name_var and st.student_fname_var and st.student_lname_var");
+			}
+			else if(paymode.equalsIgnoreCase("CASH"))
+		    {
+				conn = JDBCConnection.getSeparateConnection();
+				pstmt=conn.prepareStatement("SELECT cft.termname,fc.paidDate,fc.reciept_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,fc.modeofpayment,fc.totalamount FROM  campus_tranport_fee_collection_details fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_transport_termdetails cft ON cft.termid=fc.termcode where csc.locationId = ? and fc.accYear = ? and cs.classsection_id_int like '%%' and fc.termcode like ? and cd.classdetail_id_int like '%%' and fc.modeofpayment = 'CASH' AND paidDate > ? AND paidDate < ? order by fc.reciept_no and cd.classdetails_name_var and cs.classsection_name_var and st.student_fname_var and st.student_lname_var");
+				
+		    }
+		    //pstmt=conn.prepareStatement("SELECT cft.termname,fc.paidDate,fc.reciept_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,fc.modeofpayment,fc.totalamount FROM  campus_tranport_fee_collection_details fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_transport_termdetails cft ON cft.termid=fc.termcode where csc.locationId LIKE ? and fc.accYear = ? and cs.classsection_id_int like ? and fc.termcode like ? and cd.classdetail_id_int like '%%' and fc.modeofpayment = 'offline' order by fc.reciept_no and cd.classdetails_name_var and cs.classsection_name_var and st.student_fname_var and st.student_lname_var");
+			else if(paymode.equalsIgnoreCase("DD"))
+			{
+				conn = JDBCConnection.getSeparateConnection();
+				pstmt=conn.prepareStatement("SELECT cft.termname,fc.paidDate,fc.reciept_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,fc.modeofpayment,fc.totalamount FROM  campus_tranport_fee_collection_details fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_transport_termdetails cft ON cft.termid=fc.termcode where csc.locationId = ? and fc.accYear = ? and cs.classsection_id_int like '%%' and fc.termcode like ? and cd.classdetail_id_int like '%%' and fc.modeofpayment = 'DD' AND paidDate > ? AND paidDate < ? order by fc.reciept_no and cd.classdetails_name_var and cs.classsection_name_var and st.student_fname_var and st.student_lname_var");
+				//System.out.println(pstmt);
+				
+			}
+			else
+			{
+				conn = JDBCConnection.getSeparateConnection();
+				pstmt=conn.prepareStatement("SELECT cft.termname,fc.paidDate,fc.reciept_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,fc.modeofpayment,fc.totalamount FROM  campus_tranport_fee_collection_details fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_transport_termdetails cft ON cft.termid=fc.termcode where csc.locationId = ? and fc.accYear = ? and cs.classsection_id_int like '%%' and fc.termcode like ? and cd.classdetail_id_int like '%%' and fc.modeofpayment = 'CHEQUE' AND paidDate > ? AND paidDate < ? order by fc.reciept_no and cd.classdetails_name_var and cs.classsection_name_var and st.student_fname_var and st.student_lname_var");
+				
+			}
+			
+			//pstmt=conn.prepareStatement();
+			pstmt.setString(1, locationid);
+			pstmt.setString(2, accyear);
+			//pstmt.setString(3, classid);
+			pstmt.setString(3, termId);
+			pstmt.setString(4, HelperClass.convertUIToDatabase(startdate));
+			pstmt.setString(5, HelperClass.convertUIToDatabase(enddate));
+			rs=pstmt.executeQuery();
+			System.out.println("//"+pstmt);
+		
+			while(rs.next()){
+				count++;
+				TransportVo vo=new TransportVo();
+				vo.setSno(count);
+				vo.setBilldate(HelperClass.convertDatabaseToUI(rs.getString("paidDate")));
+				vo.setChlnno(rs.getString("reciept_no"));
+				vo.setClassname(rs.getString("class"));
+				vo.setStudentname(rs.getString("student"));
+				vo.setPaymentMode(rs.getString("modeofpayment"));
+				vo.setAmount_paid_so_far(rs.getDouble("totalamount"));
+				vo.setTermName(rs.getString("termname"));
+				//vo.setFineAmount(rs.getDouble("fineAmount"));
+				list.add(vo);
+		
+			
+			}
+		}
+		
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		finally{
+			try {
+				if (rs != null&& (!rs.isClosed())) {
+					rs.close();
+				}
+				if (pstmt != null&& (!pstmt.isClosed())) {
+					pstmt.close();
+				}
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+			} catch (SQLException sqle) {
+
+				logger.error(sqle.getMessage(), sqle);
+				sqle.printStackTrace();
+			} catch (Exception e1) {
+
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			}
+		}
+		
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuDaoImpl : getFeeCollectionReport : Ending");
+		
+		return list;
+	}
+	
+	
+	
 	public String getMappedMonthDelete(String id) {
 
 
@@ -5775,5 +6062,6 @@ return amountstatus;
 	
 	
 	}
+
 }
 

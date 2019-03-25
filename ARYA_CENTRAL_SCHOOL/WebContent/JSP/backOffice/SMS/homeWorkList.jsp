@@ -17,8 +17,7 @@
 <title>eCampus Pro</title>
 
 <script type="text/javascript" src="JS/common.js"></script>
-<script type="text/javascript"
-	src="JS/backOffice/SMS/homeWorkList.js"></script>
+<!-- <script type="text/javascript" src="JS/backOffice/SMS/homeWorkList.js"></script>-->
 
 <link href="CSS/newUI/bootstrap.min.css" rel="stylesheet">
 
@@ -27,8 +26,38 @@
 <link href="CSS/newUI/font-awesome/css/font-awesome.min.css"
 	rel="stylesheet" type="text/css">
 
+<script>
+$(document).ready(function() {
+		 $("#send").click(function(){
+		 $.ajax({
+			    type: "POST",
+			    url: "http://sms.textidea.com/app/smsapi/index.php?key=25BB891406C392&campaign=5043&routeid=100233&type=text&contacts="+$('#MobileNO').val()+"&senderid=ARYACS&msg="+$('#Smessage').val(),
+			    success: function() {
+			      $('#contact_form_message').html("<div id='message'></div>");
+			      $('#message').html("<h2>Contact Form Submitted!</h2>")
+			      .append("<p>We will be in touch soon.</p>")
+			      .hide()
+			      .fadeIn(1500, function() {
+			        $('#message').append("Tick");
+			      });
+			    }
+		 	});
+		 alert('successfully send');
+	
+		 });
+		 $('#send').click(function () {
+			  $('#MobileNO').val('');
+			  $('#Smessage').val('');
+			});
+});
+//preview button
+function renderHTML(){
+	  var html = document.getElementById("Smessage").value
+	  document.getElementById("preview_modal").innerHTML = html;
+	}
 
 
+</script>
 <style>
 .glyphicon:hover {
 	cursor: pointer;
@@ -55,206 +84,118 @@ cursor: pointer;
 
 <body>
 
-	<div class="col-md-10 col-md-offset-2" id="div1">
-		<div class="col-md-8" id="div2">
-
-			<p style="margin: 16px 0px;">
-				<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<span
-					id="pageHeading">HomeWork details</span>
-			</p>
-		</div>
-
-
-		<!-- <form id="myForm"
-			action="adminMenu.html?method=homeworklist" method="post"> -->
-
-			<div class="input-group col-md-4" style="margin: 20px 0px;">
-				<input type="text" name="searchname" id="searchname"
-					class="form-control" Placeholder="Search......"
-					value='<logic:present name="searchname"><bean:write name="searchname"/></logic:present>'>
-				<span class="input-group-btn">
-					<button class="btn btn-default" type="button" id="search"
-						onclick="myFunction()" value="Submitform">
-						<i class="fa fa-search"></i>
-					</button>
-				</span>
-			</div>
-			
-			
-			
-		<input type="hidden" name="searchterm" class="searchtermclass"
-			id="searchexamid"
-			value='<logic:present name="searchnamelist"><bean:write name="searchnamelist" />
-
-													</logic:present>'></input>	
-			
-			
-			
-			
-			
-		<!-- </form> -->
-
-
-		<div class="errormessagediv" align="center" style="display: none;">
-			<div class="message-item">
-				<!-- Warning -->
-				<a href="#" class="msg-warning bg-msg-warning"><span
-					class="validateTips"></span></a>
-			</div>
-		</div>
-
-		<div class="successmessagediv" align="center" style="display: none;">
-			<div class="message-item">
-				<!-- Warning -->
-				<a href="#" class="msg-success bg-msg-succes"><span
-					class="validateTips"></span></a>
-			</div>
-		</div>
-
-
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<a data-toggle="collapse" data-parent="#accordion2"
-					href="#collapseOne" style="color: #fff;"><h3
-						class="panel-title" style="color: #767676;">
-						<span class="glyphicon glyphicon-menu-hamburger"></span>&nbsp;&nbsp;HomeWork details
-						
-					</h3></a>
-
-
-
-				<div class="navbar-right">
-
-					<a href="adminMenu.html?method=addHomeWork"><span
-						class="buttons">Add</span> </a> <!-- <span
-						class="glyphicon glyphicon-pencil" id="editstream"
-						data-toggle="tooltip" data-placement="bottom" title="Edit"></span> -->
-
-
-					<span class="buttons" id="delete">Delete</span>
-
-
-					<!-- <img src="images/download.png" class="download" id="iconsimg"
-						data-toggle="modal" data-target="#myModal" data-toggle="tooltip"
-						data-placement="bottom" title="Download"> -->
-
-				</div>
-				<script>
-				$(document).ready(function() {
-					$('[data-toggle="tooltip"]').tooltip();
-				});
-			</script>
-			</div>
-			<!-- pop up -->
-
-			<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-				aria-labelledby="myModalLabel">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal"
-								aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-							<h4 class="modal-title" id="myModalLabel">Download</h4>
-						</div>
-						<div class="modal-body">
-							<span id="excelDownload"><img src="images/xl.png"
-								class="xl"></span>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
-								id="pdfDownload"><img src="images/pdf.png" class="pdf"></span>
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-
-
-
-<input type="hidden" name="searchterm" class="searchtermclass" id="hhomeworkid" />
-
-													
-
-
-			<div id="collapseOne" class="accordion-body collapse in clearfix">
-				<div class="panel-body"
+		<div class="col-md-10 col-md-offset-2" id="div-main" style="font-size: 16pt; color: #07aab9; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; border-right: 1px solid #ddd; ">
+		
+		<p><img src="images/addstu.png" /><span id="pageHeading">Single SMS</span></p>
+				<div class="panel-body clearfix"
 					style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;">
-
-				<%-- 	<logic:present name="homeworklist" scope="request">
-						<display:table class="table" id="allstudent"
-							name="homeworklist" >
-
-							<display:column title="Select" headerClass="heading1">
-							<input type="checkbox" name="getempid" onClick='getvaldetails(this)' value=""> </>
-							</display:column>	
-							
-							<display:column title="<input type='checkbox' name='selectall' id='selectall'/>" headerClass="heading1" media="html" sortable="true">
-							<input type='checkbox' name='selectall' class='select' id='select' onClick='selectAll()' />
-							</display:column>	
-							
-
-							<display:column property="streamId" title="Stream Id"></display:column>
-							
-							<display:column property="date" sortable="true"
-								title="Date<img src='images/sort1.png' style='float: right'/>" />
-								
-							<display:column property="classname" sortable="true"
-								title="Class Name<img src='images/sort1.png' style='float: right'/>" />
-								
-								<display:column property="sectionname" sortable="true"
-								title="Section Name<img src='images/sort1.png' style='float: right'/>" />
-								
-								<display:column property="subjectname" sortable="true"
-								title="Subject Name<img src='images/sort1.png' style='float: right'/>" />
-								
-								<display:column property="description" sortable="true"
-								title="Description<img src='images/sort1.png' style='float: right'/>" />
-								
-
-						</display:table>
-
-					</logic:present> --%>
 					
-					<logic:present name="homeworklist" scope="request">
-						<table class="table" id="allstudent">
+				</div>
+
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				<div class="panel panel-primary panel-list">
+					<div class="panel-heading" role="tab" id="headingOne">
+						
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="color: #767676; vertical-align: text-top;"> 
+							<h4 class="panel-title" style="vertical-align: super;"><i	class="glyphicon glyphicon-menu-hamburger"></i>	&nbsp;&nbsp;Single SMS</h4></a>
+						
+					</div>
+					<div id="contact_form_message"></div>
+
+					<div id="collapseOne" class="panel-collapse collapse in " role="tabpanel" aria-labelledby="headingOne">
+						<div class="panel-body own-panel">
+							<div class="col-md-6" style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;margin-top: 20px;">
+								 
+								<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;">Mobile Number</label>
+									<div class="col-xs-7">
+										<input type="text"  id="MobileNO"name='MobileNO' class="form-control" required>
+									</div>
+								</div>
+									
+								
+								<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;"> Message</label>
+									<div class="col-xs-7">
+										<textarea  id="Smessage" name='StudentMessage' class="form-control" style=" width: 100%; height: 108px;"></textarea>
+									
+									</div>
+								</div>
+								
+						</div>
+							
+							<div class="col-md-12">
+							
+								<p align="center">
+									<button type="button" class="btn btn-info" id="previewbtn"  data-toggle="modal" data-target="#myModal" onclick="renderHTML()">Preview</button>
+									<button type="button" class="btn btn-info" id="send" >Send</button>
+									<!--button type="reset" class="btn btn-info" id="reset">Reset</button-->
+								</p>
+							
+							
+							
+							</div>
+							<!-- modal open -->
+							<div id="myModal" class="modal fade" role="dialog">
+  								<div class="modal-dialog">
+
+    <!-- Modal content-->
+    								<div class="modal-content">
+      									<div class="modal-header">
+        									<button type="button" class="close" data-dismiss="modal">&times;</button>
+      											  <h4 class="modal-title">Preview</h4>
+     									 </div>
+     									 <div class="modal-body" id="preview_modal">
+       										<p></p>
+    								 </div>
+     								 <div class="modal-footer">
+        								<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+    							  </div>
+   								 </div>
+
+  							</div>
+					</div>
+						<!--input type="hidden" name="Acyearid" id="Acyearid" value='<logic:present name="Acyearid"><bean:write name="Acyearid"/></logic:present>'></input-->
+							
+				<!-- div id="collapseOne" class="accordion-body collapse in">
+				<div class="panel-body"
+					style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;">	
+					
+					
+						<table class="table table-striped" id="allstudent">
 							<thead>
 							<tr>
-							<th><input type='checkbox' name='selectall' id='selectall'/></th>
-							<th>Date</th>
-							<th>Class Name</th>
-							<th>Subject Name</th>
-							<th>Description</th>
+							<th>S.No</th>
+							<th>Admission No</th>
+							<th>Student Name</th>
+							<th>Roll No</th>
+							<th>Class and Division</th>
 							</tr>
 							</thead>
 							<tbody>
-							<logic:iterate id="homeworklist" name="homeworklist">
-								<tr>
-								<td><input type='checkbox' name='selectall' class='select' id='select' onClick='selectAll()' /></td>
-								<td><bean:write name="homeworklist" property='date'/></td>
-								<td><bean:write name="homeworklist" property='classname'/></td>
-								<td><bean:write name="homeworklist" property='subjectname'/></td>
-								<td><bean:write name="homeworklist" property='description'/></td>
-								</tr>
-							</logic:iterate>
+							
 							</tbody>
 						</table>
-					</logic:present>
+				
+					
+					
 					</div>
-				<div class="pagebanner"><select id="show_per_page"><option value="50">50</option><option value="100">100</option><option value="200">200</option><option value="300">300</option><option value="400">400</option><option value="500">500</option></select>
-					<span class="numberOfItem"></span>	
+        <div class='pagebanner'><select id='show_per_page'><option value='50'>50</option><option value='100'>100</option><option value='200'>200</option><option value='300'>300</option><option value='400'>400</option><option value='500'>500</option></select>
+	    <span  class='numberOfItem'></span>	
+	    </div><div class='pagination pagelinks' style='top:-9px'></div>
+					</div-->
+					
+						</div>
+					</div>
 				</div>
-				<div class="pagination pagelinks"></div>
-				<br />
 			</div>
-		</div>
 	</div>
 
-	<script>
-		$('.carousel').carousel({
-			interval : 5000
-		//changes the speed
-		})
-	</script>
+	
 </body>
+<script>
+
+</script>
 </html>

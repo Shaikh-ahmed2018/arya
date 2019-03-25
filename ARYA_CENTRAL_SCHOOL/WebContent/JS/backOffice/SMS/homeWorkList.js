@@ -6,6 +6,25 @@ function myFunction() {
 
 
 $(document).ready(function() {
+	
+	 $("#send").click(function() { alert('sending');
+		 $.ajax({
+			    type: "POST",
+			    url: "http://sms.textidea.com/app/smsapi/index.php?key=25BB891406C392&campaign=5043&routeid=100233&type=text&contacts=9447497755&senderid=ARYACS&msg=Hello+People%2C+have+a+great+day",
+			    data: dataString,
+			    success: function() {
+			      $('#contact_form_message').html("<div id='message'></div>");
+			      $('#message').html("<h2>Contact Form Submitted!</h2>")
+			      .append("<p>We will be in touch soon.</p>")
+			      .hide()
+			      .fadeIn(1500, function() {
+			        $('#message').append("Tick");
+			      });
+			    }
+		 	});
+		 alert('completed');
+	 });
+	 
 	if($("#allstudent tbody tr").length ==0){
 		$("#allstudent tbody").append("<tr><td colspan='5'>NO Records Found</td></tr>");
 	}

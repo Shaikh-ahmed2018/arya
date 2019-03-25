@@ -35,7 +35,13 @@ public class ReportMenuVo {
 	private String attendenceDate;
 	private String attendenceStatus;
 	private String teachername;
-	
+	private String admisssion_no;
+	public String getAdmisssion_no() {
+		return admisssion_no;
+	}
+	public void setAdmisssion_no(String admisssion_no) {
+		this.admisssion_no = admisssion_no;
+	}
 	private String startDate;
 	private String endDate;
 	private double total_amt;

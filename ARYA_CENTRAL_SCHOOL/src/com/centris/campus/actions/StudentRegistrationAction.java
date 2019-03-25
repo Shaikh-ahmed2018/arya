@@ -2825,7 +2825,7 @@ public class StudentRegistrationAction extends DispatchAction {
 			String classname = request.getParameter("classId");
 			String sectionid = request.getParameter("sectionid");
 
-			String searchTerm = request.getParameter("searchname".trim());
+			String searchTerm = request.getParameter("searchname");
 
 			if(locationid.equalsIgnoreCase("all") && accyear.equalsIgnoreCase("all")){
 				list = new StudentRegistrationDelegate().getStudentSearchByList(searchTerm);

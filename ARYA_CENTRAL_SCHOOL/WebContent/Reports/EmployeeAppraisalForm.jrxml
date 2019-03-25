@@ -21,7 +21,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Appraisal Status]]></text>
 			</staticText>
@@ -35,7 +35,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Completed Date]]></text>
 			</staticText>
@@ -49,7 +49,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Status]]></text>
 			</staticText>
@@ -63,7 +63,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Self-Appraisal]]></text>
 			</staticText>
@@ -77,7 +77,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Manager’s Review with Appraisee]]></text>
 			</staticText>
@@ -91,7 +91,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Management Review]]></text>
 			</staticText>
@@ -105,7 +105,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Appraisal Period]]></text>
 			</staticText>
@@ -119,7 +119,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Name]]></text>
 			</staticText>
@@ -133,7 +133,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Designation	]]></text>
 			</staticText>
@@ -147,7 +147,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Reporting Manager]]></text>
 			</staticText>
@@ -161,7 +161,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Department]]></text>
 			</staticText>
@@ -175,7 +175,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="24" isBold="true"/>
+					<font fontName="Calibri" size="24" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Employee Performance Evaluation]]></text>
 			</staticText>
@@ -189,7 +189,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Appraisal Process:]]></text>
 			</staticText>
@@ -203,7 +203,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[•Employee Self - Evaluation:]]></text>
 			</staticText>
@@ -217,7 +217,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[It gives an opportunity to every employee to rate his/her own performance, highlight ]]></text>
 			</staticText>
@@ -231,7 +231,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[his/her achievements, and focus on improvement areas. Fill in sections A, B, C and participate in section D. Then]]></text>
 			</staticText>
@@ -245,7 +245,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[ the completed form will be forwarded to the reporting officer. ]]></text>
 			</staticText>
@@ -259,7 +259,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[self-evaluation and arrive at an understanding of the individual’s performance prior to the formal performance appraisal ]]></text>
 			</staticText>
@@ -273,7 +273,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[The reporting officer will review the employee’s job elements and ]]></text>
 			</staticText>
@@ -287,7 +287,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[•Manager Review with Appraisee Evaluation: ]]></text>
 			</staticText>
@@ -301,7 +301,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[meeting with the individual. At the meeting all aspects of the performance appraisal should  be discussed in detail]]></text>
 			</staticText>
@@ -315,7 +315,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[ and the reporting officer marks his ratings. ]]></text>
 			</staticText>
@@ -329,7 +329,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[RATINGS]]></text>
 			</staticText>
@@ -343,7 +343,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[All criteria will be rated on a scale of 1 to 5. Where 1 is the least (lowest) and 5 is the maximum (highest)]]></text>
 			</staticText>
@@ -357,7 +357,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[PERFORMANCE RATING CATEGORIES]]></text>
 			</staticText>
@@ -371,7 +371,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[The following ratings will be considered when completing all sections of the Annual Performance ]]></text>
 			</staticText>
@@ -385,7 +385,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="false"/>
+					<font fontName="Calibri" size="18" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Review form:]]></text>
 			</staticText>
@@ -399,7 +399,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[  manner. Employee delivers value to both - customer and company by exceeding expectations and “setting the path”,  ]]></text>
 			</staticText>
@@ -413,7 +413,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Consistently exceeds all objectives in a timely]]></text>
 			</staticText>
@@ -427,7 +427,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Exceeds Performance Requirements and Expectations (5): ]]></text>
 			</staticText>
@@ -441,7 +441,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[not  just following it. Exhibits excellent business behaviors.]]></text>
 			</staticText>
@@ -455,7 +455,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[ business behaviors and is good corporate example to others.]]></text>
 			</staticText>
@@ -469,7 +469,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[delivers quality work in a timely manner. Employee learns and follows the processes consistently. Demonstrates above average]]></text>
 			</staticText>
@@ -483,7 +483,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Exceeds some objectives and consistently met all others. Employee consistently ]]></text>
 			</staticText>
@@ -497,7 +497,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Above Average Performance (4): ]]></text>
 			</staticText>
@@ -511,7 +511,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Meets Performance Requirements and Expectations (3): ]]></text>
 			</staticText>
@@ -525,7 +525,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Consistently met all established objectives and]]></text>
 			</staticText>
@@ -539,7 +539,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[ acceptable behaviors.]]></text>
 			</staticText>
@@ -553,7 +553,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[ delivered quality work in a timely manner. Employee learns and follows the processes consistently. Demonstrates corporate ]]></text>
 			</staticText>
@@ -567,7 +567,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[behaviors; however the quality of work and timely delivery was marginal and/or inconsistent]]></text>
 			</staticText>
@@ -581,7 +581,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Met most of the objectives. Employee demonstrates acceptable business ]]></text>
 			</staticText>
@@ -595,7 +595,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Improved Performance required (2): ]]></text>
 			</staticText>
@@ -609,7 +609,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Did not meet all objectives, especially key objectives. Employee did not demonstrate  ]]></text>
 			</staticText>
@@ -623,7 +623,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[ acceptable business behavior and did not deliver quality work in a timely manner. Performance  was unreliable.]]></text>
 			</staticText>
@@ -637,7 +637,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Unsatisfactory Performance (1): ]]></text>
 			</staticText>
@@ -651,7 +651,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[ was unreliable. Employees in this category will be placed on a Performance Improvement Plan.]]></text>
 			</staticText>
@@ -665,7 +665,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Not Applicable (N/A): ]]></text>
 			</staticText>
@@ -679,7 +679,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false" isItalic="false"/>
+					<font fontName="Calibri" size="14" isBold="false" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Factor cannot be rated as it does not apply to the position.]]></text>
 			</staticText>
@@ -693,7 +693,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Self-Evaluation by Employee]]></text>
 			</staticText>
@@ -707,7 +707,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Section A]]></text>
 			</staticText>
@@ -721,7 +721,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Self-Evaluation by Employee]]></text>
 			</staticText>
@@ -735,7 +735,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[1.What was your role in the team?]]></text>
 			</staticText>
@@ -749,7 +749,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Roles and Responsibilities]]></text>
 			</staticText>
@@ -763,7 +763,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Skills]]></text>
 			</staticText>
@@ -777,7 +777,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[2.What was your individual contribution?]]></text>
 			</staticText>
@@ -791,7 +791,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[3.While working on the projects what were your main strengths?]]></text>
 			</staticText>
@@ -805,7 +805,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[4.List out the key activities & achievements in the appraisal period and how ]]></text>
 			</staticText>
@@ -819,7 +819,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[would you rate yourself on the results achieved?  (Please provide ]]></text>
 			</staticText>
@@ -833,7 +833,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[achievements that are specific and measurable; Use a scale of 1 to 5, 1 ]]></text>
 			</staticText>
@@ -847,7 +847,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[being lowest & 5 being highest)]]></text>
 			</staticText>
@@ -861,7 +861,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[5.Were there any shifts in targets/key result areas? Why? Could it have been ]]></text>
 			</staticText>
@@ -875,7 +875,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[avoided? How?]]></text>
 			</staticText>
@@ -889,7 +889,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[6.In what way did your Superiors support you?]]></text>
 			</staticText>
@@ -903,7 +903,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[7.What were the main concerns/issues in the projects?]]></text>
 			</staticText>
@@ -917,7 +917,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[8.What were the measures that you took towards self-development or building ]]></text>
 			</staticText>
@@ -931,7 +931,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[your knowledge on new and upcoming technologies?]]></text>
 			</staticText>
@@ -945,7 +945,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[9.How would you describe your growth during the period?]]></text>
 			</staticText>
@@ -959,7 +959,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[10.What are your plans for self-improvement during the next period?]]></text>
 			</staticText>
@@ -973,7 +973,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[11.What are your training needs?]]></text>
 			</staticText>
@@ -987,7 +987,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[12.What awards/recognition/certifications did you achieve in the appraisal ]]></text>
 			</staticText>
@@ -1001,7 +1001,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[period?]]></text>
 			</staticText>
@@ -1015,7 +1015,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Interpersonal Skills- Effectiveness of Employee’s interactions with others]]></text>
 			</staticText>
@@ -1029,7 +1029,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="21" isBold="true"/>
+					<font fontName="Calibri" size="21" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Section B.]]></text>
 			</staticText>
@@ -1043,7 +1043,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[SL.#]]></text>
 			</staticText>
@@ -1057,7 +1057,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -1071,7 +1071,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -1085,7 +1085,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Respect for Colleagues]]></text>
 			</staticText>
@@ -1099,7 +1099,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Self]]></text>
 			</staticText>
@@ -1113,7 +1113,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Reporting Officer]]></text>
 			</staticText>
@@ -1127,7 +1127,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.1.]]></text>
 			</staticText>
@@ -1141,7 +1141,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.2.]]></text>
 			</staticText>
@@ -1155,7 +1155,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.3.]]></text>
 			</staticText>
@@ -1169,7 +1169,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.4.]]></text>
 			</staticText>
@@ -1183,7 +1183,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.5.]]></text>
 			</staticText>
@@ -1197,7 +1197,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Respect for Managers]]></text>
 			</staticText>
@@ -1211,7 +1211,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Respect for Customers]]></text>
 			</staticText>
@@ -1225,7 +1225,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Respect for Company / Job Function]]></text>
 			</staticText>
@@ -1239,7 +1239,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Team Contribution]]></text>
 			</staticText>
@@ -1253,7 +1253,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.6.]]></text>
 			</staticText>
@@ -1267,7 +1267,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Reporting Officer]]></text>
 			</staticText>
@@ -1281,7 +1281,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Self]]></text>
 			</staticText>
@@ -1295,7 +1295,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Information Sharing w/Team & Management]]></text>
 			</staticText>
@@ -1309,7 +1309,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.7.]]></text>
 			</staticText>
@@ -1323,7 +1323,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -1337,7 +1337,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.8.]]></text>
 			</staticText>
@@ -1351,7 +1351,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -1365,7 +1365,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Oral Communication]]></text>
 			</staticText>
@@ -1379,7 +1379,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[SL.#]]></text>
 			</staticText>
@@ -1393,7 +1393,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Written Skills]]></text>
 			</staticText>
@@ -1407,7 +1407,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Communication Skills- As applicable to position]]></text>
 			</staticText>
@@ -1421,7 +1421,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Tact and Diplomacy]]></text>
 			</staticText>
@@ -1435,7 +1435,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.9.]]></text>
 			</staticText>
@@ -1449,7 +1449,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.10.]]></text>
 			</staticText>
@@ -1463,7 +1463,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.14.]]></text>
 			</staticText>
@@ -1477,7 +1477,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Reporting Officer]]></text>
 			</staticText>
@@ -1491,7 +1491,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.13.]]></text>
 			</staticText>
@@ -1505,7 +1505,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Uses Applicable Tools Effectively]]></text>
 			</staticText>
@@ -1519,7 +1519,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Self]]></text>
 			</staticText>
@@ -1533,7 +1533,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Provides suggestions for Work / Process improvement]]></text>
 			</staticText>
@@ -1547,7 +1547,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.11.]]></text>
 			</staticText>
@@ -1561,7 +1561,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -1575,7 +1575,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.12.]]></text>
 			</staticText>
@@ -1589,7 +1589,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -1603,7 +1603,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Analytical Skills]]></text>
 			</staticText>
@@ -1617,7 +1617,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Follows Proper Safety Procedures]]></text>
 			</staticText>
@@ -1631,7 +1631,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[SL.#]]></text>
 			</staticText>
@@ -1645,7 +1645,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Job Knowledge]]></text>
 			</staticText>
@@ -1659,7 +1659,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Technical Skills- Effectiveness with which Employee applies knowledge and skill to job assignments]]></text>
 			</staticText>
@@ -1673,7 +1673,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Follow-Through / Follow-Up]]></text>
 			</staticText>
@@ -1687,7 +1687,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Self]]></text>
 			</staticText>
@@ -1701,7 +1701,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -1715,7 +1715,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Reporting Officer]]></text>
 			</staticText>
@@ -1729,7 +1729,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.16.]]></text>
 			</staticText>
@@ -1743,7 +1743,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Responsiveness to Requests]]></text>
 			</staticText>
@@ -1757,7 +1757,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.18.]]></text>
 			</staticText>
@@ -1771,7 +1771,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[SL.#]]></text>
 			</staticText>
@@ -1785,7 +1785,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Accuracy]]></text>
 			</staticText>
@@ -1799,7 +1799,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -1813,7 +1813,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Quality of Deliverables]]></text>
 			</staticText>
@@ -1827,7 +1827,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Judgment / Decision Making]]></text>
 			</staticText>
@@ -1841,7 +1841,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.15.]]></text>
 			</staticText>
@@ -1855,7 +1855,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.19.]]></text>
 			</staticText>
@@ -1869,7 +1869,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Technical Skills- Effectiveness with which Employee applies knowledge and skill to job assignments]]></text>
 			</staticText>
@@ -1883,7 +1883,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -1897,7 +1897,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.21.]]></text>
 			</staticText>
@@ -1911,7 +1911,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[SL.#]]></text>
 			</staticText>
@@ -1925,7 +1925,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Seeks Way to Streamline Process]]></text>
 			</staticText>
@@ -1939,7 +1939,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.24.]]></text>
 			</staticText>
@@ -1953,7 +1953,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -1967,7 +1967,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Open to New Ideas and Approaches]]></text>
 			</staticText>
@@ -1981,7 +1981,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.22.]]></text>
 			</staticText>
@@ -1995,7 +1995,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.20.]]></text>
 			</staticText>
@@ -2009,7 +2009,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.23.]]></text>
 			</staticText>
@@ -2023,7 +2023,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Planning and Organization]]></text>
 			</staticText>
@@ -2037,7 +2037,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Initiative]]></text>
 			</staticText>
@@ -2051,7 +2051,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Self]]></text>
 			</staticText>
@@ -2065,7 +2065,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Follows Instructions / Processes]]></text>
 			</staticText>
@@ -2079,7 +2079,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Reporting Officer]]></text>
 			</staticText>
@@ -2093,7 +2093,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Approach to Work- Characteristics the employee demonstrates while performing job assignments]]></text>
 			</staticText>
@@ -2107,7 +2107,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.26.]]></text>
 			</staticText>
@@ -2121,7 +2121,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Willingness and Ability to Cross-Train]]></text>
 			</staticText>
@@ -2135,7 +2135,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Attendance and Reliability]]></text>
 			</staticText>
@@ -2149,7 +2149,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.25.]]></text>
 			</staticText>
@@ -2163,7 +2163,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Quantity of work- Employee’s success in producing the required amount of  work]]></text>
 			</staticText>
@@ -2177,7 +2177,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.29.]]></text>
 			</staticText>
@@ -2191,7 +2191,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[SL.#]]></text>
 			</staticText>
@@ -2205,7 +2205,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Amount of Work Completed]]></text>
 			</staticText>
@@ -2219,7 +2219,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Priority Setting ]]></text>
 			</staticText>
@@ -2233,7 +2233,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Self]]></text>
 			</staticText>
@@ -2247,7 +2247,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -2261,7 +2261,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.28.]]></text>
 			</staticText>
@@ -2275,7 +2275,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Work Completed on Schedule]]></text>
 			</staticText>
@@ -2289,7 +2289,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Reporting Officer]]></text>
 			</staticText>
@@ -2303,7 +2303,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.27.]]></text>
 			</staticText>
@@ -2317,7 +2317,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -2331,7 +2331,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.32.]]></text>
 			</staticText>
@@ -2345,7 +2345,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[SL.#]]></text>
 			</staticText>
@@ -2359,7 +2359,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.34.]]></text>
 			</staticText>
@@ -2373,7 +2373,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Aligns Responsibility, Accountability and  Authority]]></text>
 			</staticText>
@@ -2387,7 +2387,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.36.]]></text>
 			</staticText>
@@ -2401,7 +2401,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Faces Performance Problems Squarely and in a Timely Manner]]></text>
 			</staticText>
@@ -2415,7 +2415,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.35.]]></text>
 			</staticText>
@@ -2429,7 +2429,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Supports Responsible Risk Taking]]></text>
 			</staticText>
@@ -2443,7 +2443,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Trains and Develops Staff]]></text>
 			</staticText>
@@ -2457,7 +2457,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Supervisory/ Leadership Skills]]></text>
 			</staticText>
@@ -2471,7 +2471,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Self]]></text>
 			</staticText>
@@ -2485,7 +2485,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Welcomes Constructive Criticism]]></text>
 			</staticText>
@@ -2499,7 +2499,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -2513,7 +2513,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.31.]]></text>
 			</staticText>
@@ -2527,7 +2527,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Sets Goals and Evaluates Staff on a Regular Basis]]></text>
 			</staticText>
@@ -2541,7 +2541,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Reporting Officer]]></text>
 			</staticText>
@@ -2555,7 +2555,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.30.]]></text>
 			</staticText>
@@ -2569,7 +2569,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Controls Costs and Maximizes Resources]]></text>
 			</staticText>
@@ -2583,7 +2583,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.33.]]></text>
 			</staticText>
@@ -2597,7 +2597,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -2611,7 +2611,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Instills Pride in Performance,Service,Attendance and Reliability]]></text>
 			</staticText>
@@ -2625,7 +2625,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.37.]]></text>
 			</staticText>
@@ -2639,7 +2639,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Reporting Officer]]></text>
 			</staticText>
@@ -2653,7 +2653,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.38.]]></text>
 			</staticText>
@@ -2667,7 +2667,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[SL.#]]></text>
 			</staticText>
@@ -2681,7 +2681,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Exhibits Honesty, Integrity and Strong  Business Ethics]]></text>
 			</staticText>
@@ -2695,7 +2695,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Self]]></text>
 			</staticText>
@@ -2709,7 +2709,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -2723,7 +2723,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.40.]]></text>
 			</staticText>
@@ -2737,7 +2737,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Category]]></text>
 			</staticText>
@@ -2751,7 +2751,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Follows Teleindia Policies and Procedures ]]></text>
 			</staticText>
@@ -2765,7 +2765,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.39.]]></text>
 			</staticText>
@@ -2779,7 +2779,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="17" isBold="true"/>
+					<font fontName="Calibri" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Adherence to Policy]]></text>
 			</staticText>
@@ -2793,7 +2793,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Follows ISO 9001:2008 Procedures]]></text>
 			</staticText>
@@ -2807,7 +2807,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Work Completed on Schedule]]></text>
 			</staticText>
@@ -2821,7 +2821,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[B.41.]]></text>
 			</staticText>
@@ -2835,7 +2835,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Section C. Appraisee’s Comments:]]></text>
 			</staticText>
@@ -2849,7 +2849,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Section D. Appraiser’s Comments:]]></text>
 			</staticText>
@@ -2863,7 +2863,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Appraisee: I accept that this report has been discussed with me.  I understand that my ]]></text>
 			</staticText>
@@ -2877,7 +2877,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isBold="false"/>
+					<font fontName="Calibri" size="14" isBold="false"/>
 				</textElement>
 				<text><![CDATA[signature does not mean agreement.]]></text>
 			</staticText>
@@ -2891,7 +2891,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Appraisee Name & Signature:     ]]></text>
 			</staticText>
@@ -2905,7 +2905,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Appraiser Name & signature:]]></text>
 			</staticText>
@@ -2919,7 +2919,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Date]]></text>
 			</staticText>
@@ -2933,7 +2933,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="18" isBold="true"/>
+					<font fontName="Calibri" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Date]]></text>
 			</staticText>

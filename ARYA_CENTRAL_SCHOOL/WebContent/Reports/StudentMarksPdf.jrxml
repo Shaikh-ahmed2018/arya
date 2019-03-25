@@ -90,7 +90,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Subject Name]]></text>
 				</staticText>
@@ -104,7 +104,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Sl no]]></text>
 				</staticText>
@@ -118,7 +118,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Max Marks]]></text>
 				</staticText>
@@ -132,7 +132,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Required Marks]]></text>
 				</staticText>
@@ -146,14 +146,14 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Scored Marks]]></text>
 				</staticText>
 				<textField>
 					<reportElement mode="Opaque" x="108" y="17" width="259" height="20"/>
 					<textElement verticalAlignment="Middle">
-						<font fontName="Liberation Sans" size="11" isBold="true" isUnderline="false" isPdfEmbedded="true"/>
+						<font fontName="Calibri" size="11" isBold="true" isUnderline="false" isPdfEmbedded="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{studentname}]]></textFieldExpression>
 				</textField>
@@ -167,7 +167,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[(%)]]></text>
 				</staticText>
@@ -181,7 +181,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font fontName="Liberation Sans" isBold="true" isPdfEmbedded="true"/>
+						<font fontName="Calibri" isBold="true" isPdfEmbedded="true"/>
 					</textElement>
 					<text><![CDATA[Student Name : ]]></text>
 				</staticText>
@@ -199,7 +199,7 @@
 			<staticText>
 				<reportElement mode="Opaque" x="0" y="58" width="554" height="36" backcolor="#F2F2F2"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="16"/>
+					<font fontName="Calibri" size="16"/>
 				</textElement>
 				<text><![CDATA[Student Marks Details Report]]></text>
 			</staticText>
@@ -226,7 +226,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="8" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{sno}]]></textFieldExpression>
 			</textField>
@@ -240,7 +240,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="8" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{subjectname}]]></textFieldExpression>
 			</textField>
@@ -254,7 +254,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="8" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{maxmarks}]]></textFieldExpression>
 			</textField>
@@ -268,7 +268,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="8" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{reqmarks}]]></textFieldExpression>
 			</textField>
@@ -282,7 +282,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="8" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{scoredmarks}]]></textFieldExpression>
 			</textField>
@@ -296,7 +296,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="8" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{markspercent}]]></textFieldExpression>
 			</textField>

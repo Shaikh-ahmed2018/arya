@@ -71,6 +71,8 @@ public class StudentRegistrationVo implements Serializable {
 	private String sibilingClassId;
 	private String studentSibilingIdInt;
 	private String studentSibilingName;
+	private String studentSearchName;
+	private String studentSearchIdInt;
 	private String studentrollno;
 	private String studentcastename;
 	private String studentcasteid;
@@ -262,6 +264,18 @@ public class StudentRegistrationVo implements Serializable {
 	
 	
 	
+	public String getStudentSearchName() {
+		return studentSearchName;
+	}
+	public void setStudentSearchName(String studentSearchName) {
+		this.studentSearchName = studentSearchName;
+	}
+	public String getStudentSearchIdInt() {
+		return studentSearchIdInt;
+	}
+	public void setStudentSearchIdInt(String studentSearchIdInt) {
+		this.studentSearchIdInt = studentSearchIdInt;
+	}
 	public String getCommunication_landline() {
 		return communication_landline;
 	}

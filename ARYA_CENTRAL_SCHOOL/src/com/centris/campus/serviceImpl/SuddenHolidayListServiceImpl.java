@@ -6,8 +6,10 @@ import java.util.Date;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
+import com.centris.campus.dao.ReportsMenuDao;
 import com.centris.campus.dao.SuddenHolidayListDao;
 import com.centris.campus.daoImpl.IDGenerator;
+import com.centris.campus.daoImpl.ReportsMenuDaoImpl;
 import com.centris.campus.daoImpl.SuddenHolidayListDaoImpl;
 import com.centris.campus.forms.SuddenHolidayForm;
 import com.centris.campus.pojo.SuddenHolidaysPojo;
@@ -16,22 +18,100 @@ import com.centris.campus.util.HelperClass;
 import com.centris.campus.util.JDate;
 import com.centris.campus.util.JLogger;
 import com.centris.campus.util.MessageConstants;
+import com.centris.campus.vo.ReportMenuVo;
 import com.centris.campus.vo.SuddenHolidaySMSVO;
-
+//edited by anu
 public class SuddenHolidayListServiceImpl implements SuddenHolidayListService{
-	private static Logger logger = Logger.getLogger(SuddenHolidayListServiceImpl.class);
+	private static final Logger logger = Logger.getLogger(SuddenHolidayListServiceImpl.class);
+	static SuddenHolidayListDaoImpl daoimpl;
+	static{
+		daoimpl = new SuddenHolidayListDaoImpl();
+	}
 	
-	SuddenHolidayListDao holidayListDao = new SuddenHolidayListDaoImpl();
+	@Override
+	public ArrayList<SuddenHolidaySMSVO> getAccYears() {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in SuddenHolidayListServiceImpl : getAccYears Starting");
+		ArrayList<SuddenHolidaySMSVO> yearList = null;
+		SuddenHolidayListDao dao = new SuddenHolidayListDaoImpl();
+		try {
 
-	
-	public ArrayList<SuddenHolidaySMSVO> SuddenHolidayList() {
-		
-		return holidayListDao.SuddenHolidayList();
+			yearList = dao.getAccYears();
+
+		} catch (Exception exception) {
+			logger.error(exception.getMessage(), exception);
+			exception.printStackTrace();
+		}
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in SuddenHolidayListServiceImpl : getAccYears Ending");
+
+		return yearList;
 	}
 
+	@Override
+	public ArrayList<SuddenHolidaySMSVO> getStream() {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in SuddenHolidayListServiceImpl : getStream Starting");
+		ArrayList<SuddenHolidaySMSVO> streamList = null;
+		SuddenHolidayListDao dao = new SuddenHolidayListDaoImpl();
+		try {
+
+			streamList = dao.getStream();
+
+		} catch (Exception exception) {
+			logger.error(exception.getMessage(), exception);
+			exception.printStackTrace();
+		}
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in SuddenHolidayListServiceImpl : getStream Ending");
+
+		return streamList;
+	}
+	public ArrayList<SuddenHolidaySMSVO> getStudentClass(String location) {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuServiceImpl : getStudentClass Starting");
+		ArrayList<SuddenHolidaySMSVO> classList = null;
+		SuddenHolidayListDao dao = new SuddenHolidayListDaoImpl();
+		try {
+
+			classList = dao.getStudentClass(location);
+
+		} catch (Exception exception) {
+			logger.error(exception.getMessage(), exception);
+			exception.printStackTrace();
+		}
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in SuddenHolidayListServiceImpl : getStudentClass Ending");
+
+		return classList;
+	}
+	
+	//SuddenHolidayListDao holidayListDao = new SuddenHolidayListDaoImpl();
 
 	
-	public String AddSuddenHoliday(SuddenHolidayForm form2) {
+	/*public ArrayList<SuddenHolidaySMSVO> SuddenHolidayList() {
+		
+		return holidayListDao.SuddenHolidayList();
+	}*/
+
+
+	
+	/*public String AddSuddenHoliday(SuddenHolidayForm form2) {
 
 		
 		String status = null;
@@ -87,6 +167,46 @@ public class SuddenHolidayListServiceImpl implements SuddenHolidayListService{
 	public boolean validateSuddenHolidaysSms(String date, String smstext) {
 
 		return holidayListDao.validateSuddenHolidaysSms(date,smstext);
-	}
+	}*/
 
+
+	@Override
+	public ArrayList<SuddenHolidaySMSVO> SuddenHolidayList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public String AddSuddenHoliday(SuddenHolidayForm form2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public boolean validateSuddenHolidaysSms(String date, String smstext) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	@Override
+	public ArrayList<SuddenHolidaySMSVO> getClassesByStream(String streamId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public ArrayList<SuddenHolidaySMSVO> getSectionsByClass(String classId, String location) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public ArrayList<SuddenHolidaySMSVO> getlocationList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	/*public ArrayList<SuddenHolidaySMSVO> getClassDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}*/
+
+
+	
 }

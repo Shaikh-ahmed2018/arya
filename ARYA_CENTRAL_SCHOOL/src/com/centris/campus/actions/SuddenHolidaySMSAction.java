@@ -41,6 +41,7 @@ public class SuddenHolidaySMSAction  extends DispatchAction{
 		try {
 			request.setAttribute(LeftMenusHighlightMessageConstant.SUBMODULE_HIGHLIGHT_NAME, 
 					LeftMenusHighlightMessageConstant.MODULE_INTERACTION_SUDDENHOLIDAYS);
+			
 				
 			ClassPojo pojo = new ClassPojo();
 			List<ClassPojo> classpojo =new CommunicationSettingsBD().getClassListDetails(pojo);

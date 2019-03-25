@@ -247,7 +247,7 @@ position: absolute;
 			<div class="col-md-12 centertxt">
 				<div class="row">
 					<div class="col-md-12">
-						<h1>MY DAIRY</h1>
+						<h1>MY DIARY</h1>
 					</div>
 				</div>
 			<div class="row">

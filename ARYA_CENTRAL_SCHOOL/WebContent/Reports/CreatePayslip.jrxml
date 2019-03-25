@@ -81,28 +81,28 @@
 			<textField>
 				<reportElement mode="Opaque" x="95" y="16" width="1213" height="38" backcolor="#CCCCCC"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="28" isBold="true"/>
+					<font fontName="Calibri" size="28" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{locationName}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="95" y="141" width="528" height="41"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="22" isBold="true"/>
+					<font fontName="Calibri" size="22" isBold="true"/>
 				</textElement>
 				<text><![CDATA[PAYSLIP FOR THE MONTH OF]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="623" y="141" width="121" height="41"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="24" isBold="true"/>
+					<font fontName="Calibri" size="24" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{monthName}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="773" y="141" width="98" height="41"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="24" isBold="true"/>
+					<font fontName="Calibri" size="24" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{year}]]></textFieldExpression>
 			</textField>
@@ -116,7 +116,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Employee No]]></text>
 			</staticText>
@@ -130,7 +130,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Name]]></text>
 			</staticText>
@@ -144,7 +144,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Location]]></text>
 			</staticText>
@@ -158,7 +158,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Designation]]></text>
 			</staticText>
@@ -172,7 +172,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{empId}]]></textFieldExpression>
 			</textField>
@@ -186,7 +186,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ ESI No]]></text>
 			</staticText>
@@ -200,7 +200,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Payment Type ]]></text>
 			</staticText>
@@ -214,7 +214,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ PF No]]></text>
 			</staticText>
@@ -228,7 +228,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ PAN No]]></text>
 			</staticText>
@@ -242,7 +242,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{empName}]]></textFieldExpression>
 			</textField>
@@ -256,7 +256,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{locationName}]]></textFieldExpression>
 			</textField>
@@ -270,7 +270,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{designationname}]]></textFieldExpression>
 			</textField>
@@ -284,7 +284,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{paymentType}]]></textFieldExpression>
 			</textField>
@@ -298,7 +298,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{esinumber}]]></textFieldExpression>
 			</textField>
@@ -312,7 +312,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pfnumber}]]></textFieldExpression>
 			</textField>
@@ -326,7 +326,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pannumber}]]></textFieldExpression>
 			</textField>
@@ -340,7 +340,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Basic]]></text>
 			</staticText>
@@ -354,7 +354,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ HRA]]></text>
 			</staticText>
@@ -368,7 +368,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Transport/Conveyance]]></text>
 			</staticText>
@@ -382,7 +382,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Employee PF]]></text>
 			</staticText>
@@ -396,7 +396,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{basic_earned}]]></textFieldExpression>
 			</textField>
@@ -410,7 +410,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{da_earned}]]></textFieldExpression>
 			</textField>
@@ -424,7 +424,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{hra_earned}]]></textFieldExpression>
 			</textField>
@@ -438,7 +438,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pfempy_earned}]]></textFieldExpression>
 			</textField>
@@ -466,7 +466,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Worked Days]]></text>
 			</staticText>
@@ -494,7 +494,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true" isItalic="false"/>
+					<font fontName="Calibri" size="20" isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[ Department]]></text>
 			</staticText>
@@ -522,7 +522,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ DA]]></text>
 			</staticText>
@@ -536,7 +536,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{convinience_earned}]]></textFieldExpression>
 			</textField>
@@ -550,7 +550,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Child Education]]></text>
 			</staticText>
@@ -564,7 +564,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{specialAllowance_earned}]]></textFieldExpression>
 			</textField>
@@ -578,7 +578,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Special Allowances]]></text>
 			</staticText>
@@ -592,7 +592,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{childEdu_earned}]]></textFieldExpression>
 			</textField>
@@ -606,7 +606,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Arrears]]></text>
 			</staticText>
@@ -620,7 +620,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Performance Incentive]]></text>
 			</staticText>
@@ -634,7 +634,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Medical Reimbursement]]></text>
 			</staticText>
@@ -648,7 +648,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Leave Encashment]]></text>
 			</staticText>
@@ -662,7 +662,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Food Coupons]]></text>
 			</staticText>
@@ -676,7 +676,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Reimbursements]]></text>
 			</staticText>
@@ -690,7 +690,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Internet Expenses]]></text>
 			</staticText>
@@ -704,7 +704,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Driver Salary]]></text>
 			</staticText>
@@ -718,7 +718,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Other]]></text>
 			</staticText>
@@ -732,7 +732,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{arrears_earned}]]></textFieldExpression>
 			</textField>
@@ -746,7 +746,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{performanceIncentive_earned}]]></textFieldExpression>
 			</textField>
@@ -760,7 +760,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{medicalReimbursement_earned}]]></textFieldExpression>
 			</textField>
@@ -774,7 +774,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{leaveEncash_earned}]]></textFieldExpression>
 			</textField>
@@ -788,7 +788,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{foodAllowance_earned}]]></textFieldExpression>
 			</textField>
@@ -802,7 +802,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{reimbursement_earned}]]></textFieldExpression>
 			</textField>
@@ -816,7 +816,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{internetExpense_earned}]]></textFieldExpression>
 			</textField>
@@ -830,7 +830,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{driverSalary_earned}]]></textFieldExpression>
 			</textField>
@@ -844,7 +844,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{others_earned}]]></textFieldExpression>
 			</textField>
@@ -858,7 +858,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Employer PF]]></text>
 			</staticText>
@@ -872,7 +872,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pfempr_earned}]]></textFieldExpression>
 			</textField>
@@ -886,7 +886,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Employer ESI]]></text>
 			</staticText>
@@ -900,7 +900,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Employee ESI]]></text>
 			</staticText>
@@ -914,7 +914,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Professional Tax]]></text>
 			</staticText>
@@ -928,7 +928,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Income Tax]]></text>
 			</staticText>
@@ -942,7 +942,7 @@
 					<rightPen lineWidth="0.5" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Total Earnings]]></text>
 			</staticText>
@@ -956,7 +956,7 @@
 					<rightPen lineWidth="0.5" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totalsalary_earned}]]></textFieldExpression>
 			</textField>
@@ -970,7 +970,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -984,7 +984,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -998,7 +998,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1012,7 +1012,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1026,7 +1026,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1040,7 +1040,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1054,7 +1054,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1068,7 +1068,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1082,7 +1082,7 @@
 					<rightPen lineWidth="0.5" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Total Deductions]]></text>
 			</staticText>
@@ -1096,7 +1096,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1110,7 +1110,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1124,7 +1124,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1138,7 +1138,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1152,7 +1152,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1166,7 +1166,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1180,7 +1180,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1194,7 +1194,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1208,7 +1208,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1222,7 +1222,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
@@ -1236,7 +1236,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Date Of Joining]]></text>
 			</staticText>
@@ -1250,7 +1250,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{doj}]]></textFieldExpression>
 			</textField>
@@ -1264,7 +1264,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Bank Name]]></text>
 			</staticText>
@@ -1278,7 +1278,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bankname}]]></textFieldExpression>
 			</textField>
@@ -1292,7 +1292,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Bank A/C No]]></text>
 			</staticText>
@@ -1306,7 +1306,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bankaccNo}]]></textFieldExpression>
 			</textField>
@@ -1320,7 +1320,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Month Days]]></text>
 			</staticText>
@@ -1334,7 +1334,7 @@
 					<rightPen lineWidth="0.5" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ Net Pay]]></text>
 			</staticText>
@@ -1376,7 +1376,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{esiempy_earned}]]></textFieldExpression>
 			</textField>
@@ -1390,7 +1390,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{esiempr_earned}]]></textFieldExpression>
 			</textField>
@@ -1404,7 +1404,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ptax_earned}]]></textFieldExpression>
 			</textField>
@@ -1418,7 +1418,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{incometax_earned}]]></textFieldExpression>
 			</textField>
@@ -1432,7 +1432,7 @@
 					<rightPen lineWidth="0.5" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totaldeductions}]]></textFieldExpression>
 			</textField>
@@ -1446,7 +1446,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totalsalary}]]></textFieldExpression>
 			</textField>
@@ -1460,7 +1460,7 @@
 					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="20" isBold="true"/>
+					<font fontName="Calibri" size="20" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{locationName}]]></textFieldExpression>
 			</textField>

@@ -20,7 +20,8 @@ public class SectionPojo extends ActionForm{
 	private String status;
 	private String secId;
 	
-	
+	private String mobileno; 
+	private String message; 
 	private String subjectid;
 	private String subjectname;
 	private String locationId;
@@ -31,6 +32,18 @@ public class SectionPojo extends ActionForm{
 	
 	
 	
+	public String getMobileno() {
+		return mobileno;
+	}
+	public void setMobileno(String mobileno) {
+		this.mobileno = mobileno;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
 	public String getLocationId() {
 		return locationId;
 	}

@@ -61,77 +61,77 @@
 			<textField>
 				<reportElement x="68" y="32" width="139" height="15"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{stuName}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="177" y="61" width="62" height="10"/>
 				<textElement>
-					<font fontName="Liberation Sans" size="6"/>
+					<font fontName="Calibri" size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{className}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="156" y="171" width="77" height="20"/>
 				<textElement verticalAlignment="Top">
-					<font fontName="Liberation Sans" size="6"/>
+					<font fontName="Calibri" size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{fatherName}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="143" y="147" width="91" height="12"/>
 				<textElement>
-					<font fontName="Liberation Sans" size="6"/>
+					<font fontName="Calibri" size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="176" y="94" width="58" height="9"/>
 				<textElement>
-					<font fontName="Liberation Sans" size="6"/>
+					<font fontName="Calibri" size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{validity}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="100" y="249" width="15" height="20"/>
 				<textElement textAlignment="Center">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="133" y="114" width="90" height="21"/>
 				<textElement>
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{adress}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="142" y="158" width="91" height="12"/>
 				<textElement>
-					<font fontName="Liberation Sans" size="6"/>
+					<font fontName="Calibri" size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{secodaryPhone}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="156" y="186" width="76" height="20"/>
 				<textElement>
-					<font fontName="Liberation Sans" size="6"/>
+					<font fontName="Calibri" size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{motherName}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="174" y="202" width="59" height="14"/>
 				<textElement>
-					<font fontName="Liberation Sans" size="6"/>
+					<font fontName="Calibri" size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="176" y="71" width="63" height="13"/>
 				<textElement>
-					<font fontName="Liberation Sans" size="6"/>
+					<font fontName="Calibri" size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{admissionno}]]></textFieldExpression>
 			</textField>

@@ -66,7 +66,7 @@ cursor: pointer;
 
 			<p style="margin: 16px 0px;">
 				<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<span
-					id="pageHeading">Meeting details</span>
+					id="pageHeading">Absenties List</span>
 			</p>
 		</div>
 
@@ -123,36 +123,108 @@ cursor: pointer;
 				<a data-toggle="collapse" data-parent="#accordion2"
 					href="#collapseOne" style="color: #fff;"><h3
 						class="panel-title" style="color: #767676;">
-						<span class="glyphicon glyphicon-menu-hamburger"></span>&nbsp;&nbsp;Meeting details
+						<span class="glyphicon glyphicon-menu-hamburger"></span>&nbsp;&nbsp;Absenties List
 						
 					</h3></a>
 
 
 
-				<div class="navbar-right">
-
-					<a href="adminMenu.html?method=addMeeting"><span
-						class="buttons" 
-						data-placement="bottom">Add</span> </a> <!-- <span
-						class="glyphicon glyphicon-pencil" id="editstream"
-						data-toggle="tooltip" data-placement="bottom" title="Edit"></span> -->
-
-
-				<!-- 	<span class="glyphicon glyphicon-trash" id="delete"
-						data-toggle="tooltip" data-placement="bottom" title="Delete"></span>
- -->
-
-					<!-- <img src="images/download.png" class="download" id="iconsimg"
-						data-toggle="modal" data-target="#myModal" data-toggle="tooltip"
-						data-placement="bottom" title="Download"> -->
-
-				</div>
 				<script>
 				$(document).ready(function() {
 					$('[data-toggle="tooltip"]').tooltip();
 				});
 			</script>
 			</div>
+			<div class="col-md-6" style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;margin-top: 20px;">
+								 
+								<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;">School Name</label>
+									<div class="col-xs-7">
+										<select id="locationname" name="locationnid" class="form-control" required>
+											<option value="all">ALL</option>
+											<logic:present name="locationList">
+												<logic:iterate id="Location" name="locationList">
+													<option value="<bean:write name="Location" property="locationId"/>"><bean:write name="Location" property="locationName" /></option>
+												</logic:iterate>
+											</logic:present>
+										</select>
+									</div>
+								</div>
+									
+								
+								<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;"> Class</label>
+									<div class="col-xs-7">
+									
+									<select class="form-control" onkeypress="HideError()" 
+											name="classname" id="classname">
+											<option value="all">ALL</option>
+										</select>
+									</div>
+								</div>
+								
+								
+							<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;"> Date</label>
+									<div class="col-xs-7">
+										<input type="date"  id="date" name='date' class="form-control">
+									
+									</div>
+								</div>
+											
+
+						</div>
+						<div class="col-md-6" style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;margin-top: 20px;">
+								<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;">Academic Year</label>
+									<div class="col-xs-7">
+										<select id="Acyearid" name="accyear" class="form-control" required>
+											<logic:present name="AccYearList">
+												<logic:iterate id="AccYear" name="AccYearList">
+													<option	value="<bean:write name="AccYear" property="accyearId"/>"><bean:write name="AccYear" property="accyearname" /></option>
+												</logic:iterate>
+											</logic:present>
+										</select>
+									</div>
+								</div>
+						
+								
+								<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;">Division</label>
+									<div class="col-xs-7">
+										<select id="sectionid" name="sectionid" class="form-control" required>
+											<option value="all">ALL</option>
+										</select>
+									</div>
+								</div>
+							<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;"> Message</label>
+									<div class="col-xs-7">
+										<textarea  id="Message"name='StudentMessage' class="form-control" style=" width: 100%; height: 7%;"></textarea>
+									
+									</div>
+								</div>
+								
+							
+								<div class="form-group clearfix">
+									<div class="col-xs-12">
+									<p align="right">
+								<button type="button" class="btn btn-info" id="preview" >Preview</button>
+								<button type="button" class="btn btn-info" id="send" >Send</button>
+								<button type="reset" class="btn btn-info" id="resetbtn" >Reset</button>
+								</p>
+								</div>
+								</div>
+							
+							
+							
+							</div>
 			<!-- pop up -->
 
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
@@ -249,14 +321,14 @@ cursor: pointer;
 							<thead>
 							<tr>
 							<th><input type='checkbox' name='selectall' id='selectall'/></th>
-							<th>Date</th>
-							<th>Title</th>
-							<th>Start Time</th>
-							<th>End Time</th>
-							<th>Class Name</th>
-							<th>Section Name</th>
-							<th>Student Name</th>
-							<th>Subject Name</th>
+							<th>Admission No</th>
+							<th>Roll No </th>
+							<th>Name</th>
+							<th>Class</th>
+							<th>Status</th>
+							<th>SMS No</th>
+							<th>Attendance Date</th>
+							<th>Parent Name</th>
 							</tr>
 							</thead>
 							<tbody>
@@ -280,11 +352,9 @@ cursor: pointer;
 					
 
 				</div>
-				<div class="pagebanner"><select id="show_per_page"><option value="50">50</option><option value="100">100</option><option value="200">200</option><option value="300">300</option><option value="400">400</option><option value="500">500</option></select>
-					<span class="numberOfItem"></span>	
-				</div>
-				<div class="pagination pagelinks"></div>
-				<br />
+				
+				
+			
 			</div>
 		</div>
 	</div>

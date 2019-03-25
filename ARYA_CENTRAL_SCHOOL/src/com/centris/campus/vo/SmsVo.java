@@ -14,13 +14,31 @@ public class SmsVo extends ActionForm{
 	private String subjectname;
 	private String description;
 	
-	
+	private String mobileno;
+	private String message;
 	private String meetingid;
 	
 	
 	private String createuser;
 	
 	private String studentid [];
+	
+
+	public String getMobileno() {
+		return mobileno;
+	}
+
+	public void setMobileno(String mobileno) {
+		this.mobileno = mobileno;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
 
 	public String getHomeworkid() {
 		return homeworkid;

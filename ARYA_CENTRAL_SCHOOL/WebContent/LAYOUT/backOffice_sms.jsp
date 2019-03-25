@@ -37,7 +37,7 @@
 									<logic:equal value="STRDIS" name="daymap" property="key">
 										<logic:equal value="true" name="daymap" property="value">
 										
-											<li><a href="adminMenu.html?method=homeworklist" id="sub_module_20_1">Home Works</a></li>
+											<li><a href="adminMenu.html?method=homeworklist" id="sub_module_20_1">Single SMS</a></li>
 										
 										</logic:equal>
 									</logic:equal>
@@ -50,7 +50,7 @@
 									<logic:equal value="CLSDIS" name="daymap" property="key">
 										<logic:equal value="true" name="daymap" property="value">
 							
-											<li><a href="adminMenu.html?method=suddenholiodayslist" id="sub_module_20_2">Sudden Holidays</a></li>
+											<li><a href="adminMenu.html?method=suddenholiodayslist" id="sub_module_20_2">General SMS</a></li>
 										
 										</logic:equal>
 									</logic:equal>
@@ -62,7 +62,7 @@
 									<logic:equal value="SECDIS" name="daymap" property="key">
 										<logic:equal value="true" name="daymap" property="value">
 										
-											<li><a href="adminMenu.html?method=meetingslist" id="sub_module_20_3">Meetings/Events</a></li>
+											<li><a href="adminMenu.html?method=meetingslist" id="sub_module_20_3">Absenties List</a></li>
 										
 										</logic:equal>
 									</logic:equal>
@@ -85,7 +85,7 @@
 								 <logic:iterate id="daymap" name="UserDetails" property="permissionmap" scope="session">
 									<logic:equal value="STGDIS" name="daymap" property="key">
 										<logic:equal value="true" name="daymap" property="value">
-										<li><a href="adminMenu.html?method=latecomingstudentslist" id="sub_module_20_4">Late Coming Students</a></li>
+										<li><a href="adminMenu.html?method=latecomingstudentslist" id="sub_module_20_4">School Fee Defaulter</a></li>
 										</logic:equal>
 									</logic:equal>
 								</logic:iterate>
@@ -95,21 +95,21 @@
 								 <logic:iterate id="daymap" name="UserDetails" property="permissionmap" scope="session">
 									<logic:equal value="DEPDIS" name="daymap" property="key">
 										<logic:equal value="true" name="daymap" property="value">
-										<li><a href="adminMenu.html?method=uniformlist" id="sub_module_20_5">Uniform</a></li>
+										<li><a href="adminMenu.html?method=uniformlist" id="sub_module_20_5">Bus Route</a></li>
 										</logic:equal>
 									</logic:equal>
 								</logic:iterate>
 							</logic:present>		
 									
-						<logic:present name="UserDetails" scope="session">
+					<%--logic:present name="UserDetails" scope="session">
 								 <logic:iterate id="daymap" name="UserDetails" property="permissionmap" scope="session">
 									<logic:equal value="DESDIS" name="daymap" property="key">
 										<logic:equal value="true" name="daymap" property="value">
-										<li><a href="adminMenu.html?method=absentlist" id="sub_module_20_6">Absent</a></li>
+										<li><a href="adminMenu.html?method=absentlist" id="sub_module_20_6"></a></li>
 										</logic:equal>
 									</logic:equal>
 								</logic:iterate>
-							</logic:present>
+							</logic:present--%>
 								
 						<%-- <logic:present name="UserDetails" scope="session">
 								 <logic:iterate id="daymap" name="UserDetails" property="permissionmap" scope="session">

@@ -55,49 +55,49 @@
 			<textField>
 				<reportElement x="194" y="154" width="232" height="21" uuid="5847d48e-ba76-481c-a447-f70349205afa"/>
 				<textElement textAlignment="Center">
-					<font fontName="Liberation Sans" size="10" isBold="true"/>
+					<font fontName="Calibri" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{studentFullName}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="194" y="173" width="232" height="18" uuid="8a68530a-7308-473d-b362-904a37637d3c"/>
 				<textElement textAlignment="Center">
-					<font fontName="Liberation Sans" size="10" isBold="true"/>
+					<font fontName="Calibri" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{fatherName}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="415" y="192" width="91" height="19" uuid="a3bafb30-39bb-4d18-95e6-aee23c6bb4d0"/>
 				<textElement>
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{accyear}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="115" y="249" width="82" height="20" uuid="d15bbd84-42de-47b4-8a11-38b2db3880ff"/>
 				<textElement>
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{laccyear}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="436" y="249" width="127" height="20" uuid="353b6ed7-9662-4153-a639-fa2b6e44d266"/>
 				<textElement>
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateofBirth}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="382" y="304" width="91" height="20" uuid="8facfa3e-b0a0-43a3-92a4-79821a29a990"/>
 				<textElement>
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{conduct}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="128" y="268" width="412" height="20" uuid="91641ab9-1538-471e-8c63-b96bd49798b7"/>
 				<textElement>
-					<font fontName="Liberation Sans" size="11" isBold="true"/>
+					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateofBirthInWords}]]></textFieldExpression>
 			</textField>

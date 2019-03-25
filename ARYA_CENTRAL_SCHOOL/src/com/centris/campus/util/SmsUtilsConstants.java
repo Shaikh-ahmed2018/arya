@@ -9,6 +9,7 @@ public class SmsUtilsConstants {
 	public static final String GET_SUBJECT_LIST = "select subjectID,subjectName from campus_subject where classid=? order by subjectName";
 	
 	public static final String INSERT_HOMEWORK = "insert into campus_homework (homeworkid,dateid,classid,sectionid,subjectid,description,createdate,createuser) values(?,?,?,?,?,?,?,?)";
+	public static final String SINGLE_SMS="insert into sms_single(mobileno,singlemsg)values(?,?)";
 	
 	public static final String GET_HOMEWORK_LIST = "select distinct hm.subjectid,sub.subjectName,hm.dateid,cls.classdetails_name_var,hm.description from campus_homework hm join campus_classdetail cls on cls.classdetail_id_int=hm.classid join campus_classsection sec on sec.classsection_id_int=hm.sectionid join campus_subject sub on sub.subjectID=hm.subjectid";
 	

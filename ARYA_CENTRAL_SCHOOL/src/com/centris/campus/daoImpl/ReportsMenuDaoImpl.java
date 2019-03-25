@@ -2804,13 +2804,16 @@ public class ReportsMenuDaoImpl implements ReportsMenuDao{
 			conn = JDBCConnection.getSeparateConnection();
 			if(obj.getTermStatusId().equalsIgnoreCase("Y"))
 			{
-				pstmt = conn.prepareStatement("SELECT  ft.termid,st.student_id_int,CONCAT(st.student_fname_var,' ',st.student_lname_var) AS student,ft.termname, cd.classdetails_name_var,sum(fc.amount_paid) amount_paid,cs.classsection_name_var,stage.stage_name,fc.is_paid FROM campus_student st JOIN campus_student_classdetails csc ON st.student_id_int = csc.student_id_int JOIN  campus_classdetail cd ON cd.classdetail_id_int = csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN   campus_classsection cs ON cs.classsection_id_int = csc.classsection_id_int AND cs.locationId = csc.locationId JOIN campus_student_transportdetails tra ON tra.student_id_int = csc.student_id_int JOIN campus_fee_stage stage ON stage.stage_id = tra.StageId  JOIN campus_fee_transport_termdetails ft ON ft.locationId = csc.locationId AND ft.accyear = csc.fms_acadamicyear_id_int AND termid LIKE ?  LEFT JOIN campus_tranport_fee_collection_details fc ON fc.admissionNo = csc.student_id_int AND fc.termcode = ft.termid  WHERE tra.isTransport='Y' AND csc.fms_acadamicyear_id_int =? AND csc.classdetail_id_int like ? AND csc.classsection_id_int like ? AND csc.locationId=? AND fc.is_paid='Y' GROUP BY ft.termname,st.student_id_int ORDER BY startdate,LENGTH(cd.classdetail_id_int),cd.classdetail_id_int,cs.classsection_name_var,student");
+				pstmt = conn.prepareStatement("SELECT  ft.termid,st.student_id_int,st.student_admissionno_var,CONCAT(st.student_fname_var,' ',st.student_lname_var) AS student,ft.termname, cd.classdetails_name_var,sum(fc.amount_paid) amount_paid,cs.classsection_name_var,stage.stage_name,fc.is_paid,fc.reciept_no,fc.modeofpayment,fc.paidDate FROM campus_student st JOIN campus_student_classdetails csc ON st.student_id_int = csc.student_id_int JOIN  campus_classdetail cd ON cd.classdetail_id_int = csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN   campus_classsection cs ON cs.classsection_id_int = csc.classsection_id_int AND cs.locationId = csc.locationId JOIN campus_student_transportdetails tra ON tra.student_id_int = csc.student_id_int JOIN campus_fee_stage stage ON stage.stage_id = tra.StageId  JOIN campus_fee_transport_termdetails ft ON ft.locationId = csc.locationId AND ft.accyear = csc.fms_acadamicyear_id_int AND termid LIKE ?  LEFT JOIN campus_tranport_fee_collection_details fc ON fc.admissionNo = csc.student_id_int AND fc.termcode = ft.termid  WHERE tra.isTransport='Y' AND csc.fms_acadamicyear_id_int =? AND csc.classdetail_id_int like ? AND csc.classsection_id_int like ? AND csc.locationId=? AND fc.is_paid='Y' GROUP BY ft.termname,st.student_id_int ORDER BY startdate,LENGTH(cd.classdetail_id_int),cd.classdetail_id_int,cs.classsection_name_var,student");
+				System.out.println("fee"+pstmt);
 			}
 			else if(obj.getTermStatusId().equalsIgnoreCase("N")) {
-				pstmt = conn.prepareStatement("SELECT  ft.termid,st.student_id_int,CONCAT(st.student_fname_var,' ',st.student_lname_var) AS student,ft.termname,CASE WHEN fc.amount_paid IS NULL THEN '-' ELSE SUM(fc.amount_paid) END amount_paid, cd.classdetails_name_var,cs.classsection_name_var,stage.stage_name,CASE WHEN fc.is_paid IS NULL THEN 'NOT PAID' ELSE fc.is_paid END is_paid FROM campus_student st JOIN campus_student_classdetails csc ON st.student_id_int = csc.student_id_int JOIN  campus_classdetail cd ON cd.classdetail_id_int = csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN   campus_classsection cs ON cs.classsection_id_int = csc.classsection_id_int AND cs.locationId = csc.locationId JOIN campus_student_transportdetails tra ON tra.student_id_int = csc.student_id_int JOIN campus_fee_stage stage ON stage.stage_id = tra.StageId  JOIN campus_fee_transport_termdetails ft ON ft.locationId = csc.locationId AND ft.accyear = csc.fms_acadamicyear_id_int AND termid LIKE ?  LEFT JOIN campus_tranport_fee_collection_details fc ON fc.admissionNo = csc.student_id_int AND fc.termcode = ft.termid  WHERE tra.isTransport='Y' AND csc.fms_acadamicyear_id_int =? AND csc.classdetail_id_int like ? AND csc.classsection_id_int like ? AND csc.locationId=? AND fc.is_paid IS NULL GROUP BY ft.termname,st.student_id_int ORDER BY startdate,LENGTH(cd.classdetail_id_int),cd.classdetail_id_int,cs.classsection_name_var,student");
+				pstmt = conn.prepareStatement("SELECT  ft.termid,st.student_id_int,st.student_admissionno_var,CONCAT(st.student_fname_var,' ',st.student_lname_var) AS student,ft.termname,CASE WHEN fc.amount_paid IS NULL THEN '-' ELSE SUM(fc.amount_paid) END amount_paid, cd.classdetails_name_var,cs.classsection_name_var,stage.stage_name,CASE WHEN fc.is_paid IS NULL THEN 'NOT PAID' ELSE fc.is_paid END is_paid,fc.reciept_no,fc.modeofpayment,fc.paidDate FROM campus_student st JOIN campus_student_classdetails csc ON st.student_id_int = csc.student_id_int JOIN  campus_classdetail cd ON cd.classdetail_id_int = csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN   campus_classsection cs ON cs.classsection_id_int = csc.classsection_id_int AND cs.locationId = csc.locationId JOIN campus_student_transportdetails tra ON tra.student_id_int = csc.student_id_int JOIN campus_fee_stage stage ON stage.stage_id = tra.StageId  JOIN campus_fee_transport_termdetails ft ON ft.locationId = csc.locationId AND ft.accyear = csc.fms_acadamicyear_id_int AND termid LIKE ?  LEFT JOIN campus_tranport_fee_collection_details fc ON fc.admissionNo = csc.student_id_int AND fc.termcode = ft.termid  WHERE tra.isTransport='Y' AND csc.fms_acadamicyear_id_int =? AND csc.classdetail_id_int like ? AND csc.classsection_id_int like ? AND csc.locationId=? AND fc.is_paid IS NULL GROUP BY ft.termname,st.student_id_int ORDER BY startdate,LENGTH(cd.classdetail_id_int),cd.classdetail_id_int,cs.classsection_name_var,student");
+				System.out.println("fee"+pstmt);
 			}
 			else {
-				pstmt = conn.prepareStatement("SELECT  ft.termid,st.student_id_int,CONCAT(st.student_fname_var,' ',st.student_lname_var) AS student,ft.termname,CASE WHEN fc.amount_paid IS NULL THEN '-' ELSE SUM(fc.amount_paid) END amount_paid, cd.classdetails_name_var,cs.classsection_name_var,stage.stage_name,CASE WHEN fc.is_paid IS NULL THEN 'NOT PAID' ELSE fc.is_paid END is_paid FROM campus_student st JOIN campus_student_classdetails csc ON st.student_id_int = csc.student_id_int JOIN  campus_classdetail cd ON cd.classdetail_id_int = csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN   campus_classsection cs ON cs.classsection_id_int = csc.classsection_id_int AND cs.locationId = csc.locationId JOIN campus_student_transportdetails tra ON tra.student_id_int = csc.student_id_int JOIN campus_fee_stage stage ON stage.stage_id = tra.StageId  JOIN campus_fee_transport_termdetails ft ON ft.locationId = csc.locationId AND ft.accyear = csc.fms_acadamicyear_id_int AND termid LIKE ?  LEFT JOIN campus_tranport_fee_collection_details fc ON fc.admissionNo = csc.student_id_int AND fc.termcode = ft.termid  WHERE tra.isTransport='Y' AND csc.fms_acadamicyear_id_int =? AND csc.classdetail_id_int like ? AND csc.classsection_id_int like ? AND csc.locationId=? GROUP BY ft.termname,st.student_id_int ORDER BY startdate,LENGTH(cd.classdetail_id_int),cd.classdetail_id_int,cs.classsection_name_var,student");
+				pstmt = conn.prepareStatement("SELECT  ft.termid,st.student_id_int,st.student_admissionno_var,CONCAT(st.student_fname_var,' ',st.student_lname_var) AS student,ft.termname,CASE WHEN fc.amount_paid IS NULL THEN '-' ELSE SUM(fc.amount_paid) END amount_paid, cd.classdetails_name_var,cs.classsection_name_var,stage.stage_name,CASE WHEN fc.is_paid IS NULL THEN 'NOT PAID' ELSE fc.is_paid END is_paid,fc.reciept_no,fc.modeofpayment,fc.paidDate FROM campus_student st JOIN campus_student_classdetails csc ON st.student_id_int = csc.student_id_int JOIN  campus_classdetail cd ON cd.classdetail_id_int = csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN   campus_classsection cs ON cs.classsection_id_int = csc.classsection_id_int AND cs.locationId = csc.locationId JOIN campus_student_transportdetails tra ON tra.student_id_int = csc.student_id_int JOIN campus_fee_stage stage ON stage.stage_id = tra.StageId  JOIN campus_fee_transport_termdetails ft ON ft.locationId = csc.locationId AND ft.accyear = csc.fms_acadamicyear_id_int AND termid LIKE ?  LEFT JOIN campus_tranport_fee_collection_details fc ON fc.admissionNo = csc.student_id_int AND fc.termcode = ft.termid  WHERE tra.isTransport='Y' AND csc.fms_acadamicyear_id_int =? AND csc.classdetail_id_int like ? AND csc.classsection_id_int like ? AND csc.locationId=? GROUP BY ft.termname,st.student_id_int ORDER BY startdate,LENGTH(cd.classdetail_id_int),cd.classdetail_id_int,cs.classsection_name_var,student");
+				System.out.println("fee"+pstmt);
 			}
 			
 			pstmt.setString(1, obj.getTermId());
@@ -2821,6 +2824,7 @@ public class ReportsMenuDaoImpl implements ReportsMenuDao{
 		
 		
 			rs = pstmt.executeQuery();
+			System.out.println("fee"+rs);
 			
 			System.out.println("fee details query>>>"+pstmt);
 			while(rs.next()){
@@ -2829,6 +2833,7 @@ public class ReportsMenuDaoImpl implements ReportsMenuDao{
 				vo.setSno(slno);
 				
 				vo.setStudentnamelabel(rs.getString("student"));
+				vo.setAdmisssion_no(rs.getString("student_admissionno_var"));
 				vo.setClassname(rs.getString("classdetails_name_var"));
 				vo.setSectionname(rs.getString("classsection_name_var"));
 				vo.setClass_and_section(rs.getString("classdetails_name_var")+" '" +rs.getString("classsection_name_var")+"'");
@@ -2877,6 +2882,11 @@ public class ReportsMenuDaoImpl implements ReportsMenuDao{
 			}
 		}
 		return list;
+	}
+
+	private void printf() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	public ArrayList<ReportMenuVo> getTerm() {
@@ -7616,7 +7626,7 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 			
 			
 			conn=JDBCConnection.getSeparateConnection();
-			pstmt=conn.prepareStatement("SELECT fc.concessionAmt,fc.fineAmount,cft.termname,fc.paidDate,fc.chln_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student ,pr.address,fc.paymentMode,fc.amount_paid FROM  campus_fee_collection fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_termdetails cft ON cft.termid=fc.termcode where csc.locationId like ? and fc.accYear like ? and cd.classdetail_id_int like ? AND fc.termcode like ? and fc.paidDate BETWEEN ? AND ? AND fc.paymentMode LIKE ? order by fc.paymentMode,fc.paidDate and cd.classdetails_name_var and cs.classsection_name_var and st.student_fname_var and st.student_lname_var");
+			pstmt=conn.prepareStatement("SELECT fc.concessionAmt,fc.fineAmount,cft.termname,fc.paidDate,fc.chln_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student ,fc.paymentMode,fc.amount_paid FROM  campus_fee_collection fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_termdetails cft ON cft.termid=fc.termcode where csc.locationId like ? and fc.accYear like ? and cd.classdetail_id_int like ? AND fc.termcode like ? and fc.paidDate BETWEEN ? AND ? AND fc.paymentMode LIKE ? order by fc.paymentMode,fc.paidDate and cd.classdetails_name_var and cs.classsection_name_var and st.student_fname_var and st.student_lname_var");
 			pstmt.setString(1, locationid);
 			pstmt.setString(2, accyear);
 			pstmt.setString(3, classid);
@@ -7634,7 +7644,6 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 				vo.setChlnno(rs.getString("chln_no"));
 				vo.setClassname(rs.getString("class"));
 				vo.setStudentname(rs.getString("student"));
-				vo.setPermanentaddress(rs.getString("address"));
 				vo.setPaymentMode(rs.getString("paymentMode"));
 				vo.setAmount_paid_so_far(rs.getDouble("amount_paid")-rs.getDouble("concessionAmt"));
 				vo.setTermName(rs.getString("termname"));
@@ -7698,7 +7707,7 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 			
 			String monthNo=HelperClass.getMothNumberByShortName(monthName);
 			conn=JDBCConnection.getSeparateConnection();
-			pstmt=conn.prepareStatement("SELECT fc.concessionAmt,fc.fineAmount,cft.termname,fc.paidDate,fc.chln_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student ,pr.address,fc.paymentMode,fc.amount_paid FROM  campus_fee_collection fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_termdetails cft ON cft.termid=fc.termcode where csc.locationId like ? and fc.accYear like ? and cd.classdetail_id_int like ? AND fc.termcode like ? and fc.paidDate Like ? and csc.classsection_id_int LIKE ? AND fc.paymentMode Like ?  order by fc.paymentMode,fc.paidDate,cd.classdetails_name_var,cs.classsection_name_var,st.student_fname_var,st.student_lname_var");
+			pstmt=conn.prepareStatement("SELECT fc.concessionAmt,fc.fineAmount,cft.termname,fc.paidDate,fc.chln_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student ,fc.paymentMode,fc.amount_paid FROM  campus_fee_collection fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int  JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_termdetails cft ON cft.termid=fc.termcode where csc.locationId like ? and fc.accYear like ? and cd.classdetail_id_int like ? AND fc.termcode like ? and fc.paidDate Like ? and csc.classsection_id_int LIKE ? AND fc.paymentMode Like ?  order by fc.paymentMode,fc.paidDate,cd.classdetails_name_var,cs.classsection_name_var,st.student_fname_var,st.student_lname_var");
 			pstmt.setString(1, locationid);
 			pstmt.setString(2, accyear);
 			pstmt.setString(3, classid);
@@ -7716,7 +7725,6 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 				vo.setChlnno(rs.getString("chln_no"));
 				vo.setClassname(rs.getString("class"));
 				vo.setStudentname(rs.getString("student"));
-				vo.setPermanentaddress(rs.getString("address"));
 				vo.setPaymentMode(rs.getString("paymentMode"));
 				vo.setAmount_paid_so_far(rs.getDouble("amount_paid")-rs.getDouble("concessionAmt"));
 				vo.setTermName(rs.getString("termname"));
@@ -7778,7 +7786,7 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 		try{
 			
 			conn=JDBCConnection.getSeparateConnection();
-			pstmt=conn.prepareStatement("SELECT fc.concessionAmt,fc.fineAmount,cft.termname,fc.paidDate,fc.chln_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,st.student_admissionno_var ,pr.address,fc.paymentMode,fc.amount_paid FROM  campus_fee_collection fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_termdetails cft ON cft.termid=fc.termcode where csc.locationId like ? and fc.accYear like ? and cd.classdetail_id_int like ? AND fc.termcode like ?  and csc.classsection_id_int LIKE ? AND fc.paymentMode LIKE ?  order by fc.paymentMode,st.student_admissionno_var");
+			pstmt=conn.prepareStatement("SELECT fc.concessionAmt,fc.fineAmount,cft.termname,fc.paidDate,fc.chln_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,st.student_admissionno_var ,fc.paymentMode,fc.amount_paid FROM  campus_fee_collection fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int  JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_termdetails cft ON cft.termid=fc.termcode where csc.locationId like ? and fc.accYear like ? and cd.classdetail_id_int like ? AND fc.termcode like ?  and csc.classsection_id_int LIKE ? AND fc.paymentMode LIKE ?  order by fc.paymentMode,st.student_admissionno_var");
 			pstmt.setString(1, locationid);
 			pstmt.setString(2, accyear);
 			pstmt.setString(3, classid);
@@ -7797,7 +7805,6 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 				vo.setClassname(rs.getString("class"));
 				vo.setAddmissionno(rs.getString("student_admissionno_var"));
 				vo.setStudentname(rs.getString("student"));
-				vo.setPermanentaddress(rs.getString("address"));
 				vo.setPaymentMode(rs.getString("paymentMode"));
 				vo.setAmount_paid_so_far(rs.getDouble("amount_paid")-rs.getDouble("concessionAmt"));
 				vo.setTermName(rs.getString("termname"));
@@ -7859,7 +7866,7 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 		try{
 			
 			conn=JDBCConnection.getSeparateConnection();
-			pstmt=conn.prepareStatement("SELECT fc.concessionAmt,fc.fineAmount,cft.termname,fc.paidDate,fc.chln_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,st.student_admissionno_var ,pr.address,fc.paymentMode,fc.amount_paid FROM  campus_fee_collection fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo JOIN  campus_parents pr ON pr.parentid = par.ParentID JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_termdetails cft ON cft.termid=fc.termcode where csc.locationId like ? and fc.accYear like ? and cd.classdetail_id_int like ? AND fc.termcode like ?  and csc.classsection_id_int LIKE ? AND fc.paymentMode LIKE ?  order by fc.paymentMode,fc.chln_no");
+			pstmt=conn.prepareStatement("SELECT fc.concessionAmt,fc.fineAmount,cft.termname,fc.paidDate,fc.chln_no,CONCAT(cd.classdetails_name_var, ' ',cs.classsection_name_var) AS class, CONCAT(st.student_fname_var,' ',st.student_lname_var)AS student,st.student_admissionno_var ,fc.paymentMode,fc.amount_paid FROM  campus_fee_collection fc JOIN campus_student_classdetails csc ON fc.admissionNo = csc.student_id_int AND fc.accYear=csc.fms_acadamicyear_id_int JOIN campus_student st  ON fc.admissionNo = st.student_id_int JOIN campus_parentchildrelation par ON par.stu_addmissionNo = fc.admissionNo  JOIN campus_classdetail cd ON cd.classdetail_id_int=csc.classdetail_id_int AND cd.locationId = csc.locationId JOIN campus_classsection cs ON cs.classsection_id_int=csc.classsection_id_int AND cs.locationId = csc.locationId  JOIN campus_fee_termdetails cft ON cft.termid=fc.termcode where csc.locationId like ? and fc.accYear like ? and cd.classdetail_id_int like ? AND fc.termcode like ?  and csc.classsection_id_int LIKE ? AND fc.paymentMode LIKE ?  order by fc.paymentMode,fc.chln_no");
 			pstmt.setString(1, locationid);
 			pstmt.setString(2, accyear);
 			pstmt.setString(3, classid);
@@ -7877,7 +7884,6 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 				vo.setClassname(rs.getString("class"));
 				vo.setAddmissionno(rs.getString("student_admissionno_var"));
 				vo.setStudentname(rs.getString("student"));
-				vo.setPermanentaddress(rs.getString("address"));
 				vo.setPaymentMode(rs.getString("paymentMode"));
 				vo.setAmount_paid_so_far(rs.getDouble("amount_paid")-rs.getDouble("concessionAmt"));
 				vo.setTermName(rs.getString("termname"));

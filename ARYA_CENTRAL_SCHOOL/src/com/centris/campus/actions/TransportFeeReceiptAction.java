@@ -61,6 +61,7 @@ import com.centris.campus.util.JLogger;
 import com.centris.campus.util.LeftMenusHighlightMessageConstant;
 import com.centris.campus.util.MessageConstants;
 import com.centris.campus.vo.AllTeacherDetailsVo;
+import com.centris.campus.vo.FeeCollectionVo;
 import com.centris.campus.vo.ReportMenuVo;
 import com.centris.campus.vo.TermMasterVo;
 import com.centris.campus.vo.TransportVo;
@@ -545,7 +546,213 @@ public class TransportFeeReceiptAction extends DispatchAction
 				+ " Control in TransportFeeReceiptAction : gettransportfeeDetails Ending");
 		return null;
 	}
+	//edited by anu
+
+	public ActionForward getonlinelist(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuAction : getonlinelist Starting");
+		request.setAttribute(MessageConstants.MODULE_NAME,
+				MessageConstants.BACKOFFICE_REPORTS);
+		request.setAttribute(MessageConstants.HIGHLIGHT_NAME,
+				MessageConstants.MODULE_REPORTS);
+		try {
+			
+			String locationid=request.getParameter("location");
+			 String accyear=request.getParameter("accyear");
+			 String classid=request.getParameter("classid");
+			 String setionid=request.getParameter("sectionid");
+			 String paymodeid=request.getParameter("paymodid");
+			 String paymenttype =request.getParameter("paymenttype");
+			 String termId=request.getParameter("termId");
+				
+				if(termId==null || termId.equalsIgnoreCase("all")){
+					termId="%%";
+		    		   
+		    	   }
+			 if(locationid==null || locationid.equalsIgnoreCase("all")){
+				 locationid="%%";
+	    		   
+	    	   }
+			 if(accyear.equalsIgnoreCase("all")){
+				 accyear="%%";
+	    		   
+			 }
+			 if(classid.equalsIgnoreCase("all")){
+				 classid="%%";
+	    		   
+			 }
+			 if(setionid.equalsIgnoreCase("all")){
+				 setionid="%%";
+	    		   
+			 }
+			 if(paymodeid.equalsIgnoreCase("all")){
+				 paymodeid="%%";
+	    		   
+			 }
+			 if(paymenttype.equalsIgnoreCase("all")){
+				 paymenttype="%%";
+	    		   
+			 }
+			ArrayList<TransportVo> list=new ArrayList<TransportVo>();
+			list=TransportBD.getonlinelist(locationid,accyear,classid,setionid,paymodeid,paymenttype,termId);
+			JSONObject json = new JSONObject();
+			json.put("studentList", list);
+			response.getWriter().print(json);
+			
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuAction : getonlinelist Ending");
+
+		return null;
+	}
 	
+	public ActionForward getFeeCollectionPaymodeReport(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuAction : getFeeCollectionPaymodeReport Starting");
+		request.setAttribute(MessageConstants.MODULE_NAME,
+				MessageConstants.BACKOFFICE_REPORTS);
+		request.setAttribute(MessageConstants.HIGHLIGHT_NAME,
+				MessageConstants.MODULE_REPORTS);
+		try {
+			
+			String locationid=request.getParameter("location");
+			 String accyear=request.getParameter("accyear");
+			 String classid=request.getParameter("classid");
+			 String setionid=request.getParameter("sectionid");
+			 String paymodeid=request.getParameter("paymodid");
+			 String paymenttype =request.getParameter("paymenttype");
+			 String termId=request.getParameter("termId");
+				
+				if(termId.equalsIgnoreCase("all")){
+					termId="%%";
+		    		   
+		    	   }
+			 if(locationid.equalsIgnoreCase("all")){
+				 locationid="%%";
+	    		   
+	    	   }
+			 if(classid.equalsIgnoreCase("all")){
+				 classid="%%";
+	    		   
+	    	   }
+			 if(setionid.equalsIgnoreCase("all")){
+				 setionid="%%";
+	    		   
+	    	   }
+			 if(accyear.equalsIgnoreCase("all")){
+				 accyear="%%";
+	    		   
+			 }
+			 if(paymodeid.equalsIgnoreCase("all")){
+				 paymodeid="%%";
+	    		   
+			 }
+			 if(paymenttype.equalsIgnoreCase("all")){
+				 paymenttype="%%";
+	    		   
+			 }
+			ArrayList<TransportVo> list=new ArrayList<TransportVo>();
+			list=TransportBD.getFeeCollectionPaymodeReport(locationid,accyear,classid,setionid,paymodeid,paymenttype,termId);
+			JSONObject json = new JSONObject();
+			json.put("studentList", list);
+			response.getWriter().print(json);
+			
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuAction : getFeeCollectionPaymodeReport Ending");
+
+		return null;
+	}
+	
+	public ActionForward getfeecollectiondatelist(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuAction : getfeecollectionclasslist Starting");
+		request.setAttribute(MessageConstants.MODULE_NAME,
+				MessageConstants.BACKOFFICE_REPORTS);
+		request.setAttribute(MessageConstants.HIGHLIGHT_NAME,
+				MessageConstants.MODULE_REPORTS);
+		try {
+			
+			String locationid=request.getParameter("location");
+			 String accyear=request.getParameter("accyear");
+			 String classid=request.getParameter("classid");
+			 String termId=request.getParameter("termId");
+			String startdate=request.getParameter("startdate");	
+			String enddate=request.getParameter("enddate");	
+			String PaymentType=request.getParameter("PaymentType");
+			String paymode=request.getParameter("paymode");
+			if(PaymentType.equalsIgnoreCase("all")){
+				 PaymentType="%%";
+		    		   
+		    	   }
+			 if(paymode.equalsIgnoreCase("all")){
+				 paymode="%%";
+		    		   
+		    	   }
+			
+				if(termId.equalsIgnoreCase("all")){
+					termId="%%";
+		    		   
+		    	   }
+			 
+			 if(locationid.equalsIgnoreCase("all")){
+				 locationid="%%";
+	    		   
+	    	   }
+			 if(classid.equalsIgnoreCase("all")){
+				 classid="%%";
+	    		   
+			 }
+			ArrayList<TransportVo> list=new ArrayList<TransportVo>();
+			list=new TransportDaoImpl().getfeecollectiondatelist(locationid,accyear,classid,termId,startdate,enddate,paymode);
+			
+			JSONObject json = new JSONObject();
+			json.put("studentList", list);
+			response.getWriter().print(json);
+			
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuAction : getfeecollectionclasslist Ending");
+
+		return null;
+	}
+	//end
 	public ActionForward getTerm(ActionMapping map,ActionForm form,HttpServletRequest request,HttpServletResponse response)
 	{
 		logger.setLevel(Level.DEBUG);

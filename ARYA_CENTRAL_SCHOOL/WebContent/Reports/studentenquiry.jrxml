@@ -152,7 +152,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Contact Number]]></text>
 			</staticText>
@@ -166,7 +166,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Student Name]]></text>
 			</staticText>
@@ -180,7 +180,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Age]]></text>
 			</staticText>
@@ -194,7 +194,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Contact Name]]></text>
 			</staticText>
@@ -208,7 +208,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Sno]]></text>
 			</staticText>
@@ -222,7 +222,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Joining Class]]></text>
 			</staticText>
@@ -236,7 +236,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Interaction Status]]></text>
 			</staticText>
@@ -250,7 +250,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Address]]></text>
 			</staticText>
@@ -264,7 +264,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Admission Status]]></text>
 			</staticText>
@@ -278,7 +278,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Joining Status]]></text>
 			</staticText>
@@ -296,7 +296,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="8"/>
+					<font fontName="Calibri" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{slno}]]></textFieldExpression>
 			</textField>
@@ -310,7 +310,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{enq_fullname}]]></textFieldExpression>
 			</textField>
@@ -324,7 +324,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{enq_age}]]></textFieldExpression>
 			</textField>
@@ -338,7 +338,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{enq_conname}]]></textFieldExpression>
 			</textField>
@@ -352,7 +352,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{enq_conPhno}]]></textFieldExpression>
 			</textField>
@@ -366,7 +366,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{enq_classname}]]></textFieldExpression>
 			</textField>
@@ -380,7 +380,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{enq_reg_status_id}]]></textFieldExpression>
 			</textField>
@@ -394,7 +394,7 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{enq_reg_status}]]></textFieldExpression>
 			</textField>
@@ -408,14 +408,14 @@
 					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{enq_join_status}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="985" y="0" width="179" height="20" forecolor="#666666"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{enq_address}]]></textFieldExpression>
 			</textField>

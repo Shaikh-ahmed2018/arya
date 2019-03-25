@@ -55,7 +55,7 @@ $(document).ready(function(){
 		    	        //Create a new HTML document.
 		    	        frameDoc.document.write('<html><head><title>DIV Contents</title>');
 		    	        //Append the external CSS file.
-		    	      
+		    	      	frameDoc.document.write('<style>div,th,td,input{letter-spacing: normal;outline:none;font-weight:800 !important;border:none !important;font-size:15px !important;font-family:Fake Receipt !important;font-weight:bold;}</style>');
 		    	        frameDoc.document.write('</head><body>');
 		    	      
 		    	        
@@ -445,7 +445,7 @@ function feeCollectionDetailsPrint(pointer){
 			var result = $.parseJSON(response);
 			var totalAmount=0.0;
 			$("#Dialog").append("<h3 style='text-align:center;'>"+$("th.schoolname").text()+"</h3>" +
-					"<h3 style='text-align:center;'>Pattom Thiruvananthapuram-695 004.Kerla</h3>" +
+					"<h3 style='text-align:center;'>Pattom Thiruvananthapuram-695 004.Kerala</h3>" +
 					"<hr>" +
 					"<div style='display:inline-block;width:210px;'><span>AdmnNo:</span><span>"+$("#haddmissionno").val()+"</span></div>"+""+"<div style='display:inline-block;width:210px; text-align:right'><span class='paiddate'>Paid Date:</span><span><b>"+pointer.attr('id')+"</b></span></div>" +
 					"<br>" +

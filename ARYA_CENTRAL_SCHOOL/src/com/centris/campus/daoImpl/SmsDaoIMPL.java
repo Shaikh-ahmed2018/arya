@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 
 import com.centris.campus.admin.SendSMS;
 import com.centris.campus.dao.SmsDao;
+import com.centris.campus.forms.SingleSMSForm;
 import com.centris.campus.pojo.ClassPojo;
 import com.centris.campus.pojo.SectionPojo;
 import com.centris.campus.pojo.SubjectPojo;
@@ -518,7 +519,56 @@ public class SmsDaoIMPL implements SmsDao{
 		
 		return searchlist;
 	}
-
+//single sms dited by anu
+	public String singlesms(SingleSMSForm smsvo) {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in SmsDaoIMPL : singlesms  Starting");
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		Connection conn = null;
+		String result_Status = "";
+		int result = 0;
+			try
+			{
+				conn = JDBCConnection.getSeparateConnection();
+				
+				pstmt = conn.prepareStatement(SmsUtilsConstants.SINGLE_SMS);
+				
+				rs = pstmt.executeQuery();
+				while(rs.next())
+				{
+				String mob=rs.getString("mobileno");
+				String msg=rs.getString("singlemsg");
+				pstmt.setString(1,mob);
+				pstmt.setString(2,msg);
+				result = pstmt.executeUpdate();
+				}
+				if (result == 1) {
+			 result_Status = "Message sent successfully";
+			
+			
+			
+		} else {
+			result_Status = "Message sending failed";
+			
+		}
+		
+				
+			}
+			
+			catch (Exception e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			}
+		
+		return result_Status;
+		
+	}
+	
+	
 
 	
 	public String deletehomeworkDao(SmsVo vo) {

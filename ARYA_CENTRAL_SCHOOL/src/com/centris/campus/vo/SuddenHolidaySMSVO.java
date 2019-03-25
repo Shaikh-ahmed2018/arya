@@ -19,9 +19,139 @@ public class SuddenHolidaySMSVO {
 	private int isstudent;
 	private String[] studentid;
 	
+	private String accyearId;
+	private String accyearname;
+	private String streamId;
+	private String streamname;
+	private String classId;
+	//private String classname;
+	private String sectionId;
+	private String sectionname;
+	private String class_and_section;
+	private String locationId;
+	private String locationName;
+	private String studentId;
+	private String admissionNo;
+	private String teachertId;
+	private String teacherName;
+	private String accYear;
+	private String value;
+	private String stream;
 	private String check;
 	private String classname;
 	private String student;
+	private String classdetails;
+	
+	
+	
+	public String getClassdetails() {
+		return classdetails;
+	}
+	public void setClassdetails(String classdetails) {
+		this.classdetails = classdetails;
+	}
+	public String getStream() {
+		return stream;
+	}
+	public void setStream(String stream) {
+		this.stream = stream;
+	}
+	public String getAccyearId() {
+		return accyearId;
+	}
+	public void setAccyearId(String accyearId) {
+		this.accyearId = accyearId;
+	}
+	public String getAccyearname() {
+		return accyearname;
+	}
+	public void setAccyearname(String accyearname) {
+		this.accyearname = accyearname;
+	}
+	public String getStreamId() {
+		return streamId;
+	}
+	public void setStreamId(String streamId) {
+		this.streamId = streamId;
+	}
+	public String getStreamname() {
+		return streamname;
+	}
+	public void setStreamname(String streamname) {
+		this.streamname = streamname;
+	}
+	public String getClassId() {
+		return classId;
+	}
+	public void setClassId(String classId) {
+		this.classId = classId;
+	}
+	public String getSectionId() {
+		return sectionId;
+	}
+	public void setSectionId(String sectionId) {
+		this.sectionId = sectionId;
+	}
+	public String getSectionname() {
+		return sectionname;
+	}
+	public void setSectionname(String sectionname) {
+		this.sectionname = sectionname;
+	}
+	public String getClass_and_section() {
+		return class_and_section;
+	}
+	public void setClass_and_section(String class_and_section) {
+		this.class_and_section = class_and_section;
+	}
+	public String getLocationId() {
+		return locationId;
+	}
+	public void setLocationId(String locationId) {
+		this.locationId = locationId;
+	}
+	public String getLocationName() {
+		return locationName;
+	}
+	public void setLocationName(String locationName) {
+		this.locationName = locationName;
+	}
+	public String getStudentId() {
+		return studentId;
+	}
+	public void setStudentId(String studentId) {
+		this.studentId = studentId;
+	}
+	public String getAdmissionNo() {
+		return admissionNo;
+	}
+	public void setAdmissionNo(String admissionNo) {
+		this.admissionNo = admissionNo;
+	}
+	public String getTeachertId() {
+		return teachertId;
+	}
+	public void setTeachertId(String teachertId) {
+		this.teachertId = teachertId;
+	}
+	public String getTeacherName() {
+		return teacherName;
+	}
+	public void setTeacherName(String teacherName) {
+		this.teacherName = teacherName;
+	}
+	public String getAccYear() {
+		return accYear;
+	}
+	public void setAccYear(String accYear) {
+		this.accYear = accYear;
+	}
+	public String getValue() {
+		return value;
+	}
+	public void setValue(String value) {
+		this.value = value;
+	}
 	public String getCategoryid() {
 		return categoryid;
 	}

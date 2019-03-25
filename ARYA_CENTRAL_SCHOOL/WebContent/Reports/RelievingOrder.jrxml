@@ -47,105 +47,105 @@
 			<staticText>
 				<reportElement x="18" y="40" width="41" height="30" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="14" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Date :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="18" y="147" width="307" height="32" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Sub. :Sub: Relieving]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="76" y="404" width="227" height="32" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Date Of Joining]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="18" y="197" width="105" height="32" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Dear Mr./Mrs/Ms.]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="18" y="272" width="792" height="40" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[We acknowledge receipt of your letter on the subject requesting us to relieve you from the services of the company.]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="18" y="312" width="792" height="45" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Your resignation has been accepted and you are relieved of your duties with effect from ………………………………………………………………………]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="76" y="372" width="227" height="32" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Employee Id]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="76" y="436" width="227" height="32" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Date Of Releiving]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="76" y="468" width="227" height="32" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Designation]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="76" y="500" width="227" height="32" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Last Drawn Salary]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="75" y="532" width="227" height="32" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[PF Number]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="18" y="581" width="792" height="57" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Kindly submit any property, including identity card and any other information of the company under your possession to the nominated person and contact our Accounts Department for settlement of your full and final accounts.]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="18" y="638" width="792" height="45" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[We thank you for your contribution to ………………………………………………………….. and wish you all the best in your future endeavours.]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="18" y="706" width="227" height="37" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Sincerely,]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="18" y="770" width="227" height="34" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[AUTHORISED SIGNATORY]]></text>
 			</staticText>
@@ -159,7 +159,7 @@
 					<rightPen lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="12"/>
+					<font fontName="Calibri" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{empid}]]></textFieldExpression>
 			</textField>
@@ -173,7 +173,7 @@
 					<rightPen lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="12"/>
+					<font fontName="Calibri" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{doj}]]></textFieldExpression>
 			</textField>
@@ -187,7 +187,7 @@
 					<rightPen lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="12"/>
+					<font fontName="Calibri" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
 			</textField>
@@ -201,7 +201,7 @@
 					<rightPen lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="12"/>
+					<font fontName="Calibri" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{salary}]]></textFieldExpression>
 			</textField>
@@ -215,7 +215,7 @@
 					<rightPen lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="12"/>
+					<font fontName="Calibri" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pfnumber}]]></textFieldExpression>
 			</textField>
@@ -229,7 +229,7 @@
 					<rightPen lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="12"/>
+					<font fontName="Calibri" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{AddressLine1}]]></textFieldExpression>
 			</textField>
@@ -243,7 +243,7 @@
 					<rightPen lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="12"/>
+					<font fontName="Calibri" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{currentdate}]]></textFieldExpression>
 			</textField>
@@ -257,7 +257,7 @@
 					<rightPen lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="12"/>
+					<font fontName="Calibri" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{SchoolName}]]></textFieldExpression>
 			</textField>
@@ -271,7 +271,7 @@
 					<rightPen lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="12"/>
+					<font fontName="Calibri" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{teachername1}]]></textFieldExpression>
 			</textField>
@@ -285,7 +285,7 @@
 					<rightPen lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="12"/>
+					<font fontName="Calibri" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{dateofRelieving}]]></textFieldExpression>
 			</textField>
@@ -299,7 +299,7 @@
 					<rightPen lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="12"/>
+					<font fontName="Calibri" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{SchoolName}]]></textFieldExpression>
 			</textField>
@@ -313,7 +313,7 @@
 					<rightPen lineColor="#CCCCCC"/>
 				</box>
 				<textElement>
-					<font fontName="Liberation Sans" size="12"/>
+					<font fontName="Calibri" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{dateofRelieving}]]></textFieldExpression>
 			</textField>

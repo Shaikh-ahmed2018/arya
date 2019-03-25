@@ -60,8 +60,62 @@ public class TransportVo {
 	private String receiptNo;
 	private String mobileNo;
 	private String accyear;
+
+	private String billdate;
+	private String chlnno;
+	private String studentname;
+	private String paymentMode;
+	private String termName;
+	private double amount_paid_so_far;
 	
-	
+	public String getBilldate() {
+		return billdate;
+	}
+
+	public void setBilldate(String billdate) {
+		this.billdate = billdate;
+	}
+
+	public String getChlnno() {
+		return chlnno;
+	}
+
+	public void setChlnno(String chlnno) {
+		this.chlnno = chlnno;
+	}
+
+	public String getStudentname() {
+		return studentname;
+	}
+
+	public void setStudentname(String studentname) {
+		this.studentname = studentname;
+	}
+
+	public String getPaymentMode() {
+		return paymentMode;
+	}
+
+	public void setPaymentMode(String paymentMode) {
+		this.paymentMode = paymentMode;
+	}
+
+	public String getTermName() {
+		return termName;
+	}
+
+	public void setTermName(String termName) {
+		this.termName = termName;
+	}
+
+	public double getAmount_paid_so_far() {
+		return amount_paid_so_far;
+	}
+
+	public void setAmount_paid_so_far(double d) {
+		this.amount_paid_so_far = d;
+	}
+
 	public String getAccyear() {
 		return accyear;
 	}

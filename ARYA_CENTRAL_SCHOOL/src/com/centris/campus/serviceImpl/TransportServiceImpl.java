@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import com.centris.campus.dao.TransportDao;
 import com.centris.campus.daoImpl.CreateExaminationDaoImpl;
 import com.centris.campus.daoImpl.IDGenerator;
+import com.centris.campus.daoImpl.ReportsMenuDaoImpl;
 import com.centris.campus.daoImpl.TransportDaoImpl;
 import com.centris.campus.delegate.TransportBD;
 import com.centris.campus.forms.TransportCategoryForm;
@@ -21,6 +22,7 @@ import com.centris.campus.util.JLogger;
 import com.centris.campus.util.MessageConstants;
 import com.centris.campus.vo.DriverMasterVO;
 import com.centris.campus.vo.DriverMsaterListVo;
+import com.centris.campus.vo.FeeCollectionVo;
 import com.centris.campus.vo.StageMasterVo;
 import com.centris.campus.vo.StudentRegistrationVo;
 import com.centris.campus.vo.TransportVo;
@@ -31,8 +33,12 @@ public class TransportServiceImpl implements TransportService {
 
 	private static final Logger logger = Logger
 			.getLogger(TransportServiceImpl.class);
+	static TransportDaoImpl transportdao;
+	static{
+		transportdao = new TransportDaoImpl();
+	}
 
-	TransportDao transportdao = new TransportDaoImpl();
+	//TransportDao transportdao = new TransportDaoImpl();
 
 	public ArrayList<VehicleDetailsVO> getAllvehicleDetails() {
 
@@ -1171,6 +1177,14 @@ public class TransportServiceImpl implements TransportService {
 				+ " Control in TransportServiceImpl : validateVehicleType  Ending");
 		return vehi_validate;
 	}
+	@Override
+	public ArrayList<TransportVo> getonlinelist(String locationid,
+			String accyear, String classid, String setionid, String paymodeid,
+			String paymenttype,String termId) {
+		
+		return transportdao.getonlinelist(locationid,accyear,classid,setionid,paymodeid,paymenttype,termId);
+	}
+
 
 	public TransportVo gettransportdetailsstudentwise(TransportVo tvo) {
 		// TODO Auto-generated method stub
@@ -1275,7 +1289,13 @@ public class TransportServiceImpl implements TransportService {
 	public ArrayList<TransportVo> getMonthList(String accyear,String loc_id) {
 		return transportdao.getMonthList(accyear,loc_id);
 	}
+	@Override
+	public ArrayList<TransportVo> getFeeCollectionPaymodeReport(
+			String locationid, String accyear, String classid, String setionid,
+			String paymodeid,String paymenttype,String termId) {
 		
+		return transportdao.getFeeCollectionPaymodeReport(locationid,accyear,classid,setionid,paymodeid,paymenttype,termId);
+	}	
 }
 
 

@@ -320,42 +320,42 @@
 			<staticText>
 				<reportElement x="17" y="20" width="524" height="34"/>
 				<textElement textAlignment="Center">
-					<font fontName="Liberation Sans" size="24" isBold="true"/>
+					<font fontName="Calibri" size="24" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ARYA CENTRAL SCHOOL]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="17" y="54" width="524" height="21"/>
 				<textElement textAlignment="Center">
-					<font fontName="Liberation Sans" size="16" isBold="true"/>
+					<font fontName="Calibri" size="16" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ARYAKUMAR ASHRAM]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="17" y="74" width="524" height="22"/>
 				<textElement textAlignment="Center">
-					<font fontName="Liberation Sans" size="16" isBold="false"/>
+					<font fontName="Calibri" size="16" isBold="false"/>
 				</textElement>
 				<text><![CDATA[PATTOM, THIRUVANANTHAPURAM 695 004]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="383" y="0" width="158" height="20"/>
 				<textElement verticalAlignment="Bottom">
-					<font fontName="Liberation Sans" size="10"/>
+					<font fontName="Calibri" size="10"/>
 				</textElement>
 				<text><![CDATA[Reg No:]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="17" y="96" width="524" height="22"/>
 				<textElement textAlignment="Center">
-					<font fontName="Liberation Sans" size="14"/>
+					<font fontName="Calibri" size="14"/>
 				</textElement>
 				<text><![CDATA[Registration form for Class XI]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="17" y="118" width="524" height="22"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="12" isUnderline="true"/>
+					<font fontName="Calibri" size="12" isUnderline="true"/>
 				</textElement>
 				<text><![CDATA[Important : - Read the attached Instruction sheet before filling the Registration Form]]></text>
 			</staticText>
@@ -512,42 +512,42 @@
 			<staticText>
 				<reportElement x="52" y="45" width="152" height="22"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[Mother Tongue]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="52" y="67" width="152" height="35"/>
 				<textElement verticalAlignment="Top">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[Date of Birth  (in Figures & In Words)]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="52" y="103" width="152" height="21"/>
 				<textElement verticalAlignment="Top">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[Place of Birth with State]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="67" y="167" width="137" height="31"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Whether belonging to SC/ST/OBC/OEC]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="52" y="199" width="152" height="21"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[Aadhar Number]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="52" y="220" width="152" height="22"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[Permanent Address]]></text>
 			</staticText>
@@ -568,7 +568,7 @@
 			<staticText>
 				<reportElement x="52" y="264" width="152" height="22"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[Present  Address]]></text>
 			</staticText>
@@ -593,7 +593,7 @@
 			<staticText>
 				<reportElement x="52" y="353" width="152" height="25"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[b) Occupation]]></text>
 			</staticText>
@@ -606,7 +606,7 @@
 			<staticText>
 				<reportElement x="52" y="378" width="152" height="17"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[c) Official Address]]></text>
 			</staticText>
@@ -625,14 +625,14 @@
 			<staticText>
 				<reportElement x="51" y="414" width="152" height="17"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[d) Monthly Income]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="51" y="429" width="152" height="17"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[e) Mobile Phone no.]]></text>
 			</staticText>
@@ -663,21 +663,21 @@
 			<staticText>
 				<reportElement x="66" y="124" width="137" height="21"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[(a) Nationality]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="67" y="145" width="137" height="22"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[(a) Religion & Caste]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="52" y="309" width="152" height="22"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[Parents Details]]></text>
 			</staticText>
@@ -691,56 +691,56 @@
 			<staticText>
 				<reportElement x="52" y="2" width="152" height="20"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[Name of Pupil ]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="52" y="22" width="152" height="22"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[Sex]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="52" y="331" width="152" height="20"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[a)Name]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="54" y="447" width="152" height="26"/>
 				<textElement verticalAlignment="Top">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[Name of qualifying Examination & Board (CLASS X)]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="54" y="474" width="152" height="19"/>
 				<textElement verticalAlignment="Top">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[School Last Attended]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="54" y="493" width="486" height="21"/>
 				<textElement verticalAlignment="Top">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[Marks obtained in the qualifying examination (Attested photocopy to be attached]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="219" y="308" width="133" height="23"/>
 				<textElement verticalAlignment="Top">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[Father:]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="364" y="308" width="132" height="22"/>
 				<textElement verticalAlignment="Top">
-					<font fontName="Liberation Sans"/>
+					<font fontName="Calibri"/>
 				</textElement>
 				<text><![CDATA[Mother:]]></text>
 			</staticText>
@@ -767,21 +767,21 @@
 			<staticText>
 				<reportElement x="107" y="654" width="91" height="18"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[2]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="39" y="617" width="159" height="18"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[2nd Language]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="108" y="708" width="90" height="18"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[5]]></text>
 			</staticText>
@@ -806,14 +806,14 @@
 			<staticText>
 				<reportElement x="345" y="900" width="127" height="18"/>
 				<textElement textAlignment="Justified" verticalAlignment="Bottom">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Signature of Parent / Guradian]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="286" y="782" width="219" height="20"/>
 				<textElement textAlignment="Justified" verticalAlignment="Bottom">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[3……………………………………………………………]]></text>
 			</staticText>
@@ -826,7 +826,7 @@
 			<staticText>
 				<reportElement x="179" y="525" width="165" height="20"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[MARKS OBTAINED]]></text>
 			</staticText>
@@ -851,21 +851,21 @@
 			<staticText>
 				<reportElement x="29" y="826" width="523" height="25"/>
 				<textElement textAlignment="Center" verticalAlignment="Bottom">
-					<font fontName="Liberation Sans" size="12" isBold="false"/>
+					<font fontName="Calibri" size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Cetified that the information furnished above are correct]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="345" y="525" width="161" height="20"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[MAX. MARKS]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="39" y="636" width="159" height="18"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Other subjects:  1]]></text>
 			</staticText>
@@ -878,7 +878,7 @@
 			<staticText>
 				<reportElement x="57" y="782" width="207" height="20"/>
 				<textElement textAlignment="Justified" verticalAlignment="Bottom">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[1…………………………………………………..]]></text>
 			</staticText>
@@ -891,35 +891,35 @@
 			<staticText>
 				<reportElement x="39" y="600" width="159" height="17"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Social Science]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="40" y="764" width="465" height="18"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[14. Group preferred with optional subjects]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="58" y="802" width="207" height="20"/>
 				<textElement verticalAlignment="Bottom">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[2…………………………………………………..]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="107" y="672" width="91" height="18"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[3]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="39" y="546" width="159" height="17"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[English]]></text>
 			</staticText>
@@ -932,35 +932,35 @@
 			<staticText>
 				<reportElement x="39" y="582" width="159" height="18"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Science]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="29" y="525" width="152" height="20"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[SUBJECT]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="39" y="563" width="159" height="18"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Mathematics]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="107" y="690" width="91" height="18"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[4]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="29" y="866" width="91" height="18"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[DATE:]]></text>
 			</staticText>
@@ -979,21 +979,21 @@
 			<staticText>
 				<reportElement x="286" y="802" width="219" height="20"/>
 				<textElement textAlignment="Justified" verticalAlignment="Bottom">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[4……………………………………………………………]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="29" y="900" width="91" height="18"/>
 				<textElement textAlignment="Justified" verticalAlignment="Bottom">
-					<font fontName="Liberation Sans" isBold="false"/>
+					<font fontName="Calibri" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Signature of Pupil]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="29" y="725" width="169" height="21"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" isBold="true"/>
+					<font fontName="Calibri" isBold="true"/>
 				</textElement>
 				<text><![CDATA[TOTAL]]></text>
 			</staticText>

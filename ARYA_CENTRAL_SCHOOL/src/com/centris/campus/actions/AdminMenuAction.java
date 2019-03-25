@@ -213,6 +213,8 @@ public class AdminMenuAction extends DispatchAction {
 */	private static final Logger logger = Logger.getLogger(AdminMenuAction.class);
 
 	private static String ImageName = res.getString("ImageName");
+	private static String SchoolName = res.getString("SchoolName");
+	//private String schoolLocation;
 
 	public ActionForward Home(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
@@ -3793,7 +3795,7 @@ public class AdminMenuAction extends DispatchAction {
 				+ MessageConstants.START_POINT);
 		logger.info(JDate.getTimeString(new Date())
 				+ " Control in AdminMenuAction : suddenholiodayslist : Starting");
-
+		//String schoolLocation = request.getSession(false).getAttribute("current_schoolLocation").toString();
 		try {
 			request.setAttribute(LeftMenusHighlightMessageConstant.SUBMODULE_HIGHLIGHT_NAME, 
 					LeftMenusHighlightMessageConstant.MODULE_INTERACTION_SUDDENHOLIDAYS);
@@ -3801,13 +3803,34 @@ public class AdminMenuAction extends DispatchAction {
 					MessageConstants.BACKOFFICE_SMS);
 			request.setAttribute(MessageConstants.HIGHLIGHT_NAME,
 					MessageConstants.MODULE_SMS);
-			SuddenHolidayListBD holidayListBD = new SuddenHolidayListBD();
+			//ArrayList<ReportMenuVo> accYearList = new ReportsMenuBD().getAccYears();
+			//SuddenHolidayListBD holidayListBD = new SuddenHolidayListBD();
 
-			ArrayList<SuddenHolidaySMSVO> arrayList = new ArrayList<SuddenHolidaySMSVO>();
+			//ArrayList<SuddenHolidaySMSVO> arrayList = new ArrayList<SuddenHolidaySMSVO>();
+			//ArrayList<SuddenHolidaySMSVO> accYearList = new ArrayList<SuddenHolidaySMSVO>();
+			ArrayList<SuddenHolidaySMSVO> accYearList = new SuddenHolidayListBD()
+					. getAccYears();
+			ArrayList<SuddenHolidaySMSVO> streamList = new SuddenHolidayListBD()
+					.getStream();
+		String schoolLocation = null;
+			
+			ArrayList<SuddenHolidaySMSVO> classList = new SuddenHolidayListBD().getStudentClass(schoolLocation);
+			
+			
+			ArrayList<SuddenHolidaySMSVO> locationList = new SuddenHolidayListBD().getlocationList();
+			request.setAttribute("locationList", locationList);
+			  
+			request.setAttribute("AccYearList", accYearList);
 
-			arrayList = holidayListBD.SuddenHolidayList();
+		
 
-			request.setAttribute("holidayList", arrayList);
+			request.setAttribute("StreamList", streamList);
+			
+			request.setAttribute("classList", classList);
+
+		//	arrayList = holidayListBD.SuddenHolidayList();
+
+		//	request.setAttribute("holidayList", arrayList);
 
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
@@ -13209,7 +13232,7 @@ public ActionForward electionList(ActionMapping mapping, ActionForm form,
 			//List<StudentRegistrationVo> list = new StudentRegistrationDelegate().studentFullList(studentId,accYear,locationId);
 			List<StudentRegistrationVo> list = new StudentRegistrationDelegate().getIDCardPhotoSheet(sectionId,classId,accYear,locationId);
 			
-			request.setAttribute("studentSearchList", list);
+			request.setAttribute("", list);
 			
 			/*request.setAttribute("template", accYear+locationId+list.get(0).getStreemcode());*/
 			

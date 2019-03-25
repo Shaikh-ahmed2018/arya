@@ -135,6 +135,48 @@ $(document).ready(function(){
 		
 		$("#pageLoader").hide();
 	});
+	//auto search edited by anu
+	/*$("#searchvalue").autocomplete({
+		source : function(request, response) {
+			//$("#studentIdIntId").val("");
+			
+			$.ajax({
+				url : "studentRegistration.html?method=studentSearchbySibling",
+				data : {
+					searchTerm : request.term
+				},
+				async : false,
+				success : function(data) {
+					var result = $.parseJSON(data);
+					response($.map(	result.jsonResponse,function(item) {
+						return {
+							label : item.studentnamelabel,
+							value : item.studentidlabel,
+						}
+					}));
+				}
+			});
+		},
+		select : function(event, ui) {
+
+			var searchTerm = ui.item.value;
+
+			studentDetails = {
+					'searchTerm' : searchTerm
+			};
+			
+			//paidTermListForStudent(searchTerm);
+			
+			//getStudentListBySection(locationid,accyear,classname,sectionid,sortingby,orderby);
+			$("#searchvalue").val(ui.item.label);
+			$("#studentIdIntId").val(searchTerm);
+
+			return false;
+		}
+	});*/
+	
+	
+	
 
 });
 
@@ -351,11 +393,15 @@ function getStudentListBySection(locationid,accyear,classname,sectionid,sortingb
 
 function searchList(){
 
-	var searchname = $("#searchvalue").val().trim();
+	var searchname = $("#searchvalue").val();
+	
+	//var stdid=$("#studentIdIntId").val();
+	
 	var locationid=$("#locationname").val();
 	var accyear=$("#Acyearid").val();
 	var classname=$("#classname").val();
 	var sectionid=$("#sectionid").val();
+	
 	
 datalist = {
 			
@@ -373,6 +419,7 @@ datalist = {
 			success : function(response) {
 				 
 				var result = $.parseJSON(response);
+				alert(result)
 					$("#allstudent tbody").empty();
 					if(result.SearchList.length>0){
 					for(var i=0;i<result.SearchList.length;i++){

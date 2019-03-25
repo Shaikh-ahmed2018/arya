@@ -6,10 +6,13 @@ import java.util.List;
 import com.centris.campus.forms.TransportCategoryForm;
 import com.centris.campus.forms.TransportForm;
 import com.centris.campus.pojo.TransportPojo;
+import com.centris.campus.service.ReportsMenuService;
 import com.centris.campus.service.TransportService;
 import com.centris.campus.serviceImpl.LocationServiceImpl;
+import com.centris.campus.serviceImpl.ReportsMenuServiceImpl;
 import com.centris.campus.serviceImpl.TransportServiceImpl;
 import com.centris.campus.vo.DriverMsaterListVo;
+import com.centris.campus.vo.FeeCollectionVo;
 import com.centris.campus.vo.LocationVO;
 import com.centris.campus.vo.StageMasterVo;
 import com.centris.campus.vo.StudentRegistrationVo;
@@ -18,8 +21,12 @@ import com.centris.campus.vo.VehicleDetailsVO;
 import com.centris.campus.vo.VehicleTypeVo;
 
 public class TransportBD {
+	static TransportService service;
+	static {
+		service=new TransportServiceImpl();
+	}
 
-	TransportService service = new TransportServiceImpl();
+	//TransportService service = new TransportServiceImpl();
 
 	public ArrayList<VehicleDetailsVO> getAllvehicleDetails() {
 		return service.getAllvehicleDetails();
@@ -339,6 +346,17 @@ public class TransportBD {
 
 	public ArrayList<TransportVo> getMonthList(String accyear, String loc_id) {
 		return service.getMonthList(accyear,loc_id);
+	}
+
+	public static ArrayList<TransportVo> getonlinelist(String locationid, String accyear, String classid,
+			String setionid, String paymodeid, String paymenttype, String termId) {
+		// TODO Auto-generated method stub
+		return service.getonlinelist(locationid,accyear,classid,setionid,paymodeid,paymenttype,termId);
+	}
+	public static ArrayList<TransportVo> getFeeCollectionPaymodeReport(
+			String locationid, String accyear, String classid, String setionid,
+			String paymodeid, String paymenttype, String termId) {
+			return service.getFeeCollectionPaymodeReport(locationid,accyear,classid,setionid,paymodeid,paymenttype,termId);
 	}
 
 }

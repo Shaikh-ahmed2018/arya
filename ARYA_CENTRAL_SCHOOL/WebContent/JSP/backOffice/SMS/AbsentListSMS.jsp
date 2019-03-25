@@ -79,7 +79,7 @@ vertical-align:-28px;
 
 			<p style="margin: 16px 0px;">
 				<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<span
-					id="pageHeading">Absent List Details</span>
+					id="pageHeading">Staff General SMS</span>
 			</p>
 		</div>
 
@@ -129,23 +129,115 @@ vertical-align:-28px;
 				<a data-toggle="collapse" data-parent="#accordion2"
 					href="#collapseOne" style="color: #fff;"><h3
 						class="panel-title" style="color: #767676;">
-						<span class="glyphicon glyphicon-menu-hamburger"></span>&nbsp;&nbsp;Absent List 						
+						<span class="glyphicon glyphicon-menu-hamburger"></span>&nbsp;&nbsp;Staff General SMS						
 					</h3></a>
 
-
-
-				<div class="navbar-right">
-
-					<span id="add" class="buttons" 
-					data-placement="bottom" >Add</span> 
-
-				</div>
 				<script>
 				$(document).ready(function() {
 					$('[data-toggle="tooltip"]').tooltip();
 				});
 			</script>
 			</div>
+			<div class="col-md-6" style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;margin-top: 20px;">
+								 
+								<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;">Academic Year</label>
+									<div class="col-xs-7">
+										<select id="Acyearid" name="accyear" class="form-control" required>
+											<logic:present name="AccYearList">
+												<logic:iterate id="AccYear" name="AccYearList">
+													<option	value="<bean:write name="AccYear" property="accyearId"/>"><bean:write name="AccYear" property="accyearname" /></option>
+												</logic:iterate>
+											</logic:present>
+										</select>
+									</div>
+								</div>
+									
+								
+								<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;"> Class</label>
+									<div class="col-xs-7">
+									
+									<select class="form-control" onkeypress="HideError()" 
+											name="classname" id="classname">
+											<option value="all">ALL</option>
+										</select>
+									</div>
+								</div>
+								
+								<div class="form-group clearfix">
+								
+								<div class="col-xs-9" id="smsid" style="margin-left: 155px;">
+									<input type="radio" value="stud" name="stud" class="sorting" id="stud" checked="checked">Studying
+									<input type="radio" value="tc" name="tc"  class="sorting1" id="tc">TC
+									<input type="radio" value="all" name="all"  class="sorting2" id="all">ALL
+									
+									
+								</div>
+							</div>
+							<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;"> Message</label>
+									<div class="col-xs-7">
+										<textarea  id="Message"name='StudentMessage' class="form-control" style=" width: 100%; height: 7%;"></textarea>
+									
+									</div>
+								</div>
+											
+
+						</div><div class="col-md-6" style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;margin-top: 20px;">
+								 
+								<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;">School Name</label>
+									<div class="col-xs-7">
+										<select id="locationname" name="locationnid" class="form-control" required>
+											<option value="all">ALL</option>
+											<logic:present name="locationList">
+												<logic:iterate id="Location" name="locationList">
+													<option value="<bean:write name="Location" property="locationId"/>"><bean:write name="Location" property="locationName" /></option>
+												</logic:iterate>
+											</logic:present>
+										</select>
+									</div>
+								</div>
+									
+								
+								<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;"> Class</label>
+									<div class="col-xs-7">
+									
+									<select class="form-control" onkeypress="HideError()" 
+											name="classname" id="classname">
+											<option value="all">ALL</option>
+										</select>
+									</div>
+								</div>
+								
+								<div class="form-group clearfix">
+								
+								<div class="col-xs-9" id="smsid" style="margin-left: 155px;">
+									<input type="radio" value="stud" name="stud" class="sorting" id="stud" checked="checked">Studying
+									<input type="radio" value="tc" name="tc"  class="sorting1" id="tc">TC
+									<input type="radio" value="all" name="all"  class="sorting2" id="all">ALL
+									
+									
+								</div>
+							</div>
+							<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;"> Message</label>
+									<div class="col-xs-7">
+										<textarea  id="Message"name='StudentMessage' class="form-control" style=" width: 100%; height: 7%;"></textarea>
+									
+									</div>
+								</div>
+											
+
+						</div>
 			<!-- pop up -->
 
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog"

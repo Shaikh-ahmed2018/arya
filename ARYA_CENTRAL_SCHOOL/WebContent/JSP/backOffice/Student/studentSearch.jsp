@@ -90,7 +90,7 @@ overflow-y:auto;
 							 					<option value="">-----Select-----</option>
 							 					<option value="adm_Form">Registration Form</option>
 							 					<option value="conf_Report">Disciplinary Action</option>
-							 					<option value="id_Card">Single ID Card</option>
+							  					<option value="id_Card">Single ID Card</option>
 							 					<option value="mis_Report">MIS Report</option>
 							 					<!-- <option value="tc">Transfer Certificate</option> -->
 											 </select>
@@ -363,6 +363,7 @@ overflow-y:auto;
 
 									<select class="form-control" onkeypress="HideError()"
 										name="sortingby" id="sortingby">
+										<option>--select--</option>
 										<option value="Alphabetical">Alphabetical Order</option>
 										<option value="Gender">Gender Wise</option>
 										<option value="Admission">Admission No.</option>
@@ -378,7 +379,13 @@ overflow-y:auto;
 									<div class="col-xs-7">
 										<input type="text" class="form-control" id="searchvalue" Placeholder="Search......" onkeypress="handle(event)"
 										value="<logic:present name='SearchList' scope='request' ><bean:write name='SearchList'/></logic:present>">
+										<input type="hidden" id="studentIdIntId" value="" />
 									</div>
+									<!--div class="col-xs-7">
+										<input type="text"  id="studentName"name='SearchList' class="form-control" >
+										<input type="hidden" id="studentIdIntId" value="" />
+									</div-->
+								
 								</div>
 
 							

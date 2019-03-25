@@ -36,28 +36,28 @@ where st.student_id_int=$P{studentname}]]>
 			<staticText>
 				<reportElement x="583" y="117" width="68" height="25" forecolor="#006600"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="14" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="14" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Date : ]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="138" y="192" width="126" height="32" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[This is to certify that]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="83" y="223" width="127" height="32" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[S/o   /  D/o. Thiru]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="602" y="223" width="101" height="32" forecolor="#006600"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[is a Bonfide]]></text>
 			</staticText>
@@ -70,28 +70,28 @@ where st.student_id_int=$P{studentname}]]>
 			<staticText>
 				<reportElement x="83" y="254" width="211" height="32" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[student of our institution in class]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="642" y="254" width="65" height="32" forecolor="#006600"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[during]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="83" y="285" width="127" height="32" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[the acadamic year]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="83" y="316" width="415" height="32" forecolor="#006600"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="13" isBold="false" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="13" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[He / She has paid the tution fee for three terms as mentioned below.]]></text>
 			</staticText>
@@ -116,42 +116,42 @@ where st.student_id_int=$P{studentname}]]>
 			<textField>
 				<reportElement x="264" y="196" width="439" height="20" forecolor="#333333"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="12" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="12" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{StudentName}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="198" y="226" width="433" height="20" forecolor="#333333"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="12" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="12" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ContactName}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="277" y="256" width="384" height="20" forecolor="#333333"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="12" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="12" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ClassName}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="210" y="288" width="493" height="20" forecolor="#333333"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="12" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="12" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{acadamic_year}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd/MM/yyyy">
 				<reportElement x="651" y="117" width="115" height="25"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="12" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="12" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{todaydate}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="9" y="60" width="784" height="24" forecolor="#006600"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="16" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="16" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Arya Kumar Ashram,Pattom,Thiruvananthapuram-695004]]></text>
 			</staticText>
@@ -161,14 +161,14 @@ where st.student_id_int=$P{studentname}]]>
 			<staticText>
 				<reportElement x="339" y="117" width="123" height="30" forecolor="#006600"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="15" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="15" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[CERTIFICATE]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="9" y="15" width="784" height="45" forecolor="#006600"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Liberation Sans" size="24" isBold="true" isPdfEmbedded="true"/>
+					<font fontName="Calibri" size="24" isBold="true" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[Arya Central School]]></text>
 			</staticText>
