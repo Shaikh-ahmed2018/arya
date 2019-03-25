@@ -5,7 +5,7 @@
 <description>description </description>
 
 
--<target name="init" description="--> description">
+<target name="init" description="--> description">
 
 <property name="server.dir" value="D:\D\softwares\apache-tomcat-7.0.47/webapps"/>
 
@@ -22,7 +22,7 @@
 </target>
 
 
--<target name="clean" depends="init">
+<target name="clean" depends="init">
 
 <delete file="${project.dir}"/>
 
@@ -31,13 +31,13 @@
 </target>
 
 
--<target name="copy_files">
+<target name="copy_files">
 
 
--<copy filtering="true" todir="${project.dir}">
+<copy filtering="true" todir="${project.dir}">
 
 
--<fileset dir="">
+<fileset dir="">
 
 <include name="**/*.html*"/>
 
@@ -54,10 +54,10 @@
 </copy>
 
 
--<copy filtering="true" todir="${project.dir}/JS">
+<copy filtering="true" todir="${project.dir}/JS">
 
 
--<fileset dir="js">
+<fileset dir="js">
 
 <include name="**/*.js"/>
 
@@ -76,10 +76,10 @@
 </copy>
 
 
--<copy filtering="true" todir="${project.dir}/JSP">
+<copy filtering="true" todir="${project.dir}/JSP">
 
 
--<fileset dir="js">
+<fileset dir="js">
 
 <include name="**/*.js"/>
 
@@ -98,10 +98,10 @@
 </copy>
 
 
--<copy filtering="true" todir="${project.dir}/CSS">
+<copy filtering="true" todir="${project.dir}/CSS">
 
 
--<fileset dir="css">
+<fileset dir="css">
 
 <include name="**/*.css"/>
 
@@ -120,7 +120,7 @@
 </copy>
 
 
--<copy filtering="true" todir="${project.dir}/PUBLIC">
+<copy filtering="true" todir="${project.dir}/PUBLIC">
 
 
 -<fileset dir="css">
@@ -142,10 +142,10 @@
 </copy>
 
 
--<copy filtering="true" todir="${project.dir}/images">
+<copy filtering="true" todir="${project.dir}/images">
 
 
--<fileset dir="images">
+<fileset dir="images">
 
 <include name="**/*.*"/>
 
@@ -154,10 +154,10 @@
 </copy>
 
 
--<copy filtering="true" todir="${project.dir}/LAYOUT">
+<copy filtering="true" todir="${project.dir}/LAYOUT">
 
 
--<fileset dir="Layout">
+<fileset dir="Layout">
 
 <include name="**/*.jsp"/>
 
@@ -166,7 +166,7 @@
 </copy>
 
 
--<copy filtering="true" todir="${project.dir}">
+<copy filtering="true" todir="${project.dir}">
 
 
 -<fileset dir="">
@@ -178,7 +178,7 @@
 </copy>
 
 
--<copy filtering="true" todir="${project.dir}" id="classpath">
+<copy filtering="true" todir="${project.dir}" id="classpath">
 
 
 -<fileset dir="">
@@ -190,7 +190,7 @@
 </copy>
 
 
--<copy filtering="true" todir="D:\D\softwares\apache-tomcat-7.0.47/webapps/ARYA_CENTRAL_SCHOOL/WEB-INF/classes">
+<copy filtering="true" todir="D:\D\softwares\apache-tomcat-7.0.47/webapps/ARYA_CENTRAL_SCHOOL/WEB-INF/classes">
 
 
 -<fileset dir="D:/D/Dev/ARYA_CENTRAL_SCHOOL/build/classes">
