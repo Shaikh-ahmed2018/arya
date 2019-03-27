@@ -36,7 +36,73 @@ $(document).ready(function(){
 		$("#Dialog").dialog('open');
 		
 	});
-	
+	//
+	jQuery(document).ready(function($) {
+
+		//find <span data-convert="price_convert">50000</span>
+		$('span[data-convert="price_convert"]').each(function() {
+		
+			//rounds a number DOWNWARDS to the nearest integer
+			 var price =Math.floor($(this).html()); 
+		     
+		     var price_str		=	new String(price);
+		     var price_length 	= 	price_str.length;
+		     var price_split  	= 	price_str.split('');
+
+		     if(price_length <= 2 ) {
+			     return true;
+		     } 
+
+		     var word  = '';
+			 var digit = '';
+
+			 switch(price_length) {
+		     	case 3 :
+			     	digit = price_split[0];
+			     	word  = 'Hundred';
+			     	break ;
+		     	case 4 :
+			     	digit = price_split[0];
+			     	word  = 'Thousand';
+			     	break ; 
+		     	case 5 :
+			     	digit = price_split[0]+price_split[1];
+			     	word  = 'Thousand';
+			     	break ;
+		     	case 6 :
+			     	digit = price_split[0];
+			     	word  = 'Lakhs';
+			     	break ; 
+		     	case 7 :
+			     	digit = price_split[0]+price_split[1];
+			     	word  = 'Lakhs';
+			     	break ;
+		     	case 8 :
+			     	digit = price_split[0]+'.'+price_split[1]+price_split[2];
+			     	word  = 'Crores';
+			     	break ; 
+		     	case 9 :
+			     	//alert(price_split[0]+price_split[1]+price_split[3]+price_split[4]);
+			     	digit = price_split[0]+price_split[1]+'.'+price_split[2]+price_split[3];
+			     	word  = 'Crores';
+			     	break ;
+		     	case 10 :
+			     	digit = price_split[0]+price_split[1]+price_split[2]+'.'+price_split[3]+price_split[4];
+			     	word  = 'Crores';
+			     	break ; 
+		     	case 11 :
+			     	digit = price_split[0]+price_split[1]+price_split[2]+price_split[3]+'.'+price_split[4]+price_split[5];
+			     	word  = 'Crores';
+			     	break ;
+			     	
+		     }
+
+		     var value =  ' ₹ '+digit+' '+word;
+		     $(this).html(value); 
+		     
+				});
+			});
+	//
 	$("#Dialog").dialog({
 	    autoOpen  : false,
 	    modal     : true,
@@ -55,7 +121,7 @@ $(document).ready(function(){
 		    	        //Create a new HTML document.
 		    	        frameDoc.document.write('<html><head><title>DIV Contents</title>');
 		    	        //Append the external CSS file.
-		    	      	frameDoc.document.write('<style>div,th,td,input{letter-spacing: normal;outline:none;font-weight:800 !important;border:none !important;font-size:15px !important;font-family:Fake Receipt !important;font-weight:bold;}</style>');
+		    	      	frameDoc.document.write('<style>div,th,td,input{letter-spacing: normal;outline:none;font-weight:400 !important;border:none !important;font-size:14px !important;font-family:Coinage Caps Kruger Gray !important;font-weight:bold;}</style>');
 		    	        frameDoc.document.write('</head><body>');
 		    	      
 		    	        
@@ -514,13 +580,34 @@ function feeCollectionDetailsPrint(pointer){
 					"" +
 					"</tr>");
 			
+			
 			$("#Dialog #printtable").append("<tr>" +
 					
 					"<th style='text-align:left;'>Paid Amount</th>" +
 					"<th style='text-align:right;'><input type='text' class='paidAmount' name='paidAmount' value='"+parseFloat(pointer.attr("name").split(",")[1]).toFixed(2)+"' readonly='readonly' style='text-align:right;width:100px;' /></th>" +
 					"" +
+					
 					"</tr>");
-		
+				$("#Dialog #printtable").append("<tr>" +
+					
+					"<th><hr></th>" +
+					 "<td><hr></td>"+
+					
+					
+					"</tr>");
+				$("#Dialog #printtable").append("<tr>" +
+				
+					"<th style='text-align:left;'>In Words</th>" +
+					"<th style='text-align:right;'>"+inWords(pointer.attr("name").split(",")[1])+"</th>" +
+					"" +
+					"</tr>");
+				$("#Dialog #printtable").append("<tr>" +
+						
+						"<th><hr></th>" +
+						 "<td><hr></td>"+
+						
+						
+						"</tr>");
 				$("#Dialog #printtable tbody").find(".totalAmount").val(parseFloat(totalAmount).toFixed(2));
 				$(".Feeamount").each(function(){
 					$(this).val(parseFloat($(this).val()).toFixed(2));
@@ -529,6 +616,24 @@ function feeCollectionDetailsPrint(pointer){
 		
 	});
 }
+
+var a = ['','one ','two ','three ','four ', 'five ','six ','seven ','eight ','nine ','ten ','eleven ','twelve ','thirteen ','fourteen ','fifteen ','sixteen ','seventeen ','eighteen ','nineteen '];
+var b = ['', '', 'twenty','thirty','forty','fifty', 'sixty','seventy','eighty','ninety'];
+
+function inWords(num){
+	alert(Math.trunc(num));
+    if ((num = Math.trunc(num).toString()).length > 9) return 'overflow';
+    n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+    if (!n) return; var str = '';
+    str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'crore ' : '';
+    str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'lakh ' : '';
+    str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'thousand ' : '';
+    str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'hundred ' : '';
+    str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) + 'only ' : '';
+    alert(str);
+    return str;
+}
+
 function getError(message,id){
 	$("input,select").not(id).css({
 		 "border-color":"#ddd"
