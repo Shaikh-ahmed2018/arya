@@ -2158,11 +2158,14 @@
 	</definition>		
 			
 			
-	<definition name="appraisallist" extends="backOffice_student">		
+	<!--definition name="appraisallist" extends="backOffice_student">		
 		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
 		<put name="body" value="/JSP/backOffice/Student/StudentAppraisalList.jsp"></put>		
+	</definition-->		
+	<definition name="quickAdmission" extends="backOffice_student">		
+		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		
+		<put name="body" value="/JSP/backOffice/Student/quickAdmission.jsp"></put>		
 	</definition>		
-			
 			
 	<definition name="studentappraisal" extends="backOffice_student">		
 		<put name="menu" value="/LAYOUT/backOffice_student_menu.jsp" />		

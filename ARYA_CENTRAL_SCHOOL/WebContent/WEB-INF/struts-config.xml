@@ -396,7 +396,9 @@
 			<forward name="studentprom" path="studentprom" />
 			<forward name="getstudent" path="getstudent" />
 			<forward name="promotionpage" path="promotionpage" />
-			<forward name="appraisallist" path="appraisallist" />
+			<forward name="quickAdmission" path="quickAdmission" />
+			
+			<!--forward name="appraisallist" path="appraisallist" /-->
 			<forward name="studentappraisal" path="studentappraisal" />
 			<forward name="appraisalpage" path="appraisalpage" />
 			<forward name="transfercertificatelist" path="transfercertificatelist" />

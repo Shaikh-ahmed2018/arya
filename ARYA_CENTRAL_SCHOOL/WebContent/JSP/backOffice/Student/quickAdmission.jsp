@@ -34,8 +34,8 @@
 <link href="CSS/newUI/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript" src="JS/common.js"></script>
-<script type="text/javascript"
-	src="JS/backOffice/Student/StudentAppraisalList.js"></script>
+<!--script type="text/javascript"
+	src="JS/backOffice/Student/StudentsAppraisel.js"></script-->
 <style>
 .form-group{
 margin-bottom: 5px;}
@@ -112,7 +112,7 @@ width:190px;
 <body>
 	<div class="col-md-10 col-md-offset-2" id="div-main" style="font-size: 16pt; color: #07aab9; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; border-right: 1px solid #ddd; ">
 		<p>
-				<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<span	id="pageHeading">Student Appraisal</span>
+				<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<span	id="pageHeading">Quick Admission</span>
 			</p>
 		<div id="admissionDialog" style="display: none">
 			<div id="admissionclose" class="accordion-body collapse in">
@@ -207,11 +207,12 @@ width:190px;
 					<div class="panel-heading" role="tab" id="headingOne">
 						
 							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="color: #767676; vertical-align: text-top;"> 
-							<h4 class="panel-title"><i	class="glyphicon glyphicon-menu-hamburger"></i>	&nbsp;&nbsp;Student Appraisal</h4></a>
+							<h4 class="panel-title"><i	class="glyphicon glyphicon-menu-hamburger"></i>	&nbsp;&nbsp;Quick Admission</h4></a>
 						
 
 						 <div class="navbar-right">
-							<span class="buttons" id="addappraisal">Add New</span>
+							<span class="buttons" id="save">Save</span>
+							<span class="buttons" id="back">Back</span>
 							
 						</div> 
 					</div>
@@ -224,49 +225,50 @@ width:190px;
 									<label for="inputPassword" class="control-label col-xs-5"
 										style="text-align: right; line-height: 35px;">School Name</label>
 									<div class="col-xs-7">
-										<select class="form-control" onkeypress="HideError()" tabindex="3"
-											name="schoolLocation" id="schoolLocationId" >
-											<option value=""></option>
-										</select>
-									</div>
-								</div>
-								
-								<div class="form-group clearfix">
-									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;"> Class</label>
-									<div class="col-xs-7">
-									
-										<select id="class" name="classname" class="form-control"
-											required>
-											<option value="%%">All</option>
-
-											<logic:present name="classList">
-
-												<logic:iterate id="ClassName" name="classList">
-
-													<option
-														value="<bean:write name="ClassName" property="classId"/>">
-														<bean:write name="ClassName" property="classname" />
-													</option>
-
+										<select id="locationname" name="locationnid" class="form-control" required>
+											<option value="all">----------Select----------</option>
+											<logic:present name="locationList">
+												<logic:iterate id="Location" name="locationList">
+													<option value="<bean:write name="Location" property="locationId"/>"><bean:write name="Location" property="locationName" /></option>
 												</logic:iterate>
-
 											</logic:present>
 										</select>
 									</div>
 								</div>
 								
-								<div class="form-group clearfix">
+								
+								
+							<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align:right; line-height: 35px;">Search By</label>
+										style="text-align: right; line-height: 35px;"> Class</label>
 									<div class="col-xs-7">
-										<input type="text" name="searchBy" tabindex="1"
-											onkeypress="HideError()" id="searchBy"
-											maxlength="25" class="form-control" 
-											value='<logic:present name="studentSearchList"><bean:write name="studentSearchList" property="studentFirstName"/></logic:present>' />
+									
+									<select class="form-control" onkeypress="HideError()" 
+											name="classname" id="classname">
+											<option value="">----------Select----------</option>
+										</select>
+									
 									</div>
 								</div>
 								
+								<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align:right; line-height: 35px;">Student Name</label>
+									<div class="col-xs-7">
+										<input type="text" name="studname" tabindex="1"
+											onkeypress="HideError()" id="studnameid"
+											 class="form-control"/>
+									</div>
+								</div>
+								<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align:right; line-height: 35px;">Father Name</label>
+									<div class="col-xs-7">
+										<input type="text" name="fathername" tabindex="1"
+											onkeypress="HideError()" id="fathernameid"
+											 class="form-control"/>
+									</div>
+								</div>
 							</div>
 							
 							<div class="col-md-6" style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;margin-top: 10px;">
@@ -274,48 +276,47 @@ width:190px;
 									<label for="inputPassword" class="control-label col-xs-5"
 										style="text-align: right; line-height: 35px;">Academic Year</label>
 									<div class="col-xs-7">
-										<select name="academicYear" onkeypress="HideError()" id="academicYear" class="form-control"></select>
+										<select id="Acyearid" name="accyear" class="form-control" required>
+											<option value="all">----------Select----------</option>
+											<logic:present name="AccYearList">
+												<logic:iterate id="AccYear" name="AccYearList">
+													<option	value="<bean:write name="AccYear" property="accyearId"/>"><bean:write name="AccYear" property="accyearname" /></option>
+												</logic:iterate>
+											</logic:present>
+										</select>
 									</div>
 								</div>
-								
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
 										style="text-align: right; line-height: 35px;">Division</label>
 									<div class="col-xs-7">
-										<select class="form-control" onkeypress="HideError()" tabindex="8"
-											name="" id="">
-											<option value="selected">All</option>
-											<option value="">A</option>
-											<option value="">B</option>
-											<option value="">C</option>
-											<option value="">D</option>
-											<option value="">F</option>
+										<select id="sectionid" name="sectionid" class="form-control" required>
+											<option value="">----------Select----------</option>
 										</select>
 									</div>
 								</div>
-								
-								<p align="center"style="margin-left:17%">
-								<button type="button" class="btn btn-info "
-								id="search" >Search</button>
-								<button type="button" class="btn btn-info "
-								id="Reset" >Reset</button></p>
-								
+							
+								<div class="form-group clearfix start">
+							<label for="inputPassword" class="control-label col-xs-5"
+								id="inputnames" style="text-align: right;">Date Of Admission</label>
+							<div class="col-xs-7">
+								<input type="text" id="startDate"  class="form-control" readonly="readonly" />
 							</div>
-					<table class='table table-striped' id='allstudent' width='100%'>
+						</div>
+							
+							
+							<div class="form-group clearfix start">
+							<label for="inputPassword" class="control-label col-xs-5"
+								id="inputnames" style="text-align: right;">Sex</label>
+							<div class="col-xs-7">
+								<input type="radio" name="gender" value="male" checked> Male
+ 								 <input type="radio" name="gender" value="female"> Female
+							</div>
+						</div>
+						
+								
+					</div>
 					
-				<thead>	
-					<tr><th>Sl.No.</th>
-						<th style="text-align:center; width:15%;">Admission No</th>
-						<th style="text-align:center">Student Name</th>
-						<th style="text-align:center">Roll No.</th>
-						<th style="text-align:center">Class</th>
-						<th style="text-align:center">Division</th>
-						</tr>
-						</thead>
-						<tbody>
-					
-						</tbody>
-						</table>
 							
 						</div>
 					</div>

@@ -12719,6 +12719,68 @@ public ActionForward electionList(ActionMapping mapping, ActionForm form,
 
 		return mapping.findForward(MessageConstants.STUDENTSAPPRAISAL);
 	}
+	//quickadmission
+	
+	public ActionForward quickAdmission(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+					throws Exception {
+
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in AdminMenuAction : StudentAppraisalReport Starting");
+	
+
+			List<StudentRegistrationVo> list = new ArrayList<StudentRegistrationVo>();
+
+			String academic_year = (String) request.getSession(false).getAttribute("current_academicYear");
+
+			String location = (String) request.getSession(false).getAttribute("current_schoolLocation");
+			
+			
+			try {
+				
+				request.setAttribute(MessageConstants.MODULE_NAME,
+						MessageConstants.BACKOFFICE_STUDENT);
+				request.setAttribute(MessageConstants.HIGHLIGHT_NAME,
+						MessageConstants.MODULE_STUDENT);
+				request.setAttribute(LeftMenusHighlightMessageConstant.SUBMODULE_HIGHLIGHT_NAME,
+						LeftMenusHighlightMessageConstant.MODULE_STUDENT_STUDENTAPPRAISAL);
+			
+			
+			if(academic_year == null || academic_year == "" || academic_year.equalsIgnoreCase("")) {
+				academic_year = HelperClass.getCurrentYearID();
+			}
+			
+			ArrayList<ReportMenuVo> locationList = new ReportsMenuBD().getlocationList();
+			request.setAttribute("locationList", locationList);
+
+			ArrayList<ReportMenuVo> accYearList = new ReportsMenuBD().getAccYears();
+			request.setAttribute("AccYearList", accYearList);
+
+			List<ClassPojo> classlist = new StudentTransferCertifivateReportBD().getClassDetails();
+			request.setAttribute("classlist", classlist);
+				
+
+			request.setAttribute("studentList", list);
+
+			request.setAttribute("successMessage", "");
+			request.setAttribute("errorMessage", "");
+
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in AdminMenuAction : StudentAppraisalReport Ending");
+		return mapping.findForward("quickAdmission");
+
+		//return mapping.findForward(MessageConstants.STUDENTSAPPRAISAL);
+	}
 	
 	
 	
