@@ -134,7 +134,7 @@ $(document).ready(function(){
 		    													+"<td>"+result.stuList[i].purpose+"</td>"
 		    													+"</tr>");
 		    											}	
-		    										pagination(20);
+		    										pagination(50);
 		    										$("#allstudent").after("<div class='pagebanner'><select id='show_per_page'><option value='50'>50</option><option value='100'>100</option><option value='200'>200</option><option value='300'>300</option><option value='400'>400</option><option value='500'>500</option></select></div><div class='pagination pagelinks'></div>")
 		    										$("#show_per_page").change(function(){
 		    											pagination($(this).val());
@@ -265,7 +265,7 @@ function getissuedList(){
 				}, 800);
 				return false;
 			});
-			pagination(20);
+			pagination(50);
 			$("#allstudent").after("<div class='pagebanner'><select id='show_per_page'><option value='50'>50</option><option value='100'>100</option><option value='200'>200</option><option value='300'>300</option><option value='400'>400</option><option value='500'>500</option></select></div><div class='pagination pagelinks'></div>")
 			$("#show_per_page").change(function(){
 				pagination($(this).val());

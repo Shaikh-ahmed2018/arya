@@ -10,8 +10,8 @@ $(document).ready(function(){
 $("#allstudent tbody tr td").not("#allstudent tbody tr td:nth-child(10)").click(function(){
 	getClassList();
 	$("#electionCategoryAddDialog").dialog("open"); 
-	$("#categoryName").attr("readonly",true);//for making readonly while updationg
-	$("#priority").attr("readonly",true);//for making readonly for updating
+	
+	
 	var categoryId=$(this).closest("tr").attr("id"); // previously it was var 
 	$("#categoryNameIdHidden").val(categoryId);
 	getUpdateElectionCategory(categoryId);//for carreying data for update page

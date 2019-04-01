@@ -87,7 +87,7 @@ function changeAccYear(){
 				}
 				$(".numberOfItem").empty();
 				$(".numberOfItem").append("No. of Records  "+result.SearchList.length);
-				pagination(20);
+				pagination(100);
 				$("#allstudent tbody tr").click(function(){
 					var student_Id = $( this).find(".studentid").attr("class").split(" ");
 					
@@ -195,7 +195,7 @@ function getStudentList(locationid,accyear,classname){
 					}
 					$(".numberOfItem").empty();
 					$(".numberOfItem").append("No. of Records  "+result.getClassWiseList.length);
-					pagination(20);
+					pagination(100);
 					$("#allstudent tbody tr").click(function(){
 						var student_Id = $( this ).find(".studentid").attr("class").split(" ");
 						
@@ -235,7 +235,7 @@ function getStudentListBySection(locationid,accyear,classname,sectionid){
 					}	
 					$(".numberOfItem").empty();
 					$(".numberOfItem").append("No. of Records  "+result.getSectionWiseList.length);
-					pagination(20);
+					pagination(100);
 					$("#allstudent tbody tr").click(function(){
 						var student_Id = $( this ).find(".studentid").attr("class").split(" ");
 						
@@ -299,7 +299,7 @@ datalist = {
 					*/
 					$(".numberOfItem").empty();
 					$(".numberOfItem").append("No. of Records  "+result.SearchList.length);
-					pagination(20);
+					pagination(100);
 					$("#allstudent tbody tr").click(function(){
 						var student_Id = $( this).find(".studentid").attr("class").split(" ");
 						

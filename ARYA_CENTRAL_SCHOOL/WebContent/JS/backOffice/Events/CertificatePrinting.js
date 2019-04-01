@@ -48,7 +48,7 @@ $(document).ready(function(){
 		        frameDoc.document.write('<link href="CSS/newUI/custome.css" rel="stylesheet">');
 		        frameDoc.document.write('<script type="text/javascript" src="JS/newUI/bootstrap.min.js"></script>');
 		        frameDoc.document.write('<script type="text/javascript" src="JS/backOffice/Events/Resultprinting.js"></script>');
-		        frameDoc.document.write('<style>label{font-size:24px;}.background-template,.houseNamePrint,.studentPrintName,.classNamePrint,.postionPrint,.progNamePrint,.printOnPrint,.printDatePrint{position:absolute;}.studentPrintName{top:370px;left:350px;}.houseNamePrint{top:410px;left:350px;}.classNamePrint{top:460px;left:250px;}.postionPrint{top:510px;left:210px;}.progNamePrint{top:510px;left:570px;}.printOnPrint{top:560px;left:450px;}.printDatePrint{top:660px;left:120px;}</style>');
+		        frameDoc.document.write('<style>label{font-size:24px;}.background-template,.houseNamePrint,.studentPrintName,.classNamePrint,.postionPrint,.progNamePrint,.printOnPrint,.printDatePrint{position:absolute;}.studentPrintName{top:365px;left:450px;}.houseNamePrint{top:410px;left:450px;}.classNamePrint{top:460px;left:470px;}.postionPrint{top:510px;left:250px;}.progNamePrint{top:510px;left:650px;}.printOnPrint{top:560px;left:490px;}.printDatePrint{top:660px;left:120px;}</style>');
 		        frameDoc.document.write('</head><body>');
 		      
 		        

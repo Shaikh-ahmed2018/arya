@@ -46,7 +46,7 @@ $(document).ready(function(){
 		$("#eventNameList").change(function(){
 			getCategoryName();
 			getProgramNameByCategory();
-		
+			
 		});
 		$("#categoryNameList").change(function(){
 			getProgramNameByCategory();

@@ -144,8 +144,6 @@ border:2px solid #cccccc !important;
 
 				
 			</div>
-			
-			
 			</section>
 				
 			</logic:iterate>

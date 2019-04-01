@@ -3516,12 +3516,6 @@ public class StudentRegistrationAction extends DispatchAction {
 			String classname = request.getParameter("classId");
 			String sectionid = request.getParameter("sectionid");
 
-			if(classname==null || classname.equalsIgnoreCase("") || classname.equalsIgnoreCase("all")) {
-				classname="%%";
-			}
-			if(sectionid==null || sectionid.equalsIgnoreCase("") || sectionid.equalsIgnoreCase("all")) {
-				sectionid="%%";
-			}
 			String searchTerm = request.getParameter("searchname".trim());
 
 			list = new StudentRegistrationDaoImpl().getAllStudentPromotionClassSearchDetails(accyear, locationid, classname, sectionid, searchTerm);

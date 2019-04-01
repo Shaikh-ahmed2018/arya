@@ -164,7 +164,7 @@ $(document).ready(function(){
 			}
 		}
 	});
-	pagination(20);
+	pagination(100);
 });
 
 function addHouse(housename,locid,accid){

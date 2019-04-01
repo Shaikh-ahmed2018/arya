@@ -621,7 +621,7 @@ var a = ['','one ','two ','three ','four ', 'five ','six ','seven ','eight ','ni
 var b = ['', '', 'twenty','thirty','forty','fifty', 'sixty','seventy','eighty','ninety'];
 
 function inWords(num){
-	alert(Math.trunc(num));
+	
     if ((num = Math.trunc(num).toString()).length > 9) return 'overflow';
     n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
     if (!n) return; var str = '';

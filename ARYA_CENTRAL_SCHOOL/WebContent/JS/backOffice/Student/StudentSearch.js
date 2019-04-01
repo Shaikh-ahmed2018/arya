@@ -334,7 +334,7 @@ function getStudentList(locationid,accyear,classname){
 						//window.location.href="adminMenu.html?method=individualStudentSearch&studentId="+student_Id[0]+"&accyear="+student_Id[1]+"&locationId="+student_Id[2];
 					
 					});
-					pagination(20);
+					pagination(100);
 			}
 		});
 	}
@@ -386,7 +386,7 @@ function getStudentListBySection(locationid,accyear,classname,sectionid,sortingb
 						//window.location.href="adminMenu.html?method=individualStudentSearch&studentId="+student_Id[0]+"&accyear="+student_Id[1]+"&locationId="+student_Id[2];
 					
 					});	
-					pagination(20);
+					pagination(100);
 			}
 		});
 	}
@@ -446,7 +446,7 @@ datalist = {
 					
 					});
 					
-					pagination(20);
+					pagination(100);
 			}
 		});
 }

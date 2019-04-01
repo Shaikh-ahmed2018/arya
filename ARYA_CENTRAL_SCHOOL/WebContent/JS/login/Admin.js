@@ -67,7 +67,7 @@ $(document).ready(function() {
 		$("#Acyearid").find("option").not("option[value="+$("#hacademicyaer").val()+"],option[value='']").remove();
 	}
 
-	pagination(20);
+	pagination(100);
 	$("#show_per_page").change(function(){
 		pagination($(this).val());
 	});

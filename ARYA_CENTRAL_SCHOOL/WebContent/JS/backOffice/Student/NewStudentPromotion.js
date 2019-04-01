@@ -61,32 +61,6 @@ $(document).ready(function() {
 				}, 300);
 
 				flag= false;
-			}else if(classid == null || classid == "" || classid == "all" || classid == "All" ){
-				$(".errormessagediv").show();
-				$(".validateTips").text("Field Required Class.");
-				$("#classname").focus();
-				document.getElementById("classname").style.border = "1px solid #AF2C2C";
-				document.getElementById("classname").style.backgroundColor = "#FFF7F7";
-				setTimeout(function() {
-					$('#errorhover').fadeOut();
-					document.getElementById("classname").style.border = "1px solid #ccc";
-					document.getElementById("classname").style.backgroundColor = "#fff";
-				}, 300);
-
-				flag= false;
-			}else if(sectionid == null || sectionid == "" || sectionid == "all" || sectionid == "All"){
-				$(".errormessagediv").show();
-				$(".validateTips").text("Field Required Division.");
-				$("#sectionid").focus();
-				document.getElementById("sectionid").style.border = "1px solid #AF2C2C";
-				document.getElementById("sectionid").style.backgroundColor = "#FFF7F7";
-				setTimeout(function() {
-					$('#errorhover').fadeOut();
-					document.getElementById("sectionid").style.border = "1px solid #ccc";
-					document.getElementById("sectionid").style.backgroundColor = "#fff";
-				}, 300);
-
-				flag= false;
 			}else if(searchval == null || searchval == ""){
 				$(".errormessagediv").show();
 				$(".validateTips").text("Field Required Search By.");
@@ -404,6 +378,10 @@ function getClassSection(columnValue, locationId,sectionname) {
 }
 
 function getClassSpecilization(columnValue,locationId){
+
+if(columnValue=="CCD13"){
+columnValue="CCD14";
+}
 	var data = {
 			"classId" : columnValue,
 			"locationId":locationId,

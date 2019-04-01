@@ -1,29 +1,45 @@
 $(document).ready(function(){	
 	
-	
 	getissuedList();
-	
 	$("#allstudent tbody tr").click(function(e) {
 		e.preventDefault();
 		$('html, body').animate({
 			scrollTop : 0
 		}, 800);
+		return false;
 	});
-	
 	
 	$("#reset").hide();
 	$("#reset").click(function(){
-		window.location.href ="studentcertificate.html?method=conductCertificate&locationid="+ $("#hiddenlocationid").val()
+		window.location.href ="studentcertificate.html?method=ageCertificate&locationid="+ $("#hiddenlocationid").val()
 		+"&accyear="+$("#hiddenaccyearid").val()+"&classid="+$("#hiddenclassid").val()+"&sectionid="+$("#hiddensectionid").val()+"&stuid="+$("#hiddenstuid").val();
 	});
 	
-	 $("#allstudent tbody tr").click(function(){
+	$(".studenttable tbody tr").click(function(){
 		 agecetiid = $(this).find(".ageid").attr("id");
-			displaytabledata(agecetiid);
+		 displaytabledata(agecetiid);
 	});
 	
-	
 	$("#print").click(function(){
+		
+		/*window.location.href = "studentcertificate.html?method=AgeCertificatePDF";
+		datalist={
+			"accyear" :	$("#accyearname").val(),
+			"stuname" : $("#stuname").val()
+		}
+		 $.ajax({
+				type : "POST",
+				url : "studentcertificate.html?method=AgeCertificatePDF",
+				data : datalist,
+				
+				success : function(data){
+					var result = $.parseJSON(data);
+					
+					if(result.status == "true"){
+						alert();
+					}
+				}
+		});*/
 		 singleprint();
 	});
 	$("#print").hide();
@@ -37,13 +53,12 @@ $(document).ready(function(){
 				"stuname":$("#hiddenstuid").val(),
 				"admissionno" :$("#admissionno").val(),
 				"fathername" :$("#fathername").val(),
+				"dob" : $("#dob").val(),
 				"purpose":$("#purpose").val(),
 				"otherinfo":$("#otherinfo").val(),
 				"studentstatus":$("#studentstatus").val(),
 				"motherName":$("#motherName").val(),
-				"conductNo" : $("#conductno").val(),
-				"conduct" : $("#conduct").val()
-				
+				"dobwords" :$("#dobwords").val()
 		};
 		
 		if($("#purpose").val() == "" || $("#purpose").val() == undefined){
@@ -53,38 +68,25 @@ $(document).ready(function(){
 				$('.errormessagediv').fadeOut();
 			}, 3000);
 		}
-		else if($("#conductno").val() == "" || $("#conductno").val() == undefined){
-			$(".errormessagediv").show();
-			$(".validateTips").text("Field Required - Conduct No");
-			setTimeout(function() {
-				$('.errormessagediv').fadeOut();
-			}, 3000);
-		}else if($("#conduct").val() == "" || $("#conduct").val() == undefined){
-			$(".errormessagediv").show();
-			$(".validateTips").text("Field Required - Conduct");
-			setTimeout(function() {
-				$('.errormessagediv').fadeOut();
-			}, 3000);
-		}
 		else{
-			$("#dialog").dialog("open");
+			 $("#dialog").dialog("open");
 		}
+		
 	});
 		$("#dialog").dialog({
 			autoOpen  : false,
 		    modal     : true,
-		    title     : "Conduct Certificate Details",
+		    title     : "Age Certificate Details",
 		    buttons   : {
 		    	"Save": {
 		    		text: 'Yes',
 		    		 click: function() {
 		    			 	$("#save").hide();
 		    				$("#print").show();
+		    				
 		    				$('input[type=text]').attr('readonly','true');
 		    				document.getElementById("purpose").style.backgroundColor = "#FFF";
 		    				document.getElementById("otherinfo").style.backgroundColor = "#FFF";
-		    				document.getElementById("conductno").style.backgroundColor = "#FFF";
-		    				document.getElementById("conduct").style.backgroundColor = "#FFF";
 		    			 datalist ={
 		    						"accyear" :$("#hiddenaccyearid").val(),
 		    						"locid" : $("#hiddenlocationid").val(),
@@ -93,16 +95,16 @@ $(document).ready(function(){
 		    						"stuname":$("#hiddenstuid").val(),
 		    						"admissionno" :$("#admissionno").val(),
 		    						"fathername" :$("#fathername").val(),
+		    						"dob" : $("#dob").val(),
 		    						"purpose":$("#purpose").val(),
 		    						"otherinfo":$("#otherinfo").val(),
 		    						"studentstatus":$("#studentstatus").val(),
 		    						"motherName":$("#motherName").val(),
-		    						"conductNo" : $("#conductno").val(),
-		    						"conduct" : $("#conduct").val()
+		    						"dobwords" :$("#dobwords").val()
 		    				};
 		    			 $.ajax({
 		    					type : "POST",
-		    					url : "studentcertificate.html?method=saveCounductedCertificateData",
+		    					url : "studentcertificate.html?method=saveAgeCertificateData",
 		    					data : datalist,
 		    					async : false,
 		    					success : function(data){
@@ -112,9 +114,10 @@ $(document).ready(function(){
 		    							$(".validateTips").text("Record Saved Successfully...");
 		    							setTimeout(function() {
 		    								$('.successmessagediv').fadeOut();
+		    								getissuedList()
 		    								$.ajax({
 		    									type : "POST",
-		    									url : "studentcertificate.html?method=getconductissueddetails",
+		    									url : "studentcertificate.html?method=getissueddetails",
 		    									data : datalist,
 		    									async : false,
 		    									success : function(data){
@@ -122,7 +125,7 @@ $(document).ready(function(){
 		    										$("#issued").show();
 		    										$("#heading").show();
 		    										$("#certificatetable").empty();
-		    										$("#certificatetable").append("<table class='table' id='allstudent' width='100%'" +">"
+		    										$("#certificatetable").append("<table class='table studenttable' id='allstudent' width='100%'" +">"
 		    												+"<center><tr><th>SI No</th>"+
 		    												"<th>Entry Date</th>" +
 		    												"<th>Purpose</th>" +
@@ -131,22 +134,22 @@ $(document).ready(function(){
 		    										);
 		    										for(var i=0;i<result.stuList.length;i++){
 		    											$("#allstudent tbody").append("<tr>"
-		    													+"<td class ='ageid' id='"+result.stuList[i].agecertid+"'>"+result.stuList[i].slno+"</td>" 
+		    													+"<td class='ageid' id='"+result.stuList[i].agecertid+"'>"+result.stuList[i].slno+"</td>" 
 		    													+"<td>"+result.stuList[i].entryDate+"</td>"
 		    													+"<td>"+result.stuList[i].purpose+"</td>"
 		    													+"</tr>");
 		    											}	
-		    										pagination(50);
+		    										pagination(20);
 		    										$("#allstudent").after("<div class='pagebanner'><select id='show_per_page'><option value='50'>50</option><option value='100'>100</option><option value='200'>200</option><option value='300'>300</option><option value='400'>400</option><option value='500'>500</option></select></div><div class='pagination pagelinks'></div>")
 		    										$("#show_per_page").change(function(){
 		    											pagination($(this).val());
 		    										});
 		    									}
 		    								});
-		    								 $("#allstudent tbody tr").click(function(){
-		    									 agecetiid = $(this).find(".ageid").attr("id");
-		    										displaytabledata(agecetiid);
-		    								});
+		    								 $(".studenttable tbody tr").click(function(){
+		    									  agecetiid = $(this).find(".ageid").attr("id");
+		    										displaytabledata(agecetiid)
+		    									});
 		    								 $("#allstudent tbody tr").click(function(e) {
 		    										e.preventDefault();
 		    										$('html, body').animate({
@@ -166,60 +169,8 @@ $(document).ready(function(){
 		    	}
 		    	}
 		    });
-
 });
-function displaytabledata(agecetiid){
 
-	var stuid = $("#hiddenstuid").val();
-	var selection = "courseconduct";
-	$("#save").hide();
-	$("#print").show();
-	$("#reset").show();
-	datalist = {
-			"stuid" : $("#hiddenstuid").val(),
-			"agecetiid" : agecetiid,
-			"selection":selection
-	};
-	$('input[type=text]').attr('readonly','true');
-	document.getElementById("purpose").style.backgroundColor = "#FFF";
-	document.getElementById("otherinfo").style.backgroundColor = "#FFF";
-	document.getElementById("conductno").style.backgroundColor = "#FFF";
-	document.getElementById("conduct").style.backgroundColor = "#FFF";
-	$.ajax({
-		
-			type : "POST",
-			url : "studentcertificate.html?method=displayconductdetails",
-			data : datalist,
-			async : false,
-			success : function(data){
-				var result = $.parseJSON(data);
-					
-				
-				for(i=0;i<result.stuList.length;i++){
-					$("#admissionno").val(result.stuList[i].admissionno);
-					$("#accyearname").val(result.stuList[i].accyear);
-					$("#schoolName").val(result.stuList[i].locname);
-					$("#stuname").val(result.stuList[i].stuname);
-					$("#purpose").val(result.stuList[i].purpose);
-					$("#classname").val(result.stuList[i].classname);
-					$("#fathername").val(result.stuList[i].fathername);
-					$("#otherinfo").val(result.stuList[i].otherinfo);
-					$("#studentstatus").val(result.stuList[i].studentstatus);
-					$("#sectionname").val(result.stuList[i].sectionname);		
-					$("#motherName").val(result.stuList[i].motherName);		
-					$("#conductno").val(result.stuList[i].conductno);
-					$("#conduct").val(result.stuList[i].conduct);
-				}
-				$("#allstudent tbody tr").click(function(e) {
-					e.preventDefault();
-					$('html, body').animate({
-						scrollTop : 0
-					}, 800);
-					return false;
-				});
-			}
-	});
-}
 function getissuedList(){
 	
 	datalist ={
@@ -231,7 +182,7 @@ function getissuedList(){
 	}
 	$.ajax({
 		type : "POST",
-		url : "studentcertificate.html?method=getconductissueddetails",
+		url : "studentcertificate.html?method=getissueddetails",
 		data : datalist,
 		async : false,
 		success : function(data){
@@ -244,7 +195,7 @@ function getissuedList(){
 			}
 			else{
 				
-			$("#certificatetable").append("<table class='table' id='allstudent' width='100%'" +">"
+			$("#certificatetable").append("<table class='table studenttable' id='allstudent' width='100%'" +">"
 					+"<center><tr><th>SI No</th>"+
 					"<th>Entry Date</th>" +
 					"<th>Purpose</th>" +
@@ -266,12 +217,11 @@ function getissuedList(){
 				}, 800);
 				return false;
 			});
-			pagination(50);
+			pagination(20);
 			$("#allstudent").after("<div class='pagebanner'><select id='show_per_page'><option value='50'>50</option><option value='100'>100</option><option value='200'>200</option><option value='300'>300</option><option value='400'>400</option><option value='500'>500</option></select></div><div class='pagination pagelinks'></div>")
 			$("#show_per_page").change(function(){
 				pagination($(this).val());
 			});
-			
 		}
 		}
 	});
@@ -280,7 +230,8 @@ function getissuedList(){
 function displaytabledata(agecetiid){
 
 	var stuid = $("#hiddenstuid").val();
-	var selection = "conduct";
+	
+	var selection = "age";
 	$("#save").hide();
 	$("#print").show();
 	$("#reset").show();
@@ -292,12 +243,10 @@ function displaytabledata(agecetiid){
 	$('input[type=text]').attr('readonly','true');
 	document.getElementById("purpose").style.backgroundColor = "#FFF";
 	document.getElementById("otherinfo").style.backgroundColor = "#FFF";
-	document.getElementById("conductno").style.backgroundColor = "#FFF";
-	document.getElementById("conduct").style.backgroundColor = "#FFF";
 	$.ajax({
 		
 			type : "POST",
-			url : "studentcertificate.html?method=displayconductdetails",
+			url : "studentcertificate.html?method=displayageissueddetails",
 			data : datalist,
 			async : false,
 			success : function(data){
@@ -317,14 +266,21 @@ function displaytabledata(agecetiid){
 					$("#studentstatus").val(result.stuList[i].studentstatus);
 					$("#sectionname").val(result.stuList[i].sectionname);		
 					$("#motherName").val(result.stuList[i].motherName);		
-					$("#dobwords").val(result.stuList[i].purpose);	
-					$("#conductno").val(result.stuList[i].conductno);
-					$("#conduct").val(result.stuList[i].conduct);
+					$("#dobwords").val();		 
+					$("#imageurl").attr('src',result.stuList[i].imgurl)
 				}
+				$("#allstudent tbody tr").click(function(e) {
+					e.preventDefault();
+					$('html, body').animate({
+						scrollTop : 0
+					}, 800);
+					return false;
+				});
 			}
 	});
 
 }
+
 
 function pagination(list) {
 
@@ -409,21 +365,20 @@ function singleprint(){
 	
 	var stuname = $("#stuname").val();
 	var fathername = $("#fathername").val();
-	var motherName = $("#motherName").val();
 	var accyear = $("#accyearname").val();
 	var school=$("#schoolName").val();
 	var classname= $("#classname").val()+" - "+$("#sectionname").val();
 	var dob = $("#dob").val();
 	var gender= $("#hiddenstugender").val();
-	
+	var hiddenadd = $("#hiddenadd").val();
 	if(gender == "Male"){
 		heading = "Kumar";
 		rel="son"
-			rel1="His"
+		rel1 = "His"	
 	}else{
 		heading = "Kumari";
 		rel="daughter"
-			rel1="Her"
+		rel1="Her"
 	}
 	
 var frame1 = $('<iframe />');
@@ -439,16 +394,17 @@ frameDoc.document.write('<link rel="stylesheet" href="JQUERY/development-bundle/
 frameDoc.document.write('<link href="CSS/newUI/bootstrap.min.css" rel="stylesheet">');
 frameDoc.document.write('<link href="CSS/newUI/modern-business.css" rel="stylesheet">');
 frameDoc.document.write('<link href="CSS/Certificates/ageCertificate.css" rel="stylesheet">');
-frameDoc.document.write('<style>#wrap p{font-size:16px;line-height:1.5;margin:0 !important;}#wrap{width:80%;margin:auto;}</style>');
+frameDoc.document.write('<style>#wrap p{font-size:16px;line-height:2;margin:0 !important;}#wrap{width:80%;margin:auto;}</style>');
 frameDoc.document.write('</head><body>');
 
 //Append the DIV contents.
-frameDoc.document.write('<div id="wrap">'+'<table align="center" style="margin-top:100px;"><tr><td><h3 class="age" style="margin-bottom:100px;">COURSE CERTIFICATE</h3></td></tr>'+
-		'<tr><td><p>This is to certify that&nbsp'+heading+'&nbsp&nbsp<u>&nbsp&nbsp'+stuname+'&nbsp&nbsp</u>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+rel+'&nbspof</p></td></tr>'+
-		'<tr><td><p>Shri/Smt &nbsp&nbsp<u>&nbsp&nbsp'+fathername+'&nbsp'+motherName+'&nbsp&nbsp</u>&nbsp&nbspis a bonafied student of this school</p></td></tr>'+
-		'<tr><td><p>studying in std&nbsp&nbsp<u>&nbsp&nbsp'+classname+'&nbsp&nbsp</u>for the ICSC/ISC/SSLC/HSC course during the academic year&nbsp&nbsp<u>&nbsp&nbsp'+accyear +'&nbsp&nbsp</u>&nbsp.'+rel1+'&nbspcharacter and conduct</p></td></tr><tr><td><p>during her study in this school have been.</p></td></tr></table>'+
-		'<table width="100%" style="margin-top:100px;"><tr><td><h5 align="left">Date</h5></td><td><h5 align="center">Seal</h5></td><td><h5 align="right">Principal</h5></td></tr></table>'+
-'</div>');
+
+frameDoc.document.write('<div id="wrap">'+'<table align="center" style="margin-top:100px;"><tr><td><h3 class="age">AGE CERTIFICATE</h3></td></tr>'+
+		'<tr><td><p>This is to certify that&nbsp'+heading+'&nbsp&nbsp<span style="font-weight:900;">&nbsp&nbsp'+stuname+'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span> '+rel+' of</p></td></tr>'+
+		'<tr><td><p>Shri/Smt<span style="font-weight:900;">&nbsp&nbsp'+fathername+'&nbsp'+hiddenadd+'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>'+
+		' is a bonafied student of this school studying class&nbsp&nbsp<span style="font-weight:900;">&nbsp&nbsp'+classname+'&nbsp&nbsp</span> during the academic year&nbsp&nbsp<span style="font-weight:900;">&nbsp&nbsp'+accyear +'&nbsp&nbsp</span>&nbsp.'+rel1+'&nbspdate of birth as per the school admission register is&nbsp&nbsp<span style="font-weight:900;">&nbsp&nbsp'+dob+'&nbsp&nbsp</span></p></td></tr></table>'+
+		'<table width="100%" style="margin-top:100px;"><tr><td align="left"><h5>Seal</h5></td><td></td><td  align="right"><h5>Principal</h5></td></tr>'+
+'</table></div>');
 frameDoc.document.write('</body></html>');
 frameDoc.document.close();
 setTimeout(function () {

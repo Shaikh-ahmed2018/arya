@@ -204,7 +204,7 @@ function getStudentsDetails(pointer1,pointer2){
 				$("#allstudent").after("<div class='pagebanner'><select id='show_per_page'><option value='50'>50</option><option value='100'>100</option><option value='200'>200</option><option value='300'>300</option><option value='400'>400</option><option value='500'>500</option></select><span class='numberOfItem'></span></div><div class='pagination pagelinks'></div>");
 				$(".numberOfItem").empty();
 				$(".numberOfItem").append("No. of Records  "+result.stuList.length);
-				pagination(20);
+				pagination(50);
 				$("#show_per_page").change(function(){
 					pagination($(this).val());
 				});
@@ -259,7 +259,7 @@ function getStudentsByClass(pointer1,pointer2,classid){
 				$("#allstudent").after("<div class='pagebanner'><select id='show_per_page'><option value='50'>50</option><option value='100'>100</option><option value='200'>200</option><option value='300'>300</option><option value='400'>400</option><option value='500'>500</option></select><span class='numberOfItem'></span></div><div class='pagination pagelinks'></div>");
 				$(".numberOfItem").empty();
 				$(".numberOfItem").append("No. of Records  "+result.getClassWiseList.length);
-				pagination(20);
+				pagination(50);
 				$("#show_per_page").change(function(){
 					pagination($(this).val());
 				});
@@ -375,7 +375,7 @@ function getStudentListBySection(locationid,accyear,classname,sectionid){
 					$("#allstudent").after("<div class='pagebanner'><select id='show_per_page'><option value='50'>50</option><option value='100'>100</option><option value='200'>200</option><option value='300'>300</option><option value='400'>400</option><option value='500'>500</option></select><span class='numberOfItem'></span></div><div class='pagination pagelinks'></div>");
 					$(".numberOfItem").empty();
 					$(".numberOfItem").append("No. of Records  "+result.getSectionWiseList.length);
-					pagination(20);
+					pagination(50);
 					$("#show_per_page").change(function(){
 						pagination($(this).val());
 					});
@@ -447,7 +447,7 @@ datalist = {
 					$("#allstudent").after("<div class='pagebanner'><select id='show_per_page'><option value='50'>50</option><option value='100'>100</option><option value='200'>200</option><option value='300'>300</option><option value='400'>400</option><option value='500'>500</option></select><span calss='numberOfItem'></span></div><div class='pagination pagelinks'></div>");
 					$(".numberOfItem").empty();
 					$(".numberOfItem").append("No. of Records  "+result.SearchList.length);
-					pagination(20);
+					pagination(50);
 					$("#show_per_page").change(function(){
 						pagination($(this).val());
 					});
