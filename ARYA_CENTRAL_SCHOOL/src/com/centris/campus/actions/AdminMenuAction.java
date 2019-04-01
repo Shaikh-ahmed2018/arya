@@ -12761,9 +12761,14 @@ public ActionForward electionList(ActionMapping mapping, ActionForm form,
 
 			List<ClassPojo> classlist = new StudentTransferCertifivateReportBD().getClassDetails();
 			request.setAttribute("classlist", classlist);
-				
+			
+			StudentRegistrationVo registrationVo1 = new StudentRegistrationVo();
+			ParentRequiresAppointmentDELEGATE obj = new ParentRequiresAppointmentDELEGATE();
+			
 
-			request.setAttribute("studentList", list);
+			request.setAttribute("studentSearchList", registrationVo1);
+
+			//request.setAttribute("studentList", list);
 
 			request.setAttribute("successMessage", "");
 			request.setAttribute("errorMessage", "");
@@ -12777,7 +12782,7 @@ public ActionForward electionList(ActionMapping mapping, ActionForm form,
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
 				+ " Control in AdminMenuAction : StudentAppraisalReport Ending");
-		return mapping.findForward("quickAdmission");
+		return mapping.findForward(MessageConstants.QUICK_ADMISSION);
 
 		//return mapping.findForward(MessageConstants.STUDENTSAPPRAISAL);
 	}

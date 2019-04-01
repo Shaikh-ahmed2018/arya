@@ -74,6 +74,7 @@ public class MessageConstants {
 
 	public static final String TERM_LIST = "termList";
 	public static final String ADD_STUDENT = "addStudent";
+	public static final String QUICK_ADMISSION="quickAdmission";
 	public static final String timetable = "timetable";
 	
 

@@ -143,8 +143,7 @@ $(document)
 					$("#deleteProfile").hide();
 					$("#deleteIDProof").hide();
 					
-					$("#save")
-							.click(
+					$("#save").click(
 									function() {
 										
 										

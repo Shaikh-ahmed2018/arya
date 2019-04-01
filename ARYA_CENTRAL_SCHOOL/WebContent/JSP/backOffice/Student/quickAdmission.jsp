@@ -34,8 +34,8 @@
 <link href="CSS/newUI/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript" src="JS/common.js"></script>
-<!--script type="text/javascript"
-	src="JS/backOffice/Student/StudentsAppraisel.js"></script-->
+<script type="text/javascript"
+	src="JS/backOffice/Student/quickAdmission.js"></script>
 <style>
 .form-group{
 margin-bottom: 5px;}
@@ -211,7 +211,7 @@ width:190px;
 						
 
 						 <div class="navbar-right">
-							<span class="buttons" id="save">Save</span>
+							<span class="buttons"  id="save">Save</span>
 							<span class="buttons" id="back">Back</span>
 							
 						</div> 
@@ -309,7 +309,7 @@ width:190px;
 							<label for="inputPassword" class="control-label col-xs-5"
 								id="inputnames" style="text-align: right;">Sex</label>
 							<div class="col-xs-7">
-								<input type="radio" name="gender" value="male" checked> Male
+								<input type="radio" name="gender" value="male"> Male
  								 <input type="radio" name="gender" value="female"> Female
 							</div>
 						</div>

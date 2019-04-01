@@ -170,7 +170,6 @@ $(document).ready(function() {
 	$("#schemeofstudyId").change(function() {
 		if($('#schemeofstudyId').val() == "Other"){
 			$("#hiddenanyotherboard").show();
-		}else{
 			$("#hiddenanyotherboard").hide();
 		}
 	});

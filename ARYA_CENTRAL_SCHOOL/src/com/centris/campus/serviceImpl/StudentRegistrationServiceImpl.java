@@ -72,7 +72,7 @@ public class StudentRegistrationServiceImpl implements
 		return new StudentRegistrationDaoImpl().saveStudentRegistration(studentRegistrationForm);
 	}
 
-	@Override
+	@Override   
 	public List<StudentRegistrationVo> studentSearch(
 			StudentRegistrationVo studentRegistrationVo) {
 		logger.setLevel(Level.DEBUG);

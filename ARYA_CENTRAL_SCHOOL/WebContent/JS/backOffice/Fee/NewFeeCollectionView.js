@@ -121,7 +121,7 @@ $(document).ready(function(){
 		    	        //Create a new HTML document.
 		    	        frameDoc.document.write('<html><head><title>DIV Contents</title>');
 		    	        //Append the external CSS file.
-		    	      	frameDoc.document.write('<style>div,th,td,input{letter-spacing: normal;outline:none;font-weight:400 !important;border:none !important;font-size:14px !important;font-family:Coinage Caps Kruger Gray !important;font-weight:bold;}</style>');
+		    	      	frameDoc.document.write('<style>div,th,td,input{letter-spacing: normal;outline:none;font-weight:200 !important;border:none !important;font-size:13px !important;font-family:Coinage Caps Kruger Gray !important;font-weight:bold;}</style>');
 		    	        frameDoc.document.write('</head><body>');
 		    	      
 		    	        
@@ -560,10 +560,10 @@ function feeCollectionDetailsPrint(pointer){
 			
 			
 			
-			$("#Dialog #printtable tbody").append("<tr>" +
+			$("#Dialog #printtable").append("<tr style='display:none;>" +
 					"<td style='text-align:left !important;padding-left:5px;'>Previous Dues</td>" +
 					"<td style='text-align:right;'><input type='text' id='dueAmount' class='Feeamount' name='dueAmount' value='"+due+"'  readonly='readonly' style='text-align:right;width:100px;' /></td>" +
-					"</tr>");
+				"</tr>");
 			$("#Dialog #printtable").append("<tr style='display:none;'>" +
 					
 					"<td style='text-align:left !important;padding-left:5px;'>Concession</td>" +
@@ -629,8 +629,8 @@ function inWords(num){
     str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'lakh ' : '';
     str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'thousand ' : '';
     str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'hundred ' : '';
-    str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) + 'only ' : '';
-    alert(str);
+    str += (n[5] != 0) ? ((str != '') ? 'and' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) + 'only' : '';
+    //alert(str);
     return str;
 }
 
