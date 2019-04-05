@@ -714,7 +714,7 @@ $(document).ready(function() {
 	});
 $("#schoolLocationId").change(function(){
 	 categoryId = "category";
-	getCategory(categoryId);
+	getCategory();
 	getHouse($(this).val());
 	
 	if($("#studentid").val() != ""){
