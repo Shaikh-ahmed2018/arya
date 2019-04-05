@@ -264,7 +264,7 @@
 			<forward name="absentSMSList" path="absentSMSList"></forward>
 			<forward name="absentSMSListFilter" path="absentSMSListFilter"></forward>
 			<forward name="studentphotosheet" path="studentphotosheet" />
-
+			<forward name="quickAdmission" path="quickAdmission" />
 			<forward name="expenses_list" path="expenses_list" />
 			<forward name="inflows_list" path="inflows_list" />
 			<forward name="revenue_list" path="revenue_list" />
@@ -396,7 +396,7 @@
 			<forward name="studentprom" path="studentprom" />
 			<forward name="getstudent" path="getstudent" />
 			<forward name="promotionpage" path="promotionpage" />
-			<forward name="quickAdmission" path="quickAdmission" />
+			
 			
 			<!--forward name="appraisallist" path="appraisallist" /-->
 			<forward name="studentappraisal" path="studentappraisal" />
