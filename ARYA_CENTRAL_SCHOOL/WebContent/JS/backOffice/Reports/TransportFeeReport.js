@@ -449,7 +449,7 @@ function getBusRouteDetail(){
 			$("#studenttable").empty();
 			$("#studenttable").append("<table class='table' id='allstudent' width='100%'" +">"
 					+"<tr><th>SI No</th>"+
-					"<tr><th>SI No</th>"+
+					
 					"<th>Route No.</th>" +
 					"<th>Bus Point Name</th>" +
 					"<th>Amount</th>"+
