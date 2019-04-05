@@ -4616,7 +4616,29 @@ public class StudentRegistrationAction extends DispatchAction {
 		return null;
 
 	}
+//getstudentmobileno
+	public ActionForward getStudentMobileNo(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
 
+		logger.info("Control in StudentRegistrationAction : searchStudentByMobileNo Starting");
+		List<StudentRegistrationVo> StudentPhoneList = new ArrayList<StudentRegistrationVo>();
+		try {
+			StudentRegistrationVo registrationVo = new StudentRegistrationVo();
+			
+		}
+		
+		 catch (Exception e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			}
+				return null;
+		
+	}
+	
 	public ActionForward searchStudentByMobileNo(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
@@ -5038,7 +5060,7 @@ System.out.println("list size="+list.size());
 			String resultStatus = new StudentRegistrationDaoImpl().deleteTemRecord(id);
 
 			JSONObject obj=new JSONObject();
-			obj.put("resultStatus",resultStatus);
+			obj.put("resultStatus",resultStatus);  
 			response.getWriter().print(obj);
 
 		} catch (Exception e) {
