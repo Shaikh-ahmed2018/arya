@@ -5,8 +5,41 @@ function myFunction() {
 
 
 	$(document).ready(function() {
+		$("#Acyearid").change(function(){
+			//$("#searchvalue").val("");
+			//changeAccYear();
+			getClassList();
+			var classname=$("#classname").val();
+			//getSectionList(classname);
+		});
+		$("#locationname").change(function(){
+			//$("#searchvalue").val("");
+			//changeAccYear();
+			getClassList();
+			var classname=$("#classname").val();
+			//getSectionList(classname);
+		});
+		$("#classname").change(function(){
+			//$("#searchvalue").val("");
+			var locationid=$("#locationname").val();
+			var accyear=$("#Acyearid").val();
+			var classname=$("#classname").val();
+			
+			
+			getSectionList(classname);
+			//getStudentList(locationid,accyear,classname);
+		});
+		$("#sectionid").change(function(){
+			$("#searchvalue").val("");
+			var locationid=$("#locationname").val();
+			var accyear=$("#Acyearid").val();
+			var classname=$("#classname").val();
+			var sectionid=$("#sectionid").val();
+			
+			//getStudentListBySection(locationid,accyear,classname,sectionid);
+		});
 		
-		if($("#allstudent tbody tr").length ==0){
+		/*if($("#allstudent tbody tr").length ==0){
 			$("#allstudent tbody").append("<tr><td colspan='3'>NO Records Found</td></tr>");
 		}
 		$("#selectall").change(function() {
@@ -286,99 +319,78 @@ function myFunction() {
 						 Holidayreason=$('#Holidayreason').val().trim();
 							$('#smstext').val("Please note that "+today_date+" is a "+Holidayreason+" holiday. The School will be closed that day.Enjoy the holiday" );
 						$('#maxlimit').text(parseInt((maxlength)-parseInt(sms)+parseInt("7")-parseInt(Holidayreason.length)));
-					});
+					});*/
 					
 					
 					
 	
 	});
 	
-	
-	var sectionlength=0;
-	function getSection() {
-		
-		var classid = $("#classid").val();
-		
-		
+
+	function getClassList(){
+		var locationid=$("#locationname").val();
 		datalist={
-				"classid" : classid.join()
+				"locationid" : locationid
 		},
-		
-		
+
+		$.ajax({
+
+			type : 'POST',
+			url : "studentRegistration.html?method=getClassByLocation",
+			data : datalist,
+			async : false,
+			success : function(response) {
+
+				var result = $.parseJSON(response);
+
+				$('#classname').html("");
+
+				$('#classname').append('<option value="All">' + "----------Select----------"	+ '</option>');
+
+				for ( var j = 0; j < result.ClassList.length; j++) {
+
+					$('#classname').append('<option value="'
+
+							+ result.ClassList[j].classcode + '">'
+
+							+ result.ClassList[j].classname
+
+							+ '</option>');
+				}
+			}
+		});
+	}
+	function getSectionList(classname){
+		datalist={
+				"classidVal" : classname,
+				"locationId":$("#locationname").val()
+		},
 		
 		$.ajax({
 			
 			type : 'POST',
-			url : "communicationPath.html?method=getSection",
+			url : "studentRegistration.html?method=getClassSection",
 			data : datalist,
+			async : false,
 			success : function(response) {
 				
 				var result = $.parseJSON(response);
 				
 				$('#sectionid').html("");
 				
-				$('#sectionid').append();
-						
-						/*'<option value="' + "" + '">' + "---Select---"
-								
-						+ '</option>');*/
+				$('#sectionid').append('<option value="">' + "ALL"	+ '</option>');
 				
-				for ( var j = 0; j < result.seclist.length; j++) {
+				for ( var j = 0; j < result.sectionList.length; j++) {
 
-					$('#sectionid').append(
-
-					'<option value="'
-
-					+ result.seclist[j].sectionId + '">'
-
-					+ result.seclist[j].sectionName
-
-					+ '</option>');
-
+					$('#sectionid').append('<option value="' + result.sectionList[j].sectioncode
+							+ '">' + result.sectionList[j].sectionnaem
+							+ '</option>');
 				}
-				
 			}
-			
-			
-		});
-		
-		
-	}
+		});}
 	
 	
 	
-	
-	function  validateEventSms(){
-		
-		var meetingstatus=false;
-		var date=$('#hdateId').val();
-		var smstext=$('#smstext').val();
-		
-		
-		var validatedetails = {
-				"date" : date,
-				"smstext" : smstext
-				
-			};
-		
-			$.ajax({
-						type : 'POST',
-						url : "suddenHolidays.html?method=validateSuddenHolidaysSms",
-						data : validatedetails,
-						async:false,
-						
-						success : function(response) {
-							var result = $
-							.parseJSON(response);
-							
-							meetingstatus=result.status;
-							
-						}
-					});
-			
-			return meetingstatus;
-			
-	}
 
 	
 	
