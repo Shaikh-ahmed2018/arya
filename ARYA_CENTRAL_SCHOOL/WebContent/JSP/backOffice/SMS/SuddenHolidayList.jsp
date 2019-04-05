@@ -43,120 +43,35 @@
 <link href="CSS/newUI/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="CSS/Admin/StudentNew.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="JS/common.js"></script>
-<script type="text/javascript" src="JS/backOffice/Student/individualStudentSearch.js"></script>
-<script type="text/javascript" src="JS/backOffice/Student/StudentSearch.js"></script>
 <link href="CSS/newUI/custome.css" rel="stylesheet">
-
+<script type="text/javascript" src="JS/backOffice/SMS/SuddenHolidayList.js"></script>
 <script>
+$(document).ready(function() {
+	 $("#send").click(function(){
+		 
+	 $.ajax({
+		    type: "POST",
+		    url: "http://sms.textidea.com/app/smsapi/index.php?key=25BB891406C392&campaign=5043&routeid=100233&type=text&contacts="+$('#MobileNO').val()+"&senderid=ARYACS&msg="+$('#Message').val()+"&company="+$('#Location'),
+		    success: function() {
+		      $('#contact_form_message').html("<div id='message'></div>");
+		      $('#message').html("<h2>Contact Form Submitted!</h2>")
+		      .append("<p>We will be in touch soon.</p>")
+		      .hide()
+		      .fadeIn(1500, function() {
+		        $('#message').append("Tick");
+		      });
+		    }
+	 	});
+	 alert('successfully send');
 
-$(document).ready(function(){
-	alert("hiii")
-	$("#class").change(function(){
-		getSection();
-		
-	});
-	
-	$("#location").change(function(){
-		
-      	getClassList();
-    	getTerm();
-	});		
-	
-
+	 });
+	 $('#send').click(function () {
+		  $('#MobileNO').val('');
+		  $('#Smessage').val('');
+		});
 });
-
-	
-function getSection(){
-	
-	datalist={
-			"classidVal" : $("#class").val(),
-			"locationId":$("#location").val()
-	},
-	
-	$.ajax({
-		
-		type : 'POST',
-		url : "studentRegistration.html?method=getClassSection",
-		data : datalist,
-		async : false,
-		success : function(response) {
-			
-			var result = $.parseJSON(response);
-			
-			$('#section').html("");
-			
-			$('#section').append('<option value="ALL">' + " ALL "	+ '</option>');
-			
-			for ( var j = 0; j < result.sectionList.length; j++) {
-
-				$('#section').append('<option value="' + result.sectionList[j].sectioncode
-						+ '">' + result.sectionList[j].sectionnaem
-						+ '</option>');
-			}
-		}
-	});
-
-	
-}
-function getClassList(){
-	var locationid=$("#location").val();
-	datalist={
-			"locationid" : locationid
-	},
-
-	$.ajax({
-
-		type : 'POST',
-		url : "studentRegistration.html?method=getClassByLocation",
-		data : datalist,
-		async : false,
-		success : function(response) {
-
-			var result = $.parseJSON(response);
-
-			$('#class').html("");
-
-			$('#class').append('<option value="ALL">' + "ALL"+'</option>');
-
-			for ( var j = 0; j < result.ClassList.length; j++) {
-
-				$('#class').append('<option value="'
-
-						+ result.ClassList[j].classcode + '">'
-
-						+ result.ClassList[j].classname
-
-						+ '</option>');
-			}
-		}
-	});
-}
-function getTerm(){
-	datalist={
-			"locId" : $("#location").val(),
-			"accId" : $("#accyear").val(), 
-	},
-	$.ajax({
-		type : 'POST',
-		url : "reportaction.html?method=getTerm",
-		data : datalist,
-		async : false,
-		success : function(data) {
-			var result = $.parseJSON(data);
-			var j;
-			var len= result.data.length;
-			$('#termName').html("");
-			$('#termName').append('<option value="all">' +"ALL"+ '</option>');
-			for ( j = 0; j <len; j++) {
-				$('#termName').append('<option value="'
-						+ result.data[j].termname+ '">'
-						+ result.data[j].termId
-						+ '</option>');
-			}
-		}
-	});
-}
 </script>
+
 
 
 
@@ -234,9 +149,9 @@ overflow-y:auto;
 								 
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;">School Name</label>
+										style="text-align: right; line-height: 35px;">School Name <font color="red">*</font></label>
 									<div class="col-xs-7">
-										<select id="location" name="location" class="form-control" required>
+										<select id="locationname" name="locationnid" class="form-control" required>
 											<option value="all">----------Select----------</option>
 											<logic:present name="locationList">
 												<logic:iterate id="Location" name="locationList">
@@ -261,15 +176,17 @@ overflow-y:auto;
 									</div>
 								</div-->
 								<div class="form-group clearfix">
-							<label for="inputPassword" class="control-label col-xs-5"
-								style="text-align: right; line-height: 35px;"> Class</label>
-							<div class="col-xs-7">
-							<select class="form-control" onkeypress="HideError()" 
-									name="classname" id="class">
-									<option value="all">----------Select----------</option>
-							</select>
-							</div>
-						</div>
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;"> Class <font color="red">*</font></label>
+									<div class="col-xs-7">
+									
+									<select class="form-control" onkeypress="HideError()" 
+											name="classname" id="classname">
+											<option value="">----------Select----------</option>
+										</select>
+									
+									</div>
+								</div>
 								<!--div class="form-group clearfix">
 								
 								<div class="col-xs-9" id="smsid" style="margin-left: 155px;">
@@ -294,23 +211,19 @@ overflow-y:auto;
 							
 							<div class="col-md-6" style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;margin-top: 20px;">
 								<div class="form-group clearfix">
-							<label for="inputPassword" class="control-label col-xs-5"
-								id="inputnames" style="text-align: right;">Academic Year</label>
-							<div class="col-xs-7">
-								<select id="accyear" name="accyear" class="form-control"
-									required>
-									
-									<logic:present name="AccYearList">
-										<logic:iterate id="AccYear" name="AccYearList">
-											<option
-												value="<bean:write name="AccYear" property="accyearId"/>">
-												<bean:write name="AccYear" property="accyearname" />
-											</option>
-										</logic:iterate>
-									</logic:present>
-								</select>
-							</div>
-						</div>
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;">Academic Year <font color="red">*</font></label>
+									<div class="col-xs-7">
+										<select id="Acyearid" name="accyear" class="form-control" required>
+											<option value="all">----------Select----------</option>
+											<logic:present name="AccYearList">
+												<logic:iterate id="AccYear" name="AccYearList">
+													<option	value="<bean:write name="AccYear" property="accyearId"/>"><bean:write name="AccYear" property="accyearname" /></option>
+												</logic:iterate>
+											</logic:present>
+										</select>
+									</div>
+								</div>
 						
 								
 								<!--div class="form-group clearfix">
@@ -324,14 +237,21 @@ overflow-y:auto;
 								</div-->
 							
 							<div class="form-group clearfix">
-							<label for="inputPassword" class="control-label col-xs-4"
-								id="inputnames" style="text-align: right;">Division</label>
-							<div class="col-xs-7">
-								<select id="section" name="section" class="form-control">
-									<option value="all">ALL</option>
-								</select>
-							</div>
-						</div>
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;">Division <font color="red">*</font></label>
+									<div class="col-xs-7">
+										<select id="sectionid" name="sectionid" class="form-control" required>
+											<option value="">----------Select----------</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;"> </label>
+									<div class="col-xs-7">
+										<input type="hidden" id="MobileNO">
+									</div>
+								</div>
 						
 								<!-- div class="form-group clearfix">
 								
@@ -359,7 +279,7 @@ overflow-y:auto;
 							</div>
 						<input type="hidden" name="Acyearid" id="Acyearid" value='<logic:present name="Acyearid"><bean:write name="Acyearid"/></logic:present>'></input>
 							
-				<div id="collapseOne" class="accordion-body collapse in">
+				<!--div id="collapseOne" class="accordion-body collapse in">
 				<div class="panel-body"
 					style="font-family: Open Sans Light; font-size: 20pt; color: #5d5d5d;">	
 					
@@ -386,7 +306,7 @@ overflow-y:auto;
 					</div>
        
 	   
-					</div>
+					</div-->
 					
 						</div>
 					</div>
