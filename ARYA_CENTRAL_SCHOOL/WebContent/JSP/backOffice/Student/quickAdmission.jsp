@@ -35,7 +35,7 @@
 
 <script type="text/javascript" src="JS/common.js"></script>
 <script type="text/javascript"
-	src="JS/backOffice/Student/quickAdmission.js"></script>
+	src="JS/backOffice/Student/quickAdmission1.js"></script>
 <style>
 .form-group{
 margin-bottom: 5px;}
@@ -114,7 +114,7 @@ width:190px;
 		<p>
 				<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<span	id="pageHeading">Quick Admission</span>
 			</p>
-		<div id="admissionDialog" style="display: none">
+		<!--div id="admissionDialog" style="display: none">
 			<div id="admissionclose" class="accordion-body collapse in">
 				<div class="panel-body"
 					style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;">
@@ -139,7 +139,7 @@ width:190px;
 				</div>
 				<br />
 			</div>
-		</div>
+		</div-->
 	
 			<logic:present name="successMessage" scope="request">
 
@@ -195,11 +195,15 @@ width:190px;
 				</div>
 			</div>
 	</center>	
-		<form action="studentRegistration.html?method=saveStudentRegistration"
+		<form action="adminMenu.html?method=quickAdmission"
 			enctype="multipart/form-data" name="StudentRegistrationForm" id="formstudent" method="post">
 
-			
-													
+			<input type="hidden" id="studentid" name="studentId"
+				value="<logic:present name="studentSearchList" property="studentId"><bean:write name="studentSearchList" property="studentId" /></logic:present>" />
+				<input type="hidden" id="classhiddenid"
+				value="<logic:present name="studentSearchList" property="studClassId"><bean:write name="studentSearchList" property="studClassId" /></logic:present>">
+				<input type="hidden" id="schoollocationhiddenid"
+				value="<logic:present name="studentSearchList" property="schoolLocation"><bean:write name="studentSearchList" property="schoolLocation" /></logic:present>">									
 			<!-- chiru -->
 
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -223,7 +227,7 @@ width:190px;
 								 
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;">School Name</label>
+										style="text-align: right; line-height: 35px;">School Name <font color="red">*</font></label>
 									<div class="col-xs-7">
 										<select id="locationname" name="locationnid" class="form-control" required>
 											<option value="all">----------Select----------</option>
@@ -240,7 +244,7 @@ width:190px;
 								
 							<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;"> Class</label>
+										style="text-align: right; line-height: 35px;"> Class <font color="red">*</font></label>
 									<div class="col-xs-7">
 									
 									<select class="form-control" onkeypress="HideError()" 
@@ -253,28 +257,35 @@ width:190px;
 								
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align:right; line-height: 35px;">Student Name</label>
+										style="text-align:right; line-height: 35px;">Student Name <font color="red">*</font></label>
 									<div class="col-xs-7">
 										<input type="text" name="studname" tabindex="1"
 											onkeypress="HideError()" id="studnameid"
 											 class="form-control"/>
 									</div>
 								</div>
-								<div class="form-group clearfix">
-									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align:right; line-height: 35px;">Father Name</label>
-									<div class="col-xs-7">
-										<input type="text" name="fathername" tabindex="1"
-											onkeypress="HideError()" id="fathernameid"
-											 class="form-control"/>
-									</div>
-								</div>
+								<div class="form-group clearfix start">
+							<label for="inputPassword" class="control-label col-xs-5"
+								id="inputnames" style="text-align: right;">Date Of Admission <font color="red">*</font></label>
+							<div class="col-xs-7">
+								<input type="text" id="startDate"  class="form-control" readonly="readonly" />
+							</div>
+						</div>
+						<div class="form-group clearfix start">
+							<label for="inputPassword" class="control-label col-xs-5"
+								id="inputnames" style="text-align: right;">Sex <font color="red">*</font></label>
+							<div class="col-xs-7">
+								<input type="radio" name="gender" value="male"> Male
+ 								 <input type="radio" name="gender" value="female"> Female
+							</div>
+						</div>
+						
 							</div>
 							
 							<div class="col-md-6" style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;margin-top: 10px;">
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;">Academic Year</label>
+										style="text-align: right; line-height: 35px;">Academic Year <font color="red">*</font></label>
 									<div class="col-xs-7">
 										<select id="Acyearid" name="accyear" class="form-control" required>
 											<option value="all">----------Select----------</option>
@@ -288,7 +299,7 @@ width:190px;
 								</div>
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;">Division</label>
+										style="text-align: right; line-height: 35px;">Division <font color="red">*</font></label>
 									<div class="col-xs-7">
 										<select id="sectionid" name="sectionid" class="form-control" required>
 											<option value="">----------Select----------</option>
@@ -296,24 +307,31 @@ width:190px;
 									</div>
 								</div>
 							
-								<div class="form-group clearfix start">
-							<label for="inputPassword" class="control-label col-xs-5"
-								id="inputnames" style="text-align: right;">Date Of Admission</label>
-							<div class="col-xs-7">
-								<input type="text" id="startDate"  class="form-control" readonly="readonly" />
+								<div class="form-group clearfix">
+								<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;">Admission
+										No <font color="red">*</font>
+								</label>
+								<div class="col-xs-7">
+									<input type="text" class="form-control" name="studentrollno"
+											tabindex="4" onkeypress="HideError()" id="studentrollno"
+											onchange="checkRollnumber()" maxlength="25"
+											
+											value='<logic:present name="studentSearchList"><bean:write name="studentSearchList" property="studentAdmissionNo"></bean:write></logic:present>' />
+								</div>
 							</div>
-						</div>
+							<div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align:right; line-height: 35px;">Father Name <font color="red">*</font></label>
+									<div class="col-xs-7">
+										<input type="text" name="fathername" tabindex="1"
+											onkeypress="HideError()" id="fathernameid"
+											 class="form-control"/>
+									</div>
+								</div>
 							
 							
-							<div class="form-group clearfix start">
-							<label for="inputPassword" class="control-label col-xs-5"
-								id="inputnames" style="text-align: right;">Sex</label>
-							<div class="col-xs-7">
-								<input type="radio" name="gender" value="male"> Male
- 								 <input type="radio" name="gender" value="female"> Female
-							</div>
-						</div>
-						
+							
 								
 					</div>
 					
