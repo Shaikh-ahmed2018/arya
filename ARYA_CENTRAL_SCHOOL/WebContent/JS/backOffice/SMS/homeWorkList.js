@@ -10,7 +10,7 @@ $(document).ready(function() {
 	 $("#send").click(function() { alert('sending');
 		 $.ajax({
 			    type: "POST",
-			    url: "http://sms.textidea.com/app/smsapi/index.php?key=25BB891406C392&campaign=5043&routeid=100233&type=text&contacts=9447497755&senderid=ARYACS&msg=Hello+People%2C+have+a+great+day",
+			    url: "http://sms.textidea.com/app/smsapi/index.php?key=25BB891406C392&campaign=5043&routeid=100233&type=text&contacts=$(#).val&senderid=ARYACS&msg=Hello+People%2C+have+a+great+day",
 			    data: dataString,
 			    success: function() {
 			      $('#contact_form_message').html("<div id='message'></div>");
