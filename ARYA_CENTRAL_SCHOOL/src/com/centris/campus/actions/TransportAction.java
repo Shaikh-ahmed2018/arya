@@ -2505,7 +2505,7 @@ public ActionForward getStudentSearchByList(ActionMapping mapping, ActionForm fo
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.START_POINT);
 	logger.info(JDate.getTimeString(new Date())
-			+ " Control in AdminMenuAction : getStudentSearchByList Starting");
+			+ " Control in TransportAction : getStudentSearchByList Starting");
 	
 	List<StudentRegistrationVo> list = null;
 	
@@ -2517,33 +2517,18 @@ public ActionForward getStudentSearchByList(ActionMapping mapping, ActionForm fo
 		String sectionid = request.getParameter("sectionid");
 
 		String searchTerm = request.getParameter("searchname".trim());
-
-		System.out.println(locationid+" "+accyear+" "+classname+" "+sectionid+" "+searchTerm);
-		
-		if(locationid.equalsIgnoreCase("all") && accyear.equalsIgnoreCase("all")){
-			
-			list = new TransportBD().getStudentSearchByList(searchTerm);
+		if(locationid.equalsIgnoreCase("all")) {
+			locationid="%%";
 		}
-		else if(locationid.equalsIgnoreCase("all") && !(accyear.equalsIgnoreCase("all"))){
-			
-			list =  new TransportBD().getStudentSearchListByAccYear(searchTerm,accyear);
+		if(classname.equalsIgnoreCase("all")) {
+			classname="%%";
 		}
-		else if(accyear.equalsIgnoreCase("all") && !(locationid.equalsIgnoreCase("all"))){
-			
-			list = new TransportBD().getStudentSearchListByLocation(searchTerm,locationid);
+		if(sectionid.equalsIgnoreCase("all")) {
+			sectionid="%%";
 		}
-		else if(!(locationid.equalsIgnoreCase("all") && accyear.equalsIgnoreCase("all")) && classname.equalsIgnoreCase("all")){
-			
-			list = new TransportBD().getStudentSearchByFilter(searchTerm,locationid,accyear,classname);
-		}
-		else if(!(locationid.equalsIgnoreCase("all") && accyear.equalsIgnoreCase("all") && classname.equalsIgnoreCase("all")) && sectionid.equalsIgnoreCase("all")){
-			
-			list = new TransportBD().getStudentSearchByClass(searchTerm,locationid,accyear,classname);
-		}
-		else if(!(locationid.equalsIgnoreCase("all") && accyear.equalsIgnoreCase("all") && classname.equalsIgnoreCase("all") && sectionid.equalsIgnoreCase("all"))){
 			
 			list = new TransportBD().getStudentSearchByAllFilter(searchTerm,locationid,accyear,classname,sectionid);
-		}
+		
 		
 		request.setAttribute("SearchList", list);
 		
@@ -2559,7 +2544,7 @@ public ActionForward getStudentSearchByList(ActionMapping mapping, ActionForm fo
 	JLogger.log(0, JDate.getTimeString(new Date())
 			+ MessageConstants.END_POINT);
 	logger.info(JDate.getTimeString(new Date())
-			+ " Control in AdminMenuAction : getStudentSearchByList Ending");
+			+ " Control in TransportAction : getStudentSearchByList Ending");
 
 	return null;
 }

@@ -5010,7 +5010,7 @@ return amountstatus;
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.START_POINT);
 		logger.info(JDate.getTimeString(new Date())
-				+ " Control in StudentRegistrationDaoImpl : getStudentSearchByAllFilter Starting");
+				+ " Control in TransportDaoImpl : getStudentSearchByAllFilter Starting");
 		
 		List<StudentRegistrationVo> list = new ArrayList<StudentRegistrationVo>();
 		PreparedStatement pst = null;
@@ -5034,8 +5034,8 @@ return amountstatus;
 			pst.setString(5, "%"+searchValue+"%");
 			pst.setString(6, "%"+searchValue+"%");
 			pst.setString(7, "%"+searchValue+"%");
-			pst.setString(8, "%"+locationId+"%");
-			pst.setString(9, "%"+accYear+"%");
+			pst.setString(8, locationId);
+			pst.setString(9, accYear);
 			pst.setString(10, className);
 			pst.setString(11, section);
 			rs = pst.executeQuery();
@@ -5078,7 +5078,7 @@ return amountstatus;
 		JLogger.log(0, JDate.getTimeString(new Date())
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
-				+ " Control in StudentRegistrationDaoImpl : getStudentSearchByAllFilter Ending");
+				+ " Control in TransportDaoImpl : getStudentSearchByAllFilter Ending");
 		
 		return list;
 	}
