@@ -603,11 +603,10 @@ function StudentPromotingSearchList(locationid,accyear,classname,sectionid,searc
 				splitvalue=parseInt(classid.split("D")[1]);
 				splitvalue=splitvalue+1;
 				classid="CCD"+splitvalue;
-				var locationId=$('#hschoolLocation').val();
 				
-				getClassSection(classid, locationId,sectionname);
+				getClassSection(classid, locationid,sectionname);
 				
-				getClassSpecilization(classid,locationId);
+				getClassSpecilization(classid,locationid);
 				//getTableChangeData();
 			}
 			getEachRowRecord();

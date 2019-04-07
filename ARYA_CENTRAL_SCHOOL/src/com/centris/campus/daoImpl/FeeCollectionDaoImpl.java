@@ -2368,9 +2368,10 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 						
 						else{
 							
-							ps_feelist=conn.prepareStatement("SELECT amount_paid,MonthName FROM campus_tranport_fee_collection_details WHERE admissionNo=? and MonthName=?");
+							ps_feelist=conn.prepareStatement("SELECT amount_paid,MonthName FROM campus_tranport_fee_collection_details WHERE admissionNo=? and MonthName=? and accYear=?");
 							ps_feelist.setString(1, addmissionno);
 							ps_feelist.setString(2, HelperClass.getMonthFullName(Integer.toString(i)));
+							ps_feelist.setString(3, accyearId);
 							System.out.println("collectionVo:ps_feelist "+ps_feelist);
 							rs_feelist=ps_feelist.executeQuery();
 							while(rs_feelist.next()){

@@ -815,7 +815,7 @@ public static String getPrimaryKeyID(String tableName,Connection con) throws Exc
 			}
 			ps.close();
 			String sql2 = "select max(" + columnName + ") from " + tableName
-					+ " group by length(" + columnName + ") order by " + columnName + "  desc limit 1";
+					+ " group by length(" + columnName + ") order by CAST(" + columnName + " AS UNSIGNED)  desc limit 1";
 			System.out.println(sql2);
 			ps = con.prepareStatement(sql2);
 			rs = ps.executeQuery();
@@ -882,7 +882,7 @@ public static String getPrimaryKeyID(String tableName,Connection con) throws Exc
 			}
 			ps.close();
 			String sql2 = "select max(" + columnName + ") from " + tableName
-					+ " group by length(" + columnName + ") order by " + columnName + " desc limit 1";
+					+ " group by length(" + columnName + ") order by CAST(" + columnName + " AS UNSIGNED) desc limit 1";
 			System.out.println(sql2);
 			ps = con.prepareStatement(sql2);
 			rs = ps.executeQuery();
