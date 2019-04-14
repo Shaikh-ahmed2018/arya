@@ -617,8 +617,7 @@ function StudentPromotingSearchList(locationid,accyear,classname,sectionid,searc
 function validateFunction(){
 	var locationid=$('#locationname').val();
 	var accyearid=$('#Acyearid').val();
-	var classid=$('#classname').val();
-	var sectionid=$('#sectionid').val();
+	
 	var flag=true;
 	if(locationid  == "" || locationid  == null || locationid == "all" || locationid == "All") {
 		$(".errormessagediv").show();
@@ -644,32 +643,6 @@ function validateFunction(){
 			$('#errorhover').fadeOut();
 			document.getElementById("Acyearid").style.border = "1px solid #ccc";
 			document.getElementById("Acyearid").style.backgroundColor = "#fff";
-		}, 300);
-
-		flag= false;
-	}else if(classid == null || classid == "" || classid == "all" || classid == "All" ){
-		$(".errormessagediv").show();
-		$(".validateTips").text("Field Required Class.");
-		$("#classname").focus();
-		document.getElementById("classname").style.border = "1px solid #AF2C2C";
-		document.getElementById("classname").style.backgroundColor = "#FFF7F7";
-		setTimeout(function() {
-			$('#errorhover').fadeOut();
-			document.getElementById("classname").style.border = "1px solid #ccc";
-			document.getElementById("classname").style.backgroundColor = "#fff";
-		}, 300);
-
-		flag= false;
-	}else if(sectionid == null || sectionid == "" || sectionid == "all" || sectionid == "All"){
-		$(".errormessagediv").show();
-		$(".validateTips").text("Field Required Division.");
-		$("#sectionid").focus();
-		document.getElementById("sectionid").style.border = "1px solid #AF2C2C";
-		document.getElementById("sectionid").style.backgroundColor = "#FFF7F7";
-		setTimeout(function() {
-			$('#errorhover').fadeOut();
-			document.getElementById("sectionid").style.border = "1px solid #ccc";
-			document.getElementById("sectionid").style.backgroundColor = "#fff";
 		}, 300);
 
 		flag= false;
