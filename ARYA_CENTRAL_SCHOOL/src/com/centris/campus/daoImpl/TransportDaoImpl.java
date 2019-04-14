@@ -3442,28 +3442,62 @@ public class TransportDaoImpl implements TransportDao {
 		ArrayList<TransportVo> studentData = new ArrayList<TransportVo>();
 		try{
 			conn = JDBCConnection.getSeparateConnection();
-			pstmt = conn.prepareStatement("SELECT CONCAT(st.student_fname_var,' ',st.student_lname_var) AS student,pa.mobileno,CASE WHEN trf.reciept_no IS NULL THEN '-' ELSE trf.reciept_no END reciept_no,CONCAT(cd.classdetails_name_var,' ',cs.classsection_name_var)AS class,cf.stage_name,CASE WHEN rn.RouteName IS NULL THEN '-' ELSE rn.RouteName END RouteName FROM campus_student st JOIN campus_student_transportdetails tra ON st.student_id_int = tra.student_id_int JOIN campus_student_classdetails csc ON csc.student_id_int = st.student_id_int JOIN campus_classdetail cd ON  csc.classdetail_id_int = cd.classdetail_id_int AND csc.locationId = cd.locationId JOIN campus_classsection cs ON csc.classsection_id_int = cs.classsection_id_int AND csc.locationId = cs.locationId JOIN campus_parentchildrelation pra ON pra.stu_addmissionNo = tra.student_id_int JOIN campus_parents pa ON pa.parentid = pra.ParentID  JOIN transport_route rn ON rn.RouteCode = tra.route JOIN campus_fee_stage cf ON cf.stage_id = tra.StageId   LEFT  JOIN campus_tranport_fee_collection_details trf ON tra.student_id_int=trf.admissionNo AND trf.accYear = ? AND trf.termcode = ? WHERE  isTransport = 'Y' AND csc.student_id_int = ? AND csc.fms_acadamicyear_id_int = ? AND csc.locationId =? GROUP BY trf.termcode");
+			pstmt = conn.prepareStatement("SELECT CONCAT(st.student_fname_var,' ',st.student_lname_var) AS student,pa.mobileno,CASE WHEN trf.reciept_no IS NULL THEN '-' ELSE trf.reciept_no END reciept_no,CONCAT(cd.classdetails_name_var,' ',cs.classsection_name_var)AS class FROM campus_student st JOIN campus_student_transportdetails tra ON st.student_id_int = tra.student_id_int JOIN campus_student_classdetails csc ON csc.student_id_int = st.student_id_int JOIN campus_classdetail cd ON  csc.classdetail_id_int = cd.classdetail_id_int AND csc.locationId = cd.locationId JOIN campus_classsection cs ON csc.classsection_id_int = cs.classsection_id_int AND csc.locationId = cs.locationId JOIN campus_parentchildrelation pra ON pra.stu_addmissionNo = tra.student_id_int JOIN campus_parents pa ON pa.parentid = pra.ParentID LEFT  JOIN campus_tranport_fee_collection_details trf ON tra.student_id_int=trf.admissionNo AND trf.accYear = ? AND trf.termcode = ? WHERE  isTransport = 'Y' AND csc.student_id_int = ? AND csc.fms_acadamicyear_id_int = ? AND csc.locationId =? GROUP BY trf.termcode");
 			pstmt.setString(1, obj.getAcy_id());
 			pstmt.setString(2, obj.getTermId());
 			pstmt.setString(3, obj.getStudentId());
 			pstmt.setString(4, obj.getAcy_id());
 			pstmt.setString(5, obj.getLoc_id());
 			
-			System.out.println(pstmt);
+			System.out.println("pstmt="+pstmt);
 			rs = pstmt.executeQuery();
 			while(rs.next()){
+				
+				String stageName="";
+				String routeName="";
+				
+				PreparedStatement pstmt2=conn.prepareStatement("SELECT cf.stage_name,rn.RouteName FROM `campus_student_route_stage_mapping` csrtsm JOIN transport_route rn ON rn.RouteCode = csrtsm.route_id JOIN campus_fee_stage cf ON cf.stage_id = csrtsm.stage_id WHERE csrtsm.mapped_id=? AND csrtsm.accyear=? AND csrtsm.`month` IN(SELECT DATE_FORMAT(m1, '%M') FROM(SELECT ((SELECT `startdate` FROM `campus_fee_transport_termdetails` WHERE `termid`=?) - INTERVAL DAYOFMONTH((SELECT `startdate` FROM `campus_fee_transport_termdetails` WHERE `termid`=?))-1 DAY) +INTERVAL m MONTH AS m1 FROM (SELECT @rownum:=@rownum+1 AS m FROM (SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4) t1,(SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4) t2,(SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4) t3,(SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4) t4,(SELECT @rownum:=-1) t0) d1) d2 WHERE m1<=(SELECT `enddate` FROM `campus_fee_transport_termdetails` WHERE `termid`=?) ORDER BY m1) GROUP BY csrtsm.route_id,csrtsm.stage_id");
+				pstmt2.setString(1, obj.getStudentId());
+				pstmt2.setString(2, obj.getAcy_id());
+				pstmt2.setString(3, obj.getTermId());
+				pstmt2.setString(4, obj.getTermId());
+				pstmt2.setString(5, obj.getTermId());
+				System.out.println("pstmt2="+pstmt2);
+				ResultSet rs2=pstmt2.executeQuery();
+				while(rs2.next()) {
+					stageName=stageName+rs2.getString("stage_name")+",";
+					routeName=routeName+rs2.getString("RouteName")+",";
+				}
+				rs2.close();
+				pstmt2.close();
 				TransportVo vo = new TransportVo();
 				vo.setStudent_name(rs.getString("student"));
 				vo.setClassname(rs.getString("class"));
 				vo.setReceiptNo(rs.getString("reciept_no"));
-				vo.setStopname(rs.getString("stage_name"));
-				vo.setRouteName(rs.getString("RouteName"));
+				vo.setStopname(stageName);
+				vo.setRouteName(routeName);
 				vo.setMobileNo(rs.getString("mobileno"));
 				studentData.add(vo);
 			}
 			
 		}catch(Exception e){
 			e.printStackTrace();
+		}finally {
+			try {
+				if (rs != null && (!rs.isClosed())) {
+					rs.close();
+				}
+				if (pstmt != null && (!pstmt.isClosed())) {
+					pstmt.close();
+				}
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+
+			} catch (Exception e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			}
 		}
 		return studentData;
 	}
