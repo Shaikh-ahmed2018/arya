@@ -44,36 +44,9 @@
 <link href="CSS/Admin/StudentNew.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="JS/common.js"></script>
 <link href="CSS/newUI/custome.css" rel="stylesheet">
+<script src="JS/newUI/jqBootstrapValidation.js"></script>
 <script type="text/javascript" src="JS/backOffice/SMS/SuddenHolidayList.js"></script>
-<script>
-$(document).ready(function() {
-	 $("#send").click(function(){
-		 
-	 $.ajax({
-		    type: "POST",
-		    url: "http://sms.textidea.com/app/smsapi/index.php?key=25BB891406C392&campaign=5043&routeid=100233&type=text&contacts="+$('#MobileNO').val()+"&senderid=ARYACS&msg="+$('#Message').val()+"&company="+$('#Location'),
-		    success: function() {
-		      $('#contact_form_message').html("<div id='message'></div>");
-		      $('#message').html("<h2>Contact Form Submitted!</h2>")
-		      .append("<p>We will be in touch soon.</p>")
-		      .hide()
-		      .fadeIn(1500, function() {
-		        $('#message').append("Tick");
-		      });
-		    }
-	 	});
-	 alert('successfully send');
-
-	 });
-	 $('#send').click(function () {
-		  $('#MobileNO').val('');
-		  $('#Smessage').val('');
-		});
-});
-</script>
-
-
-
+<script type="text/javascript" src="JS/backOffice/SMS/generalSMS.js"></script>
 
 <style>
 .glyphicon:hover {
@@ -199,7 +172,7 @@ overflow-y:auto;
 							</div-->
 							<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;"> Message</label>
+										style="text-align: right; line-height: 35px;"> Message<font color="red">*</font></label>
 									<div class="col-xs-7">
 										<textarea  id="Message"name='StudentMessage' class="form-control" style=" width: 100%; height: 7%;"></textarea>
 									
@@ -231,7 +204,7 @@ overflow-y:auto;
 										style="text-align: right; line-height: 35px;">Division</label>
 									<div class="col-xs-7">
 										<select id="sectionid" name="sectionid" class="form-control" required>
-											<option value="all">ALL</option>
+											<option value="%%">ALL</option>
 										</select>
 									</div>
 								</div-->
@@ -245,13 +218,13 @@ overflow-y:auto;
 										</select>
 									</div>
 								</div>
-								<div class="form-group clearfix">
+								<!--div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
 										style="text-align: right; line-height: 35px;"> </label>
 									<div class="col-xs-7">
 										<input type="hidden" id="MobileNO">
 									</div>
-								</div>
+								</div-->
 						
 								<!-- div class="form-group clearfix">
 								
@@ -268,7 +241,7 @@ overflow-y:auto;
 									<div class="col-xs-12">
 									<p align="right">
 								<button type="button" class="btn btn-info" id="preview" >Preview</button>
-								<button type="button" class="btn btn-info" id="send" >Send</button>
+								<button type="submit" class="btn btn-info" id="send" >Send</button>
 								<button type="reset" class="btn btn-info" id="resetbtn" >Reset</button>
 								</p>
 								</div>

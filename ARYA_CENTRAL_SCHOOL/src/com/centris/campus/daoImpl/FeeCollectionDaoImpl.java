@@ -2237,7 +2237,6 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 			ps_insertPlan.setString(1,addmissionno);
 			ps_insertPlan.setString(2,accyearId);
 			ps_insertPlan.setString(3,locId);
-			System.out.println("transportFee "+ps_insertPlan);
 			rs=ps_insertPlan.executeQuery();
 			while(rs.next()){
 				collectionVo.setStudentid(addmissionno);
@@ -2263,16 +2262,7 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 				ps_feeInformation=conn.prepareStatement("SELECT termid,termname,CAST(SUBSTR(startdate,6,2) AS UNSIGNED) startmonth,TIMESTAMPDIFF(MONTH,startdate,enddate)+1 MONTH FROM campus_fee_transport_termdetails WHERE accyear=? AND locationId = ?");
 				ps_feeInformation.setString(1, accyearId);
 				ps_feeInformation.setString(2, locId);
-				System.out.println("ps_feeInformation"+ps_feeInformation);
 				rs_getfeeInformation=ps_feeInformation.executeQuery();
-				int monthCountVal=0;
-				ps_transporttermStartMont=conn.prepareStatement("SELECT SUBSTRING_INDEX(SUBSTRING_INDEX(startdate,'-',2),'-',-1) startmonthVal FROM campus_fee_transport_termdetails WHERE accyear = ? AND locationId = ? ORDER BY startdate LIMIT 1");
-				ps_transporttermStartMont.setString(1,accyearId);
-				ps_transporttermStartMont.setString(2,locId);
-				rs_transporttermStartMont=ps_transporttermStartMont.executeQuery();
-				while(rs_transporttermStartMont.next()){
-					monthCountVal=rs_transporttermStartMont.getInt("startmonthVal");
-				}
 				
 				while(rs_getfeeInformation.next()){
 					
@@ -2293,7 +2283,6 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 						ps_collection_count.setString(3, termId);
 						ps_collection_count.setString(4, HelperClass.getMonthFullName(Integer.toString(i)));
 						
-						System.out.println("count  :: "+ps_collection_count);
 						rs_collection_count=ps_collection_count.executeQuery();
 						int feeCollectionCount=0;
 						int recieptNo=0;
@@ -2330,12 +2319,6 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 						stg.close();
 						if(feeCollectionCount==0){
 							
-							System.out.println("monthCountVal "+monthCountVal);	
-							System.out.println("start_month "+start_month);	
-							System.out.println("noOfMonth "+noOfMonth);	
-							System.out.println("noOfMonth+start_month "+noOfMonth+start_month);	
-							if((monthCountVal >=start_month && monthCountVal <(noOfMonth+start_month))){
-								System.out.println("monthCountVal in condition "+monthCountVal);	
 								System.out.println("loop in condition "+i);	
 								
 							
@@ -2345,7 +2328,6 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 							ps_feelist.setString(2, accyearId);
 							rs_feelist=ps_feelist.executeQuery();
 							
-							System.out.println("hsdjfsdjk="+ps_feelist);
 							while(rs_feelist.next()){
 								FeeNameVo feeNameVo=new FeeNameVo();
 								count++;
@@ -2361,7 +2343,6 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 							
 							collectionVo.setFeeNamelist(feeNameList);
 							
-							}
 							
 							}
 							
@@ -2392,7 +2373,6 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 						}
 						
 					
-						monthCountVal++;
 						
 					}
 					

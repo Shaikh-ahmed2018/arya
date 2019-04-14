@@ -303,7 +303,7 @@ line-height: 1;
 		<div class="slideTab clearfix">
 						
 						<ul class="nav nav-tabs transport-request">
-						<li class="active"><a data-toggle="tab" href="#routeDetails"  style="font-weight: 700;background-color:#07aab9;color:#fff"">Route Details</a></li>
+						<li class="active"><a data-toggle="tab" href="#routeDetails"  style="font-weight: 700;background-color:#07aab9;color:#fff">Route Details</a></li>
 								<li class=""><a data-toggle="tab" href="#contacts"  style="font-weight: 700;background-color:#07aab9;color:#fff">Request</a></li>
 								</ul>
 								

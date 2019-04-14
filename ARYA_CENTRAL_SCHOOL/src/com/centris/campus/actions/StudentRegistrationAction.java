@@ -4271,7 +4271,45 @@ public class StudentRegistrationAction extends DispatchAction {
 
 		return null;
 	}
+//edited by anu
+	public ActionForward getStudentcontact(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception{
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in StudentRegistrationAction : getStudentSearch Starting");
+		
+		try {
+			//String studentId = request.getParameter("studentId");
+			String accYear = request.getParameter("accYear");
+			String locationId = request.getParameter("locationId");
+			String classId=request.getParameter("classId");
+			String divisionId=request.getParameter("divisionId");
+			List<StudentRegistrationVo> list = new StudentRegistrationDaoImpl().getStudentcontact(locationId,accYear,classId,divisionId);
+			request.setAttribute("studentSearchList", list);
+			JSONObject jsonobj = new JSONObject();
+			jsonobj.put("studentSearchList", list);
+			response.getWriter().print(jsonobj);
+			
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			logger.error(e);
 
+		}
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in StudentRegistrationAction : getStudentSearch Ending");
+
+				return null;
+		
+	}
+	
+//
 	public ActionForward individualStudentcontact(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception{ 

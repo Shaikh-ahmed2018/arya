@@ -224,7 +224,7 @@ display: none;
 							
 							 <div class="form-group clearfix">
 							<label for="inputPassword" class="control-label col-xs-5"
-								id="inputnames" style="text-align: right;">PayMent Type</label>
+								id="lblPaymentType" style="text-align: right;">PayMent Type</label>
 							<div class="col-xs-7">
 								<select id="PaymentType" name="" class="form-control"
 									>
@@ -237,14 +237,14 @@ display: none;
 						</div>
 							<div class="form-group clearfix start">
 							<label for="inputPassword" class="control-label col-xs-5"
-								id="inputnames" style="text-align: right;">Start Date</label>
+								id="lblstartDate" style="text-align: right;">Start Date</label>
 							<div class="col-xs-7">
 								<input type="text" id="startDate"  class="form-control" readonly="readonly" />
 							</div>
 						</div>
 						<div class="form-group clearfix end">
 							<label for="inputPassword" class="control-label col-xs-5"
-								id="inputnames" style="text-align: right;">End Date</label>
+								id="lblendDate" style="text-align: right;">End Date</label>
 							<div class="col-xs-7">
 								<input type="text" id="endDate"  class="form-control" readonly="readonly" />
 							</div>

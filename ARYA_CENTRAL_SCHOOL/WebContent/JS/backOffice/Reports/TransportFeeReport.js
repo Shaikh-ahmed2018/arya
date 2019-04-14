@@ -8,6 +8,8 @@ $(document).ready(function(){
 		var classname=$("#class").val();
 		var paymenttype=$(this).val();
 		var paymode=$(this).val();
+		$("#startDate").val=null;
+		$("#endDate").val=null;
 		if($("#PaymentType").val()== 'ONLINE')
 		{		
 		getonlinelist();
@@ -26,7 +28,7 @@ $(document).ready(function(){
 		}
 	else{
 	}
-		getTransportFeeList();
+		//getTransportFeeList();
 		
 	});
 	
@@ -167,10 +169,10 @@ $("#PaymentType").change(function(){
 			}
 		else if($("#PaymentType").val()== 'OFFLINE')
 		{		
-			getFeeCollectionPaymodeReport();
+			//getFeeCollectionPaymodeReport();
 		}
 		else{
-			getTransportFeeList();
+			//getTransportFeeList();
 		}
 	
 	
@@ -288,10 +290,24 @@ $("#paymode").change(function(){
 	
 	$("#reportType").change(function(){
 	var reporttype=$(this).val();
+	   $('#startDate').hide();
+	   $('#endDate').hide();
+	   $('#PaymentType').hide();
+	  // $('#paymode').hide();
+	   $('#lblstartDate').hide();
+	   $('#lblendDate').hide();
+	   $('#lblPaymentType').hide()
 		if($(this).val()=="TransportFee"){
+			$('#startDate').show();
+			$('#endDate').show();
+			$('#PaymentType').show();
+			$('#paymode').show();
+			 $('#lblstartDate').show();
+			  $('#lblendDate').show();
+			   $('#lblPaymentType').show()
 			$(".transportOtherReport").slideUp("fast",function(){
 				$(".transportFeeReportandStudentClassWise,.transportFeeReport").show();
-				getTransportFeeList();
+				//getTransportFeeList();
 				
 			});
 			/*if($("#PaymentType").val()== 'ONLINE')

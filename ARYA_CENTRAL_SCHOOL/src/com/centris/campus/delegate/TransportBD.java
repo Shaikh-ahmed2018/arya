@@ -359,4 +359,9 @@ public class TransportBD {
 			return service.getFeeCollectionPaymodeReport(locationid,accyear,classid,setionid,paymodeid,paymenttype,termId);
 	}
 
+	public ArrayList<TransportVo> getRouteName() {
+		// TODO Auto-generated method stub
+		return service.getRouteName();
+	}
+
 }

@@ -15103,4 +15103,73 @@ public String deleteTemRecord(String id) {
 	return status;
 }
 
+public List<StudentRegistrationVo> getStudentcontact(String locationId,String accYear,String classId,String divisionId) {
+	// TODO Auto-generated method stub
+	logger.setLevel(Level.DEBUG);
+	JLogger.log(0, JDate.getTimeString(new Date())
+			+ MessageConstants.START_POINT);
+	logger.info(JDate.getTimeString(new Date())
+			+ " Control in StudentRegistrationDaoImpl : getStudentcontact Starting");
+	List<StudentRegistrationVo> list = new ArrayList<StudentRegistrationVo>();
+	PreparedStatement pstmObj = null,pstmObj1 = null;
+	ResultSet rs = null,rs1 = null;
+	Connection conn = null;
+	int count = 0;
+	int conf_count = 0;
+	if(divisionId.length() <= 0) {
+		divisionId ="%%";
+	}
+	
+	try
+	{
+		conn = JDBCConnection.getSeparateGodaddyConnection();
+		//pstmObj = conn.prepareStatement(SQLUtilConstants.GET_STUDENT_CONTACT_HISTORY);
+		pstmObj=conn.prepareStatement("SELECT csc.smsNO, csc.studentId FROM campus_student cs JOIN campus_students_contacts  csc ON csc.studentId = cs.student_id_int JOIN campus_student_classdetails cscd ON cscd.student_id_int = cs.student_id_int WHERE cs.locationId like ? AND cscd.fms_acadamicyear_id_int like ?  AND  cscd.classdetail_id_int like ? AND  classsection_id_int  like ?");
+		pstmObj.setString(1,locationId);
+		pstmObj.setString(2,accYear);
+		pstmObj.setString(3,classId);
+		pstmObj.setString(4,divisionId);
+		System.out.println(pstmObj);
+        rs = pstmObj.executeQuery();
+        while(rs.next())
+		{	
+			count++;
+			StudentRegistrationVo obj = new StudentRegistrationVo();
+			obj.setCount(count);
+			obj.setFatherMobileNo(rs.getString("smsNO"));
+			list.add(obj);
+			
+		}
+	}
+	catch (Exception e) {
+		logger.error(e.getMessage(), e);
+		e.printStackTrace();
+	}
+	finally {
+		try {
+
+			if (rs != null && (!rs.isClosed())) {
+				rs.close();
+			}
+			if (pstmObj != null && (!pstmObj.isClosed())) {
+				pstmObj.close();
+			}
+			if (conn != null && (!conn.isClosed())) {
+				conn.close();
+			}
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+	}
+	
+
+	JLogger.log(0, JDate.getTimeString(new Date())
+			+ MessageConstants.END_POINT);
+	logger.info(JDate.getTimeString(new Date())
+			+ " Control in StudentRegistrationDaoImpl : getStudentcontact Ending");
+
+	return list;
+}
+
 }

@@ -3981,8 +3981,57 @@ public class AdminMenuAction extends DispatchAction {
 
 		return mapping.findForward(MessageConstants.LATECOMERSENTRYADD);
 	}
-
+	//edited by anu
 	public ActionForward uniformlist(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+					throws Exception {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in AdminMenuAction : StudentAppraisalReport Starting");
+		
+		String academic_year = (String) request.getSession(false).getAttribute("current_academicYear");
+
+		String location = (String) request.getSession(false).getAttribute("current_schoolLocation");
+		 TransportVo tvo = new TransportVo();
+		try {
+			request.setAttribute(MessageConstants.MODULE_NAME,
+					MessageConstants.BACKOFFICE_STUDENT);
+			request.setAttribute(MessageConstants.HIGHLIGHT_NAME,
+					MessageConstants.MODULE_STUDENT);
+			request.setAttribute(LeftMenusHighlightMessageConstant.SUBMODULE_HIGHLIGHT_NAME,
+					LeftMenusHighlightMessageConstant.MODULE_STUDENT_STUDENTAPPRAISAL);
+			if(academic_year == null || academic_year == "" || academic_year.equalsIgnoreCase("")) {
+				academic_year = HelperClass.getCurrentYearID();
+			}
+			List<StudentRegistrationVo> list = new ArrayList<StudentRegistrationVo>();
+			ArrayList<ReportMenuVo> locationList = new ReportsMenuBD().getlocationList();
+			request.setAttribute("locationList", locationList);
+			ArrayList<ReportMenuVo> accYearList = new ReportsMenuBD().getAccYears();
+			request.setAttribute("AccYearList", accYearList);
+			ArrayList<TransportVo>  routelist = new TransportBD().getRouteName();
+			request.setAttribute("routelist", routelist);
+			request.setAttribute("successMessage", "");
+			request.setAttribute("errorMessage", "");
+			
+		}
+		catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in AdminMenuAction : StudentAppraisalReport Ending");			
+		
+		
+		return mapping.findForward(MessageConstants.UNIFORM_LIST);
+		
+	}
+	//
+
+	/*public ActionForward uniformlist(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 					throws Exception {
 
@@ -4016,7 +4065,7 @@ public class AdminMenuAction extends DispatchAction {
 				+ " Control in AdminMenuAction : uniformlist Ending");
 
 		return mapping.findForward(MessageConstants.UNIFORM_LIST);
-	}
+	}*/
 
 	public ActionForward addUniform(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)

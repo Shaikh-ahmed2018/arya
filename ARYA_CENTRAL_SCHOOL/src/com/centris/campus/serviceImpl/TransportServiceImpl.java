@@ -1295,6 +1295,12 @@ public class TransportServiceImpl implements TransportService {
 			String paymodeid,String paymenttype,String termId) {
 		
 		return transportdao.getFeeCollectionPaymodeReport(locationid,accyear,classid,setionid,paymodeid,paymenttype,termId);
+	}
+
+	@Override
+	public ArrayList<TransportVo> getRouteName() {
+		// TODO Auto-generated method stub
+		return null;
 	}	
 }
 

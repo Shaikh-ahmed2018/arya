@@ -17,8 +17,7 @@
 <title>eCampus Pro</title>
 
 <script type="text/javascript" src="JS/common.js"></script>
-<script type="text/javascript"
-	src="JS/backOffice/SMS/uniformList.js"></script>
+<script type="text/javascript" src="JS/backOffice/SMS/BusRoute.js"></script>
 
 <link href="CSS/newUI/bootstrap.min.css" rel="stylesheet">
 
@@ -140,10 +139,10 @@ vertical-align: -28px;
 								 
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;">School Name</label>
+										style="text-align: right; line-height: 35px;">School Name <font color="red">*</font></label>
 									<div class="col-xs-7">
 										<select id="locationname" name="locationnid" class="form-control" required>
-											<option value="all">ALL</option>
+											<option value="all">----------Select----------</option>
 											<logic:present name="locationList">
 												<logic:iterate id="Location" name="locationList">
 													<option value="<bean:write name="Location" property="locationId"/>"><bean:write name="Location" property="locationName" /></option>
@@ -152,26 +151,38 @@ vertical-align: -28px;
 										</select>
 									</div>
 								</div>
-									
-								
-								<div class="form-group clearfix">
+								<!--div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;"> Route Number</label>
+										style="text-align: right; line-height: 35px;"> Class <font color="red">*</font></label>
 									<div class="col-xs-7">
 									
 									<select class="form-control" onkeypress="HideError()" 
 											name="classname" id="classname">
-											<option value="all">ALL</option>
+											<option value="">----------Select----------</option>
 										</select>
+									
 									</div>
+								</div-->
+									
+								
+								<div class="form-group clearfix">
+								<label for="inputPassword" class="control-label col-xs-5"
+									id="inputnames" style="text-align: right;">Route</label>
+								<div class="col-xs-7">
+									<select id="route" name="route" class="form-control"
+										required >
+										<option value="all">ALL</option>
+										
+									</select>
 								</div>
+							</div>
 								
 								
 							<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;"> Message</label>
+										style="text-align: right; line-height: 35px;"> Message<font color="red">*</font></label>
 									<div class="col-xs-7">
-										<textarea  id="Message"name='StudentMessage' class="form-control" style=" width: 100%; height: 7%;"></textarea>
+										<textarea  id="BusMessage"name='StudentMessage' class="form-control" style=" width: 100%; height: 7%;"></textarea>
 									
 									</div>
 								</div>
@@ -181,9 +192,10 @@ vertical-align: -28px;
 							<div class="col-md-6" style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;margin-top: 20px;">
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;">Academic Year</label>
+										style="text-align: right; line-height: 35px;">Academic Year <font color="red">*</font></label>
 									<div class="col-xs-7">
 										<select id="Acyearid" name="accyear" class="form-control" required>
+											<option value="all">----------Select----------</option>
 											<logic:present name="AccYearList">
 												<logic:iterate id="AccYear" name="AccYearList">
 													<option	value="<bean:write name="AccYear" property="accyearId"/>"><bean:write name="AccYear" property="accyearname" /></option>
@@ -192,15 +204,24 @@ vertical-align: -28px;
 										</select>
 									</div>
 								</div>
+								<!--div class="form-group clearfix">
+									<label for="inputPassword" class="control-label col-xs-5"
+										style="text-align: right; line-height: 35px;">Division <font color="red">*</font></label>
+									<div class="col-xs-7">
+										<select id="sectionid" name="sectionid" class="form-control" required>
+											<option value="">----------Select----------</option>
+										</select>
+									</div>
+								</div-->
 						
 								
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;">Bus Point</label>
+										style="text-align: right; line-height: 35px;">Stop<font color="red">*</font></label>
 									<div class="col-xs-7">
-										<select id="sectionid" name="sectionid" class="form-control" required>
-											<option value="all">ALL</option>
-										</select>
+										<select class="form-control" id="stopname" name="stopname" style="width:100%;">
+												<option value="">----------Select----------</option>
+							    		</select>
 									</div>
 								</div>
 							
@@ -210,6 +231,7 @@ vertical-align: -28px;
 									<div class="col-xs-12">
 									<p align="right">
 								<button type="button" class="btn btn-info" id="preview" >Preview</button>
+								
 								<button type="button" class="btn btn-info" id="send" >Send</button>
 								<button type="reset" class="btn btn-info" id="resetbtn" >Reset</button>
 								</p>
@@ -311,7 +333,7 @@ vertical-align: -28px;
 
 					</logic:present> --%>
 					
-					<logic:present name="meetinglist" scope="request">
+				<%-- 		<logic:present name="meetinglist" scope="request">
 						<table class="table" id="allstudent">
 							<thead>
 							<tr>
@@ -338,15 +360,14 @@ vertical-align: -28px;
 							</logic:iterate>
 							</tbody>
 						</table>
-					</logic:present>
-					
+					</logic:present>--%>
 					
 
 				</div>
-				<div class="pagebanner"><select id="show_per_page"><option value="50">50</option><option value="100">100</option><option value="200">200</option><option value="300">300</option><option value="400">400</option><option value="500">500</option></select>
+				<!--div class="pagebanner"><select id="show_per_page"><option value="50">50</option><option value="100">100</option><option value="200">200</option><option value="300">300</option><option value="400">400</option><option value="500">500</option></select>
 					<span class="numberOfItem"></span>	
 				</div>
-				<div class="pagination pagelinks"></div>
+				<div class="pagination pagelinks"></div-->
 				<br />
 			</div>
 		</div>

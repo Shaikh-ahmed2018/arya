@@ -158,4 +158,6 @@ public interface TransportService {
 
 	public ArrayList<TransportVo> getFeeCollectionPaymodeReport(String locationid, String accyear, String classid,
 			String setionid, String paymodeid, String paymenttype, String termId);
+
+	public ArrayList<TransportVo> getRouteName();
 }

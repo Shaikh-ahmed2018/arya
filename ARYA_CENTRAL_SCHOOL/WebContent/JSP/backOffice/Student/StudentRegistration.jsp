@@ -1733,6 +1733,7 @@ display:block;
 											<option value="Punjabi">Punjabi</option>
 											<option value="Rajasthani">Rajasthani</option>
 											<option value="Magadhi/Magahi">Magadhi/Magahi</option>
+											<option value="Saurashtra">Saurashtra</option>
 											<option value="Chhattisgarhi">Chhattisgarhi</option>
 											<option value="Assamese">Assamese</option>
 											<option value="Maithili">Maithili</option>
