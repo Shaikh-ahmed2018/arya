@@ -17,7 +17,7 @@ public class TransportPojo {
 	private String hrouteCode;
 	private String halttime;
 	private String destination;
-	
+	private String droppoint;
 	
 	private String stopname;
 	private String arrivaltime;
@@ -35,6 +35,14 @@ public class TransportPojo {
 	private String monthCount;
 	
 	
+
+	public String getDroppoint() {
+		return droppoint;
+	}
+
+	public void setDroppoint(String droppoint) {
+		this.droppoint = droppoint;
+	}
 
 	public String getHrouteCode() {
 		return hrouteCode;

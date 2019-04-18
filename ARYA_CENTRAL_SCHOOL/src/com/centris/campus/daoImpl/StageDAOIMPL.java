@@ -221,8 +221,7 @@ public class StageDAOIMPL implements StageDAO
 			
 			stage_pstmt.setString(4, apojo.getCreateuser().trim());
 			stage_pstmt.setTimestamp(5, HelperClass.getCurrentTimestamp());
-			stage_pstmt.setString(6,apojo.getAccyear());
-			stage_pstmt.setString(7, apojo.getStageid().trim());
+			stage_pstmt.setString(6, apojo.getStageid().trim());
 			/* HelperClass.getCurrentTimestamp()*/
 			
 		

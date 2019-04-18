@@ -67,7 +67,17 @@ public class TransportVo {
 	private String paymentMode;
 	private String termName;
 	private double amount_paid_so_far;
+	private String droppoint;
 	
+	
+	public String getDroppoint() {
+		return droppoint;
+	}
+
+	public void setDroppoint(String droppoint) {
+		this.droppoint = droppoint;
+	}
+
 	public String getBilldate() {
 		return billdate;
 	}

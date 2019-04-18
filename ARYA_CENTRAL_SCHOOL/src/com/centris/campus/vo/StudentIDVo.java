@@ -28,8 +28,16 @@ public class StudentIDVo {
 	private String location_phone;
 	private String adharNo;
 	private String bgroup;
+	private String droppoint;
 	
 	
+	
+	public String getDroppoint() {
+		return droppoint;
+	}
+	public void setDroppoint(String droppoint) {
+		this.droppoint = droppoint;
+	}
 	public String getAdharNo() {
 		return adharNo;
 	}

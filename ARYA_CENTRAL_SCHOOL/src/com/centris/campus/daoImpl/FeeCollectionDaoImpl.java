@@ -2203,8 +2203,6 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 		ResultSet rs_collection_count=null;
 		PreparedStatement ps_feelist= null;
 		ResultSet rs_feelist=null;
-		PreparedStatement ps_transporttermStartMont= null;
-		ResultSet rs_transporttermStartMont=null;
 		
 		/*double amount_paid_so_far =0.00;
 		double opening_balance =0.00;*/
@@ -2229,7 +2227,6 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 			int end_month=0;
 			int month=0;
 			int startmonth=0;
-			int noOfMonth=0;
 			conn = JDBCConnection.getSeparateGodaddyConnection();
 		
 			ps_insertPlan = conn.prepareStatement(FeeCollectionSqlUtils.GET_TRANSPORT_FEECOLLECTION_DEDDER);
@@ -2257,7 +2254,6 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 				start_month=Integer.parseInt(rs.getString("srtm").split("-")[1]);
 				if(rs.getString("endm")!=null)
 				end_month=Integer.parseInt(rs.getString("endm").split("-")[1]);
-				noOfMonth=rs.getInt("NumberOfMonth");
 				
 				ps_feeInformation=conn.prepareStatement("SELECT termid,termname,CAST(SUBSTR(startdate,6,2) AS UNSIGNED) startmonth,TIMESTAMPDIFF(MONTH,startdate,enddate)+1 MONTH FROM campus_fee_transport_termdetails WHERE accyear=? AND locationId = ?");
 				ps_feeInformation.setString(1, accyearId);
@@ -2307,16 +2303,6 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 						stg.close();
 						
 						
-						stg=conn.prepareStatement("SELECT count(*) FROM campus_student_route_stage_mapping WHERE mapped_id=? AND accyear=?");
-						stg.setString(1, addmissionno);
-						stg.setString(2, accyearId);
-						
-						 srs=stg.executeQuery();
-						if(srs.next()) {
-							noOfMonth=srs.getInt(1);
-						}
-						srs.close();
-						stg.close();
 						if(feeCollectionCount==0){
 							
 								System.out.println("loop in condition "+i);	

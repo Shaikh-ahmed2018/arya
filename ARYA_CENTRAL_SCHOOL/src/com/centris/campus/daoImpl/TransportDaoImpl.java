@@ -4264,13 +4264,14 @@ return amountstatus;
 			System.out.println(pstmt);
 			count = pstmt.executeUpdate();
 			if(count > 0){
-				PreparedStatement insrt=conn.prepareStatement("INSERT INTO campus_student_route_stage_mapping (mapped_id,accyear,route_id,stage_id,month) VALUES(?,?,?,?,?)");
+				PreparedStatement insrt=conn.prepareStatement("INSERT INTO campus_student_route_stage_mapping (mapped_id,accyear,route_id,stage_id,month,drop_point) VALUES(?,?,?,?,?,?)");
 				for(int i=0;i<pojo.getEndmonth().split(",").length;i++) {
 					insrt.setString(1, pojo.getStuid());
 					insrt.setString(2,	pojo.getAccyear());
 					insrt.setString(3,	pojo.getRouteCode());
 					insrt.setString(4, pojo.getStageid());
 					insrt.setString(5, pojo.getEndmonth().split(",")[i]);
+					insrt.setString(6, pojo.getDroppoint());
 					insrt.executeUpdate();
 				}
 				
@@ -5388,7 +5389,7 @@ return amountstatus;
 		Connection connection = null;
 		try {
 			connection = JDBCConnection.getSeparateConnection();
-			pstmt = connection.prepareStatement("SELECT tr.RouteName,cfs.stage_name,mapp.month,mapp.id FROM  `campus_student_route_stage_mapping` mapp JOIN transport_route tr ON mapp.route_id=tr.RouteCode JOIN campus_fee_stage cfs ON mapp.stage_id=cfs.stage_id  WHERE mapp.mapped_id=? AND mapp.accyear=?");
+			pstmt = connection.prepareStatement("SELECT tr.RouteName,cfs.stage_name,drp.stage_name drop_point,mapp.month,mapp.id FROM  `campus_student_route_stage_mapping` mapp JOIN transport_route tr ON mapp.route_id=tr.RouteCode JOIN campus_fee_stage cfs ON mapp.stage_id=cfs.stage_id JOIN campus_fee_stage drp ON mapp.drop_point=drp.stage_id  WHERE mapp.mapped_id=? AND mapp.accyear=?");
 			pstmt.setString(1, tvo.getStudentId());
 			pstmt.setString(2, tvo.getAcy_id());
 			
@@ -5401,6 +5402,7 @@ return amountstatus;
 					obj.setStageName(resultSet.getString("stage_name"));
 					obj.setMonths(resultSet.getString("month"));
 					obj.setSno(resultSet.getInt("id"));
+					obj.setDroppoint(resultSet.getString("drop_point"));
 					routeList.add(obj);
 				}
 		} 
@@ -6096,6 +6098,145 @@ return amountstatus;
 	
 	
 	}
+
+	public List<StudentRegistrationVo> getStudentListforPrint(String locationid, String accyear, String classname,
+			String sectionid, String streamId, String flag) {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TransportDaoImpl : getStudentListforPrint  Starting");
+		List<StudentRegistrationVo> list = new ArrayList<StudentRegistrationVo>();
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		Connection conn = null;
+		int sno=0;
+
+		try {
+			conn = JDBCConnection.getSeparateConnection();
+			if(flag !=null && flag.equalsIgnoreCase("transport")){
+				pst = conn.prepareStatement(StudentRegistrationSQLUtilConstants.GET_FILTERED_STUDENTDETAILS_FOR_TRANSPORT_PRINT);
+			}
+			else{
+			pst = conn.prepareStatement(StudentRegistrationSQLUtilConstants.GET_FILTERED_STUDENTDETAILS_FOR_PRINT);
+			}
+			pst.setString(1, locationid);
+			pst.setString(2, accyear);
+			pst.setString(3, classname);
+			pst.setString(4, sectionid);
+			pst.setString(5, streamId);
+			System.out.println(pst);
+			rs = pst.executeQuery();
+			while (rs.next()) {
+				sno++;
+				StudentRegistrationVo registrationVo = new StudentRegistrationVo();
+				registrationVo.setCount(sno);
+				registrationVo.setStudentId(rs.getString("student_id_int"));
+				registrationVo.setLocationId(rs.getString("locationId"));
+				registrationVo.setAcademicYearId(rs.getString("fms_acadamicyear_id_int"));
+				registrationVo.setStudentAdmissionNo(rs.getString("student_admissionno_var"));
+				registrationVo.setStudentnamelabel(rs.getString("studentname"));
+				registrationVo.setClassname(rs.getString("classdetails_name_var"));
+				registrationVo.setSectionnaem(rs.getString("classsection_name_var"));
+				registrationVo.setAcademicYear(rs.getString("acadamic_year"));
+				registrationVo.setStudentrollno(rs.getString("student_rollno"));
+				registrationVo.setImage(rs.getString("student_imgurl_var"));
+
+				list.add(registrationVo);
+			}
+
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		} finally {
+			try {
+
+				if (rs != null && (!rs.isClosed())) {
+					rs.close();
+				}
+				if (pst != null && (!pst.isClosed())) {
+					pst.close();
+				}
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+			} catch (Exception e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			}
+		}
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TransportDaoImpl : getStudentListforPrint  Ending");
+
+		return list;
+	}
+
+	public ArrayList<TransportVo> getAllstoplist(TransportVo tvo) {
+		// TODO Auto-generated method stub
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		ArrayList<TransportVo> getroutenamelist = new ArrayList<TransportVo>();
+         try{
+         String stagecode =null;
+         conn = JDBCConnection.getSeparateConnection();
+		 pstmt =conn.prepareStatement("select StageCode from transport_route_stage_mapping where  accyear=?");
+		 pstmt.setString(1, tvo.getAccyear());
+	     rs = pstmt.executeQuery();
+	     while(rs.next())
+		 {   
+			  TransportVo setvo = new TransportVo();
+			  stagecode=(rs.getString("StageCode"));
+			  PreparedStatement pstmt1 =conn.prepareStatement("select stage_id,stage_name,amount from campus_fee_stage where stage_id=?");
+			  pstmt1.setString(1, stagecode);
+			  ResultSet rs1 = pstmt1.executeQuery();
+			 // System.out.println("stopname for transport:" +pstmt1);
+			  while(rs1.next())
+			  {   
+				  setvo.setStage_id(rs1.getString("stage_id"));
+				  setvo.setStopname(rs1.getString("stage_name"));
+				  setvo.setAmount(rs1.getInt("amount"));
+			  }
+
+			  getroutenamelist.add(setvo);
+		 }
+		 } 
+          catch (Exception e) 
+          {
+          e.printStackTrace();
+          }
+
+         try {
+        if (rs != null && (!rs.isClosed())) {
+		rs.close();
+        	}
+        	if (pstmt != null && (!pstmt.isClosed())) {
+		pstmt.close();
+        	}
+        	if (conn != null && !conn.isClosed()) {
+        	conn.close();
+        	}
+         	} catch (SQLException e) {
+	logger.error(e.getMessage(), e);
+	e.printStackTrace();
+         	} catch (Exception e1) {
+	logger.error(e1.getMessage(), e1);
+	e1.printStackTrace();
+         	}
+
+logger.setLevel(Level.DEBUG);
+JLogger.log(0, JDate.getTimeString(new Date())
++ MessageConstants.END_POINT);
+logger.info(JDate.getTimeString(new Date())
++ " Control in TransportDaoImpl: searchVehicletypeDetails Ending");
+
+return getroutenamelist;
+}
 
 }
 

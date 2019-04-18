@@ -61,7 +61,7 @@ public class SQLUtilConstants {
 	// stage master
 	public static final String GET_STAGEMASTER_DETAILS = "select cs.stage_id,cs.stage_name,cs.amount,cs.description from campus_fee_stage cs where cs.accyear=? order by stage_name";
 	public static final String INSERT_STAGE_DETAILS = "insert into campus_fee_stage (stage_id,stage_name,amount,description,createdby,accyear) values(?,?,?,?,?,?)";
-	public static final String UPDATE_STAGE_DETAILS = "update campus_fee_stage set stage_name= ?,amount= ?, description=?,modifiedby=?,modifiedtime=?,accyear=? where stage_id =?";
+	public static final String UPDATE_STAGE_DETAILS = "update campus_fee_stage set stage_name= ?,amount= ?, description=?,modifiedby=?,modifiedtime=? where stage_id =?";
 	public static final String EDIT_STAGE = "select stage_id,stage_name,amount,description,createdtime,createdby from campus_fee_stage where stage_id=?";
 	public static final String CHECK_STAGE_MAP = "select count(*) from transport_route_stage_mapping where stagecode =?";
 	public static final String DELETE_STAGEMASTER = "delete from campus_fee_stage where stage_id=?";

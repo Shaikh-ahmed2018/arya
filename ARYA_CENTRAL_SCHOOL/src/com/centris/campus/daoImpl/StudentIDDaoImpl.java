@@ -205,6 +205,7 @@ public class StudentIDDaoImpl implements StudentIDDao {
 				studentlist.setAdmissionno(rs.getString("student_admissionno_var"));
 				studentlist.setRoute_no(rs.getString("Route_No"));
 				studentlist.setPoint_name(rs.getString("stage_name"));
+				studentlist.setDroppoint(rs.getString("drop_point"));
 				studentlist.setSchoolName(rs.getString("Location_Name"));
 				String image=rs.getString("student_imgurl_var");
 				studentlist.setImage(image);
