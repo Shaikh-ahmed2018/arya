@@ -137,6 +137,10 @@ border:2px solid #cccccc !important;
 					<span class="label" style="width:36px;">Point :</span><span id="pointr" class="pointr"><bean:write name="StudentList" property="point_name"/></span>
 				</div>
 				
+				<div class="droppoint" id="droppoint">
+					<span class="label" style="width:70px;">Drop Point :</span><span id="droppointr" class="droppointr"><bean:write name="StudentList" property="droppoint"/></span>
+				</div>
+				
 			<div class="routetext" id="routetext"><span id="routeh" class="routeh">Route No</span></div>
 					<div class="routeNo" id="routeNo">
 						<span id="route" class="route"><bean:write name="StudentList" property="route_no"/></span>

@@ -233,11 +233,5 @@ cursor: pointer;
 		</div>
 	</div>
 
-	<script>
-		$('.carousel').carousel({
-			interval : 5000
-		//changes the speed
-		})
-	</script>
 </body>
 </html>

@@ -15,28 +15,25 @@
 <meta name="author" content="">
 <script type="text/javascript" src="JS/backOffice/Settings/StageDetails.js"></script>
 <script type="text/javascript" src="JS/common.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" src="JQUERY/js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.button.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.dialog.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.draggable.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.position.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.resizable.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.datepicker.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.effect.js"></script>
+<link href="JQUERY/css/jquery.ui.all.css" rel="stylesheet" type="text/css">
 
-
-	$('.carousel').carousel({
-		interval : 5000
-	//changes the speed
-	})
-	$(document).scroll(function() {
-		var y = $(this).scrollTop();
-		if (y > 100) {
-			$('.topimg').fadeIn();
-		} else {
-			$('.topimg').fadeOut();
-		}
-	});
-</script>
-<script>
-	$('.carousel').carousel({
-		interval : 5000
-	//changes the speed
-	})
-</script><style>
+<link href="CSS/newUI/bootstrap.min.css" rel="stylesheet">
+<link href="CSS/newUI/modern-business.css" rel="stylesheet">
+<link href="CSS/newUI/custome.css" rel="stylesheet">
+<link href="CSS/newUI/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<style>
 .buttons{
 
 vertical-align: 0px;

@@ -209,6 +209,9 @@
 				<div class="point" id="point">
 					<span class="label" style="width:36px;">Point:</span><span id="pointr">Annor</span>
 				</div>
+				<div class="droppoint" id="droppoint">
+					<span class="label" style="width:70px;">Drop point:</span><span id="droppointr">Annor</span>
+				</div>
 				<div class="routetext" id="routetext"><span id="routeh" class="routeh">Route No</span></div>
 
 					<div class="routeNo" id="routeNo">
