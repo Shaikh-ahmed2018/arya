@@ -2308,6 +2308,28 @@ public ActionForward getstoplist(ActionMapping mapping,ActionForm form,HttpServl
 		}
 	return null;
 }
+
+public ActionForward getAllstoplist(ActionMapping mapping,ActionForm form,HttpServletRequest request,HttpServletResponse response){
+	try
+	{
+	 String accyear=request.getParameter("accyear");
+	 TransportVo tvo = new TransportVo();
+	 
+	 tvo.setAccyear(accyear);
+	 
+	 ArrayList<TransportVo>  stoplist = new TransportDaoImpl().getAllstoplist(tvo);
+	 JSONObject jsonObject = new JSONObject(stoplist);
+	 jsonObject.accumulate("stoplist", stoplist);
+	 response.getWriter().print(jsonObject);
+	 
+	
+	}
+	 catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+	return null;
+}
 public ActionForward getamount(ActionMapping mapping,ActionForm form,HttpServletRequest request,HttpServletResponse response){
 	try
 	{
@@ -2345,7 +2367,7 @@ public ActionForward savetransportrequest(ActionMapping mapping,ActionForm form,
 		pojo.setStmonth(request.getParameter("stmonths"));
 		pojo.setEndmonth(request.getParameter("endmonth"));
 		pojo.setMonthCount(request.getParameter("monthCount"));
-		
+		pojo.setDroppoint(request.getParameter("droppoint"));
 		String  savetransport = new TransportBD().savetransportrequest(pojo);
 		JSONObject jsonobj = new JSONObject();
 		jsonobj.put("status",savetransport);

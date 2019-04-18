@@ -63,6 +63,7 @@ import com.centris.campus.daoImpl.JDBCConnection;
 import com.centris.campus.daoImpl.StudentIDDaoImpl;
 import com.centris.campus.daoImpl.StudentRegistrationDaoImpl;
 import com.centris.campus.daoImpl.TimeTableDaoImpl;
+import com.centris.campus.daoImpl.TransportDaoImpl;
 import com.centris.campus.delegate.AbsentSMSBD;
 import com.centris.campus.delegate.AcadamicYearPlanBD;
 import com.centris.campus.delegate.AddDesignationBD;
@@ -8996,6 +8997,7 @@ public class AdminMenuAction extends DispatchAction {
 				vo.setRoute_no(studentList.get(i).getRoute_no());
 				vo.setPoint_name(studentList.get(i).getPoint_name());
 				vo.setSchoolName(studentList.get(i).getSchoolName());
+				vo.setDroppoint(studentList.get(i).getDroppoint());
 				list.add(vo);
 
 			}
@@ -11187,7 +11189,7 @@ public ActionForward electionList(ActionMapping mapping, ActionForm form,
 
 			List<StudentRegistrationVo> list = new ArrayList<StudentRegistrationVo>();
 
-			list = new IDGenerator().getStudentListforPrint(locationid,accyear,classname,sectionid,streamId,flag);
+			list = new TransportDaoImpl().getStudentListforPrint(locationid,accyear,classname,sectionid,streamId,flag);
 				
 				JSONObject jsonobj = new JSONObject();
 				jsonobj.put("getSectionWiseList", list);
