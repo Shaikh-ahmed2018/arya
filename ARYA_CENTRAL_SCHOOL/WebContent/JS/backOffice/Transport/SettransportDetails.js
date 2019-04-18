@@ -17,6 +17,7 @@ $(document).ready(function(){
 			$(".amount").val("");
 			var routeid = $(this).val();
 			getstoplist(routeid);
+			getAllstoplist();
 			
 	});
 	$(".stopname").change(function(){
@@ -150,6 +151,7 @@ $(document).ready(function(){
 				"accyear" : $("#hiddenaccyid").val(),
 				"routeid" : $(".routename").val(),
 				"stageid" : $(".stopname").val(),
+				"droppoint":$(".drop-point").val(),
 				"stmonths" : $("#startmonth").val(),
 				"endmonth" :$("#endmonth").val(),
 				"monthCount":monthCount,
@@ -173,7 +175,17 @@ $(document).ready(function(){
 				$('.errormessagediv').fadeOut();
 			}, 3000);
 			return false;
-		}else if($("#month").val() == "" || $("#month").val() == undefined){
+		}else if($(".drop-point").val() == "" || $(".drop-point").val() == undefined){
+			$(".errormessagediv").show();
+			$(".validateTips").text("Field Required - Drop Point");
+			document.getElementById("droppoint").style.border = "1px solid #AF2C2C";
+			document.getElementById("droppoint").style.backgroundColor = "#FFF7F7";
+			setTimeout(function() {
+				$('.errormessagediv').fadeOut();
+			}, 3000);
+			return false;
+		}
+		else if($("#month").val() == "" || $("#month").val() == undefined){
 			$(".errormessagediv").show();
 			$(".validateTips").text("Field Required - Month");
 			document.getElementById("month").style.border = "1px solid #AF2C2C";
@@ -274,10 +286,41 @@ $(document).ready(function(){
 
 										+ '</option>');
 							}
+							
 					}
 				});
 		}
-   
+   function getAllstoplist(){
+
+	   datalist = {
+			
+				"accyear":$("#hiddenaccyid").val()
+			}, $.ajax({
+				type : 'POST',
+				url : "transport.html?method=getAllstoplist",
+				data : datalist,
+	 			async : false,
+				
+				success : function(response) {
+					
+					var result = $.parseJSON(response);
+						
+						
+						$(".drop-point").empty();
+						$('.drop-point').append('<option value="">' + "----------Select----------"	+ '</option>');
+						for ( var j = 0; j < result.stoplist.length; j++) {
+	                       
+							$('.drop-point').append('<option value="'
+
+									+ result.stoplist[j].stage_id + '">'
+
+									+ result.stoplist[j].stopname
+
+									+ '</option>');
+						}
+				}
+			});
+	}
    
    function getamountandstatus(stageid,pointer)
    {
