@@ -68,7 +68,7 @@
 	color: #fff;
 }
 .table {
-    width: 70%;
+    width: 80%;
     max-width: 100%;
     margin-bottom: 20px;
     margin: 0 auto;
@@ -318,6 +318,7 @@ line-height: 1;
 															<tr>
 																<th style="font-size: 15px; text-align: center;">Route</th>
 																<th style="font-size: 15px; text-align: center;">Stop</th>
+																<th style="font-size: 15px; text-align: center;">Drop Point</th>
 																<th style="font-size: 15px; text-align: center;">Amount</th>
 																<th style="font-size: 15px; text-align: center;">Month</th>
 															</tr>
@@ -327,6 +328,10 @@ line-height: 1;
 							    									</select>
 							    								</td>
 																<td><select class="stopname" id="stopname" name="stop" style="width:100%;">
+																	<option value="">----------Select----------</option>
+							    									</select>
+							    								</td>
+							    								<td><select class="drop-point" id="droppoint" name="droppoint" style="width:100%;">
 																	<option value="">----------Select----------</option>
 							    									</select>
 							    								</td>
@@ -346,6 +351,7 @@ line-height: 1;
 											<tr>
 												<th>Route</th>
 												<th>Stage</th>
+												<th>Drop Point</th>
 												<th>Month</th>
 												<th>Delete</th>
 											</tr>
@@ -357,6 +363,7 @@ line-height: 1;
 													<tr id='<bean:write name="mappingList" property="sno"/>'>
 														<td><bean:write name="mappingList" property="routeName"/></td>
 														<td><bean:write name="mappingList" property="stageName"/></td>
+														<td><bean:write name="mappingList" property="droppoint"/></td>
 														<td><bean:write name="mappingList" property="months"/></td>
 														<td><span class="glyphicon glyphicon-trash delete"  style="position: absolute;top:0;bottom:0;margin:auto;"></span></td>
 													</tr>									
