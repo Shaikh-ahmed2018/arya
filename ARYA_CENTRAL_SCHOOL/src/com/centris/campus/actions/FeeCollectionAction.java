@@ -1502,6 +1502,7 @@ public class FeeCollectionAction extends DispatchAction {
 			String academicYear=request.getParameter("accyearId");
 			String feecode=request.getParameter("feeCode");
 			String feeAmount=request.getParameter("feeAmount");
+			String term=request.getParameter("term");
 			
 			StudentConcessionVo vo = new StudentConcessionVo();
 
@@ -1509,7 +1510,7 @@ public class FeeCollectionAction extends DispatchAction {
 			vo.setStudentId(studentId);
 			vo.setConcessionAmount(feeAmount);
 			vo.setFeecode(feecode);
-			
+			vo.setTerm(term);
 			String status = new FeeCollectionDaoImpl().addSpecialFee(vo);
 			JSONObject obj=new JSONObject();
 			obj.put("status", status);
