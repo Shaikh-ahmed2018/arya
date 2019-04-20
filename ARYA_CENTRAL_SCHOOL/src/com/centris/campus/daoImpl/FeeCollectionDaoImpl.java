@@ -64,9 +64,10 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 			try {
 				
 				conn = JDBCConnection.getSeparateGodaddyConnection();
-				ps1=conn.prepareStatement("SELECT sp.feeCode,sp.feeAmount,ms.FeeName FROM `campus_fee_specialfee_setup` sp JOIN `campus_fee_master` ms ON sp.feeCode=ms.FeeCode WHERE sp.`student_id`=? AND sp.`accyear`=?");
+				ps1=conn.prepareStatement("SELECT sp.feeCode,sp.feeAmount,ms.FeeName FROM `campus_fee_specialfee_setup` sp JOIN `campus_fee_master` ms ON sp.feeCode=ms.FeeCode WHERE sp.`student_id`=? AND sp.`accyear`=? AND termid=?");
 				ps1.setString(1, studentId);
 				ps1.setString(2, accyearId);
+				ps1.setString(3, termId);
 				System.out.println("ps1="+ps1);
 				
 				rs1=ps1.executeQuery();
@@ -92,6 +93,7 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 					ps_feelist.setString(4, specialization);
 					ps_feelist.setString(5, studentId);
 					ps_feelist.setString(6, accyearId);
+					ps_feelist.setString(7, termId);
 					System.out.println("fee name list :: "+ps_feelist);
 					rs_feelist=ps_feelist.executeQuery();
 				
@@ -354,14 +356,28 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 							
 							ps_feelist=conn.prepareStatement(FeeCollectionSqlUtils.GET_FEECOLLECTION_TOTAL_AMOUNT);
 							ps_feelist.setString(1, feeSettingcode);
+							ps_feelist.setString(2, addmissionno);
+							ps_feelist.setString(3, accyearId);
+							ps_feelist.setString(4, termId);
 							rs_feelist=ps_feelist.executeQuery();
 							while(rs_feelist.next()){
+								double splFeeAmount=0.0;
 								
+								PreparedStatement splfee=conn.prepareStatement("SELECT SUM(feeAmount) totalAmount FROM `campus_fee_specialfee_setup` WHERE `student_id`=? AND `accyear`=? AND termid=?");
+								splfee.setString(1,addmissionno);
+								splfee.setString(2,accyearId);
+								splfee.setString(3,termId);
+								ResultSet splrs=splfee.executeQuery();
+								while(splrs.next()) {
+									splFeeAmount=splrs.getDouble("totalAmount");
+								}
+								splrs.close();
+								splfee.close();	
 								FeeNameVo feeNameVo=new FeeNameVo();
 								count++;
 								feeNameVo.setSno(count);
-								feeNameVo.setActualAmt(rs_feelist.getDouble("totalFeeAmount"));
-								feeNameVo.setPayingAmountArray(rs_feelist.getDouble("totalFeeAmount"));
+								feeNameVo.setActualAmt(rs_feelist.getDouble("totalFeeAmount")+splFeeAmount);
+								feeNameVo.setPayingAmountArray(rs_feelist.getDouble("totalFeeAmount")+splFeeAmount);
 								feeNameVo.setStatus("Not Paid");
 								feeNameVo.setTerm(termname);
 								feeNameVo.setTermId(termId);
@@ -3421,11 +3437,12 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 		try {
 			
 			conn = JDBCConnection.getSeparateGodaddyConnection();
-			ps_check=conn.prepareStatement("SELECT COUNT(*),id FROM campus_fee_specialfee_setup WHERE student_id=? AND accyear=? AND feeCode=?");
+			ps_check=conn.prepareStatement("SELECT COUNT(*),id FROM campus_fee_specialfee_setup WHERE student_id=? AND accyear=? AND feeCode=? AND termid=?");
 		
 			ps_check.setString(1, vo.getStudentId());
 			ps_check.setString(2, vo.getAcademicYear());
 			ps_check.setString(3, vo.getFeecode());
+			ps_check.setString(4, vo.getTerm());
 			rs_check=ps_check.executeQuery();
 			if(rs_check.next()){
 				countcheck=rs_check.getInt(1);
@@ -3433,12 +3450,12 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 			}
 		if(countcheck ==0){	
 			
-			ps_insertPlan=conn.prepareStatement("INSERT INTO campus_fee_specialfee_setup (student_id,accyear,feeCode,feeAmount) VALUES(?,?,?,?)");
+			ps_insertPlan=conn.prepareStatement("INSERT INTO campus_fee_specialfee_setup (student_id,accyear,feeCode,feeAmount,termid) VALUES(?,?,?,?,?)");
 			ps_insertPlan.setString(1, vo.getStudentId());
 			ps_insertPlan.setString(2, vo.getAcademicYear());
 			ps_insertPlan.setString(3, vo.getFeecode());
 			ps_insertPlan.setString(4, vo.getConcessionAmount());
-			
+			ps_insertPlan.setString(5, vo.getTerm());
 			count=ps_insertPlan.executeUpdate();
 			if(count>0){
 				status="true";

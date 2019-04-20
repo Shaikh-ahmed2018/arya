@@ -10772,16 +10772,16 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 				pst.setString(4, data.getSection_id());
 				}
 				
-				pst.setString(5, "%" + data.getSearchTerm() + "%");
-				pst.setString(6, "%" + data.getSearchTerm() + "%");
-				pst.setString(7, "%" + data.getSearchTerm() + "%");
-				pst.setString(8, "%" + data.getSearchTerm() + "%");
-				pst.setString(9, "%" + data.getSearchTerm() + "%");
-				pst.setString(10, "%" + data.getSearchTerm() + "%");
-				pst.setString(11, "%" + data.getSearchTerm() + "%");
-				pst.setString(12, "%" + data.getSearchTerm() + "%");
-				pst.setString(13, "%" + data.getSearchTerm() + "%");
-				pst.setString(14, "%" + data.getSearchTerm() + "%");
+				pst.setString(5, data.getSearchTerm() + "%");
+				pst.setString(6, data.getSearchTerm() + "%");
+				pst.setString(7, data.getSearchTerm() + "%");
+				pst.setString(8,data.getSearchTerm() + "%");
+				pst.setString(9,data.getSearchTerm() + "%");
+				pst.setString(10,data.getSearchTerm() + "%");
+				pst.setString(11,data.getSearchTerm() + "%");
+				pst.setString(12,data.getSearchTerm() + "%");
+				pst.setString(13,data.getSearchTerm() + "%");
+				pst.setString(14,data.getSearchTerm() + "%");
 				pst.setString(15, data.getAcademicYear());
 		
 			}
