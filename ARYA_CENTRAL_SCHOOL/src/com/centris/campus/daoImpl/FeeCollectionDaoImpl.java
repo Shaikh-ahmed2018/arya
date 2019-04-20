@@ -64,13 +64,34 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 			try {
 				
 				conn = JDBCConnection.getSeparateGodaddyConnection();
+				ps1=conn.prepareStatement("SELECT sp.feeCode,sp.feeAmount,ms.FeeName FROM `campus_fee_specialfee_setup` sp JOIN `campus_fee_master` ms ON sp.feeCode=ms.FeeCode WHERE sp.`student_id`=? AND sp.`accyear`=?");
+				ps1.setString(1, studentId);
+				ps1.setString(2, accyearId);
+				System.out.println("ps1="+ps1);
+				
+				rs1=ps1.executeQuery();
+				while(rs1.next()) {
 					
+					count++;
+					FeeNameVo feeNameVo=new FeeNameVo();
+					feeNameVo.setSno(count);
+					feeNameVo.setFeecode(rs1.getString("FeeCode"));
+					feeNameVo.setFeename(rs1.getString("FeeName"));
+					
+					double actualamt=rs1.getDouble("feeAmount");
+					
+					
+					feeNameVo.setActualAmt(actualamt);
+					feeCollectionList.add(feeNameVo);
+				}
+				
 					ps_feelist=conn.prepareStatement(FeeCollectionSqlUtils.GET_FEECOLLECTION_AMOUNT);
 					ps_feelist.setString(1, classId);
 					ps_feelist.setString(2, accyearId);
 					ps_feelist.setString(3, termId);
 					ps_feelist.setString(4, specialization);
-					
+					ps_feelist.setString(5, studentId);
+					ps_feelist.setString(6, accyearId);
 					System.out.println("fee name list :: "+ps_feelist);
 					rs_feelist=ps_feelist.executeQuery();
 				
@@ -3378,6 +3399,105 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 				+ MessageConstants.END_POINT);
 		logger.info(JDate.getTimeString(new Date())
 				+ " Control in FeeCollectionDaoImpl: addScholorshipStudentForEqual: Ending");
+		
+		return status;
+	}
+
+	public String addSpecialFee(StudentConcessionVo vo) {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in FeeCollectionDaoImpl: addSpecialFee : Starting");
+		Connection conn = null;
+		PreparedStatement ps_insertPlan = null;
+		PreparedStatement ps_check=null;
+		ResultSet rs_check=null;
+		int count=0;
+		int countcheck=0;
+		int id=0;
+		String status=null;
+		
+		try {
+			
+			conn = JDBCConnection.getSeparateGodaddyConnection();
+			ps_check=conn.prepareStatement("SELECT COUNT(*),id FROM campus_fee_specialfee_setup WHERE student_id=? AND accyear=? AND feeCode=?");
+		
+			ps_check.setString(1, vo.getStudentId());
+			ps_check.setString(2, vo.getAcademicYear());
+			ps_check.setString(3, vo.getFeecode());
+			rs_check=ps_check.executeQuery();
+			if(rs_check.next()){
+				countcheck=rs_check.getInt(1);
+				id=rs_check.getInt(2);
+			}
+		if(countcheck ==0){	
+			
+			ps_insertPlan=conn.prepareStatement("INSERT INTO campus_fee_specialfee_setup (student_id,accyear,feeCode,feeAmount) VALUES(?,?,?,?)");
+			ps_insertPlan.setString(1, vo.getStudentId());
+			ps_insertPlan.setString(2, vo.getAcademicYear());
+			ps_insertPlan.setString(3, vo.getFeecode());
+			ps_insertPlan.setString(4, vo.getConcessionAmount());
+			
+			count=ps_insertPlan.executeUpdate();
+			if(count>0){
+				status="true";
+			}
+			else{
+				status="false";
+			}
+		
+		
+		}
+		else{
+				ps_insertPlan=conn.prepareStatement("UPDATE campus_fee_specialfee_setup SET feeAmount=? WHERE id=?");
+				ps_insertPlan.setString(1, vo.getConcessionAmount());
+				ps_insertPlan.setInt(2, id);
+				count=ps_insertPlan.executeUpdate();
+				if(count>0){
+					status="true";
+				}
+				else{
+					status="false";
+				}
+			
+			
+		
+			
+		}
+			
+		} catch (SQLException e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		} catch (Exception e1) {
+			logger.error(e1.getMessage(), e1);
+			e1.printStackTrace();
+		} finally {
+			try {
+				
+				if (ps_insertPlan != null&& (!ps_insertPlan.isClosed())) {
+					ps_insertPlan.close();
+				}
+				
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+			} catch (SQLException sqle) {
+
+				logger.error(sqle.getMessage(), sqle);
+				sqle.printStackTrace();
+			} catch (Exception e1) {
+
+				logger.error(e1.getMessage(), e1);
+				e1.printStackTrace();
+			}
+		}
+
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in FeeCollectionDaoImpl: addSpecialFee: Ending");
 		
 		return status;
 	}
