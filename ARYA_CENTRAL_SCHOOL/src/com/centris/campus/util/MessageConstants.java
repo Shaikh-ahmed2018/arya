@@ -355,6 +355,7 @@ public class MessageConstants {
 	public static final String DELETE_WARNING_DRIVER = "Driver not Deleted Successfully";
 
 	// CLass Feesetup
+	public static final String SPECIAL_FEE_SETUP="SpecialFeeSetup";
 	public static final String CLASS_FEE_SETUP = "ClassFeeSetup";
 	public static final String FEE_SETUP_ENTRY = "ClassFeeSetupEntry";
 	public static final String FEE_APPROVE_SUCCESS = "Fee List  Approved Sucessfully";

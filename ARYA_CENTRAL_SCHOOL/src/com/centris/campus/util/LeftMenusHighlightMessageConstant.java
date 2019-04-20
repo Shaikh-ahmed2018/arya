@@ -88,7 +88,7 @@ public class LeftMenusHighlightMessageConstant {
 	public static final String MODULE_FEE_EXCELUPLOAD = "sub_module_4_6";
 	public static final String MODULE_FEE_SCHOLORSHIP = "sub_module_4_7";
 	public static final String MODULE_FEE_CANCELLATION="sub_module_4_8";
-	
+	public static final String MODULE_FEE_SPECIALFEESETUP = "sub_module_4_9";
 	/*FEE END*/
 	
 	/*EXAM START*/
