@@ -179,9 +179,10 @@ background-color: rgba(0, 158, 0, 0.66);
 												<th>Sl.No.</th>
 												<th class="sortable">Academic Year</th>
 												<th class="sortable">Admission No</th>
-												<th class="sortable">Student Name</th>
-												<th class="sortable">Class and Section</th>
+												<th class="sortable">Name</th>
+												<th class="sortable">Class & Div.</th>
 												<th class="sortable">Fee Name</th>
+												<th class="sortable">Term</th>
 												<th class="sortable">Amount</th>
 												<th class="sortable">Action</th>
 											</tr>
