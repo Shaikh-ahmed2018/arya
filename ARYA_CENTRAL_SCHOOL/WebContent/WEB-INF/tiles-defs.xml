@@ -1051,9 +1051,14 @@
 		<put name="body" value="/JSP/backOffice/Teachers/LeaveStatusApproval.jsp"></put>
 	    </definition>
 	    
-	     <definition name="FeeCollectionList" extends="backOffice_fee">
+	   <definition name="FeeCollectionList" extends="backOffice_fee">
 	    <put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
 		<put name="body" value="/JSP/backOffice/Fee/FeeCollectionList.jsp"></put>
+	    </definition>
+	    
+	    <definition name="SpecialFeeSetup" extends="backOffice_fee">
+	    <put name="menu" value="/LAYOUT/backOffice_fee_menu.jsp" />
+		<put name="body" value="/JSP/backOffice/Fee/SpecialFeeSetup.jsp"></put>
 	    </definition>
 	      <definition name="payroll" extends="backOffice_staff">
 		<put name="menu" value="/LAYOUT/backOffice_staff_menu.jsp" />

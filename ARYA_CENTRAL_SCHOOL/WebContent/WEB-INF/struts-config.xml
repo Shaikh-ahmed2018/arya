@@ -233,6 +233,7 @@
 			<forward name="remarksList" path="remarksList"></forward>
 			<forward name="staffattendance" path="staffattendance"></forward>
 			<forward name="FeeCollectionList" path="FeeCollectionList"></forward>
+			<forward name="SpecialFeeSetup" path="SpecialFeeSetup"></forward>
 			<forward name="staffattendance" path="staffattendance"></forward>
 			<forward name="FeeCollection" path="FeeCollection"></forward>
 			<forward name="payroll" path="payroll"></forward>
