@@ -1487,4 +1487,44 @@ public class FeeCollectionAction extends DispatchAction {
 	}
 	
 	
+	public ActionForward saveSpecialFee(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+					throws Exception {
+		
+
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in FeeCollectionAction : saveSpecialFee Starting");
+		try {
+			String studentId=request.getParameter("studentId");
+			String academicYear=request.getParameter("accyearId");
+			String feecode=request.getParameter("feeCode");
+			String feeAmount=request.getParameter("feeAmount");
+			
+			StudentConcessionVo vo = new StudentConcessionVo();
+
+			vo.setAcademicYear(academicYear);
+			vo.setStudentId(studentId);
+			vo.setConcessionAmount(feeAmount);
+			vo.setFeecode(feecode);
+			
+			String status = new FeeCollectionDaoImpl().addSpecialFee(vo);
+			JSONObject obj=new JSONObject();
+			obj.put("status", status);
+			response.getWriter().print(obj);
+
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in FeeCollectionAction : saveSpecialFee Ending");
+
+		return null;
+	}
 }

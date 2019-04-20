@@ -14466,5 +14466,70 @@ public ActionForward electionList(ActionMapping mapping, ActionForm form,
 
 		return null;
 	}
+	public ActionForward specialFeeSetup(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in AdminMenuAction : specialFeeSetup Starting");
+
+		try {
+
+			request.setAttribute(MessageConstants.MODULE_NAME,
+					MessageConstants.BACKOFFICE_FEE);
+
+			request.setAttribute(MessageConstants.HIGHLIGHT_NAME,
+					MessageConstants.MODULE_FEE);
+			request.setAttribute(LeftMenusHighlightMessageConstant.SUBMODULE_HIGHLIGHT_NAME,
+					LeftMenusHighlightMessageConstant.MODULE_FEE_SPECIALFEESETUP);
+			
+			ArrayList<ReportMenuVo> locationList = new ReportsMenuBD().getlocationList();
+			request.setAttribute("locationList", locationList);
+
+			ArrayList<ReportMenuVo> accYearList = new ReportsMenuBD().getAccYears();
+			request.setAttribute("AccYearList", accYearList);
+
+			System.out.println(request.getSession(false)
+					.getAttribute("current_academicYear").toString());
+			String currentaccyear = request.getSession(false)
+					.getAttribute("current_academicYear").toString();
+			String searchTerm = request.getParameter("searchTerm");
+
+			String locationId=(String) request.getSession(false).getAttribute("current_schoolLocation");
+			ArrayList<ClassFeeSetupVo> classSetupList = new ArrayList<ClassFeeSetupVo>();
+
+			if(locationId.equalsIgnoreCase("all")){
+				locationId="%%";
+			}
+			if (searchTerm == null || "".equalsIgnoreCase(searchTerm)) {
+
+				classSetupList = new ClassFeeSetupBD()
+				.getFeeSetupDetails(currentaccyear+","+locationId);
+
+			} else {
+
+				classSetupList = new ClassFeeSetupBD()
+				.getSearchFeeSetupDetails(searchTerm, currentaccyear);
+
+			}
+
+			request.setAttribute("classfeesetupSerchTerm", searchTerm);
+
+			request.setAttribute("classSetupList", classSetupList);
+
+		} catch (Exception exception) {
+			exception.printStackTrace();
+		}
+
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in AdminMenuAction : specialFeeSetup Ending");
+
+		return mapping.findForward(MessageConstants.SPECIAL_FEE_SETUP);
+	}
 }
 
