@@ -63,6 +63,17 @@ color: #FFF !important;
 							</logic:present>
 							
 						
+						<logic:present name="UserDetails" scope="session">
+								 <logic:iterate id="daymap" name="UserDetails" property="permissionmap" scope="session">
+									<logic:equal value="CLSFEEDIS" name="daymap" property="key">
+										<logic:equal value="true" name="daymap" property="value">
+										
+										<li><a href="adminMenu.html?method=specialFeeSetup" id="sub_module_4_9">Special Fee Setup</a></li>
+										
+										</logic:equal>
+									</logic:equal>
+								</logic:iterate>
+							</logic:present>
 							
 							<logic:present name="UserDetails" scope="session">
 								 <logic:iterate id="daymap" name="UserDetails" property="permissionmap" scope="session">
