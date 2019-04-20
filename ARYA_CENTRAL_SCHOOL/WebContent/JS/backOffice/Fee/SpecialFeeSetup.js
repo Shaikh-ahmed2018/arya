@@ -55,7 +55,27 @@ function getSpecialFee(locationId,accyearId,specialFee){
 		}
 	});
 }
+function getTermListByJs(locationId,accyear,specialFee){
+		$.ajax({
+			type:'POST',
+			url:'termfee.html?method=termListByJs',
+			data:{"locationId":locationId,"accyear":accyear},
+			async:false,
+			success:function(response){
+				var result=$.parseJSON(response);
+			
+			$(specialFee).html("");
+			
+			
+			for(var i=0;i<result.termlist.length;i++){
 
+				$(specialFee).append('<option value="' + result.termlist[i].termid
+						+ '">' + result.termlist[i].termname
+						+ '</option>');
+			}
+		}
+	});
+}
 function handle(event){
 	if(event.keyCode==13){
 		var stuId=$("#searchvalue").val().trim();
@@ -94,14 +114,14 @@ function getStudentListByJs(locationId,academicYear,classId,divisionId,searchTer
 							"<td>"+rel.studentAdmissionNo+"</td>" +
 							"<td>"+rel.studentFullName+"</td>" +
 							"<td>"+rel.classSectionId+"</td>" +
-							"<td><select id='specialFee' name='accyear' class='form-control' required>" +
-							"</select></td>" +
+							"<td><select id='specialFee' name='accyear' class='form-control' required></select></td>" +
+							"<td><select id='term' name='term' class='form-control' required></select></td>" +
 							"<td><input type='text' name='specialFeeAmount' id='specialFeeAmount' maxlength='50' value='0.0' style='text-align: right;'></td>" +
 							"<td><button type='button' class='btn btn-info' onclick='SpecialFeeSave(this);'>Save</button></td>" +
 							"</tr>");
 					
 					getSpecialFee(rel.locationId,rel.academicYearId,"#specialFee");
-					
+					getTermListByJs(rel.locationId,rel.academicYearId,"#term");
 				}
 			
 			}
@@ -119,6 +139,7 @@ function SpecialFeeSave(pointer){
 			"accyearId":$(pointer).closest("tr").attr("class").split(" ")[1],
 			"feeCode":$("#specialFee").val(),
 			"feeAmount":$("#specialFeeAmount").val(),
+			"term":$("#term").val(),
 	};
 	$.ajax({
 		type:'POST',
