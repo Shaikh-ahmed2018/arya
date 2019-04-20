@@ -323,7 +323,8 @@ function feeCollectionDetails(pointer){
 	var dataList={'term':pointer.closest("tr").find(".heading").attr("id"),
 			'accYear':$("#haccYear").val(),
 			'classId':$("#hclassId").val(),
-			'specialization':$("#hspecialization").val()
+			'specialization':$("#hspecialization").val(),
+			'student':$("#hstudentid").val()
 			};
 	$.ajax({
 		type:'post',
