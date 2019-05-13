@@ -131,7 +131,7 @@ $("#search").click(function(){
        
        
        $("#print").click(function(){
-    	   print()
+    	   print();
     	   });
        
        $("#excel").click(function(){
@@ -143,6 +143,9 @@ $("#search").click(function(){
 });
 function print(){
 	 var a=$("#printing").val();
+	 var location=$("#location option:selected").text(); 
+		var reportType=$("#reportType option:selected").text();
+		var accyear=$("#accyear option:selected").text();
 		var b = document.getElementById("studentlisttableprint").innerHTML;
 
 	    var abd='<style>' + a +'</style>' + b;
@@ -165,7 +168,9 @@ function print(){
    frameDoc.document.write('<link href="CSS/newUI/custome.css" rel="stylesheet">');
    frameDoc.document.write('<style>th,td{border:1px solid #000 !important;}</style>');
    frameDoc.document.write('</head><body>');
- 
+   frameDoc.document.write('<div style="text-align:center;"><h2>'+location+'</h2></div>');
+   frameDoc.document.write('<div class="col-xs-6"><div class="form-group clearfix"><label for="inputPassword" class="control-label col-xs-5" id="inputnames" style="text-align: right;">Report Type:</label><div class="col-xs-7">'+reportType+'</div></div></div>');
+   frameDoc.document.write('<div class="col-xs-6"><div class="form-group clearfix"><label for="inputPassword" class="control-label col-xs-5" id="inputnames" style="text-align: right;">Academic Year:</label><div class="col-xs-7">'+accyear+'</div></div></div>');
    
    //Append the DIV contents.
    frameDoc.document.write(abd);
