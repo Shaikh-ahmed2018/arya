@@ -1,6 +1,10 @@
 $(document).ready(function(){	
 	$("#accyear").val($("#hacademicyaer").val());
-
+	
+	$("#location").change(function () {
+		$("#startDate").val('');
+		$("#endDate").val('');
+});
  $("#location").change(function(){
 	
 		var location=$("#location").val();
@@ -31,6 +35,7 @@ $(document).ready(function(){
 		//getTransportFeeList();
 		
 	});
+ 
 	
 	$("#accyear").change(function(){
 		var location=$("#location").val();
