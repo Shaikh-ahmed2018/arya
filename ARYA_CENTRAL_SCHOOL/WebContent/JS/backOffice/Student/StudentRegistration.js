@@ -271,7 +271,6 @@ $(document).ready(function() {
 					if($("#studentid").val() != ""){
 							
 						}else{
-							getAdmissionNo();
 						}
 					}
 		    	},
