@@ -996,11 +996,11 @@ function generateTranferCertificate(list,list1,list2,list3,list4,examdetails,rea
 						else{
 							$("#selectall").prop("checked",false);
 						}
+						
 					});
 					
-					$(".numberOfItem").empty();
-					$(".numberOfItem").append("No. of Records  "+result.SearchList.length);
 					
+					location.reload();
 					
 					
 			}
