@@ -94,6 +94,9 @@ $(".select1").change(function() {
 			$("#dialog").append('<label for="">Last Attendance Date :</label>');
 			$("#dialog").append("<input type='text' class='ladate' id='ladate' style='float:right' readonly / ><br>");
 			
+			$("#dialog").append('<label for="">Promotion Date :</label>');
+			$("#dialog").append("<input type='text' class='prodt' id='prodt' style='float:right' readonly / ><br>");
+			
 			$("#dialog").append('<label for="">Compulsory Subject :</label>');
 			$("#dialog").append("<input type='text' class='csub' id='csub' style='float:right'/ ><br>");
 			
@@ -143,7 +146,23 @@ $(".select1").change(function() {
 				}
 			
 			});
+			$("#prodt").datepicker({
+
+				dateFormat : "dd-mm-yy",
+				yearRange : 'c-65:c+65',
+				
+				changeMonth : "true",
+				changeYear : "true",
+				
+				onClose : function(selectedDate) {
+					if ((selectedDate != "") && (selectedDate != undefined)) {
+						var date2 = $('#prodt').datepicker('getDate');
+						date2.setDate(date2.getDate() + 1);
+						
+					}
+				}
 			
+			});
 		}
 		
 	});
@@ -163,6 +182,7 @@ $(".select1").change(function() {
 				var result = $("#result").val();
 				var appdate=$("#appdate").val();
 				var ladate=$("#ladate").val();
+				var prodt=$("#prodt").val();
 				var csub=$("#csub").val();
 				var esub=$("#esub").val();
 				var admclass=$("#admclass").val();
@@ -178,6 +198,10 @@ $(".select1").change(function() {
 					$(".errormessagediv").show();
 					$(".validateTips").text("Select Last Attendance Date");
 				}
+				else if(prodt == null || prodt == undefined || prodt ==""){
+					$(".errormessagediv").show();
+					$(".validateTips").text("Select Promotion Date");
+				}
 				else if(csub == null || csub == undefined || csub ==""){
 					$(".errormessagediv").show();
 					$(".validateTips").text("Fill Compulsory Subject");
@@ -187,7 +211,7 @@ $(".select1").change(function() {
 					$(".validateTips").text("Fill Elective Subject");
 				}
 				else{
-					generateTranferCertificate(list,list1,list2,list3,list4,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass);
+					generateTranferCertificate(list,list1,list2,list3,list4,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass,prodt);
 				}
 			},
 			"No" : function(){
@@ -958,7 +982,7 @@ function cancelTranferCertificate(list,list1,list2){
 }
 
 
-function generateTranferCertificate(list,list1,list2,list3,list4,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass){
+function generateTranferCertificate(list,list1,list2,list3,list4,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass,prodt){
 		datalist = {			
 			"location" :list.toString(),
 			"accyear" :list1.toString(),
@@ -974,6 +998,7 @@ function generateTranferCertificate(list,list1,list2,list3,list4,examdetails,rea
 			"csub":csub,
 			"esub":esub,
 			"admclass":admclass,
+			"prodt":prodt,
 			
 		}, $.ajax({
 			type : 'POST',
@@ -996,7 +1021,6 @@ function generateTranferCertificate(list,list1,list2,list3,list4,examdetails,rea
 						else{
 							$("#selectall").prop("checked",false);
 						}
-						
 					});
 					
 					
