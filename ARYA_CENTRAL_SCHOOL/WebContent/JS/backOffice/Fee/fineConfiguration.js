@@ -14,19 +14,13 @@ $(document).ready(function(){
 		var termArray=[];
 		var isApplicable=null;
 		$("#allstudent tbody tr").each(function(){
-		
-			if (jQuery.inArray($(this).find(".date").val(), dayArray)=='-1' || jQuery.inArray($(this).find(".school").val(), locationArray)=='-1' || jQuery.inArray($(this).find(".ClassList").val(), classArray)=='-1'){
-				
 				locationArray.push($(this).find(".school").val());
 				classArray.push($(this).find(".ClassList").val());
 				accyearArray.push($(this).find(".accyear").val());
 				termArray.push($(this).find(".termlist").val());
 				dayArray.push($(this).find(".date").val());
 				amountArray.push($(this).find(".amount").val());
-			}
-			else{
-				
-			}
+			
 		});
 		if($("#IsApplicable").prop("checked")==true){
 			isApplicable="Y";

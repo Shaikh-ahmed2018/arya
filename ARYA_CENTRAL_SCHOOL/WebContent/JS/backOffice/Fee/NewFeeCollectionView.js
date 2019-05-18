@@ -213,7 +213,7 @@ $(document).ready(function(){
 	            		 }
 	            		 }
 	            		
-	            		 if(isNaN($(".payingAmount").val()) || $(".payingAmount").val()==0){
+	            		 if(isNaN($(".payingAmount").val())){
 	            			 flag=false;
 	            			 message="Enter Number greater than zreo.";
 	            		 }
@@ -228,11 +228,11 @@ $(document).ready(function(){
 						feeIdArray.push(feeId);
 				
 						});
-					if($(".payingAmount").val()>$(".totalAmount").val()){
-						advanceCarry=$(".payingAmount").val()-$(".totalAmount").val();
+					if(Number($(".payingAmount").val())>Number($(".totalAmount").val())){
+						advanceCarry=Number($(".payingAmount").val())-Number($(".totalAmount").val());
 					}
 					else{
-						duesCarry=$(".totalAmount").val()-$(".payingAmount").val();
+						duesCarry=Number($(".totalAmount").val())-Number($(".payingAmount").val());
 					}
 					var datalist={
 							"concessionAmount":$(".concessionAmount").val(),

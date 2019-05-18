@@ -97,11 +97,32 @@ $(".select1").change(function() {
 			$("#dialog").append('<label for="">Promotion Date :</label>');
 			$("#dialog").append("<input type='text' class='prodt' id='prodt' style='float:right' readonly / ><br>");
 			
+			$("#dialog").append('<label for="">Date of which the name was struck off the rolls :</label>');
+			$("#dialog").append("<input type='text' class='stuckofroll' id='stuckofroll' style='float:right' readonly / ><br>");
+			
+			$("#dialog").append('<label for="">Date of issue of the certificat :</label>');
+			$("#dialog").append("<input type='text' class='issueCertificate' id='issueCertificate' style='float:right' readonly / ><br>");
+			
+			$("#dialog").append('<label for="">Date of last succesful vaccination :</label>');
+			$("#dialog").append("<input type='text' class='dateOfVatcation' id='dateOfVatcation' style='float:right' readonly / ><br>");
+			
 			$("#dialog").append('<label for="">Compulsory Subject :</label>');
 			$("#dialog").append("<input type='text' class='csub' id='csub' style='float:right'/ ><br>");
 			
 			$("#dialog").append('<label for="">Elective Subject :</label>');
 			$("#dialog").append("<input type='text' class='esub' id='esub' style='float:right'/ ><br>");
+			
+			$("#dialog").append('<label for="">Number of school meetings upto date :</label>');
+			$("#dialog").append("<input type='number' class='schoolMeeting' id='schoolMeeting' style='float:right'/ ><br>");
+			
+			$("#dialog").append('<label for="">Number of school meetings the pupil attended :</label>');
+			$("#dialog").append("<input type='number' class='pupilMeeting' id='pupilMeeting' style='float:right'/ ><br>");
+			
+			$("#dialog").append('<label for="">Games played or extra-curricular activities in which the pupil usually took part and proficency there in:</label>');
+			$("#dialog").append("<input type='text' class='extra' id='extra' style='float:right'/ ><br>");
+			
+			$("#dialog").append('<label for="">Number of times the pupil has failed in the present class :</label>');
+			$("#dialog").append("<input type='number' class='noOfFail' id='noOfFail' style='float:right'/ ><br>");
 			
 			$("#dialog").append('<label for="">Reason for leaving :</label>');
 			$("#dialog").append("<input type='text' class='reason' id='reason' style='float:right'/ ><br>");
@@ -163,6 +184,58 @@ $(".select1").change(function() {
 				}
 			
 			});
+			$("#stuckofroll").datepicker({
+
+				dateFormat : "dd-mm-yy",
+				yearRange : 'c-65:c+65',
+				
+				changeMonth : "true",
+				changeYear : "true",
+				
+				onClose : function(selectedDate) {
+					if ((selectedDate != "") && (selectedDate != undefined)) {
+						var date2 = $('#stuckofroll').datepicker('getDate');
+						date2.setDate(date2.getDate() + 1);
+						
+					}
+				}
+			
+			});
+			$("#issueCertificate").datepicker({
+
+				dateFormat : "dd-mm-yy",
+				yearRange : 'c-65:c+65',
+				
+				changeMonth : "true",
+				changeYear : "true",
+				
+				onClose : function(selectedDate) {
+					if ((selectedDate != "") && (selectedDate != undefined)) {
+						var date2 = $('#issueCertificate').datepicker('getDate');
+						date2.setDate(date2.getDate() + 1);
+						
+					}
+				}
+			
+			});
+			
+			$("#dateOfVatcation").datepicker({
+
+				dateFormat : "dd-mm-yy",
+				yearRange : 'c-65:c+65',
+				
+				changeMonth : "true",
+				changeYear : "true",
+				
+				onClose : function(selectedDate) {
+					if ((selectedDate != "") && (selectedDate != undefined)) {
+						var date2 = $('#dateOfVatcation').datepicker('getDate');
+						date2.setDate(date2.getDate() + 1);
+						
+					}
+				}
+			
+			});
 		}
 		
 	});
@@ -183,8 +256,15 @@ $(".select1").change(function() {
 				var appdate=$("#appdate").val();
 				var ladate=$("#ladate").val();
 				var prodt=$("#prodt").val();
+				var stuckofroll=$("#stuckofroll").val();
+				var issueCertificate=$("#issueCertificate").val();
+				var dateOfVatcation=$("#dateOfVatcation").val();
 				var csub=$("#csub").val();
 				var esub=$("#esub").val();
+				var schoolMeeting=$("#schoolMeeting").val();
+				var pupilMeeting=$("#pupilMeeting").val();
+				var extra=$("#extra").val();
+				var noOfFail=$("#noOfFail").val();
 				var admclass=$("#admclass").val();
 				if(examdetails == null || examdetails == undefined || examdetails ==""){
 					$(".errormessagediv").show();
@@ -202,6 +282,7 @@ $(".select1").change(function() {
 					$(".errormessagediv").show();
 					$(".validateTips").text("Select Promotion Date");
 				}
+				
 				else if(csub == null || csub == undefined || csub ==""){
 					$(".errormessagediv").show();
 					$(".validateTips").text("Fill Compulsory Subject");
@@ -211,7 +292,7 @@ $(".select1").change(function() {
 					$(".validateTips").text("Fill Elective Subject");
 				}
 				else{
-					generateTranferCertificate(list,list1,list2,list3,list4,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass,prodt);
+					generateTranferCertificate(list,list1,list2,list3,list4,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass,prodt,stuckofroll,issueCertificate,dateOfVatcation,schoolMeeting,pupilMeeting,extra,noOfFail);
 				}
 			},
 			"No" : function(){
@@ -982,7 +1063,7 @@ function cancelTranferCertificate(list,list1,list2){
 }
 
 
-function generateTranferCertificate(list,list1,list2,list3,list4,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass,prodt){
+function generateTranferCertificate(list,list1,list2,list3,list4,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass,prodt,stuckofroll,issueCertificate,dateOfVatcation,schoolMeeting,pupilMeeting,extra,noOfFail){
 		datalist = {			
 			"location" :list.toString(),
 			"accyear" :list1.toString(),
@@ -999,6 +1080,13 @@ function generateTranferCertificate(list,list1,list2,list3,list4,examdetails,rea
 			"esub":esub,
 			"admclass":admclass,
 			"prodt":prodt,
+			"stuckofroll":stuckofroll,
+			"issueCertificate":issueCertificate,
+			"dateOfVatcation":dateOfVatcation,
+			"schoolMeeting":schoolMeeting,
+			"pupilMeeting":pupilMeeting,
+			"extra":extra,
+			"noOfFail":noOfFail,
 			
 		}, $.ajax({
 			type : 'POST',

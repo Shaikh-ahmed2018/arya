@@ -13407,7 +13407,7 @@ public List<StudentRegistrationVo> TransferCertificateDownload(String locationId
 		conn = JDBCConnection.getSeparateGodaddyConnection();
 		for(int i =0;i<studentid.split(",").length;i++)
 		{
-		pst = conn.prepareStatement("SELECT ctd.TC_NO,ctd.admission_class,ctd.esub,cscd.specilization,stu.student_doj_var,ccls.classdetails_name_var classId,ctd.TCCode,ctd.result,ctd.locationId,ctd.acadamic_year,ctd.admissionNo,ctd.student_id_int,CASE WHEN stu.student_lname_var IS NULL THEN stu.student_fname_var ELSE CONCAT(stu.student_fname_var,' ',stu.student_lname_var)END studentname,cpar.FatherName,cpar.student_mothername_var AS MotherName,stu.student_nationality_var AS Nationality,ccc.casteCategory,ccaste.caste,stu.student_dob_var AS student_birth_date,stu.student_doj_var AS date_of_joining,ccls.classdetails_name_var AS class_latest,ccls.classdetail_id_int,ctd.csub AS compulsory_sub,ctd.ladate AS last_attendance, stu.modifydate AS promotion_date,ctd.appdate AS stuck_of_rolls,ctd.appdate AS date_applicatin_certificate,ctd.appdate AS date_issue_certificate,ccls.createdate,ctd.school_or_board_Examination,ctd.reason,ctd.remarks,cfc.is_paid,cftd.startdate,cftd.enddate,cschlr.concessionType,rel.religion  FROM campus_tc_details ctd LEFT JOIN campus_student stu ON ctd.student_id_int = stu.student_id_int LEFT JOIN campus_religion rel ON stu.student_religion_var = rel.religionId LEFT JOIN campus_caste_category ccc ON stu.casteCategory = ccc.castCatId LEFT JOIN campus_caste ccaste ON stu.student_caste = ccaste.casteId LEFT JOIN campus_parentchildrelation cpchil  ON ctd.student_id_int = cpchil.stu_addmissionNo LEFT JOIN campus_parents cpar  ON cpchil.parentid = cpar.ParentID LEFT JOIN  campus_student_classdetails cscd  ON stu.student_id_int  = cscd.student_id_int LEFT JOIN  campus_classdetail ccls  ON (cscd.classdetail_id_int  = ccls.classdetail_id_int AND cscd.locationId=ccls.locationId) LEFT JOIN campus_fee_collection cfc ON ctd.student_id_int = cfc.admissionNo LEFT JOIN campus_fee_termdetails cftd ON cfc.termcode = cftd.termid LEFT JOIN campus_scholorship cschlr  ON ctd.admissionNo = cschlr.admissionNo WHERE ctd.student_id_int=? and ctd.acadamic_year=? ORDER BY startdate DESC LIMIT 1");
+		pst = conn.prepareStatement("SELECT ctd.TC_NO,ctd.admission_class,ctd.esub,cscd.specilization,stu.student_doj_var,ccls.classdetails_name_var classId,ctd.TCCode,ctd.result,ctd.locationId,ctd.acadamic_year,ctd.admissionNo,ctd.student_id_int,CASE WHEN stu.student_lname_var IS NULL THEN stu.student_fname_var ELSE CONCAT(stu.student_fname_var,' ',stu.student_lname_var)END studentname,cpar.FatherName,cpar.student_mothername_var AS MotherName,stu.student_nationality_var AS Nationality,ccc.casteCategory,ccaste.caste,stu.student_dob_var AS student_birth_date,stu.student_doj_var AS date_of_joining,ccls.classdetails_name_var AS class_latest,ccls.classdetail_id_int,ctd.csub AS compulsory_sub,ctd.ladate AS last_attendance, ctd.promotion_date AS promotion_date,ctd.appdate AS stuck_of_rolls,ctd.appdate AS date_applicatin_certificate,ctd.appdate AS date_issue_certificate,ccls.createdate,ctd.school_or_board_Examination,ctd.reason,ctd.remarks,cfc.is_paid,cftd.startdate,cftd.enddate,cschlr.concessionType,rel.religion  FROM campus_tc_details ctd LEFT JOIN campus_student stu ON ctd.student_id_int = stu.student_id_int LEFT JOIN campus_religion rel ON stu.student_religion_var = rel.religionId LEFT JOIN campus_caste_category ccc ON stu.casteCategory = ccc.castCatId LEFT JOIN campus_caste ccaste ON stu.student_caste = ccaste.casteId LEFT JOIN campus_parentchildrelation cpchil  ON ctd.student_id_int = cpchil.stu_addmissionNo LEFT JOIN campus_parents cpar  ON cpchil.parentid = cpar.ParentID LEFT JOIN  campus_student_classdetails cscd  ON ctd.student_id_int  = cscd.student_id_int AND ctd.acadamic_year=cscd.fms_acadamicyear_id_int LEFT JOIN  campus_classdetail ccls  ON (cscd.classdetail_id_int  = ccls.classdetail_id_int AND cscd.locationId=ccls.locationId) LEFT JOIN campus_fee_collection cfc ON ctd.student_id_int = cfc.admissionNo LEFT JOIN campus_fee_termdetails cftd ON cfc.termcode = cftd.termid LEFT JOIN campus_scholorship cschlr  ON ctd.admissionNo = cschlr.admissionNo WHERE ctd.student_id_int=? and ctd.acadamic_year=? ORDER BY startdate DESC LIMIT 1");
 		pst.setString(1, studentid.split(",")[i]);
 		pst.setString(2, accyear.split(",")[i]);
 		
@@ -13426,10 +13426,10 @@ public List<StudentRegistrationVo> TransferCertificateDownload(String locationId
 			stuReg.setAdmissionNo(rs.getString("admissionNo"));
 			stuReg.setResult(rs.getString("result"));
 			
-			if(rs.getString("result").equalsIgnoreCase("pass")){
-				stuReg.setResultstatus("YES");
+			if(rs.getString("result").equalsIgnoreCase("fail")){
+				stuReg.setResultstatus("NO");
 			}else{
-				stuReg.setResultstatus("No");
+				stuReg.setResultstatus("YES");
 			}
 			System.out.println("rs.getString(is_paid)  == " + rs.getString("is_paid"));
 			if(rs.getString("is_paid")==null || rs.getString("is_paid").equalsIgnoreCase("N")){
@@ -13457,11 +13457,15 @@ public List<StudentRegistrationVo> TransferCertificateDownload(String locationId
 			if(rs.getString("student_doj_var")!=null)
 			stuReg.setDateofjoin(HelperClass.convertDatabaseToUI(rs.getString("student_doj_var")));
 			
-			String promodt = rs.getString("createdate");
-			String arr[] = promodt.split(" ", 2);
-			String firstWord = arr[0];
-			Date pd = format1.parse(firstWord);
-			String prodt = format2.format(pd);
+			String promodt = rs.getString("promotion_date");
+			String prodt="";
+			if(promodt !=null) {
+				String arr[] = promodt.split(" ", 2);
+				String firstWord = arr[0];
+				Date pd = format1.parse(firstWord);
+				 prodt = format2.format(pd);
+			}
+			
 			stuReg.setPromotionDate(prodt);
 			
 			stuReg.setStudentFullName(rs.getString("studentname"));
@@ -14525,7 +14529,7 @@ public String WithHeldActivationDeactivation(String studentId, String accyear, S
 			+ " Control in  StudentRegistrationDaoImpl : checkApplicationNo Ending");
 	return successMessage;
 }
-public String NewGenerateStudentTC(String[] splitlocation, String[] splitaccyear, String[] splitstudentid,String[] splitadmid,String[] splitclassid,String examdetails,String reason,String remarks,String result,String appdate,String ladate,String csub,String esub, String admclass){
+public String NewGenerateStudentTC(String[] splitlocation, String[] splitaccyear, String[] splitstudentid,String[] splitadmid,String[] splitclassid,String examdetails,String reason,String remarks,String result,String appdate,String ladate,String csub,String esub, String admclass, String prodt){
 
 	logger.setLevel(Level.DEBUG);
 	JLogger.log(0, JDate.getTimeString(new Date())
@@ -14555,7 +14559,7 @@ public String NewGenerateStudentTC(String[] splitlocation, String[] splitaccyear
 			while(gerRSCount.next()) {
 				tc_no=gerRSCount.getInt(1)+1;
 			}
-			pstmt = con.prepareStatement("INSERT INTO campus_tc_details(`TCCode`,`locationId`,`acadamic_year`,`student_id_int`,`admissionNo`,`latestClassID`,`issueDate`,`issuedBy`,`school_or_board_Examination`,`result`,`reason`,`remarks`,`createdate`,`createdby`,appdate,ladate,csub,esub,TC_NO,admission_class) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+			pstmt = con.prepareStatement("INSERT INTO campus_tc_details(`TCCode`,`locationId`,`acadamic_year`,`student_id_int`,`admissionNo`,`latestClassID`,`issueDate`,`issuedBy`,`school_or_board_Examination`,`result`,`reason`,`remarks`,`createdate`,`createdby`,appdate,ladate,csub,esub,TC_NO,admission_class,promotion_date) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			pstmt.setString(1, idgen);
 			pstmt.setString(2, splitlocation[i]);
 			pstmt.setString(3, splitaccyear[i]);
@@ -14579,6 +14583,7 @@ public String NewGenerateStudentTC(String[] splitlocation, String[] splitaccyear
 			pstmt.setString(18, esub);
 			pstmt.setInt(19, tc_no);
 			pstmt.setString(20, admclass);
+			pstmt.setString(21, HelperClass.convertUIToDatabase(prodt));
 			status = pstmt.executeUpdate();	
 			
 			System.out.println("status "+pstmt);
