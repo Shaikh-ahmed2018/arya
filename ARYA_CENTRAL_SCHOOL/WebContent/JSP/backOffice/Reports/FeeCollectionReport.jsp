@@ -254,9 +254,10 @@ display: none;
 					</div>
 					
 					<div id="studentlisttableprint" >
-					<div class="schoolLogo"><img src='images/arya_logo.png' width="100px" height="100px"></div><div class="schoolheader"><h1>ARYA CENTRAL SCHOOL</h1><h3>Arya Kumar Ashram,Pattom,Thiruvananthapuram-695004</h3><h3 class="feeHeader"></h3> </div>
+					
 					<div class="feefilterheading"><hr></div>
 					<div id="studentlisttable" >
+					<div class="schoolLogo"><img src='images/arya_logo.png' width="100px" height="100px"></div><div class="schoolheader"><h3 class="feeHeader"></h3> </div>
 					</div>
 					</div>
 				</div>
