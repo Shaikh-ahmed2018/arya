@@ -385,7 +385,7 @@ function getfeecollectiondatelist(){
 
 				);
 
-				totalAmount=totalAmount+Number(result.FeeReport[i].amount_paid_so_far)+Number(result.FeeReport[i].fineAmount);
+				totalAmount=totalAmount+Number(result.FeeReport[i].amount_paid_so_far);
 			}
 			$("#studentlisttable #allstudent tbody").append("<tr>" +
 					"<td colspan='8' style='text-align:right;'>Total</td>"+
@@ -467,7 +467,7 @@ function getFeeCollectionMonthWiseReport(){
 
 				);
 
-				totalAmount=totalAmount+Number(result.FeeReport[i].amount_paid_so_far)+Number(result.FeeReport[i].fineAmount);
+				totalAmount=totalAmount+Number(result.FeeReport[i].amount_paid_so_far);
 			}
 			
 			$("#studentlisttable #allstudent tbody").append("<tr>" +
