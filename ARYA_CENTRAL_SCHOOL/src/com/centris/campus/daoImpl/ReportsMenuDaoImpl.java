@@ -8115,10 +8115,14 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 			
 			conn=JDBCConnection.getSeparateConnection();
 			if(selection.equalsIgnoreCase("classwise")) {
-				pstmt=conn.prepareStatement("SELECT count(*) count,cs.student_religion_var,csc.classdetail_id_int,cr.religion,cs.student_gender_var FROM campus_student_classdetails csc JOIN campus_student cs ON csc.student_id_int=cs.student_id_int JOIN campus_religion cr ON cs.student_religion_var=cr.religionId WHERE csc.fms_acadamicyear_id_int=? AND csc.locationId=? GROUP BY csc.classdetail_id_int,cr.religion,cs.student_gender_var ORDER BY LENGTH(csc.classdetail_id_int),csc.classdetail_id_int");
+				pstmt=conn.prepareStatement("SELECT count(*) count,cs.student_religion_var,csc.classdetail_id_int,cr.religion,cs.student_gender_var FROM campus_student_classdetails csc JOIN campus_student cs ON csc.student_id_int=cs.student_id_int JOIN campus_religion cr ON cs.student_religion_var=cr.religionId WHERE csc.fms_acadamicyear_id_int=? AND csc.locationId=? AND csc.student_status !='TC' GROUP BY csc.classdetail_id_int,cr.religion,cs.student_gender_var  ORDER BY LENGTH(csc.classdetail_id_int),csc.classdetail_id_int");
+				System.out.println(pstmt);
+
 			}
 			else {
-				pstmt=conn.prepareStatement("SELECT count(*) count,cs.student_religion_var,concat(csc.classdetail_id_int,'-',csc.classsection_id_int) classdetail_id_int,cr.religion,cs.student_gender_var FROM campus_student_classdetails csc JOIN campus_student cs ON csc.student_id_int=cs.student_id_int JOIN campus_religion cr ON cs.student_religion_var=cr.religionId WHERE csc.fms_acadamicyear_id_int=? AND csc.locationId=? GROUP BY csc.classdetail_id_int,csc.classsection_id_int,cr.religion,cs.student_gender_var ORDER BY LENGTH(csc.classdetail_id_int),csc.classdetail_id_int");
+				pstmt=conn.prepareStatement("SELECT count(*) count,cs.student_religion_var,concat(csc.classdetail_id_int,'-',csc.classsection_id_int) classdetail_id_int,cr.religion,cs.student_gender_var FROM campus_student_classdetails csc JOIN campus_student cs ON csc.student_id_int=cs.student_id_int JOIN campus_religion cr ON cs.student_religion_var=cr.religionId WHERE csc.fms_acadamicyear_id_int=? AND csc.locationId=? AND csc.student_status !='TC' GROUP BY csc.classdetail_id_int,csc.classsection_id_int,cr.religion,cs.student_gender_var  ORDER BY LENGTH(csc.classdetail_id_int),csc.classdetail_id_int");
+				System.out.println(pstmt);
+
 			}
 			pstmt.setString(1,accyear);
 			pstmt.setString(2, locationid);
@@ -8139,10 +8143,10 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 			
 			
 			if(selection.equalsIgnoreCase("classwise")) {
-				pstmt=conn.prepareStatement("SELECT count(*) count,cs.student_religion_var,csc.classdetail_id_int,cr.casteCategory,cs.student_gender_var FROM campus_student_classdetails csc JOIN campus_student cs ON csc.student_id_int=cs.student_id_int JOIN campus_caste_category cr ON cs.casteCategory=cr.castCatId WHERE csc.fms_acadamicyear_id_int=? AND csc.locationId=? GROUP BY csc.classdetail_id_int,cr.casteCategory,cs.student_gender_var ORDER BY LENGTH(csc.classdetail_id_int),csc.classdetail_id_int");
+				pstmt=conn.prepareStatement("SELECT count(*) count,cs.student_religion_var,csc.classdetail_id_int,cr.casteCategory,cs.student_gender_var FROM campus_student_classdetails csc JOIN campus_student cs ON csc.student_id_int=cs.student_id_int JOIN campus_caste_category cr ON cs.casteCategory=cr.castCatId WHERE csc.fms_acadamicyear_id_int=? AND csc.locationId=? AND csc.student_status !='TC' GROUP BY csc.classdetail_id_int,cr.casteCategory,cs.student_gender_var  ORDER BY LENGTH(csc.classdetail_id_int),csc.classdetail_id_int");
 			}
 			else {
-				pstmt=conn.prepareStatement("SELECT count(*) count,cs.student_religion_var,concat(csc.classdetail_id_int,'-',csc.classsection_id_int) classdetail_id_int,cr.casteCategory,cs.student_gender_var FROM campus_student_classdetails csc JOIN campus_student cs ON csc.student_id_int=cs.student_id_int JOIN campus_caste_category cr ON cs.casteCategory=cr.castCatId WHERE csc.fms_acadamicyear_id_int=? AND csc.locationId=? GROUP BY csc.classdetail_id_int,csc.classsection_id_int,cr.casteCategory,cs.student_gender_var ORDER BY LENGTH(csc.classdetail_id_int),csc.classdetail_id_int");
+				pstmt=conn.prepareStatement("SELECT count(*) count,cs.student_religion_var,concat(csc.classdetail_id_int,'-',csc.classsection_id_int) classdetail_id_int,cr.casteCategory,cs.student_gender_var FROM campus_student_classdetails csc JOIN campus_student cs ON csc.student_id_int=cs.student_id_int JOIN campus_caste_category cr ON cs.casteCategory=cr.castCatId WHERE csc.fms_acadamicyear_id_int=? AND csc.locationId=? AND csc.student_status !='TC' GROUP BY csc.classdetail_id_int,csc.classsection_id_int,cr.casteCategory,cs.student_gender_var ORDER BY LENGTH(csc.classdetail_id_int),csc.classdetail_id_int");
 			}
 			pstmt.setString(1,accyear);
 			pstmt.setString(2, locationid);
@@ -8281,7 +8285,7 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 			
 			conn=JDBCConnection.getSeparateConnection();
 			if(selection.equalsIgnoreCase("classwise")) {
-				pstmt=conn.prepareStatement("SELECT * FROM campus_classdetail WHERE locationId=? ORDER BY LENGTH(classdetail_id_int),classdetail_id_int");
+				pstmt=conn.prepareStatement("SELECT * FROM campus_classdetail WHERE locationId=?  ORDER BY LENGTH(classdetail_id_int),classdetail_id_int");
 			}
 			else {
 				pstmt=conn.prepareStatement("SELECT concat(ccd.classdetail_id_int,'-',cc.classsection_id_int) classdetail_id_int,concat(ccd.classdetails_name_var,'-',cc.classsection_name_var) classdetails_name_var FROM campus_classsection cc JOIN campus_classdetail ccd ON ccd.classdetail_id_int=cc.classdetail_id_int WHERE ccd.locationId=? ORDER BY LENGTH(ccd.classdetail_id_int),ccd.classdetail_id_int,cc.classsection_name_var;");
