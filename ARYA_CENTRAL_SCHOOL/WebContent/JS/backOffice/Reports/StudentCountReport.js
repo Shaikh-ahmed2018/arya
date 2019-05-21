@@ -123,6 +123,7 @@ function getstudentCountClassWise(){
 		
 		success: function(response){
 			var result=$.parseJSON(response);
+			alert(result)
 			if(result.data.length>0){
 				for(var i=0;i<result.data.length;i++){
 					
@@ -210,6 +211,7 @@ function getstudentCountSectionWise(){
 		
 		success: function(response){
 			var result=$.parseJSON(response);
+			alert(result)
 			if(result.data.length>0){
 				for(var i=0;i<result.data.length;i++){
 					$("tr#"+result.data[i].classId).find("td."+result.data[i].casteCategory).text(result.data[i].sno);
