@@ -71,6 +71,7 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 				System.out.println("ps1="+ps1);
 				
 				rs1=ps1.executeQuery();
+				
 				while(rs1.next()) {
 					
 					count++;
@@ -586,7 +587,7 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 			
 				ps2 = conn.prepareStatement("insert into campus_fee_indetail (FeeInDetailedCode,admissionNo,accYear,term_id,totalamount,actualamount," +
 						"balance_amount,amount_paid,conc_amount,conc_percent,paidDate,createdby,createdtime)values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
-				
+				System.out.println(ps2);
 				ps2.setString(1,IDGenerator.getPrimaryKeyID("campus_fee_indetail",conn));
 				ps2.setString(2,collectionVo.getAddmissionno());
 				ps2.setString(3,collectionVo.getAccYear());
