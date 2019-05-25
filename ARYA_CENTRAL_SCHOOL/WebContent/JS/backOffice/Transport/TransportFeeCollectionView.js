@@ -62,7 +62,7 @@ $(document).ready(function(){
 		 }
 		 else{
 			 $('.errormessagediv').show();
-				$('.validateTips').text("Select Any Record for Payement ");
+				$('.validateTips').text("Select Any Record for Payment ");
 		 }
 		
 		
