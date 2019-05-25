@@ -82,12 +82,69 @@ $(document)
 								
 							});*/
 					
-					
-					
-					
-					
-					
-					
+					//DISPLAY DEACTIVATED TEACHERS
+					$('#activateTeacher').on('click',function(){
+						//alert("jii")
+				//	$("#activateTeacher").on(click,function(){
+						//alert("kii")
+						//$('#activateModal').on('shown', function(){
+						// $("#activateModal").on("show.bs.modal", function() {
+							 //alert("hii")
+								$.ajax({
+									type : 'POST',
+									url : "teacherregistration.html?method=getdeactivatedTeachers",
+									data : {
+										"status":"N",
+									},
+									async : false,
+									success : function(data) {
+										 	$("#teachertable").html(data);
+										 	
+								           // $("#activateModal").modal('show');
+										var result = $.parseJSON(data);
+										//console.log(result.teacherList[0])
+										$("#teachertable").empty();
+										$("#teachertable").append("<table class='table table-bordered' id='allstaff' width='100%'" +">"
+												+"<center><tr><th>Sl.No.</th>"+
+												"<th>RegisterId</th>" +
+												"<th>Name</th>" +
+												"<th>Teaching Type</th>" +
+												"<th>Status</th>" +
+												
+												"</tr></center>" +
+												"</table>"
+												
+										);	
+										if(result.teacherList.length>0)
+										{
+											for(var i=0;i<result.teacherList.length;i++){
+												$("#teachertable #allstaff tbody").append(
+														"<tr>"+
+														"<td>"+result.teacherList[i].sno+"</td>"+
+														"<td>"+result.teacherList[i].registerId+"</td>"+
+														"<td>"+result.teacherList[i].teacherName+"</td>"+
+														"<td>"+result.teacherList[i].teacherType+"</td>"+														
+														"<td>InActive</td>"+
+														+"</tr>"
+
+														
+														);
+												
+												
+											}
+										}
+										else{
+											$("#teachertable tbody").append("<tr><td colspan='7'>No Records Found</td></tr>");
+										}
+									}
+								});
+							
+							 
+							 
+						
+						
+					});
+					//
 					
 					$("#selectall").change(function(){
 
@@ -95,7 +152,6 @@ $(document)
 						 
 						 
 						});
-					
 					
 					 var studentIdlist=[];
 					
@@ -188,13 +244,97 @@ $(document)
 					     }
 				 	});
 					
+					//deactivateTeacher
 					
+					$("#deactivateTeacher").click(function(){
+						
+						
+						var count =0; 
+						 studentIdlist=[];
+				 		$(".select:checked").each(function(){
+							 
+							var list=$(this).attr("id");
+							studentIdlist.push(list);
+							count ++;
+							 
+						 });	
+				 		
+				 		
+				 		/*var teacherId=$('input[name="selectBox"]:checked').val();*/
+				 		
 					
+				 	if(count == 0)	{
+				 		
+				 		$('.errormessagediv').show();
+						$('.validateTips').text("Select Staff to Deactivate");
+						$('.errormessagediv').delay(3000).slideUp();
+				 		
+				 	}
+				 	else 	{
+						
+						  $("#dialog").dialog("open");
+						  $("#dialog").empty();
+						  $("#dialog").append("<p>Are you sure to Deactivate?</p>");
+					}
 					
-					
-					
-					
+				 	
+				 	$(".select").prop("checked",false);
+					});
 
+					$("#dialog").dialog({
+				 		
+				 		
+				 		 autoOpen: false,
+					     modal: true,					    
+					     title:'Staff Details',
+					     buttons : {
+					          "Yes" : function() {
+					        	  
+					        		$.ajax({
+										type : 'POST',
+										url : "teacherregistration.html?method=deactivateStaffDetails",
+										data : {"teachercode":studentIdlist.toString()},
+										success : function(
+												response) {
+											var result = $.parseJSON(response);
+											
+											
+											$('.errormessagediv').hide();
+											
+											if (result.status == true) {
+												$(".errormessagediv").hide();
+												$(".successmessagediv").show();
+												$(".validateTips").text("Deactivating Record Progressing...");
+
+											} else {
+												$(
+												".successmessagediv").show();
+												$(".validateTips").text(result.status);
+											}
+											setTimeout(function(){
+												   
+												 window.location.href="adminMenu.html?method=staffList";
+											 
+											 },2000);
+										
+										}
+
+									});  
+					        	  
+					        		 $(this).dialog("close");
+					 	  
+					          },
+				 		
+					          "No" : function() {
+					        	  $("#selectall").prop("checked",false);
+						            $(this).dialog("close");
+						          }
+				 		
+					     }
+				 	});
+					
+					//
+					
 					$('#editTeacher')
 					.click(
 							function() {
@@ -254,7 +394,7 @@ $(document)
             			window.location.href = "teacherregistration.html?method=downloadStaffDetailsPDF";
             				
             		});
-							
+					//disabled or enabled		
 					
 					
 					
@@ -271,7 +411,18 @@ function salaryDeatails(){
 
 function removeMessage() {
 	$(".successmessagediv").hide();
-	
-	
 
 }
+
+//getdeactivate teachers
+function getDeactivatedTeachers(){
+	$("#activateTeacher").click(function(){
+		
+	
+	});
+	
+}
+
+
+
+//
