@@ -261,7 +261,9 @@ $(document).ready(function(){
 						data :datalist,
 						async : false,
 						success : function(data) {
+							
 							var result = $.parseJSON(data);
+							
 							if(result.status=="true"){
 								$('.successmessagediv').show();
 								$('.sucessmessage').text("Fee Submit progressing... ");
@@ -343,6 +345,7 @@ function feeCollectionDetails(pointer){
 					"</table>");
 		
 			for(var i=0;i<result.FeeCollectionDetails.length;i++){
+				
 				
 				$("#myDialog .myDailogTable #allstudent").append("<tr id=rowid"+result.FeeCollectionDetails[i].sno+">" +
 						"<td>"+result.FeeCollectionDetails[i].sno+"</td>" +
