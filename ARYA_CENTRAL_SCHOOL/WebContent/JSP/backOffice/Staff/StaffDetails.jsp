@@ -36,6 +36,8 @@
 <script type="text/javascript" src="JQUERY/js/jquery.ui.datepicker.js"></script>
 <script type="text/javascript" src="JQUERY/js/jquery.ui.effect.js"></script>
 <link href="JQUERY/css/jquery.ui.all.css" rel="stylesheet" type="text/css">
+<link href="CSS\Tearcher\inActive.css" rel="stylesheet" type="text/css">
+
 <script type="text/javascript" src="JS/backOffice/Staff/StaffDetails.js"></script>
 <style>
 .download:hover {
@@ -59,6 +61,7 @@
 	margin-right: 3px;
 }
 </style>
+
 </head>
 
 <body>
@@ -132,6 +135,13 @@
 					</a> <span class="buttons" id="editTeacher" style="cursor: pointer">Edit
 					</span> <span class="buttons" id="deleteTeacher" style="cursor: pointer">Delete
 					</span>
+					<span class="buttons"  id="activateTeacher" data-toggle="modal" data-target="#activateModal"  style="cursor: pointer">Activate
+					</span>
+					<!-- activate modal -->
+						
+					
+					<span class="buttons"  id="deactivateTeacher" style="cursor: pointer">Deactivate
+					</span>
 
 					<!-- <img src="images/download.png" class="download" id="iconsimg"
 						data-toggle="modal" data-target="#myModal" data-toggle="tooltip"
@@ -141,12 +151,29 @@
 						data-target="#myModal">Download </span>
 
 				</div>
-				<script>
-					$(document).ready(function() {
-						$('[data-toggle="tooltip"]').tooltip();
-					});
-				</script>
+				
 			</div>
+			<div class="modal fade" id="activateModal" tabindex="-1" role="dialog"
+					aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									Inactive Teachers
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								
+								<span aria-hidden="true">&times;</span>
+							</button>
+								</div>
+								<div class="modal-body">
+								
+							          <div id="teachertable"></div>    
+						</div>
+						<div class="modal-footer">
+        <button type="button" id="close" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+							</div>
+						</div>
+				</div>
 			<!-- pop up -->
 
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
@@ -170,6 +197,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div id="collapseOne" class="accordion-body collapse in">
 				<div class="panel-body"
 					style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;">
@@ -281,10 +309,5 @@
 		</div>
 	</div>
 
-	<script>
-		$('.carousel').carousel({
-			interval : 5000
-		//changes the speed
-		});
-	</script>
+	
 </body>
