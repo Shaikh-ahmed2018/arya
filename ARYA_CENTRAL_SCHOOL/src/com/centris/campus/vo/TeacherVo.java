@@ -13,7 +13,30 @@ public class TeacherVo {
 	String subscriberNumber;
 	String subscriberId;
 	String othersId;
+	String registerId;
+	String status;
+	int sno;
 	
+	
+	
+	public int getSno() {
+		return sno;
+	}
+	public void setSno(int sno) {
+		this.sno = sno;
+	}
+	public String getRegisterId() {
+		return registerId;
+	}
+	public void setRegisterId(String registerId) {
+		this.registerId = registerId;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	public String getAbbrvation() {
 		return abbrvation;
 	}
