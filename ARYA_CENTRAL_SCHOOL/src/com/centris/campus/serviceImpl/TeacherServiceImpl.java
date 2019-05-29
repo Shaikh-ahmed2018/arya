@@ -21,13 +21,15 @@ import com.centris.campus.util.JLogger;
 import com.centris.campus.util.MessageConstants;
 import com.centris.campus.vo.AllTeacherDetailsVo;
 import com.centris.campus.vo.TeacherMappingClassesVo;
+import com.centris.campus.vo.TeacherVo;
 import com.centris.campus.vo.ViewallSubjectsVo;
 
 public class TeacherServiceImpl implements TeacherService {
 	private static final Logger logger = Logger.getLogger(TeacherDaoImpl.class);
-
-	TeacherDao daoObj = new TeacherDaoImpl();
-
+   static TeacherDao daoObj;
+   static {
+	daoObj = new TeacherDaoImpl();
+   }
 	public ArrayList<AllTeacherDetailsVo> getAllTeacherDetails() {
 		logger.setLevel(Level.DEBUG);
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -115,7 +117,22 @@ public class TeacherServiceImpl implements TeacherService {
 
 		return daoObj.deleteStaffDetails(teachercode);
 	}
+	public boolean deactivateStaffDetails(String[] teachercode) {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TeacherServiceImpl : deactivateStaffDetails Starting");
 
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TeacherServiceImpl : deactivateStaffDetails Ending");
+
+		return daoObj.deactivateStaffDetails(teachercode);
+	}
+	
+	
 	public List<ViewallSubjectsVo> getSubjects(String classId) {
 		logger.setLevel(Level.DEBUG);
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -400,4 +417,32 @@ public class TeacherServiceImpl implements TeacherService {
 		
 		return dao.checkStaffInTDS(currentUser);
 	}
+
+	@Override
+	public ArrayList<TeacherVo> getdeactivatedTeachers(String teacherId, String registerId, String status) {
+		// TODO Auto-generated method stub
+		TeacherDao dao=new TeacherDaoImpl();
+		return dao.getdeactivatedTeachers(teacherId,registerId,status);
+	}
+
+	@Override
+	public boolean activateStaff(String registerid) {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TeacherServiceImpl : activateStaff Starting");
+
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TeacherServiceImpl : activateStaff Ending");
+
+		return daoObj.activateStaff(registerid);
+	}
+
+	
+	
+
+	
 }
