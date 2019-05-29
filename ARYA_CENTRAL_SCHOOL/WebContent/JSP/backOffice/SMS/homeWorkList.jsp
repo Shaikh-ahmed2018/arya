@@ -31,7 +31,8 @@ $(document).ready(function() {
 		 $("#send").click(function(){
 		 $.ajax({
 			    type: "POST",
-			    url: "http://sms.textidea.com/app/smsapi/index.php?key=25BB891406C392&campaign=5043&routeid=100233&type=text&contacts="+$('#MobileNO').val()+"&senderid=ARYACS&msg="+$('#Smessage').val(),
+			    url:"http://sms.bbsltvm.in/vendorsms/pushsms.aspx?apikey=16ba8674-c0ac-4c97-a47e-1376114848ec&clientId=fc9ad79d-2110-41af-a82f-277406ac283a&msisdn="+$('#MobileNO').val()+"&sid=ARYACS&msg="+encodeURI($('#Smessage').val())+"&fl=0&gwid=2",
+			   // url: "http://sms.textidea.com/app/smsapi/index.php?key=25BB891406C392&campaign=5043&routeid=100233&type=text&contacts="+$('#MobileNO').val()+"&senderid=ARYACS&msg="+$('#Smessage').val(),
 			    success: function() {
 			      $('#contact_form_message').html("<div id='message'></div>");
 			      $('#message').html("<h2>Contact Form Submitted!</h2>")
@@ -46,6 +47,8 @@ $(document).ready(function() {
 	
 		 });
 		 $('#send').click(function () {
+			 
+			
 			  $('#MobileNO').val('');
 			  $('#Smessage').val('');
 			});
