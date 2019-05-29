@@ -55,6 +55,7 @@ import com.centris.campus.delegate.LeaveBankDelegate;
 import com.centris.campus.delegate.ReligionCasteCasteCategoryBD;
 import com.centris.campus.delegate.StudentRegistrationDelegate;
 import com.centris.campus.delegate.TeacherRegistrationBD;
+import com.centris.campus.delegate.TransportBD;
 import com.centris.campus.delegate.UserRolePermissionBD;
 import com.centris.campus.forms.TeacherForm;
 import com.centris.campus.pojo.ClassPojo;
@@ -73,6 +74,8 @@ import com.centris.campus.vo.LeaveBankVO;
 import com.centris.campus.vo.ReligionCasteCasteCategoryVo;
 import com.centris.campus.vo.StudentRegistrationVo;
 import com.centris.campus.vo.TeacherMappingClassesVo;
+import com.centris.campus.vo.TeacherVo;
+import com.centris.campus.vo.TransportVo;
 import com.centris.campus.vo.ViewallSubjectsVo;
 
 public class TeacherRegistrationAction extends DispatchAction {
@@ -210,7 +213,79 @@ public class TeacherRegistrationAction extends DispatchAction {
 
 		return null;
 	}
+//deactivate staff
+	public ActionForward deactivateStaffDetails(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
 
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TeacherRegistrationAction : deactivateStaffDetails Starting");
+		try {
+
+			request.setAttribute(MessageConstants.MODULE_NAME,
+					MessageConstants.BACKOFFICE_STAFF);
+			request.setAttribute(MessageConstants.HIGHLIGHT_NAME,
+					MessageConstants.MODULE_STAFF);
+			
+			String teachercode[] = request.getParameter("teachercode").split(",");
+
+			TeacherRegistrationBD allTeacherDetailsBD = new TeacherRegistrationBD();
+			boolean status = allTeacherDetailsBD.deactivateStaffDetails(teachercode);
+			
+			System.out.println(status);
+			
+			JSONObject jsonobject = new JSONObject();
+			jsonobject.put("status", status);
+			response.getWriter().print(jsonobject);
+
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TeacherRegistrationAction : deactivateStaffDetails Ending");
+
+		return null;
+	}
+	
+//
+	//acivate staff 
+	public ActionForward activateStaff(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TeacherRegistrationAction : activateStaff Starting");
+		
+		try {
+			String registerid  = request.getParameter("registerid");
+			TeacherRegistrationBD allTeacherDetailsBD = new TeacherRegistrationBD();
+			boolean status = allTeacherDetailsBD.activateStaff(registerid);
+			JSONObject jsonobject = new JSONObject();
+			jsonobject.put("status", status);
+			response.getWriter().print(jsonobject);
+			
+		}
+		
+		catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+
+		
+				return null;
+		
+	}
+	
+	//
 	public ActionForward getSubjects(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
@@ -1845,7 +1920,82 @@ public class TeacherRegistrationAction extends DispatchAction {
 				+ " Control in TeacherRegistrationAction : getTeachers Ending");
 		return null;
 	}
-	
+	//get deactivated teachers
+	/*public ActionForward getDeactivatedTeachers(ActionMapping mapping,ActionForm form,
+			HttpServletRequest request,HttpServletResponse response){
+		
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in teacherRegistration : getTeacherName Starting");
+		try {
+			request.setAttribute(MessageConstants.MODULE_NAME,
+					MessageConstants.BACKOFFICE_SETTINGS);
+			request.setAttribute(MessageConstants.HIGHLIGHT_NAME,
+					MessageConstants.MODULE_SETTINGS);
+			String teachercode[] = request.getParameter("teachercode").split(",");
+
+			TeacherRegistrationBD allTeacherDetailsBD = new TeacherRegistrationBD();
+			boolean status = allTeacherDetailsBD.getDeactivatedTeachers(teachercode);
+			
+			System.out.println(status);
+			
+			JSONObject jsonobject = new JSONObject();
+			jsonobject.put("status", status);
+			response.getWriter().print(jsonobject);
+			
+		}
+		catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+
+				return null;
+		
+	}*/
+	public ActionForward getdeactivatedTeachers(ActionMapping mapping,ActionForm form,
+			HttpServletRequest request,HttpServletResponse response){		
+			logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in teacherRegistration : getdeactivatedTeachers Starting");
+				
+				try {
+					request.setAttribute(MessageConstants.MODULE_NAME,
+					MessageConstants.BACKOFFICE_SETTINGS);
+					request.setAttribute(MessageConstants.HIGHLIGHT_NAME,
+					MessageConstants.MODULE_SETTINGS);
+					
+					String teacherId=request.getParameter("teacherId");
+					String registerId=request.getParameter("registerId");
+					String status=request.getParameter("status");
+					ArrayList<TeacherVo> list=new ArrayList<TeacherVo>();
+					list=TeacherRegistrationBD.getdeactivatedTeachers(teacherId,registerId,status);
+					JSONObject json = new JSONObject();
+					json.put("teacherList", list);
+					response.getWriter().print(json);
+					
+					
+					
+				}
+				catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TeacherRegistration : getTeacherName Ending");
+
+		 return null;  
+				
+				
+			}
+			
+	//
 	public ActionForward getTeacherName(ActionMapping mapping,ActionForm form,
 			HttpServletRequest request,HttpServletResponse response){
 
