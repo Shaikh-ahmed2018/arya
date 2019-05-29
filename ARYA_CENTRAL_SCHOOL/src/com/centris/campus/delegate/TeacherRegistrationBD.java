@@ -9,10 +9,14 @@ import com.centris.campus.service.TeacherService;
 import com.centris.campus.serviceImpl.TeacherServiceImpl;
 import com.centris.campus.vo.AllTeacherDetailsVo;
 import com.centris.campus.vo.TeacherMappingClassesVo;
+import com.centris.campus.vo.TeacherVo;
 
 public class TeacherRegistrationBD {
-	TeacherService serviceobj = new TeacherServiceImpl();
-
+	static TeacherService serviceobj;
+	static
+	{
+	 serviceobj = new TeacherServiceImpl();
+	}
 	public ArrayList<AllTeacherDetailsVo> getAllTeacherDetails() {
 		return serviceobj.getAllTeacherDetails();
 	}
@@ -73,5 +77,20 @@ public class TeacherRegistrationBD {
 	public int checkStaffInTDS(String currentUser) {
 		// TODO Auto-generated method stub
 		return serviceobj.checkStaffInTDS(currentUser);
+	}
+
+	public boolean deactivateStaffDetails(String[] teachercode) {
+		// TODO Auto-generated method stub
+		return serviceobj.deactivateStaffDetails(teachercode);
+	}
+
+	public static ArrayList<TeacherVo> getdeactivatedTeachers(String teacherId, String registerId, String status) {
+		// TODO Auto-generated method stub
+		return serviceobj.getdeactivatedTeachers(teacherId,registerId,status);
+	}
+
+	public boolean activateStaff(String registerid) {
+		// TODO Auto-generated method stub
+		return serviceobj.activateStaff(registerid);
 	}
 }
