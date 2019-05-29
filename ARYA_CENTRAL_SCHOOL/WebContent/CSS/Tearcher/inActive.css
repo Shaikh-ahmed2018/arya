@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+#allstaff
+{
+	width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: 12px;
+    text-align: left;
+    color:black;
+}
+.modal-header
+{
+ font-size: 16px;
+}
+button#close.btn.btn-primary
+{
+	font-size: 14px;
+	border-color: #07aab9;
+    background-color: #07aab9;
+    padding: 3px 12px;
+}
+th
+{
+	color: #07aab9;
+	font-size: 14px;
+}
+
