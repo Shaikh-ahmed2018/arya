@@ -142,7 +142,7 @@
 					
 					<span class="buttons"  id="deactivateTeacher" style="cursor: pointer">Deactivate
 					</span>
-
+				
 					<!-- <img src="images/download.png" class="download" id="iconsimg"
 						data-toggle="modal" data-target="#myModal" data-toggle="tooltip"
 						data-placement="bottom" title="Download"> -->
@@ -166,7 +166,9 @@
 								</div>
 								<div class="modal-body">
 								
-							          <div id="teachertable"></div>    
+							          <div id="teachertable">
+							          
+							          </div>    
 						</div>
 						<div class="modal-footer">
         <button type="button" id="close" class="btn btn-primary" data-dismiss="modal">Close</button>
