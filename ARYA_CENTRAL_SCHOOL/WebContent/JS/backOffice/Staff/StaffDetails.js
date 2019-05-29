@@ -110,7 +110,7 @@ $(document)
 												"<th>Name</th>" +
 												"<th>Teaching Type</th>" +
 												"<th>Status</th>" +
-												
+												"<th>Make Active</th>"+
 												"</tr></center>" +
 												"</table>"
 												
@@ -125,8 +125,9 @@ $(document)
 														"<td>"+result.teacherList[i].teacherName+"</td>"+
 														"<td>"+result.teacherList[i].teacherType+"</td>"+														
 														"<td>InActive</td>"+
+														"<td><button type='button' class='approve' RegisterId="+result.teacherList[i].registerId+" style='background-color: #449d44;border-color: #449d44;'><span>Activate</span></button></td>"
 														+"</tr>"
-
+														
 														
 														);
 												
@@ -144,8 +145,38 @@ $(document)
 						
 						
 					});
-					//
+					//activate staff
+					$(document).on("click", ".approve", function(event){
+				        $.ajax({
+							type : 'POST',
+							url : "teacherregistration.html?method=activateStaff",
+							data : {"registerid":$(this).attr('RegisterId')},
+							success : function(
+									response) {
+								var result = $.parseJSON(response);								
+								
+								$('.errormessagediv').hide();
+								
+								if (result.status == true) {
+									$(".errormessagediv").hide();
+									$(".successmessagediv").show();
+									$(".validateTips").text("activating Record Progressing...");
+									$(".validateTips").text("Activated Successfully");
+									setTimeout(function(){
+										   
+										 window.location.href="adminMenu.html?method=staffList";
+									 
+									 },3000);
+								
+								}							
+							
+							}
+
+						}); 
+				        
+				    }); 
 					
+					//
 					$("#selectall").change(function(){
 
 						 $(".select").prop('checked', $(this).prop("checked"));
@@ -307,7 +338,8 @@ $(document)
 												$(".validateTips").text("Deactivating Record Progressing...");
 
 											} else {
-												$(
+												
+											$(
 												".successmessagediv").show();
 												$(".validateTips").text(result.status);
 											}
@@ -414,14 +446,6 @@ function removeMessage() {
 
 }
 
-//getdeactivate teachers
-function getDeactivatedTeachers(){
-	$("#activateTeacher").click(function(){
-		
-	
-	});
-	
-}
 
 
 
