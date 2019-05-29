@@ -6,6 +6,7 @@ import com.centris.campus.forms.TeacherForm;
 import com.centris.campus.pojo.TeacherRegistrationPojo;
 import com.centris.campus.vo.AllTeacherDetailsVo;
 import com.centris.campus.vo.TeacherMappingClassesVo;
+import com.centris.campus.vo.TeacherVo;
 
 public interface TeacherService {
      
@@ -24,4 +25,8 @@ public interface TeacherService {
 	public ArrayList<AllTeacherDetailsVo> reportingToList();
 	public Object StudentAdmissionNumber(String academicYear);
 	public int checkStaffInTDS(String currentUser);
+	public boolean deactivateStaffDetails(String[] teachercode);
+	public ArrayList<TeacherVo> getdeactivatedTeachers(String teacherId, String registerId, String status);
+	public boolean activateStaff(String registerid);
+	
 }
