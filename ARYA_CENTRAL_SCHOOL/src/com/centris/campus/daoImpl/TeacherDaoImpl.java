@@ -26,7 +26,9 @@ import com.centris.campus.util.MessageConstants;
 import com.centris.campus.util.TeacherUtilsConstants;
 import com.centris.campus.util.UserRolePermissionSqlConstatnts;
 import com.centris.campus.vo.AllTeacherDetailsVo;
+import com.centris.campus.vo.FeeCollectionVo;
 import com.centris.campus.vo.TeacherMappingClassesVo;
+import com.centris.campus.vo.TeacherVo;
 import com.centris.campus.vo.UserRolePermissionVO;
 import com.centris.campus.vo.ViewallSubjectsVo;
 
@@ -431,7 +433,69 @@ public class TeacherDaoImpl implements TeacherDao {
 				+ " Control in TeacherDaoImpl : deleteStaffDetails Ending");
 		return status;
 	}
+//deactivate
+	public boolean deactivateStaffDetails(String[] teachercode ) {
 
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TeacherDaoImpl : deactivateStaffDetails Starting");
+
+		Connection conn = null;
+		boolean status = false;
+		int count = 0;
+
+		try {
+			conn = JDBCConnection.getSeparateConnection();
+			
+			for(int i=0;i<teachercode.length;i++){
+				
+			pstmt = conn
+					.prepareStatement("update campus_teachers set isActive='N' where TeacherID=?");
+			pstmt.setString(1, teachercode[i]);
+			
+			System.out.println("deactivateStaffDetails Query:::::"+pstmt);
+
+			count = pstmt.executeUpdate();
+			if (count > 0) {
+				status = true;
+			} else {
+				status = true;
+			}
+
+		} 
+		}catch (SQLException e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null && (!rs.isClosed())) {
+					rs.close();
+				}
+				if (pstmt != null && (!pstmt.isClosed())) {
+					pstmt.close();
+				}
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+
+			} catch (Exception e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			}
+		}
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TeacherDaoImpl : deactivateStaffDetails Ending");
+		return status;
+	}
+	
+//	
 	public List<ViewallSubjectsVo> getSubjects(String classId) {
 		logger.setLevel(Level.DEBUG);
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -2003,4 +2067,134 @@ public class TeacherDaoImpl implements TeacherDao {
 		// TODO Auto-generated method stub
 		return getRoleList;
 	}
+
+
+	
+	public ArrayList<TeacherVo> getdeactivatedTeachers(String teacherId, String registerId, String status) {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuDaoImpl: getdeactivatedTeachers : Starting");
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+        int count=0;
+        ArrayList<TeacherVo> teacherList=new ArrayList<TeacherVo>();
+		try {
+			 	conn=JDBCConnection.getSeparateConnection();
+			 	pstmt=conn.prepareStatement("select TeacherID,registerId,isActive,FirstName,teachingType from campus_teachers where isActive='N'");
+			 	System.out.println(pstmt);
+			 	//pstmt.setString(1, teacherId);
+				//pstmt.setString(2, registerId);
+				//pstmt.setString(1, status);
+				rs=pstmt.executeQuery();
+				while(rs.next()){
+					count++;
+					TeacherVo vo=new TeacherVo();
+					vo.setSno(count);
+					vo.setRegisterId(rs.getString("registerId"));
+					vo.setTeacherName(rs.getString("FirstName"));
+					vo.setTeacherType(rs.getString("teachingType"));
+					vo.setStatus(rs.getString("isActive"));
+					teacherList.add(vo);
+
+				}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally{
+			if(rs!=null){
+				try{
+					rs.close();
+				}
+				catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+			if(pstmt!=null){
+				try{
+					pstmt.close();
+				}
+				catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+		}
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuDaoImpl : getdeactivatedTeachers : Ending");
+		return teacherList;
+	}
+
+
+	
+	public boolean activateStaff(String registerid) {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TeacherDaoImpl : activateStaff Starting");
+
+		Connection conn = null;
+		boolean status = false;
+		int count = 0;
+		try {
+			conn = JDBCConnection.getSeparateConnection();
+			//for(int i=0;i<registerid.length;i++){
+				pstmt = conn
+						.prepareStatement("update campus_teachers set isActive='Y' where registerId=?");
+				pstmt.setString(1, registerid);
+			System.out.println(pstmt);
+				count = pstmt.executeUpdate();
+				if (count > 0) {
+					status = true;
+				} else {
+					status = true;
+				}			//}
+							
+				
+				
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally{
+			if(rs!=null){
+				try{
+					rs.close();
+				}
+				catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+			if(pstmt!=null){
+				try{
+					pstmt.close();
+				}
+				catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+		}
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuDaoImpl : getdeactivatedTeachers : Ending");
+		return status;
+	}
+
+
+	
+	
+
+
+	
 }
