@@ -246,20 +246,21 @@ font-size: 12px;
 									style="vertical-align: -5px; margin-right: 5px; padding-left: 5px;"></span>Payable Fees</th>
 							</tr>
 							<tr class="collapsable">
+								<th  style="font-size: 14px; text-align: center; background: #f9f9f9 !important; font-family: Roboto Medium;">Select</th>
 								<th  style="font-size: 14px; text-align: center; background: #f9f9f9 !important; font-family: Roboto Medium;">Term Name</th>
 								<th style="font-size: 14px; text-align: center; background: #f9f9f9 !important; font-family: Roboto Medium;">Term Fee Amount</th>
 								<th style="font-size: 14px; text-align: center; background: #f9f9f9 !important; font-family: Roboto Medium;">Payment Status</th>
 								<th style="font-size: 14px; text-align: center; background: #f9f9f9 !important; font-family: Roboto Medium;"></th>
 							</tr>
 						<logic:iterate id="FeeCollection" name="FeeCollectionVo" property="feeNamelist" > 	
-							<tr class="collapsable">
-							
+								<tr class="collapsable">
+								<td style="font-size: 10pt; font-weight: 700; text-align: center;" ><input type="checkbox" class="selectmonth <bean:write name="FeeCollection" property="status" />" value="<bean:write name="FeeCollection" property="termId" />,<bean:write name="FeeCollection" property="monthName" />,<bean:write name="FeeCollection" property="actualAmt" />,<bean:write name="FeeCollection" property="recieptNo" />"  /></td>
 								<td class="heading" style="font-size: 10pt; font-weight: 700; text-align: center;" id="<bean:write name="FeeCollection" property="termId" />"><bean:write name="FeeCollection" property="term" /></td>
 								<td style="font-size: 10pt; font-weight: 700; text-align: center;"><bean:write name="FeeCollection" property="actualAmt" /></td>
 								<td style="font-size: 10pt; font-weight: 700; text-align: center; " id='status'><span class='<bean:write name="FeeCollection" property="status" />'><bean:write name="FeeCollection" property="status" /></span></td>
 								<td id='<bean:write name="FeeCollection" property="fineAmount" />,<bean:write name="FeeCollection" property="advanceCarry" />,<bean:write name="FeeCollection" property="dueCarry" />,<bean:write name="FeeCollection" property="concessionAmt" />'><input type="button" name="<bean:write name="FeeCollection" property="status" />" id="<bean:write name="FeeCollection" property="termId" />" class="pay buttons" maxlength="50" value="Pay Now" style="padding: 1px 5px;border: none;" /><input type="button" id="<bean:write name="FeeCollection" property="paidDate" />" name="<bean:write name="FeeCollection" property="paidAmt" />" class="buttons view" value="View" style="display:none;padding: 1px 5px;border: none;"/><input type="button" id="<bean:write name="FeeCollection" property="paidDate" />" name="<bean:write name="FeeCollection" property="recieptNo" />,<bean:write name="FeeCollection" property="paidAmt" />,<bean:write name="FeeCollection" property="paymode" />,<bean:write name="FeeCollection" property="ddno" />,<bean:write name="FeeCollection" property="dddate" />" class="buttons print" value="Print" style="display:none;padding: 1px 5px;border: none;"/></td>
-							</tr>
-							 </logic:iterate>
+								</tr>
+						</logic:iterate>
 							
 
 						</table>
