@@ -12884,6 +12884,7 @@ public ActionForward electionList(ActionMapping mapping, ActionForm form,
 			List<ClassPojo> classlist = new StudentTransferCertifivateReportBD().getClassDetails();
 			request.setAttribute("classlist", classlist);
 			
+			
 			//StudentRegistrationVo registrationVo1 = new StudentRegistrationVo();
 			//ParentRequiresAppointmentDELEGATE obj = new ParentRequiresAppointmentDELEGATE();
 			
@@ -13577,7 +13578,7 @@ public ActionForward electionList(ActionMapping mapping, ActionForm form,
 		String csub = request.getParameter("csub");
 		String esub = request.getParameter("esub");
 		String admclass=request.getParameter("admclass");
-		String prodt=request.getParameter("prodt");
+		//String prodt=request.getParameter("prodt");
 		
 		String[] splitlocation = location.split(",");
 		String[] splitaccyear =accyear.split(",");
@@ -13593,8 +13594,8 @@ public ActionForward electionList(ActionMapping mapping, ActionForm form,
 			request.setAttribute(LeftMenusHighlightMessageConstant.SUBMODULE_HIGHLIGHT_NAME,
 					LeftMenusHighlightMessageConstant.MODULE_STUDENT_TC_GENERATION);
 			
-			status = new StudentRegistrationDaoImpl().NewGenerateStudentTC(splitlocation,splitaccyear,splitstudentid,splitadmid,splitclassid,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass,prodt);
-			
+		//	status = new StudentRegistrationDaoImpl().NewGenerateStudentTC(splitlocation,splitaccyear,splitstudentid,splitadmid,splitclassid,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass);
+			status = new StudentRegistrationDaoImpl().NewGenerateStudentTC(splitlocation,splitaccyear,splitstudentid,splitadmid,splitclassid,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass);
 			
 			JSONObject jsonobj = new JSONObject();
 
