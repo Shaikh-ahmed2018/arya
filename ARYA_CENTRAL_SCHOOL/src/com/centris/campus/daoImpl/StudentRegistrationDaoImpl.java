@@ -13382,7 +13382,7 @@ public List<StudentRegistrationVo> getStudentListByTC(String locationid, String 
 	return list;
 }
 
-public List<StudentRegistrationVo> TransferCertificateDownload(String locationId, String accyear, String studentid, String admid, String classid){
+/*public List<StudentRegistrationVo> TransferCertificateDownload(String locationId, String accyear, String studentid, String admid, String classid){
 
 	logger.setLevel(Level.DEBUG);
 	JLogger.log(0, JDate.getTimeString(new Date())
@@ -13614,8 +13614,236 @@ public List<StudentRegistrationVo> TransferCertificateDownload(String locationId
 	
 	return list;
 
-}
+}*/
+public List<StudentRegistrationVo> TransferCertificateDownload(String locationId, String accyear, String studentid, String admid, String classid){
 
+	logger.setLevel(Level.DEBUG);
+	JLogger.log(0, JDate.getTimeString(new Date())
+			+ MessageConstants.START_POINT);
+	logger.info(JDate.getTimeString(new Date())
+			+ " Control in GeneratePayrollDaoImpl: TransferCertificateDownload : Starting");
+	
+	List<StudentRegistrationVo> list = new ArrayList<StudentRegistrationVo>();
+	PreparedStatement pst = null;
+	PreparedStatement pst1 = null;
+	PreparedStatement pst2 = null;
+
+
+	ResultSet rs = null,rs1 = null,rs2 = null;
+
+	Connection conn = null;
+	DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+	DateFormat format2 = new SimpleDateFormat("dd-MMMMM-yyyy");
+	DateFormat format3 = new SimpleDateFormat("MMMMM-yyyy");
+	try{
+		
+		conn = JDBCConnection.getSeparateGodaddyConnection();
+		for(int i =0;i<studentid.split(",").length;i++)
+		{
+		pst = conn.prepareStatement("SELECT ctd.TC_NO,ctd.admission_class,ctd.esub,cscd.specilization,stu.student_doj_var,ccls.classdetails_name_var classId,ctd.TCCode,ctd.result,ctd.locationId,ctd.acadamic_year,ctd.admissionNo,ctd.student_id_int,CASE WHEN stu.student_lname_var IS NULL THEN stu.student_fname_var ELSE CONCAT(stu.student_fname_var,' ',stu.student_lname_var)END studentname,cpar.FatherName,cpar.student_mothername_var AS MotherName,stu.student_nationality_var AS Nationality,ccc.casteCategory,ccaste.caste,stu.student_dob_var AS student_birth_date,stu.student_doj_var AS date_of_joining,ccls.classdetails_name_var AS class_latest,ccls.classdetail_id_int,ctd.csub AS compulsory_sub,ctd.ladate AS last_attendance, stu.modifydate AS promotion_date,ctd.appdate AS stuck_of_rolls,ctd.appdate AS date_applicatin_certificate,ctd.appdate AS date_issue_certificate,ccls.createdate,ctd.school_or_board_Examination,ctd.reason,ctd.remarks,cfc.is_paid,cftd.startdate,cftd.enddate,cschlr.concessionType,rel.religion  FROM campus_tc_details ctd LEFT JOIN campus_student stu ON ctd.student_id_int = stu.student_id_int LEFT JOIN campus_religion rel ON stu.student_religion_var = rel.religionId LEFT JOIN campus_caste_category ccc ON stu.casteCategory = ccc.castCatId LEFT JOIN campus_caste ccaste ON stu.student_caste = ccaste.casteId LEFT JOIN campus_parentchildrelation cpchil  ON ctd.student_id_int = cpchil.stu_addmissionNo LEFT JOIN campus_parents cpar  ON cpchil.parentid = cpar.ParentID LEFT JOIN  campus_student_classdetails cscd  ON stu.student_id_int  = cscd.student_id_int LEFT JOIN  campus_classdetail ccls  ON (cscd.classdetail_id_int  = ccls.classdetail_id_int AND cscd.locationId=ccls.locationId) LEFT JOIN campus_fee_collection cfc ON ctd.student_id_int = cfc.admissionNo LEFT JOIN campus_fee_termdetails cftd ON cfc.termcode = cftd.termid LEFT JOIN campus_scholorship cschlr  ON ctd.admissionNo = cschlr.admissionNo WHERE ctd.student_id_int=? and ctd.acadamic_year=? ORDER BY startdate DESC LIMIT 1");
+		pst.setString(1, studentid.split(",")[i]);
+		pst.setString(2, accyear.split(",")[i]);
+		
+		System.out.println("TC_PDF = "+pst);
+				
+		rs = pst.executeQuery();
+			
+		while(rs.next()){
+			com.centris.campus.util.DateToWords num = new com.centris.campus.util.DateToWords();
+
+			
+			
+			
+			StudentRegistrationVo stuReg = new StudentRegistrationVo();
+			
+			stuReg.setAdmissionNo(rs.getString("admissionNo"));
+			stuReg.setResult(rs.getString("result"));
+			
+			if(rs.getString("result").equalsIgnoreCase("pass")){
+				stuReg.setResultstatus("YES");
+			}else{
+				stuReg.setResultstatus("No");
+			}
+			System.out.println("rs.getString(is_paid)  == " + rs.getString("is_paid"));
+			if(rs.getString("is_paid")==null || rs.getString("is_paid").equalsIgnoreCase("N")){
+				stuReg.setFeestat("NO, PAID UPTO:");
+				stuReg.setPaidupto("---");
+			}else if(rs.getString("is_paid").equalsIgnoreCase("Y")){
+				stuReg.setFeestat("YES, PAID UPTO:");
+				
+				String paidUpto=rs.getString("enddate").split("-")[0]+"-03-31";
+				
+				stuReg.setPaidupto(format3.format(format1.parse(paidUpto)));
+			}
+			
+			if(rs.getString("concessionType") != null){
+				stuReg.setScholarShip("YES");
+			}else {
+				stuReg.setScholarShip("NO");
+			}
+			
+			String academicYear=HelperClass.getAcademicYearFace(accyear.split(",")[0]).split("-")[0].substring(2)+"-"+HelperClass.getAcademicYearFace(accyear.split(",")[0]).split("-")[1].substring(2);
+			String tc_no=(rs.getString("class_latest")+"/"+academicYear+"/"+String.format("%04d", rs.getInt("TC_NO")));
+			stuReg.setTc_no(tc_no);
+			stuReg.setTccode(rs.getString("TCCode"));
+			
+			if(rs.getString("student_doj_var")!=null)
+			stuReg.setDateofjoin(HelperClass.convertDatabaseToUI(rs.getString("student_doj_var")));
+			
+			String promodt = rs.getString("createdate");
+			String arr[] = promodt.split(" ", 2);
+			String firstWord = arr[0];
+			Date pd = format1.parse(firstWord);
+			String prodt = format2.format(pd);
+			stuReg.setPromotionDate(prodt);
+			
+			stuReg.setStudentFullName(rs.getString("studentname"));
+			stuReg.setStudoj(rs.getString("student_doj_var"));
+			stuReg.setTcno(rs.getString("TCCode"));
+			stuReg.setFatherName(rs.getString("FatherName"));
+			stuReg.setMotherName(rs.getString("MotherName"));
+			stuReg.setNationality(rs.getString("Nationality"));
+			String specialization=rs.getString("specilization");
+			stuReg.setCasteCategory(rs.getString("religion")+","+rs.getString("caste"));
+			if(stuReg.getCasteCategory() == "SC" || stuReg.getCasteCategory() == "ST" ){
+				stuReg.setCasteCategoryStatus("YES,");
+			}else{
+				stuReg.setCasteCategoryStatus("No,");
+			}
+			
+			stuReg.setCaste(rs.getString("caste"));
+			
+			Date date4 = format1.parse(rs.getString("student_birth_date"));
+			String[] split=rs.getString("student_birth_date").split("-");
+			int day = Integer.parseInt(split[2]);
+			int month = Integer.parseInt(split[1]);
+			int year = Integer.parseInt(split[0]);
+			stuReg.setDateofBirthInWords("("+num.convert(day)+" "+num.getMonth(month)+" "+num.convert(year)+")");
+
+			
+			String dateString4 = format2.format(date4);
+			stuReg.setDateofBirth(dateString4);
+			if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD1")) {
+				stuReg.setLatestclass(rs.getString("class_latest"));
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD2")) {
+				stuReg.setLatestclass(rs.getString("class_latest"));
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD3")) {
+				stuReg.setLatestclass(rs.getString("class_latest"));
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD4")) {
+				stuReg.setLatestclass(rs.getString("class_latest")+" (FIRST)");
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD5")) {
+				stuReg.setLatestclass(rs.getString("class_latest")+" (SECOND)");
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD6")) {
+				stuReg.setLatestclass(rs.getString("class_latest")+" (THIRD)");
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD7")) {
+				stuReg.setLatestclass(rs.getString("class_latest")+" (FOURTH)");
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD8")) {
+				stuReg.setLatestclass(rs.getString("class_latest")+" (FIFTH)");
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD9")) {
+				stuReg.setLatestclass(rs.getString("class_latest")+" (SIXTH)");
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD10")) {
+				stuReg.setLatestclass(rs.getString("class_latest")+" (SEVENTH)");
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD11")) {
+				stuReg.setLatestclass(rs.getString("class_latest")+" (EIGHTH)");
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD12")) {
+				stuReg.setLatestclass(rs.getString("class_latest")+" (NINTH)");
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD13")) {
+				stuReg.setLatestclass(rs.getString("class_latest")+" (TENTH)");
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD14")) {
+				stuReg.setLatestclass(rs.getString("class_latest")+" (ELEVENTH)");
+			}
+			else if(rs.getString("classdetail_id_int").equalsIgnoreCase("CCD15")) {
+				stuReg.setLatestclass(rs.getString("class_latest")+" (TWELTH)");
+			}
+			
+			
+			stuReg.setCompulsorySub(rs.getString("compulsory_sub"));
+			stuReg.setElectiveSub(rs.getString("esub"));
+		
+			if(rs.getString("last_attendance") != null){
+				Date date = format1.parse(rs.getString("last_attendance"));
+				String dateString = format2.format(date);
+				stuReg.setLastAttended(dateString);
+			}else{
+				stuReg.setLastAttended("---");
+			}
+			
+			Date date1 = format1.parse(rs.getString("stuck_of_rolls"));
+			String dateString1 = format2.format(date1);
+			stuReg.setStuckOfRolls(dateString1);
+			
+			stuReg.setCertificateDateApply(rs.getString("date_applicatin_certificate"));
+			Date date2 = format1.parse(stuReg.getCertificateDateApply());
+			String dateString2 = format2.format(date2);
+			stuReg.setCertificateDateApply(dateString2);
+			
+			Date date3 = format1.parse(rs.getString("date_issue_certificate"));
+			String dateString3 = format2.format(date3);
+			stuReg.setCertificateIssueDate(dateString3);
+			
+			stuReg.setExam_name(rs.getString("school_or_board_Examination"));
+			stuReg.setReasonForTc(rs.getString("reason"));
+			stuReg.setRemarks(rs.getString("remarks"));
+			stuReg.setClassname(rs.getString("admission_class"));
+			list.add(stuReg);
+			
+		}
+	}
+		
+	}catch(Exception e){
+		e.printStackTrace();
+	}finally {
+		try {
+
+			if (rs != null && (!rs.isClosed())) {
+				rs.close();
+			}
+			if (rs1 != null && (!rs1.isClosed())) {
+				rs1.close();
+			}
+			if (rs2 != null && (!rs2.isClosed())) {
+				rs2.close();
+			}
+			if (pst != null && (!pst.isClosed())) {
+				pst.close();
+			}
+			if (pst1 != null && (!pst1.isClosed())) {
+				pst1.close();
+			}
+			if (pst2 != null && (!pst2.isClosed())) {
+				pst2.close();
+			}
+			if (conn != null && (!conn.isClosed())) {
+				conn.close();
+			}
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+	}
+	
+	
+	JLogger.log(0, JDate.getTimeString(new Date())
+			+ MessageConstants.END_POINT);
+	logger.info(JDate.getTimeString(new Date())
+			+ " Control in StudentRegistrationDaoImpl : TransferCertificateDownload Ending");
+	
+	return list;
+
+}
 
 public List<StudentRegistrationVo> GenTCListFilter(StudentRegistrationVo vo) {
 	logger.setLevel(Level.DEBUG);
@@ -14529,7 +14757,7 @@ public String WithHeldActivationDeactivation(String studentId, String accyear, S
 			+ " Control in  StudentRegistrationDaoImpl : checkApplicationNo Ending");
 	return successMessage;
 }
-public String NewGenerateStudentTC(String[] splitlocation, String[] splitaccyear, String[] splitstudentid,String[] splitadmid,String[] splitclassid,String examdetails,String reason,String remarks,String result,String appdate,String ladate,String csub,String esub, String admclass, String prodt){
+/*public String NewGenerateStudentTC(String[] splitlocation, String[] splitaccyear, String[] splitstudentid,String[] splitadmid,String[] splitclassid,String examdetails,String reason,String remarks,String result,String appdate,String ladate,String csub,String esub, String admclass){
 
 	logger.setLevel(Level.DEBUG);
 	JLogger.log(0, JDate.getTimeString(new Date())
@@ -14583,7 +14811,113 @@ public String NewGenerateStudentTC(String[] splitlocation, String[] splitaccyear
 			pstmt.setString(18, esub);
 			pstmt.setInt(19, tc_no);
 			pstmt.setString(20, admclass);
-			pstmt.setString(21, HelperClass.convertUIToDatabase(prodt));
+			//pstmt.setString(21, HelperClass.convertUIToDatabase(prodt));
+			status = pstmt.executeUpdate();	
+			
+			System.out.println("status "+pstmt);
+			if(status>0){
+				
+				PreparedStatement classDetaiUpdate=con.prepareStatement("UPDATE campus_student_classdetails SET student_status='TC' WHERE student_id_int=? AND fms_acadamicyear_id_int=?");
+				classDetaiUpdate.setString(1, splitstudentid[i]);
+				classDetaiUpdate.setString(2, splitaccyear[i]);
+				int classDetaiUpdateInt=classDetaiUpdate.executeUpdate();
+				if(classDetaiUpdateInt>0) {
+					con.commit();
+					smsg="TC Generated Successfully...";
+				}
+				else{
+					con.rollback();
+					smsg="TC Generation Failed";
+				}
+				
+			}else{
+				con.rollback();
+				smsg="TC Generation Failed";
+			}
+							
+		}
+		
+	} catch (Exception e) {
+		logger.error(e.getMessage(), e);
+		e.printStackTrace();
+	}finally{
+
+		try {
+			if (pstmt != null && (!pstmt.isClosed())) {
+				pstmt.close();
+			}
+			if (con != null && (!con.isClosed())) {
+				con.close();
+			}
+		}catch (SQLException e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+	}
+	logger.setLevel(Level.DEBUG);
+	JLogger.log(0, JDate.getTimeString(new Date())
+			+ MessageConstants.END_POINT);
+	logger.info(JDate.getTimeString(new Date())
+			+ " Control in EmployeeExpenseDetailsDaoImpl : generateStudentTC Ending");
+	return smsg;
+}*/
+public String NewGenerateStudentTC(String[] splitlocation, String[] splitaccyear, String[] splitstudentid,String[] splitadmid,String[] splitclassid,String examdetails,String reason,String remarks,String result,String appdate,String ladate,String csub,String esub, String admclass){
+
+	logger.setLevel(Level.DEBUG);
+	JLogger.log(0, JDate.getTimeString(new Date())
+			+ MessageConstants.START_POINT);
+	logger.info(JDate.getTimeString(new Date())
+			+ " Control in EmployeeExpenseDetailsDaoImpl : generateStudentTC Starting");
+	StudentRegistrationForm registration = new StudentRegistrationForm();
+	PreparedStatement pstmt = null;
+	Connection con = null;
+	int status = 0;
+	String smsg = null;
+	System.out.println("result  ==  " + result);
+	try {
+		System.out.println("Inside the saveStudentPromotion DaoImpl");
+		con = JDBCConnection.getSeparateGodaddyConnection();
+	int tc_no=0;
+		Timestamp createdDate = HelperClass.getCurrentTimestamp();
+		
+		for (int i = 0; i < splitstudentid.length; i++) {
+			con.setAutoCommit(false);
+			String idgen=IDGenerator.getPrimaryKeyID("campus_tc_details",con);
+			
+			PreparedStatement getTcCount=con.prepareStatement("SELECT COUNT(*) FROM campus_tc_details WHERE acadamic_year=?");
+			getTcCount.setString(1,splitaccyear[i]);
+			
+			ResultSet gerRSCount=getTcCount.executeQuery();
+			while(gerRSCount.next()) {
+				tc_no=gerRSCount.getInt(1)+1;
+			}
+			pstmt = con.prepareStatement("INSERT INTO campus_tc_details(`TCCode`,`locationId`,`acadamic_year`,`student_id_int`,`admissionNo`,`latestClassID`,`issueDate`,`issuedBy`,`school_or_board_Examination`,`result`,`reason`,`remarks`,`createdate`,`createdby`,appdate,ladate,csub,esub,TC_NO,admission_class) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+			pstmt.setString(1, idgen);
+			pstmt.setString(2, splitlocation[i]);
+			pstmt.setString(3, splitaccyear[i]);
+			pstmt.setString(4, splitstudentid[i]);
+			pstmt.setString(5, splitadmid[i]);
+			pstmt.setString(6, splitclassid[i]);
+			
+			pstmt.setTimestamp(7, createdDate);
+			pstmt.setString(8, registration.getCreateUser());
+			
+			pstmt.setString(9, examdetails);
+			pstmt.setString(10, result);
+			pstmt.setString(11, reason);
+			pstmt.setString(12, remarks);
+			
+			pstmt.setTimestamp(13, createdDate);
+			pstmt.setString(14, registration.getCreateUser());
+			pstmt.setString(15, HelperClass.convertUIToDatabase(appdate));
+			pstmt.setString(16, HelperClass.convertUIToDatabase(ladate));
+			pstmt.setString(17, csub);
+			pstmt.setString(18, esub);
+			pstmt.setInt(19, tc_no);
+			pstmt.setString(20, admclass);
 			status = pstmt.executeUpdate();	
 			
 			System.out.println("status "+pstmt);
@@ -15142,6 +15476,7 @@ public List<StudentRegistrationVo> getStudentcontact(String locationId,String ac
 			StudentRegistrationVo obj = new StudentRegistrationVo();
 			obj.setCount(count);
 			obj.setFatherMobileNo(rs.getString("smsNO"));
+			//obj.setAdmissionno(rs.getString("smsNO"));
 			list.add(obj);
 			
 		}
