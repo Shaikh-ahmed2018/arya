@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+//import com.centris.campus.actions.registrationVo;
 import com.centris.campus.forms.StudentRegistrationForm;
 import com.centris.campus.pojo.PageFilterpojo;
 import com.centris.campus.serviceImpl.StudentRegistrationServiceImpl;
@@ -579,6 +580,11 @@ public List<StudentRegistrationVo> GenTCListFilter(StudentRegistrationVo vo) {
 
 public List<StudentRegistrationVo> GenTCListSearch(StudentRegistrationVo vo) {
 	return new StudentRegistrationServiceImpl().GenTCListSearch(vo);
+}
+
+public ArrayList<StudentRegistrationVo> getStudentcontactDetails(String accaYear, String locId, String classid, String secId) {
+	// TODO Auto-generated method stub
+	return new StudentRegistrationServiceImpl().getStudentcontactDetails(accaYear,locId,classid,secId) ;
 }
 	
 }
