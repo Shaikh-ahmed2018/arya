@@ -12,6 +12,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 import com.centris.campus.dao.StudentRegistrationDao;
+import com.centris.campus.daoImpl.FeeCollectionDaoImpl;
 import com.centris.campus.daoImpl.StudentRegistrationDaoImpl;
 import com.centris.campus.forms.StudentRegistrationForm;
 import com.centris.campus.pojo.PageFilterpojo;
@@ -2684,6 +2685,12 @@ public List<StudentRegistrationVo> GenTCListSearch(StudentRegistrationVo vo) {
 
 
 	return list;
+}
+
+public ArrayList<StudentRegistrationVo> getStudentcontactDetails(String accaYear, String locId, String classid, String secId
+		) {
+	// TODO Auto-generated method stub
+	return new StudentRegistrationDaoImpl().getStudentcontactDetails(accaYear,locId,classid,secId);
 }
 
 
