@@ -187,7 +187,7 @@ public class StudentRegistrationAction extends DispatchAction {
 		formFile = studentRegistrationForm.getBirthFile();
 
 		String StudentIDGenerator = null;
-
+		
 		try {
 			academicYearFace=HelperClass.getAcademicYearFace(studentRegistrationForm.getAcademicYear());
 			int count = registrationDelegate.validateDuplicateData(studentRegistrationForm, "Add");
@@ -926,19 +926,6 @@ public class StudentRegistrationAction extends DispatchAction {
 		return mapping.findForward(MessageConstants.ADD_STUDENT);
 
 	}
-
-	/**
-	 * <p>
-	 * This action method is responsible for getting StudentNames By Search.
-	 * </p>
-	 * 
-	 * @param mapping
-	 * @param form
-	 * @param request
-	 * @param response
-	 * @return List of String.
-	 * @throws Exception
-	 */
 	public ActionForward studentSearch(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 
@@ -4310,6 +4297,42 @@ public class StudentRegistrationAction extends DispatchAction {
 	}
 	
 //
+	//display contact details of all students
+	public ActionForward getStudentcontactDetails(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception{
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in StudentRegistrationAction : getStudentcontactDetails Starting");
+		try
+		{
+			String accaYear = request.getParameter("accYear");
+			String locId = request.getParameter("locationId");
+			String classid=request.getParameter("classId");
+			String secId=request.getParameter("divisionId");
+			StudentRegistrationVo StudentRegistrationVo = new StudentRegistrationVo();
+			ArrayList<StudentRegistrationVo> list = new StudentRegistrationDelegate().getStudentcontactDetails(accaYear,locId,classid,secId);
+			JSONObject obj = new JSONObject();
+			obj.put("data", list);
+			response.getWriter().print(obj);
+			//List<StudentRegistrationVo> list = new StudentRegistrationDaoImpl().getStudentcontactDetails(locId,accaYear,classid,secId);
+			//request.setAttribute("studentContactList", list);
+			//JSONObject jsonobj = new JSONObject();
+			//jsonobj.put("studentContactList", list);
+			//response.getWriter().print(jsonobj);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			logger.error(e);
+
+		}
+				return null;
+		
+	}
+		
+	//
 	public ActionForward individualStudentcontact(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception{ 
