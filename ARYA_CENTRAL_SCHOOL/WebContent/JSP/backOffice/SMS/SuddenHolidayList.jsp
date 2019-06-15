@@ -124,7 +124,7 @@ overflow-y:auto;
 									<label for="inputPassword" class="control-label col-xs-5"
 										style="text-align: right; line-height: 35px;">School Name <font color="red">*</font></label>
 									<div class="col-xs-7">
-										<select id="locationname" name="locationnid" class="form-control" required>
+										<select id="locationname" name="locationnid" class="form-control" required="required" data-validation-required-message="Please enter your school name.">
 											<option value="all">----------Select----------</option>
 											<logic:present name="locationList">
 												<logic:iterate id="Location" name="locationList">
@@ -135,26 +135,14 @@ overflow-y:auto;
 									</div>
 								</div>
 					
-									
 								
-								<!--div class="form-group clearfix">
-									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;"> Class</label>
-									<div class="col-xs-7">
-									
-									<select class="form-control" onkeypress="HideError()" 
-											name="classname" id="classname">
-											<option value="all">ALL</option>
-										</select>
-									</div>
-								</div-->
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
 										style="text-align: right; line-height: 35px;"> Class <font color="red">*</font></label>
 									<div class="col-xs-7">
 									
-									<select class="form-control" onkeypress="HideError()" 
-											name="classname" id="classname">
+									<select class="form-control"  onkeypress="HideError()" 
+											name="classname" id="classname" required="required" data-validation-required-message="Please enter your class name." >
 											<option value="">----------Select----------</option>
 										</select>
 									
@@ -174,7 +162,7 @@ overflow-y:auto;
 									<label for="inputPassword" class="control-label col-xs-5"
 										style="text-align: right; line-height: 35px;"> Message<font color="red">*</font></label>
 									<div class="col-xs-7">
-										<textarea  id="Message"name='StudentMessage' class="form-control" style=" width: 100%; height: 7%;"></textarea>
+										<textarea  id="Message"name='StudentMessage' required="required" data-validation-required-message="Please enter message." class="form-control" style=" width: 100%; height: 7%;"></textarea>
 									
 									</div>
 								</div>
@@ -187,7 +175,7 @@ overflow-y:auto;
 									<label for="inputPassword" class="control-label col-xs-5"
 										style="text-align: right; line-height: 35px;">Academic Year <font color="red">*</font></label>
 									<div class="col-xs-7">
-										<select id="Acyearid" name="accyear" class="form-control" required>
+										<select id="Acyearid" name="accyear" class="form-control" required="required" data-validation-required-message="Please enter academic year.">
 											<option value="all">----------Select----------</option>
 											<logic:present name="AccYearList">
 												<logic:iterate id="AccYear" name="AccYearList">
@@ -213,7 +201,7 @@ overflow-y:auto;
 									<label for="inputPassword" class="control-label col-xs-5"
 										style="text-align: right; line-height: 35px;">Division <font color="red">*</font></label>
 									<div class="col-xs-7">
-										<select id="sectionid" name="sectionid" class="form-control" required>
+										<select id="sectionid" name="sectionid" class="form-control" required="required" data-validation-required-message="Please enter Division.">
 											<option value="">----------Select----------</option>
 										</select>
 									</div>
@@ -240,7 +228,7 @@ overflow-y:auto;
 								<div class="form-group clearfix">
 									<div class="col-xs-12">
 									<p align="right">
-								<button type="button" class="btn btn-info" id="preview" >Preview</button>
+								
 								<button type="submit" class="btn btn-info" id="send" >Send</button>
 								<button type="reset" class="btn btn-info" id="resetbtn" >Reset</button>
 								</p>
@@ -252,21 +240,21 @@ overflow-y:auto;
 							</div>
 						<input type="hidden" name="Acyearid" id="Acyearid" value='<logic:present name="Acyearid"><bean:write name="Acyearid"/></logic:present>'></input>
 							
-				<!--div id="collapseOne" class="accordion-body collapse in">
+				<div id="collapseOne" class="accordion-body collapse in">
 				<div class="panel-body"
 					style="font-family: Open Sans Light; font-size: 20pt; color: #5d5d5d;">	
 					
 					
-						<table class="table table-striped" id="allstudent">
+						<table class="table" id="allstudent">
 							<thead>
 							<tr>
-							<th><input type='checkbox' name='selectall' id='selectall'/>All</th>
 							<th>S.No</th>
 							<th>Admission No</th>
-							<th>Name</th>
-							<th>Father Name</th>
-							<th>SMS Number</th>
-							<th>Message</th>
+							<th>Student Name</th>
+							<th>School Name</th>
+							<th>Class</th>
+							<th>Division</th>
+							<th>SMS No.</th> 
 							</tr>
 							</thead>
 							<tbody>
@@ -279,13 +267,15 @@ overflow-y:auto;
 					</div>
        
 	   
-					</div-->
+					</div>
+					
 					
 						</div>
 					</div>
 				</div>
 			</div>
 	</div>
+</div>
 
 	<script>
 		$('.carousel').carousel({
