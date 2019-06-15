@@ -48,6 +48,7 @@ $(document).ready(function() {
 		 $('#sectionid').val('');
 		  $('#Message').val('');
 		});
+
 	//$(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
 });
 
