@@ -13599,7 +13599,14 @@ public ActionForward electionList(ActionMapping mapping, ActionForm form,
 		String csub = request.getParameter("csub");
 		String esub = request.getParameter("esub");
 		String admclass=request.getParameter("admclass");
-		//String prodt=request.getParameter("prodt");
+		String prodt=request.getParameter("prodt");
+		String stuckofroll=request.getParameter("stuckofroll");
+		String issueCertificate=request.getParameter("issueCertificate");
+		String dateOfVatcation=request.getParameter("dateOfVatcation");
+		String schoolMeeting=request.getParameter("dateOfVatcation");
+		String pupilMeeting=request.getParameter("pupilMeeting");
+		String extra=request.getParameter("extra");
+		String noOfFail=request.getParameter("noOfFail");
 		
 		String[] splitlocation = location.split(",");
 		String[] splitaccyear =accyear.split(",");
@@ -13615,8 +13622,10 @@ public ActionForward electionList(ActionMapping mapping, ActionForm form,
 			request.setAttribute(LeftMenusHighlightMessageConstant.SUBMODULE_HIGHLIGHT_NAME,
 					LeftMenusHighlightMessageConstant.MODULE_STUDENT_TC_GENERATION);
 			
-		//	status = new StudentRegistrationDaoImpl().NewGenerateStudentTC(splitlocation,splitaccyear,splitstudentid,splitadmid,splitclassid,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass);
-			status = new StudentRegistrationDaoImpl().NewGenerateStudentTC(splitlocation,splitaccyear,splitstudentid,splitadmid,splitclassid,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass);
+
+			status = new StudentRegistrationDaoImpl().NewGenerateStudentTC(splitlocation,splitaccyear,splitstudentid,splitadmid,splitclassid,examdetails,reason,remarks,result,appdate,ladate,csub,esub,admclass,prodt,stuckofroll,issueCertificate,dateOfVatcation,schoolMeeting,pupilMeeting,extra,noOfFail);
+			
+
 			
 			JSONObject jsonobj = new JSONObject();
 

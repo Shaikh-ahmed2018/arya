@@ -3072,6 +3072,19 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 					} 
 				}
 				
+				
+				rs1.close();
+				psmt1.close();
+				
+				psmt1=conn.prepareStatement("SELECT * FROM campus_students_contacts WHERE studentId=?");
+				psmt1.setString(1, rs.getString("student_id_int"));
+				rs1=psmt1.executeQuery();
+				if(rs1.next()) {
+					vo.setSmsNo(rs1.getString("smsNo"));
+				}
+				else {
+					vo.setSmsNo("-");
+				}
 				rs1.close();
 				psmt1.close();
 				

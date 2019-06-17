@@ -29,7 +29,7 @@ $(document).ready(function(){
 					language=true;
 				}
 			}
-			if((date == $(this).val()) || language){
+			if((date == $(this).val()) && language){
 				
 				if(currenth.closest('tr').find(".starttime").val() <= starttime && currenth.closest('tr').find(".endtime").val() > starttime){
 				
@@ -120,7 +120,7 @@ $(document).ready(function(){
 					}
 					
 					
-					if(($(this).closest('tr').find(".startdate").not(currenth.closest('tr').find('.startdate')).val() ==currenth.closest('tr').find(".startdate").val()) || language){
+					if(($(this).closest('tr').find(".startdate").not(currenth.closest('tr').find('.startdate')).val() ==currenth.closest('tr').find(".startdate").val()) && language){
 			
 					if(starttime >= $(this).val() && starttime<$(this).closest('tr').find(".endtime").not(currenth.closest('tr').find('.endtime')).val()){
 					

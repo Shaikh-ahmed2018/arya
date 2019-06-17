@@ -7024,6 +7024,8 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 					pstmt1.setString(2, vo.getAccYear());
 					pstmt1.setString(3, vo.getLocationId());
 					pstmt1.setString(4, vo.getClassId());
+					
+					System.out.println(pstmt1);
 					rs1 = pstmt1.executeQuery();
 
 					while(rs1.next())
@@ -7035,7 +7037,7 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 						pstmt2.setString(3, vo.getAccYear());
 						pstmt2.setString(4, vo.getLocationId());
 						pstmt2.setString(5, vo.getClassId());
-
+						
 						float pt=0,sm=0,nbm=0,sem=0;
 						String work_edu="",art_edu="",health_edu="",discipline_edu="",remarks="";
 						ReportMenuVo vo2 = new ReportMenuVo();
@@ -7043,6 +7045,7 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 
 							pstmt2.setString(6, splitExamTypeId[s]);
 							pstmt2.setString(7, splitTerm1Exam[s]);
+							System.out.println(pstmt2);
 							rs2 = pstmt2.executeQuery();
 
 							if(rs2.next())
@@ -7080,7 +7083,7 @@ public List<ExaminationDetailsVo> getSubjectOnClass(String classId, String stude
 
 						int obtainmark=(int) (vo2.getScored_marks()+vo2.getPeriodictest()+vo2.getSubject_enrich_marks()+vo2.getNotebook_marks());
 						vo2.setObtainedmarks(obtainmark);
-						String gradename=null;
+						String gradename="";
 						if(obtainmark == 0){
 							gradename="E";
 						}else{

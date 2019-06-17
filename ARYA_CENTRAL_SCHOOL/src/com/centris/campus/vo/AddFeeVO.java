@@ -28,8 +28,15 @@ public class AddFeeVO
 	private double dueAmt;
 	private double advanceAmt;
 	private double paidAmt;
+	private String smsNo;
 	
 	
+	public String getSmsNo() {
+		return smsNo;
+	}
+	public void setSmsNo(String smsNo) {
+		this.smsNo = smsNo;
+	}
 	public double getPaidAmt() {
 		return paidAmt;
 	}

@@ -188,8 +188,16 @@ public class StudentRegistrationForm extends ActionForm {
 	private ArrayList<String> photoRealPath;
 	private ArrayList<String> photoAdmissionNoArray;
 	private String landLine;
+	private String classofJoinId;
 	
 	
+	
+	public String getClassofJoinId() {
+		return classofJoinId;
+	}
+	public void setClassofJoinId(String classofJoinId) {
+		this.classofJoinId = classofJoinId;
+	}
 	public String getPreviousSchool() {
 		return previousSchool;
 	}

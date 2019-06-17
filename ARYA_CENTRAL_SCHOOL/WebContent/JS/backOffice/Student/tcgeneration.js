@@ -113,16 +113,16 @@ $(".select1").change(function() {
 			$("#dialog").append("<input type='text' class='esub' id='esub' style='float:right'/ ><br>");
 			
 			$("#dialog").append('<label for="">Number of school meetings upto date :</label>');
-			$("#dialog").append("<input type='number' class='schoolMeeting' id='schoolMeeting' style='float:right'/ ><br>");
+			$("#dialog").append("<input type='text' class='schoolMeeting' id='schoolMeeting' style='float:right'/ ><br>");
 			
 			$("#dialog").append('<label for="">Number of school meetings the pupil attended :</label>');
-			$("#dialog").append("<input type='number' class='pupilMeeting' id='pupilMeeting' style='float:right'/ ><br>");
+			$("#dialog").append("<input type='text' class='pupilMeeting' id='pupilMeeting' style='float:right'/ ><br>");
 			
-			$("#dialog").append('<label for="">Games played or extra-curricular activities in which the pupil usually took part and proficency there in:</label>');
+			$("#dialog").append('<label for="">Games played or extra-curricular activities :</label>');
 			$("#dialog").append("<input type='text' class='extra' id='extra' style='float:right'/ ><br>");
 			
 			$("#dialog").append('<label for="">Number of times the pupil has failed in the present class :</label>');
-			$("#dialog").append("<input type='number' class='noOfFail' id='noOfFail' style='float:right'/ ><br>");
+			$("#dialog").append("<input type='text' class='noOfFail' id='noOfFail' style='float:right'/ ><br>");
 			
 			$("#dialog").append('<label for="">Reason for leaving :</label>');
 			$("#dialog").append("<input type='text' class='reason' id='reason' style='float:right'/ ><br>");
@@ -244,8 +244,8 @@ $(".select1").change(function() {
 		autoOpen: false,
 		modal: true,
 		
-	        width     : 600,
-	        height    : 300,
+	        width     : 900,
+	        height    : 600,
 		title:'Details for TC Generation',
 		buttons : {
 			"YES" : function(){
@@ -281,6 +281,10 @@ $(".select1").change(function() {
 				else if(prodt == null || prodt == undefined || prodt ==""){
 					$(".errormessagediv").show();
 					$(".validateTips").text("Select Promotion Date");
+				}
+				else if(issueCertificate == null || issueCertificate == undefined || issueCertificate ==""){
+					$(".errormessagediv").show();
+					$(".validateTips").text("Select Issue Certificate Date");
 				}
 				
 				else if(csub == null || csub == undefined || csub ==""){
@@ -451,7 +455,7 @@ if(classname=='all'){
 	$("#classname1").change(function(){
 		$("#searchvalue").val("");
 		var locationid=$("#locationname1").val();
-		var accyear=$("#Acyearid").val();
+		var accyear=$("#Acyearid1").val();
 		var classname=$("#classname1").val();
 		var sectionid=$("#sectionid1").val();
 		var sortingby=$("#sortingby1").val();
@@ -484,7 +488,7 @@ if(classname=='all'){
 	$("#sectionid1").change(function(){
 		$("#searchvalue").val("");
 		var locationid=$("#locationname1").val();
-		var accyear=$("#Acyearid").val();
+		var accyear=$("#Acyearid1").val();
 		var classname=$("#classname1").val();
 		var sectionid=$("#sectionid1").val();
 		var sortingby=$("#sortingby1").val();
@@ -537,7 +541,7 @@ if(classname=='all'){
 	$("#sortingby1").change(function(){
 		$("#searchvalue").val("");
 		var locationid=$("#locationname1").val();
-		var accyear=$("#Acyearid").val();
+		var accyear=$("#Acyearid1").val();
 		var classname=$("#classname1").val();
 		var sectionid=$("#sectionid1").val();
 		var sortingby=$("#sortingby1").val();
@@ -622,10 +626,10 @@ if(classname=='all'){
 	
 
 $("input[name=sorting2]:radio,input[name=sorting3]:radio").click(function (){
-	alert()
+
 	$("#searchvalue1").val("");
 	
-	var accyear=$("#Acyearid").val();
+	var accyear=$("#Acyearid1").val();
 
 	var locationid1=$("#locationname1").val();
 	var classname1=$("#classname1").val();
@@ -642,7 +646,6 @@ $("input[name=sorting2]:radio,input[name=sorting3]:radio").click(function (){
 	if($("#sortingby1").val()=="Gender"){
 		
 		orderby1=$("input[name='sorting3']:checked").val();
-		alert("vvvv"+orderby1)
 		studentDemotedListFilter(locationid1,accyear,classname1,sectionid1,sortingby1,orderby1);
 	}else if($("#sortingby1").val()=="Alphabetical" || $("#sortingby1").val()=="Admission"){
 		alert("ssss"+sortingby1)
@@ -674,7 +677,6 @@ $("input[name=sorting]:radio").change(function(){
 		
 		if($("#sortingby1").val()=="Gender"){
 			orderby1=$("input[name='sorting3']:checked").val();
-			alert(orderby1)
 			studentDemotedListFilter(locationid1,accyear,classname1,sectionid1,sortingby1,orderby1);
 		}else{
 			var orderby1=$("input[name='sorting3']:checked").val();
@@ -939,10 +941,11 @@ function getStudentListBySection(locationid,accyear,classname,sectionid,sortingb
 							+"<td> "+result.getSectionWiseList[i].studentnamelabel+"</td>"
 							+"<td> "+result.getSectionWiseList[i].studentrollno+" </td>"
 							+"<td> "+result.getSectionWiseList[i].classsection+" </td>"
+							+"<td> "+result.getSectionWiseList[i].classofJoinId+" </td>"
 							+"</tr>");
 					};
 					}else{
-						$("#allstudent tbody").append("<tr>"+"<td colspan='6'>No Records Founds</td>" +"</tr>");
+						$("#allstudent tbody").append("<tr>"+"<td colspan='7'>No Records Founds</td>" +"</tr>");
 					}
 					
 					$(".select").change(function() {

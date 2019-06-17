@@ -39,6 +39,11 @@
 	<field name="scholarShip" class="java.lang.String"/>
 	<field name="admissionNo" class="java.lang.String"/>
 	<field name="tc_no" class="java.lang.String"/>
+	<field name="dateofVacation" class="java.lang.String"/>
+	<field name="schoolMeeting" class="java.lang.String"/>
+	<field name="pupilMeeting" class="java.lang.String"/>
+	<field name="extra" class="java.lang.String"/>
+	<field name="noOfFail" class="java.lang.String"/>
 	<background>
 		<band height="958">
 			<image>
@@ -782,41 +787,41 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{remarks}]]></textFieldExpression>
 			</textField>
-			<staticText>
+			<textField>
 				<reportElement x="317" y="726" width="253" height="30" uuid="87884243-d6e3-439d-b2c7-65c393bfba96"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
-				<text><![CDATA[---]]></text>
-			</staticText>
-			<staticText>
+				<textFieldExpression><![CDATA[$F{noOfFail}]]></textFieldExpression>
+			</textField>
+			<textField>
 				<reportElement x="317" y="665" width="253" height="40" uuid="ee6f44a3-ae53-4182-9260-cf77f4566d20"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
-				<text><![CDATA[---]]></text>
-			</staticText>
-			<staticText>
+				<textFieldExpression><![CDATA[$F{extra}]]></textFieldExpression>
+			</textField>
+			<textField>
 				<reportElement x="317" y="640" width="253" height="23" uuid="c77d6b8f-c1a8-48f0-9639-b87e6cef7516"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
-				<text><![CDATA[---]]></text>
-			</staticText>
-			<staticText>
+				<textFieldExpression><![CDATA[$F{pupilMeeting}]]></textFieldExpression>
+			</textField>
+			<textField>
 				<reportElement x="317" y="613" width="253" height="25" uuid="bbd150d3-4cce-4df1-a6b6-8868f4b1beef"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
-				<text><![CDATA[---]]></text>
-			</staticText>
-			<staticText>
+				<textFieldExpression><![CDATA[$F{schoolMeeting}]]></textFieldExpression>
+			</textField>
+			<textField>
 				<reportElement x="317" y="586" width="253" height="25" uuid="58ce5490-d3d1-4c41-b327-efcff5889ab7"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="Calibri" size="11" isBold="true"/>
 				</textElement>
-				<text><![CDATA[---]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{dateofVacation}]]></textFieldExpression>
+			</textField>
 			<staticText>
 				<reportElement x="317" y="707" width="253" height="18" uuid="da1058c2-3ea5-4cab-a2e0-37e12960baab"/>
 				<textElement verticalAlignment="Top">

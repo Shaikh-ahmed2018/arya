@@ -25,7 +25,7 @@ public class DateToWords{
 				word = number % 100;
 				pass(word);
 				if (number > 100 && number % 100 != 0) {
-					show("and ");
+					show(" ");
 				}
 				number /= 100;
 				break;

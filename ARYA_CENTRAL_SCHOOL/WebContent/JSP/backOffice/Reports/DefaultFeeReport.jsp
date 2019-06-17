@@ -207,6 +207,7 @@ function ShowTable(){
 								<th>Term</th>
 								<th>Due Amount</th> 
 								<th>Contact No.</th> 
+								<th>Sms No.</th> 
 							</tr>
 						</thead>
 						<tbody>

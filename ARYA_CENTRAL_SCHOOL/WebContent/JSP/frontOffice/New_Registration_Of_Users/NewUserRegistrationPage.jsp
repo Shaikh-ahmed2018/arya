@@ -414,7 +414,7 @@ h2 {
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-6">
 
-					<div class="copyright">Copyright \A9 2015 Centris Infotech
+					<div class="copyright">Copyright \A9 2015 Thought Wings
 						Services - All Rights Reserved</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">

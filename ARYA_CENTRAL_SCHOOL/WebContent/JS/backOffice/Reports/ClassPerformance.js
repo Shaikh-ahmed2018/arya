@@ -82,15 +82,27 @@ $(document).ready(function(){
 		searchList();
 	});	
 	$("#Acyearid").change(function(){
-		changeAccYear();
-		getClassList();
+		if($("#classname").val()!='all'){
+			changeAccYear();
+		}
+		else{
+			getClassList();
+			
+			
+		}
 		var classname=$("#classname").val();
 		getSectionList(classname);
+		
 	});
 	$("#locationname").change(function(){
 		$("#searchvalue").val("");
-		changeAccYear();
-		getClassList();
+		if($("#classname").val()!='all'){
+			changeAccYear();
+		}
+		else{
+			getClassList();
+		}
+	
 		var classname=$("#classname").val();
 		getSectionList(classname);
 	});

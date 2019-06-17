@@ -241,13 +241,14 @@ function getDefaulterFeeList(){
 							+"<td>"+result.data[i].termName+"</td>"
 							+"<td>"+result.data[i].dueAmt+"</td>"
 							+"<td>"+result.data[i].name+"</td>"
+							+"<td>"+result.data[i].smsNo+"</td>"
 							+"</tr>");
 					}
 				
 				
 				}
 				else{
-					$("#allstudent tbody").append("<tr><td colspan='9'>No Record Found</td></tr>");
+					$("#allstudent tbody").append("<tr><td colspan='10'>No Record Found</td></tr>");
 				}
 			}
 		});

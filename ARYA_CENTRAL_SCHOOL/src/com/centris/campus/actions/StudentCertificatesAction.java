@@ -1281,7 +1281,7 @@ public ActionForward printCCCertificate(ActionMapping mapping,
 		
 		String sourceFileName =null;
 		String academicYear=HelperClass.getAcademicYearFace(accyear.split(",")[0]);
-		String lastacademicYear=Integer.toString(Integer.parseInt(HelperClass.getAcademicYearFace(accyear.split(",")[0]).split("-")[0]));
+		String lastacademicYear=Integer.toString(Integer.parseInt(HelperClass.getAcademicYearFace(accyear.split(",")[0]).split("-")[1]));
 		ServletOutputStream outstream =null;
 		byte[] bytes=null;
 		

@@ -333,6 +333,7 @@ function handle1(e) {
 							<th>Student Name</th>
 							<th>Roll No</th>
 							<th>Class and Division</th>
+							<th>Admission Class</th>
 							</tr>
 							</thead>
 							<tbody>

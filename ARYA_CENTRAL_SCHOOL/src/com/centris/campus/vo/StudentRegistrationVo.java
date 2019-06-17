@@ -261,9 +261,58 @@ public class StudentRegistrationVo implements Serializable {
 	private String father_office_landline;
 	private String mother_office_landline;
 	private String emergencyNo;
+	private String application_date;
+	private String dateofVacation;
+	private String schoolMeeting;
+	private String pupilMeeting;
+	private String extra;
+	private String noOfFail;
+	private String classofJoinId;
 	
 	
 	
+	public String getClassofJoinId() {
+		return classofJoinId;
+	}
+	public void setClassofJoinId(String classofJoinId) {
+		this.classofJoinId = classofJoinId;
+	}
+	public String getApplication_date() {
+		return application_date;
+	}
+	public void setApplication_date(String application_date) {
+		this.application_date = application_date;
+	}
+	public String getDateofVacation() {
+		return dateofVacation;
+	}
+	public void setDateofVacation(String dateofVacation) {
+		this.dateofVacation = dateofVacation;
+	}
+	public String getSchoolMeeting() {
+		return schoolMeeting;
+	}
+	public void setSchoolMeeting(String schoolMeeting) {
+		this.schoolMeeting = schoolMeeting;
+	}
+	public String getPupilMeeting() {
+		return pupilMeeting;
+	}
+	public void setPupilMeeting(String pupilMeeting) {
+		this.pupilMeeting = pupilMeeting;
+	}
+	public String getExtra() {
+		return extra;
+	}
+	public void setExtra(String extra) {
+		this.extra = extra;
+	}
+	public String getNoOfFail() {
+		return noOfFail;
+	}
+	public void setNoOfFail(String noOfFail) {
+		this.noOfFail = noOfFail;
+	}
 	public String getStudentSearchName() {
 		return studentSearchName;
 	}

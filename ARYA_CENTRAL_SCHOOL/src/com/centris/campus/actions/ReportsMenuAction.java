@@ -1,6 +1,7 @@
 package com.centris.campus.actions;
 import java.awt.print.PrinterJob;
 import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -23,6 +24,7 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRExporterParameter;
 import net.sf.jasperreports.engine.JRParameter;
 import net.sf.jasperreports.engine.JasperCompileManager;
@@ -32,6 +34,8 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.JasperRunManager;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.export.JRPdfExporter;
+import net.sf.jasperreports.engine.export.JRPdfExporterParameter;
 import net.sf.jasperreports.engine.export.JRPrintServiceExporter;
 import net.sf.jasperreports.engine.export.JRPrintServiceExporterParameter;
 import net.sf.jasperreports.engine.export.JRXlsExporter;
@@ -9885,6 +9889,20 @@ public ActionForward downloadReportCard(ActionMapping mapping,
 	logger.info(JDate.getTimeString(new Date())
 			+ " Control in ReportsMenuAction : downloadReportCard Starting");
 
+	frontPageDownload(request,response);
+	//backPageDownload(request,response);
+	
+	
+	JLogger.log(0, JDate.getTimeString(new Date())
+			+ MessageConstants.END_POINT);
+	logger.info(JDate.getTimeString(new Date())
+			+ " Control in ReportsMenuAction : downloadReportCard Ending");
+
+	return null;
+}
+
+public static void frontPageDownload(HttpServletRequest request,
+		HttpServletResponse response) {
 	try {
 		String classId = request.getParameter("classId");
 		String locationId = request.getParameter("locationId");
@@ -9917,13 +9935,11 @@ public ActionForward downloadReportCard(ActionMapping mapping,
 		File secondDir = null;
 		File firstDir = null;
 		JRBeanCollectionDataSource beanColDataSource = null;
-		if(!term2.equals("")){
-			sourceFileName=request.getRealPath("Reports/ReportCardByClassTerms2.jrxml");
-		}else{
-			sourceFileName=request.getRealPath("Reports/ReportCardByClassTerms.jrxml");
-		}
+		
+			sourceFileName=request.getRealPath("Reports/ReportCardFrontPage.jrxml");
+		
 
-
+		
 		/*ReportCard_Dir*/
 
 		/*firstDir = new File(ReportCard_Dir);
@@ -9969,12 +9985,120 @@ public ActionForward downloadReportCard(ActionMapping mapping,
 		logger.error(e.getMessage(), e);
 		e.printStackTrace();
 	}
-	JLogger.log(0, JDate.getTimeString(new Date())
-			+ MessageConstants.END_POINT);
-	logger.info(JDate.getTimeString(new Date())
-			+ " Control in ReportsMenuAction : downloadReportCard Ending");
+	
+	
+}
+public byte[] generateReport(JasperPrint jasperPrint1, JasperPrint jasperPrint2) {
+	  //throw the JasperPrint Objects in a list
+	  List<JasperPrint> jasperPrintList = new ArrayList<JasperPrint>();
+	  jasperPrintList.add(jasperPrint1);
+	  jasperPrintList.add(jasperPrint2);
 
-	return null;
+
+	  ByteArrayOutputStream baos = new ByteArrayOutputStream();     
+	  JRPdfExporter exporter = new JRPdfExporter();     
+	  //Add the list as a Parameter
+	  exporter.setParameter(JRExporterParameter.JASPER_PRINT_LIST, jasperPrintList);
+	  //this will make a bookmark in the exported PDF for each of the reports
+	  exporter.setParameter(JRPdfExporterParameter.IS_CREATING_BATCH_MODE_BOOKMARKS, Boolean.TRUE);
+	  exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, baos);       
+	  try {
+		exporter.exportReport();
+	} catch (JRException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}      
+	  return baos.toByteArray();
+	}
+
+public static void backPageDownload(HttpServletRequest request,
+		HttpServletResponse response) {
+	try {
+		String classId = request.getParameter("classId");
+		String locationId = request.getParameter("locationId");
+		String accyearId = request.getParameter("accyearId");
+		String term1 = request.getParameter("terms1");
+		String term2 = request.getParameter("terms2");
+		String examstypeid = request.getParameter("examstypeid");
+		String examstypeidterm2 = request.getParameter("examstypeidterm2");
+		String stdId = request.getParameter("stdId");
+		String sectionId = request.getParameter("sectionId");
+
+		ReportMenuVo vo=new ReportMenuVo();
+		vo.setAccYear(accyearId);
+		vo.setClassId(classId);
+		vo.setLocationId(locationId);
+		//vo.setTermname(checkedTermValue);
+		vo.setExamtypeid(examstypeid);
+		vo.setExamstypeidterm2(examstypeidterm2);
+		vo.setStudentId(stdId);
+		vo.setSectionId(sectionId);
+		vo.setTerm1(term1);
+		vo.setTerm2(term2);
+
+		List<ReportMenuVo> stuList = new ReportsMenuBD().getTermWiseReportCard(vo);
+		System.out.println("size is "+stuList.size());
+		List<ReportMenuVo> marksheet=null;
+		ArrayList<ReportMenuVo> singlelist=null;
+		String sourceFileName = null;		
+		FileOutputStream outputFile=null;
+		File secondDir = null;
+		File firstDir = null;
+		JRBeanCollectionDataSource beanColDataSource = null;
+		if(!term2.equals("")){
+			sourceFileName=request.getRealPath("Reports/ReportCardByClassTerms2.jrxml");
+		}else{
+			sourceFileName=request.getRealPath("Reports/ReportCardByClassTerms.jrxml");
+		}
+
+		
+		/*ReportCard_Dir*/
+
+		/*firstDir = new File(ReportCard_Dir);
+		if (firstDir.exists()) {
+			secondDir = new File(ReportCard_Dir +  "/" + HelperClass.getAcademicYearFace(accyearId));
+			secondDir.mkdir();
+		} else {
+			new File(ReportCard_Dir +  "/" + HelperClass.getAcademicYearFace(accyearId)).mkdirs();
+		}
+		 */
+		JasperDesign design = JRXmlLoader.load(sourceFileName);
+		JasperReport jasperreport = JasperCompileManager.compileReport(design);
+		String imageFilePath=request.getRealPath("/")+ "images/" + ImageName.trim();
+		String boardFilePath=request.getRealPath("/")+ "images/" + BoardLogo.trim();
+		ServletOutputStream outstream =null;
+		byte[] bytes=null;
+		Map parameters = new HashMap();
+		parameters.put("schoollogo",imageFilePath);
+		parameters.put("boardlogo",boardFilePath);
+
+		beanColDataSource = new JRBeanCollectionDataSource(stuList);
+
+		bytes = JasperRunManager.runReportToPdf(jasperreport,parameters, beanColDataSource);
+		response.setContentType("application/pdf");
+		response.setContentLength(bytes.length);
+		response.setHeader("Content-Disposition", "outline; filename=\""+HelperClass.getAcademicYearFace(accyearId)+"-"+HelperClass.getClassName(classId, locationId)+".pdf\"");
+		outstream = response.getOutputStream();
+		outstream.write(bytes, 0, bytes.length);
+
+
+		/*singlelist = new ArrayList<ReportMenuVo>();
+			System.out.println("STUDENT "+i);
+			singlelist.add(stuList.get(i));
+			beanColDataSource = new JRBeanCollectionDataSource(singlelist);
+
+			JasperPrint print = JasperFillManager.fillReport(jasperreport,parameters, beanColDataSource);
+			outputFile = new FileOutputStream(new File(ReportCard_Dir +  "/" + HelperClass.getAcademicYearFace(accyearId) + "/" + stuList.get(i).getStudentnamelabel().replaceAll(" ", "_")+".pdf"));
+			JasperExportManager.exportReportToPdfStream(print, outputFile);
+			outputFile.close();*/
+
+	}	
+	catch (Exception e) {
+		logger.error(e.getMessage(), e);
+		e.printStackTrace();
+	}
+	
+	
 }
 
 //getTerm1Exams

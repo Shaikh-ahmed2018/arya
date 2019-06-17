@@ -1236,7 +1236,14 @@ display:block;
 											class="form-control" value='' />
 								</div>
 							</div>
-
+							<div class="form-group clearfix">
+								<label for="inputPassword" class="control-label col-xs-5" style="text-align: right; line-height: 35px;">Admission
+										Class 
+								</label>
+								<div class="col-xs-7">
+									<input type="text"  name="classofJoinId" onkeypress="HideError()" id="classofJoinId" class="form-control " value='<logic:present name="studentSearchList"><bean:write name="studentSearchList" property="classofJoinId"></bean:write></logic:present>'>
+								</div>
+							</div>
 
 							<div class="form-group clearfix">
 								<label for="inputPassword" class="control-label col-xs-5"

@@ -189,11 +189,13 @@ public class StudentIDDaoImpl implements StudentIDDao {
 			
 			conn=JDBCConnection.getSeparateGodaddyConnection();
 			for(int i=0;i<studentid.length;i++){
-			psmt=conn.prepareStatement(ReportsMenuSqlConstants.GET_BUS_STUDENT_ID_DETAILS);
+			psmt=conn.prepareStatement("SELECT DISTINCT cloc.Location_Name,stu.student_id_int,CONCAT(stu.student_fname_var,'  ',stu.student_lname_var) AS studentName,stu.student_admissionno_var,CASE WHEN cstd.student_imgurl_var IS NULL THEN 'FIles/STUDENTIMAGES/noImage.png' ELSE cstd.student_imgurl_var END student_imgurl_var,cl.classdetails_name_var,sec.classsection_name_var,ccls.classstream_name_var ,acc.endDate,cpara.address,cpara.mobileno,tr.Route_No,csta.stage_name,cdrop.stage_name drop_point FROM campus_student stu,campus_classsection sec,campus_classdetail cl,campus_classstream ccls,campus_acadamicyear acc ,campus_parentchildrelation cpch,campus_parents cpara,transport_route tr,campus_fee_stage csta,campus_student_classdetails cstd,campus_location cloc,campus_student_route_stage_mapping cstr,campus_fee_stage cdrop WHERE  stu.student_id_int=cstd.student_id_int AND stu.student_id_int=cstr.mapped_id AND cstr.stage_id=csta.stage_id AND cstr.drop_point=cdrop.stage_id AND cstr.route_id=tr.RouteCode AND stu.student_id_int=cpch.stu_addmissionNo AND cpara.ParentID=cpch.parentid  AND cl.classdetail_id_int=cstd.classdetail_id_int AND cl.locationId=cstd.locationId AND cloc.Location_Id=cstd.locationId AND acc.acadamic_id = cstd.fms_acadamicyear_id_int AND sec.classsection_id_int=cstd.classsection_id_int  AND cstd.fms_classstream_id_int=ccls.classstream_id_int  AND cstd.locationId = ? AND cstd.fms_acadamicyear_id_int =? AND cstd.fms_classstream_id_int=? AND stu.student_id_int= ? GROUP BY cstr.mapped_id");
 			psmt.setString(1, locationId[i].trim());
 			psmt.setString(2, accyear[i].trim());
 			psmt.setString(3, streamId[i].trim());
 			psmt.setString(4, studentid[i].trim());
+			
+			System.out.println("pstmt="+psmt);
 			rs=psmt.executeQuery();
 			while(rs.next()){
 				

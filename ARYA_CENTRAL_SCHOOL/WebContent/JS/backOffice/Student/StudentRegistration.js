@@ -426,13 +426,11 @@ $(document).ready(function() {
 	if($("#sibilingadminnoId").val()!="" && $("#sibilingadminnoId").val()!=undefined){
 
 		$("#fatherNameId").attr('readonly', true);
-		$("#fatherMobileNoId").attr('readonly', true);
 
 		$("#fatherQualificationId").attr('readonly', true);
 		$("#fatheremailId").attr('readonly', true);
 
 		$("#motherNameId").attr('readonly', true);
-		$("#motherMobileNoId").attr('readonly', true);
 		$("#motherQualificationId").attr('readonly', true);
 		$("#motheremailId").attr('readonly', true);
 
@@ -2934,11 +2932,11 @@ function getClassLanguage(classId,location,specializationId){
 		success : function(response) {
 			var result = $.parseJSON(response);
 			$('#firstlang').empty();
-			$('#firstlang').append('<option value="all">'+ "------select------" + '</option>');
+			$('#firstlang').append('<option value="">'+ "------select------" + '</option>');
 			$('#secondlang').empty();
-			$('#secondlang').append('<option value="all">'+ "------select------" + '</option>');
+			$('#secondlang').append('<option value="">'+ "------select------" + '</option>');
 			$('#thirdlang').empty();
-			$('#thirdlang').append('<option value="all">'+ "------select------" + '</option>');
+			$('#thirdlang').append('<option value="">'+ "------select------" + '</option>');
 			for ( var j = 0; j < result.jsonResponse.length; j++) {
 				$('#firstlang').append('<option value="'+ result.jsonResponse[j].subjectCode+ '">'+ result.jsonResponse[j].subjectname + '</option>');
 				$('#secondlang').append('<option value="'+ result.jsonResponse[j].subjectCode+ '">'+ result.jsonResponse[j].subjectname + '</option>');
@@ -2948,8 +2946,8 @@ function getClassLanguage(classId,location,specializationId){
 				var firstlang=$('#firstlang').val();
 				var secondlang=$(this).val();
 				if(firstlang == secondlang){
-					$("#secondlang").val("all");
-					$("#thirdlang").val("all");
+					$("#secondlang").val("");
+					$("#thirdlang").val("");
 				}else{
 					$("#secondlang  option[value='"+secondlang+"' ]").attr('selected', 'true');
 				}
@@ -2959,7 +2957,7 @@ function getClassLanguage(classId,location,specializationId){
 				var secondlang=$('#secondlang').val();
 				var thirdlang=$(this).val();
 				if((secondlang == thirdlang) || (firstlang == thirdlang)){
-					$("#thirdlang").val("all");
+					$("#thirdlang").val("");
 				}else{
 					$("#thirdlang  option[value='"+thirdlang+"' ]").attr('selected', 'true');
 				}
