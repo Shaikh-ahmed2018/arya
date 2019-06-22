@@ -29,7 +29,7 @@ public class TransportVo {
 	private int count;
 	private int amount;
 	private String translocation;
-	
+	private String description;
 	private String studentId;
 	private String classId;
 	private String sectionId;
@@ -70,6 +70,14 @@ public class TransportVo {
 	private String droppoint;
 	
 	
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	public String getDroppoint() {
 		return droppoint;
 	}
