@@ -49,6 +49,7 @@ import org.json.JSONObject;
 
 import com.centris.campus.daoImpl.JDBCConnection;
 import com.centris.campus.daoImpl.ReportsMenuDaoImpl;
+import com.centris.campus.daoImpl.StudentRegistrationDaoImpl;
 import com.centris.campus.daoImpl.TransportDaoImpl;
 import com.centris.campus.delegate.ExamDetailsBD;
 import com.centris.campus.delegate.ReportsMenuBD;
@@ -63,6 +64,7 @@ import com.centris.campus.util.MessageConstants;
 import com.centris.campus.vo.AllTeacherDetailsVo;
 import com.centris.campus.vo.FeeCollectionVo;
 import com.centris.campus.vo.ReportMenuVo;
+import com.centris.campus.vo.StudentRegistrationVo;
 import com.centris.campus.vo.TermMasterVo;
 import com.centris.campus.vo.TransportVo;
 
@@ -1035,6 +1037,7 @@ public class TransportFeeReceiptAction extends DispatchAction
 			String location=request.getParameter("location");
 			String accyear=request.getParameter("accyear");
 			String routeNo=request.getParameter("routeNo");
+			//String stop=request.getParameter("stop");
 			
 				if(routeNo==null || routeNo.equalsIgnoreCase("all") || routeNo.equalsIgnoreCase("")) {
 					routeNo="%%";
@@ -1060,5 +1063,102 @@ public class TransportFeeReceiptAction extends DispatchAction
 
 		return null;
 	}
+	//edited for sms purpose by anu
+	public ActionForward getBusWiseStudentDetail(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TransporFeeReceiptAction: getRouteWiseStudentDetail settings");
+
+		try
+
+		{
 		
+			TransportDaoImpl obj = new TransportDaoImpl();
+			List<TransportVo> list = new ArrayList<TransportVo>();
+			String loc=request.getParameter("location");
+			String acc=request.getParameter("accyear");
+			String routeNo=request.getParameter("routeNo");
+			String stop=request.getParameter("stop");
+			
+				/*if(routeNo==null || routeNo.equalsIgnoreCase("all") || routeNo.equalsIgnoreCase("")) {
+					routeNo="%%";
+				}*/
+				
+				list = obj.getBusWiseStudentDetail(loc,acc,routeNo,stop);
+				System.out.println(list);
+
+				JSONObject jobj=new JSONObject();
+				jobj.put("studentList", list);
+				response.getWriter().print(jobj);
+
+		
+
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TransporFeeReceiptAction: getRouteWiseStudentDetail Ending");
+
+		return null;
+	}
+	//
+		//FOR SMS
+	public ActionForward getContactBusStudentDetail(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TransporFeeReceiptAction: getContactBusStudentDetail settings");
+
+		try
+
+		{
+		
+			//TransportDaoImpl obj = new TransportDaoImpl();
+			//List<TransportVo> list = new ArrayList<TransportVo>();
+			String loct=request.getParameter("location");
+			String accy=request.getParameter("accyear");
+			String route=request.getParameter("routeNo");
+			String stopp=request.getParameter("stop");
+			
+				/*if(routeNo==null || routeNo.equalsIgnoreCase("all") || routeNo.equalsIgnoreCase("")) {
+					routeNo="%%";
+				}*/
+				
+				//list = obj.getContactBusStudentDetail(loct,accy,route,stopp);
+				List<TransportVo> list = new TransportDaoImpl().getContactBusStudentDetail(loct,accy,route,stopp);
+				System.out.println(list);
+
+				request.setAttribute("studentSearchList", list);
+				JSONObject jsonobj = new JSONObject();
+				jsonobj.put("studentSearchList", list);
+				response.getWriter().print(jsonobj);
+
+		
+
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in TransporFeeReceiptAction: getRouteWiseStudentDetail Ending");
+
+		return null;
+	}
+	
 }
