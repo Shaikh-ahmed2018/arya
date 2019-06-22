@@ -230,9 +230,9 @@ vertical-align: -28px;
 								<div class="form-group clearfix">
 									<div class="col-xs-12">
 									<p align="right">
-								<button type="button" class="btn btn-info" id="preview" >Preview</button>
+								<!--button type="button" class="btn btn-info" id="preview" >Preview</button-->
 								
-								<button type="button" class="btn btn-info" id="send" >Send</button>
+								<button type="button" class="btn btn-info" id="busSend" >Send</button>
 								<button type="reset" class="btn btn-info" id="resetbtn" >Reset</button>
 								</p>
 								</div>
@@ -276,6 +276,27 @@ vertical-align: -28px;
 			<div id="collapseOne" class="accordion-body collapse in clearfix">
 				<div class="panel-body"
 					style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;">
+					
+						
+					</div>
+					<!--table class="table" id="allstudent">
+							<thead>
+							<tr>
+							<th>S.No</th>
+							<th>Admission No</th>
+							<th>Name</th>
+							<th>Class Div.</th>
+							<th>Route</th>
+							<th>Buspoint</th>
+							<th>Amount</th>
+							<th>Contact Person</th>
+                            <th>Contact No.</th> 							
+                            </tr>
+							</thead>
+							<tbody>
+							
+							</tbody>
+						</table-->
 
 			<%-- 		<logic:present name="meetinglist" scope="request">
 						<display:table class="table" id="allstudent"
@@ -364,6 +385,7 @@ vertical-align: -28px;
 					
 
 				</div>
+				<div id="studenttable"></div>
 				<!--div class="pagebanner"><select id="show_per_page"><option value="50">50</option><option value="100">100</option><option value="200">200</option><option value="300">300</option><option value="400">400</option><option value="500">500</option></select>
 					<span class="numberOfItem"></span>	
 				</div>
