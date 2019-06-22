@@ -239,7 +239,7 @@ overflow-y:auto;
 									<div class="col-xs-12">
 									<p align="right">
 								
-								<button type="submit" class="btn btn-info" id="send" >Send</button>
+								<button type="submit" class="btn btn-info" id="desend" >Send</button>
 								<button type="reset" class="btn btn-info" id="resetbtn" >Reset</button>
 								</p>
 								</div>
@@ -255,7 +255,7 @@ overflow-y:auto;
 					style="font-family: Open Sans Light; font-size: 20pt; color: #5d5d5d;">	
 					
 					
-						<table class="table" id="allstudent">
+						<!--table class="table" id="allstudent">
 							<thead>
 							<tr>
 							<th>S.No</th>
@@ -272,7 +272,7 @@ overflow-y:auto;
 							<tbody>
 							
 							</tbody>
-						</table>
+						</table-->
 				
 					
 					
