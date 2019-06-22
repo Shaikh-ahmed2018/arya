@@ -4297,6 +4297,46 @@ public class StudentRegistrationAction extends DispatchAction {
 	}
 	
 //
+	//getdefstud contacts
+	
+	public ActionForward getdefaStudentcontact(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception{
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in StudentRegistrationAction : getStudentSearch Starting");
+		
+		try {
+			//String studentId = request.getParameter("studentId");
+			String accYear = request.getParameter("accYear");
+			String locationId = request.getParameter("locationId");
+			String classId=request.getParameter("classId");
+			String divisionId=request.getParameter("divisionId");
+			String termId=request.getParameter("termId");
+			List<StudentRegistrationVo> list = new StudentRegistrationDaoImpl().getdefaStudentcontact(locationId,accYear,classId,divisionId,termId);
+			request.setAttribute("studentSearchList", list);
+			JSONObject jsonobj = new JSONObject();
+			jsonobj.put("studentSearchList", list);
+			response.getWriter().print(jsonobj);
+			
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			logger.error(e);
+
+		}
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in StudentRegistrationAction : getStudentSearch Ending");
+
+				return null;
+		
+	}
+	//	
 	//display contact details of all students
 	public ActionForward getStudentcontactDetails(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,
