@@ -5,162 +5,121 @@ function myFunction() {
 				  }
 
 
+
+
 $(document).ready(function() {
+	$("#Acyearid").change(function(){
+		getClassList();
+		//getTerm();
+		//getDefaulterFeeList();
+		var classname=$("#classname").val();
+		});
+	$("#locationname").change(function(){
 
-	if($("#allstudent tbody tr").length ==0){
-		$("#allstudent tbody").append("<tr><td colspan='9'>NO Records Found</td></tr>");
-	}
-		$("#selectall").change(function() {
-			$(".select").prop('checked', $(this).prop("checked"));
-		});
-		
-		$(".select").change(function() {
-			if($(".select").length == $(".select:checked").length){
-				$("#selectall").prop("checked",true);
-			}
-			else{
-				$("#selectall").prop("checked",false);
-			}
-		});
+		getClassList();
+		//getTerm();
+		//getDefaulterFeeList();
+		var classname=$("#classname").val();
 	
-	if($("#div1 .panel-body").text().trim()=="Nothing found to display."){
-		$("#div1 .panel-body").empty();
-			$("#div1 .panel-body").append('<table id="allstudent" class="table">' +
-					'<thead><tr>' +
-					'<th class="sortable"><input type="checkbox" name="selectall" id="selectall" onclick="selectAll()"></a></th>'+
-					'<th class="sortable">meetingDate<img src="images/sort1.png" style="float: right"></a></th>'+
-					'<th class="sortable">title<img src="images/sort1.png" style="float: right"></a></th>'+
-					'<th class="sortable">startTime<img src="images/sort1.png" style="float: right"></a></th>'+
-					'<th class="sortable">endTime<img src="images/sort1.png" style="float: right"></a></th>'+
-					'<th class="sortable">classname<img src="images/sort1.png" style="float: right"></a></th>'+
-					'<th class="sortable">sectionname<img src="images/sort1.png" style="float: right"></a></th>'+
-					'<th class="sortable">meetingwith<img src="images/sort1.png" style="float: right"></a></th>'+
-					'<th class="sortable">subjectName<img src="images/sort1.png" style="float: right"></a></th></tr></thead>'+
-					'<tbody><tr><td colspan="9">No Records Found</td></tr></tbody></table>');
-			
-	}
-					
-					
-					
-				
-	$("#search")
-	.click(function(){
-				
+});
+	$("#classname").change(function(){
 		
 		
-		var searchvalue = $('#searchname').val();
-				
-				
-		window.location.href = "adminMenu.html?method=meetingslist&searchvalue="+searchvalue;
-		
-				
-			});
-					
-					
-	$("#delete")
-	.click(function(){
-		
-		var hmeetingid = $('#hmeetingid').val();
-		
-		
-		
-		if(hmeetingid == null || hmeetingid==""){
-			
-			$(".errormessagediv").show();
-			
-			 $(".validateTips").text("Select Any CheckBox");
-			 
-			 return false;
-		}
-		
-		else{
-			
-			datalist={
-					
-					"hmeetingid" : hmeetingid
-			},
-			
-			$.ajax({
-				
-				type : "GET",
-				url : "smsPath.html?method=deleteMeeting",
-				data : datalist,
-				async : false,
-
-				success : function(
-						response) {
-					
-					var result = $.parseJSON(response);
-					
-					if(result.jsonResponse=="Meeting/Event Deleted Successfully"){
-						
-						$(".errormessagediv").hide();
-						$(".successmessagediv").show();
-						 $(".validateTips").text("Meeting/Event Deleted Successfully");
-						 
-						 setTimeout(function(){
-								
-								window.location.href = "adminMenu.html?method=homeworklist";
-						 
-						 },3000);
-					}
-					
-					else{
-						
-						$(".errormessagediv").show();
-						$(".successmessagediv").hide();
-						 $(".validateTips").text("Meeting/Event Deleting Failed");
-						 
-						 setTimeout(function(){
-								
-								window.location.href = "adminMenu.html?method=homeworklist";
-						 
-						 },3000);
-						
-					}
-					   
-				}
-				
-				
-			});
-			
-		}
-		
-		
-		
+		var locationid=$("#locationname").val();
+		var accyear=$("#Acyearid").val();
+		var classname=$("#classname").val();
+		getSectionList(classname);
+		//getDefaulterFeeList();
 		
 	});
-	
-	
-	
-					
-					
-				});
-
-
-
-
-
-
-function getvaldetails(value){
-	
-	var s1 =value.id;
-	
-		var assgnmentid = s1;
+	$("#sectionid").change(function(){
+		$("#searchvalue").val("");
+		var locationid=$("#locationname").val();
+		var accyear=$("#Acyearid").val();
+		var classname=$("#classname").val();
+		var sectionid=$("#sectionid").val();
+		//getDefaulterFeeList();
 		
+	});
+$("#startDate").datepicker({
+		
+		changeMonth : true,
+		changeYear : true,
+		dateFormat : "dd-mm-yy",
+		onSelect:function(dateStr){
+			
+			
+			        var min = $(this).datepicker('getDate'); // Get selected date
+			        $("#endDate").datepicker('option', 'minDate', min); // Set other min, default to today
+			   
+			
+		}
+
+	});
+
 	
-	
-	$("#hmeetingid").val(assgnmentid);
-	
+});
+
+
+
+function getClassList(){
+	var locationid=$("#locationname").val();
+	datalist={
+			"locationid" : locationid
+	},
+
+	$.ajax({
+
+		type : 'POST',
+		url : "studentRegistration.html?method=getClassByLocation",
+		data : datalist,
+		async : false,
+		success : function(response) {
+
+			var result = $.parseJSON(response);
+
+			$('#classname').html("");
+
+			$('#classname').append('<option value="All">' + "----------Select----------"	+ '</option>');
+
+			for ( var j = 0; j < result.ClassList.length; j++) {
+
+				$('#classname').append('<option value="'
+
+						+ result.ClassList[j].classcode + '">'
+
+						+ result.ClassList[j].classname
+
+						+ '</option>');
+			}
+		}
+	});
 }
+function getSectionList(classname){
+	datalist={
+			"classidVal" : classname,
+			"locationId":$("#locationname").val()
+	},
+	
+	$.ajax({
+		
+		type : 'POST',
+		url : "studentRegistration.html?method=getClassSection",
+		data : datalist,
+		async : false,
+		success : function(response) {
+			
+			var result = $.parseJSON(response);
+			
+			$('#sectionid').html("");
+			
+			$('#sectionid').append('<option value="">' + "ALL"	+ '</option>');
+			
+			for ( var j = 0; j < result.sectionList.length; j++) {
 
-
-
-
-
-
-
-
-
-
-
+				$('#sectionid').append('<option value="' + result.sectionList[j].sectioncode
+						+ '">' + result.sectionList[j].sectionnaem
+						+ '</option>');
+			}
+		}
+	});}
