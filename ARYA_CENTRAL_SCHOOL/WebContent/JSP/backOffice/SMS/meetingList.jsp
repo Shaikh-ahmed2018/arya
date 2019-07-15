@@ -16,16 +16,28 @@
 
 <title>eCampus Pro</title>
 
-<script type="text/javascript" src="JS/common.js"></script>
+<link rel="stylesheet"
+	href="JQUERY/development-bundle/themes/base/jquery.ui.all.css" />
+<script type="text/javascript" src="JS/newUI/jquery-1.9.1.min.js"></script>
 <script type="text/javascript"
-	src="JS/backOffice/SMS/meetingList.js"></script>
-
+	src="JQUERY/development-bundle/ui/jquery-ui.custom.js"></script>
+<script type="text/javascript"
+	src="JQUERY/development-bundle/ui/jquery.ui.autocomplete.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.bgiframe-2.1.2.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.button.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.datepicker.js"></script>
+<script type="text/javascript"
+	src="JQUERY/development-bundle/ui/jquery.ui.tooltip.js"></script>
+<script type="text/javascript" src="JS/newUI/bootstrap.min.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.widget.js"></script>
 <link href="CSS/newUI/bootstrap.min.css" rel="stylesheet">
-
 <link href="CSS/newUI/modern-business.css" rel="stylesheet">
 <link href="CSS/newUI/custome.css" rel="stylesheet">
-<link href="CSS/newUI/font-awesome/css/font-awesome.min.css"
-	rel="stylesheet" type="text/css">
+<link href="CSS/newUI/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"
+	src="JS/backOffice/SMS/meetingList.js"></script>
+<script type="text/javascript" src="JS/common.js"></script>
 
 
 
@@ -139,7 +151,7 @@ cursor: pointer;
 								 
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;">School Name</label>
+										style="text-align: right; line-height: 35px;">School Name<font color="red">*</font></label>
 									<div class="col-xs-7">
 										<select id="locationname" name="locationnid" class="form-control" required>
 											<option value="all">ALL</option>
@@ -155,34 +167,34 @@ cursor: pointer;
 								
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;"> Class</label>
+										style="text-align: right; line-height: 35px;"> Class <font color="red">*</font></label>
 									<div class="col-xs-7">
 									
 									<select class="form-control" onkeypress="HideError()" 
 											name="classname" id="classname">
-											<option value="all">ALL</option>
+											<option value="">----------Select----------</option>
 										</select>
-									</div>
-								</div>
-								
-								
-							<div class="form-group clearfix">
-									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;"> Date</label>
-									<div class="col-xs-7">
-										<input type="date"  id="date" name='date' class="form-control">
 									
 									</div>
 								</div>
+								
+						<div class="form-group clearfix start">
+							<label for="inputPassword" class="control-label col-xs-5"
+								id="inputnames" style="text-align: right;">Date<font color="red">*</font></label>
+							<div class="col-xs-7">
+								<input type="text" id="startDate"  class="form-control" readonly="readonly" />
+							</div>
+						</div>
 											
 
 						</div>
 						<div class="col-md-6" style="font-family: Open Sans Light; font-size: 11pt; color: #5d5d5d;margin-top: 20px;">
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;">Academic Year</label>
+										style="text-align: right; line-height: 35px;">Academic Year <font color="red">*</font></label>
 									<div class="col-xs-7">
 										<select id="Acyearid" name="accyear" class="form-control" required>
+											<option value="all">----------Select----------</option>
 											<logic:present name="AccYearList">
 												<logic:iterate id="AccYear" name="AccYearList">
 													<option	value="<bean:write name="AccYear" property="accyearId"/>"><bean:write name="AccYear" property="accyearname" /></option>
@@ -195,10 +207,10 @@ cursor: pointer;
 								
 								<div class="form-group clearfix">
 									<label for="inputPassword" class="control-label col-xs-5"
-										style="text-align: right; line-height: 35px;">Division</label>
+										style="text-align: right; line-height: 35px;">Division <font color="red">*</font></label>
 									<div class="col-xs-7">
 										<select id="sectionid" name="sectionid" class="form-control" required>
-											<option value="all">ALL</option>
+											<option value="">----------Select----------</option>
 										</select>
 									</div>
 								</div>
@@ -215,9 +227,9 @@ cursor: pointer;
 								<div class="form-group clearfix">
 									<div class="col-xs-12">
 									<p align="right">
-								<button type="button" class="btn btn-info" id="preview" >Preview</button>
-								<button type="button" class="btn btn-info" id="send" >Send</button>
-								<button type="reset" class="btn btn-info" id="resetbtn" >Reset</button>
+								
+								<button type="button" class="btn btn-info" id="absentsend" >Send</button>
+								
 								</p>
 								</div>
 								</div>
@@ -316,12 +328,12 @@ cursor: pointer;
 
 					</logic:present> --%>
 					
-					<logic:present name="meetinglist" scope="request">
+					
 						<table class="table" id="allstudent">
 							<thead>
 							<tr>
-							<th><input type='checkbox' name='selectall' id='selectall'/></th>
-							<th>Admission No</th>
+							
+							<th>AdmissionNo</th>
 							<th>Roll No </th>
 							<th>Name</th>
 							<th>Class</th>
@@ -332,22 +344,10 @@ cursor: pointer;
 							</tr>
 							</thead>
 							<tbody>
-							<logic:iterate id="meetinglist" name="meetinglist">
-								<tr>
-								<td><input type='checkbox' name='selectall' class='select' id='select' onClick='selectAll()' /></td>
-								<td><bean:write name="meetinglist" property='meetingDate'/></td>
-								<td><bean:write name="meetinglist" property='title'/></td>
-								<td><bean:write name="meetinglist" property='startTime'/></td>
-								<td><bean:write name="meetinglist" property='endTime'/></td>
-								<td><bean:write name="meetinglist" property='classname'/></td>
-								<td><bean:write name="meetinglist" property='sectionname'/></td>
-								<td><bean:write name="meetinglist" property='meetingwith'/></td>
-								<td><bean:write name="meetinglist" property='subjectName'/></td>
-								</tr>
-							</logic:iterate>
+						
 							</tbody>
 						</table>
-					</logic:present>
+				
 					
 					
 
