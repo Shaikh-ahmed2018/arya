@@ -255,7 +255,7 @@ overflow-y:auto;
 					style="font-family: Open Sans Light; font-size: 20pt; color: #5d5d5d;">	
 					
 					
-						<!--table class="table" id="allstudent">
+						<table class="table" id="allstudent">
 							<thead>
 							<tr>
 							<th>S.No</th>
@@ -272,7 +272,7 @@ overflow-y:auto;
 							<tbody>
 							
 							</tbody>
-						</table-->
+						</table>
 				
 					
 					
