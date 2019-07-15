@@ -5,14 +5,20 @@ $(document).ready(function(){
 	$("#route").change(function()
 	{		
 		var routeid = $(this).val();
-		//alert(routeid)
+		//alert(routeid)var stop=$("#stopname").val();
+		if(stop == "%%"){
+			stop = "all"
+		 }
 		getstoplist(routeid);
+		 
 		
+		//getBusWiseStudentDetail();
 		
 				
 });
 	$("#stopname").change(function()
 			{
+		
 		getBusWiseStudentDetail();
 			});
 	
@@ -97,7 +103,7 @@ function getRouteNameList(){
 				var result = $.parseJSON(response);
 				//alert(result)
 					$('#route').empty();
-					$('#route').append('<option value="">' + "----------Select----------"	+ '</option>');
+					$('#route').append('<option value="ALL">' + "----------Select----------"	+ '</option>');
 					for ( var j = 0; j < result.routelist.length; j++) {
                     
 						$('#route').append('<option value="'
@@ -126,8 +132,9 @@ function getstoplist(routeid){
 				success : function(response) {
 					
 					var result = $.parseJSON(response);
-						$("#stopname").empty();
-						$('#stopname').append('<option value="">' + "----------Select----------"	+ '</option>');
+						//$("#stopname").empty();
+						$('#stopname').html("");
+						$('#stopname').append('<option value="ALL">'  + "ALL"	+ '</option>');
 						for ( var j = 0; j < result.stoplist.length; j++) {
 	                       
 							$('#stopname').append('<option value="'
@@ -137,6 +144,12 @@ function getstoplist(routeid){
 									+ result.stoplist[j].stopname
 
 									+ '</option>');
+							
+						
+							
+							
+							
+							
 						}
 						
 				}
