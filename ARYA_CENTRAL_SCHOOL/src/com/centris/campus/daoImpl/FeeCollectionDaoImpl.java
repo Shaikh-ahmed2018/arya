@@ -3533,4 +3533,125 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 		return status;
 	}
 
+	public ArrayList<AddFeeVO> getDoublePaymentList(String locId, String classId, String divId,String studId, String termId,
+			String accId) {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in FeeCollectionDaoImpl: getDoublePaymentList : Starting");
+		Connection conn=null;
+		PreparedStatement psmt = null;
+		ResultSet rs =null;
+		
+		ArrayList<AddFeeVO> list = new ArrayList<AddFeeVO>();
+		try{
+			conn=JDBCConnection.getSeparateGodaddyConnection();
+			psmt=conn.prepareStatement("SELECT cs.student_admissionno_var,CONCAT(cs.student_fname_var, ' ',cs.student_lname_var)studentName,ccd.classdetails_name_var,ccs.classsection_name_var,oti.transactionID,oti.bank,oti.totalamount,oti.status FROM online_transactionid_table oti JOIN campus_student cs ON cs.student_id_int=oti.sudentID JOIN campus_student_classdetails csc ON csc.student_id_int=cs.student_id_int AND csc.fms_acadamicyear_id_int='ACY4' JOIN campus_classdetail ccd ON ccd.classdetail_id_int = csc.classdetail_id_int AND ccd.locationId=csc.locationId JOIN `campus_classsection` ccs ON ccs.`classsection_id_int`=`csc`.`classsection_id_int` where oti.termId=? AND oti.status='success' GROUP BY cs.student_admissionno_var HAVING COUNT(cs.student_admissionno_var) > 1");
+			//psmt.setString(1, studId);
+			psmt.setString(1, termId);
+			System.out.println(psmt);
+			rs=psmt.executeQuery();
+			while(rs.next()){	
+				AddFeeVO vo = new AddFeeVO();
+				vo.setAdmissionNo(rs.getString("student_admissionno_var"));
+				vo.setStudentName(rs.getString("studentName"));
+				vo.setClassName(rs.getString("classdetails_name_var"));
+				vo.setDivisionName(rs.getString("classsection_name_var"));
+				vo.setTransId(rs.getString("transactionID"));
+				vo.setBank(rs.getString("bank"));
+				vo.setTotalAmt(rs.getString("totalamount"));
+				vo.setStatus(rs.getString("status"));
+				list.add(vo);
+			}
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				if (rs != null && (!rs.isClosed())) {
+					rs.close();
+				}
+				if (psmt != null && (!psmt.isClosed())) {
+					psmt.close();
+				}
+				
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+			} catch (Exception e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			}
+		}
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in FeeCollectionDaoImpl: getDoublePaymentList: Ending");
+		return list;
+	}
+
+	public ArrayList<AddFeeVO> getDoublePaymentListbyId(String termId,String searchterm) {
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in FeeCollectionDaoImpl: getDoublePaymentList : Starting");
+		Connection conn=null;
+		PreparedStatement psmt = null;
+		ResultSet rs =null;
+		
+		ArrayList<AddFeeVO> list = new ArrayList<AddFeeVO>();
+		try
+		{
+			conn=JDBCConnection.getSeparateGodaddyConnection();
+			psmt=conn.prepareStatement("SELECT cs.student_admissionno_var,CONCAT(cs.student_fname_var,' ',cs.student_lname_var) as studentName,ccd.classdetails_name_var,ccs.classsection_name_var,oti.transactionID,oti.termId,oti.sudentID,oti.bank,oti.totalamount,oti.status FROM online_transactionid_table oti JOIN campus_student cs ON cs.student_id_int=oti.sudentID JOIN campus_student_classdetails csc ON csc.student_id_int=cs.student_id_int AND csc.fms_acadamicyear_id_int='ACY4' JOIN campus_classdetail ccd ON ccd.classdetail_id_int = csc.classdetail_id_int AND ccd.locationId=csc.locationId JOIN `campus_classsection` ccs ON ccs.`classsection_id_int`=`csc`.`classsection_id_int` where oti.termId=? and cs.student_id_int = ? and oti.status='success'"); //or cs.student_fname_var LIKE ?");
+			psmt.setString(1, termId);
+			psmt.setString(2, searchterm);
+			System.out.println(psmt);
+			rs=psmt.executeQuery();
+			//System.out.println(rs);
+			while(rs.next()){	
+				AddFeeVO vo = new AddFeeVO();
+				vo.setAdmissionNo(rs.getString("student_admissionno_var"));
+				vo.setStudentName(rs.getString("studentName"));
+				vo.setClassName(rs.getString("classdetails_name_var"));
+				vo.setDivisionName(rs.getString("classsection_name_var"));
+				vo.setTransId(rs.getString("transactionID"));
+				vo.setBank(rs.getString("bank"));
+				vo.setTotalAmt(rs.getString("totalamount"));
+				vo.setStatus(rs.getString("status"));
+				list.add(vo);
+			}
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				if (rs != null && (!rs.isClosed())) {
+					rs.close();
+				}
+				if (psmt != null && (!psmt.isClosed())) {
+					psmt.close();
+				}
+				
+				if (conn != null && (!conn.isClosed())) {
+					conn.close();
+				}
+			} catch (Exception e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			}
+		}
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in FeeCollectionDaoImpl: getDoublePaymentList: Ending");
+		return list;
+	}
+
 }
