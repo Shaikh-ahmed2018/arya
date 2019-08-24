@@ -1172,8 +1172,9 @@ public class ReportsMenuAction extends DispatchAction {
 					MessageConstants.BACKOFFICE_REPORTS);
 			request.setAttribute(MessageConstants.HIGHLIGHT_NAME,
 					MessageConstants.MODULE_REPORTS);
-
-			ArrayList<ReportMenuVo> accYearList = new ReportsMenuBD()
+			ArrayList<ReportMenuVo> locationList = new ReportsMenuBD().getlocationList();
+			request.setAttribute("locationList", locationList);
+				ArrayList<ReportMenuVo> accYearList = new ReportsMenuBD()
 					.getAccYears();
 			ArrayList<ReportMenuVo> classList = new ReportsMenuBD()
 					.getClassesByStream("%%");
@@ -7507,7 +7508,7 @@ public ActionForward getstudentWithheldPDFReport(ActionMapping mapping,ActionFor
 			String schoolLocation = (String) request.getSession(false).getAttribute("current_schoolLocation");
 	    	   System.out.println("current school Location:" +schoolLocation);
 	    	   String currentlocation =null;
-	    	   if(schoolLocation.equalsIgnoreCase("all")){
+	    	  if(schoolLocation.equalsIgnoreCase("all")){
 	    		   schoolLocation="%%";
 	    		   request.setAttribute("currentlocation", "All");
 	    	   }
