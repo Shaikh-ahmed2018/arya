@@ -668,7 +668,69 @@ public class FeeMasterAction extends DispatchAction
 		
 		return null;
 	}
-	
+	//edited by anu
+	public ActionForward doublePaymentDetailsPDF(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in FeeConcession : FeeDetailsDefaulterPDF  Starting");
+
+		try {
+			System.out.println("downloading pdf");
+			
+			String locId = request.getParameter("locId");
+			String classId = request.getParameter("classId");
+			String divId = request.getParameter("divId");
+			String termId = request.getParameter("termId");
+			String accId = request.getParameter("accId");
+			
+			String locname = request.getParameter("locname");
+			String classname = request.getParameter("classname");
+			String divname = request.getParameter("divname");
+			String termname = request.getParameter("termname");
+			String accname = request.getParameter("accname");
+			String schladd = res.getString("AddressLine1");
+			
+			ArrayList<AddFeeVO> list = new FeeCollectionBD().getDefaulterFeeList(locId,classId,divId,termId,accId);
+			String sourceFileName = request.getRealPath("Reports/FeeReportDefaulterExcel.jrxml");
+			JasperDesign design = JRXmlLoader.load(sourceFileName);
+			JasperReport jasperreport = JasperCompileManager.compileReport(design);
+			JRBeanCollectionDataSource beanColDataSource = new JRBeanCollectionDataSource(list);
+			String PropfilePath = request.getRealPath("/")+ "images/" + ImageName.trim();
+
+			Map parameters = new HashMap();
+			
+			parameters.put("Image", PropfilePath);
+			parameters.put("locname", locname);
+			parameters.put("classname",classname+" & "+divname);
+			parameters.put("divname", divname);
+			parameters.put("termname", termname);
+			parameters.put("accname", accname);
+			parameters.put("schladd", schladd);
+			
+			byte[] bytes = JasperRunManager.runReportToPdf(jasperreport,parameters, beanColDataSource);
+			response.setContentType("application/pdf");
+			response.setContentLength(bytes.length);
+			response.setHeader("Content-Disposition", "outline; filename=\"" + "FeeDetailsPDF - " + ".pdf\"");
+			ServletOutputStream outstream = response.getOutputStream();
+			outstream.write(bytes, 0, bytes.length);
+			outstream.flush();
+		}
+		catch (Exception e)
+		{logger.error(e.getMessage(), e);
+			e.printStackTrace();}
+
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in FeeConcession : FeeDetailsDefaulterPDF   Ending");
+		return null;
+	}
+	//
 	public ActionForward FeeDetailsDefaulterPDF(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
