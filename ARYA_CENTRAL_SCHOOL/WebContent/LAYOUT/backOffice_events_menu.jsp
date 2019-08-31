@@ -429,16 +429,7 @@ table#allstudent thead tr {
 
 
 							
-							<%-- <logic:present name="UserDetails" scope="session">
-								<logic:iterate id="daymap" name="UserDetails"
-									property="permissionmap" scope="session">
-									<logic:equal value="EVENMD" name="daymap" property="key">
-										<logic:equal value="true" name="daymap" property="value"> 
-											<li><a href="EventsMenu.html?method=JudgementSheet" id="sub_module_13_18">Judgement Sheet</a></li>
-										</logic:equal>
-									</logic:equal>
-								</logic:iterate>
-							</logic:present>   --%>
+							
 							<logic:present name="UserDetails" scope="session">
 								<logic:iterate id="daymap" name="UserDetails"
 									property="permissionmap" scope="session">
@@ -455,11 +446,23 @@ table#allstudent thead tr {
 									property="permissionmap" scope="session">
 									<logic:equal value="EVENMD" name="daymap" property="key">
 										<logic:equal value="true" name="daymap" property="value"> 
+											<li><a href="EventsMenu.html?method=JudgementSheet" id="sub_module_13_18">Selected Student Merit List</a></li>
+										</logic:equal>
+									</logic:equal>
+								</logic:iterate>
+							</logic:present> 
+							
+							<logic:present name="UserDetails" scope="session">
+								<logic:iterate id="daymap" name="UserDetails"
+									property="permissionmap" scope="session">
+									<logic:equal value="EVENMD" name="daymap" property="key">
+										<logic:equal value="true" name="daymap" property="value"> 
 											<li><a href="EventsMenu.html?method=CertificatePrinting" id="sub_module_13_21">Certificate Printing</a></li>
 										</logic:equal>
 									</logic:equal>
 								</logic:iterate>
 							</logic:present>  
+							
 							
 							<logic:present name="UserDetails" scope="session">
 								<logic:iterate id="daymap" name="UserDetails"
