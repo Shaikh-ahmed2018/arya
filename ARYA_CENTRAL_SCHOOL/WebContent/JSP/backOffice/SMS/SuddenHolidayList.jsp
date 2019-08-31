@@ -251,7 +251,6 @@ overflow-y:auto;
 							<th>S.No</th>
 							<th>Admission No</th>
 							<th>Student Name</th>
-							<th>School Name</th>
 							<th>Class</th>
 							<th>Division</th>
 							<th>SMS No.</th> 
