@@ -1241,116 +1241,6 @@ public class FeeCollectionAction extends DispatchAction {
 
 			return null;
 	}
-	//check double payment through studentId edited by anu
-	public  ActionForward getDoublePaymentListbyId(ActionMapping mapping,
-			ActionForm form, HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
-
-		logger.setLevel(Level.DEBUG);
-		JLogger.log(0, JDate.getTimeString(new Date())
-				+ MessageConstants.START_POINT);
-		logger.info(JDate.getTimeString(new Date())
-				+ " Control in FeeCollectionAction : getDefaulterFeeList Starting");
-		try {
-
-			request.setAttribute(LeftMenusHighlightMessageConstant.SUBMODULE_HIGHLIGHT_NAME, 
-					LeftMenusHighlightMessageConstant.MODULE_REPORTS_FEE_DEFAULTER_LIST);
-			request.setAttribute(MessageConstants.MODULE_NAME,MessageConstants.BACKOFFICE_REPORTS);
-			request.setAttribute(MessageConstants.HIGHLIGHT_NAME,MessageConstants.MODULE_REPORTS);
-			
-			
-			System.out.println("in saveFeeCollection ");
-
-			//String locId = request.getParameter("locId");
-			//String classId = request.getParameter("classId");
-			//String divId = request.getParameter("divId");
-			String termId = request.getParameter("termId");
-		//	String accId = request.getParameter("accId");
-			//String studId=request.getParameter("studId");
-			String searchterm = request.getParameter("searchTerm");
-			
-			
-			ArrayList<AddFeeVO> list = new FeeCollectionBD().getDoublePaymentListbyId(termId,searchterm);
-			System.out.println(list);
-			JSONObject obj = new JSONObject();
-			obj.put("data", list);
-			response.getWriter().print(obj);
-
-		} catch (Exception e) {
-			logger.error(e.getMessage(), e);
-			e.printStackTrace();
-		}
-		logger.setLevel(Level.DEBUG);
-		JLogger.log(0, JDate.getTimeString(new Date())
-				+ MessageConstants.END_POINT);
-		logger.info(JDate.getTimeString(new Date())
-				+ " Control in FeeCollectionAction : getDefaulterFeeList Ending");
-
-		return null;
-	}
-	
-	
-	//edited by anu double payment report
-	public  ActionForward getDoublePaymentList(ActionMapping mapping,
-			ActionForm form, HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
-
-		logger.setLevel(Level.DEBUG);
-		JLogger.log(0, JDate.getTimeString(new Date())
-				+ MessageConstants.START_POINT);
-		logger.info(JDate.getTimeString(new Date())
-				+ " Control in FeeCollectionAction : getDefaulterFeeList Starting");
-		try {
-
-			request.setAttribute(LeftMenusHighlightMessageConstant.SUBMODULE_HIGHLIGHT_NAME, 
-					LeftMenusHighlightMessageConstant.MODULE_REPORTS_FEE_DEFAULTER_LIST);
-			request.setAttribute(MessageConstants.MODULE_NAME,MessageConstants.BACKOFFICE_REPORTS);
-			request.setAttribute(MessageConstants.HIGHLIGHT_NAME,MessageConstants.MODULE_REPORTS);
-			
-			
-			System.out.println("in saveFeeCollection ");
-
-			String locId = request.getParameter("locId");
-			String classId = request.getParameter("classId");
-			String divId = request.getParameter("divId");
-			String termId = request.getParameter("termId");
-			String accId = request.getParameter("accId");
-			String studId=request.getParameter("studId");
-			
-			if(locId.equalsIgnoreCase("all") || locId.equalsIgnoreCase("")){
-				locId="%%";
-			};
-			if(classId.equalsIgnoreCase("all") || classId.equalsIgnoreCase("")){
-				classId="%%";
-			};
-			if(divId.equalsIgnoreCase("all") || divId.equalsIgnoreCase("")){
-				divId="%%";
-			};
-			if(termId.equalsIgnoreCase("all") || termId.equalsIgnoreCase("")){
-				termId="%%";
-			};
-			if(accId.equalsIgnoreCase("all") || accId.equalsIgnoreCase("")){
-				accId="%%";
-			};
-			ArrayList<AddFeeVO> list = new FeeCollectionBD().getDoublePaymentList(locId,classId,divId,studId,termId,accId);
-			
-			JSONObject obj = new JSONObject();
-			obj.put("data", list);
-			response.getWriter().print(obj);
-
-		} catch (Exception e) {
-			logger.error(e.getMessage(), e);
-			e.printStackTrace();
-		}
-		logger.setLevel(Level.DEBUG);
-		JLogger.log(0, JDate.getTimeString(new Date())
-				+ MessageConstants.END_POINT);
-		logger.info(JDate.getTimeString(new Date())
-				+ " Control in FeeCollectionAction : getDefaulterFeeList Ending");
-
-		return null;
-	}
-	
 	
 	public  ActionForward getDefaulterFeeList(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,
@@ -1638,4 +1528,115 @@ public class FeeCollectionAction extends DispatchAction {
 
 		return null;
 	}
+	//edited by anu
+	
+	//check double payment through studentId edited by anu
+		public  ActionForward getDoublePaymentListbyId(ActionMapping mapping,
+				ActionForm form, HttpServletRequest request,
+				HttpServletResponse response) throws Exception {
+
+			logger.setLevel(Level.DEBUG);
+			JLogger.log(0, JDate.getTimeString(new Date())
+					+ MessageConstants.START_POINT);
+			logger.info(JDate.getTimeString(new Date())
+					+ " Control in FeeCollectionAction : getDefaulterFeeList Starting");
+			try {
+
+				request.setAttribute(LeftMenusHighlightMessageConstant.SUBMODULE_HIGHLIGHT_NAME, 
+						LeftMenusHighlightMessageConstant.MODULE_REPORTS_FEE_DEFAULTER_LIST);
+				request.setAttribute(MessageConstants.MODULE_NAME,MessageConstants.BACKOFFICE_REPORTS);
+				request.setAttribute(MessageConstants.HIGHLIGHT_NAME,MessageConstants.MODULE_REPORTS);
+				
+				
+				System.out.println("in saveFeeCollection ");
+
+				//String locId = request.getParameter("locId");
+				//String classId = request.getParameter("classId");
+				//String divId = request.getParameter("divId");
+				String termId = request.getParameter("termId");
+			//	String accId = request.getParameter("accId");
+				//String studId=request.getParameter("studId");
+				String searchterm = request.getParameter("searchTerm");
+				
+				
+				ArrayList<AddFeeVO> list = new FeeCollectionBD().getDoublePaymentListbyId(termId,searchterm);
+				System.out.println(list);
+				JSONObject obj = new JSONObject();
+				obj.put("data", list);
+				response.getWriter().print(obj);
+
+			} catch (Exception e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			}
+			logger.setLevel(Level.DEBUG);
+			JLogger.log(0, JDate.getTimeString(new Date())
+					+ MessageConstants.END_POINT);
+			logger.info(JDate.getTimeString(new Date())
+					+ " Control in FeeCollectionAction : getDefaulterFeeList Ending");
+
+			return null;
+		}
+
+		//edited by anu double payment report
+		public  ActionForward getDoublePaymentList(ActionMapping mapping,
+				ActionForm form, HttpServletRequest request,
+				HttpServletResponse response) throws Exception {
+
+			logger.setLevel(Level.DEBUG);
+			JLogger.log(0, JDate.getTimeString(new Date())
+					+ MessageConstants.START_POINT);
+			logger.info(JDate.getTimeString(new Date())
+					+ " Control in FeeCollectionAction : getDefaulterFeeList Starting");
+			try {
+
+				request.setAttribute(LeftMenusHighlightMessageConstant.SUBMODULE_HIGHLIGHT_NAME, 
+						LeftMenusHighlightMessageConstant.MODULE_REPORTS_FEE_DEFAULTER_LIST);
+				request.setAttribute(MessageConstants.MODULE_NAME,MessageConstants.BACKOFFICE_REPORTS);
+				request.setAttribute(MessageConstants.HIGHLIGHT_NAME,MessageConstants.MODULE_REPORTS);
+				
+				
+				System.out.println("in saveFeeCollection ");
+
+				String locId = request.getParameter("locId");
+				String classId = request.getParameter("classId");
+				String divId = request.getParameter("divId");
+				String termId = request.getParameter("termId");
+				String accId = request.getParameter("accId");
+				String studId=request.getParameter("studId");
+				
+				if(locId.equalsIgnoreCase("all") || locId.equalsIgnoreCase("")){
+					locId="%%";
+				};
+				if(classId.equalsIgnoreCase("all") || classId.equalsIgnoreCase("")){
+					classId="%%";
+				};
+				if(divId.equalsIgnoreCase("all") || divId.equalsIgnoreCase("")){
+					divId="%%";
+				};
+				if(termId.equalsIgnoreCase("all") || termId.equalsIgnoreCase("")){
+					termId="%%";
+				};
+				if(accId.equalsIgnoreCase("all") || accId.equalsIgnoreCase("")){
+					accId="%%";
+				};
+				ArrayList<AddFeeVO> list = new FeeCollectionBD().getDoublePaymentList(locId,classId,divId,studId,termId,accId);
+				
+				JSONObject obj = new JSONObject();
+				obj.put("data", list);
+				response.getWriter().print(obj);
+
+			} catch (Exception e) {
+				logger.error(e.getMessage(), e);
+				e.printStackTrace();
+			}
+			logger.setLevel(Level.DEBUG);
+			JLogger.log(0, JDate.getTimeString(new Date())
+					+ MessageConstants.END_POINT);
+			logger.info(JDate.getTimeString(new Date())
+					+ " Control in FeeCollectionAction : getDefaulterFeeList Ending");
+
+			return null;
+		}
+	
 }
