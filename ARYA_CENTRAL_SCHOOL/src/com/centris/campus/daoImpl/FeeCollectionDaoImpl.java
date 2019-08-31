@@ -332,6 +332,7 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 							finep.setString(1, classId);
 							finep.setString(2, termId);
 							ResultSet finers=finep.executeQuery();
+							System.out.println("finep="+finep);
 							while(finers.next()){
 								
 								
@@ -341,25 +342,24 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 										fineAmount=finers.getDouble("amount");
 										System.out.println("Table"+fineAmount);
 									}
-									else{
-										fineAmount=0.0;
-									}
 									
 								}
 								else{
 									fineAmount=0.0;
+									System.out.println("2 elseTable"+fineAmount);
 								}
 							}
 							}
 							else{
 								fineAmount=0.0;
+								System.out.println("3 elseTable"+fineAmount);
 							}
 							
 							ps_feelist=conn.prepareStatement(FeeCollectionSqlUtils.GET_FEECOLLECTION_TOTAL_AMOUNT);
 							ps_feelist.setString(1, feeSettingcode);
-							ps_feelist.setString(2, addmissionno);
-							ps_feelist.setString(3, accyearId);
-							ps_feelist.setString(4, termId);
+							//ps_feelist.setString(2, addmissionno);
+							//ps_feelist.setString(3, accyearId);
+							//ps_feelist.setString(4, termId);
 							rs_feelist=ps_feelist.executeQuery();
 							while(rs_feelist.next()){
 								double splFeeAmount=0.0;
@@ -3532,7 +3532,7 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 		
 		return status;
 	}
-
+	//anu
 	public ArrayList<AddFeeVO> getDoublePaymentList(String locId, String classId, String divId,String studId, String termId,
 			String accId) {
 		logger.setLevel(Level.DEBUG);
@@ -3592,7 +3592,6 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 				+ " Control in FeeCollectionDaoImpl: getDoublePaymentList: Ending");
 		return list;
 	}
-
 	public ArrayList<AddFeeVO> getDoublePaymentListbyId(String termId,String searchterm) {
 		logger.setLevel(Level.DEBUG);
 		JLogger.log(0, JDate.getTimeString(new Date())
@@ -3653,5 +3652,4 @@ public class FeeCollectionDaoImpl implements FeeCollectionDao{
 				+ " Control in FeeCollectionDaoImpl: getDoublePaymentList: Ending");
 		return list;
 	}
-
 }
