@@ -165,6 +165,7 @@
 									<option value="stulistgenwise">Student List - Gender Wise</option>
 									<option value="stulistrollwise">Student List - Roll No. Wise</option>
 									<option value="stulisthousewise">Student List - House. Wise</option>
+									<option value="stuhousewise">House Wise</option>
 									<option value="stuoptsub">Student Optional Subject Details</option>
 									<option value="stuparlist">Student Parent List</option>
 									<option value="sturelig">Student List Religion Wise</option>
@@ -174,11 +175,27 @@
 									<option value="stumotheroccu">Students with Mother's Occupation</option>
 									<option value="stuphonnum">Students with Phone Numbers</option>
 									<option value="stuwithheld">Withheld Students List</option>
+									
 									<!-- <option value="oldstulist">Old Students List</option> -->
 									<!-- <option value="stustrngth">Students Strength</option> -->
 									
 									
 									<option value="prmlist">Promotion List</option>
+									
+								</select>
+							</div>
+						</div>
+						<div class="form-group clearfix">
+							<label for="inputPassword" class="control-label col-xs-5"
+								id="house">House</label>
+							<div class="col-xs-7">
+								<select id="houselistId" name="house" class="form-control"
+									required>
+									<option value="all">----------Select---------</option>
+									<option value="Akbar">Akbar</option>
+									<option value="Ashoka">Ashoka</option>
+									<option value="Kanishka">Kanishka</option>
+									<option value="Shivaji">Shivaji</option>
 									
 								</select>
 							</div>
