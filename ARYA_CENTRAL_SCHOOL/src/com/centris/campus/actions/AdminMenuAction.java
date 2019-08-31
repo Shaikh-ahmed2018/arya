@@ -3707,8 +3707,61 @@ public class AdminMenuAction extends DispatchAction {
 
 		return mapping.findForward(MessageConstants.HOMEWORKS_ENTRY);
 	}
-
+	//edited by anu
 	public ActionForward meetingslist(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+					throws Exception {
+		
+		
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in AdminMenuAction : meetingslist Starting");
+		String academic_year = (String) request.getSession(false).getAttribute("current_academicYear");
+
+		String location = (String) request.getSession(false).getAttribute("current_schoolLocation");
+		try
+		{
+			request.setAttribute(LeftMenusHighlightMessageConstant.SUBMODULE_HIGHLIGHT_NAME, 
+					LeftMenusHighlightMessageConstant.MODULE_INTERACTION_LATECOMINGSTUDENTS);
+			request.setAttribute(MessageConstants.MODULE_NAME,
+					MessageConstants.BACKOFFICE_SMS);
+			request.setAttribute(MessageConstants.HIGHLIGHT_NAME,
+					MessageConstants.MODULE_SMS);
+			if(academic_year == null || academic_year == "" || academic_year.equalsIgnoreCase("")) {
+				academic_year = HelperClass.getCurrentYearID();
+			}
+			List<StudentRegistrationVo> list = new ArrayList<StudentRegistrationVo>();
+			ArrayList<ReportMenuVo> locationList = new ReportsMenuBD().getlocationList();
+			request.setAttribute("locationList", locationList);
+
+			ArrayList<ReportMenuVo> accYearList = new ReportsMenuBD().getAccYears();
+			request.setAttribute("AccYearList", accYearList);
+
+			List<ClassPojo> classlist = new StudentTransferCertifivateReportBD().getClassDetails();
+			request.setAttribute("classlist", classlist);
+			request.setAttribute("successMessage", "");
+			request.setAttribute("errorMessage", "");
+		}
+		
+		catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in AdminMenuAction : addHomeWork Ending");
+
+		return mapping.findForward(MessageConstants.MEETING_LIST);
+		
+	}
+	
+	//
+
+	/*public ActionForward meetingslist(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 					throws Exception {
 
@@ -3754,7 +3807,7 @@ public class AdminMenuAction extends DispatchAction {
 				+ " Control in AdminMenuAction : meetingslist Ending");
 
 		return mapping.findForward(MessageConstants.MEETING_LIST);
-	}
+	}*/
 
 	public ActionForward addMeeting(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
@@ -3786,7 +3839,7 @@ public class AdminMenuAction extends DispatchAction {
 
 		return mapping.findForward(MessageConstants.MEETING_ENTRY);
 	}
-	public ActionForward suddenholiodayslist(ActionMapping mapping,
+/*	public ActionForward suddenholiodayslist(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		logger.setLevel(Level.DEBUG);
@@ -3821,8 +3874,8 @@ public class AdminMenuAction extends DispatchAction {
 			ArrayList<ReportMenuVo> locationList = new ReportsMenuBD().getlocationList();
 			request.setAttribute("locationList", locationList);
 
-			ArrayList<ReportMenuVo> accYearList = new ReportsMenuBD().getAccYears();
-			request.setAttribute("AccYearList", accYearList);
+			//ArrayList<ReportMenuVo> accYearList = new ReportsMenuBD().getAccYears();
+			//request.setAttribute("AccYearList", accYearList);
 
 			List<ClassPojo> classlist = new StudentTransferCertifivateReportBD().getClassDetails();
 			request.setAttribute("classlist", classlist);
@@ -3854,8 +3907,43 @@ public class AdminMenuAction extends DispatchAction {
 		
 				
 		
+	}*/
+	public ActionForward suddenholiodayslist(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+
+		logger.setLevel(Level.DEBUG);
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.START_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuAction : examReportClassWise Starting");
+		try {
+			request.setAttribute(LeftMenusHighlightMessageConstant.SUBMODULE_HIGHLIGHT_NAME, 
+					LeftMenusHighlightMessageConstant.MODULE_REPORTS_EXAMREPORTCLASSWISE);
+			request.setAttribute(MessageConstants.MODULE_NAME,
+					MessageConstants.BACKOFFICE_REPORTS);
+			request.setAttribute(MessageConstants.HIGHLIGHT_NAME,
+					MessageConstants.MODULE_REPORTS);
+			ArrayList<ReportMenuVo> locationList = new ReportsMenuBD().getlocationList();
+			request.setAttribute("locationList", locationList);
+				ArrayList<ReportMenuVo> accYearList = new ReportsMenuBD()
+					.getAccYears();
+			ArrayList<ReportMenuVo> classList = new ReportsMenuBD()
+					.getClassesByStream("%%");
+
+			request.setAttribute("AccYearList", accYearList);
+			request.setAttribute("classList", classList);
+
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			e.printStackTrace();
+		}
+		JLogger.log(0, JDate.getTimeString(new Date())
+				+ MessageConstants.END_POINT);
+		logger.info(JDate.getTimeString(new Date())
+				+ " Control in ReportsMenuAction : examReportClassWise Ending");
+		return mapping.findForward(MessageConstants.SUDDEN_HOLIDAY_LIST);
 	}
-	
 
 	/*public ActionForward suddenholiodayslist(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,
