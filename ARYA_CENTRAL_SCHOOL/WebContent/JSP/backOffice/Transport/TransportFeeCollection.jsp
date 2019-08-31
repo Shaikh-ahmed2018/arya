@@ -247,7 +247,7 @@ width:100%;
 							
 							</tr>
 							<tr class="collapsable">
-							<th  style="font-size: 14px; text-align: center; background: #f9f9f9 !important; font-family: Roboto Medium;">Select</th>
+							 	<th  style="font-size: 14px; text-align: center; background: #f9f9f9 !important; font-family: Roboto Medium;">Select</th>
 								<th  style="font-size: 14px; text-align: center; background: #f9f9f9 !important; font-family: Roboto Medium;">Term Name</th>
 								<th style="font-size: 14px; text-align: center; background: #f9f9f9 !important; font-family: Roboto Medium;">Month Name</th>
 								<th style="font-size: 14px; text-align: center; background: #f9f9f9 !important; font-family: Roboto Medium;">Total Fee Amount</th>
@@ -257,7 +257,8 @@ width:100%;
 							</tr>
 						<logic:iterate id="FeeCollection" name="FeeCollectionVo" property="feeNamelist" > 	
 							<tr class="collapsable">
-								<td style="font-size: 10pt; font-weight: 700; text-align: center;" ><input type="checkbox" class="selectmonth <bean:write name="FeeCollection" property="status" />" value="<bean:write name="FeeCollection" property="termId" />,<bean:write name="FeeCollection" property="monthName" />,<bean:write name="FeeCollection" property="actualAmt" />,<bean:write name="FeeCollection" property="recieptNo" />"  /></td>
+							<td style="font-size: 10pt; font-weight: 700; text-align: center;" ><input type="checkbox" class="selectmonth <bean:write name="FeeCollection" property="status" />" value="<bean:write name="FeeCollection" property="termId" />,<bean:write name="FeeCollection" property="monthName" />,<bean:write name="FeeCollection" property="actualAmt" />,<bean:write name="FeeCollection" property="recieptNo" />"  /></td>
+								
 								<td class="heading" style="font-size: 10pt; font-weight: 700; text-align: center;" id="<bean:write name="FeeCollection" property="termId" />"><bean:write name="FeeCollection" property="term" /></td>
 								<td style="font-size: 10pt; font-weight: 700; text-align: center;" class="transportMonth"><bean:write name="FeeCollection" property="monthName" /></td>
 								<td style="font-size: 10pt; font-weight: 700; text-align: center;" class="transportfee"><bean:write name="FeeCollection" property="actualAmt" /></td>
