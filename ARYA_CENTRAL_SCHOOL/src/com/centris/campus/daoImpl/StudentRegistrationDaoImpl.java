@@ -5866,7 +5866,9 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 			pst.setString(5, searchValue+"%");
 			pst.setString(6, searchValue+"%");
 			pst.setString(7, searchValue+"%");
-			pst.setString(8, "%"+searchValue+"%");
+			pst.setString(8, searchValue);
+			pst.setString(9, "%"+searchValue+"%");
+			
 			rs = pst.executeQuery();
 				
 			while(rs.next()){
@@ -14866,7 +14868,7 @@ public String WithHeldActivationDeactivation(String studentId, String accyear, S
 			+ " Control in EmployeeExpenseDetailsDaoImpl : generateStudentTC Ending");
 	return smsg;
 }*/
-public String NewGenerateStudentTC(String[] splitlocation, String[] splitaccyear, String[] splitstudentid,String[] splitadmid,String[] splitclassid,String examdetails,String reason,String remarks,String result,String appdate,String ladate,String csub,String esub, String admclass){
+public String NewGenerateStudentTC(String[] splitlocation, String[] splitaccyear, String[] splitstudentid,String[] splitadmid,String[] splitclassid,String examdetails,String reason,String remarks,String result,String appdate,String ladate,String csub,String esub, String admclass, String prodt, String stuckofroll, String issueCertificate, String dateOfVatcation, String schoolMeeting, String pupilMeeting, String extra, String noOfFail){
 
 	logger.setLevel(Level.DEBUG);
 	JLogger.log(0, JDate.getTimeString(new Date())
@@ -15453,7 +15455,9 @@ public List<StudentRegistrationVo> getStudentcontact(String locationId,String ac
 			+ " Control in StudentRegistrationDaoImpl : getStudentcontact Starting");
 	List<StudentRegistrationVo> list = new ArrayList<StudentRegistrationVo>();
 	PreparedStatement pstmObj = null;
+	PreparedStatement pstmObj1 = null;
 	ResultSet rs = null;
+	ResultSet rs1 = null;
 	Connection conn = null;
 	int count = 0;
 	
@@ -15465,11 +15469,31 @@ public List<StudentRegistrationVo> getStudentcontact(String locationId,String ac
 	{
 		conn = JDBCConnection.getSeparateGodaddyConnection();
 		//pstmObj = conn.prepareStatement(SQLUtilConstants.GET_STUDENT_CONTACT_HISTORY);
-		pstmObj=conn.prepareStatement("SELECT csc.smsNO, csc.studentId FROM campus_student cs JOIN campus_students_contacts  csc ON csc.studentId = cs.student_id_int JOIN campus_student_classdetails cscd ON cscd.student_id_int = cs.student_id_int where cs.locationId like ? AND cscd.fms_acadamicyear_id_int like ?  AND  cscd.classdetail_id_int like ? AND  classsection_id_int  like ?");
-		pstmObj.setString(1,locationId);
-		pstmObj.setString(2,accYear);
-		pstmObj.setString(3,classId);
-		pstmObj.setString(4,divisionId);
+		if(!(divisionId=="all"))
+		{
+			pstmObj1=conn.prepareStatement("SELECT csc.smsNO,csc.studentId FROM campus_students_contacts csc JOIN campus_student_classdetails cscd ON cscd.student_id_int=csc.`studentId` AND cscd.fms_acadamicyear_id_int='ACY4' WHERE cscd.classdetail_id_int LIKE ?");
+			pstmObj1.setString(1,classId);
+			System.out.println(pstmObj1);
+			rs1 = pstmObj1.executeQuery();
+			 while(rs1.next())
+				{	
+					count++;
+					StudentRegistrationVo obj = new StudentRegistrationVo();
+					obj.setCount(count);
+					obj.setSmsnumber(rs1.getString("smsNO"));
+					//obj.setAdmissionno(rs.getString("smsNO"));
+					list.add(obj);
+					
+				}
+			
+		}
+		else
+		{
+		pstmObj=conn.prepareStatement("SELECT csc.smsNO, csc.studentId FROM campus_students_contacts csc JOIN campus_student_classdetails cscd ON cscd.student_id_int=csc.`studentId` AND cscd.fms_acadamicyear_id_int='ACY4' WHERE cscd.classdetail_id_int LIKE ? AND  cscd.classsection_id_int  LIKE ?");
+		//pstmObj.setString(1,locationId);
+		//pstmObj.setString(2,accYear);
+		pstmObj.setString(1,classId);
+		pstmObj.setString(2,divisionId);
 		System.out.println(pstmObj);
 		
         rs = pstmObj.executeQuery();
@@ -15478,11 +15502,12 @@ public List<StudentRegistrationVo> getStudentcontact(String locationId,String ac
 			count++;
 			StudentRegistrationVo obj = new StudentRegistrationVo();
 			obj.setCount(count);
-			obj.setFatherMobileNo(rs.getString("smsNO"));
+			obj.setSmsnumber(rs.getString("smsNO"));
 			//obj.setAdmissionno(rs.getString("smsNO"));
 			list.add(obj);
 			
 		}
+	  }
 	}
 	catch (Exception e) {
 		logger.error(e.getMessage(), e);
@@ -15524,23 +15549,49 @@ public ArrayList<StudentRegistrationVo> getStudentcontactDetails(String accaYear
 	//List<StudentRegistrationVo> list = new ArrayList<StudentRegistrationVo>();
 	ArrayList<StudentRegistrationVo> list = new ArrayList<StudentRegistrationVo>();
 	PreparedStatement pstmObj = null;
+	PreparedStatement pstmObj1 = null;
+	
 	ResultSet rs = null;
+	ResultSet rs1 = null;
+
 	Connection conn = null;
 	int count = 0;
-	if(secId.length() <= 0) {
-		secId ="%%";
-	}
+	
 	try
 	{
 		conn = JDBCConnection.getSeparateGodaddyConnection();
-		pstmObj=conn.prepareStatement("SELECT cs.student_admissionno_var,CONCAT(cs.student_fname_var,' ',cs.student_lname_var) AS studentName,cl.Location_Name,ccd.classdetails_name_var,ccs.classsection_name_var,csc.smsNo FROM campus_student cs JOIN campus_students_contacts csc ON csc.studentId = cs.student_id_int JOIN campus_student_classdetails cscd ON cscd.student_id_int = cs.student_id_int JOIN campus_classdetail ccd ON (ccd.classdetail_id_int=cscd.classdetail_id_int AND ccd.locationId=cscd.locationId)JOIN campus_location cl ON cl.Location_Id=cs.locationId JOIN campus_classsection ccs ON ccs.classdetail_id_int=ccd.classdetail_id_int WHERE cscd.fms_acadamicyear_id_int=? and cl.Location_Id=? and ccd.classdetail_id_int=? and ccs.classsection_id_int=? "); 
-		pstmObj.setString(1,accaYear);
-		pstmObj.setString(2,locId);
-		pstmObj.setString(3,classid);
-		pstmObj.setString(4,secId);
+		if(!(secId=="all"))
+		{
+			pstmObj1=conn.prepareStatement("SELECT cs.student_admissionno_var,CONCAT(cs.student_fname_var,' ',cs.student_lname_var) AS studentName,ccd.classdetails_name_var,ccs.classsection_name_var,cscs.smsNo FROM campus_students_contacts cscs JOIN campus_student cs ON cs.student_id_int = cscs.`studentId` JOIN campus_student_classdetails csc ON csc.student_id_int=cs.student_id_int AND csc.fms_acadamicyear_id_int='ACY4' JOIN campus_classdetail ccd ON ccd.classdetail_id_int = csc.classdetail_id_int AND ccd.locationId=csc.locationId JOIN campus_classsection ccs ON ccs.`classsection_id_int`=csc.`classsection_id_int` WHERE ccd.classdetail_id_int=?");
+			pstmObj1.setString(1,classid);
+			System.out.println(pstmObj1);
+			rs1 = pstmObj1.executeQuery();
+			while(rs1.next())
+			{	
+				count++;
+				StudentRegistrationVo obj = new StudentRegistrationVo();
+				obj.setCount(count);
+				obj.setAdmissionNo(rs1.getString("student_admissionno_var"));
+				obj.setStudentFirstName(rs1.getString("studentName"));
+				//obj.setLocation(rs.getString("Location_Name"));
+				obj.setClassname(rs1.getString("classdetails_name_var"));
+				obj.setSectionnaem(rs1.getString("classsection_name_var"));
+				obj.setSmsnumber(rs1.getString("smsNO"));
+				//obj.setAdmissionno(rs.getString("smsNO"));
+				list.add(obj);
+				
+			}
+		}
+		else 
+		{
+			pstmObj=conn.prepareStatement("SELECT cs.student_admissionno_var,CONCAT(cs.student_fname_var,' ',cs.student_lname_var) AS studentName,ccd.classdetails_name_var,ccs.classsection_name_var,cscs.smsNo FROM campus_students_contacts cscs JOIN campus_student cs ON cs.student_id_int = cscs.`studentId` JOIN campus_student_classdetails csc ON csc.student_id_int=cs.student_id_int AND csc.fms_acadamicyear_id_int='ACY4' JOIN campus_classdetail ccd ON ccd.classdetail_id_int = csc.classdetail_id_int AND ccd.locationId=csc.locationId JOIN campus_classsection ccs ON ccs.`classsection_id_int`=csc.`classsection_id_int` WHERE ccd.classdetail_id_int=? AND ccs.classsection_id_int=?"); 
+		//pstmObj.setString(1,accaYear);
+		//pstmObj.setString(2,locId);
+		pstmObj.setString(1,classid);
+		pstmObj.setString(2,secId);
 		System.out.println(pstmObj);
-		System.out.println(accaYear);
-		System.out.println(locId);
+		//System.out.println(accaYear);
+		//System.out.println(locId);
 		System.out.println(classid);
 		System.out.println(secId);
         rs = pstmObj.executeQuery();
@@ -15551,15 +15602,16 @@ public ArrayList<StudentRegistrationVo> getStudentcontactDetails(String accaYear
 			obj.setCount(count);
 			obj.setAdmissionNo(rs.getString("student_admissionno_var"));
 			obj.setStudentFirstName(rs.getString("studentName"));
-			obj.setLocation(rs.getString("Location_Name"));
+			//obj.setLocation(rs.getString("Location_Name"));
 			obj.setClassname(rs.getString("classdetails_name_var"));
 			obj.setSectionnaem(rs.getString("classsection_name_var"));
-			obj.setFatherMobileNo(rs.getString("smsNO"));
+			obj.setSmsnumber(rs.getString("smsNO"));
 			//obj.setAdmissionno(rs.getString("smsNO"));
 			list.add(obj);
 			
 		}
-				
+        
+		}		
 	}
 	catch (Exception e) {
 		logger.error(e.getMessage(), e);
@@ -15626,7 +15678,7 @@ public List<StudentRegistrationVo> getdefaStudentcontact(String locationId, Stri
 			 count++;
 				StudentRegistrationVo obj = new StudentRegistrationVo();
 				obj.setCount(count);
-				obj.setFatherMobileNo(rs.getString("smsNO"));
+				obj.setSmsnumber(rs.getString("smsNO"));
 				//obj.setAdmissionno(rs.getString("smsNO"));
 				list.add(obj);
 				
