@@ -8,7 +8,8 @@
 <head>
 
 <title>eCampus Pro</title>
-
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="JQUERY/js/jquery-1.8.3.js"></script>
 <script type="text/javascript" src="JQUERY/js/jquery.ui.button.js"></script>
 <script type="text/javascript" src="JQUERY/js/jquery.bgiframe-2.1.2.js"></script>
@@ -21,15 +22,19 @@
 <script type="text/javascript" src="JQUERY/js/jquery.ui.dialog.js"></script>
 <script type="text/javascript" src="JQUERY/js/jquery.ui.effect.js"></script>
 <script type="text/javascript" src="JQUERY/js/jquery.ui.effect-blind.js"></script>
-<script type="text/javascript"
-	src="JQUERY/js/jquery.ui.effect-explode.js"></script>
+<script type="text/javascript" src="JQUERY/js/jquery.ui.effect-explode.js"></script>
 <script type="text/javascript" src="JQUERY/js/jquery.ui.datepicker.js"></script>
+<script type="text/javascript"
+	src="JQUERY/development-bundle/ui/jquery.ui.menu.js"></script>
+<script type="text/javascript"
+	src="JQUERY/development-bundle/ui/jquery.ui.autocomplete.js"></script>
 <link rel="stylesheet"
 	href="JQUERY/development-bundle/themes/base/jquery.ui.all.css" />
 
 <link href="CSS/newUI/custome.css" rel="stylesheet">
 <script src="JQUERY/kendoJs/kendo.all.min.js"></script>
 <script src="JS/backOffice/Reports/ExamClassWiseReport.js"></script>
+
 
 <style>
 .modal-body {
@@ -49,7 +54,7 @@
 		style="font-family: Roboto Medium; font-size: 20pt; color: #07aab9; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; border-right: 1px solid #ddd; margin-top: -6px;">
 		<div class="searchWrap">
 		<p>
-			<img src="images/addstu.png" />&nbsp;<span style="font-size: 16pt;">Class Wise Exam Details </span>
+			<img src="images/addstu.png" />&nbsp;<span style="font-size: 16pt;">Double Payment Details </span>
 		</p>
 	</div>
 		<center>
@@ -89,21 +94,24 @@
 							<a data-toggle="collapse" data-parent="#accordion2"
 								href="#collapseOne" style="color: #767676;vertical-align: text-top"><h4 class="panel-title" id="beforeparent"><i
 								class="glyphicon glyphicon-menu-hamburger"></i>
-								&nbsp;&nbsp;Exam Details
+								&nbsp;&nbsp;Double Payment Details
 							</h4></a>
-						
-
 						<div class="navbar-right">
+							<span class="buttons" id="print">Print</span>
+								
+						</div>
+
+						<!--div class="navbar-right">
 						
 							
 							<span class="buttons" id="iconsimg" data-toggle="modal" data-target="#myModal" style="top:-8px;">Download</span>
 
-						</div>
+						</div-->
 						
 					</div>
 					<!-- pop up -->
 
-					<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+					<!--div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 						aria-labelledby="myModalLabel">
 						<div class="modal-dialog" role="document">
 							<div class="modal-content">
@@ -123,188 +131,124 @@
 
 							</div>
 						</div>
-					</div>
+					</div-->
 
 					<!-- Filters -->
 
-					<div id="collapseOne" class="panel-collapse collapse in"
+					<div id="collapseOne1" class="panel-collapse collapse in"
 						role="tabpanel" aria-labelledby="headingOne">
 						<div class="panel-body" id="tabletxt" style="padding: 15px;margin-top: 19px;">
-
 							<div class="col-md-6" id="txtstyle">
 							
-							
-
-								<div class="form-group clearfix">
-									<label for="inputPassword" class="control-label col-xs-4"
-										id="inputnames" style="text-align: right;">Academic Year</label>
-									<div class="col-xs-7">
-										<select id="accyear" name="accyear" class="form-control"
-											required>
-											<option value=""></option>
-
-											<logic:present name="AccYearList">
-
-												<logic:iterate id="AccYear" name="AccYearList">
-
-													<option
-														value="<bean:write name="AccYear" property="accyearId"/>">
-														<bean:write name="AccYear" property="accyearname" />
-													</option>
-
-												</logic:iterate>
-
-											</logic:present>
-										</select>
-									</div>
-								</div>
-							
-
-															
-							</div>
-							<div class="col-md-6" id="txtstyle">
-
-								<div class="form-group clearfix">
-									<label for="inputPassword" class="control-label col-xs-4"
-										id="inputnames" style="text-align: right;">Class</label>
-									<div class="col-xs-7">
-										<select id="class" name="classname" class="form-control"
-											required>
-											<option value=""></option>
-											<logic:present name="classList">
-
-												<logic:iterate id="classrec" name="classList">
-
-													<option
-														value="<bean:write name="classrec" property="classId"/>">
-														<bean:write name="classrec" property="classname" />
-													</option>
-
-												</logic:iterate>
-
-											</logic:present>
-
-										</select>
-									</div>
-								</div>
-								<div class="col-xs-4"></div>
-							<div class="col-xs-8">
-							<button type="submit" class="btn btn-info"
-								id="search" onclick="return validate()">Search</button>
-								</div>
-								<br />
-							
-									<br></br>
-							</div>
-							
-							<!-- data-toggle="modal" data-target="#myModal" -->
-							<br />
-
-								
-						<div class="col-md-12 selecteditems">
-								<br /> 
-								
-								<input type="hidden" id="haccyear" name="haccyear" value="" />
-									
-								<input type="hidden" id="hclass" name="hclass" value="" />
-									
-								
-								<logic:present name="reportForm">
-
-								<span><b>Academic Year :</b></span>&nbsp;&nbsp;&nbsp;<span><logic:present name="reportForm">
-										<bean:write name="reportForm" property="haccyear" />
-										
-									</logic:present></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span><b>Class :</b></span>&nbsp;&nbsp;&nbsp;<span id="classnameid"><logic:present
-										name="reportForm">
-										<bean:write name="reportForm" property="hclass"/></logic:present>
-										
-									</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
-									
-									<input type="hidden" id="haccyearid"  value="<logic:present name="reportForm"><bean:write name="reportForm" property="accyear"/></logic:present>"/>
-									<input type="hidden" id="hclassid" value="<logic:present name="reportForm"><bean:write name="reportForm" property="classname"/></logic:present>"/>
-									
-								</logic:present>
-							</div>
-							<br />
-		
-					<logic:present name="examDetailsReport">
-
-								<input type="hidden" id="hideenId" value="studentlist" />
-
-								<display:table class="table" id="allstudent"
-									name="requestScope.examDetailsReport" 
-									requestURI="/adminMenu.html?method=studentList?">
-
-									<display:column property="sno1" sortable="true"
-										title="S.No	<img src='images/sort1.png' style='float: right'/>"
-										media="html"></display:column>
-
-
-									<display:column property="examName" sortable="true"
-										title="Exam Name	<img src='images/sort1.png' style='float: right'/>"
-										media="html"></display:column>
-
-
-									<display:column property="subjectName" sortable="true"
-										title="Subject Name <img src='images/sort1.png' style='float: right'/>"
-										media="html"></display:column>
-
-
-
-									<display:column property="maxmarks" sortable="true"
-										title="Maximum Marks <img src='images/sort1.png' style='float: right'/>"
-										media="html"></display:column>
-
-
-
-									<display:column property="requiredmarks" sortable="true"
-										title="Required Marks <img src='images/sort1.png' style='float: right'/>"
-										media="html"></display:column>
-
-
-									<display:column property="examinationdate" sortable="true"
-										title="Exam Date <img src='images/sort1.png' style='float: right'/>"
-										media="html"></display:column>
-
-									<display:column property="startTime" sortable="true"
-										title="Start Time <img src='images/sort1.png' style='float: right'/>"
-										media="html"></display:column>
-
-									<display:column property="endTime" sortable="true"
-										title="End Time <img src='images/sort1.png' style='float: right'/>"
-										media="html"></display:column>
-
-								</display:table>
-
-							</logic:present>
-		
-		
-
-						</div>
+			<div class="form-group clearfix">
+				<label for="inputPassword" class="control-label col-xs-5" align="right"
+					id="inputnames">School Name</label>
+					<div class="col-xs-7">
+						<select id="locationName" name="locationName" class="form-control">
+							<option value="">----select----</option>
+							 <logic:present name="locationList">
+								<logic:iterate id="Location" name="locationList">
+									<option  value='<bean:write name="Location" property="locationId"/>'><bean:write name="Location" property="locationName" /></option>
+								</logic:iterate>
+							</logic:present> 
+						</select>
 					</div>
-				</div>
 			</div>
+				
+			<div class="form-group clearfix">
+				<label for="inputPassword" class="control-label col-xs-5" align="right"
+					id="inputnames">Class </label>
+					<div class="col-xs-7">
+						<select id="className" name="className" class="form-control">
+							<option value="">----select----</option>
+						</select>
+					</div>
+			</div>
+			
+				<div class="form-group clearfix">
+				<label for="inputPassword" class="control-label col-xs-5" align="right"
+					id="inputnames">Terms </label>
+					<div class="col-xs-7">
+						<select id="termName" class="form-control" 	onkeypress="HideError()">
+							<option value="">----select----</option>
+						</select>
+					</div>
+			</div>
+		</div>
+		<div class="col-md-6" id="txtstyle">
+			<div class="form-group clearfix">
+				<label for="inputPassword" class="control-label col-xs-5" align="right"
+					id="inputnames">Academic Year</label>
+					<div class="col-xs-7">
+						<select id="academicYear" name="accyear" class="form-control">
+								<logic:present name="AccYearList">
+												<logic:iterate id="accyear" name="AccYearList">
+													<option value="<bean:write name="accyear" property="accyearId"/>"><bean:write name="accyear" property="accyearname" /></option>
+												</logic:iterate>
+											</logic:present> 
+						</select>
+					</div>
+					</div>
+					
+				<div class="form-group clearfix">
+				<label for="inputPassword" class="control-label col-xs-5" align="right"
+					id="inputnames">Division</label>
+					<div class="col-xs-7">
+						<select id="divisionName" class="form-control">
+								<option value="all">ALL</option>
+						</select>
+					</div>
+					</div>
+					
+				<div class="form-group clearfix">
+					<label for="inputPassword" class="control-label col-xs-5" style="text-align: right; line-height: 35px;">Name/AdmissionNo</label>
+						<div class="col-xs-7">
+							<input type="text" name="studentName" id="studentName" class="form-control" />
+							<input type="hidden" id="studentIdIntId" value="" />
+						</div>
+				</div>
+					
+					
+					
+			
+		</div>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse in table-responsive">
+					<table class='table' id='allstudent' style="width: 100%">
+						<thead>
+							<tr>
+								
+								<th style="width:4%;">Sl no</th>
+								<th style="width:7%;">Admn No</th>
+								<th style="width:16%;">Name</th>
+								<th style="width:3%;">Class</th>
+								<th style="width:5%;">Division</th> 
+								<th style="width:12%;">Transaction Id</th>
+								<th style="width:18%;">Bank</th> 
+								<th style="width:5%;">Amount</th> 
+								<th style="width:5%;">Status</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+						
+					</table>
+		                
+
+</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
 			<!-- Button trigger modal -->
 
 		</form>
 	</div>
 
-	<span>&nbsp;</span>
 
-
-	<!-- jQuery -->
-	<script src="js/jquery.js"></script>
-
-
-	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.min.js"></script>
-
-
-	<script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
+	
 
 </body>
 
