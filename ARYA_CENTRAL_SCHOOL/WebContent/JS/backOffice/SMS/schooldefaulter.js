@@ -5,13 +5,14 @@ function myFunction() {
 
 
 	$(document).ready(function() {
-		$("#Acyearid").change(function(){
+		$("#Acyearid").val($("#hacademicyaer").val());
+		/*$("#Acyearid").change(function(){
 			getClassList();
 			getTerm();
 			getSectionList(classname);
 			getDefaulterFeeList();
 			var classname=$("#classname").val();
-			});
+			});*/
 		
 		$("#locationname").change(function(){
 
@@ -66,7 +67,7 @@ function myFunction() {
 					//alert($('#Message').val());
 					for ( var j = 0; j < result.studentSearchList.length; j++)//Here termlist is the name given on key as JSONObject.
 					{
-						smsNo = result.studentSearchList[j].fatherMobileNo;
+						smsNo = result.studentSearchList[j].smsnumber;
 						//console.log("hello"+smsNo);
 						
 						if(smsNo.length > 0 ){
@@ -198,6 +199,7 @@ function myFunction() {
 							+"<td>"+result.data[i].termName+"</td>"
 							+"<td>"+result.data[i].dueAmt+"</td>"
 							+"<td>"+result.data[i].name+"</td>"
+							
 							+"</tr>");
 					}
 				
