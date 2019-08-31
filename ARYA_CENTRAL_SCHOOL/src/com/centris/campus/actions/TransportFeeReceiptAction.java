@@ -1085,9 +1085,7 @@ public class TransportFeeReceiptAction extends DispatchAction
 			String routeNo=request.getParameter("routeNo");
 			String stop=request.getParameter("stop");
 			
-				/*if(routeNo==null || routeNo.equalsIgnoreCase("all") || routeNo.equalsIgnoreCase("")) {
-					routeNo="%%";
-				}*/
+				
 				
 				list = obj.getBusWiseStudentDetail(loc,acc,routeNo,stop);
 				System.out.println(list);
