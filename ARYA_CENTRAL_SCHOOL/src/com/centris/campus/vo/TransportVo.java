@@ -60,7 +60,6 @@ public class TransportVo {
 	private String receiptNo;
 	private String mobileNo;
 	private String accyear;
-
 	private String billdate;
 	private String chlnno;
 	private String studentname;
@@ -68,8 +67,17 @@ public class TransportVo {
 	private String termName;
 	private double amount_paid_so_far;
 	private String droppoint;
+	private String smsnumber;
 	
 	
+	public String getSmsnumber() {
+		return smsnumber;
+	}
+
+	public void setSmsnumber(String smsnumber) {
+		this.smsnumber = smsnumber;
+	}
+
 	public String getDescription() {
 		return description;
 	}
