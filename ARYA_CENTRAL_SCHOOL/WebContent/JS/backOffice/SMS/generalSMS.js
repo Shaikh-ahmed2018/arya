@@ -18,11 +18,11 @@ $(document).ready(function() {
 					alert($('#Message').val());
 					for ( var j = 0; j < result.studentSearchList.length; j++)//Here termlist is the name given on key as JSONObject.
 					{
-						smsNo = result.studentSearchList[j].fatherMobileNo;
+						smsNo = result.studentSearchList[j].smsnumber;
 						if(smsNo.length > 0 ){
 							$.ajax({
 							    type: "POST",
-							    url: "http://sms.textidea.com/app/smsapi/index.php?key=25BB891406C392&campaign=5043&routeid=100233&type=text&contacts="+smsNo+"&senderid=ARYACS&msg="+$('#Message').val()+"&company="+$('#locationname').val(),
+							    url: "http://sms.bbsltvm.in/vendorsms/pushsms.aspx?apikey= 16ba8674-c0ac-4c97-a47e-1376114848ec&clientId=fc9ad79d-2110-41af-a82f-277406ac283a&msisdn="+smsNo+"&sid=ARYACS&msg="+encodeURI($('#Message').val())+"&company="+$('#locationname').val()+"&fl=0&gwid=2",
 							    success: function() {							     
 							    }
 						 	});
