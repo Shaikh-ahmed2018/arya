@@ -41,7 +41,7 @@ vertical-align:0;
 							<div class="panel-heading leftNav" role="tab" id="headingTwo" style="background: #07AAB9;">
 							  <h4 class="panel-title">
 								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#"  style="color:#767676" aria-expanded="false" aria-controls="collapseTwo">
-								  <h3 class="panel-title active" style="    color: #fff;">Staff <i class="glyphicon glyphicon-triangle-bottom dropdowns"></i></h3>
+								  <h3 class="panel-title active" style="color: #fff;">Staff <i class="glyphicon glyphicon-triangle-bottom dropdowns"></i></h3>
 								</a>
 								
 							  </h4>
@@ -73,6 +73,8 @@ vertical-align:0;
 								<ul class="nav nav-pills nav-stacked">
 								<li><a href="reportaction.html?method=defaultFeeReport" id="sub_module_8_16">Fee Defaulter</a></li>
 													<li><a href="reportaction.html?method=FeeCollectionReport" id="sub_module_8_17">Fee Collection</a></li>
+													<!--li><a href="#" id="sub_module_8_25">Double Payment Details </a></li-->
+													 <li><a href="reportaction.html?method=examReportClassWise" id="sub_module_8_15">Double Payment Details</a></li>
 													<li><a href="reportaction.html?method=DDReport" id="sub_module_8_15">Details Of DD</a></li>
 												<li><a href="reportaction.html?method=ITFeeCollectionReport" id="sub_module_8_18">IT Fee Collection</a></li>
 													
