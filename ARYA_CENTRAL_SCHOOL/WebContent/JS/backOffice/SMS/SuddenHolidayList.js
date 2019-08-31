@@ -5,114 +5,80 @@ function myFunction() {
 
 
 	$(document).ready(function() {
-		$("#Acyearid").change(function(){
-			//$("#searchvalue").val("");
-			//changeAccYear();
-			getClassList();
-			//getStudentcontactDetails();
-			//getDefaulterFeeList();
-			var classname=$("#classname").val();
-			
-			//getSectionList(classname);
-		});
+		
+		$("#Acyearid").val($("#hacademicyaer").val());
 		$("#locationname").change(function(){
-			//$("#searchvalue").val("");
-			//changeAccYear();
-			getClassList();
-			//getStudentcontactDetails();
-			//getDefaulterFeeList();
-			var classname=$("#classname").val();
+			getClassByLoc();
+			getDivision();
+			getStudentcontactDetails();
 			
-			//getSectionList(classname);
 		});
+		
+		
 		$("#classname").change(function(){
-			//$("#searchvalue").val("");
-			
-			var locationid=$("#locationname").val();
-			var accyear=$("#Acyearid").val();
-			var classname=$("#classname").val();
-			getSectionList(classname);
+			getDivision();
 			getStudentcontactDetails();
-			//getDefaulterFeeList();
-			//getStudentList(locationid,accyear,classname);
-		});
-		$("#sectionid").change(function(){
-			$("#searchvalue").val("");
-			var locationid=$("#locationname").val();
-			var accyear=$("#Acyearid").val();
-			var classname=$("#classname").val();
-			var sectionid=$("#sectionid").val();
-			getStudentcontactDetails();
-			//getDefaulterFeeList();
 			
-			//getStudentListBySection(locationid,accyear,classname,sectionid);
 		});
 		
 	
+		
+		$("#sectionid").change(function(){
+			getStudentcontactDetails();
+		});
+		
+	
+	
 	});
 	
-
-	function getClassList(){
+	function getClassByLoc(){
 		var locationid=$("#locationname").val();
 		datalist={
 				"locationid" : locationid
 		},
-
 		$.ajax({
-
 			type : 'POST',
 			url : "studentRegistration.html?method=getClassByLocation",
 			data : datalist,
 			async : false,
 			success : function(response) {
-
 				var result = $.parseJSON(response);
-
 				$('#classname').html("");
-
-				$('#classname').append('<option value="All">' + "----------Select----------"	+ '</option>');
-
+				$('#classname').append('<option value="all">ALL</option>');
 				for ( var j = 0; j < result.ClassList.length; j++) {
-
 					$('#classname').append('<option value="'
-
 							+ result.ClassList[j].classcode + '">'
-
 							+ result.ClassList[j].classname
-
 							+ '</option>');
 				}
 			}
 		});
-	}
-	function getSectionList(classname){
-		datalist={
-				"classidVal" : classname,
-				"locationId":$("#locationname").val()
-		},
-		
-		$.ajax({
-			
-			type : 'POST',
-			url : "studentRegistration.html?method=getClassSection",
-			data : datalist,
-			async : false,
-			success : function(response) {
-				
-				var result = $.parseJSON(response);
-				
-				$('#sectionid').html("");
-				
-				$('#sectionid').append('<option value="">' + "ALL"	+ '</option>');
-				
-				for ( var j = 0; j < result.sectionList.length; j++) {
+};
 
-					$('#sectionid').append('<option value="' + result.sectionList[j].sectioncode
-							+ '">' + result.sectionList[j].sectionnaem
-							+ '</option>');
-				}
+function getDivision(){
+	datalist={
+			"classidVal" : $("#classname").val(),
+			"locationId":$("#locationname").val()
+	},
+	$.ajax({
+		type : 'POST',
+		url : "studentRegistration.html?method=getClassSection",
+		data : datalist,
+		async : false,
+		success : function(response) {
+			var result = $.parseJSON(response);
+			$('#sectionid').html("");
+			$('#sectionid').append('<option value="all">ALL</option>');
+			for ( var j = 0; j < result.sectionList.length; j++) {
+				$('#sectionid').append('<option value="' + result.sectionList[j].sectioncode
+						+ '">' + result.sectionList[j].sectionnaem
+						+ '</option>');
 			}
-		});}
+		}
+	});
+}
+	
+	
 	function getStudentcontactDetails()
 	{
 		dataList={				
@@ -122,6 +88,7 @@ function myFunction() {
 				"classId":$('#classname').val(),
 				"divisionId":$('#sectionid').val(),
  };
+		
 		console.log(dataList);
  $.ajax({
 	 type:"POST",
@@ -140,10 +107,9 @@ function myFunction() {
 							+"<td>"+(i+1)+"</td>"
 							+"<td>"+result.data[i].admissionNo+"</td>"
 							+"<td>"+result.data[i].studentFirstName+"</td>"
-							+"<td>"+result.data[i].location+"</td>"
 							+"<td>"+result.data[i].classname+"</td>"
 							+"<td>"+result.data[i].sectionnaem+"</td>"
-							+"<td>"+result.data[i].fatherMobileNo+"</td>"
+							+"<td>"+result.data[i].smsnumber+"</td>"
 							//+"<td>"+result.data[i].termName+"</td>"
 							//+"<td>"+result.data[i].dueAmt+"</td>"
 							//+"<td>"+result.data[i].name+"</td>"
