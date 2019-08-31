@@ -2,23 +2,22 @@ $(document).ready(function(){
 	
 	
 	getRouteNameList();
+	
 	$("#route").change(function()
 	{		
 		var routeid = $(this).val();
 		//alert(routeid)var stop=$("#stopname").val();
-		if(stop == "%%"){
-			stop = "all"
-		 }
+		
 		getstoplist(routeid);
 		 
 		
-		//getBusWiseStudentDetail();
+		getBusWiseStudentDetail();
 		
 				
 });
 	$("#stopname").change(function()
 			{
-		
+		//alert("hi")
 		getBusWiseStudentDetail();
 			});
 	
@@ -45,7 +44,7 @@ $(document).ready(function(){
 				var result = $.parseJSON(data);
 				for ( var j = 0; j < result.studentSearchList.length; j++)//Here termlist is the name given on key as JSONObject.
 				{
-					smsNo = result.studentSearchList[j].mobileNo;
+					smsNo = result.studentSearchList[j].smsnumber;
 					//console.log("hello"+smsNo);
 					
 					if(smsNo.length > 0 ){
@@ -103,7 +102,8 @@ function getRouteNameList(){
 				var result = $.parseJSON(response);
 				//alert(result)
 					$('#route').empty();
-					$('#route').append('<option value="ALL">' + "----------Select----------"	+ '</option>');
+					$('#route').append('<option value="all">ALL</option>');
+					
 					for ( var j = 0; j < result.routelist.length; j++) {
                     
 						$('#route').append('<option value="'
@@ -134,7 +134,8 @@ function getstoplist(routeid){
 					var result = $.parseJSON(response);
 						//$("#stopname").empty();
 						$('#stopname').html("");
-						$('#stopname').append('<option value="ALL">'  + "ALL"	+ '</option>');
+						$('#stopname').append('<option value="all">ALL</option>');
+						
 						for ( var j = 0; j < result.stoplist.length; j++) {
 	                       
 							$('#stopname').append('<option value="'
@@ -184,12 +185,11 @@ function getBusWiseStudentDetail(){
 					+"<tr><th>SI No</th>"+
 					"<th>Admission No.</th>" +
 					"<th>Name</th>" +
-					"<th>Class Div.</th>"+
+					"<th>Class</th>"+
+					"<th>DIV</th>"+
 					"<th>Route</th>"+
-					"<th>Buspoint</th>"+
-					"<th>Amount</th>"+
-					"<th>Contact Person</th>"+
-					"<th>Contact No.</th>"+
+					"<th>Stop</th>"+
+					"<th>SMSno.</th>"+
 					"</tr>" +
 					"</table>"
 			);
@@ -205,11 +205,10 @@ function getBusWiseStudentDetail(){
 							"<td>"+result.studentList[i].admisssion_no+"</td>"+
 							"<td>"+result.studentList[i].student_name+"</td>"+
 							"<td>"+result.studentList[i].classname+"</td>"+
+							"<td>"+result.studentList[i].section_name+"</td>"+
 							"<td>"+result.studentList[i].description+"</td>"+
 							"<td>"+result.studentList[i].stage_name+"</td>"+
-							"<td>"+result.studentList[i].distance+"</td>"+
-							"<td>"+result.studentList[i].costPerPerson+"</td>"+
-							"<td>"+result.studentList[i].mobileNo+"</td>"+
+							"<td>"+result.studentList[i].smsnumber+"</td>"+
 							+"</tr>"
 					);
 				}
