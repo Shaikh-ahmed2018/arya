@@ -480,6 +480,18 @@ public ArrayList<AddFeeVO> getDefaulterFeeList(String locId, String classId,Stri
 	return new FeeCollectionDaoImpl().getDefaulterFeeList(locId,classId,divId,termId,accId);
 }
 
+public ArrayList<AddFeeVO> getDoublePaymentList(String locId, String classId, String divId,String studId,String termId,
+		String accId) {
+	return new FeeCollectionDaoImpl().getDoublePaymentList(locId,classId,divId,studId,termId,accId);
+}
+
+public ArrayList<AddFeeVO> getDoublePaymentListbyId(String termId,String searchterm) {
+	return new FeeCollectionDaoImpl().getDoublePaymentListbyId(termId,searchterm);
+}
+
+
+
+
 
 
 }
