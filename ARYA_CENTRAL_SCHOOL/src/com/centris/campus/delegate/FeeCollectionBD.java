@@ -97,5 +97,16 @@ public class FeeCollectionBD {
 	public ArrayList<AddFeeVO> getDefaulterFeeList(String locId,String classId, String divId, String termId, String accId) {
 		return new FeeCollectionServiceImpl().getDefaulterFeeList(locId,classId,divId,termId,accId);
 	}
+
+	public ArrayList<AddFeeVO> getDoublePaymentList(String locId, String classId, String divId,String studId,String termId,
+			String accId) {
+		return new FeeCollectionServiceImpl().getDoublePaymentList(locId,classId,divId,studId,termId,accId);
+	}
+
+	public ArrayList<AddFeeVO> getDoublePaymentListbyId(String termId,String searchterm) {
+		return new FeeCollectionServiceImpl().getDoublePaymentListbyId(termId,searchterm);
+	}
+
+	
 	
 }
