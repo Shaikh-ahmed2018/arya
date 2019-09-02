@@ -1765,10 +1765,16 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 			conn = JDBCConnection.getSeparateGodaddyConnection();
 
 			pstmmodifyObj = conn.prepareStatement(StudentRegistrationSQLUtilConstants.STUDENT_REGISTRATION_MODIFY);
-
-			pstmmodifyObj.setString(1, registration.getStudentFirstName().trim());
-			pstmmodifyObj.setString(2, registration.getStudentLastName().trim());
-			pstmmodifyObj.setString(3, registration.getStudentrollno());
+			//if(registration.getStudentFirstName()!=null){
+				pstmmodifyObj.setString(1, registration.getStudentFirstName().trim());
+			//}
+			//if(registration.getStudentLastName().trim()!=null){
+				pstmmodifyObj.setString(2, registration.getStudentLastName().trim());
+			//}
+			//if(registration.getStudentrollno()!=null){
+				pstmmodifyObj.setString(3, registration.getStudentrollno());
+			//}
+				
 			pstmmodifyObj.setString(4, registration.getApplicationNo().trim());
 			pstmmodifyObj.setString(5, HelperClass.convertUIToDatabase(registration.getDateofJoin().trim()));
 			pstmmodifyObj.setString(6, registration.getAcademicYear().trim());
@@ -1822,9 +1828,10 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 			pstmmodifyObj.setString(42, registration.getPreviousSchool());
 			pstmmodifyObj.setString(43, registration.getState());
 			pstmmodifyObj.setString(44, registration.getLandLine());
-
+		
 
 			pstmmodifyObj.setString(45,registration.getStudentId().trim());
+			pstmmodifyObj.setString(46,registration.getAdmissionclass() );
 
 			System.out.println("what it is setting:" +pstmmodifyObj);
 			resultModify = pstmmodifyObj.executeUpdate();
@@ -2364,11 +2371,11 @@ public class StudentRegistrationDaoImpl implements StudentRegistrationDao {
 				successMsg = "errorMessage";
 			}
 
-		} catch (SQLException e) {
+		} catch (SQLException e ) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 
-		} catch (Exception e) {
+		} catch (Exception e ) {
 			logger.error(e.getMessage(), e);
 			e.printStackTrace();
 
