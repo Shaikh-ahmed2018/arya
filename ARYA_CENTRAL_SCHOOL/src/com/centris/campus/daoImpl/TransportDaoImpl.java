@@ -6336,205 +6336,7 @@ public List<TransportVo> getBusWiseStudentDetail(String loc, String acc, String 
 			
 	}
 
-	/*public List<TransportVo> getBusWiseStudentDetail(String loc, String acc, String routeNo, String stop) {
-		
-		logger.setLevel(Level.DEBUG);
-		JLogger.log(0, JDate.getTimeString(new Date())
-				+ MessageConstants.START_POINT);
-		logger.info(JDate.getTimeString(new Date())
-				+ " Control in TransportDaoImpl : getRouteWiseStudentDetail Starting");
-		ArrayList<TransportVo> list = new ArrayList<TransportVo>();
-		PreparedStatement pstmt = null;
-		PreparedStatement pstmt1 = null;
-		ResultSet resultSet = null;
-		ResultSet resultSet1 = null;
-		Connection connection = null;
-		
-		try {
-			connection = JDBCConnection.getSeparateConnection();
-			if(!(stop=="all"))
-			{
-				pstmt1 = connection.prepareStatement("SELECT DISTINCT(csrsm.`mapped_id`),cfs.stage_id,cs.student_id_int,CONCAT(cs.student_fname_var,' ',cs.student_lname_var) AS student,cs.student_admissionno_var,ccd.`classdetails_name_var`,ccs.`classsection_name_var`,cl.`Location_Name`,cfs.description,cfs.stage_name FROM campus_student_route_stage_mapping csrsm JOIN campus_student cs ON csrsm.mapped_id = cs.student_id_int JOIN campus_student_classdetails csc ON cs.student_id_int=csc.student_id_int AND csrsm.accyear=csc.fms_acadamicyear_id_int  JOIN `campus_classdetail` ccd ON csc.classdetail_id_int=ccd.classdetail_id_int AND csc.locationId=ccd.locationId JOIN `campus_location` cl ON cl.`Location_Id`=cs.`locationId` JOIN `campus_classsection` ccs ON csc.classsection_id_int=ccs.classsection_id_int JOIN campus_fee_stage cfs ON cfs.`stage_id`=`csrsm`.`stage_id` WHERE cl.Location_Id=? AND csrsm.accyear=? AND csrsm.route_id=? GROUP BY student ORDER BY cfs.description");
-				pstmt1.setString(1, loc);
-				pstmt1.setString(2, acc);
-				//pstmt.setString(3,stop);
-				pstmt1.setString(3, routeNo);
-				System.out.println(pstmt1);
-				
-				
-				resultSet1 = pstmt1.executeQuery();
-					System.out.println(resultSet1);
-					while (resultSet1.next()) {
-						
-						TransportVo obj=new TransportVo();
-						PreparedStatement squery=connection.prepareStatement("SELECT RouteName FROM `transport_route` WHERE RouteCode=?");
-						squery.setString(1, resultSet1.getString("description"));
-						ResultSet srs=squery.executeQuery();
-						if(srs.next()) {
-							obj.setRouteName(srs.getString("RouteName"));
-						}
-						srs.close();
-						squery.close();
-						String stage_idgroup[]=resultSet1.getString("stage_id").split(",");
-						String stage_name="";
-						//String description="";
-						String amount="";
-						for(int i=0;i<stage_idgroup.length;i++) {
-							squery=connection.prepareStatement("SELECT stage_name,amount FROM `campus_fee_stage` WHERE stage_id=? AND accyear=?");
-							squery.setString(1, stage_idgroup[i]);
-							squery.setString(2, acc);
-							 srs=squery.executeQuery();
-							if(srs.next()) {
-								stage_name=stage_name+srs.getString("stage_name")+",";
-								//description=description+srs.getString("description")+",";
-								amount=amount+srs.getString("amount")+",";
-							}
-						}
-						srs.close();
-						squery.close();
-						
-
-						squery=connection.prepareStatement("SELECT cpr.`parentid`,cpr.`relationship`,cp.FatherName,cp.mobileno,cp.student_mothername_var,cp.student_mothermobileno_var,cp.student_gaurdianname_var,cp.student_gardian_mobileno FROM `campus_parentchildrelation` cpr JOIN `campus_parents` cp ON cpr.parentid=cp.ParentID WHERE cpr.stu_addmissionNo=?");
-						squery.setString(1, resultSet1.getString("student_id_int"));
-						 srs=squery.executeQuery();
-						if(srs.next()) {
-							if(srs.getString("mobileNo") !=null && !srs.getString("mobileNo").trim().equalsIgnoreCase("")) {
-								obj.setCostPerPerson(srs.getString("FatherName"));
-								obj.setMobileNo(srs.getString("mobileNo"));
-							}
-							else if(srs.getString("student_mothermobileno_var") !=null && !srs.getString("student_mothermobileno_var").trim().equalsIgnoreCase("")) {
-								obj.setCostPerPerson(srs.getString("student_mothername_var"));
-								obj.setMobileNo(srs.getString("student_mothermobileno_var"));
-							}
-							else {
-								obj.setCostPerPerson(srs.getString("student_gaurdianname_var"));
-								obj.setMobileNo(srs.getString("student_gardian_mobileno"));
-							} 
-						}
-					
-						srs.close();
-						squery.close();
-						
-						obj.setStage_name(stage_name);
-						//obj.setRouteName(description);
-						obj.setDescription(resultSet1.getString("description"));
-						obj.setDistance(amount);
-						obj.setStudent_name(resultSet1.getString("student"));
-						obj.setAdmisssion_no(resultSet1.getString("student_admissionno_var"));
-						obj.setClassname(resultSet1.getString("classdetails_name_var")+" "+resultSet1.getString("classsection_name_var"));
-						list.add(obj);
-					}
-			}
-			else
-			{
-			
-			pstmt = connection.prepareStatement("SELECT DISTINCT(csrsm.`mapped_id`),cfs.stage_id,cs.student_id_int,CONCAT(cs.student_fname_var,' ',cs.student_lname_var) AS student,cs.student_admissionno_var,ccd.`classdetails_name_var`,ccs.`classsection_name_var`,cl.`Location_Name`,cfs.description,cfs.stage_name FROM campus_student_route_stage_mapping csrsm JOIN campus_student cs ON csrsm.mapped_id = cs.student_id_int JOIN campus_student_classdetails csc ON cs.student_id_int=csc.student_id_int AND csrsm.accyear=csc.fms_acadamicyear_id_int  JOIN `campus_classdetail` ccd ON csc.classdetail_id_int=ccd.classdetail_id_int AND csc.locationId=ccd.locationId JOIN `campus_location` cl ON cl.`Location_Id`=cs.`locationId` JOIN `campus_classsection` ccs ON csc.classsection_id_int=ccs.classsection_id_int JOIN campus_fee_stage cfs ON cfs.`stage_id`=`csrsm`.`stage_id` WHERE cl.Location_Id=? AND csrsm.accyear=? AND cfs.`stage_id`=? AND csrsm.route_id=? GROUP BY student ORDER BY cfs.description");
-			pstmt.setString(1, loc);
-			pstmt.setString(2, acc);
-			pstmt.setString(3,stop);
-			pstmt.setString(4, routeNo);
-			System.out.println(pstmt);
-			
-			
-				resultSet = pstmt.executeQuery();
-				System.out.println(resultSet);
-				while (resultSet.next()) {
-					
-					TransportVo obj=new TransportVo();
-					PreparedStatement squery=connection.prepareStatement("SELECT RouteName FROM `transport_route` WHERE RouteCode=?");
-					squery.setString(1, resultSet.getString("description"));
-					ResultSet srs=squery.executeQuery();
-					if(srs.next()) {
-						obj.setRouteName(srs.getString("RouteName"));
-					}
-					srs.close();
-					squery.close();
-					String stage_idgroup[]=resultSet.getString("stage_id").split(",");
-					String stage_name="";
-					//String description="";
-					String amount="";
-					for(int i=0;i<stage_idgroup.length;i++) {
-						squery=connection.prepareStatement("SELECT stage_name,amount FROM `campus_fee_stage` WHERE stage_id=? AND accyear=?");
-						squery.setString(1, stage_idgroup[i]);
-						squery.setString(2, acc);
-						 srs=squery.executeQuery();
-						if(srs.next()) {
-							stage_name=stage_name+srs.getString("stage_name")+",";
-							//description=description+srs.getString("description")+",";
-							amount=amount+srs.getString("amount")+",";
-						}
-					}
-					srs.close();
-					squery.close();
-					
-
-					squery=connection.prepareStatement("SELECT cpr.`parentid`,cpr.`relationship`,cp.FatherName,cp.mobileno,cp.student_mothername_var,cp.student_mothermobileno_var,cp.student_gaurdianname_var,cp.student_gardian_mobileno FROM `campus_parentchildrelation` cpr JOIN `campus_parents` cp ON cpr.parentid=cp.ParentID WHERE cpr.stu_addmissionNo=?");
-					squery.setString(1, resultSet.getString("student_id_int"));
-					 srs=squery.executeQuery();
-					if(srs.next()) {
-						if(srs.getString("mobileNo") !=null && !srs.getString("mobileNo").trim().equalsIgnoreCase("")) {
-							obj.setCostPerPerson(srs.getString("FatherName"));
-							obj.setMobileNo(srs.getString("mobileNo"));
-						}
-						else if(srs.getString("student_mothermobileno_var") !=null && !srs.getString("student_mothermobileno_var").trim().equalsIgnoreCase("")) {
-							obj.setCostPerPerson(srs.getString("student_mothername_var"));
-							obj.setMobileNo(srs.getString("student_mothermobileno_var"));
-						}
-						else {
-							obj.setCostPerPerson(srs.getString("student_gaurdianname_var"));
-							obj.setMobileNo(srs.getString("student_gardian_mobileno"));
-						} 
-					}
-				
-					srs.close();
-					squery.close();
-					
-					obj.setStage_name(stage_name);
-					//obj.setRouteName(description);
-					obj.setDescription(resultSet.getString("description"));
-					obj.setDistance(amount);
-					obj.setStudent_name(resultSet.getString("student"));
-					obj.setAdmisssion_no(resultSet.getString("student_admissionno_var"));
-					obj.setClassname(resultSet.getString("classdetails_name_var")+" "+resultSet.getString("classsection_name_var"));
-					list.add(obj);
-				}
-			}
-		} 
-		
-		
-		
-		catch (SQLException sqlExp) {
-			logger.error(sqlExp.getMessage(), sqlExp);
-			sqlExp.printStackTrace();
-		} catch (Exception exception) {
-			logger.error(exception.getMessage(), exception);
-			exception.printStackTrace();
-		} finally {
-
-			try {
-				if (resultSet != null && !resultSet.isClosed()) {
-					resultSet.close();
-				}
-				if (pstmt != null && !pstmt.isClosed()) {
-					pstmt.close();
-				}
-
-				if (connection != null && (!connection.isClosed())) {
-					connection.close();
-				}
-
-			} catch (Exception exception) {
-				logger.error(exception.getMessage(), exception);
-				exception.printStackTrace();
-			}
-		}
-		JLogger.log(0, JDate.getTimeString(new Date())
-				+ MessageConstants.END_POINT);
-		logger.info(JDate.getTimeString(new Date())
-				+ " Control in TransportDaoImpl : getRouteWiseStudentDetail  Ending");
-
-		return list;
-	}*/
+	
 //sms edited by anu
 	public List<TransportVo> getContactBusStudentDetail(String loct, String accy, String route, String stopp) {
 		logger.setLevel(Level.DEBUG);
@@ -6544,17 +6346,35 @@ public List<TransportVo> getBusWiseStudentDetail(String loc, String acc, String 
 				+ " Control in TransportDaoImpl : getContactBusStudentDetail Starting");
 		ArrayList<TransportVo> list = new ArrayList<TransportVo>();
 		PreparedStatement pstmt = null;
+		PreparedStatement pstmt1 = null;
 		ResultSet resultSet = null;
+		ResultSet resultSet1 = null;
 		Connection connection = null;
 		int count = 0;
 		try {
 			
 			connection = JDBCConnection.getSeparateConnection();
-			pstmt = connection.prepareStatement("SELECT DISTINCT(csrsm.`mapped_id`),cfs.stage_id,cs.student_id_int,CONCAT(cs.student_fname_var,' ',cs.student_lname_var) AS student,cs.student_admissionno_var,ccd.`classdetails_name_var`,ccs.`classsection_name_var`,cl.`Location_Name`,cfs.description,cfs.stage_name,cscd.smsNO FROM campus_student_route_stage_mapping csrsm JOIN campus_student cs ON csrsm.mapped_id = cs.student_id_int JOIN campus_student_classdetails csc ON cs.student_id_int=csc.student_id_int AND csrsm.accyear=csc.fms_acadamicyear_id_int  JOIN `campus_classdetail`ccd ON csc.classdetail_id_int=ccd.classdetail_id_int AND csc.locationId=ccd.locationId JOIN campus_location cl ON cl.Location_Id=cs.locationId JOIN `campus_classsection` ccs ON csc.classsection_id_int=ccs.classsection_id_int JOIN campus_fee_stage cfs ON cfs.`stage_id`=`csrsm`.`stage_id` JOIN campus_students_contacts cscd ON cscd.studentId = cs.student_id_int WHERE cl.Location_Id=? AND csrsm.accyear=? AND cfs.`stage_id`=? AND csrsm.route_id=? GROUP BY student ORDER BY cfs.description"); 
+			if(!(stopp=="all"))
+			{
+				pstmt1 = connection.prepareStatement("SELECT CONCAT(cs.student_fname_var,' ',cs.student_lname_var) AS student,cs.student_admissionno_var, ccd.`classdetails_name_var`,ccs.`classsection_name_var`,cl.`Location_Name`,cfs.description,cfs.stage_name,cscs.smsNo FROM campus_student_route_stage_mapping csrsm JOIN campus_student cs ON csrsm.mapped_id = cs.student_id_int JOIN campus_student_classdetails csc ON cs.student_id_int=csc.student_id_int AND csrsm.accyear=csc.fms_acadamicyear_id_int='ACY4' JOIN `campus_classdetail` ccd ON csc.classdetail_id_int=ccd.classdetail_id_int AND csc.locationId=ccd.locationId JOIN `campus_location` cl ON cl.`Location_Id`=cs.`locationId` JOIN campus_classsection ccs ON ccs.`classsection_id_int`=csc.`classsection_id_int`  JOIN `campus_students_contacts` cscs ON cscs.`studentId`=csrsm.mapped_id JOIN campus_fee_stage cfs ON cfs.`stage_id`=`csrsm`.`stage_id` WHERE cl.Location_Id=? AND csrsm.route_id=? GROUP BY student ORDER BY cfs.description");
+				pstmt1.setString(1, loct);
+				pstmt1.setString(2, route);
+				System.out.println(pstmt1);
+				resultSet1 = pstmt1.executeQuery();
+				while(resultSet1.next()) {
+					 count++;
+					 TransportVo obj = new TransportVo();
+					 obj.setSmsnumber(resultSet1.getString("smsNo"));
+					 list.add(obj);
+				 }
+				
+			}
+			else {
+			pstmt = connection.prepareStatement("SELECT CONCAT(cs.student_fname_var,' ',cs.student_lname_var) AS student,cs.student_admissionno_var, ccd.`classdetails_name_var`,ccs.`classsection_name_var`,cl.`Location_Name`,cfs.description,cfs.stage_name,cscs.smsNo FROM campus_student_route_stage_mapping csrsm JOIN campus_student cs ON csrsm.mapped_id = cs.student_id_int JOIN campus_student_classdetails csc ON cs.student_id_int=csc.student_id_int AND csrsm.accyear=csc.fms_acadamicyear_id_int='ACY4' JOIN `campus_classdetail` ccd ON csc.classdetail_id_int=ccd.classdetail_id_int AND csc.locationId=ccd.locationId JOIN `campus_location` cl ON cl.`Location_Id`=cs.`locationId` JOIN campus_classsection ccs ON ccs.`classsection_id_int`=csc.`classsection_id_int`  JOIN `campus_students_contacts` cscs ON cscs.`studentId`=csrsm.mapped_id JOIN campus_fee_stage cfs ON cfs.`stage_id`=`csrsm`.`stage_id` WHERE cl.Location_Id=? AND csrsm.route_id=? AND cfs.stage_id=? GROUP BY student ORDER BY cfs.description"); 
 			pstmt.setString(1, loct);
-			pstmt.setString(2, accy);
-			pstmt.setString(3,stopp);
-			pstmt.setString(4, route);
+			//pstmt.setString(2, accy);
+			pstmt.setString(2,stopp);
+			pstmt.setString(3, route);
 			System.out.println(pstmt);
 			resultSet = pstmt.executeQuery();
 			System.out.println(resultSet);
@@ -6574,7 +6394,7 @@ public List<TransportVo> getBusWiseStudentDetail(String loc, String acc, String 
 			
 			
 		}
-		
+		}
 		
 		catch (Exception exception) {
 			logger.error(exception.getMessage(), exception);
